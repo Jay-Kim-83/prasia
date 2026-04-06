@@ -43,15 +43,11 @@ function resolveJob(v) {
   return JOB_NAME_MAP[s] || s || '-';
 }
 
-// 토벌등급: 숫자→한글 (동적 범위)
+// 토벌등급: 숫자 그대로 반환
 function resolveGrade(numStr) {
   const n = parseInt(numStr);
-  if (isNaN(n)) return String(numStr || '-');
-  if (n >= 24) return '신화';
-  if (n >= 20) return '전설';
-  if (n >= 16) return '영웅';
-  if (n >= 12) return '희귀';
-  return '일반';
+  if (isNaN(n)) return 0;
+  return n;
 }
 
 function loadData() {

@@ -303,8 +303,19 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 
 <script>
 const PER_PAGE    = 50;
-const GRADE_ORDER = ['신화','전설','영웅','희귀','일반'];
-const GRADE_ICONS = { 신화:'👑', 전설:'⚡', 영웅:'🌟', 희귀:'💎', 일반:'🛡' };
+function gradeLabel(n) {
+  n = Number(n) || 0;
+  if (n >= 24) return '신화';
+  if (n >= 20) return '전설';
+  if (n >= 16) return '영웅';
+  if (n >= 12) return '희귀';
+  return '일반';
+}
+function gradeIcon(n) {
+  const label = gradeLabel(n);
+  return { 신화:'👑', 전설:'⚡', 영웅:'🌟', 희귀:'💎', 일반:'🛡' }[label] || '🛡';
+}
+function gradeCls(n) { return `cq cq-${gradeLabel(n)}`; }
 const JOB_ICONS   = { 환영검사:'⚔', 주문각인사:'📖', 집행관:'🛡', 향사수:'🏹', 강령술사:'💀', 태양감시자:'☀', 심연추방자:'🌑', 야만투사:'🪓' };
 
 let allData = [];
@@ -358,12 +369,14 @@ function buildFilters() {
   const jobs = [...new Set(allData.map(c => c.job).filter(Boolean))].sort();
   populate('fJob', jobs);
 
-  const grades = [...new Set(allData.map(c => c.conquestGrade).filter(Boolean))];
-  grades.sort((a,b) => {
-    const ai = GRADE_ORDER.indexOf(a), bi = GRADE_ORDER.indexOf(b);
-    return (ai<0?99:ai) - (bi<0?99:bi);
+  const grades = [...new Set(allData.map(c => Number(c.conquestGrade)||0).filter(n => n > 0))];
+  grades.sort((a,b) => b - a);
+  const gradeSel = document.getElementById('fGrade');
+  grades.forEach(g => {
+    const o = document.createElement('option');
+    o.value = g; o.textContent = `${g} (${gradeLabel(g)})`;
+    gradeSel.appendChild(o);
   });
-  populate('fGrade', grades);
 
   buildLevelSelect();
 
@@ -447,7 +460,7 @@ function applyFilters() {
     (!world || c.world === world) &&
     (!realm || c.realm === realm) &&
     (!job   || c.job   === job)   &&
-    (!grade || c.conquestGrade === grade) &&
+    (!grade || Number(c.conquestGrade) === Number(grade)) &&
     (c.level >= lvMin && c.level <= lvMax) &&
     (!q || c.nickname?.toLowerCase().includes(q) || c.guild?.toLowerCase().includes(q))
   );
@@ -489,8 +502,9 @@ function renderRow(c) {
   const crown  = {1:'🥇',2:'🥈',3:'🥉'}[r];
   const rankHtml = crown ? `<span class="crown">${crown}</span>` : `<span class="rank-num">${r}</span>`;
   const jobIcon  = JOB_ICONS[c.job] || '⚔';
-  const gradeIcon = GRADE_ICONS[c.conquestGrade] || '🛡';
-  const gCls = `cq cq-${esc(c.conquestGrade||'일반')}`;
+  const gn = Number(c.conquestGrade) || 0;
+  const gi = gradeIcon(gn);
+  const gc = gradeCls(gn);
   return `<tr>
     <td class="td-rank rank-${r<=3?r:''}">${rankHtml}</td>
     <td>
@@ -500,13 +514,13 @@ function renderRow(c) {
     <td class="td-tags">
       <span class="job-badge job-${esc(c.job)}">${jobIcon} ${esc(c.job)}</span>
       <span class="level-val">Lv.${c.level}</span>
-      <span class="${gCls}">${gradeIcon} ${esc(c.conquestGrade||'-')}</span>
+      <span class="${gc}">${gi} ${gn}</span>
     </td>
     <td class="td-job-only"><span class="job-badge job-${esc(c.job)}">${jobIcon} ${esc(c.job)}</span></td>
     <td class="td-level-only"><span class="level-val">${c.level}</span></td>
     <td class="col-world"><span class="world-badge">${esc(c.world)}</span></td>
     <td class="col-realm"><span class="realm-badge">${esc(c.realm||'-')}</span></td>
-    <td class="td-grade-only"><span class="${gCls}">${gradeIcon} ${esc(c.conquestGrade||'-')}</span></td>
+    <td class="td-grade-only"><span class="${gc}">${gi} ${gn}</span></td>
   </tr>`;
 }
 
