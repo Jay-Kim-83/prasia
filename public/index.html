@@ -63,11 +63,16 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
 table{width:100%;border-collapse:collapse;table-layout:fixed}
 col.c-rank  {width:60px}
 col.c-nick  {width:auto}   /* flex remaining */
+col.c-tags  {width:0;overflow:hidden;padding:0}  /* hidden on desktop */
 col.c-job   {width:130px}
 col.c-level {width:80px}
 col.c-world {width:110px}
 col.c-realm {width:120px}
 col.c-grade {width:120px}
+
+/* 모바일 합쳐진 태그 열: 데스크탑에서 숨김 */
+.td-tags{display:none}
+.td-tags .level-val{font-size:12px;padding:2px 7px;background:var(--bg3);border:1px solid var(--border);border-radius:4px}
 
 thead tr{background:linear-gradient(90deg,#0d1c35,#0a1628);border-bottom:1px solid var(--border-glow)}
 thead th{padding:11px 14px;text-align:left;font-size:11px;font-weight:600;color:var(--text-dim);text-transform:uppercase;letter-spacing:.08em;white-space:nowrap;overflow:hidden}
@@ -133,8 +138,6 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 
 /* ── RESPONSIVE: TABLET ── */
 @media(max-width:900px){
-  .filters-row{flex-direction:column}
-  .fg.search{min-width:100%}
   col.c-world,col.c-realm,.col-world,.col-realm{display:none}
 }
 
@@ -144,40 +147,39 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
   header{padding:18px 0 14px;margin-bottom:14px;flex-direction:column;align-items:flex-start;gap:10px}
   .header-right{width:100%;justify-content:space-between}
   .logo-text h1{font-size:17px}
+
+  /* 필터: 2열 그리드 */
   .filters-section{padding:12px 14px;margin-bottom:12px;border-radius:8px}
+  .filters-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
   .fg select,.fg input{font-size:16px;height:40px;padding:8px 12px}
+  .fg.search{grid-column:1/-1}
   .fg.search input{padding-left:34px}
-  .btn-reset{height:40px;width:100%}
+  .btn-reset{height:40px;grid-column:1/-1}
   .stats-bar{margin-bottom:8px}
 
   /* 테이블 → 카드 레이아웃 */
   .table-wrap{background:transparent;border:none;border-radius:0;overflow:visible}
-  table,thead,tbody,tr,th,td{display:block}
+  table,thead,tbody{display:block}
   thead{display:none}
   colgroup{display:none}
-  tbody tr{background:var(--bg2);border:1px solid var(--border);border-radius:10px;margin-bottom:10px;padding:14px;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto auto;gap:6px 12px;align-items:center}
+  tbody tr{display:grid;grid-template-columns:44px 1fr;grid-template-rows:auto auto;gap:4px 12px;background:var(--bg2);border:1px solid var(--border);border-radius:10px;margin-bottom:10px;padding:14px;align-items:center}
   tbody tr:hover{background:var(--bg2)}
   tbody td{padding:0;overflow:visible}
 
-  /* 순위: 왼쪽 상단 */
-  .td-rank{grid-row:1/4;grid-column:1;display:flex;align-items:center;justify-content:center;width:44px;height:44px;background:var(--bg3);border-radius:8px}
+  /* 순위: 왼쪽 전체 행 차지 */
+  tbody td.td-rank{grid-row:1/3;grid-column:1;display:flex;align-items:center;justify-content:center;width:44px;height:44px;background:var(--bg3);border-radius:8px}
   .rank-num{font-size:16px}
   .crown{font-size:22px}
 
-  /* 닉네임: 오른쪽 상단 */
-  tbody td:nth-child(2){grid-row:1;grid-column:2}
+  /* 닉네임: 오른쪽 1행 */
+  tbody td:nth-child(2){grid-row:1;grid-column:2;display:block}
   .nick-name{font-size:15px;white-space:normal}
 
-  /* 나머지 정보: 아래 줄 */
-  tbody td:nth-child(3){grid-row:2;grid-column:2}
-  tbody td:nth-child(4){grid-row:2;grid-column:2;display:inline}
-  tbody td:nth-child(7){grid-row:3;grid-column:2}
+  /* 합쳐진 태그(직업+레벨+등급): 오른쪽 2행 */
+  tbody td.td-tags{display:flex!important;flex-wrap:wrap;gap:6px;align-items:center;grid-row:2;grid-column:2}
 
-  /* 직업+레벨+등급을 한 줄에 */
-  tbody tr{grid-template-rows:auto auto;grid-template-columns:auto 1fr}
-  tbody td:nth-child(2){grid-row:1;grid-column:2}
-  tbody td:nth-child(3),tbody td:nth-child(4),tbody td:nth-child(7){display:inline;padding-right:8px}
-  .card-info{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  /* 개별 직업/레벨/등급 열: 모바일에서 숨김 */
+  tbody td.td-job-only,tbody td.td-level-only,tbody td.td-grade-only{display:none!important}
 
   /* 월드/렐름 숨기기 */
   td.col-world,td.col-realm{display:none!important}
@@ -267,6 +269,7 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
     <colgroup>
       <col class="c-rank">
       <col class="c-nick">
+      <col class="c-tags">
       <col class="c-job">
       <col class="c-level">
       <col class="c-world col-world">
@@ -277,6 +280,7 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
       <tr>
         <th class="td-rank">순위</th>
         <th>닉네임 / 결사명</th>
+        <th class="td-tags"></th>
         <th>직업</th>
         <th>레벨</th>
         <th class="col-world">월드</th>
@@ -493,11 +497,16 @@ function renderRow(c) {
       <div class="nick-name">${esc(c.nickname)}</div>
       ${c.guild?`<div class="guild-name">${esc(c.guild)}</div>`:''}
     </td>
-    <td><span class="job-badge job-${esc(c.job)}">${jobIcon} ${esc(c.job)}</span></td>
-    <td><span class="level-val">Lv.${c.level}</span></td>
+    <td class="td-tags">
+      <span class="job-badge job-${esc(c.job)}">${jobIcon} ${esc(c.job)}</span>
+      <span class="level-val">Lv.${c.level}</span>
+      <span class="${gCls}">${gradeIcon} ${esc(c.conquestGrade||'-')}</span>
+    </td>
+    <td class="td-job-only"><span class="job-badge job-${esc(c.job)}">${jobIcon} ${esc(c.job)}</span></td>
+    <td class="td-level-only"><span class="level-val">${c.level}</span></td>
     <td class="col-world"><span class="world-badge">${esc(c.world)}</span></td>
     <td class="col-realm"><span class="realm-badge">${esc(c.realm||'-')}</span></td>
-    <td><span class="${gCls}">${gradeIcon} ${esc(c.conquestGrade||'-')}</span></td>
+    <td class="td-grade-only"><span class="${gCls}">${gradeIcon} ${esc(c.conquestGrade||'-')}</span></td>
   </tr>`;
 }
 
