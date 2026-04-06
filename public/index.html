@@ -307,19 +307,27 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 
 <script>
 const PER_PAGE    = 50;
-function gradeLabel(n) {
-  n = Number(n) || 0;
+// 토벌등급: 숫자 또는 텍스트 모두 지원
+const GRADE_TEXT_TO_NUM = { '신화':24, '전설':20, '영웅':16, '희귀':12, '일반':1 };
+function gradeNum(v) {
+  if (typeof v === 'number') return v;
+  const n = Number(v);
+  if (!isNaN(n) && n > 0) return n;
+  return GRADE_TEXT_TO_NUM[String(v)] || 0;
+}
+function gradeLabel(v) {
+  const n = gradeNum(v);
   if (n >= 24) return '신화';
   if (n >= 20) return '전설';
   if (n >= 16) return '영웅';
   if (n >= 12) return '희귀';
   return '일반';
 }
-function gradeIcon(n) {
-  const label = gradeLabel(n);
-  return { 신화:'👑', 전설:'⚡', 영웅:'🌟', 희귀:'💎', 일반:'🛡' }[label] || '🛡';
+function gradeIcon(v) {
+  return { 신화:'👑', 전설:'⚡', 영웅:'🌟', 희귀:'💎', 일반:'🛡' }[gradeLabel(v)] || '🛡';
 }
-function gradeCls(n) { return `cq cq-${gradeLabel(n)}`; }
+function gradeCls(v) { return `cq cq-${gradeLabel(v)}`; }
+function gradeDisplay(v) { const n = gradeNum(v); return n > 0 ? n : '-'; }
 const JOB_ICONS   = { 환영검사:'⚔', 주문각인사:'📖', 집행관:'🛡', 향사수:'🏹', 강령술사:'💀', 태양감시자:'☀', 심연추방자:'🌑', 야만투사:'🪓' };
 
 let allData = [];
@@ -373,12 +381,16 @@ function buildFilters() {
   const jobs = [...new Set(allData.map(c => c.job).filter(Boolean))].sort();
   populate('fJob', jobs);
 
-  const grades = [...new Set(allData.map(c => Number(c.conquestGrade)||0).filter(n => n > 0))];
-  grades.sort((a,b) => b - a);
+  const gradeSet = new Map();
+  allData.forEach(c => {
+    const n = gradeNum(c.conquestGrade);
+    if (n > 0) gradeSet.set(n, gradeLabel(n));
+  });
+  const grades = [...gradeSet.entries()].sort((a,b) => b[0] - a[0]);
   const gradeSel = document.getElementById('fGrade');
-  grades.forEach(g => {
+  grades.forEach(([n, label]) => {
     const o = document.createElement('option');
-    o.value = g; o.textContent = `${g} (${gradeLabel(g)})`;
+    o.value = n; o.textContent = `${n} (${label})`;
     gradeSel.appendChild(o);
   });
 
@@ -464,7 +476,7 @@ function applyFilters() {
     (!world || c.world === world) &&
     (!realm || c.realm === realm) &&
     (!job   || c.job   === job)   &&
-    (!grade || Number(c.conquestGrade) === Number(grade)) &&
+    (!grade || gradeNum(c.conquestGrade) === Number(grade)) &&
     (c.level >= lvMin && c.level <= lvMax) &&
     (!q || c.nickname?.toLowerCase().includes(q) || c.guild?.toLowerCase().includes(q))
   );
@@ -506,9 +518,10 @@ function renderRow(c) {
   const crown  = {1:'🥇',2:'🥈',3:'🥉'}[r];
   const rankHtml = crown ? `<span class="crown">${crown}</span>` : `<span class="rank-num">${r}</span>`;
   const jobIcon  = JOB_ICONS[c.job] || '⚔';
-  const gn = Number(c.conquestGrade) || 0;
-  const gi = gradeIcon(gn);
-  const gc = gradeCls(gn);
+  const gv = c.conquestGrade;
+  const gd = gradeDisplay(gv);
+  const gi = gradeIcon(gv);
+  const gc = gradeCls(gv);
   return `<tr>
     <td class="td-rank rank-${r<=3?r:''}">${rankHtml}</td>
     <td>
@@ -518,13 +531,13 @@ function renderRow(c) {
     <td class="td-tags">
       <span class="job-badge job-${esc(c.job)}">${jobIcon} ${esc(c.job)}</span>
       <span class="level-val">Lv.${c.level}</span>
-      <span class="${gc}">${gi} ${gn}</span>
+      <span class="${gc}">${gi} ${gd}</span>
     </td>
     <td class="td-job-only"><span class="job-badge job-${esc(c.job)}">${jobIcon} ${esc(c.job)}</span></td>
     <td class="td-level-only"><span class="level-val">${c.level}</span></td>
     <td class="col-world"><span class="world-badge">${esc(c.world)}</span></td>
     <td class="col-realm"><span class="realm-badge">${esc(c.realm||'-')}</span></td>
-    <td class="td-grade-only"><span class="${gc}">${gi} ${gn}</span></td>
+    <td class="td-grade-only"><span class="${gc}">${gi} ${gd}</span></td>
   </tr>`;
 }
 
