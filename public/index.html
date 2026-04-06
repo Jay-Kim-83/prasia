@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>프라시아 전기 — 랭킹</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080c14;--bg2:#0d1525;--bg3:#111e35;
+  --border:#1e3358;--border-glow:#2a4f8a;
+  --gold:#c9a227;--gold-light:#f0cc6a;--gold-dim:#7a601a;
+  --cyan:#4fc3f7;--cyan-dim:#1a5f7a;
+  --text:#d4e3ff;--text-dim:#7a95bf;--text-faint:#3a5070;
+  --green:#66bb6a;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Noto Sans KR',sans-serif;font-size:14px;min-height:100vh;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(42,79,138,.15) 0%,transparent 70%);pointer-events:none;z-index:0}
+.wrap{position:relative;z-index:1;max-width:1600px;margin:0 auto;padding:0 24px 60px}
+
+header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:14px}
+.logo-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--gold-dim),var(--gold));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 0 20px rgba(201,162,39,.3);flex-shrink:0}
+.logo-text h1{font-family:'Cinzel',serif;font-size:20px;font-weight:700;color:var(--gold-light);letter-spacing:.05em;line-height:1.1}
+.logo-text span{font-size:11px;color:var(--text-dim);letter-spacing:.1em;text-transform:uppercase}
+.header-right{display:flex;align-items:center;gap:12px}
+.status-badge{display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:6px 12px;font-size:12px;color:var(--text-dim)}
+.status-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 2s infinite}
+.status-dot.offline{background:var(--text-faint);box-shadow:none;animation:none}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.btn-admin{background:transparent;border:1px solid var(--border-glow);color:var(--cyan);padding:7px 14px;border-radius:6px;font-size:12px;cursor:pointer;font-family:inherit;transition:all .2s;text-decoration:none}
+.btn-admin:hover{background:var(--cyan-dim);border-color:var(--cyan)}
+
+.filters-section{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:16px}
+.filters-row{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end}
+.fg{display:flex;flex-direction:column;gap:5px}
+.fg label{font-size:11px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.08em;font-weight:500}
+.fg select,.fg input{background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:7px 10px;border-radius:6px;font-family:inherit;font-size:13px;outline:none;transition:border-color .2s;height:34px}
+.fg select{padding-right:26px;appearance:none;cursor:pointer}
+.fg select option{background:var(--bg2)}
+.fg select:focus,.fg input:focus{border-color:var(--border-glow)}
+.fg select:disabled{opacity:.4;cursor:not-allowed}
+.sel-wrap{position:relative}
+.sel-wrap::after{content:'▾';position:absolute;right:8px;top:50%;transform:translateY(-50%);color:var(--text-dim);pointer-events:none;font-size:11px}
+.fg.search{flex:1;min-width:180px}
+.fg.search input{width:100%;padding-left:32px}
+.search-wrap{position:relative}
+.search-icon{position:absolute;left:9px;top:50%;transform:translateY(-50%);color:var(--text-faint);font-size:13px}
+.btn-reset{height:34px;padding:0 14px;background:transparent;border:1px solid var(--border);color:var(--text-dim);border-radius:6px;font-family:inherit;font-size:12px;cursor:pointer;transition:all .2s;align-self:flex-end;white-space:nowrap}
+.btn-reset:hover{border-color:var(--border-glow);color:var(--text)}
+
+.stats-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:8px}
+.result-count{font-size:13px;color:var(--text-dim)}
+.result-count strong{color:var(--gold)}
+.sort-wrap{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text-dim)}
+.sort-wrap .sel-wrap select{background:var(--bg2);border:1px solid var(--border);color:var(--text);padding:4px 22px 4px 8px;border-radius:5px;font-family:inherit;font-size:12px;outline:none;appearance:none;cursor:pointer;height:30px}
+
+/* ── TABLE: fixed layout ── */
+.table-wrap{background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+col.c-rank  {width:60px}
+col.c-nick  {width:auto}   /* flex remaining */
+col.c-job   {width:130px}
+col.c-level {width:80px}
+col.c-world {width:110px}
+col.c-realm {width:120px}
+col.c-grade {width:120px}
+
+thead tr{background:linear-gradient(90deg,#0d1c35,#0a1628);border-bottom:1px solid var(--border-glow)}
+thead th{padding:11px 14px;text-align:left;font-size:11px;font-weight:600;color:var(--text-dim);text-transform:uppercase;letter-spacing:.08em;white-space:nowrap;overflow:hidden}
+tbody tr{border-bottom:1px solid rgba(30,51,88,.5);transition:background .15s}
+tbody tr:last-child{border-bottom:none}
+tbody tr:hover{background:rgba(42,79,138,.12)}
+tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
+
+/* rank */
+.td-rank{text-align:center}
+.rank-num{font-family:'Cinzel',serif;font-size:15px;font-weight:700;color:var(--text-dim)}
+.rank-1 .rank-num{background:linear-gradient(135deg,#ffd700,#ffaa00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.rank-2 .rank-num{background:linear-gradient(135deg,#c0c0c0,#e8e8e8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.rank-3 .rank-num{background:linear-gradient(135deg,#cd7f32,#e8a060);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.crown{font-size:18px}
+
+/* nick */
+.nick-name{font-size:14px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.guild-name{font-size:11px;color:var(--text-dim);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.guild-name::before{content:'⚔ '}
+
+/* job */
+.job-badge{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:20px;font-size:12px;font-weight:500;border:1px solid transparent;white-space:nowrap}
+.job-환영검사{background:rgba(239,83,80,.12);border-color:rgba(239,83,80,.35);color:#ef9a9a}
+.job-주문각인사{background:rgba(171,71,188,.12);border-color:rgba(171,71,188,.35);color:#ce93d8}
+.job-집행관{background:rgba(255,167,38,.12);border-color:rgba(255,167,38,.35);color:#ffcc80}
+.job-향사수{background:rgba(102,187,106,.12);border-color:rgba(102,187,106,.35);color:#a5d6a7}
+.job-강령술사{background:rgba(38,166,154,.12);border-color:rgba(38,166,154,.35);color:#80cbc4}
+.job-태양감시자{background:rgba(255,200,0,.12);border-color:rgba(255,200,0,.35);color:#ffe066}
+.job-심연추방자{background:rgba(63,81,181,.12);border-color:rgba(63,81,181,.35);color:#9fa8da}
+.job-야만투사{background:rgba(255,112,67,.12);border-color:rgba(255,112,67,.35);color:#ffab91}
+
+/* level */
+.level-val{font-family:'Cinzel',serif;font-size:14px;font-weight:600;color:var(--cyan)}
+
+/* world / realm */
+.world-badge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:12px;background:var(--bg3);border:1px solid var(--border);color:var(--text-dim);white-space:nowrap}
+.realm-badge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:12px;background:rgba(42,79,138,.15);border:1px solid var(--border-glow);color:#93c5fd;white-space:nowrap}
+
+/* conquest grade */
+.cq{display:inline-flex;align-items:center;gap:4px;padding:2px 9px;border-radius:20px;font-size:12px;font-weight:600;white-space:nowrap}
+.cq-신화{background:rgba(255,100,30,.15);border:1px solid rgba(255,100,30,.5);color:#ff9966}
+.cq-전설{background:rgba(234,179,8,.12);border:1px solid rgba(234,179,8,.4);color:#fde047}
+.cq-영웅{background:rgba(168,85,247,.12);border:1px solid rgba(168,85,247,.4);color:#d8b4fe}
+.cq-희귀{background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.4);color:#93c5fd}
+.cq-일반{background:var(--bg3);border:1px solid var(--border);color:var(--text-dim)}
+
+/* empty / pagination */
+.empty-state{padding:70px 20px;text-align:center;color:var(--text-dim)}
+.empty-state .icon{font-size:44px;margin-bottom:14px;opacity:.4}
+.empty-state h3{font-size:15px;margin-bottom:6px}
+.pagination{display:flex;align-items:center;justify-content:center;gap:5px;margin-top:18px;flex-wrap:wrap}
+.page-btn{min-width:34px;height:34px;padding:0 9px;background:var(--bg2);border:1px solid var(--border);color:var(--text-dim);border-radius:6px;font-family:inherit;font-size:13px;cursor:pointer;transition:all .15s;display:flex;align-items:center;justify-content:center}
+.page-btn:hover:not(:disabled){border-color:var(--border-glow);color:var(--text)}
+.page-btn.active{background:var(--gold-dim);border-color:var(--gold);color:var(--gold-light);font-weight:600}
+.page-btn:disabled{opacity:.3;cursor:default}
+.page-ellipsis{color:var(--text-faint);padding:0 3px}
+
+.sample-banner{background:rgba(255,167,38,.1);border:1px solid rgba(255,167,38,.3);border-radius:8px;padding:9px 14px;margin-bottom:14px;font-size:12px;color:#ffcc80;display:flex;align-items:center;gap:8px}
+.sample-banner.hidden{display:none}
+#toast{position:fixed;bottom:22px;right:22px;background:var(--bg3);border:1px solid var(--border-glow);color:var(--text);padding:11px 16px;border-radius:8px;font-size:13px;z-index:100;opacity:0;transform:translateY(10px);transition:all .25s;box-shadow:0 8px 32px rgba(0,0,0,.5)}
+#toast.show{opacity:1;transform:translateY(0)}
+
+@media(max-width:900px){
+  .filters-row{flex-direction:column}
+  .fg.search{min-width:100%}
+  col.c-world,col.c-realm,.col-world,.col-realm{display:none}
+}
+@media(max-width:600px){col.c-guild,.col-guild{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">⚔</div>
+    <div class="logo-text">
+      <h1>Prasia Records</h1>
+      <span>프라시아 전기 랭킹</span>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="status-badge">
+      <span class="status-dot offline" id="statusDot"></span>
+      <span id="statusText">불러오는 중...</span>
+    </div>
+    <a href="/admin.html" class="btn-admin">⚙ 관리</a>
+  </div>
+</header>
+
+<div class="sample-banner hidden" id="sampleBanner">
+  ⚠ 샘플 데이터입니다. 관리 페이지에서 실제 데이터를 수집해 주세요.
+</div>
+
+<div class="filters-section">
+  <div class="filters-row">
+    <div class="fg">
+      <label>월드</label>
+      <div class="sel-wrap"><select id="fWorld"><option value="">전체</option></select></div>
+    </div>
+    <div class="fg">
+      <label>렐름</label>
+      <div class="sel-wrap"><select id="fRealm" disabled><option value="">전체</option></select></div>
+    </div>
+    <div class="fg">
+      <label>직업</label>
+      <div class="sel-wrap"><select id="fJob"><option value="">전체</option></select></div>
+    </div>
+    <div class="fg">
+      <label>토벌등급</label>
+      <div class="sel-wrap"><select id="fGrade"><option value="">전체</option></select></div>
+    </div>
+    <div class="fg">
+      <label>레벨</label>
+      <div class="sel-wrap"><select id="fLevel"><option value="">전체</option></select></div>
+    </div>
+    <div class="fg search">
+      <label>닉네임 / 결사명</label>
+      <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="fSearch" placeholder="닉네임 또는 결사명 검색...">
+      </div>
+    </div>
+    <button class="btn-reset" onclick="resetFilters()">↺ 초기화</button>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="result-count" id="resultCount">캐릭터 <strong>0</strong>명</div>
+  <div class="sort-wrap">
+    정렬:
+    <div class="sel-wrap">
+      <select id="sortBy" onchange="applyFilters()">
+        <option value="rank">랭킹순</option>
+        <option value="level_desc">레벨 높은순</option>
+        <option value="level_asc">레벨 낮은순</option>
+        <option value="nickname">닉네임순</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<div class="table-wrap">
+  <table>
+    <colgroup>
+      <col class="c-rank">
+      <col class="c-nick">
+      <col class="c-job">
+      <col class="c-level">
+      <col class="c-world col-world">
+      <col class="c-realm col-realm">
+      <col class="c-grade">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="td-rank">순위</th>
+        <th>닉네임 / 결사명</th>
+        <th>직업</th>
+        <th>레벨</th>
+        <th class="col-world">월드</th>
+        <th class="col-realm">렐름</th>
+        <th>토벌등급</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+  <div class="empty-state hidden" id="emptyState">
+    <div class="icon">🔮</div>
+    <h3>검색 결과 없음</h3>
+    <p>필터 조건을 변경해 보세요.</p>
+  </div>
+</div>
+
+<div class="pagination" id="pagination"></div>
+</div>
+<div id="toast"></div>
+
+<script>
+const PER_PAGE    = 50;
+const GRADE_ORDER = ['신화','전설','영웅','희귀','일반'];
+const GRADE_ICONS = { 신화:'👑', 전설:'⚡', 영웅:'🌟', 희귀:'💎', 일반:'🛡' };
+const JOB_ICONS   = { 환영검사:'⚔', 주문각인사:'📖', 집행관:'🛡', 향사수:'🏹', 강령술사:'💀', 태양감시자:'☀', 심연추방자:'🌑', 야만투사:'🪓' };
+
+let allData = [];
+let worldRealmMap = {};  // { '론도': ['론도 01', ...] }
+let filtered  = [];
+let currentPage = 1;
+
+// ── INIT ─────────────────────────────────────────────────────────
+async function init() {
+  try {
+    const [dRes, sRes] = await Promise.all([fetch('/api/data'), fetch('/api/status')]);
+    const data   = await dRes.json();
+    const status = await sRes.json();
+    allData = data.characters || [];
+
+    if (status.isSample) document.getElementById('sampleBanner').classList.remove('hidden');
+
+    const dot = document.getElementById('statusDot');
+    const txt = document.getElementById('statusText');
+    if (status.lastUpdated) {
+      dot.classList.remove('offline');
+      const d = new Date(status.lastUpdated);
+      txt.textContent = `${d.toLocaleDateString('ko-KR')} ${d.toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'})} 수집`;
+    } else {
+      txt.textContent = '데이터 없음';
+    }
+
+    buildMaps();
+    buildFilters();
+    applyFilters();
+  } catch(e) {
+    document.getElementById('statusText').textContent = '서버 연결 실패';
+  }
+}
+
+// ── MAPS ─────────────────────────────────────────────────────────
+function buildMaps() {
+  worldRealmMap = {};
+  allData.forEach(c => {
+    if (!c.world) return;
+    if (!worldRealmMap[c.world]) worldRealmMap[c.world] = new Set();
+    if (c.realm) worldRealmMap[c.world].add(c.realm);
+  });
+}
+
+// ── BUILD FILTERS ────────────────────────────────────────────────
+function buildFilters() {
+  const worlds = Object.keys(worldRealmMap).sort(naturalSort);
+  populate('fWorld', worlds);
+
+  const jobs = [...new Set(allData.map(c => c.job).filter(Boolean))].sort();
+  populate('fJob', jobs);
+
+  const grades = [...new Set(allData.map(c => c.conquestGrade).filter(Boolean))];
+  grades.sort((a,b) => {
+    const ai = GRADE_ORDER.indexOf(a), bi = GRADE_ORDER.indexOf(b);
+    return (ai<0?99:ai) - (bi<0?99:bi);
+  });
+  populate('fGrade', grades);
+
+  buildLevelSelect();
+
+  // ★ Fix 1: fRealm에도 change 이벤트 등록
+  document.getElementById('fWorld').addEventListener('change', onWorldChange);
+  document.getElementById('fRealm').addEventListener('change', applyFilters);
+  ['fJob','fGrade','fLevel'].forEach(id =>
+    document.getElementById(id).addEventListener('change', applyFilters)
+  );
+  document.getElementById('fSearch').addEventListener('input', applyFilters);
+}
+
+function buildLevelSelect() {
+  const levels = allData.map(c => c.level).filter(n => n > 0);
+  if (!levels.length) return;
+  const minLv = Math.min(...levels), maxLv = Math.max(...levels);
+  const range = maxLv - minLv;
+  const step  = range <= 20 ? 1 : range <= 50 ? 5 : 10;
+
+  const bands = new Set();
+  levels.forEach(lv => bands.add(Math.floor(lv / step) * step));
+  const sorted = [...bands].sort((a,b) => b - a);
+
+  const sel = document.getElementById('fLevel');
+  sorted.forEach(band => {
+    const lo = band, hi = band + step - 1;
+    const o  = document.createElement('option');
+    o.value  = `${lo}:${hi}`;
+    o.textContent = step === 1 ? `${lo}` : `${lo} ~ ${hi}`;
+    sel.appendChild(o);
+  });
+}
+
+function populate(id, items) {
+  const sel = document.getElementById(id);
+  items.forEach(v => {
+    const o = document.createElement('option');
+    o.value = v; o.textContent = v;
+    sel.appendChild(o);
+  });
+}
+
+function naturalSort(a, b) {
+  return a.localeCompare(b, 'ko', { numeric:true });
+}
+
+// ── WORLD → REALM CASCADE ────────────────────────────────────────
+function onWorldChange() {
+  const world = document.getElementById('fWorld').value;
+  const rs    = document.getElementById('fRealm');
+  rs.innerHTML = '<option value="">전체</option>';
+
+  if (world && worldRealmMap[world]) {
+    const realms = [...worldRealmMap[world]].sort(naturalSort);
+    realms.forEach(r => {
+      const o = document.createElement('option');
+      o.value = r; o.textContent = r;
+      rs.appendChild(o);
+    });
+    rs.disabled = false;
+  } else {
+    rs.disabled = true;
+  }
+  applyFilters();
+}
+
+// ── APPLY FILTERS & SORT ─────────────────────────────────────────
+function applyFilters() {
+  const world  = document.getElementById('fWorld').value;
+  const realm  = document.getElementById('fRealm').value;
+  const job    = document.getElementById('fJob').value;
+  const grade  = document.getElementById('fGrade').value;
+  const lvBand = document.getElementById('fLevel').value;
+  const q      = document.getElementById('fSearch').value.trim().toLowerCase();
+  const sortBy = document.getElementById('sortBy').value;
+
+  let lvMin = 0, lvMax = 9999;
+  if (lvBand) { const [lo,hi] = lvBand.split(':').map(Number); lvMin=lo; lvMax=hi; }
+
+  filtered = allData.filter(c =>
+    (!world || c.world === world) &&
+    (!realm || c.realm === realm) &&
+    (!job   || c.job   === job)   &&
+    (!grade || c.conquestGrade === grade) &&
+    (c.level >= lvMin && c.level <= lvMax) &&
+    (!q || c.nickname?.toLowerCase().includes(q) || c.guild?.toLowerCase().includes(q))
+  );
+
+  filtered.sort((a,b) => {
+    if (sortBy==='level_desc') return (b.level||0)-(a.level||0);
+    if (sortBy==='level_asc')  return (a.level||0)-(b.level||0);
+    if (sortBy==='nickname')   return (a.nickname||'').localeCompare(b.nickname||'','ko');
+    return (a.rank||0)-(b.rank||0);
+  });
+
+  currentPage = 1;
+  renderTable();
+}
+
+// ── RENDER ───────────────────────────────────────────────────────
+function renderTable() {
+  const total = filtered.length;
+  document.getElementById('resultCount').innerHTML =
+    `캐릭터 <strong>${total.toLocaleString()}</strong>명`;
+
+  const page  = filtered.slice((currentPage-1)*PER_PAGE, currentPage*PER_PAGE);
+  const tbody = document.getElementById('tableBody');
+  const empty = document.getElementById('emptyState');
+
+  if (!page.length) {
+    tbody.innerHTML = '';
+    empty.classList.remove('hidden');
+    document.getElementById('pagination').innerHTML = '';
+    return;
+  }
+  empty.classList.add('hidden');
+  tbody.innerHTML = page.map(renderRow).join('');
+  renderPagination(total);
+}
+
+function renderRow(c) {
+  const r      = c.rank;
+  const crown  = {1:'🥇',2:'🥈',3:'🥉'}[r];
+  const rankHtml = crown ? `<span class="crown">${crown}</span>` : `<span class="rank-num">${r}</span>`;
+  const jobIcon  = JOB_ICONS[c.job] || '⚔';
+  const gradeIcon = GRADE_ICONS[c.conquestGrade] || '🛡';
+  const gCls = `cq cq-${esc(c.conquestGrade||'일반')}`;
+  return `<tr>
+    <td class="td-rank rank-${r<=3?r:''}">${rankHtml}</td>
+    <td>
+      <div class="nick-name">${esc(c.nickname)}</div>
+      ${c.guild?`<div class="guild-name">${esc(c.guild)}</div>`:''}
+    </td>
+    <td><span class="job-badge job-${esc(c.job)}">${jobIcon} ${esc(c.job)}</span></td>
+    <td><span class="level-val">${c.level}</span></td>
+    <td class="col-world"><span class="world-badge">${esc(c.world)}</span></td>
+    <td class="col-realm"><span class="realm-badge">${esc(c.realm||'-')}</span></td>
+    <td><span class="${gCls}">${gradeIcon} ${esc(c.conquestGrade||'-')}</span></td>
+  </tr>`;
+}
+
+function renderPagination(total) {
+  const tp = Math.ceil(total/PER_PAGE);
+  if (tp<=1) { document.getElementById('pagination').innerHTML=''; return; }
+  const range = 2;
+  let html = `<button class="page-btn" onclick="goPage(${currentPage-1})" ${currentPage===1?'disabled':''}>‹</button>`;
+  for (let i=1; i<=tp; i++) {
+    if (i===1||i===tp||(i>=currentPage-range&&i<=currentPage+range))
+      html+=`<button class="page-btn ${i===currentPage?'active':''}" onclick="goPage(${i})">${i}</button>`;
+    else if (i===currentPage-range-1||i===currentPage+range+1)
+      html+=`<span class="page-ellipsis">…</span>`;
+  }
+  html += `<button class="page-btn" onclick="goPage(${currentPage+1})" ${currentPage===tp?'disabled':''}>›</button>`;
+  document.getElementById('pagination').innerHTML = html;
+}
+
+function goPage(p) {
+  const tp = Math.ceil(filtered.length/PER_PAGE);
+  if (p<1||p>tp) return;
+  currentPage=p; renderTable();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function resetFilters() {
+  ['fWorld','fJob','fGrade','fLevel','sortBy'].forEach(id=>document.getElementById(id).value='');
+  const rs=document.getElementById('fRealm');
+  rs.innerHTML='<option value="">전체</option>'; rs.disabled=true;
+  document.getElementById('fSearch').value='';
+  applyFilters();
+}
+
+function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function showToast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),3000); }
+
+init();
+</script>
+</body>
+</html>

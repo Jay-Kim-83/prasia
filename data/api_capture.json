@@ -1,0 +1,19 @@
+{
+  "url": "https://wp-api.nexon.com/v1/GameData/gcranking",
+  "method": "POST",
+  "headers": {
+    "authorization": "Bearer 3E5C4287-849D-4EAA-A4EB-4528C9AB8E7D",
+    "referer": "https://wp.nexon.com/",
+    "accept-language": "ko-KR,ko;q=0.9",
+    "accept": "application/json, text/plain, */*",
+    "content-type": "application/json",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0.0.0 Safari/537.36",
+    "x-wp-api-key": "wp_fe_api_key",
+    "origin": "https://wp.nexon.com"
+  },
+  "body": "{\"world_id\":\"LIVE_W02_R1\",\"world_group_id\":\"LIVE_W02\"}",
+  "bodyParsed": {
+    "world_id": "LIVE_W02_R1",
+    "world_group_id": "LIVE_W02"
+  }
+}

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>관리자 — 프라시아 랭킹</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080c14;--bg2:#0d1525;--bg3:#111e35;
+  --border:#1e3358;--border-glow:#2a4f8a;
+  --gold:#c9a227;--gold-light:#f0cc6a;--gold-dim:#7a601a;
+  --cyan:#4fc3f7;--text:#d4e3ff;--text-dim:#7a95bf;--text-faint:#3a5070;
+  --green:#66bb6a;--red:#ef5350;--orange:#ffa726;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Noto Sans KR',sans-serif;font-size:14px;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(42,79,138,.15) 0%,transparent 70%);pointer-events:none}
+
+/* ── LOGIN OVERLAY ── */
+#loginOverlay{
+  position:fixed;inset:0;background:rgba(8,12,20,.97);
+  display:flex;align-items:center;justify-content:center;z-index:999;
+}
+#loginOverlay.hidden{display:none}
+.login-box{
+  background:var(--bg2);border:1px solid var(--border-glow);border-radius:16px;
+  padding:40px 36px;width:100%;max-width:360px;text-align:center;
+}
+.login-box .icon{font-size:40px;margin-bottom:16px}
+.login-box h2{font-family:'Cinzel',serif;color:var(--gold-light);font-size:18px;margin-bottom:6px}
+.login-box p{font-size:12px;color:var(--text-dim);margin-bottom:24px}
+.login-input{
+  width:100%;background:var(--bg3);border:1px solid var(--border);color:var(--text);
+  padding:10px 14px;border-radius:8px;font-family:inherit;font-size:14px;outline:none;
+  margin-bottom:12px;transition:border-color .2s;
+}
+.login-input:focus{border-color:var(--border-glow)}
+.login-error{font-size:12px;color:#ef9a9a;margin-bottom:10px;min-height:18px}
+.btn-login{
+  width:100%;background:linear-gradient(135deg,var(--gold-dim),#9b7d25);
+  border:1px solid var(--gold);color:var(--gold-light);padding:11px;
+  border-radius:8px;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;
+  transition:filter .2s;
+}
+.btn-login:hover{filter:brightness(1.15)}
+
+/* ── MAIN ── */
+.wrap{position:relative;max-width:860px;margin:0 auto;padding:0 24px 60px}
+header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:28px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:14px}
+.logo-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--gold-dim),var(--gold));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.logo-text h1{font-family:'Cinzel',serif;font-size:16px;font-weight:700;color:var(--gold-light)}
+.logo-text span{font-size:11px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.1em}
+.header-btns{display:flex;gap:8px}
+.btn-sm{background:transparent;border:1px solid var(--border);color:var(--text-dim);padding:6px 12px;border-radius:6px;font-size:12px;cursor:pointer;font-family:inherit;text-decoration:none;transition:all .2s}
+.btn-sm:hover{border-color:var(--border-glow);color:var(--text)}
+.btn-sm.danger{border-color:rgba(239,83,80,.4);color:#ef9a9a}
+.btn-sm.danger:hover{background:rgba(239,83,80,.1)}
+
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:18px}
+.card-title{font-size:13px;font-weight:600;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
+
+/* status grid */
+.status-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.stat-item{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:14px}
+.stat-label{font-size:11px;color:var(--text-faint);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+.stat-value{font-size:22px;font-family:'Cinzel',serif;color:var(--gold-light);font-weight:600}
+.stat-sub{font-size:12px;color:var(--text-dim);margin-top:3px}
+
+/* collect */
+.btn-collect{
+  background:rgba(79,195,247,.08);border:1px solid rgba(79,195,247,.35);
+  color:var(--cyan);padding:10px 20px;border-radius:7px;font-family:inherit;
+  font-size:13px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:8px;
+}
+.btn-collect:hover{background:rgba(79,195,247,.15)}
+.btn-collect:disabled{opacity:.4;cursor:not-allowed}
+.spinner{width:14px;height:14px;border:2px solid rgba(79,195,247,.3);border-top-color:var(--cyan);border-radius:50%;animation:spin .7s linear infinite;display:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* log area */
+.log-area{
+  background:#040a12;border:1px solid var(--border);border-radius:8px;
+  padding:12px 14px;font-family:'Courier New',monospace;font-size:12px;
+  height:220px;overflow-y:auto;display:flex;flex-direction:column;gap:2px;
+  margin-top:14px;
+}
+.log-line{display:flex;gap:10px;line-height:1.5}
+.log-time{color:var(--text-faint);white-space:nowrap;flex-shrink:0}
+.log-msg{color:var(--text-dim);word-break:break-all}
+.log-msg.error{color:#ef9a9a}
+.log-msg.start,.log-msg.done{color:#a5d6a7;font-weight:bold}
+
+/* schedule */
+.sched-cards{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.sched-card{flex:1;min-width:120px;border:2px solid var(--border);background:var(--bg3);border-radius:8px;padding:12px;cursor:pointer;transition:all .2s}
+.sched-card:hover{border-color:var(--border-glow)}
+.sched-card.selected{border-color:var(--gold);background:rgba(201,162,39,.08)}
+.sched-card .si{font-size:20px;margin-bottom:4px}
+.sched-card .sn{font-size:13px;font-weight:600;color:var(--text)}
+.sched-card .sd{font-size:11px;color:var(--text-dim)}
+.interval-row{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.interval-row label{font-size:13px;color:var(--text-dim)}
+.interval-input{background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:7px 10px;border-radius:6px;font-family:inherit;font-size:14px;width:70px;outline:none}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap}
+.btn-primary{background:linear-gradient(135deg,var(--gold-dim),#9b7d25);border:1px solid var(--gold);color:var(--gold-light);padding:10px 22px;border-radius:7px;font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;transition:filter .2s}
+.btn-primary:hover{filter:brightness(1.15)}
+.btn-danger{background:transparent;border:1px solid rgba(239,83,80,.4);color:#ef9a9a;padding:10px 18px;border-radius:7px;font-family:inherit;font-size:13px;cursor:pointer;transition:all .2s}
+.btn-danger:hover{background:rgba(239,83,80,.1)}
+
+/* cmd */
+.cmd-box{background:#050b15;border:1px solid var(--border);border-radius:8px;padding:14px;font-family:'Courier New',monospace;font-size:12px;color:#a5d6a7;word-break:break-all;position:relative;margin:10px 0}
+.copy-btn{position:absolute;top:10px;right:10px;background:var(--bg3);border:1px solid var(--border);color:var(--text-dim);padding:3px 9px;border-radius:4px;font-size:11px;cursor:pointer;font-family:inherit;transition:all .2s}
+.copy-btn:hover{border-color:var(--border-glow);color:var(--text)}
+
+/* pw change */
+.pw-fields{display:flex;flex-direction:column;gap:10px;max-width:320px}
+.pw-input{background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:8px 12px;border-radius:6px;font-family:inherit;font-size:13px;outline:none;transition:border-color .2s}
+.pw-input:focus{border-color:var(--border-glow)}
+
+#toast{position:fixed;bottom:22px;right:22px;background:var(--bg3);border:1px solid var(--border-glow);color:var(--text);padding:11px 16px;border-radius:8px;font-size:13px;z-index:100;opacity:0;transform:translateY(10px);transition:all .25s;box-shadow:0 8px 32px rgba(0,0,0,.5)}
+#toast.show{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- 로그인 오버레이 -->
+<div id="loginOverlay">
+  <div class="login-box">
+    <div class="icon">🔐</div>
+    <h2>Admin Access</h2>
+    <p>관리자 비밀번호를 입력하세요</p>
+    <input type="password" class="login-input" id="pwInput" placeholder="비밀번호" onkeydown="if(event.key==='Enter')doLogin()">
+    <div class="login-error" id="loginError"></div>
+    <button class="btn-login" onclick="doLogin()">로그인</button>
+  </div>
+</div>
+
+<div class="wrap">
+<header>
+  <div class="logo">
+    <div class="logo-icon">⚙</div>
+    <div class="logo-text">
+      <h1>Admin Panel</h1>
+      <span>프라시아 전기 랭킹 관리자</span>
+    </div>
+  </div>
+  <div class="header-btns">
+    <a href="/" class="btn-sm">← 랭킹으로</a>
+    <button class="btn-sm danger" onclick="doLogout()">로그아웃</button>
+  </div>
+</header>
+
+<!-- 현황 -->
+<div class="card">
+  <div class="card-title">📊 현황</div>
+  <div class="status-grid">
+    <div class="stat-item">
+      <div class="stat-label">총 캐릭터</div>
+      <div class="stat-value" id="statTotal">-</div>
+      <div class="stat-sub" id="statSample">-</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-label">최종 수집</div>
+      <div class="stat-value" style="font-size:14px;padding-top:6px" id="statDate">-</div>
+      <div class="stat-sub" id="statTime">-</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-label">수집 상태</div>
+      <div class="stat-value" style="font-size:14px;padding-top:6px" id="statScraping">대기</div>
+      <div class="stat-sub" id="statSchedule">-</div>
+    </div>
+  </div>
+</div>
+
+<!-- 즉시 수집 -->
+<div class="card">
+  <div class="card-title">⚡ 즉시 수집</div>
+  <button class="btn-collect" id="btnCollect" onclick="collectNow()">
+    <div class="spinner" id="spinner"></div>
+    <span id="btnTxt">🚀 지금 수집 시작</span>
+  </button>
+  <div class="log-area" id="logArea"></div>
+</div>
+
+<!-- 스케줄 -->
+<div class="card">
+  <div class="card-title">🕐 자동 수집 스케줄</div>
+  <div class="sched-cards" id="schedCards">
+    <div class="sched-card" data-type="none" onclick="selectSched(this)">
+      <div class="si">🚫</div><div class="sn">수집 안함</div><div class="sd">자동 수집 비활성</div>
+    </div>
+    <div class="sched-card" data-type="daily" onclick="selectSched(this)">
+      <div class="si">📅</div><div class="sn">매일 자정</div><div class="sd">하루 1회 00:00</div>
+    </div>
+    <div class="sched-card" data-type="hourly" onclick="selectSched(this)">
+      <div class="si">⏱</div><div class="sn">N시간마다</div><div class="sd">지정 간격 반복</div>
+    </div>
+  </div>
+  <div class="interval-row" id="intervalRow" style="display:none">
+    <label>수집 간격:</label>
+    <input type="number" class="interval-input" id="intervalVal" value="6" min="1" max="24">
+    <span style="font-size:13px;color:var(--text-dim)">시간마다</span>
+  </div>
+  <div class="btn-row">
+    <button class="btn-primary" onclick="saveSchedule()">💾 스케줄 저장</button>
+    <button class="btn-danger" onclick="stopSchedule()">⏹ 중지</button>
+  </div>
+</div>
+
+<!-- 비밀번호 변경 -->
+<div class="card">
+  <div class="card-title">🔑 비밀번호 변경</div>
+  <div class="pw-fields">
+    <input type="password" class="pw-input" id="pwOld" placeholder="현재 비밀번호">
+    <input type="password" class="pw-input" id="pwNew" placeholder="새 비밀번호 (4자 이상)">
+    <input type="password" class="pw-input" id="pwNew2" placeholder="새 비밀번호 확인">
+    <button class="btn-primary" style="width:fit-content" onclick="changePw()">변경</button>
+  </div>
+</div>
+
+<!-- 작업 스케줄러 -->
+<div class="card">
+  <div class="card-title">🪟 Windows 작업 스케줄러</div>
+  <div class="cmd-box">
+    <button class="copy-btn" onclick="copyCmd()">복사</button>
+    <div id="cmdText">로딩 중...</div>
+  </div>
+</div>
+
+</div>
+<div id="toast"></div>
+
+<script>
+const AUTH_KEY = 'prasia_admin_token';
+let   evtSource = null;
+let   isScraping = false;
+
+// ── 인증 ────────────────────────────────────────────────────────
+function checkAuth() {
+  const token = localStorage.getItem(AUTH_KEY);
+  if (token) {
+    document.getElementById('loginOverlay').classList.add('hidden');
+    initAdmin();
+  }
+}
+
+async function doLogin() {
+  const pw  = document.getElementById('pwInput').value;
+  const err = document.getElementById('loginError');
+  if (!pw) { err.textContent = '비밀번호를 입력하세요.'; return; }
+  try {
+    const res  = await fetch('/api/auth', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({password:pw}) });
+    const data = await res.json();
+    if (data.success) {
+      localStorage.setItem(AUTH_KEY, data.token);
+      document.getElementById('loginOverlay').classList.add('hidden');
+      initAdmin();
+    } else {
+      err.textContent = data.message || '비밀번호가 틀렸습니다.';
+    }
+  } catch {
+    err.textContent = '서버 연결 실패';
+  }
+}
+
+function doLogout() {
+  localStorage.removeItem(AUTH_KEY);
+  location.reload();
+}
+
+// ── 초기화 ──────────────────────────────────────────────────────
+async function initAdmin() {
+  await loadStatus();
+  connectLogStream();
+  loadScheduleUI();
+  loadCmd();
+}
+
+async function loadStatus() {
+  try {
+    const res  = await fetch('/api/status');
+    const s    = await res.json();
+    document.getElementById('statTotal').textContent = (s.total || 0).toLocaleString();
+    document.getElementById('statSample').textContent = s.isSample ? '샘플 데이터' : '실제 데이터';
+    if (s.lastUpdated) {
+      const d = new Date(s.lastUpdated);
+      document.getElementById('statDate').textContent = d.toLocaleDateString('ko-KR');
+      document.getElementById('statTime').textContent = d.toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'});
+    } else {
+      document.getElementById('statDate').textContent = '없음';
+    }
+    isScraping = s.isScraping;
+    document.getElementById('statScraping').textContent = s.isScraping ? '⏳ 수집 중' : '✅ 대기';
+    const sch = s.schedule || {};
+    const typeLabel = { none:'비활성', daily:'매일 자정', hourly:`${sch.interval}시간마다` };
+    document.getElementById('statSchedule').textContent = typeLabel[sch.type] || '-';
+    updateCollectBtn(s.isScraping);
+  } catch {}
+}
+
+// ── SSE 로그 스트림 ──────────────────────────────────────────────
+function connectLogStream() {
+  if (evtSource) evtSource.close();
+  evtSource = new EventSource('/api/logs/stream');
+  const area = document.getElementById('logArea');
+
+  evtSource.onmessage = (e) => {
+    const data = JSON.parse(e.data);
+
+    // 수집 완료 신호
+    if (data.type === 'complete') {
+      isScraping = false;
+      updateCollectBtn(false);
+      loadStatus(); // 현황 갱신
+      return;
+    }
+
+    // 로그 라인 추가
+    const line = document.createElement('div');
+    line.className = 'log-line';
+    line.innerHTML = `<span class="log-time">${data.time}</span><span class="log-msg ${data.type||''}">${esc(data.msg)}</span>`;
+    area.appendChild(line);
+
+    // 자동 스크롤 (최하단이면)
+    if (area.scrollHeight - area.scrollTop < area.clientHeight + 60) {
+      area.scrollTop = area.scrollHeight;
+    }
+
+    // 200줄 초과 시 앞 줄 제거
+    while (area.children.length > 200) area.removeChild(area.firstChild);
+  };
+}
+
+// ── 수집 ────────────────────────────────────────────────────────
+async function collectNow() {
+  if (isScraping) return;
+  isScraping = true;
+  updateCollectBtn(true);
+  document.getElementById('statScraping').textContent = '⏳ 수집 중';
+
+  try {
+    await fetch('/api/collect', { method:'POST' });
+  } catch {
+    showToast('수집 요청 실패');
+    isScraping = false;
+    updateCollectBtn(false);
+  }
+}
+
+function updateCollectBtn(scraping) {
+  const btn     = document.getElementById('btnCollect');
+  const spinner = document.getElementById('spinner');
+  const txt     = document.getElementById('btnTxt');
+  btn.disabled  = scraping;
+  spinner.style.display = scraping ? 'block' : 'none';
+  txt.textContent = scraping ? '수집 중...' : '🚀 지금 수집 시작';
+}
+
+// ── 스케줄 ──────────────────────────────────────────────────────
+async function loadScheduleUI() {
+  const res = await fetch('/api/schedule').then(r=>r.json());
+  selectSchedByType(res.type || 'none');
+  if (res.interval) document.getElementById('intervalVal').value = res.interval;
+}
+
+function selectSched(el) {
+  document.querySelectorAll('.sched-card').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  document.getElementById('intervalRow').style.display = el.dataset.type === 'hourly' ? 'flex' : 'none';
+}
+
+function selectSchedByType(type) {
+  const el = document.querySelector(`.sched-card[data-type="${type}"]`);
+  if (el) selectSched(el);
+}
+
+async function saveSchedule() {
+  const type = document.querySelector('.sched-card.selected')?.dataset.type;
+  if (!type) return showToast('유형을 선택해 주세요.');
+  const interval = parseInt(document.getElementById('intervalVal').value) || 6;
+  await fetch('/api/schedule', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ type, interval, isRunning: type !== 'none' }) });
+  showToast('✅ 스케줄 저장됨');
+  loadStatus();
+}
+
+async function stopSchedule() {
+  await fetch('/api/schedule', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ type:'none', interval:6, isRunning:false }) });
+  selectSchedByType('none');
+  showToast('⏹ 스케줄 중지됨');
+  loadStatus();
+}
+
+// ── 비밀번호 변경 ────────────────────────────────────────────────
+async function changePw() {
+  const old  = document.getElementById('pwOld').value;
+  const nw   = document.getElementById('pwNew').value;
+  const nw2  = document.getElementById('pwNew2').value;
+  if (!old || !nw)  return showToast('모든 항목을 입력해 주세요.');
+  if (nw !== nw2)   return showToast('새 비밀번호가 일치하지 않습니다.');
+  const res  = await fetch('/api/auth/change', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ oldPassword:old, newPassword:nw }) });
+  const data = await res.json();
+  if (data.success) {
+    showToast('✅ 비밀번호 변경 완료. 다시 로그인해 주세요.');
+    localStorage.removeItem(AUTH_KEY);
+    setTimeout(() => location.reload(), 2000);
+  } else {
+    showToast(data.message || '변경 실패');
+  }
+}
+
+// ── 작업 스케줄러 ────────────────────────────────────────────────
+async function loadCmd() {
+  const res = await fetch('/api/task-scheduler-cmd').then(r=>r.json());
+  document.getElementById('cmdText').textContent = res.cmd;
+}
+function copyCmd() {
+  navigator.clipboard.writeText(document.getElementById('cmdText').textContent).then(() => showToast('📋 복사됨'));
+}
+
+// ── 유틸 ────────────────────────────────────────────────────────
+function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+checkAuth();
+</script>
+</body>
+</html>

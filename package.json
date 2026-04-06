@@ -1,0 +1,16 @@
+{
+  "name": "prasia-ranking",
+  "version": "1.0.0",
+  "description": "프라시아 전기 랭킹 수집 및 검색 시스템",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "collect": "node collect.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "puppeteer": "^24.15.0",
+    "node-cron": "^3.0.3",
+    "cors": "^2.8.5"
+  }
+}
