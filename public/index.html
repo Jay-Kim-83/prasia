@@ -55,6 +55,13 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
 .btn-reset{height:34px;padding:0 14px;background:transparent;border:1px solid var(--border);color:var(--text-dim);border-radius:6px;font-family:inherit;font-size:12px;cursor:pointer;transition:all .2s;align-self:flex-end;white-space:nowrap}
 .btn-reset:hover{border-color:var(--border-glow);color:var(--text)}
 
+/* realm stats */
+.realm-stats{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin-bottom:12px;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;font-size:12px;color:var(--text-dim)}
+.realm-stats .rs-title{font-weight:600;color:var(--gold);font-size:13px;margin-right:4px}
+.realm-stats .rs-item{display:inline-flex;align-items:center;gap:4px}
+.realm-stats .rs-num{font-weight:700;color:var(--text)}
+.realm-stats .rs-grade{padding:1px 6px;border-radius:10px;font-size:11px;font-weight:600}
+
 .stats-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:8px}
 .result-count{font-size:13px;color:var(--text-dim)}
 .result-count strong{color:var(--gold)}
@@ -161,6 +168,7 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
   .fg.search input{padding-left:34px}
   .btn-reset{height:40px;grid-column:1/-1}
   .stats-bar{margin-bottom:8px}
+  .realm-stats{padding:10px 12px;font-size:11px;gap:6px 12px;border-radius:8px}
 
   /* 테이블 → 카드 레이아웃 */
   .table-wrap{background:transparent;border:none;border-radius:0;overflow:visible}
@@ -254,6 +262,8 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
     <button class="btn-reset" onclick="resetFilters()">↺ 초기화</button>
   </div>
 </div>
+
+<div class="realm-stats hidden" id="realmStats"></div>
 
 <div class="stats-bar">
   <div class="result-count" id="resultCount">캐릭터 <strong>0</strong>명</div>
@@ -517,6 +527,8 @@ function applyFilters() {
     return (a.rank||0)-(b.rank||0);
   });
 
+  updateRealmStats(world, realm);
+
   currentPage = 1;
   renderTable();
 }
@@ -598,6 +610,40 @@ function resetFilters() {
   rs.innerHTML='<option value="">전체</option>'; rs.disabled=true;
   document.getElementById('fSearch').value='';
   applyFilters();
+}
+
+// ── REALM STATS ─────────────────────────────────────────────────
+function updateRealmStats(world, realm) {
+  const el = document.getElementById('realmStats');
+  if (!world && !realm) { el.classList.add('hidden'); return; }
+
+  // 해당 월드/렐름의 전체 데이터 (필터 무관)
+  const pool = allData.filter(c =>
+    (!world || c.world === world) &&
+    (!realm || c.realm === realm)
+  );
+
+  const lv90 = pool.filter(c => c.level >= 90).length;
+
+  // 토벌등급별 인원수 (숫자 기준, 높은순)
+  const gradeCounts = {};
+  pool.forEach(c => {
+    const g = gradeNum(c.conquestGrade);
+    if (g > 0) gradeCounts[g] = (gradeCounts[g] || 0) + 1;
+  });
+  const gradeKeys = Object.keys(gradeCounts).map(Number).sort((a,b) => b - a);
+
+  const label = realm || world;
+  let html = `<span class="rs-title">${esc(label)}</span>`;
+  html += `<span class="rs-item">Lv.90+ <span class="rs-num">${lv90}</span>명</span>`;
+  html += '<span style="color:var(--border-glow)">│</span>';
+  gradeKeys.forEach(g => {
+    const cls = gradeCls(g);
+    html += `<span class="rs-item"><span class="rs-grade ${cls}">${gradeIcon(g)} ${g}</span> <span class="rs-num">${gradeCounts[g]}</span>명</span>`;
+  });
+
+  el.innerHTML = html;
+  el.classList.remove('hidden');
 }
 
 function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }

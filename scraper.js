@@ -270,9 +270,11 @@ async function scrapeRankings() {
   saveMeta(newMeta);
   console.log(`\n[Scraper] 발견: 월드 ${discoveredWorlds.size}개, 직업 ${discoveredJobs.size}종, 등급 ${discoveredGrades.size}종`);
 
+  const now = new Date();
   const data = {
     characters: allCharacters,
-    lastUpdated: new Date().toISOString(),
+    lastUpdated: now.toISOString(),
+    collectedAt: now.toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' }),
     meta: { total: allCharacters.length, source: BASE_URL, isSample: false },
   };
   saveData(data);
