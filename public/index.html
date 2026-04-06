@@ -112,8 +112,10 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 .level-val{font-family:'Cinzel',serif;font-size:14px;font-weight:600;color:var(--cyan)}
 
 /* world / realm */
-.world-badge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:12px;background:var(--bg3);border:1px solid var(--border);color:var(--text-dim);white-space:nowrap}
-.realm-badge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:12px;background:rgba(42,79,138,.15);border:1px solid var(--border-glow);color:#93c5fd;white-space:nowrap}
+.world-badge,.realm-badge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:12px;white-space:nowrap}
+.world-badge{background:var(--bg3);border:1px solid var(--border);color:var(--text-dim)}
+.realm-badge{background:rgba(42,79,138,.15);border:1px solid var(--border-glow);color:#93c5fd}
+/* 동적 월드 컬러는 JS에서 style로 적용 */
 
 /* conquest grade */
 .cq{display:inline-flex;align-items:center;gap:4px;padding:2px 9px;border-radius:20px;font-size:12px;font-weight:600;white-space:nowrap}
@@ -328,6 +330,31 @@ function gradeIcon(v) {
 }
 function gradeCls(v) { return `cq cq-${gradeLabel(v)}`; }
 function gradeDisplay(v) { const n = gradeNum(v); return n > 0 ? n : '-'; }
+
+// 월드별 고유 색상 생성
+const WORLD_COLORS = {};
+let _worldHueIdx = 0;
+const _HUES = [210,30,150,340,70,270,110,190,310,50,240,10,170,290,130,350,90,230,330,60,200,20,160,280,100];
+function getWorldColor(world) {
+  if (!world) return null;
+  if (!WORLD_COLORS[world]) {
+    const hue = _HUES[_worldHueIdx % _HUES.length];
+    _worldHueIdx++;
+    WORLD_COLORS[world] = { hue, sat: 60, light: 65 };
+  }
+  return WORLD_COLORS[world];
+}
+function worldStyle(world) {
+  const c = getWorldColor(world);
+  if (!c) return '';
+  return `background:hsla(${c.hue},${c.sat}%,${c.light}%,.12);border-color:hsla(${c.hue},${c.sat}%,${c.light}%,.4);color:hsl(${c.hue},${c.sat}%,${c.light}%)`;
+}
+function realmStyle(world) {
+  const c = getWorldColor(world);
+  if (!c) return '';
+  // 렐름은 같은 hue에서 살짝 밝고 채도 낮게
+  return `background:hsla(${c.hue},${c.sat-10}%,${c.light+10}%,.1);border-color:hsla(${c.hue},${c.sat-10}%,${c.light}%,.3);color:hsl(${c.hue},${c.sat-10}%,${c.light+10}%)`;
+}
 const JOB_ICONS   = { 환영검사:'⚔', 주문각인사:'📖', 집행관:'🛡', 향사수:'🏹', 강령술사:'💀', 태양감시자:'☀', 심연추방자:'🌑', 야만투사:'🪓' };
 
 let allData = [];
@@ -371,6 +398,8 @@ function buildMaps() {
     if (!worldRealmMap[c.world]) worldRealmMap[c.world] = new Set();
     if (c.realm) worldRealmMap[c.world].add(c.realm);
   });
+  // 월드별 색상 미리 할당 (정렬 순서 기준)
+  Object.keys(worldRealmMap).sort(naturalSort).forEach(w => getWorldColor(w));
 }
 
 // ── BUILD FILTERS ────────────────────────────────────────────────
@@ -535,8 +564,8 @@ function renderRow(c) {
     </td>
     <td class="td-job-only"><span class="job-badge job-${esc(c.job)}">${jobIcon} ${esc(c.job)}</span></td>
     <td class="td-level-only"><span class="level-val">${c.level}</span></td>
-    <td class="col-world"><span class="world-badge">${esc(c.world)}</span></td>
-    <td class="col-realm"><span class="realm-badge">${esc(c.realm||'-')}</span></td>
+    <td class="col-world"><span class="world-badge" style="${worldStyle(c.world)}">${esc(c.world)}</span></td>
+    <td class="col-realm"><span class="realm-badge" style="${realmStyle(c.world)}">${esc(c.realm||'-')}</span></td>
     <td class="td-grade-only"><span class="${gc}">${gi} ${gd}</span></td>
   </tr>`;
 }
