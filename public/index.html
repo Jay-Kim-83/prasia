@@ -314,7 +314,7 @@ async function init() {
     const [dRes, sRes] = await Promise.all([fetch('/api/data'), fetch('/api/status')]);
     const data   = await dRes.json();
     const status = await sRes.json();
-    allData = data.characters || [];
+    allData = (data.characters || []).map((c, i) => ({ ...c, rank: c.rank || i + 1 }));
 
     if (status.isSample) document.getElementById('sampleBanner').classList.remove('hidden');
 
