@@ -58,9 +58,25 @@ function stopActiveJob() { if (activeJob) { activeJob.stop(); activeJob = null; 
 function startScheduler(config) {
   stopActiveJob();
   if (config.type === 'none' || !config.isRunning) return;
-  const expr = config.type === 'daily'
-    ? '0 0 * * *'
-    : `0 */${Math.max(1, config.interval)} * * *`;
+
+  let expr;
+  const hour = parseInt(config.hour) || 0;
+  const minute = parseInt(config.minute) || 0;
+
+  if (config.type === 'daily') {
+    expr = `${minute} ${hour} * * *`;
+  } else if (config.unit === 'minute') {
+    const startH = parseInt(config.startHour) || 0;
+    const startM = parseInt(config.startMinute) || 0;
+    const intervalMin = Math.max(10, parseInt(config.interval) || 10);
+    // 분 단위 반복: startMinute부터 interval분 간격
+    expr = `${startM}-59/${intervalMin} * * * *`;
+  } else {
+    const startH = parseInt(config.startHour) || 0;
+    const intervalH = Math.max(1, parseInt(config.interval) || 6);
+    expr = `0 ${startH}-23/${intervalH} * * *`;
+  }
+
   activeJob = cron.schedule(expr, async () => {
     if (isScraping) return;
     console.log(`[Scheduler] 자동 수집 시작`);
@@ -72,16 +88,24 @@ function startScheduler(config) {
 async function runScrape() {
   if (isScraping) { console.log('[Scraper] 이미 수집 중입니다.'); return; }
   isScraping = true;
+  const startTime = Date.now();
   emitLog('── 수집 시작 ──', 'start');
   try {
     await scrapeRankings();
-    emitLog('── 수집 완료 ──', 'done');
+    const elapsed = Date.now() - startTime;
+    const min = Math.floor(elapsed / 60000);
+    const sec = Math.floor((elapsed % 60000) / 1000);
+    const timeStr = min > 0 ? `${min}분 ${sec}초` : `${sec}초`;
+    emitLog(`── 수집 완료 (${timeStr} 소요) ──`, 'done');
   } catch (e) {
     console.error('[Scraper] 오류:', e.message);
-    emitLog('── 수집 실패 ──', 'error');
+    const elapsed = Date.now() - startTime;
+    const min = Math.floor(elapsed / 60000);
+    const sec = Math.floor((elapsed % 60000) / 1000);
+    const timeStr = min > 0 ? `${min}분 ${sec}초` : `${sec}초`;
+    emitLog(`── 수집 실패 (${timeStr} 경과) ──`, 'error');
   } finally {
     isScraping = false;
-    // 완료 신호 전송
     const doneData = `data: ${JSON.stringify({ type: 'complete' })}\n\n`;
     logClients.forEach(res => res.write(doneData));
   }
@@ -104,8 +128,13 @@ app.get('/api/status', (req, res) => {
 app.get('/api/schedule', (req, res) => res.json(loadSchedule()));
 
 app.post('/api/schedule', (req, res) => {
-  const { type, interval, isRunning } = req.body;
-  const s = { type, interval: parseInt(interval) || 6, isRunning: !!isRunning };
+  const { type, interval, isRunning, hour, minute, unit, startHour, startMinute } = req.body;
+  const s = {
+    type, interval: parseInt(interval) || 6, isRunning: !!isRunning,
+    hour: parseInt(hour) || 0, minute: parseInt(minute) || 0,
+    unit: unit || 'hour',
+    startHour: parseInt(startHour) || 0, startMinute: parseInt(startMinute) || 0,
+  };
   saveSchedule(s);
   startScheduler(s);
   res.json({ success: true, schedule: s });

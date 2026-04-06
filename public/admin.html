@@ -223,16 +223,43 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
       <div class="si">🚫</div><div class="sn">수집 안함</div><div class="sd">자동 수집 비활성</div>
     </div>
     <div class="sched-card" data-type="daily" onclick="selectSched(this)">
-      <div class="si">📅</div><div class="sn">매일 자정</div><div class="sd">하루 1회 00:00</div>
+      <div class="si">📅</div><div class="sn">매일 지정 시각</div><div class="sd">하루 1회</div>
     </div>
     <div class="sched-card" data-type="hourly" onclick="selectSched(this)">
-      <div class="si">⏱</div><div class="sn">N시간마다</div><div class="sd">지정 간격 반복</div>
+      <div class="si">⏱</div><div class="sn">반복 수집</div><div class="sd">시간/분 간격</div>
     </div>
   </div>
-  <div class="interval-row" id="intervalRow" style="display:none">
-    <label>수집 간격:</label>
-    <input type="number" class="interval-input" id="intervalVal" value="6" min="1" max="24">
-    <span style="font-size:13px;color:var(--text-dim)">시간마다</span>
+
+  <!-- 매일 지정 시각 옵션 -->
+  <div class="interval-row" id="dailyRow" style="display:none">
+    <label>수집 시각:</label>
+    <select class="interval-input" id="dailyHour" style="width:80px"></select>
+    <span style="font-size:13px;color:var(--text-dim)">시</span>
+    <select class="interval-input" id="dailyMinute" style="width:80px"></select>
+    <span style="font-size:13px;color:var(--text-dim)">분</span>
+  </div>
+
+  <!-- 반복 수집 옵션 -->
+  <div id="hourlyRow" style="display:none">
+    <div class="interval-row">
+      <label>시작 시각:</label>
+      <select class="interval-input" id="startHour" style="width:80px"></select>
+      <span style="font-size:13px;color:var(--text-dim)">시</span>
+      <select class="interval-input" id="startMinute" style="width:80px"></select>
+      <span style="font-size:13px;color:var(--text-dim)">분 부터</span>
+    </div>
+    <div class="interval-row">
+      <label>반복 단위:</label>
+      <select class="interval-input" id="intervalUnit" style="width:90px" onchange="onUnitChange()">
+        <option value="hour">시간</option>
+        <option value="minute">분</option>
+      </select>
+    </div>
+    <div class="interval-row">
+      <label>수집 간격:</label>
+      <select class="interval-input" id="intervalVal" style="width:80px"></select>
+      <span style="font-size:13px;color:var(--text-dim)" id="intervalLabel">시간마다</span>
+    </div>
   </div>
   <div class="btn-row">
     <button class="btn-primary" onclick="saveSchedule()">💾 스케줄 저장</button>
@@ -325,8 +352,14 @@ async function loadStatus() {
     isScraping = s.isScraping;
     document.getElementById('statScraping').textContent = s.isScraping ? '⏳ 수집 중' : '✅ 대기';
     const sch = s.schedule || {};
-    const typeLabel = { none:'비활성', daily:'매일 자정', hourly:`${sch.interval}시간마다` };
-    document.getElementById('statSchedule').textContent = typeLabel[sch.type] || '-';
+    let schedLabel = '-';
+    if (sch.type === 'none') schedLabel = '비활성';
+    else if (sch.type === 'daily') schedLabel = `매일 ${String(sch.hour||0).padStart(2,'0')}:${String(sch.minute||0).padStart(2,'0')}`;
+    else if (sch.type === 'hourly') {
+      const start = `${String(sch.startHour||0).padStart(2,'0')}:${String(sch.startMinute||0).padStart(2,'0')}`;
+      schedLabel = sch.unit === 'minute' ? `${start}부터 ${sch.interval}분마다` : `${start}부터 ${sch.interval}시간마다`;
+    }
+    document.getElementById('statSchedule').textContent = schedLabel;
     updateCollectBtn(s.isScraping);
   } catch {}
 }
@@ -390,16 +423,76 @@ function updateCollectBtn(scraping) {
 }
 
 // ── 스케줄 ──────────────────────────────────────────────────────
+function buildTimeSelects() {
+  // 시간 0~23
+  const hourSels = ['dailyHour','startHour'];
+  hourSels.forEach(id => {
+    const sel = document.getElementById(id);
+    for (let h=0; h<24; h++) {
+      const o = document.createElement('option');
+      o.value = h; o.textContent = String(h).padStart(2,'0');
+      sel.appendChild(o);
+    }
+  });
+  // 분 00,10,20,...,50
+  const minSels = ['dailyMinute','startMinute'];
+  minSels.forEach(id => {
+    const sel = document.getElementById(id);
+    for (let m=0; m<60; m+=10) {
+      const o = document.createElement('option');
+      o.value = m; o.textContent = String(m).padStart(2,'0');
+      sel.appendChild(o);
+    }
+  });
+  // 간격 초기: 시간
+  buildIntervalOptions('hour');
+}
+
+function buildIntervalOptions(unit) {
+  const sel = document.getElementById('intervalVal');
+  sel.innerHTML = '';
+  if (unit === 'minute') {
+    [10,20,30,40,50].forEach(v => {
+      const o = document.createElement('option');
+      o.value = v; o.textContent = v;
+      sel.appendChild(o);
+    });
+    document.getElementById('intervalLabel').textContent = '분마다';
+  } else {
+    for (let h=1; h<=12; h++) {
+      const o = document.createElement('option');
+      o.value = h; o.textContent = h;
+      sel.appendChild(o);
+    }
+    document.getElementById('intervalLabel').textContent = '시간마다';
+  }
+}
+
+function onUnitChange() {
+  buildIntervalOptions(document.getElementById('intervalUnit').value);
+}
+
 async function loadScheduleUI() {
+  buildTimeSelects();
   const res = await fetch('/api/schedule').then(r=>r.json());
   selectSchedByType(res.type || 'none');
+  if (res.hour != null)  document.getElementById('dailyHour').value = res.hour;
+  if (res.minute != null) document.getElementById('dailyMinute').value = res.minute;
+  if (res.startHour != null) document.getElementById('startHour').value = res.startHour;
+  if (res.startMinute != null) document.getElementById('startMinute').value = res.startMinute;
+  if (res.unit) {
+    document.getElementById('intervalUnit').value = res.unit;
+    buildIntervalOptions(res.unit);
+  }
   if (res.interval) document.getElementById('intervalVal').value = res.interval;
 }
 
 function selectSched(el) {
   document.querySelectorAll('.sched-card').forEach(c => c.classList.remove('selected'));
   el.classList.add('selected');
-  document.getElementById('intervalRow').style.display = el.dataset.type === 'hourly' ? 'flex' : 'none';
+  const type = el.dataset.type;
+  document.getElementById('dailyRow').style.display = type === 'daily' ? 'flex' : 'none';
+  document.getElementById('hourlyRow').style.display = type === 'hourly' ? 'block' : 'none';
 }
 
 function selectSchedByType(type) {
@@ -410,8 +503,17 @@ function selectSchedByType(type) {
 async function saveSchedule() {
   const type = document.querySelector('.sched-card.selected')?.dataset.type;
   if (!type) return showToast('유형을 선택해 주세요.');
-  const interval = parseInt(document.getElementById('intervalVal').value) || 6;
-  await fetch('/api/schedule', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ type, interval, isRunning: type !== 'none' }) });
+  const body = { type, isRunning: type !== 'none' };
+  if (type === 'daily') {
+    body.hour = parseInt(document.getElementById('dailyHour').value) || 0;
+    body.minute = parseInt(document.getElementById('dailyMinute').value) || 0;
+  } else if (type === 'hourly') {
+    body.startHour = parseInt(document.getElementById('startHour').value) || 0;
+    body.startMinute = parseInt(document.getElementById('startMinute').value) || 0;
+    body.unit = document.getElementById('intervalUnit').value;
+    body.interval = parseInt(document.getElementById('intervalVal').value) || 6;
+  }
+  await fetch('/api/schedule', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(body) });
   showToast('✅ 스케줄 저장됨');
   loadStatus();
 }
