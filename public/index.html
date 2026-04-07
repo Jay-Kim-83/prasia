@@ -240,6 +240,7 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
       <span id="statusText">불러오는 중...</span>
     </div>
     <a href="/admin.html" class="btn-admin">⚙ 관리</a>
+    <button onclick="doLogout()" class="btn-admin" style="border-color:rgba(239,83,80,.4);color:#ef9a9a">로그아웃</button>
   </div>
 </header>
 
@@ -734,6 +735,13 @@ function updateRealmStats(world, realm) {
 
   el.innerHTML = html;
   el.classList.remove('hidden');
+}
+
+function doLogout() {
+  localStorage.removeItem(USER_TOKEN_KEY);
+  sessionStorage.removeItem(USER_TOKEN_KEY);
+  userToken = '';
+  location.reload();
 }
 
 function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
