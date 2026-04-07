@@ -267,9 +267,21 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
   </div>
 </div>
 
+<!-- 사용자 관리 -->
+<div class="card">
+  <div class="card-title">👥 사용자 관리</div>
+  <p style="font-size:12px;color:var(--text-dim);margin-bottom:14px">등록된 사용자만 랭킹 페이지에 접근할 수 있습니다. 사용자가 0명이면 누구나 접근 가능합니다.</p>
+  <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap">
+    <input type="text" class="pw-input" id="newUserId" placeholder="아이디 (2자 이상)" style="width:160px">
+    <input type="password" class="pw-input" id="newUserPw" placeholder="비밀번호 (4자 이상)" style="width:160px">
+    <button class="btn-primary" style="padding:8px 16px;font-size:12px" onclick="addUser()">+ 추가</button>
+  </div>
+  <div id="userList" style="display:flex;flex-direction:column;gap:6px"></div>
+</div>
+
 <!-- 비밀번호 변경 -->
 <div class="card">
-  <div class="card-title">🔑 비밀번호 변경</div>
+  <div class="card-title">🔑 관리자 비밀번호 변경</div>
   <div class="pw-fields">
     <input type="password" class="pw-input" id="pwOld" placeholder="현재 비밀번호">
     <input type="password" class="pw-input" id="pwNew" placeholder="새 비밀번호 (4자 이상)">
@@ -334,6 +346,7 @@ async function initAdmin() {
   connectLogStream();
   loadScheduleUI();
   loadCmd();
+  loadUsers();
 }
 
 async function loadStatus() {
@@ -557,6 +570,65 @@ async function loadCmd() {
 }
 function copyCmd() {
   navigator.clipboard.writeText(document.getElementById('cmdText').textContent).then(() => showToast('📋 복사됨'));
+}
+
+// ── 사용자 관리 ─────────────────────────────────────────────────
+async function loadUsers() {
+  try {
+    const users = await fetch('/api/users').then(r => r.json());
+    const list = document.getElementById('userList');
+    if (!users.length) {
+      list.innerHTML = '<div style="font-size:12px;color:var(--text-faint)">등록된 사용자가 없습니다. (모든 사람이 접근 가능)</div>';
+      return;
+    }
+    list.innerHTML = users.map(u => `
+      <div style="display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:8px 12px">
+        <span style="flex:1;font-size:13px;color:var(--text)">${esc(u.id)}</span>
+        <input type="password" class="pw-input" id="pw_${esc(u.id)}" placeholder="새 비밀번호" style="width:130px;font-size:12px;padding:5px 8px">
+        <button class="btn-sm" onclick="changeUserPw('${esc(u.id)}')" style="font-size:11px;padding:4px 10px">변경</button>
+        <button class="btn-sm danger" onclick="deleteUser('${esc(u.id)}')" style="font-size:11px;padding:4px 10px">삭제</button>
+      </div>
+    `).join('');
+  } catch {}
+}
+
+async function addUser() {
+  const id = document.getElementById('newUserId').value.trim();
+  const pw = document.getElementById('newUserPw').value;
+  if (!id || !pw) return showToast('아이디와 비밀번호를 입력하세요.');
+  const res = await fetch('/api/users', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ id, password: pw })
+  });
+  const data = await res.json();
+  if (data.success) {
+    document.getElementById('newUserId').value = '';
+    document.getElementById('newUserPw').value = '';
+    showToast('✅ 사용자 추가됨');
+    loadUsers();
+  } else {
+    showToast(data.message || '추가 실패');
+  }
+}
+
+async function changeUserPw(id) {
+  const pw = document.getElementById('pw_' + id)?.value;
+  if (!pw) return showToast('새 비밀번호를 입력하세요.');
+  const res = await fetch(`/api/users/${encodeURIComponent(id)}/password`, {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ password: pw })
+  });
+  const data = await res.json();
+  if (data.success) { showToast('✅ 비밀번호 변경됨'); loadUsers(); }
+  else showToast(data.message || '변경 실패');
+}
+
+async function deleteUser(id) {
+  if (!confirm(`'${id}' 사용자를 삭제하시겠습니까?`)) return;
+  const res = await fetch(`/api/users/${encodeURIComponent(id)}`, { method: 'DELETE' });
+  const data = await res.json();
+  if (data.success) { showToast('✅ 사용자 삭제됨'); loadUsers(); }
+  else showToast(data.message || '삭제 실패');
 }
 
 // ── 유틸 ────────────────────────────────────────────────────────

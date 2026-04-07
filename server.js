@@ -34,15 +34,22 @@ const _origErr = console.error.bind(console);
 console.log   = (...a) => { _origLog(...a);  emitLog(a.join(' '), 'log');   };
 console.error = (...a) => { _origErr(...a);  emitLog(a.join(' '), 'error'); };
 
-// ── 비밀번호 설정 ──────────────────────────────────────────────
+// ── 설정 (관리자 + 사용자) ──────────────────────────────────────
 function loadConfig() {
   if (!fs.existsSync(CONFIG_FILE)) {
-    const def = { adminPassword: 'prasia1234' };
+    const def = { adminPassword: 'prasia1234', users: [] };
     fs.mkdirSync(path.dirname(CONFIG_FILE), { recursive: true });
     fs.writeFileSync(CONFIG_FILE, JSON.stringify(def, null, 2));
     return def;
   }
-  return JSON.parse(fs.readFileSync(CONFIG_FILE, 'utf8'));
+  const config = JSON.parse(fs.readFileSync(CONFIG_FILE, 'utf8'));
+  if (!config.users) config.users = [];
+  return config;
+}
+function saveConfig(config) {
+  fs.mkdirSync(path.dirname(CONFIG_FILE), { recursive: true });
+  fs.writeFileSync(CONFIG_FILE, JSON.stringify(config, null, 2));
+  github.pushFiles(['config.json']).catch(() => {});
 }
 
 // ── 스케줄 ────────────────────────────────────────────────────
@@ -68,15 +75,27 @@ function startScheduler(config) {
   if (config.type === 'daily') {
     expr = `${minute} ${hour} * * *`;
   } else if (config.unit === 'minute') {
-    const startH = parseInt(config.startHour) || 0;
     const startM = parseInt(config.startMinute) || 0;
     const intervalMin = Math.max(10, parseInt(config.interval) || 10);
-    // 분 단위 반복: startMinute부터 interval분 간격
-    expr = `${startM}-59/${intervalMin} * * * *`;
+    // 분 단위 반복: startMinute부터 interval분 간격 (명시적 목록)
+    const mins = [];
+    for (let m = startM; mins.length < 60; m = (m + intervalMin) % 60) {
+      if (mins.includes(m)) break;
+      mins.push(m);
+    }
+    mins.sort((a, b) => a - b);
+    expr = `${mins.join(',')} * * * *`;
   } else {
     const startH = parseInt(config.startHour) || 0;
     const intervalH = Math.max(1, parseInt(config.interval) || 6);
-    expr = `0 ${startH}-23/${intervalH} * * *`;
+    // 시간 단위 반복: startHour부터 interval시간 간격 (명시적 목록)
+    const hrs = [];
+    for (let h = startH; hrs.length < 24; h = (h + intervalH) % 24) {
+      if (hrs.includes(h)) break;
+      hrs.push(h);
+    }
+    hrs.sort((a, b) => a - b);
+    expr = `0 ${hrs.join(',')} * * *`;
   }
 
   activeJob = cron.schedule(expr, async () => {
@@ -115,10 +134,93 @@ async function runScrape() {
   }
 }
 
-// ── API ───────────────────────────────────────────────────────
-app.get('/api/data', (req, res) => res.json(loadData()));
+// ── 사용자 인증 ──────────────────────────────────────────────
+function makeToken(id) { return Buffer.from(id + ':prasia_user').toString('base64'); }
+function verifyUserToken(token) {
+  if (!token) return null;
+  try {
+    const decoded = Buffer.from(token, 'base64').toString('utf8');
+    const id = decoded.replace(/:prasia_user$/, '');
+    if (!id || id === decoded) return null;
+    const config = loadConfig();
+    if (config.users.find(u => u.id === id)) return id;
+  } catch {}
+  return null;
+}
 
-app.get('/api/status', (req, res) => {
+function requireUser(req, res, next) {
+  const config = loadConfig();
+  // 사용자가 0명이면 인증 없이 통과 (초기 설정 전)
+  if (!config.users || config.users.length === 0) return next();
+  const token = req.headers['x-user-token'] || req.query.token;
+  if (verifyUserToken(token)) return next();
+  return res.status(401).json({ success: false, message: '로그인이 필요합니다.' });
+}
+
+// 사용자 로그인
+app.post('/api/user/login', (req, res) => {
+  const { id, password } = req.body;
+  const config = loadConfig();
+  const user = config.users.find(u => u.id === id);
+  if (!user || user.password !== password) {
+    return res.status(401).json({ success: false, message: '아이디 또는 비밀번호가 틀렸습니다.' });
+  }
+  res.json({ success: true, id: user.id, token: makeToken(user.id) });
+});
+
+// 사용자 인증 필요 여부 확인
+app.get('/api/user/check', (req, res) => {
+  const config = loadConfig();
+  const hasUsers = config.users && config.users.length > 0;
+  const token = req.headers['x-user-token'] || req.query.token;
+  const loggedIn = !hasUsers || !!verifyUserToken(token);
+  res.json({ requireLogin: hasUsers, loggedIn });
+});
+
+// ── 사용자 관리 (관리자 전용) ─────────────────────────────────
+app.get('/api/users', (req, res) => {
+  const config = loadConfig();
+  res.json(config.users.map(u => ({ id: u.id })));
+});
+
+app.post('/api/users', (req, res) => {
+  const { id, password } = req.body;
+  if (!id || !password) return res.status(400).json({ success: false, message: '아이디와 비밀번호를 입력하세요.' });
+  if (id.length < 2) return res.status(400).json({ success: false, message: '아이디는 2자 이상이어야 합니다.' });
+  if (password.length < 4) return res.status(400).json({ success: false, message: '비밀번호는 4자 이상이어야 합니다.' });
+  const config = loadConfig();
+  if (config.users.find(u => u.id === id)) {
+    return res.status(400).json({ success: false, message: '이미 존재하는 아이디입니다.' });
+  }
+  config.users.push({ id, password });
+  saveConfig(config);
+  res.json({ success: true });
+});
+
+app.delete('/api/users/:id', (req, res) => {
+  const config = loadConfig();
+  const idx = config.users.findIndex(u => u.id === req.params.id);
+  if (idx === -1) return res.status(404).json({ success: false, message: '사용자를 찾을 수 없습니다.' });
+  config.users.splice(idx, 1);
+  saveConfig(config);
+  res.json({ success: true });
+});
+
+app.post('/api/users/:id/password', (req, res) => {
+  const { password } = req.body;
+  if (!password || password.length < 4) return res.status(400).json({ success: false, message: '비밀번호는 4자 이상이어야 합니다.' });
+  const config = loadConfig();
+  const user = config.users.find(u => u.id === req.params.id);
+  if (!user) return res.status(404).json({ success: false, message: '사용자를 찾을 수 없습니다.' });
+  user.password = password;
+  saveConfig(config);
+  res.json({ success: true });
+});
+
+// ── API ───────────────────────────────────────────────────────
+app.get('/api/data', requireUser, (req, res) => res.json(loadData()));
+
+app.get('/api/status', requireUser, (req, res) => {
   const data     = loadData();
   const schedule = loadSchedule();
   res.json({
@@ -162,8 +264,7 @@ app.post('/api/auth/change', (req, res) => {
   if (oldPassword !== config.adminPassword) return res.status(401).json({ success:false, message:'현재 비밀번호가 틀렸습니다.' });
   if (!newPassword || newPassword.length < 4) return res.status(400).json({ success:false, message:'새 비밀번호는 4자 이상이어야 합니다.' });
   config.adminPassword = newPassword;
-  fs.writeFileSync(CONFIG_FILE, JSON.stringify(config, null, 2));
-  github.pushFiles(['config.json']).catch(() => {});
+  saveConfig(config);
   res.json({ success: true });
 });
 
