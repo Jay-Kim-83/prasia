@@ -270,7 +270,10 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
 <!-- 수집 월드 설정 -->
 <div class="card">
   <div class="card-title">🌍 수집 월드 설정</div>
-  <p style="font-size:12px;color:var(--text-dim);margin-bottom:14px">수집할 월드를 선택하세요. 선택하지 않으면 페이지에서 자동 감지합니다.</p>
+  <p style="font-size:12px;color:var(--text-dim);margin-bottom:10px">수집할 월드를 선택하세요. 선택하지 않으면 페이지에서 자동 감지합니다.</p>
+  <label style="display:inline-flex;align-items:center;gap:6px;margin-bottom:10px;cursor:pointer;font-size:12px;color:var(--cyan)">
+    <input type="checkbox" id="worldSelectAll" onchange="toggleAllWorlds(this.checked)"> 전체 선택/해제
+  </label>
   <div id="worldCheckboxes" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:6px;margin-bottom:14px"></div>
   <div class="btn-row">
     <button class="btn-primary" onclick="saveWorlds()">💾 월드 설정 저장</button>
@@ -352,6 +355,8 @@ function doLogout() {
 }
 
 // ── 초기화 ──────────────────────────────────────────────────────
+let statusInterval = null;
+
 async function initAdmin() {
   await loadStatus();
   connectLogStream();
@@ -359,6 +364,8 @@ async function initAdmin() {
   loadCmd();
   loadUsers();
   loadWorlds();
+  // 현황 실시간 갱신 (10초마다)
+  statusInterval = setInterval(loadStatus, 10000);
 }
 
 async function loadStatus() {
@@ -402,8 +409,15 @@ function connectLogStream() {
     if (data.type === 'complete') {
       isScraping = false;
       updateCollectBtn(false);
-      loadStatus(); // 현황 갱신
+      loadStatus();
       return;
+    }
+
+    // 수집 시작 감지 → 현황 즉시 갱신
+    if (data.type === 'start') {
+      isScraping = true;
+      updateCollectBtn(true);
+      loadStatus();
     }
 
     // 로그 라인 추가
@@ -604,14 +618,25 @@ async function loadWorlds() {
     container.innerHTML = codes.map(code => {
       const name = allWorlds[code];
       const checked = activeWorlds.length === 0 || activeWorlds.includes(code);
-      const isAuto = activeWorlds.length === 0;
       return `<label style="display:flex;align-items:center;gap:6px;padding:6px 10px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:12px;color:var(--text)">
-        <input type="checkbox" value="${code}" class="world-cb" ${checked ? 'checked' : ''}>
+        <input type="checkbox" value="${code}" class="world-cb" ${checked ? 'checked' : ''} onchange="syncSelectAll()">
         <span>${esc(name)}</span>
         <span style="color:var(--text-faint)">${code}</span>
       </label>`;
     }).join('');
+    syncSelectAll();
   } catch {}
+}
+
+function toggleAllWorlds(checked) {
+  document.querySelectorAll('.world-cb').forEach(cb => cb.checked = checked);
+}
+
+function syncSelectAll() {
+  const all = document.querySelectorAll('.world-cb');
+  const checkedCount = document.querySelectorAll('.world-cb:checked').length;
+  const sa = document.getElementById('worldSelectAll');
+  if (sa) { sa.checked = checkedCount === all.length; sa.indeterminate = checkedCount > 0 && checkedCount < all.length; }
 }
 
 async function saveWorlds() {
