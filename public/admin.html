@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" id="favicon">
 <title>관리자 — 프라시아 랭킹</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -271,6 +271,11 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
 <div class="card">
   <div class="card-title">📊 렐름 통계 표시 설정</div>
   <div class="interval-row">
+    <label>레벨 최소값:</label>
+    <input type="number" class="interval-input" id="minLevel" min="0" max="100" value="0" style="width:80px">
+    <span style="font-size:12px;color:var(--text-dim)">이상만 표시 (0 = 전체)</span>
+  </div>
+  <div class="interval-row">
     <label>토벌등급 최소값:</label>
     <input type="number" class="interval-input" id="minConquestGrade" min="0" max="30" value="0" style="width:80px">
     <span style="font-size:12px;color:var(--text-dim)">이상만 표시 (0 = 전체)</span>
@@ -419,8 +424,8 @@ async function loadStatus() {
       waitingForComplete = true;
       document.getElementById('statScraping').textContent = '⏳ 수집 중';
       updateCollectBtn(true);
+      setFavicon('collecting');
     } else if (!waitingForComplete) {
-      // 서버도 대기, 로컬도 대기 상태일 때만 대기 표시
       isScraping = false;
       document.getElementById('statScraping').textContent = '✅ 대기';
       updateCollectBtn(false);
@@ -448,6 +453,7 @@ function connectLogStream() {
         isScraping = false;
         document.getElementById('statScraping').textContent = '✅ 대기';
         updateCollectBtn(false);
+        setFavicon('done');
         loadStatus();
       }
       return;
@@ -459,6 +465,7 @@ function connectLogStream() {
       isScraping = true;
       document.getElementById('statScraping').textContent = '⏳ 수집 중';
       updateCollectBtn(true);
+      setFavicon('collecting');
     }
 
     // 로그 라인 추가
@@ -654,15 +661,17 @@ function copyCmd() {
 async function loadDisplay() {
   try {
     const data = await fetch('/api/display').then(r => r.json());
+    document.getElementById('minLevel').value = data.minLevel || 0;
     document.getElementById('minConquestGrade').value = data.minConquestGrade || 0;
   } catch {}
 }
 
 async function saveDisplay() {
+  const minLevel = parseInt(document.getElementById('minLevel').value) || 0;
   const minConquestGrade = parseInt(document.getElementById('minConquestGrade').value) || 0;
   await fetch('/api/display', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ minConquestGrade })
+    body: JSON.stringify({ minLevel, minConquestGrade })
   });
   showToast('✅ 표시 설정 저장됨');
 }
@@ -786,6 +795,25 @@ async function deleteUser(id) {
   const data = await res.json();
   if (data.success) { showToast('✅ 사용자 삭제됨'); loadUsers(); }
   else showToast(data.message || '삭제 실패');
+}
+
+// ── 파비콘 상태 ──────────────────────────────────────────────────
+let faviconTimer = null;
+function setFavicon(state) {
+  const el = document.getElementById('favicon');
+  if (!el) return;
+  if (state === 'collecting') {
+    el.href = '/favicon-collecting.svg';
+    document.title = '⏳ 수집 중 — 프라시아 랭킹';
+  } else if (state === 'done') {
+    el.href = '/favicon-done.svg';
+    document.title = '✅ 수집 완료 — 프라시아 랭킹';
+    clearTimeout(faviconTimer);
+    faviconTimer = setTimeout(() => setFavicon('idle'), 30000);
+  } else {
+    el.href = '/favicon.svg';
+    document.title = '관리자 — 프라시아 랭킹';
+  }
 }
 
 // ── 유틸 ────────────────────────────────────────────────────────

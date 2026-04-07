@@ -699,10 +699,11 @@ function updateRealmStats(world, realm) {
     (!realm || c.realm === realm)
   );
 
-  // 레벨별 인원수 (높은순)
+  // 레벨별 인원수 (최소값 필터 적용, 높은순)
+  const minLevel = displayConfig.minLevel || 0;
   const levelCounts = {};
   pool.forEach(c => {
-    if (c.level > 0) levelCounts[c.level] = (levelCounts[c.level] || 0) + 1;
+    if (c.level > 0 && c.level >= minLevel) levelCounts[c.level] = (levelCounts[c.level] || 0) + 1;
   });
   const levelKeys = Object.keys(levelCounts).map(Number).sort((a,b) => b - a);
 
