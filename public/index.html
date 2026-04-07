@@ -208,7 +208,7 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 <body>
 
 <!-- 로그인 오���레이 -->
-<div id="loginOverlay" style="position:fixed;inset:0;background:rgba(8,12,20,.97);display:flex;align-items:center;justify-content:center;z-index:999">
+<div id="loginOverlay" style="position:fixed;inset:0;background:rgba(8,12,20,.97);display:none;align-items:center;justify-content:center;z-index:999">
   <div style="background:var(--bg2);border:1px solid var(--border-glow);border-radius:16px;padding:40px 36px;width:100%;max-width:360px;text-align:center">
     <div style="font-size:40px;margin-bottom:16px">⚔</div>
     <h2 style="font-family:'Cinzel',serif;color:var(--gold-light);font-size:18px;margin-bottom:6px">Prasia Records</h2>
@@ -333,7 +333,8 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 
 <script>
 const USER_TOKEN_KEY = 'prasia_user_token';
-let userToken = localStorage.getItem(USER_TOKEN_KEY) || '';
+const ADMIN_TOKEN_KEY = 'prasia_admin_token';
+let userToken = localStorage.getItem(USER_TOKEN_KEY) || localStorage.getItem(ADMIN_TOKEN_KEY) || '';
 
 function authHeaders() { return userToken ? { 'X-User-Token': userToken } : {}; }
 function authFetch(url, opts = {}) {

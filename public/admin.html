@@ -267,6 +267,17 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
   </div>
 </div>
 
+<!-- 수집 월드 설정 -->
+<div class="card">
+  <div class="card-title">🌍 수집 월드 설정</div>
+  <p style="font-size:12px;color:var(--text-dim);margin-bottom:14px">수집할 월드를 선택하세요. 선택하지 않으면 페이지에서 자동 감지합니다.</p>
+  <div id="worldCheckboxes" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:6px;margin-bottom:14px"></div>
+  <div class="btn-row">
+    <button class="btn-primary" onclick="saveWorlds()">💾 월드 설정 저장</button>
+    <button class="btn-danger" onclick="clearWorlds()">↺ 자동 감지로 초기화</button>
+  </div>
+</div>
+
 <!-- 사용자 관리 -->
 <div class="card">
   <div class="card-title">👥 사용자 관리</div>
@@ -347,6 +358,7 @@ async function initAdmin() {
   loadScheduleUI();
   loadCmd();
   loadUsers();
+  loadWorlds();
 }
 
 async function loadStatus() {
@@ -570,6 +582,57 @@ async function loadCmd() {
 }
 function copyCmd() {
   navigator.clipboard.writeText(document.getElementById('cmdText').textContent).then(() => showToast('📋 복사됨'));
+}
+
+// ── 월드 설정 ───────────────────────────────────────────────────
+async function loadWorlds() {
+  try {
+    const data = await fetch('/api/worlds').then(r => r.json());
+    const container = document.getElementById('worldCheckboxes');
+    const allWorlds = data.allWorlds || {};
+    const activeWorlds = data.activeWorlds || [];
+    const codes = Object.keys(allWorlds).sort((a, b) => {
+      const na = parseInt(a.replace('W', '')), nb = parseInt(b.replace('W', ''));
+      return na - nb;
+    });
+
+    if (codes.length === 0) {
+      container.innerHTML = '<div style="font-size:12px;color:var(--text-faint)">월드 정보가 없습니다. 먼저 수집을 실행하세요.</div>';
+      return;
+    }
+
+    container.innerHTML = codes.map(code => {
+      const name = allWorlds[code];
+      const checked = activeWorlds.length === 0 || activeWorlds.includes(code);
+      const isAuto = activeWorlds.length === 0;
+      return `<label style="display:flex;align-items:center;gap:6px;padding:6px 10px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:12px;color:var(--text)">
+        <input type="checkbox" value="${code}" class="world-cb" ${checked ? 'checked' : ''}>
+        <span>${esc(name)}</span>
+        <span style="color:var(--text-faint)">${code}</span>
+      </label>`;
+    }).join('');
+  } catch {}
+}
+
+async function saveWorlds() {
+  const checked = [...document.querySelectorAll('.world-cb:checked')].map(cb => cb.value);
+  const all = [...document.querySelectorAll('.world-cb')].length;
+  // 전부 선택 = 자동 감지와 동일하므로 빈 배열로 저장
+  const activeWorlds = checked.length === all ? [] : checked;
+  await fetch('/api/worlds', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ activeWorlds })
+  });
+  showToast(`✅ ${checked.length}개 월드 설정 저장됨`);
+}
+
+async function clearWorlds() {
+  await fetch('/api/worlds', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ activeWorlds: [] })
+  });
+  showToast('✅ 자동 감지로 초기화됨');
+  loadWorlds();
 }
 
 // ── 사용자 관리 ─────────────────────────────────────────────────

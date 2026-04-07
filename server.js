@@ -136,8 +136,22 @@ async function runScrape() {
 
 // ── 사용자 인증 ──────────────────────────────────────────────
 function makeToken(id) { return Buffer.from(id + ':prasia_user').toString('base64'); }
+function verifyAdminToken(token) {
+  if (!token) return false;
+  try {
+    const decoded = Buffer.from(token, 'base64').toString('utf8');
+    if (!decoded.endsWith(':prasia')) return false;
+    const pw = decoded.replace(/:prasia$/, '');
+    const config = loadConfig();
+    return pw === config.adminPassword;
+  } catch {}
+  return false;
+}
+
 function verifyUserToken(token) {
   if (!token) return null;
+  // 관리자 토큰도 유효한 사용자로 인정
+  if (verifyAdminToken(token)) return '_admin';
   try {
     const decoded = Buffer.from(token, 'base64').toString('utf8');
     const id = decoded.replace(/:prasia_user$/, '');
@@ -213,6 +227,24 @@ app.post('/api/users/:id/password', (req, res) => {
   const user = config.users.find(u => u.id === req.params.id);
   if (!user) return res.status(404).json({ success: false, message: '사용자를 찾을 수 없습니다.' });
   user.password = password;
+  saveConfig(config);
+  res.json({ success: true });
+});
+
+// ── 활성 월드 관리 ───────────────────────────────────────────
+app.get('/api/worlds', (req, res) => {
+  const config = loadConfig();
+  const meta = loadMeta();
+  // 전체 월드 목록 (meta에서), 활성 월드 (config에서)
+  const allWorlds = meta.worldCodeMap || {};
+  const activeWorlds = config.activeWorlds || []; // 빈 배열 = 자동 감지
+  res.json({ allWorlds, activeWorlds });
+});
+
+app.post('/api/worlds', (req, res) => {
+  const { activeWorlds } = req.body;
+  const config = loadConfig();
+  config.activeWorlds = Array.isArray(activeWorlds) ? activeWorlds : [];
   saveConfig(config);
   res.json({ success: true });
 });

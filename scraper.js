@@ -29,6 +29,16 @@ let JOB_NAME_MAP = {
   'SolarSentinel': '태양감시자',
 };
 
+const CONFIG_FILE = path.join(__dirname, 'data', 'config.json');
+
+function loadConfigWorlds() {
+  if (!fs.existsSync(CONFIG_FILE)) return [];
+  try {
+    const config = JSON.parse(fs.readFileSync(CONFIG_FILE, 'utf8'));
+    return Array.isArray(config.activeWorlds) ? config.activeWorlds : [];
+  } catch { return []; }
+}
+
 function loadMeta() {
   if (!fs.existsSync(META_FILE)) return {};
   try { return JSON.parse(fs.readFileSync(META_FILE, 'utf8')); } catch { return {}; }
@@ -143,34 +153,60 @@ async function fetchTokenAndWorlds() {
     });
 
     await page.goto(BASE_URL, { waitUntil: 'networkidle2', timeout: 60000 });
-    await new Promise(r => setTimeout(r, 4000));
+    await new Promise(r => setTimeout(r, 6000));
 
-    // 페이지에서 월드 select 옵션 동적 읽기
-    pageWorlds = await page.evaluate(() => {
-      const result = {};
-      document.querySelectorAll('select option').forEach(opt => {
-        const val  = String(opt.value || '');
-        const name = opt.textContent.trim();
-        if (!val || !name) return;
-        const code = val.replace(/^LIVE_/i, '').replace(/_R\d+$/, '').toUpperCase();
-        if (/^W\d+$/.test(code) && !val.includes('_R')) result[code] = name;
-      });
-      return result;
+    // 페이지에서 월드 select 옵션 동적 읽기 (비활성 필터링)
+    const worldResult = await page.evaluate(() => {
+      const allWorlds = {};   // 전체 월드 (이름 매핑용)
+      const activeWorlds = {}; // 활성 월드만
+      const selects = [...document.querySelectorAll('select')];
+
+      for (const sel of selects) {
+        const opts = [];
+        for (const opt of sel.options) {
+          const val = String(opt.value || '');
+          if (!val) continue;
+          // 월드그룹 옵션만 (LIVE_W## 형태, _R 없음)
+          if (!/^LIVE_W\d+$/i.test(val)) continue;
+          const code = val.replace(/^LIVE_/i, '').toUpperCase();
+          const name = opt.textContent.trim();
+          if (!name) continue;
+          allWorlds[code] = name;
+          // disabled/hidden 옵션 제외
+          if (!opt.disabled && !opt.hidden) {
+            const style = window.getComputedStyle(opt);
+            if (style.display !== 'none') {
+              opts.push({ code, name });
+            }
+          }
+        }
+        // 월드그룹 select를 찾으면 활성 옵션만 사용
+        if (opts.length > 0) {
+          opts.forEach(o => { activeWorlds[o.code] = o.name; });
+          break; // 첫 번째 매칭 select만 사용
+        }
+      }
+
+      return { allWorlds, activeWorlds };
     });
 
-    if (Object.keys(pageWorlds).length > 0) {
-      console.log(`[Scraper] 페이지에서 월드 ${Object.keys(pageWorlds).length}개 확인`);
-      Object.assign(WORLD_CODE_MAP, pageWorlds);
+    // 전체 월드 이름 매핑 업데이트
+    if (Object.keys(worldResult.allWorlds).length > 0) {
+      Object.assign(WORLD_CODE_MAP, worldResult.allWorlds);
+    }
+    // 활성 월드 결정
+    if (Object.keys(worldResult.activeWorlds).length > 0) {
+      pageWorlds = worldResult.activeWorlds;
+      console.log(`[Scraper] 활성 월드: ${Object.keys(pageWorlds).length}개 / 전체: ${Object.keys(worldResult.allWorlds).length}개`);
     }
 
-    // 페이지에서 직업 select 옵션 동적 읽기 (value=영문, text=한글)
+    // 직업 select 옵션 동적 읽기 (value=영문, text=한글)
     pageJobs = await page.evaluate(() => {
       const result = {};
       document.querySelectorAll('select option').forEach(opt => {
         const val  = String(opt.value || '').trim();
         const name = opt.textContent.trim();
-        if (!val || !name) return;
-        // 직업 옵션: 영문 PascalCase value + 한글 텍스트
+        if (!val || !name || opt.disabled || opt.hidden) return;
         if (/^[A-Z][a-zA-Z]+$/.test(val) && /[\uAC00-\uD7AF]/.test(name)) {
           result[val] = name;
         }
@@ -199,15 +235,21 @@ async function scrapeRankings() {
     return null;
   }
 
-  // 페이지에서 읽은 월드가 있으면 그대로 활성 월드로 사용, 없으면 이전 메타 → 기본값
+  // 활성 월드 결정 우선순위: config 설정 > 페이지 감지 > 이전 메타 > 기본값
   const prevMeta = loadMeta();
+  const configWorlds = loadConfigWorlds();
   const pageWorldCodes = Object.keys(pageWorlds);
-  const activeWorldCodes = pageWorldCodes.length > 0
-    ? pageWorldCodes
-    : (prevMeta.activeWorldCodes || ['W02','W03','W05','W08','W10','W11','W12','W14','W16','W27']);
+  let activeWorldCodes;
 
-  if (pageWorldCodes.length > 0) {
-    console.log(`[Scraper] 활성 월드 자동 감지: ${pageWorldCodes.length}개`);
+  if (configWorlds.length > 0) {
+    activeWorldCodes = configWorlds;
+    console.log(`[Scraper] 관리자 설정 월드: ${activeWorldCodes.length}개`);
+  } else if (pageWorldCodes.length > 0) {
+    activeWorldCodes = pageWorldCodes;
+    console.log(`[Scraper] 페이지 자동 감지 월드: ${activeWorldCodes.length}개`);
+  } else {
+    activeWorldCodes = prevMeta.activeWorldCodes || ['W02','W03','W05','W08','W10','W11','W12','W14','W16','W27'];
+    console.log(`[Scraper] 기본 월드 사용: ${activeWorldCodes.length}개`);
   }
 
   const headers = {
