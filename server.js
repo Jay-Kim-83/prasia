@@ -326,14 +326,17 @@ app.get('/api/task-scheduler-cmd', (req, res) => {
   res.json({ cmd: `schtasks /create /tn "PrasiaRanking" /tr "${nodePath} ${collectPath}" /sc daily /st 00:00 /f` });
 });
 
-// 서버 시작: GitHub에서 데이터 복원 후 스케줄러 시작
-app.listen(PORT, async () => {
+// 서버 시작: GitHub 데이터 복원 완료 후 listen
+(async () => {
   await github.pullAll();
   const config = loadConfig();
   const schedule = loadSchedule();
   startScheduler(schedule);
-  console.log(`\n🗡️  프라시아 전기 랭킹 서버 가동`);
-  console.log(`   http://localhost:${PORT}`);
-  console.log(`   관리자: http://localhost:${PORT}/admin.html`);
-  console.log(`   초기 비밀번호: ${config.adminPassword}\n`);
-});
+
+  app.listen(PORT, () => {
+    console.log(`\n🗡️  프라시아 전기 랭킹 서버 가동`);
+    console.log(`   http://localhost:${PORT}`);
+    console.log(`   관리자: http://localhost:${PORT}/admin.html`);
+    console.log(`   초기 비밀번호: ${config.adminPassword}\n`);
+  });
+})();
