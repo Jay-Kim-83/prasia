@@ -421,22 +421,28 @@ function connectLogStream() {
   if (evtSource) evtSource.close();
   evtSource = new EventSource('/api/logs/stream');
   const area = document.getElementById('logArea');
+  let buffering = true; // 초기 버퍼 로그 수신 중
+
+  // 버퍼 로그가 모두 전송된 후 실시간 모드로 전환
+  setTimeout(() => { buffering = false; }, 2000);
 
   evtSource.onmessage = (e) => {
     const data = JSON.parse(e.data);
 
     // 수집 완료 신호
     if (data.type === 'complete') {
-      waitingForComplete = false;
-      isScraping = false;
-      document.getElementById('statScraping').textContent = '✅ 대기';
-      updateCollectBtn(false);
-      loadStatus(); // 현황 데이터 갱신
+      if (!buffering) {
+        waitingForComplete = false;
+        isScraping = false;
+        document.getElementById('statScraping').textContent = '✅ 대기';
+        updateCollectBtn(false);
+        loadStatus();
+      }
       return;
     }
 
-    // 수집 시작 감지 (자동 수집 포함)
-    if (data.type === 'start') {
+    // 수집 시작 감지 (자동 수집 포함) — 버퍼 로그에서는 무시
+    if (data.type === 'start' && !buffering) {
       waitingForComplete = true;
       isScraping = true;
       document.getElementById('statScraping').textContent = '⏳ 수집 중';
