@@ -272,7 +272,7 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
     <div class="sel-wrap">
       <select id="sortBy" onchange="applyFilters()">
         <option value="rank">랭킹순</option>
-        <option value="level_desc">레벨 높은순</option>
+        <option value="level_desc" selected>레벨 높은순</option>
         <option value="level_asc">레벨 낮은순</option>
         <option value="nickname">닉네임순</option>
       </select>
@@ -605,7 +605,8 @@ function goPage(p) {
 }
 
 function resetFilters() {
-  ['fWorld','fJob','fGrade','fLevel','sortBy'].forEach(id=>document.getElementById(id).value='');
+  ['fWorld','fJob','fGrade','fLevel'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('sortBy').value='level_desc';
   const rs=document.getElementById('fRealm');
   rs.innerHTML='<option value="">전체</option>'; rs.disabled=true;
   document.getElementById('fSearch').value='';

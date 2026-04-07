@@ -3,6 +3,7 @@ const cron    = require('node-cron');
 const path    = require('path');
 const fs      = require('fs');
 const { scrapeRankings, loadData, loadMeta } = require('./scraper');
+const github = require('./github-sync');
 
 const app  = express();
 const PORT = process.env.PORT || 3000;
@@ -53,6 +54,7 @@ function loadSchedule() {
 function saveSchedule(s) {
   fs.mkdirSync(path.dirname(SCHEDULE_FILE), { recursive: true });
   fs.writeFileSync(SCHEDULE_FILE, JSON.stringify(s, null, 2));
+  github.pushFiles(['schedule.json']).catch(() => {});
 }
 function stopActiveJob() { if (activeJob) { activeJob.stop(); activeJob = null; } }
 function startScheduler(config) {
@@ -92,6 +94,8 @@ async function runScrape() {
   emitLog('── 수집 시작 ──', 'start');
   try {
     await scrapeRankings();
+    // 수집 완료 후 GitHub에 데이터 동기화
+    github.pushFiles(['rankings.json', 'meta.json']).catch(() => {});
     const elapsed = Date.now() - startTime;
     const min = Math.floor(elapsed / 60000);
     const sec = Math.floor((elapsed % 60000) / 1000);
@@ -159,6 +163,7 @@ app.post('/api/auth/change', (req, res) => {
   if (!newPassword || newPassword.length < 4) return res.status(400).json({ success:false, message:'새 비밀번호는 4자 이상이어야 합니다.' });
   config.adminPassword = newPassword;
   fs.writeFileSync(CONFIG_FILE, JSON.stringify(config, null, 2));
+  github.pushFiles(['config.json']).catch(() => {});
   res.json({ success: true });
 });
 
@@ -190,8 +195,12 @@ app.get('/api/task-scheduler-cmd', (req, res) => {
   res.json({ cmd: `schtasks /create /tn "PrasiaRanking" /tr "${nodePath} ${collectPath}" /sc daily /st 00:00 /f` });
 });
 
-const schedule = loadSchedule();
-startScheduler(schedule);
+// 서버 시작: GitHub에서 데이터 복원 후 스케줄러 시작
+(async () => {
+  await github.pullAll();
+  const schedule = loadSchedule();
+  startScheduler(schedule);
+})();
 
 app.listen(PORT, () => {
   const config = loadConfig();

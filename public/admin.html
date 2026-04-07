@@ -434,11 +434,18 @@ function buildTimeSelects() {
       sel.appendChild(o);
     }
   });
-  // 분 00,10,20,...,50
-  const minSels = ['dailyMinute','startMinute'];
-  minSels.forEach(id => {
+  // dailyMinute: 00,10,20,...,50 / startMinute: 00~59
+  ['dailyMinute'].forEach(id => {
     const sel = document.getElementById(id);
     for (let m=0; m<60; m+=10) {
+      const o = document.createElement('option');
+      o.value = m; o.textContent = String(m).padStart(2,'0');
+      sel.appendChild(o);
+    }
+  });
+  ['startMinute'].forEach(id => {
+    const sel = document.getElementById(id);
+    for (let m=0; m<60; m++) {
       const o = document.createElement('option');
       o.value = m; o.textContent = String(m).padStart(2,'0');
       sel.appendChild(o);

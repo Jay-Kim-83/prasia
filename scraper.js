@@ -127,6 +127,7 @@ async function fetchTokenAndWorlds() {
 
   let token = null;
   let pageWorlds = {}; // { W02: '론도', ... }
+  let pageJobs   = {}; // { 'Enforcer': '집행관', ... }
 
   try {
     const page = await browser.newPage();
@@ -162,12 +163,32 @@ async function fetchTokenAndWorlds() {
       Object.assign(WORLD_CODE_MAP, pageWorlds);
     }
 
+    // 페이지에서 직업 select 옵션 동적 읽기 (value=영문, text=한글)
+    pageJobs = await page.evaluate(() => {
+      const result = {};
+      document.querySelectorAll('select option').forEach(opt => {
+        const val  = String(opt.value || '').trim();
+        const name = opt.textContent.trim();
+        if (!val || !name) return;
+        // 직업 옵션: 영문 PascalCase value + 한글 텍스트
+        if (/^[A-Z][a-zA-Z]+$/.test(val) && /[\uAC00-\uD7AF]/.test(name)) {
+          result[val] = name;
+        }
+      });
+      return result;
+    });
+
+    if (Object.keys(pageJobs).length > 0) {
+      console.log(`[Scraper] 페이지에서 직업 ${Object.keys(pageJobs).length}개 확인`);
+      Object.assign(JOB_NAME_MAP, pageJobs);
+    }
+
     await page.close();
   } finally {
     await browser.close();
   }
 
-  return { token, pageWorlds };
+  return { token, pageWorlds, pageJobs };
 }
 
 // ── 메인 수집 ─────────────────────────────────────────────────────
@@ -178,10 +199,16 @@ async function scrapeRankings() {
     return null;
   }
 
-  // 이전 메타에서 활성 월드 목록 로드, 없으면 기본값
+  // 페이지에서 읽은 월드가 있으면 그대로 활성 월드로 사용, 없으면 이전 메타 → 기본값
   const prevMeta = loadMeta();
-  const activeWorldCodes = prevMeta.activeWorldCodes ||
-    ['W02','W03','W05','W08','W10','W11','W12','W14','W16','W27'];
+  const pageWorldCodes = Object.keys(pageWorlds);
+  const activeWorldCodes = pageWorldCodes.length > 0
+    ? pageWorldCodes
+    : (prevMeta.activeWorldCodes || ['W02','W03','W05','W08','W10','W11','W12','W14','W16','W27']);
+
+  if (pageWorldCodes.length > 0) {
+    console.log(`[Scraper] 활성 월드 자동 감지: ${pageWorldCodes.length}개`);
+  }
 
   const headers = {
     'Authorization':   token,
