@@ -283,14 +283,26 @@ async function scrapeRankings() {
         world_group_id: `LIVE_${worldCode}`,
       };
 
-      try {
-        const res = await postRequest(API_URL, headers, body);
-        if (res.status !== 200 || !res.body) continue;
+      let res;
+      for (let attempt = 0; attempt < 2; attempt++) {
+        try {
+          res = await postRequest(API_URL, headers, body);
+          break; // 성공 시 루프 탈출
+        } catch (e) {
+          if (attempt === 0) {
+            console.log(`  ${realmLabel}: 재시도 (${e.message})`);
+            await new Promise(r => setTimeout(r, 500));
+          } else {
+            console.log(`  ${realmLabel}: 오류 - ${e.message}`);
+          }
+        }
+      }
+      if (!res || res.status !== 200 || !res.body) continue;
 
+      try {
         const list = extractList(res.body);
         if (!list || list.length === 0) {
-          // 빈 응답 = 이 렐름 없음 → 루프 종료 (렐름은 연속적)
-          if (r > 1) break; // r=1이 없으면 월드 전체 skip
+          if (r > 1) break;
           continue;
         }
 
@@ -298,7 +310,6 @@ async function scrapeRankings() {
         allCharacters.push(...chars);
         worldHasData = true;
 
-        // 발견 정보 수집
         discoveredWorlds.add(worldCode);
         if (!discoveredRealms.has(worldCode)) discoveredRealms.set(worldCode, new Set());
         discoveredRealms.get(worldCode).add(realmLabel);
@@ -309,7 +320,7 @@ async function scrapeRankings() {
 
         console.log(`  ${realmLabel}: ${chars.length}명`);
       } catch (e) {
-        console.log(`  ${realmLabel}: 오류 - ${e.message}`);
+        console.log(`  ${realmLabel}: 파싱 오류 - ${e.message}`);
       }
 
       await new Promise(r => setTimeout(r, 150));

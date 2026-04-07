@@ -247,7 +247,7 @@ app.post('/api/worlds', (req, res) => {
 // ── API ───────────────────────────────────────────────────────
 app.get('/api/data', requireUser, (req, res) => res.json(loadData()));
 
-app.get('/api/status', requireUser, (req, res) => {
+app.get('/api/status', (req, res) => {
   const data     = loadData();
   const schedule = loadSchedule();
   res.json({
