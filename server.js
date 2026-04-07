@@ -163,9 +163,6 @@ function verifyUserToken(token) {
 }
 
 function requireUser(req, res, next) {
-  const config = loadConfig();
-  // 사용자가 0명이면 인증 없이 통과 (초기 설정 전)
-  if (!config.users || config.users.length === 0) return next();
   const token = req.headers['x-user-token'] || req.query.token;
   if (verifyUserToken(token)) return next();
   return res.status(401).json({ success: false, message: '로그인이 필요합니다.' });
@@ -184,11 +181,9 @@ app.post('/api/user/login', (req, res) => {
 
 // 사용자 인증 필요 여부 확인
 app.get('/api/user/check', (req, res) => {
-  const config = loadConfig();
-  const hasUsers = config.users && config.users.length > 0;
   const token = req.headers['x-user-token'] || req.query.token;
-  const loggedIn = !hasUsers || !!verifyUserToken(token);
-  res.json({ requireLogin: hasUsers, loggedIn });
+  const loggedIn = !!verifyUserToken(token);
+  res.json({ requireLogin: true, loggedIn });
 });
 
 // ── 사용자 관리 (관리자 전용) ─────────────────────────────────
