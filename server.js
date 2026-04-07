@@ -324,14 +324,11 @@ app.get('/api/task-scheduler-cmd', (req, res) => {
 });
 
 // 서버 시작: GitHub에서 데이터 복원 후 스케줄러 시작
-(async () => {
+app.listen(PORT, async () => {
   await github.pullAll();
+  const config = loadConfig();
   const schedule = loadSchedule();
   startScheduler(schedule);
-})();
-
-app.listen(PORT, () => {
-  const config = loadConfig();
   console.log(`\n🗡️  프라시아 전기 랭킹 서버 가동`);
   console.log(`   http://localhost:${PORT}`);
   console.log(`   관리자: http://localhost:${PORT}/admin.html`);

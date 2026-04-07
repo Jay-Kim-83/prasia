@@ -320,6 +320,7 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
 const AUTH_KEY = 'prasia_admin_token';
 let   evtSource = null;
 let   isScraping = false;
+let   waitingForComplete = false; // 수집 버튼 클릭 후 완료 대기 플래그
 
 // ── 인증 ────────────────────────────────────────────────────────
 function checkAuth() {
@@ -381,8 +382,6 @@ async function loadStatus() {
     } else {
       document.getElementById('statDate').textContent = '없음';
     }
-    isScraping = s.isScraping;
-    document.getElementById('statScraping').textContent = s.isScraping ? '⏳ 수집 중' : '✅ 대기';
     const sch = s.schedule || {};
     let schedLabel = '-';
     if (sch.type === 'none') schedLabel = '비활성';
@@ -392,7 +391,19 @@ async function loadStatus() {
       schedLabel = sch.unit === 'minute' ? `${start}부터 ${sch.interval}분마다` : `${start}부터 ${sch.interval}시간마다`;
     }
     document.getElementById('statSchedule').textContent = schedLabel;
-    updateCollectBtn(s.isScraping);
+
+    // 수집 상태: 서버가 수집 중이면 항상 반영
+    if (s.isScraping) {
+      isScraping = true;
+      waitingForComplete = true;
+      document.getElementById('statScraping').textContent = '⏳ 수집 중';
+      updateCollectBtn(true);
+    } else if (!waitingForComplete) {
+      // 서버도 대기, 로컬도 대기 상태일 때만 대기 표시
+      isScraping = false;
+      document.getElementById('statScraping').textContent = '✅ 대기';
+      updateCollectBtn(false);
+    }
   } catch {}
 }
 
@@ -407,17 +418,20 @@ function connectLogStream() {
 
     // 수집 완료 신호
     if (data.type === 'complete') {
+      waitingForComplete = false;
       isScraping = false;
+      document.getElementById('statScraping').textContent = '✅ 대기';
       updateCollectBtn(false);
-      loadStatus();
+      loadStatus(); // 현황 데이터 갱신
       return;
     }
 
-    // 수집 시작 감지 → 현황 즉시 갱신
+    // 수집 시작 감지 (자동 수집 포함)
     if (data.type === 'start') {
+      waitingForComplete = true;
       isScraping = true;
+      document.getElementById('statScraping').textContent = '⏳ 수집 중';
       updateCollectBtn(true);
-      loadStatus();
     }
 
     // 로그 라인 추가
@@ -438,7 +452,8 @@ function connectLogStream() {
 
 // ── 수집 ────────────────────────────────────────────────────────
 async function collectNow() {
-  if (isScraping) return;
+  if (isScraping || waitingForComplete) return;
+  waitingForComplete = true;
   isScraping = true;
   updateCollectBtn(true);
   document.getElementById('statScraping').textContent = '⏳ 수집 중';
