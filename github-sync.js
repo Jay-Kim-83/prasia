@@ -113,6 +113,7 @@ async function downloadFile(filename) {
   const apiPath = `/repos/${REPO}/contents/data/${filename}?ref=${BRANCH}`;
   const res = await ghRequest('GET', apiPath);
 
+  // 정상 다운로드 (1MB 이하)
   if (res.status === 200 && res.body.content) {
     const content = Buffer.from(res.body.content, 'base64').toString('utf8');
     const filePath = path.join(DATA_DIR, filename);
@@ -120,6 +121,22 @@ async function downloadFile(filename) {
     fs.writeFileSync(filePath, content, 'utf8');
     return true;
   }
+
+  // 대용량 파일 (1MB 초과): Git Blobs API 폴백
+  const sha = res.body?.sha;
+  if (sha && (res.status === 403 || (res.status === 200 && !res.body.content))) {
+    console.log(`[GitHub] ${filename} 대용량 → Blobs API 사용`);
+    const blobRes = await ghRequest('GET', `/repos/${REPO}/git/blobs/${sha}`);
+    if (blobRes.status === 200 && blobRes.body.content) {
+      const content = Buffer.from(blobRes.body.content, 'base64').toString('utf8');
+      const filePath = path.join(DATA_DIR, filename);
+      fs.mkdirSync(DATA_DIR, { recursive: true });
+      fs.writeFileSync(filePath, content, 'utf8');
+      return true;
+    }
+    console.error(`[GitHub] ${filename} Blobs 다운로드 실패: ${blobRes.status}`);
+  }
+
   return false;
 }
 

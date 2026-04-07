@@ -66,7 +66,7 @@ function loadData() {
 }
 function saveData(data) {
   fs.mkdirSync(path.dirname(DATA_FILE), { recursive: true });
-  fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2), 'utf8');
+  fs.writeFileSync(DATA_FILE, JSON.stringify(data), 'utf8');
 }
 
 function extractList(body) {
