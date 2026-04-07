@@ -322,6 +322,15 @@ let   evtSource = null;
 let   isScraping = false;
 let   waitingForComplete = false; // 수집 버튼 클릭 후 완료 대기 플래그
 
+// admin 토큰을 X-User-Token으로 전송 (requireUser 미들웨어 통과용)
+function adminFetch(url, opts = {}) {
+  const token = localStorage.getItem(AUTH_KEY);
+  if (token) {
+    opts.headers = { ...opts.headers, 'X-User-Token': token };
+  }
+  return fetch(url, opts);
+}
+
 // ── 인증 ────────────────────────────────────────────────────────
 function checkAuth() {
   const token = localStorage.getItem(AUTH_KEY);
@@ -371,7 +380,7 @@ async function initAdmin() {
 
 async function loadStatus() {
   try {
-    const res  = await fetch('/api/status');
+    const res  = await adminFetch('/api/status');
     const s    = await res.json();
     document.getElementById('statTotal').textContent = (s.total || 0).toLocaleString();
     document.getElementById('statSample').textContent = s.isSample ? '샘플 데이터' : '실제 데이터';
