@@ -102,7 +102,8 @@ async function uploadFile(filename) {
   if (res.status === 200 || res.status === 201) {
     return true;
   } else {
-    console.error(`[GitHub] ${filename} 업로드 실패: ${res.status}`);
+    const msg = res.body?.message || JSON.stringify(res.body).substring(0, 200);
+    console.error(`[GitHub] ${filename} 업로드 실패: ${res.status} - ${msg}`);
     return false;
   }
 }
@@ -145,6 +146,7 @@ async function pullAll() {
 async function pushFiles(filenames) {
   if (!isEnabled()) return;
   try {
+    await ensureBranch();
     let count = 0;
     for (const file of filenames) {
       if (SYNC_FILES.includes(file)) {

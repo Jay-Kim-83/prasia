@@ -459,11 +459,21 @@ async function collectNow() {
   document.getElementById('statScraping').textContent = '⏳ 수집 중';
 
   try {
-    await fetch('/api/collect', { method:'POST' });
+    const res = await fetch('/api/collect', { method:'POST' });
+    const data = await res.json();
+    if (!data.success) {
+      showToast(data.message || '수집 요청 실패');
+      waitingForComplete = false;
+      isScraping = false;
+      updateCollectBtn(false);
+      document.getElementById('statScraping').textContent = '✅ 대기';
+    }
   } catch {
     showToast('수집 요청 실패');
+    waitingForComplete = false;
     isScraping = false;
     updateCollectBtn(false);
+    document.getElementById('statScraping').textContent = '✅ 대기';
   }
 }
 

@@ -113,8 +113,8 @@ async function runScrape() {
   emitLog('── 수집 시작 ──', 'start');
   try {
     await scrapeRankings();
-    // 수집 완료 후 GitHub에 데이터 동기화
-    github.pushFiles(['rankings.json', 'meta.json']).catch(() => {});
+    // 수집 완료 후 모든 동적 파일 GitHub 동기화
+    github.pushAll().catch(e => console.error('[GitHub] 동기화 오류:', e.message));
     const elapsed = Date.now() - startTime;
     const min = Math.floor(elapsed / 60000);
     const sec = Math.floor((elapsed % 60000) / 1000);
@@ -313,6 +313,9 @@ app.get('/api/logs/stream', (req, res) => {
 
 // 수집 실행
 app.post('/api/collect', (req, res) => {
+  if (isScraping) {
+    return res.json({ success: false, message: '이미 수집 중입니다.' });
+  }
   res.json({ success: true, message: '수집 시작됨' });
   runScrape();
 });
