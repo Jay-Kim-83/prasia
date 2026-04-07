@@ -244,6 +244,19 @@ app.post('/api/worlds', (req, res) => {
   res.json({ success: true });
 });
 
+// ── 표시 설정 ────────────────────────────────────────────────
+app.get('/api/display', (req, res) => {
+  const config = loadConfig();
+  res.json({ minConquestGrade: config.minConquestGrade || 0 });
+});
+
+app.post('/api/display', (req, res) => {
+  const config = loadConfig();
+  config.minConquestGrade = parseInt(req.body.minConquestGrade) || 0;
+  saveConfig(config);
+  res.json({ success: true });
+});
+
 // ── API ───────────────────────────────────────────────────────
 app.get('/api/data', requireUser, (req, res) => res.json(loadData()));
 

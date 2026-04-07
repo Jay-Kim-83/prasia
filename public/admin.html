@@ -267,6 +267,17 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
   </div>
 </div>
 
+<!-- 표시 설정 -->
+<div class="card">
+  <div class="card-title">📊 렐름 통계 표시 설정</div>
+  <div class="interval-row">
+    <label>토벌등급 최소값:</label>
+    <input type="number" class="interval-input" id="minConquestGrade" min="0" max="30" value="0" style="width:80px">
+    <span style="font-size:12px;color:var(--text-dim)">이상만 표시 (0 = 전체)</span>
+  </div>
+  <button class="btn-primary" style="margin-top:10px" onclick="saveDisplay()">💾 표시 설정 저장</button>
+</div>
+
 <!-- 수집 월드 설정 -->
 <div class="card">
   <div class="card-title">🌍 수집 월드 설정</div>
@@ -374,6 +385,7 @@ async function initAdmin() {
   loadCmd();
   loadUsers();
   loadWorlds();
+  loadDisplay();
   // 현황 실시간 갱신 (10초마다)
   statusInterval = setInterval(loadStatus, 10000);
 }
@@ -636,6 +648,23 @@ async function loadCmd() {
 }
 function copyCmd() {
   navigator.clipboard.writeText(document.getElementById('cmdText').textContent).then(() => showToast('📋 복사됨'));
+}
+
+// ── 표시 설정 ───────────────────────────────────────────────────
+async function loadDisplay() {
+  try {
+    const data = await fetch('/api/display').then(r => r.json());
+    document.getElementById('minConquestGrade').value = data.minConquestGrade || 0;
+  } catch {}
+}
+
+async function saveDisplay() {
+  const minConquestGrade = parseInt(document.getElementById('minConquestGrade').value) || 0;
+  await fetch('/api/display', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ minConquestGrade })
+  });
+  showToast('✅ 표시 설정 저장됨');
 }
 
 // ── 월드 설정 ───────────────────────────────────────────────────

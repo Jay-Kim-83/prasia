@@ -216,6 +216,9 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
     <input type="text" id="loginId" placeholder="아이디" style="width:100%;background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:10px 14px;border-radius:8px;font-family:inherit;font-size:14px;outline:none;margin-bottom:10px" onkeydown="if(event.key==='Enter')document.getElementById('loginPw').focus()">
     <input type="password" id="loginPw" placeholder="비밀번호" style="width:100%;background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:10px 14px;border-radius:8px;font-family:inherit;font-size:14px;outline:none;margin-bottom:10px" onkeydown="if(event.key==='Enter')doUserLogin()">
     <div id="loginError" style="font-size:12px;color:#ef9a9a;margin-bottom:10px;min-height:18px"></div>
+    <label style="display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:14px;cursor:pointer;font-size:13px;color:var(--text-dim)">
+      <input type="checkbox" id="autoLoginCheck"> 자동 로그인
+    </label>
     <button onclick="doUserLogin()" style="width:100%;background:linear-gradient(135deg,var(--gold-dim),#9b7d25);border:1px solid var(--gold);color:var(--gold-light);padding:11px;border-radius:8px;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer">로그인</button>
   </div>
 </div>
@@ -334,7 +337,8 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 <script>
 const USER_TOKEN_KEY = 'prasia_user_token';
 const ADMIN_TOKEN_KEY = 'prasia_admin_token';
-let userToken = localStorage.getItem(USER_TOKEN_KEY) || localStorage.getItem(ADMIN_TOKEN_KEY) || '';
+// localStorage(자동로그인) 또는 sessionStorage(현재 세션만)에서 토큰 확인
+let userToken = localStorage.getItem(USER_TOKEN_KEY) || sessionStorage.getItem(USER_TOKEN_KEY) || localStorage.getItem(ADMIN_TOKEN_KEY) || '';
 
 function authHeaders() { return userToken ? { 'X-User-Token': userToken } : {}; }
 function authFetch(url, opts = {}) {
@@ -372,7 +376,13 @@ async function doUserLogin() {
     const data = await res.json();
     if (data.success) {
       userToken = data.token;
-      localStorage.setItem(USER_TOKEN_KEY, userToken);
+      const autoLogin = document.getElementById('autoLoginCheck').checked;
+      if (autoLogin) {
+        localStorage.setItem(USER_TOKEN_KEY, userToken);
+      } else {
+        localStorage.removeItem(USER_TOKEN_KEY);
+        sessionStorage.setItem(USER_TOKEN_KEY, userToken);
+      }
       document.getElementById('loginOverlay').style.display = 'none';
       init();
     } else {
@@ -434,13 +444,15 @@ let allData = [];
 let worldRealmMap = {};  // { '론도': ['론도 01', ...] }
 let filtered  = [];
 let currentPage = 1;
+let displayConfig = { minConquestGrade: 0 };
 
 // ── INIT ─────────────────────────────────────────────────────────
 async function init() {
   try {
-    const [dRes, sRes] = await Promise.all([authFetch('/api/data'), authFetch('/api/status')]);
+    const [dRes, sRes, dispRes] = await Promise.all([authFetch('/api/data'), authFetch('/api/status'), fetch('/api/display')]);
     const data   = await dRes.json();
     const status = await sRes.json();
+    try { displayConfig = await dispRes.json(); } catch {}
     allData = (data.characters || []).map((c, i) => ({ ...c, rank: c.rank || i + 1 }));
 
     if (status.isSample) document.getElementById('sampleBanner').classList.remove('hidden');
@@ -687,24 +699,37 @@ function updateRealmStats(world, realm) {
     (!realm || c.realm === realm)
   );
 
-  const lv90 = pool.filter(c => c.level >= 90).length;
+  // 레벨별 인원수 (높은순)
+  const levelCounts = {};
+  pool.forEach(c => {
+    if (c.level > 0) levelCounts[c.level] = (levelCounts[c.level] || 0) + 1;
+  });
+  const levelKeys = Object.keys(levelCounts).map(Number).sort((a,b) => b - a);
 
-  // 토벌등급별 인원수 (숫자 기준, 높은순)
+  // 토벌등급별 인원수 (최소값 필터 적용, 높은순)
+  const minGrade = displayConfig.minConquestGrade || 0;
   const gradeCounts = {};
   pool.forEach(c => {
     const g = gradeNum(c.conquestGrade);
-    if (g > 0) gradeCounts[g] = (gradeCounts[g] || 0) + 1;
+    if (g > 0 && g >= minGrade) gradeCounts[g] = (gradeCounts[g] || 0) + 1;
   });
   const gradeKeys = Object.keys(gradeCounts).map(Number).sort((a,b) => b - a);
 
   const label = realm || world;
   let html = `<span class="rs-title">${esc(label)}</span>`;
-  html += `<span class="rs-item">Lv.90+ <span class="rs-num">${lv90}</span>명</span>`;
-  html += '<span style="color:var(--border-glow)">│</span>';
-  gradeKeys.forEach(g => {
-    const cls = gradeCls(g);
-    html += `<span class="rs-item"><span class="rs-grade ${cls}">${gradeIcon(g)} ${g}</span> <span class="rs-num">${gradeCounts[g]}</span>명</span>`;
+
+  // 레벨별 인원수
+  levelKeys.forEach(lv => {
+    html += `<span class="rs-item">Lv.${lv} <span class="rs-num">${levelCounts[lv]}</span>명</span>`;
   });
+
+  if (gradeKeys.length > 0) {
+    html += '<span style="color:var(--border-glow)">│</span>';
+    gradeKeys.forEach(g => {
+      const cls = gradeCls(g);
+      html += `<span class="rs-item"><span class="rs-grade ${cls}">${gradeIcon(g)} ${g}</span> <span class="rs-num">${gradeCounts[g]}</span>명</span>`;
+    });
+  }
 
   el.innerHTML = html;
   el.classList.remove('hidden');
