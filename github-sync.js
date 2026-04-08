@@ -162,19 +162,16 @@ async function downloadFile(filename) {
 
 /** 서버 시작 시: GitHub에서 데이터 다운로드 (항상 최신으로 덮어씀) */
 async function pullAll() {
-  if (!isEnabled()) return;
-  try {
-    await ensureBranch();
-    let count = 0;
-    for (const file of SYNC_FILES) {
-      const ok = await downloadFile(file);
-      if (ok) count++;
-    }
-    if (count > 0) console.log(`[GitHub] ${count}개 파일 복원 완료`);
-    else console.log('[GitHub] 복원할 데이터 없음');
-  } catch (e) {
-    console.error('[GitHub] Pull 실패:', e.message);
+  if (!isEnabled()) throw new Error('GitHub 연동이 설정되지 않았습니다 (GITHUB_TOKEN/GITHUB_REPO 없음)');
+  await ensureBranch();
+  let count = 0;
+  for (const file of SYNC_FILES) {
+    const ok = await downloadFile(file);
+    if (ok) count++;
   }
+  if (count > 0) console.log(`[GitHub] ${count}개 파일 복원 완료`);
+  else console.log('[GitHub] 복원할 데이터 없음');
+  return count;
 }
 
 /** 데이터 변경 후: 변경된 파일을 GitHub에 업로드 */

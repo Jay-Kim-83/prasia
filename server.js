@@ -349,10 +349,9 @@ app.post('/api/sync-pull', async (req, res) => {
     const decoded = Buffer.from(token, 'base64').toString('utf8');
     if (!decoded.endsWith(':prasia')) return res.status(403).json({ success: false, message: '마스터 관리자만 사용 가능합니다.' });
   } catch { return res.status(403).json({ success: false, message: '토큰 오류' }); }
-  if (!github.isEnabled()) return res.status(400).json({ success: false, message: 'GitHub 동기화가 설정되지 않았습니다.' });
   try {
-    await github.pullAll();
-    res.json({ success: true, message: '서버 데이터를 로컬로 동기화했습니다.' });
+    const count = await github.pullAll();
+    res.json({ success: true, message: `서버 데이터 ${count}개 파일 동기화 완료` });
   } catch (e) {
     res.status(500).json({ success: false, message: '동기화 실패: ' + e.message });
   }
@@ -391,7 +390,7 @@ app.get('/api/task-scheduler-cmd', (req, res) => {
 
 // 서버 시작: GitHub 데이터 복원 완료 후 listen
 (async () => {
-  await github.pullAll();
+  try { await github.pullAll(); } catch (e) { console.log('[GitHub]', e.message); }
   const config = loadConfig();
   const schedule = loadSchedule();
   startScheduler(schedule);
