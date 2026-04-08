@@ -355,8 +355,9 @@ app.post('/api/sync-pull', async (req, res) => {
     if (!decoded.endsWith(':prasia')) return res.status(403).json({ success: false, message: '마스터 관리자만 사용 가능합니다.' });
   } catch { return res.status(403).json({ success: false, message: '토큰 오류' }); }
   try {
-    const count = await github.pullAll();
-    res.json({ success: true, message: `서버 데이터 ${count}개 파일 동기화 완료` });
+    const { count, results } = await github.pullAll();
+    const details = results.map(r => `${r.file}: ${r.ok ? '✅' : '❌'}`).join(', ');
+    res.json({ success: true, message: `동기화 완료 (${count}/${results.length}): ${details}` });
   } catch (e) {
     res.status(500).json({ success: false, message: '동기화 실패: ' + e.message });
   }
@@ -395,7 +396,7 @@ app.get('/api/task-scheduler-cmd', (req, res) => {
 
 // 서버 시작: GitHub 데이터 복원 완료 후 listen
 (async () => {
-  try { await github.pullAll(); } catch (e) { console.log('[GitHub]', e.message); }
+  try { const r = await github.pullAll(); console.log(`[GitHub] 시작 복원: ${r.count}개`); } catch (e) { console.log('[GitHub]', e.message); }
   const config = loadConfig();
   const schedule = loadSchedule();
   startScheduler(schedule);

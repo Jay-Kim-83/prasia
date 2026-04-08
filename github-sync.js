@@ -164,14 +164,16 @@ async function downloadFile(filename) {
 async function pullAll() {
   if (!isEnabled()) throw new Error('GitHub 연동이 설정되지 않았습니다 (GITHUB_TOKEN/GITHUB_REPO 없음)');
   await ensureBranch();
-  let count = 0;
+  const results = [];
   for (const file of SYNC_FILES) {
     const ok = await downloadFile(file);
-    if (ok) count++;
+    results.push({ file, ok });
+    console.log(`[GitHub] ${file}: ${ok ? '다운로드 완료' : '실패 또는 없음'}`);
   }
+  const count = results.filter(r => r.ok).length;
   if (count > 0) console.log(`[GitHub] ${count}개 파일 복원 완료`);
   else console.log('[GitHub] 복원할 데이터 없음');
-  return count;
+  return { count, results };
 }
 
 /** 데이터 변경 후: 변경된 파일을 GitHub에 업로드 */
