@@ -10,8 +10,26 @@ const https = require('https');
 const fs    = require('fs');
 const path  = require('path');
 
-const REPO   = process.env.GITHUB_REPO   || '';
-const TOKEN  = process.env.GITHUB_TOKEN  || '';
+// 환경변수 → git remote URL 순으로 폴백
+function detectGitHub() {
+  let repo = process.env.GITHUB_REPO || '';
+  let token = process.env.GITHUB_TOKEN || '';
+  if (!repo || !token) {
+    try {
+      const { execSync } = require('child_process');
+      const url = execSync('git remote get-url origin', { cwd: __dirname, encoding: 'utf8' }).trim();
+      const m = url.match(/https:\/\/([^@]+)@github\.com\/([^.]+)/);
+      if (m) {
+        if (!token) token = m[1].split(':').pop();
+        if (!repo)  repo  = m[2];
+      }
+    } catch {}
+  }
+  return { repo, token };
+}
+const { repo: _repo, token: _token } = detectGitHub();
+const REPO   = _repo;
+const TOKEN  = _token;
 const BRANCH = process.env.GITHUB_BRANCH || 'data';
 
 const DATA_DIR = path.join(__dirname, 'data');
