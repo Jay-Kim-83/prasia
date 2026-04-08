@@ -201,7 +201,7 @@ app.get('/api/user/check', (req, res) => {
     const user = config.users.find(u => u.id === userId);
     isAdmin = !!(user && user.isAdmin);
   }
-  res.json({ requireLogin: true, loggedIn, isAdmin });
+  res.json({ requireLogin: true, loggedIn, isAdmin, isMaster: userId === '_admin' });
 });
 
 // ── 사용자 관리 (관리자 전용) ─────────────────────────────────
@@ -338,6 +338,24 @@ app.post('/api/auth/change', (req, res) => {
   config.adminPassword = newPassword;
   saveConfig(config);
   res.json({ success: true });
+});
+
+// GitHub에서 동적 설정 파일 동기화 (마스터 전용)
+app.post('/api/sync-pull', async (req, res) => {
+  const token = req.headers['x-user-token'];
+  if (!verifyAdminToken(token)) return res.status(401).json({ success: false, message: '권한이 없습니다.' });
+  // 마스터 토큰인지 확인
+  try {
+    const decoded = Buffer.from(token, 'base64').toString('utf8');
+    if (!decoded.endsWith(':prasia')) return res.status(403).json({ success: false, message: '마스터 관리자만 사용 가능합니다.' });
+  } catch { return res.status(403).json({ success: false, message: '토큰 오류' }); }
+  if (!github.isEnabled()) return res.status(400).json({ success: false, message: 'GitHub 동기화가 설정되지 않았습니다.' });
+  try {
+    await github.pullAll();
+    res.json({ success: true, message: '서버 데이터를 로컬로 동기화했습니다.' });
+  } catch (e) {
+    res.status(500).json({ success: false, message: '동기화 실패: ' + e.message });
+  }
 });
 
 // SSE: 실시간 로그
