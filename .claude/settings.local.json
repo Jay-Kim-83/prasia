@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//d/김수��/**)",
+      "Bash(grep -E \"\\\\.js$|scraper\")",
+      "Bash(git config:*)",
+      "WebFetch(domain:wp.nexon.com)",
+      "Bash(node -c server.js)",
+      "Skill(update-config)",
+      "Skill(update-config:*)"
+    ]
+  }
+}
