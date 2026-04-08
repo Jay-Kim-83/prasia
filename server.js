@@ -172,6 +172,8 @@ function verifyUserToken(token) {
 }
 
 function requireUser(req, res, next) {
+  const config = loadConfig();
+  if (config.requireLogin === false) return next();
   const token = req.headers['x-user-token'] || req.query.token;
   if (verifyUserToken(token)) return next();
   return res.status(401).json({ success: false, message: '로그인이 필요합니다.' });
@@ -201,7 +203,8 @@ app.get('/api/user/check', (req, res) => {
     const user = config.users.find(u => u.id === userId);
     isAdmin = !!(user && user.isAdmin);
   }
-  res.json({ requireLogin: true, loggedIn, isAdmin, isMaster: userId === '_admin' });
+  const config = loadConfig();
+  res.json({ requireLogin: config.requireLogin !== false, loggedIn, isAdmin, isMaster: userId === '_admin' });
 });
 
 // ── 사용자 관리 (관리자 전용) ─────────────────────────────────
@@ -278,6 +281,7 @@ app.get('/api/display', (req, res) => {
   res.json({
     minConquestGrade: config.minConquestGrade || 0,
     minLevel: config.minLevel || 0,
+    requireLogin: config.requireLogin !== false,
   });
 });
 
@@ -285,6 +289,7 @@ app.post('/api/display', (req, res) => {
   const config = loadConfig();
   config.minConquestGrade = parseInt(req.body.minConquestGrade) || 0;
   config.minLevel = parseInt(req.body.minLevel) || 0;
+  if (req.body.requireLogin !== undefined) config.requireLogin = !!req.body.requireLogin;
   saveConfig(config);
   res.json({ success: true });
 });

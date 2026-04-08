@@ -352,7 +352,7 @@ async function checkLogin() {
   try {
     const res = await fetch('/api/user/check', { headers: authHeaders() });
     const data = await res.json();
-    if (data.loggedIn) {
+    if (!data.requireLogin || data.loggedIn) {
       overlay.style.display = 'none';
       if (data.isAdmin) document.getElementById('adminLink').style.display = '';
       init();

@@ -224,6 +224,13 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
 <div class="card">
   <div class="card-title">📊 렐름 통계 표시 설정</div>
   <div class="interval-row">
+    <label>로그인 필수:</label>
+    <label style="display:inline-flex;align-items:center;gap:6px;cursor:pointer;font-size:13px">
+      <input type="checkbox" id="requireLogin" checked> <span id="requireLoginLabel" style="color:var(--green)">사용</span>
+    </label>
+    <span style="font-size:12px;color:var(--text-dim)">해제 시 누구나 랭킹 열람 가능</span>
+  </div>
+  <div class="interval-row">
     <label>레벨 최소값:</label>
     <input type="number" class="interval-input" id="minLevel" min="0" max="100" value="0" style="width:80px">
     <span style="font-size:12px;color:var(--text-dim)">이상만 표시 (0 = 전체)</span>
@@ -719,15 +726,27 @@ async function loadDisplay() {
     const data = await fetch('/api/display').then(r => r.json());
     document.getElementById('minLevel').value = data.minLevel || 0;
     document.getElementById('minConquestGrade').value = data.minConquestGrade || 0;
+    const cb = document.getElementById('requireLogin');
+    cb.checked = data.requireLogin !== false;
+    updateLoginLabel();
+    cb.addEventListener('change', updateLoginLabel);
   } catch {}
+}
+
+function updateLoginLabel() {
+  const on = document.getElementById('requireLogin').checked;
+  const label = document.getElementById('requireLoginLabel');
+  label.textContent = on ? '사용' : '해제';
+  label.style.color = on ? 'var(--green)' : 'var(--red)';
 }
 
 async function saveDisplay() {
   const minLevel = parseInt(document.getElementById('minLevel').value) || 0;
   const minConquestGrade = parseInt(document.getElementById('minConquestGrade').value) || 0;
+  const requireLogin = document.getElementById('requireLogin').checked;
   await fetch('/api/display', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ minLevel, minConquestGrade })
+    body: JSON.stringify({ minLevel, minConquestGrade, requireLogin })
   });
   showToast('✅ 표시 설정 저장됨');
 }
