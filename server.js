@@ -345,22 +345,21 @@ app.post('/api/auth/change', (req, res) => {
   res.json({ success: true });
 });
 
-// GitHub에서 동적 설정 파일 동기화 (마스터 전용)
-app.post('/api/sync-pull', async (req, res) => {
-  const token = req.headers['x-user-token'];
+// 서버 data 파일 다운로드 (마스터 전용) — 브라우저가 받아서 로컬에 저장
+app.get('/api/sync-download', (req, res) => {
+  const token = req.headers['x-user-token'] || req.query.token;
   if (!verifyAdminToken(token)) return res.status(401).json({ success: false, message: '권한이 없습니다.' });
-  // 마스터 토큰인지 확인
   try {
     const decoded = Buffer.from(token, 'base64').toString('utf8');
     if (!decoded.endsWith(':prasia')) return res.status(403).json({ success: false, message: '마스터 관리자만 사용 가능합니다.' });
   } catch { return res.status(403).json({ success: false, message: '토큰 오류' }); }
-  try {
-    const { count, results } = await github.pullAll();
-    const details = results.map(r => `${r.file}: ${r.ok ? '✅' : '❌'}`).join(', ');
-    res.json({ success: true, message: `동기화 완료 (${count}/${results.length}): ${details}` });
-  } catch (e) {
-    res.status(500).json({ success: false, message: '동기화 실패: ' + e.message });
+  const files = ['config.json', 'schedule.json', 'meta.json'];
+  const data = {};
+  for (const file of files) {
+    const fp = path.join(__dirname, 'data', file);
+    try { data[file] = JSON.parse(fs.readFileSync(fp, 'utf8')); } catch { data[file] = null; }
   }
+  res.json({ success: true, files: data });
 });
 
 // SSE: 실시간 로그

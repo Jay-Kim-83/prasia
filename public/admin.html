@@ -336,9 +336,9 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
 
 <!-- 서버 데이터 동기화 -->
 <div class="card master-only">
-  <div class="card-title">☁ 서버 데이터 동기화</div>
-  <p style="font-size:12px;color:var(--text-dim);margin-bottom:14px">GitHub에 저장된 서버 설정 파일(config, schedule, meta 등)을 로컬로 다운로드하여 덮어씁니다.</p>
-  <button class="btn-primary" id="btnSyncPull" onclick="syncPull()">📥 서버 → 로컬 동기화</button>
+  <div class="card-title">☁ 서버 데이터 다운로드</div>
+  <p style="font-size:12px;color:var(--text-dim);margin-bottom:14px">서버에서 실행 중인 설정 파일(config, schedule, meta)을 내 PC로 다운로드합니다.</p>
+  <button class="btn-primary" id="btnSyncPull" onclick="syncPull()">📥 서버 → 로컬 다운로드</button>
 </div>
 
 <!-- 작업 스케줄러 -->
@@ -890,23 +890,32 @@ async function deleteUser(id) {
 async function syncPull() {
   const btn = document.getElementById('btnSyncPull');
   btn.disabled = true;
-  btn.textContent = '⏳ 동기화 중...';
+  btn.textContent = '⏳ 다운로드 중...';
   try {
-    const res = await adminFetch('/api/sync-pull', { method: 'POST' });
+    const res = await adminFetch('/api/sync-download');
     const data = await res.json();
-    if (data.success) {
-      showToast('✅ ' + data.message);
-      // 동기화 후 화면 갱신
-      loadStatus(); loadDisplay(); loadWorlds();
-      if (isMaster) { loadUsers(); loadScheduleUI(); }
+    if (data.success && data.files) {
+      const files = data.files;
+      let count = 0;
+      for (const [name, content] of Object.entries(files)) {
+        if (content === null) continue;
+        const blob = new Blob([JSON.stringify(content, null, 2)], { type: 'application/json' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = name;
+        a.click();
+        URL.revokeObjectURL(a.href);
+        count++;
+      }
+      showToast(`✅ ${count}개 파일 다운로드 완료 (config, schedule, meta)`);
     } else {
-      showToast(data.message || '동기화 실패');
+      showToast(data.message || '다운로드 실패');
     }
   } catch {
     showToast('서버 연결 실패');
   } finally {
     btn.disabled = false;
-    btn.textContent = '📥 서버 → 로컬 동기화';
+    btn.textContent = '📥 서버 → 로컬 다운로드';
   }
 }
 
