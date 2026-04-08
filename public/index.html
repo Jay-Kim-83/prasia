@@ -742,6 +742,7 @@ function updateRealmStats(world, realm) {
 function doLogout() {
   localStorage.removeItem(USER_TOKEN_KEY);
   sessionStorage.removeItem(USER_TOKEN_KEY);
+  localStorage.removeItem(ADMIN_TOKEN_KEY);
   userToken = '';
   location.reload();
 }
