@@ -161,7 +161,8 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
   <div class="login-box">
     <div class="icon">🔐</div>
     <h2>Admin Access</h2>
-    <p>관리자 비밀번호를 입력하세요</p>
+    <p>관리자 계정 또는 마스터 비밀번호로 로그인</p>
+    <input type="text" class="login-input" id="loginId" placeholder="아이디 (마스터 비밀번호만 사용 시 비워두기)" onkeydown="if(event.key==='Enter')document.getElementById('pwInput').focus()">
     <input type="password" class="login-input" id="pwInput" placeholder="비밀번호" onkeydown="if(event.key==='Enter')doLogin()">
     <div class="login-error" id="loginError"></div>
     <button class="btn-login" onclick="doLogin()">로그인</button>
@@ -349,27 +350,61 @@ function adminFetch(url, opts = {}) {
 }
 
 // ── 인증 ────────────────────────────────────────────────────────
-function checkAuth() {
+async function checkAuth() {
   const token = localStorage.getItem(AUTH_KEY);
   if (token) {
-    document.getElementById('loginOverlay').classList.add('hidden');
-    initAdmin();
+    // 토큰이 여전히 관리자 권한인지 서버에서 확인
+    try {
+      const res = await fetch('/api/user/check', { headers: { 'X-User-Token': token } });
+      const data = await res.json();
+      if (data.loggedIn && data.isAdmin) {
+        document.getElementById('loginOverlay').classList.add('hidden');
+        initAdmin();
+        return;
+      }
+    } catch {}
+    localStorage.removeItem(AUTH_KEY);
   }
 }
 
 async function doLogin() {
+  const id  = document.getElementById('loginId').value.trim();
   const pw  = document.getElementById('pwInput').value;
   const err = document.getElementById('loginError');
   if (!pw) { err.textContent = '비밀번호를 입력하세요.'; return; }
   try {
-    const res  = await fetch('/api/auth', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({password:pw}) });
-    const data = await res.json();
-    if (data.success) {
-      localStorage.setItem(AUTH_KEY, data.token);
-      document.getElementById('loginOverlay').classList.add('hidden');
-      initAdmin();
+    if (id) {
+      // 계정 로그인 → 관리자 권한 확인
+      const res = await fetch('/api/user/login', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id, password: pw })
+      });
+      const data = await res.json();
+      if (data.success) {
+        if (!data.isAdmin) {
+          err.textContent = '관리자 권한이 없는 계정입니다.';
+          return;
+        }
+        localStorage.setItem(AUTH_KEY, data.token);
+        document.getElementById('loginOverlay').classList.add('hidden');
+        initAdmin();
+      } else {
+        err.textContent = data.message || '로그인 실패';
+      }
     } else {
-      err.textContent = data.message || '비밀번호가 틀렸습니다.';
+      // 마스터 비밀번호 로그인
+      const res = await fetch('/api/auth', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password: pw })
+      });
+      const data = await res.json();
+      if (data.success) {
+        localStorage.setItem(AUTH_KEY, data.token);
+        document.getElementById('loginOverlay').classList.add('hidden');
+        initAdmin();
+      } else {
+        err.textContent = data.message || '비밀번호가 틀렸습니다.';
+      }
     }
   } catch {
     err.textContent = '서버 연결 실패';
@@ -749,8 +784,12 @@ async function loadUsers() {
       return;
     }
     list.innerHTML = users.map(u => `
-      <div style="display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:8px 12px">
-        <span style="flex:1;font-size:13px;color:var(--text)">${esc(u.id)}</span>
+      <div style="display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:8px 12px;flex-wrap:wrap">
+        <span style="font-size:13px;color:var(--text)">${esc(u.id)}</span>
+        <label style="display:flex;align-items:center;gap:4px;cursor:pointer;font-size:11px;color:${u.isAdmin ? 'var(--gold-light)' : 'var(--text-dim)'}">
+          <input type="checkbox" ${u.isAdmin ? 'checked' : ''} onchange="toggleAdmin('${esc(u.id)}', this.checked)"> 관리자
+        </label>
+        <span style="flex:1"></span>
         <input type="password" class="pw-input" id="pw_${esc(u.id)}" placeholder="새 비밀번호" style="width:130px;font-size:12px;padding:5px 8px">
         <button class="btn-sm" onclick="changeUserPw('${esc(u.id)}')" style="font-size:11px;padding:4px 10px">변경</button>
         <button class="btn-sm danger" onclick="deleteUser('${esc(u.id)}')" style="font-size:11px;padding:4px 10px">삭제</button>
@@ -787,6 +826,16 @@ async function changeUserPw(id) {
   });
   const data = await res.json();
   if (data.success) { showToast('✅ 비밀번호 변경됨'); loadUsers(); }
+  else showToast(data.message || '변경 실패');
+}
+
+async function toggleAdmin(id, isAdmin) {
+  const res = await fetch(`/api/users/${encodeURIComponent(id)}/admin`, {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ isAdmin })
+  });
+  const data = await res.json();
+  if (data.success) { showToast(isAdmin ? '✅ 관리자 권한 부여' : '관리자 권한 해제'); loadUsers(); }
   else showToast(data.message || '변경 실패');
 }
 

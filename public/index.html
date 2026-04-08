@@ -239,7 +239,7 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
       <span class="status-dot offline" id="statusDot"></span>
       <span id="statusText">불러오는 중...</span>
     </div>
-    <a href="/admin.html" class="btn-admin">⚙ 관리</a>
+    <a href="/admin.html" class="btn-admin" id="adminLink" style="display:none">⚙ 관리</a>
     <button onclick="doLogout()" class="btn-admin" style="border-color:rgba(239,83,80,.4);color:#ef9a9a">로그아웃</button>
   </div>
 </header>
@@ -354,6 +354,7 @@ async function checkLogin() {
     const data = await res.json();
     if (data.loggedIn) {
       overlay.style.display = 'none';
+      if (data.isAdmin) document.getElementById('adminLink').style.display = '';
       init();
     } else {
       overlay.style.display = 'flex';
@@ -385,6 +386,7 @@ async function doUserLogin() {
         sessionStorage.setItem(USER_TOKEN_KEY, userToken);
       }
       document.getElementById('loginOverlay').style.display = 'none';
+      if (data.isAdmin) document.getElementById('adminLink').style.display = '';
       init();
     } else {
       err.textContent = data.message || '로그인 실패';

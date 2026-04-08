@@ -140,10 +140,19 @@ function verifyAdminToken(token) {
   if (!token) return false;
   try {
     const decoded = Buffer.from(token, 'base64').toString('utf8');
-    if (!decoded.endsWith(':prasia')) return false;
-    const pw = decoded.replace(/:prasia$/, '');
-    const config = loadConfig();
-    return pw === config.adminPassword;
+    // 마스터 비밀번호 토큰
+    if (decoded.endsWith(':prasia')) {
+      const pw = decoded.replace(/:prasia$/, '');
+      const config = loadConfig();
+      return pw === config.adminPassword;
+    }
+    // 관리자 계정 토큰
+    if (decoded.endsWith(':prasia_user')) {
+      const id = decoded.replace(/:prasia_user$/, '');
+      const config = loadConfig();
+      const user = config.users.find(u => u.id === id);
+      return !!(user && user.isAdmin);
+    }
   } catch {}
   return false;
 }
@@ -176,20 +185,29 @@ app.post('/api/user/login', (req, res) => {
   if (!user || user.password !== password) {
     return res.status(401).json({ success: false, message: '아이디 또는 비밀번호가 틀렸습니다.' });
   }
-  res.json({ success: true, id: user.id, token: makeToken(user.id) });
+  res.json({ success: true, id: user.id, token: makeToken(user.id), isAdmin: !!user.isAdmin });
 });
 
 // 사용자 인증 필요 여부 확인
 app.get('/api/user/check', (req, res) => {
   const token = req.headers['x-user-token'] || req.query.token;
-  const loggedIn = !!verifyUserToken(token);
-  res.json({ requireLogin: true, loggedIn });
+  const userId = verifyUserToken(token);
+  const loggedIn = !!userId;
+  let isAdmin = false;
+  if (userId === '_admin') {
+    isAdmin = true;
+  } else if (userId) {
+    const config = loadConfig();
+    const user = config.users.find(u => u.id === userId);
+    isAdmin = !!(user && user.isAdmin);
+  }
+  res.json({ requireLogin: true, loggedIn, isAdmin });
 });
 
 // ── 사용자 관리 (관리자 전용) ─────────────────────────────────
 app.get('/api/users', (req, res) => {
   const config = loadConfig();
-  res.json(config.users.map(u => ({ id: u.id })));
+  res.json(config.users.map(u => ({ id: u.id, isAdmin: !!u.isAdmin })));
 });
 
 app.post('/api/users', (req, res) => {
@@ -222,6 +240,16 @@ app.post('/api/users/:id/password', (req, res) => {
   const user = config.users.find(u => u.id === req.params.id);
   if (!user) return res.status(404).json({ success: false, message: '사용자를 찾을 수 없습니다.' });
   user.password = password;
+  saveConfig(config);
+  res.json({ success: true });
+});
+
+app.post('/api/users/:id/admin', (req, res) => {
+  const { isAdmin } = req.body;
+  const config = loadConfig();
+  const user = config.users.find(u => u.id === req.params.id);
+  if (!user) return res.status(404).json({ success: false, message: '사용자를 찾을 수 없습니다.' });
+  user.isAdmin = !!isAdmin;
   saveConfig(config);
   res.json({ success: true });
 });
