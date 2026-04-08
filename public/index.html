@@ -355,6 +355,7 @@ async function checkLogin() {
     if (!data.requireLogin || data.loggedIn) {
       overlay.style.display = 'none';
       if (data.isAdmin) document.getElementById('adminLink').style.display = '';
+      startAutoLogout(data.autoLogoutMin ?? 30);
       init();
     } else {
       overlay.style.display = 'flex';
@@ -737,6 +738,21 @@ function updateRealmStats(world, realm) {
 
   el.innerHTML = html;
   el.classList.remove('hidden');
+}
+
+// ── 자동 로그아웃 ──────────────────────────────────────────────
+let autoLogoutTimer = null;
+function startAutoLogout(minutes) {
+  if (autoLogoutTimer) clearTimeout(autoLogoutTimer);
+  if (!minutes || minutes <= 0) return;
+  const ms = minutes * 60 * 1000;
+  // 활동 감지 시 타이머 리셋
+  const reset = () => {
+    if (autoLogoutTimer) clearTimeout(autoLogoutTimer);
+    autoLogoutTimer = setTimeout(doLogout, ms);
+  };
+  ['click','keydown','scroll','mousemove','touchstart'].forEach(e => document.addEventListener(e, reset, { passive: true }));
+  autoLogoutTimer = setTimeout(doLogout, ms);
 }
 
 function doLogout() {

@@ -230,6 +230,14 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
     </label>
     <span style="font-size:12px;color:var(--text-dim)">해제 시 누구나 랭킹 열람 가능</span>
   </div>
+  <div class="interval-row master-only">
+    <label>자동 로그아웃:</label>
+    <input type="number" class="interval-input" id="autoLogoutHour" min="0" max="24" value="0" style="width:60px">
+    <span style="font-size:13px;color:var(--text-dim)">시간</span>
+    <input type="number" class="interval-input" id="autoLogoutMinute" min="0" max="59" value="30" style="width:60px">
+    <span style="font-size:13px;color:var(--text-dim)">분</span>
+    <span style="font-size:12px;color:var(--text-dim)">(0시간 0분 = 사용 안함)</span>
+  </div>
   <div class="interval-row">
     <label>레벨 최소값:</label>
     <input type="number" class="interval-input" id="minLevel" min="0" max="100" value="0" style="width:80px">
@@ -439,6 +447,20 @@ function doLogout() {
   location.reload();
 }
 
+// ── 자동 로그아웃 ──────────────────────────────────────────────
+let autoLogoutTimer = null;
+function startAutoLogout(minutes) {
+  if (autoLogoutTimer) clearTimeout(autoLogoutTimer);
+  if (!minutes || minutes <= 0) return;
+  const ms = minutes * 60 * 1000;
+  const reset = () => {
+    if (autoLogoutTimer) clearTimeout(autoLogoutTimer);
+    autoLogoutTimer = setTimeout(doLogout, ms);
+  };
+  ['click','keydown','scroll','mousemove','touchstart'].forEach(e => document.addEventListener(e, reset, { passive: true }));
+  autoLogoutTimer = setTimeout(doLogout, ms);
+}
+
 // ── 초기화 ──────────────────────────────────────────────────────
 let statusInterval = null;
 
@@ -454,6 +476,11 @@ async function initAdmin() {
   loadUsers();
   loadWorlds();
   loadDisplay();
+  // 자동 로그아웃 설정 가져오기
+  try {
+    const chk = await fetch('/api/user/check', { headers: { 'X-User-Token': localStorage.getItem(AUTH_KEY) } }).then(r => r.json());
+    startAutoLogout(chk.autoLogoutMin ?? 30);
+  } catch {}
   // 현황 실시간 갱신 (10초마다)
   statusInterval = setInterval(loadStatus, 10000);
 }
@@ -730,6 +757,9 @@ async function loadDisplay() {
     cb.checked = data.requireLogin !== false;
     updateLoginLabel();
     cb.addEventListener('change', updateLoginLabel);
+    const totalMin = data.autoLogoutMin ?? 30;
+    document.getElementById('autoLogoutHour').value = Math.floor(totalMin / 60);
+    document.getElementById('autoLogoutMinute').value = totalMin % 60;
   } catch {}
 }
 
@@ -744,9 +774,12 @@ async function saveDisplay() {
   const minLevel = parseInt(document.getElementById('minLevel').value) || 0;
   const minConquestGrade = parseInt(document.getElementById('minConquestGrade').value) || 0;
   const requireLogin = document.getElementById('requireLogin').checked;
+  const h = parseInt(document.getElementById('autoLogoutHour').value) || 0;
+  const m = parseInt(document.getElementById('autoLogoutMinute').value) || 0;
+  const autoLogoutMin = h * 60 + m;
   await fetch('/api/display', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ minLevel, minConquestGrade, requireLogin })
+    body: JSON.stringify({ minLevel, minConquestGrade, requireLogin, autoLogoutMin })
   });
   showToast('✅ 표시 설정 저장됨');
 }
@@ -907,7 +940,7 @@ async function syncPull() {
         URL.revokeObjectURL(a.href);
         count++;
       }
-      showToast(`✅ ${count}개 파일 다운로드 완료 (config, schedule, meta)`);
+      showToast(`✅ ${count}개 파일 다운로드 완료`);
     } else {
       showToast(data.message || '다운로드 실패');
     }

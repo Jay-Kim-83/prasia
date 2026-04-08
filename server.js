@@ -203,8 +203,12 @@ app.get('/api/user/check', (req, res) => {
     const user = config.users.find(u => u.id === userId);
     isAdmin = !!(user && user.isAdmin);
   }
-  const config = loadConfig();
-  res.json({ requireLogin: config.requireLogin !== false, loggedIn, isAdmin, isMaster: userId === '_admin' });
+  const config2 = loadConfig();
+  res.json({
+    requireLogin: config2.requireLogin !== false,
+    autoLogoutMin: config2.autoLogoutMin ?? 30,
+    loggedIn, isAdmin, isMaster: userId === '_admin',
+  });
 });
 
 // ── 사용자 관리 (관리자 전용) ─────────────────────────────────
@@ -282,6 +286,7 @@ app.get('/api/display', (req, res) => {
     minConquestGrade: config.minConquestGrade || 0,
     minLevel: config.minLevel || 0,
     requireLogin: config.requireLogin !== false,
+    autoLogoutMin: config.autoLogoutMin ?? 30,
   });
 });
 
@@ -290,6 +295,7 @@ app.post('/api/display', (req, res) => {
   config.minConquestGrade = parseInt(req.body.minConquestGrade) || 0;
   config.minLevel = parseInt(req.body.minLevel) || 0;
   if (req.body.requireLogin !== undefined) config.requireLogin = !!req.body.requireLogin;
+  if (req.body.autoLogoutMin !== undefined) config.autoLogoutMin = Math.max(0, parseInt(req.body.autoLogoutMin) || 0);
   saveConfig(config);
   res.json({ success: true });
 });
@@ -353,7 +359,7 @@ app.get('/api/sync-download', (req, res) => {
     const decoded = Buffer.from(token, 'base64').toString('utf8');
     if (!decoded.endsWith(':prasia')) return res.status(403).json({ success: false, message: '마스터 관리자만 사용 가능합니다.' });
   } catch { return res.status(403).json({ success: false, message: '토큰 오류' }); }
-  const files = ['config.json', 'schedule.json', 'meta.json'];
+  const files = ['config.json', 'schedule.json', 'meta.json', 'rankings.json'];
   const data = {};
   for (const file of files) {
     const fp = path.join(__dirname, 'data', file);
