@@ -96,7 +96,9 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
 .sort-wrap .sel-wrap select{background:var(--bg2);border:1px solid var(--border);color:var(--text);padding:4px 22px 4px 8px;border-radius:5px;font-family:inherit;font-size:12px;outline:none;appearance:none;cursor:pointer;height:30px}
 
 /* ── BUBBLE TOOLTIP ── */
-.bubble-row{position:relative}
+.bubble-row{position:relative;cursor:default}
+.bubble-icon{font-size:12px;margin-left:4px;cursor:pointer;vertical-align:middle;opacity:.7;transition:opacity .2s}
+.bubble-icon:hover{opacity:1}
 .bubble-tooltip{
   display:none;position:absolute;z-index:50;
   bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);
@@ -111,7 +113,10 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
   border:6px solid transparent;border-top-color:var(--gold);
 }
 @keyframes bubbleFadeIn{from{opacity:0;transform:translateX(-50%) translateY(4px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
-.bubble-row:hover .bubble-tooltip{display:block}
+/* 데스크탑: hover */
+@media(min-width:601px){.bubble-row:hover .bubble-tooltip{display:block}}
+/* 모바일: 토글 클릭 */
+.bubble-tooltip.show{display:block}
 
 /* ── TABLE: fixed layout ── */
 .table-wrap{background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden}
@@ -146,7 +151,7 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 
 /* nick */
 .nick-name{font-size:14px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.guild-name{font-size:11px;color:var(--text-dim);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.guild-name{display:inline-block;font-size:11px;color:var(--text-dim);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
 .guild-name::before{content:'⚔ '}
 .guild-name:hover{color:var(--cyan);text-decoration:underline;text-underline-offset:2px}
 
@@ -242,8 +247,8 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 .gm-stats .rs-num{font-weight:700;color:var(--text)}
 .gm-stats .rs-grade{padding:1px 6px;border-radius:10px;font-size:11px;font-weight:600}
 .gm-list{overflow-y:auto;flex:1;min-height:0}
-.gm-bubble{display:none;font-size:11px;color:var(--gold-light);margin-top:2px;font-weight:400}
-tr:hover .gm-bubble{display:block}
+.gm-bubble{display:none;font-size:11px;color:var(--gold-light);font-weight:400;margin-left:6px;white-space:nowrap}
+.gm-list tbody tr:hover .gm-bubble{display:inline}
 .gm-list table{width:100%;border-collapse:collapse}
 .gm-list thead tr{background:var(--bg3);position:sticky;top:0;z-index:1}
 .gm-list thead th{padding:9px 14px;text-align:left;font-size:11px;font-weight:600;color:var(--text-dim);text-transform:uppercase;letter-spacing:.06em}
@@ -824,12 +829,13 @@ function renderRow(c) {
   const gi = gradeIcon(gv);
   const gc = gradeCls(gv);
   const bubbleMsg = bubbleMap[(c.guild || '') + '|' + c.nickname];
-  const bubbleHtml = bubbleMsg ? `<div class="bubble-tooltip">💬 ${esc(bubbleMsg)}</div>` : '';
+  const bubbleIcon = bubbleMsg ? `<span class="bubble-icon" onclick="event.stopPropagation();toggleBubble(this)">💬</span>` : '';
+  const bubbleHtml = bubbleMsg ? `<div class="bubble-tooltip">${esc(bubbleMsg)}</div>` : '';
   const trCls = bubbleMsg ? ' class="bubble-row"' : '';
   return `<tr${trCls}>
     <td class="td-rank rank-${r<=3?r:''}">${rankHtml}</td>
     <td>
-      <div class="nick-name">${esc(c.nickname)}</div>
+      <div class="nick-name">${esc(c.nickname)}${bubbleIcon}</div>
       ${c.guild?`<div class="guild-name" style="cursor:pointer" onclick="event.stopPropagation();openGuildModal('${esc(c.guild).replace(/'/g,"\\&#39;")}','${esc(c.realm||'').replace(/'/g,"\\&#39;")}')">${esc(c.guild)}</div>`:''}
       ${bubbleHtml}
     </td>
@@ -1023,7 +1029,7 @@ function openGuildModal(guildName, realm) {
   members.forEach((c, idx) => {
     const gv = c.conquestGrade;
     const bMsg = bubbleMap[(c.guild || '') + '|' + c.nickname];
-    const bHtml = bMsg ? `<div class="gm-bubble">💬 ${esc(bMsg)}</div>` : '';
+    const bHtml = bMsg ? `<span class="gm-bubble">💬 ${esc(bMsg)}</span>` : '';
     listHtml += `<tr>
       <td class="gm-seq">${idx + 1}</td>
       <td class="gm-rank">${idx + 1}</td>
@@ -1038,6 +1044,24 @@ function openGuildModal(guildName, realm) {
   document.getElementById('guildModal').classList.add('active');
   document.body.style.overflow = 'hidden';
 }
+
+// 모바일 말풍선 토글
+function toggleBubble(icon) {
+  const row = icon.closest('.bubble-row');
+  if (!row) return;
+  const tip = row.querySelector('.bubble-tooltip');
+  if (!tip) return;
+  const wasOpen = tip.classList.contains('show');
+  // 다른 열린 말풍선 모두 닫기
+  document.querySelectorAll('.bubble-tooltip.show').forEach(t => t.classList.remove('show'));
+  if (!wasOpen) tip.classList.add('show');
+}
+// 말풍선 외부 클릭 시 닫기
+document.addEventListener('click', e => {
+  if (!e.target.closest('.bubble-icon') && !e.target.closest('.bubble-tooltip')) {
+    document.querySelectorAll('.bubble-tooltip.show').forEach(t => t.classList.remove('show'));
+  }
+});
 
 function closeGuildModal() {
   document.getElementById('guildModal').classList.remove('active');
