@@ -663,13 +663,10 @@ function applyFilters() {
     return (a.rank||0)-(b.rank||0);
   });
 
-  // 월드 전체 검색(필터 없음)이면 top 20만
-  if (!world && !realm && !job && !grade && !lvBand && !q) {
-    filtered = filtered.slice(0, 20);
-  }
+  const isWorldWide = !world && !realm && !job && !grade && !lvBand && !q;
 
   updateRealmStats(world, realm);
-  updateGuildTags();
+  updateGuildTags(isWorldWide);
 
   currentPage = 1;
   renderTable();
@@ -813,7 +810,7 @@ function guildScore(members) {
   return score;
 }
 
-function updateGuildTags() {
+function updateGuildTags(limitTop) {
   const el = document.getElementById('guildTags');
   // 렐름+결사명 복합키로 그룹핑
   const guildMap = {};
@@ -823,9 +820,12 @@ function updateGuildTags() {
     if (!guildMap[key]) guildMap[key] = { guild: c.guild, realm: c.realm||'', members: [] };
     guildMap[key].members.push(c);
   });
-  const guilds = Object.values(guildMap);
+  let guilds = Object.values(guildMap);
   guilds.forEach(g => { g.score = guildScore(g.members); });
   guilds.sort((a,b) => b.score - a.score);
+
+  // 월드 전체 검색이면 결사 top 20만
+  if (limitTop) guilds = guilds.slice(0, 20);
 
   if (!guilds.length) { el.classList.add('hidden'); return; }
 
