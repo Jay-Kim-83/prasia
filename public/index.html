@@ -829,7 +829,7 @@ function updateGuildTags(limitTop) {
 
   if (!guilds.length) { el.classList.add('hidden'); return; }
 
-  let html = '<span class="gt-label">⚔ 결사</span>';
+  let html = `<span class="gt-label">⚔ 결사${limitTop ? ' top 20' : ''}</span>`;
   guilds.forEach(g => {
     const realmLabel = g.realm ? ` <span style="opacity:.5;font-size:10px">${esc(g.realm)}</span>` : '';
     html += `<span class="guild-tag" onclick="openGuildModal('${esc(g.guild).replace(/'/g,"\\&#39;")}','${esc(g.realm).replace(/'/g,"\\&#39;")}')">${esc(g.guild)}${realmLabel} <span class="gt-count">${g.members.length}</span></span>`;
