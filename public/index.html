@@ -703,7 +703,7 @@ function renderRow(c) {
     <td class="td-rank rank-${r<=3?r:''}">${rankHtml}</td>
     <td>
       <div class="nick-name">${esc(c.nickname)}</div>
-      ${c.guild?`<div class="guild-name" style="cursor:pointer" onclick="event.stopPropagation();openGuildModal('${esc(c.guild).replace(/'/g,"\\&#39;")}')">${esc(c.guild)}</div>`:''}
+      ${c.guild?`<div class="guild-name" style="cursor:pointer" onclick="event.stopPropagation();openGuildModal('${esc(c.guild).replace(/'/g,"\\&#39;")}','${esc(c.realm||'').replace(/'/g,"\\&#39;")}')">${esc(c.guild)}</div>`:''}
     </td>
     <td class="td-tags">
       <span class="job-badge job-${esc(c.job)}">${jobIcon} ${esc(c.job)}</span>
@@ -798,17 +798,35 @@ function updateRealmStats(world, realm) {
 }
 
 // ── GUILD TAGS ──────────────────────────────────────────────────
+function guildScore(members) {
+  // 결사 점수: 레벨 합산 + 토벌등급 합산×2 (토벌이 더 희소하므로 가중)
+  let score = 0;
+  members.forEach(c => {
+    score += (c.level || 0) + gradeNum(c.conquestGrade) * 2;
+  });
+  return score;
+}
+
 function updateGuildTags() {
   const el = document.getElementById('guildTags');
-  const guildCounts = {};
-  filtered.forEach(c => { if (c.guild) guildCounts[c.guild] = (guildCounts[c.guild]||0)+1; });
-  const guilds = Object.entries(guildCounts).sort((a,b) => b[1]-a[1]);
+  // 렐름+결사명 복합키로 그룹핑
+  const guildMap = {};
+  filtered.forEach(c => {
+    if (!c.guild) return;
+    const key = `${c.realm||''}\t${c.guild}`;
+    if (!guildMap[key]) guildMap[key] = { guild: c.guild, realm: c.realm||'', members: [] };
+    guildMap[key].members.push(c);
+  });
+  const guilds = Object.values(guildMap);
+  guilds.forEach(g => { g.score = guildScore(g.members); });
+  guilds.sort((a,b) => b.score - a.score);
 
   if (!guilds.length) { el.classList.add('hidden'); return; }
 
   let html = '<span class="gt-label">⚔ 결사</span>';
-  guilds.forEach(([name, cnt]) => {
-    html += `<span class="guild-tag" onclick="openGuildModal('${esc(name).replace(/'/g,"\\&#39;")}')">${esc(name)} <span class="gt-count">${cnt}</span></span>`;
+  guilds.forEach(g => {
+    const realmLabel = g.realm ? ` <span style="opacity:.5;font-size:10px">${esc(g.realm)}</span>` : '';
+    html += `<span class="guild-tag" onclick="openGuildModal('${esc(g.guild).replace(/'/g,"\\&#39;")}','${esc(g.realm).replace(/'/g,"\\&#39;")}')">${esc(g.guild)}${realmLabel} <span class="gt-count">${g.members.length}</span></span>`;
   });
   el.innerHTML = html;
   el.classList.remove('hidden');
@@ -841,11 +859,12 @@ function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;')
 function showToast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),3000); }
 
 // ── GUILD MODAL ──────────────────────────────────────────────────
-function openGuildModal(guildName) {
-  const members = allData.filter(c => c.guild === guildName).sort((a,b) => (a.rank||0)-(b.rank||0));
+function openGuildModal(guildName, realm) {
+  const members = allData.filter(c => c.guild === guildName && (!realm || c.realm === realm)).sort((a,b) => (a.rank||0)-(b.rank||0));
   if (!members.length) return;
 
-  document.getElementById('gmTitle').innerHTML = `⚔ ${esc(guildName)} <span>${members.length}명</span>`;
+  const realmLabel = realm ? ` <span style="font-size:12px;color:var(--text-faint)">${esc(realm)}</span>` : '';
+  document.getElementById('gmTitle').innerHTML = `⚔ ${esc(guildName)}${realmLabel} <span>${members.length}명</span>`;
 
   // 통계: 레벨별
   const levelCounts = {};
