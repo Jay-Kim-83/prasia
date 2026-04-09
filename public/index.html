@@ -663,10 +663,10 @@ function applyFilters() {
     return (a.rank||0)-(b.rank||0);
   });
 
-  const isWorldWide = !world && !realm && !job && !grade && !lvBand && !q;
+  const limitGuilds = !realm && !job && !grade && !lvBand && !q;
 
   updateRealmStats(world, realm);
-  updateGuildTags(isWorldWide);
+  updateGuildTags(limitGuilds);
 
   currentPage = 1;
   renderTable();
