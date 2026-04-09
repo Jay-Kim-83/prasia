@@ -300,6 +300,46 @@ app.post('/api/display', (req, res) => {
   res.json({ success: true });
 });
 
+// ── 말풍선 관리 (마스터 전용) ────────────────────────────────────
+app.get('/api/bubbles', (req, res) => {
+  const config = loadConfig();
+  res.json(config.bubbles || []);
+});
+
+app.post('/api/bubbles', (req, res) => {
+  const { guild, nickname, message } = req.body;
+  if (!guild || !nickname || !message) return res.status(400).json({ success: false, message: '결사, 닉네임, 메시지를 모두 입력하세요.' });
+  const config = loadConfig();
+  if (!config.bubbles) config.bubbles = [];
+  config.bubbles.push({ guild: guild.trim(), nickname: nickname.trim(), message: message.trim() });
+  saveConfig(config);
+  res.json({ success: true });
+});
+
+app.delete('/api/bubbles/:index', (req, res) => {
+  const idx = parseInt(req.params.index);
+  const config = loadConfig();
+  if (!config.bubbles || idx < 0 || idx >= config.bubbles.length) {
+    return res.status(404).json({ success: false, message: '항목을 찾을 수 없습니다.' });
+  }
+  config.bubbles.splice(idx, 1);
+  saveConfig(config);
+  res.json({ success: true });
+});
+
+app.put('/api/bubbles/:index', (req, res) => {
+  const idx = parseInt(req.params.index);
+  const { guild, nickname, message } = req.body;
+  if (!guild || !nickname || !message) return res.status(400).json({ success: false, message: '결사, 닉네임, 메시지를 모두 입력하세요.' });
+  const config = loadConfig();
+  if (!config.bubbles || idx < 0 || idx >= config.bubbles.length) {
+    return res.status(404).json({ success: false, message: '항목을 찾을 수 없습니다.' });
+  }
+  config.bubbles[idx] = { guild: guild.trim(), nickname: nickname.trim(), message: message.trim() };
+  saveConfig(config);
+  res.json({ success: true });
+});
+
 // ── API ───────────────────────────────────────────────────────
 app.get('/api/data', requireUser, (req, res) => res.json(loadData()));
 

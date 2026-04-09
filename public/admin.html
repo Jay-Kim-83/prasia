@@ -383,6 +383,28 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
   <div id="userList" style="display:flex;flex-direction:column;gap:6px"></div>
 </div>
 
+<!-- 말풍선 설정 -->
+<div class="card master-only">
+  <div class="card-title">💬 말풍선 설정</div>
+  <p style="font-size:12px;color:var(--text-dim);margin-bottom:14px">특정 결사의 특정 닉네임에 마우스를 올리면 표시할 메시지를 설정합니다.</p>
+  <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;align-items:flex-end">
+    <div style="display:flex;flex-direction:column;gap:4px">
+      <label style="font-size:11px;color:var(--text-dim)">결사</label>
+      <input type="text" class="pw-input" id="bubbleGuild" placeholder="결사명" style="width:120px">
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4px">
+      <label style="font-size:11px;color:var(--text-dim)">닉네임</label>
+      <input type="text" class="pw-input" id="bubbleNick" placeholder="닉네임" style="width:120px">
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4px;flex:1;min-width:180px">
+      <label style="font-size:11px;color:var(--text-dim)">메시지</label>
+      <input type="text" class="pw-input" id="bubbleMsg" placeholder="하고 싶은 말" style="width:100%">
+    </div>
+    <button class="btn-primary" style="padding:8px 16px;font-size:12px;height:34px" onclick="addBubble()">+ 추가</button>
+  </div>
+  <div id="bubbleList" style="display:flex;flex-direction:column;gap:6px"></div>
+</div>
+
 <!-- 비밀번호 변경 -->
 <div class="card master-only">
   <div class="card-title">🔑 관리자 비밀번호 변경</div>
@@ -528,6 +550,7 @@ async function initAdmin() {
   loadUsers();
   loadWorlds();
   loadDisplay();
+  loadBubbles();
   // 자동 로그아웃 설정 가져오기
   try {
     const chk = await fetch('/api/user/check', { headers: { 'X-User-Token': localStorage.getItem(AUTH_KEY) } }).then(r => r.json());
@@ -1002,6 +1025,57 @@ async function syncPull() {
     btn.disabled = false;
     btn.textContent = '📥 서버 → 로컬 다운로드';
   }
+}
+
+// ── 말풍선 관리 ───────────────────────────────────────────────────
+async function loadBubbles() {
+  try {
+    const bubbles = await fetch('/api/bubbles').then(r => r.json());
+    const list = document.getElementById('bubbleList');
+    if (!bubbles.length) {
+      list.innerHTML = '<div style="font-size:12px;color:var(--text-faint)">등록된 말풍선이 없습니다.</div>';
+      return;
+    }
+    list.innerHTML = bubbles.map((b, i) => `
+      <div style="display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:8px 12px;flex-wrap:wrap">
+        <span style="font-size:12px;color:var(--cyan)">${esc(b.guild)}</span>
+        <span style="font-size:12px;color:var(--text-faint)">›</span>
+        <span style="font-size:12px;color:var(--gold-light)">${esc(b.nickname)}</span>
+        <span style="font-size:12px;color:var(--text-faint)">›</span>
+        <span style="font-size:12px;color:var(--text);flex:1">💬 ${esc(b.message)}</span>
+        <button class="btn-sm danger" onclick="deleteBubble(${i})" style="font-size:11px;padding:4px 10px">삭제</button>
+      </div>
+    `).join('');
+  } catch {}
+}
+
+async function addBubble() {
+  const guild = document.getElementById('bubbleGuild').value.trim();
+  const nickname = document.getElementById('bubbleNick').value.trim();
+  const message = document.getElementById('bubbleMsg').value.trim();
+  if (!guild || !nickname || !message) return showToast('결사, 닉네임, 메시지를 모두 입력하세요.');
+  const res = await fetch('/api/bubbles', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ guild, nickname, message })
+  });
+  const data = await res.json();
+  if (data.success) {
+    document.getElementById('bubbleGuild').value = '';
+    document.getElementById('bubbleNick').value = '';
+    document.getElementById('bubbleMsg').value = '';
+    showToast('✅ 말풍선 추가됨');
+    loadBubbles();
+  } else {
+    showToast(data.message || '추가 실패');
+  }
+}
+
+async function deleteBubble(idx) {
+  if (!confirm('이 말풍선을 삭제하시겠습니까?')) return;
+  const res = await fetch(`/api/bubbles/${idx}`, { method: 'DELETE' });
+  const data = await res.json();
+  if (data.success) { showToast('✅ 말풍선 삭제됨'); loadBubbles(); }
+  else showToast(data.message || '삭제 실패');
 }
 
 // ── 파비콘 상태 ──────────────────────────────────────────────────
