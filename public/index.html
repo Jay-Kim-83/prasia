@@ -62,6 +62,13 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
 .realm-stats .rs-num{font-weight:700;color:var(--text)}
 .realm-stats .rs-grade{padding:1px 6px;border-radius:10px;font-size:11px;font-weight:600}
 
+/* guild tags bar */
+.guild-tags{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:12px 18px;margin-bottom:12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:12px}
+.guild-tags .gt-label{font-weight:600;color:var(--gold);font-size:12px;margin-right:2px}
+.guild-tag{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:14px;background:rgba(42,79,138,.12);border:1px solid var(--border);color:var(--text-dim);cursor:pointer;transition:all .2s;font-size:12px;white-space:nowrap}
+.guild-tag:hover{border-color:var(--cyan-dim);color:var(--cyan);background:rgba(79,195,247,.08)}
+.guild-tag .gt-count{font-weight:700;color:var(--text);font-size:11px}
+
 .stats-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:8px}
 .result-count{font-size:13px;color:var(--text-dim)}
 .result-count strong{color:var(--gold)}
@@ -318,6 +325,7 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 </div>
 
 <div class="realm-stats hidden" id="realmStats"></div>
+<div class="guild-tags hidden" id="guildTags"></div>
 
 <div class="stats-bar">
   <div class="result-count" id="resultCount">캐릭터 <strong>0</strong>명</div>
@@ -655,6 +663,7 @@ function applyFilters() {
   });
 
   updateRealmStats(world, realm);
+  updateGuildTags();
 
   currentPage = 1;
   renderTable();
@@ -784,6 +793,23 @@ function updateRealmStats(world, realm) {
     });
   }
 
+  el.innerHTML = html;
+  el.classList.remove('hidden');
+}
+
+// ── GUILD TAGS ──────────────────────────────────────────────────
+function updateGuildTags() {
+  const el = document.getElementById('guildTags');
+  const guildCounts = {};
+  filtered.forEach(c => { if (c.guild) guildCounts[c.guild] = (guildCounts[c.guild]||0)+1; });
+  const guilds = Object.entries(guildCounts).sort((a,b) => b[1]-a[1]);
+
+  if (!guilds.length) { el.classList.add('hidden'); return; }
+
+  let html = '<span class="gt-label">⚔ 결사</span>';
+  guilds.forEach(([name, cnt]) => {
+    html += `<span class="guild-tag" onclick="openGuildModal('${esc(name).replace(/'/g,"\\&#39;")}')">${esc(name)} <span class="gt-count">${cnt}</span></span>`;
+  });
   el.innerHTML = html;
   el.classList.remove('hidden');
 }
