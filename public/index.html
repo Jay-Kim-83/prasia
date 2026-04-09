@@ -493,11 +493,29 @@ function worldStyle(world) {
   if (!c) return '';
   return `background:hsla(${c.hue},${c.sat}%,${c.light}%,.12);border-color:hsla(${c.hue},${c.sat}%,${c.light}%,.4);color:hsl(${c.hue},${c.sat}%,${c.light}%)`;
 }
-function realmStyle(world) {
-  const c = getWorldColor(world);
+// 렐름별 고유 색상 생성 (같은 월드 내 렐름끼리 hue 오프셋으로 구분)
+const REALM_COLORS = {};
+function getRealmColor(world, realm) {
+  if (!realm) return getWorldColor(world);
+  const key = `${world}\t${realm}`;
+  if (!REALM_COLORS[key]) {
+    const wc = getWorldColor(world);
+    if (!wc) return null;
+    // 렐름 번호 추출 (예: "론도 01" → 1, "론도 02" → 2)
+    const m = realm.match(/(\d+)\s*$/);
+    const idx = m ? parseInt(m[1], 10) : 0;
+    // 월드 hue 기준으로 렐름마다 25도씩 오프셋 + 채도/밝기 미세 변화
+    const hue = (wc.hue + idx * 25) % 360;
+    const sat = 55 + (idx % 3) * 8;
+    const light = 60 + (idx % 4) * 5;
+    REALM_COLORS[key] = { hue, sat, light };
+  }
+  return REALM_COLORS[key];
+}
+function realmStyle(world, realm) {
+  const c = getRealmColor(world, realm);
   if (!c) return '';
-  // 렐름은 같은 hue에서 살짝 밝고 채도 낮게
-  return `background:hsla(${c.hue},${c.sat-10}%,${c.light+10}%,.1);border-color:hsla(${c.hue},${c.sat-10}%,${c.light}%,.3);color:hsl(${c.hue},${c.sat-10}%,${c.light+10}%)`;
+  return `background:hsla(${c.hue},${c.sat}%,${c.light}%,.12);border-color:hsla(${c.hue},${c.sat}%,${c.light}%,.4);color:hsl(${c.hue},${c.sat}%,${c.light}%)`;
 }
 const JOB_ICONS   = { 환영검사:'⚔', 주문각인사:'📖', 집행관:'🛡', 향사수:'🏹', 강령술사:'💀', 태양감시자:'☀', 심연추방자:'🌑', 야만투사:'🪓' };
 
@@ -716,7 +734,7 @@ function renderRow(c) {
     <td class="td-job-only"><span class="job-badge job-${esc(c.job)}">${jobIcon} ${esc(c.job)}</span></td>
     <td class="td-level-only"><span class="level-val">${c.level}</span></td>
     <td class="col-world"><span class="world-badge" style="${worldStyle(c.world)}">${esc(c.world)}</span></td>
-    <td class="col-realm"><span class="realm-badge" style="${realmStyle(c.world)}">${esc(c.realm||'-')}</span></td>
+    <td class="col-realm"><span class="realm-badge" style="${realmStyle(c.world, c.realm)}">${esc(c.realm||'-')}</span></td>
     <td class="td-grade-only"><span class="${gc}">${gi} ${gd}</span></td>
   </tr>`;
 }
