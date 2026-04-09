@@ -531,7 +531,7 @@ async function initAdmin() {
   // 자동 로그아웃 설정 가져오기
   try {
     const chk = await fetch('/api/user/check', { headers: { 'X-User-Token': localStorage.getItem(AUTH_KEY) } }).then(r => r.json());
-    startAutoLogout(chk.autoLogoutMin ?? 30);
+    if (!chk.isMaster) startAutoLogout(chk.autoLogoutMin ?? 30);
   } catch {}
   // 현황 실시간 갱신 (10초마다)
   statusInterval = setInterval(loadStatus, 10000);
