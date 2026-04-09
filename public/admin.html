@@ -8,20 +8,40 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{
+:root,:root[data-theme="dark"]{
   --bg:#080c14;--bg2:#0d1525;--bg3:#111e35;
   --border:#1e3358;--border-glow:#2a4f8a;
   --gold:#c9a227;--gold-light:#f0cc6a;--gold-dim:#7a601a;
   --cyan:#4fc3f7;--text:#d4e3ff;--text-dim:#7a95bf;--text-faint:#3a5070;
   --green:#66bb6a;--red:#ef5350;--orange:#ffa726;
+  --overlay-bg:rgba(8,12,20,.97);--hover-bg:rgba(42,79,138,.12);
+  --shadow:rgba(0,0,0,.5);--glow:rgba(42,79,138,.15);
+  color-scheme:dark;
+}
+:root[data-theme="light"]{
+  --bg:#f0f2f6;--bg2:#ffffff;--bg3:#e4e8f0;
+  --border:#c8d0dc;--border-glow:#9aacc4;
+  --gold:#9a7b18;--gold-light:#6b5510;--gold-dim:#d4b84a;
+  --cyan:#0277b5;
+  --text:#1a2030;--text-dim:#506078;--text-faint:#8898aa;
+  --green:#2e7d32;--red:#c62828;--orange:#e65100;
+  --overlay-bg:rgba(0,0,0,.45);--hover-bg:rgba(100,140,200,.1);
+  --shadow:rgba(0,0,0,.12);--glow:rgba(100,140,200,.08);
+  color-scheme:light;
 }
 *{margin:0;padding:0;box-sizing:border-box}
+/* 글로벌 스크롤바 */
+*{scrollbar-width:thin;scrollbar-color:var(--border-glow) transparent}
+::-webkit-scrollbar{width:7px;height:7px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border-glow);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:var(--gold-dim)}
 body{background:var(--bg);color:var(--text);font-family:'Noto Sans KR',sans-serif;font-size:14px;min-height:100vh}
-body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(42,79,138,.15) 0%,transparent 70%);pointer-events:none}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 50% at 50% -10%,var(--glow) 0%,transparent 70%);pointer-events:none}
 
 /* ── LOGIN OVERLAY ── */
 #loginOverlay{
-  position:fixed;inset:0;background:rgba(8,12,20,.97);
+  position:fixed;inset:0;background:var(--overlay-bg);
   display:flex;align-items:center;justify-content:center;z-index:999;
 }
 #loginOverlay.hidden{display:none}
@@ -121,7 +141,7 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
 .pw-input{background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:8px 12px;border-radius:6px;font-family:inherit;font-size:13px;outline:none;transition:border-color .2s}
 .pw-input:focus{border-color:var(--border-glow)}
 
-#toast{position:fixed;bottom:22px;right:22px;background:var(--bg3);border:1px solid var(--border-glow);color:var(--text);padding:11px 16px;border-radius:8px;font-size:13px;z-index:100;opacity:0;transform:translateY(10px);transition:all .25s;box-shadow:0 8px 32px rgba(0,0,0,.5)}
+#toast{position:fixed;bottom:22px;right:22px;background:var(--bg3);border:1px solid var(--border-glow);color:var(--text);padding:11px 16px;border-radius:8px;font-size:13px;z-index:100;opacity:0;transform:translateY(10px);transition:all .25s;box-shadow:0 8px 32px var(--shadow)}
 #toast.show{opacity:1;transform:translateY(0)}
 
 /* ── RESPONSIVE: MOBILE ── */
@@ -153,11 +173,38 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
   #toast{bottom:12px;right:12px;left:12px;text-align:center}
 }
 .master-only.disabled{position:relative;opacity:.5}
-.master-only.disabled::after{content:'마스터 관리자 전용';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--text-dim);background:rgba(8,12,20,.6);border-radius:12px;pointer-events:none}
+.master-only.disabled::after{content:'마스터 관리자 전용';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--text-dim);background:var(--overlay-bg);border-radius:12px;pointer-events:none}
 .master-only.disabled *{pointer-events:none!important}
+
+/* ── LIGHT THEME OVERRIDES ── */
+:root[data-theme="light"] .log-area{background:#e8ecf2;border-color:var(--border)}
+:root[data-theme="light"] .log-msg{color:var(--text-dim)}
+:root[data-theme="light"] .log-msg.error{color:#c62828}
+:root[data-theme="light"] .log-msg.start,:root[data-theme="light"] .log-msg.done{color:#2e7d32}
+:root[data-theme="light"] .cmd-box{background:#e8ecf2;color:#2e7d32}
+:root[data-theme="light"] .login-error{color:#c62828}
+:root[data-theme="light"] .btn-sm.danger{border-color:rgba(198,40,40,.4);color:#c62828}
+:root[data-theme="light"] .btn-sm.danger:hover{background:rgba(198,40,40,.08)}
+:root[data-theme="light"] .made-by{background:linear-gradient(90deg,var(--gold),var(--gold-light));-webkit-background-clip:text;background-clip:text}
+
+/* theme toggle */
+.theme-toggle{display:flex;background:var(--bg3);border:1px solid var(--border);border-radius:6px;overflow:hidden}
+.theme-btn{background:none;border:none;color:var(--text-faint);padding:5px 8px;cursor:pointer;font-size:14px;line-height:1;transition:all .2s;display:flex;align-items:center;justify-content:center}
+.theme-btn:hover{color:var(--text-dim)}
+.theme-btn.active{background:var(--border-glow);color:var(--gold-light)}
 </style>
 </head>
 <body>
+<script>
+(function(){
+  const saved = localStorage.getItem('prasia-theme') || 'dark';
+  let theme = saved;
+  if (saved === 'system') {
+    theme = window.matchMedia('(prefers-color-scheme:light)').matches ? 'light' : 'dark';
+  }
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
 
 <!-- 로그인 오버레이 -->
 <div id="loginOverlay">
@@ -183,6 +230,11 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
     </div>
   </div>
   <div class="header-btns">
+    <div class="theme-toggle" id="themeToggle">
+      <button class="theme-btn" data-theme="light" title="밝은 테마">☀</button>
+      <button class="theme-btn" data-theme="dark" title="어두운 테마">🌙</button>
+      <button class="theme-btn" data-theme="system" title="시스템 설정">🖥</button>
+    </div>
     <a href="/" class="btn-sm">← 랭킹으로</a>
     <button class="btn-sm danger" onclick="doLogout()">로그아웃</button>
   </div>
@@ -978,6 +1030,42 @@ function showToast(msg) {
   t.textContent = msg; t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 3000);
 }
+
+// ── THEME TOGGLE ────────────────────────────────────────────────
+(function initTheme() {
+  const toggle = document.getElementById('themeToggle');
+  const saved = localStorage.getItem('prasia-theme') || 'dark';
+
+  function applyTheme(mode) {
+    let effective = mode;
+    if (mode === 'system') {
+      effective = window.matchMedia('(prefers-color-scheme:light)').matches ? 'light' : 'dark';
+    }
+    document.documentElement.setAttribute('data-theme', effective);
+  }
+
+  function setActive(mode) {
+    toggle.querySelectorAll('.theme-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.theme === mode);
+    });
+  }
+
+  toggle.addEventListener('click', e => {
+    const btn = e.target.closest('.theme-btn');
+    if (!btn) return;
+    const mode = btn.dataset.theme;
+    localStorage.setItem('prasia-theme', mode);
+    applyTheme(mode);
+    setActive(mode);
+  });
+
+  window.matchMedia('(prefers-color-scheme:light)').addEventListener('change', () => {
+    if (localStorage.getItem('prasia-theme') === 'system') applyTheme('system');
+  });
+
+  applyTheme(saved);
+  setActive(saved);
+})();
 
 checkAuth();
 </script>

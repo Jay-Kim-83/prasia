@@ -8,17 +8,37 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{
+:root,:root[data-theme="dark"]{
   --bg:#080c14;--bg2:#0d1525;--bg3:#111e35;
   --border:#1e3358;--border-glow:#2a4f8a;
   --gold:#c9a227;--gold-light:#f0cc6a;--gold-dim:#7a601a;
   --cyan:#4fc3f7;--cyan-dim:#1a5f7a;
   --text:#d4e3ff;--text-dim:#7a95bf;--text-faint:#3a5070;
   --green:#66bb6a;
+  --overlay-bg:rgba(8,12,20,.85);--hover-bg:rgba(42,79,138,.12);
+  --shadow:rgba(0,0,0,.5);--glow:rgba(42,79,138,.15);
+  color-scheme:dark;
+}
+:root[data-theme="light"]{
+  --bg:#f0f2f6;--bg2:#ffffff;--bg3:#e4e8f0;
+  --border:#c8d0dc;--border-glow:#9aacc4;
+  --gold:#9a7b18;--gold-light:#6b5510;--gold-dim:#d4b84a;
+  --cyan:#0277b5;--cyan-dim:#b3dcf0;
+  --text:#1a2030;--text-dim:#506078;--text-faint:#8898aa;
+  --green:#2e7d32;
+  --overlay-bg:rgba(0,0,0,.45);--hover-bg:rgba(100,140,200,.1);
+  --shadow:rgba(0,0,0,.12);--glow:rgba(100,140,200,.08);
+  color-scheme:light;
 }
 *{margin:0;padding:0;box-sizing:border-box}
+/* 글로벌 스크롤바 */
+*{scrollbar-width:thin;scrollbar-color:var(--border-glow) transparent}
+::-webkit-scrollbar{width:7px;height:7px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border-glow);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:var(--gold-dim)}
 body{background:var(--bg);color:var(--text);font-family:'Noto Sans KR',sans-serif;font-size:14px;min-height:100vh;overflow-x:hidden}
-body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(42,79,138,.15) 0%,transparent 70%);pointer-events:none;z-index:0}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 50% at 50% -10%,var(--glow) 0%,transparent 70%);pointer-events:none;z-index:0}
 .wrap{position:relative;z-index:1;max-width:1600px;margin:0 auto;padding:0 24px 60px}
 
 header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
@@ -153,13 +173,44 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 
 .sample-banner{background:rgba(255,167,38,.1);border:1px solid rgba(255,167,38,.3);border-radius:8px;padding:9px 14px;margin-bottom:14px;font-size:12px;color:#ffcc80;display:flex;align-items:center;gap:8px}
 .sample-banner.hidden,.hidden{display:none!important}
-#toast{position:fixed;bottom:22px;right:22px;background:var(--bg3);border:1px solid var(--border-glow);color:var(--text);padding:11px 16px;border-radius:8px;font-size:13px;z-index:100;opacity:0;transform:translateY(10px);transition:all .25s;box-shadow:0 8px 32px rgba(0,0,0,.5)}
+#toast{position:fixed;bottom:22px;right:22px;background:var(--bg3);border:1px solid var(--border-glow);color:var(--text);padding:11px 16px;border-radius:8px;font-size:13px;z-index:100;opacity:0;transform:translateY(10px);transition:all .25s;box-shadow:0 8px 32px var(--shadow)}
 #toast.show{opacity:1;transform:translateY(0)}
 
+/* ── LIGHT THEME OVERRIDES ── */
+:root[data-theme="light"] thead tr{background:linear-gradient(90deg,#dce2ec,#e8ecf2)}
+:root[data-theme="light"] tbody tr{border-bottom-color:var(--border)}
+:root[data-theme="light"] tbody tr:hover{background:var(--hover-bg)}
+:root[data-theme="light"] .job-환영검사{background:rgba(239,83,80,.08);color:#c62828}
+:root[data-theme="light"] .job-주문각인사{background:rgba(171,71,188,.08);color:#7b1fa2}
+:root[data-theme="light"] .job-집행관{background:rgba(255,167,38,.08);color:#e65100}
+:root[data-theme="light"] .job-향사수{background:rgba(102,187,106,.08);color:#2e7d32}
+:root[data-theme="light"] .job-강령술사{background:rgba(38,166,154,.08);color:#00695c}
+:root[data-theme="light"] .job-태양감시자{background:rgba(255,200,0,.08);color:#f57f17}
+:root[data-theme="light"] .job-심연추방자{background:rgba(63,81,181,.08);color:#283593}
+:root[data-theme="light"] .job-야만투사{background:rgba(255,112,67,.08);color:#bf360c}
+:root[data-theme="light"] .cq-신화{background:rgba(255,100,30,.08);color:#d84315}
+:root[data-theme="light"] .cq-전설{background:rgba(234,179,8,.08);color:#f57f17}
+:root[data-theme="light"] .cq-영웅{background:rgba(168,85,247,.08);color:#7b1fa2}
+:root[data-theme="light"] .cq-희귀{background:rgba(59,130,246,.08);color:#1565c0}
+:root[data-theme="light"] .cq-일반{background:var(--bg3);color:var(--text-dim)}
+:root[data-theme="light"] .guild-tag{background:rgba(100,140,200,.08)}
+:root[data-theme="light"] .guild-tag:hover{background:rgba(2,119,181,.08);color:var(--cyan)}
+:root[data-theme="light"] .rank-1 .rank-num{background:linear-gradient(135deg,#b8860b,#8b6914);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+:root[data-theme="light"] .rank-2 .rank-num{background:linear-gradient(135deg,#808080,#606060);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+:root[data-theme="light"] .rank-3 .rank-num{background:linear-gradient(135deg,#a0522d,#8b4513);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+:root[data-theme="light"] .logo-icon{box-shadow:0 0 12px rgba(154,123,24,.2)}
+:root[data-theme="light"] .made-by{background:linear-gradient(90deg,var(--gold),var(--gold-light));-webkit-background-clip:text;background-clip:text}
+
+/* theme toggle */
+.theme-toggle{display:flex;background:var(--bg3);border:1px solid var(--border);border-radius:6px;overflow:hidden}
+.theme-btn{background:none;border:none;color:var(--text-faint);padding:5px 8px;cursor:pointer;font-size:14px;line-height:1;transition:all .2s;display:flex;align-items:center;justify-content:center}
+.theme-btn:hover{color:var(--text-dim)}
+.theme-btn.active{background:var(--border-glow);color:var(--gold-light)}
+
 /* ── GUILD MODAL ── */
-.guild-modal-overlay{position:fixed;inset:0;background:rgba(8,12,20,.85);display:none;align-items:center;justify-content:center;z-index:200;backdrop-filter:blur(4px)}
+.guild-modal-overlay{position:fixed;inset:0;background:var(--overlay-bg);display:none;align-items:center;justify-content:center;z-index:200;backdrop-filter:blur(4px)}
 .guild-modal-overlay.active{display:flex}
-.guild-modal{background:var(--bg2);border:1px solid var(--border-glow);border-radius:16px;width:95%;max-width:560px;max-height:85vh;display:flex;flex-direction:column;box-shadow:0 16px 64px rgba(0,0,0,.6);animation:gm-in .2s ease-out}
+.guild-modal{background:var(--bg2);border:1px solid var(--border-glow);border-radius:16px;width:95%;max-width:560px;max-height:85vh;display:flex;flex-direction:column;box-shadow:0 16px 64px var(--shadow);animation:gm-in .2s ease-out}
 @keyframes gm-in{from{opacity:0;transform:scale(.95) translateY(10px)}to{opacity:1;transform:none}}
 .gm-header{display:flex;align-items:center;justify-content:space-between;padding:20px 22px 16px;border-bottom:1px solid var(--border);flex-shrink:0}
 .gm-header h2{font-family:'Cinzel',serif;font-size:17px;color:var(--gold-light);display:flex;align-items:center;gap:8px}
@@ -172,11 +223,7 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 .gm-stats .rs-item{display:inline-flex;align-items:center;gap:4px}
 .gm-stats .rs-num{font-weight:700;color:var(--text)}
 .gm-stats .rs-grade{padding:1px 6px;border-radius:10px;font-size:11px;font-weight:600}
-.gm-list{overflow-y:auto;flex:1;min-height:0;scrollbar-width:thin;scrollbar-color:var(--border-glow) transparent}
-.gm-list::-webkit-scrollbar{width:6px}
-.gm-list::-webkit-scrollbar-track{background:transparent}
-.gm-list::-webkit-scrollbar-thumb{background:var(--border-glow);border-radius:3px}
-.gm-list::-webkit-scrollbar-thumb:hover{background:var(--gold-dim)}
+.gm-list{overflow-y:auto;flex:1;min-height:0}
 .gm-list table{width:100%;border-collapse:collapse}
 .gm-list thead tr{background:var(--bg3);position:sticky;top:0;z-index:1}
 .gm-list thead th{padding:9px 14px;text-align:left;font-size:11px;font-weight:600;color:var(--text-dim);text-transform:uppercase;letter-spacing:.06em}
@@ -254,9 +301,20 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 </style>
 </head>
 <body>
+<script>
+// FOWT 방지: DOM 렌더 전에 테마 적용
+(function(){
+  const saved = localStorage.getItem('prasia-theme') || 'dark';
+  let theme = saved;
+  if (saved === 'system') {
+    theme = window.matchMedia('(prefers-color-scheme:light)').matches ? 'light' : 'dark';
+  }
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
 
 <!-- 로그인 오버레이 -->
-<div id="loginOverlay" style="position:fixed;inset:0;background:rgba(8,12,20,.97);display:none;align-items:center;justify-content:center;z-index:999">
+<div id="loginOverlay" style="position:fixed;inset:0;background:var(--overlay-bg);display:none;align-items:center;justify-content:center;z-index:999">
   <div style="background:var(--bg2);border:1px solid var(--border-glow);border-radius:16px;padding:40px 36px;width:100%;max-width:360px;text-align:center">
     <div style="font-size:40px;margin-bottom:16px">⚔</div>
     <h2 style="font-family:'Cinzel',serif;color:var(--gold-light);font-size:18px;margin-bottom:6px">Prasia Records</h2>
@@ -283,6 +341,11 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
     </div>
   </div>
   <div class="header-right">
+    <div class="theme-toggle" id="themeToggle">
+      <button class="theme-btn" data-theme="light" title="밝은 테마">☀</button>
+      <button class="theme-btn" data-theme="dark" title="어두운 테마">🌙</button>
+      <button class="theme-btn" data-theme="system" title="시스템 설정">🖥</button>
+    </div>
     <div class="status-badge">
       <span class="status-dot offline" id="statusDot"></span>
       <span id="statusText">불러오는 중...</span>
@@ -939,6 +1002,42 @@ function closeGuildModal() {
   document.body.style.overflow = '';
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeGuildModal(); });
+
+// ── THEME TOGGLE ────────────────────────────────────────────────
+(function initTheme() {
+  const toggle = document.getElementById('themeToggle');
+  const saved = localStorage.getItem('prasia-theme') || 'dark';
+
+  function applyTheme(mode) {
+    let effective = mode;
+    if (mode === 'system') {
+      effective = window.matchMedia('(prefers-color-scheme:light)').matches ? 'light' : 'dark';
+    }
+    document.documentElement.setAttribute('data-theme', effective);
+  }
+
+  function setActive(mode) {
+    toggle.querySelectorAll('.theme-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.theme === mode);
+    });
+  }
+
+  toggle.addEventListener('click', e => {
+    const btn = e.target.closest('.theme-btn');
+    if (!btn) return;
+    const mode = btn.dataset.theme;
+    localStorage.setItem('prasia-theme', mode);
+    applyTheme(mode);
+    setActive(mode);
+  });
+
+  window.matchMedia('(prefers-color-scheme:light)').addEventListener('change', () => {
+    if (localStorage.getItem('prasia-theme') === 'system') applyTheme('system');
+  });
+
+  applyTheme(saved);
+  setActive(saved);
+})();
 
 checkLogin();
 </script>
