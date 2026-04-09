@@ -84,7 +84,7 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
 
 /* guild tags bar */
 .guild-tags{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:12px 18px;margin-bottom:12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:12px}
-.guild-tags .gt-label{font-weight:600;color:var(--gold);font-size:12px;margin-right:2px}
+.guild-tags .gt-label{font-weight:600;color:var(--gold);font-size:12px;margin-right:2px;flex-basis:100%}
 .guild-tag{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:14px;background:rgba(42,79,138,.12);border:1px solid var(--border);color:var(--text-dim);cursor:pointer;transition:all .2s;font-size:12px;white-space:nowrap}
 .guild-tag:hover{border-color:var(--cyan-dim);color:var(--cyan);background:rgba(79,195,247,.08)}
 .guild-tag .gt-count{font-weight:700;color:var(--text);font-size:11px}
@@ -219,7 +219,7 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 .gm-close:hover{border-color:var(--border-glow);color:var(--text)}
 .gm-stats{padding:16px 22px;border-bottom:1px solid var(--border);flex-shrink:0;display:flex;flex-direction:column;gap:10px;font-size:12px;color:var(--text-dim)}
 .gm-stats-row{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
-.gm-stats-label{font-weight:600;color:var(--cyan);font-size:11px;text-transform:uppercase;letter-spacing:.06em;min-width:50px}
+.gm-stats-label{font-weight:600;color:var(--cyan);font-size:11px;text-transform:uppercase;letter-spacing:.06em;flex-basis:100%}
 .gm-stats .rs-item{display:inline-flex;align-items:center;gap:4px}
 .gm-stats .rs-num{font-weight:700;color:var(--text)}
 .gm-stats .rs-grade{padding:1px 6px;border-radius:10px;font-size:11px;font-weight:600}
@@ -230,17 +230,21 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 .gm-list tbody tr{border-bottom:1px solid rgba(30,51,88,.4);transition:background .15s}
 .gm-list tbody tr:hover{background:rgba(42,79,138,.1)}
 .gm-list tbody td{padding:10px 14px;font-size:13px}
-.gm-list .gm-seq{text-align:center;width:32px;color:var(--text-faint);font-size:12px}
-.gm-list .gm-rank{text-align:center;width:50px;font-family:'Cinzel',serif;font-weight:700;color:var(--text-dim)}
+.gm-list .gm-seq{text-align:center;width:36px;color:var(--text-faint);font-size:12px}
+.gm-list .gm-rank{text-align:center;width:44px;font-family:'Cinzel',serif;font-weight:700;color:var(--text-dim)}
 .gm-list .gm-nick{font-weight:600;color:var(--text)}
-.gm-list .gm-lv{text-align:center;width:70px}
-.gm-list .gm-grade{text-align:center;width:90px}
+.gm-list .gm-lv{text-align:center;width:60px}
+.gm-list .gm-grade{text-align:center}
 
 @media(max-width:600px){
   .guild-modal{width:100%;max-width:none;max-height:95vh;border-radius:12px 12px 0 0;margin-top:auto;align-self:flex-end}
   .gm-header{padding:16px 16px 12px}
+  .gm-header h2{font-size:15px}
   .gm-stats{padding:12px 16px}
-  .gm-list tbody td,.gm-list thead th{padding:8px 10px;font-size:12px}
+  .gm-list tbody td,.gm-list thead th{padding:8px 6px;font-size:12px}
+  .gm-list .gm-seq{width:28px}
+  .gm-list .gm-rank{width:36px}
+  .gm-list .gm-lv{width:50px}
 }
 
 /* ── RESPONSIVE: TABLET ── */
@@ -252,8 +256,13 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 @media(max-width:600px){
   .wrap{padding:0 12px 40px}
   header{padding:18px 0 14px;margin-bottom:14px;flex-direction:column;align-items:flex-start;gap:10px}
-  .header-right{width:100%;justify-content:space-between}
+  .header-right{width:100%;flex-wrap:wrap;gap:8px}
+  .header-right .theme-toggle{order:0}
+  .header-right .status-badge{order:1;flex:1;min-width:0}
+  .header-right .btn-admin{order:2;padding:6px 10px;font-size:11px}
   .logo-text h1{font-size:17px}
+  .logo-text span{font-size:10px}
+  .made-by{display:none}
 
   /* 필터: 2열 그리드 */
   .filters-section{padding:12px 14px;margin-bottom:12px;border-radius:8px}
