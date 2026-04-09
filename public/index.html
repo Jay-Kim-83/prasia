@@ -103,6 +103,7 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 .nick-name{font-size:14px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .guild-name{font-size:11px;color:var(--text-dim);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .guild-name::before{content:'⚔ '}
+.guild-name:hover{color:var(--cyan);text-decoration:underline;text-underline-offset:2px}
 
 /* job */
 .job-badge{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:20px;font-size:12px;font-weight:500;border:1px solid transparent;white-space:nowrap}
@@ -147,6 +148,41 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 .sample-banner.hidden,.hidden{display:none!important}
 #toast{position:fixed;bottom:22px;right:22px;background:var(--bg3);border:1px solid var(--border-glow);color:var(--text);padding:11px 16px;border-radius:8px;font-size:13px;z-index:100;opacity:0;transform:translateY(10px);transition:all .25s;box-shadow:0 8px 32px rgba(0,0,0,.5)}
 #toast.show{opacity:1;transform:translateY(0)}
+
+/* ── GUILD MODAL ── */
+.guild-modal-overlay{position:fixed;inset:0;background:rgba(8,12,20,.85);display:none;align-items:center;justify-content:center;z-index:200;backdrop-filter:blur(4px)}
+.guild-modal-overlay.active{display:flex}
+.guild-modal{background:var(--bg2);border:1px solid var(--border-glow);border-radius:16px;width:95%;max-width:560px;max-height:85vh;display:flex;flex-direction:column;box-shadow:0 16px 64px rgba(0,0,0,.6);animation:gm-in .2s ease-out}
+@keyframes gm-in{from{opacity:0;transform:scale(.95) translateY(10px)}to{opacity:1;transform:none}}
+.gm-header{display:flex;align-items:center;justify-content:space-between;padding:20px 22px 16px;border-bottom:1px solid var(--border);flex-shrink:0}
+.gm-header h2{font-family:'Cinzel',serif;font-size:17px;color:var(--gold-light);display:flex;align-items:center;gap:8px}
+.gm-header h2 span{font-size:13px;color:var(--text-dim);font-family:'Noto Sans KR',sans-serif;font-weight:400}
+.gm-close{background:transparent;border:1px solid var(--border);color:var(--text-dim);width:32px;height:32px;border-radius:6px;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.gm-close:hover{border-color:var(--border-glow);color:var(--text)}
+.gm-stats{padding:16px 22px;border-bottom:1px solid var(--border);flex-shrink:0;display:flex;flex-direction:column;gap:10px;font-size:12px;color:var(--text-dim)}
+.gm-stats-row{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.gm-stats-label{font-weight:600;color:var(--cyan);font-size:11px;text-transform:uppercase;letter-spacing:.06em;min-width:50px}
+.gm-stats .rs-item{display:inline-flex;align-items:center;gap:4px}
+.gm-stats .rs-num{font-weight:700;color:var(--text)}
+.gm-stats .rs-grade{padding:1px 6px;border-radius:10px;font-size:11px;font-weight:600}
+.gm-list{overflow-y:auto;flex:1;min-height:0}
+.gm-list table{width:100%;border-collapse:collapse}
+.gm-list thead tr{background:var(--bg3);position:sticky;top:0;z-index:1}
+.gm-list thead th{padding:9px 14px;text-align:left;font-size:11px;font-weight:600;color:var(--text-dim);text-transform:uppercase;letter-spacing:.06em}
+.gm-list tbody tr{border-bottom:1px solid rgba(30,51,88,.4);transition:background .15s}
+.gm-list tbody tr:hover{background:rgba(42,79,138,.1)}
+.gm-list tbody td{padding:10px 14px;font-size:13px}
+.gm-list .gm-rank{text-align:center;width:50px;font-family:'Cinzel',serif;font-weight:700;color:var(--text-dim)}
+.gm-list .gm-nick{font-weight:600;color:var(--text)}
+.gm-list .gm-lv{text-align:center;width:70px}
+.gm-list .gm-grade{text-align:center;width:90px}
+
+@media(max-width:600px){
+  .guild-modal{width:100%;max-width:none;max-height:95vh;border-radius:12px 12px 0 0;margin-top:auto;align-self:flex-end}
+  .gm-header{padding:16px 16px 12px}
+  .gm-stats{padding:12px 16px}
+  .gm-list tbody td,.gm-list thead th{padding:8px 10px;font-size:12px}
+}
 
 /* ── RESPONSIVE: TABLET ── */
 @media(max-width:900px){
@@ -334,6 +370,18 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 <div class="pagination" id="pagination"></div>
 </div>
 <div id="toast"></div>
+
+<!-- 결사 모달 -->
+<div class="guild-modal-overlay" id="guildModal" onclick="if(event.target===this)closeGuildModal()">
+  <div class="guild-modal">
+    <div class="gm-header">
+      <h2 id="gmTitle">⚔ <span></span></h2>
+      <button class="gm-close" onclick="closeGuildModal()">✕</button>
+    </div>
+    <div class="gm-stats" id="gmStats"></div>
+    <div class="gm-list" id="gmList"></div>
+  </div>
+</div>
 
 <script>
 const USER_TOKEN_KEY = 'prasia_user_token';
@@ -646,7 +694,7 @@ function renderRow(c) {
     <td class="td-rank rank-${r<=3?r:''}">${rankHtml}</td>
     <td>
       <div class="nick-name">${esc(c.nickname)}</div>
-      ${c.guild?`<div class="guild-name">${esc(c.guild)}</div>`:''}
+      ${c.guild?`<div class="guild-name" style="cursor:pointer" onclick="event.stopPropagation();openGuildModal('${esc(c.guild).replace(/'/g,"\\&#39;")}')">${esc(c.guild)}</div>`:''}
     </td>
     <td class="td-tags">
       <span class="job-badge job-${esc(c.job)}">${jobIcon} ${esc(c.job)}</span>
@@ -765,6 +813,58 @@ function doLogout() {
 
 function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 function showToast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),3000); }
+
+// ── GUILD MODAL ──────────────────────────────────────────────────
+function openGuildModal(guildName) {
+  const members = allData.filter(c => c.guild === guildName).sort((a,b) => (a.rank||0)-(b.rank||0));
+  if (!members.length) return;
+
+  document.getElementById('gmTitle').innerHTML = `⚔ ${esc(guildName)} <span>${members.length}명</span>`;
+
+  // 통계: 레벨별
+  const levelCounts = {};
+  members.forEach(c => { if (c.level > 0) levelCounts[c.level] = (levelCounts[c.level]||0)+1; });
+  const levelKeys = Object.keys(levelCounts).map(Number).sort((a,b)=>b-a);
+
+  // 통계: 토벌등급별
+  const gCounts = {};
+  members.forEach(c => { const g = gradeNum(c.conquestGrade); if (g > 0) gCounts[g] = (gCounts[g]||0)+1; });
+  const gKeys = Object.keys(gCounts).map(Number).sort((a,b)=>b-a);
+
+  let statsHtml = '<div class="gm-stats-row"><span class="gm-stats-label">레벨</span>';
+  levelKeys.forEach(lv => { statsHtml += `<span class="rs-item">Lv.${lv} <span class="rs-num">${levelCounts[lv]}</span></span>`; });
+  statsHtml += '</div>';
+
+  if (gKeys.length) {
+    statsHtml += '<div class="gm-stats-row"><span class="gm-stats-label">토벌</span>';
+    gKeys.forEach(g => { statsHtml += `<span class="rs-item"><span class="rs-grade ${gradeCls(g)}">${gradeIcon(g)} ${g}</span> <span class="rs-num">${gCounts[g]}</span></span>`; });
+    statsHtml += '</div>';
+  }
+  document.getElementById('gmStats').innerHTML = statsHtml;
+
+  // 리스트
+  let listHtml = '<table><thead><tr><th class="gm-rank">랭킹</th><th>닉네임</th><th class="gm-lv">레벨</th><th class="gm-grade">토벌</th></tr></thead><tbody>';
+  members.forEach(c => {
+    const gv = c.conquestGrade;
+    listHtml += `<tr>
+      <td class="gm-rank">${c.rank}</td>
+      <td class="gm-nick">${esc(c.nickname)}</td>
+      <td class="gm-lv"><span class="level-val">${c.level}</span></td>
+      <td class="gm-grade"><span class="${gradeCls(gv)}">${gradeIcon(gv)} ${gradeDisplay(gv)}</span></td>
+    </tr>`;
+  });
+  listHtml += '</tbody></table>';
+  document.getElementById('gmList').innerHTML = listHtml;
+
+  document.getElementById('guildModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeGuildModal() {
+  document.getElementById('guildModal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeGuildModal(); });
 
 checkLogin();
 </script>
