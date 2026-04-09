@@ -256,10 +256,9 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 @media(max-width:600px){
   .wrap{padding:0 12px 40px}
   header{padding:18px 0 14px;margin-bottom:14px;flex-direction:column;align-items:flex-start;gap:10px}
-  .header-right{width:100%;flex-wrap:wrap;gap:8px}
-  .header-right .theme-toggle{order:0}
-  .header-right .status-badge{order:1;flex:1;min-width:0}
-  .header-right .btn-admin{order:2;padding:6px 10px;font-size:11px}
+  .header-right{width:100%;display:grid;grid-template-columns:auto 1fr auto auto;gap:8px;align-items:center}
+  .header-right .status-badge{grid-column:1/-1;order:10;justify-self:start}
+  .header-right .btn-admin{padding:6px 10px;font-size:11px}
   .logo-text h1{font-size:17px}
   .logo-text span{font-size:10px}
   .made-by{display:none}
@@ -274,29 +273,29 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
   .stats-bar{margin-bottom:8px}
   .realm-stats{padding:10px 12px;font-size:11px;gap:6px 12px;border-radius:8px}
 
-  /* 테이블 → 카드 레이아웃 */
+  /* 테이블 → 카드 레이아웃 (메인 테이블만, 모달 제외) */
   .table-wrap{background:transparent;border:none;border-radius:0;overflow:visible}
-  table,thead,tbody{display:block}
-  thead{display:none}
-  colgroup{display:none}
-  tbody tr{display:grid;grid-template-columns:44px 1fr;grid-template-rows:auto auto;gap:4px 12px;background:var(--bg2);border:1px solid var(--border);border-radius:10px;margin-bottom:10px;padding:14px;align-items:center}
-  tbody tr:hover{background:var(--bg2)}
-  tbody td{padding:0;overflow:visible}
+  .table-wrap table,.table-wrap thead,.table-wrap tbody{display:block}
+  .table-wrap thead{display:none}
+  .table-wrap colgroup{display:none}
+  .table-wrap tbody tr{display:grid;grid-template-columns:44px 1fr;grid-template-rows:auto auto;gap:4px 12px;background:var(--bg2);border:1px solid var(--border);border-radius:10px;margin-bottom:10px;padding:14px;align-items:center}
+  .table-wrap tbody tr:hover{background:var(--bg2)}
+  .table-wrap tbody td{padding:0;overflow:visible}
 
   /* 순위: 왼쪽 전체 행 차지 */
-  tbody td.td-rank{grid-row:1/3;grid-column:1;display:flex;align-items:center;justify-content:center;width:44px;height:44px;background:var(--bg3);border-radius:8px}
+  .table-wrap tbody td.td-rank{grid-row:1/3;grid-column:1;display:flex;align-items:center;justify-content:center;width:44px;height:44px;background:var(--bg3);border-radius:8px}
   .rank-num{font-size:16px}
   .crown{font-size:22px}
 
   /* 닉네임: 오른쪽 1행 */
-  tbody td:nth-child(2){grid-row:1;grid-column:2;display:block}
+  .table-wrap tbody td:nth-child(2){grid-row:1;grid-column:2;display:block}
   .nick-name{font-size:15px;white-space:normal}
 
   /* 합쳐진 태그(직업+레벨+등급): 오른쪽 2행 */
-  tbody td.td-tags{display:flex!important;flex-wrap:wrap;gap:6px;align-items:center;grid-row:2;grid-column:2}
+  .table-wrap tbody td.td-tags{display:flex!important;flex-wrap:wrap;gap:6px;align-items:center;grid-row:2;grid-column:2}
 
   /* 개별 직업/레벨/등급 열: 모바일에서 숨김 */
-  tbody td.td-job-only,tbody td.td-level-only,tbody td.td-grade-only{display:none!important}
+  .table-wrap tbody td.td-job-only,.table-wrap tbody td.td-level-only,.table-wrap tbody td.td-grade-only{display:none!important}
 
   /* 월드/렐름 숨기기 */
   td.col-world,td.col-realm{display:none!important}
