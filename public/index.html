@@ -179,6 +179,7 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 .gm-list tbody tr{border-bottom:1px solid rgba(30,51,88,.4);transition:background .15s}
 .gm-list tbody tr:hover{background:rgba(42,79,138,.1)}
 .gm-list tbody td{padding:10px 14px;font-size:13px}
+.gm-list .gm-seq{text-align:center;width:32px;color:var(--text-faint);font-size:12px}
 .gm-list .gm-rank{text-align:center;width:50px;font-family:'Cinzel',serif;font-weight:700;color:var(--text-dim)}
 .gm-list .gm-nick{font-weight:600;color:var(--text)}
 .gm-list .gm-lv{text-align:center;width:70px}
@@ -662,6 +663,11 @@ function applyFilters() {
     return (a.rank||0)-(b.rank||0);
   });
 
+  // 월드 전체 검색(필터 없음)이면 top 20만
+  if (!world && !realm && !job && !grade && !lvBand && !q) {
+    filtered = filtered.slice(0, 20);
+  }
+
   updateRealmStats(world, realm);
   updateGuildTags();
 
@@ -888,11 +894,12 @@ function openGuildModal(guildName, realm) {
   document.getElementById('gmStats').innerHTML = statsHtml;
 
   // 리스트
-  let listHtml = '<table><thead><tr><th class="gm-rank">랭킹</th><th>닉네임</th><th class="gm-lv">레벨</th><th class="gm-grade">토벌</th></tr></thead><tbody>';
-  members.forEach(c => {
+  let listHtml = '<table><thead><tr><th class="gm-seq">#</th><th class="gm-rank">랭킹</th><th>닉네임</th><th class="gm-lv">레벨</th><th class="gm-grade">토벌</th></tr></thead><tbody>';
+  members.forEach((c, idx) => {
     const gv = c.conquestGrade;
     listHtml += `<tr>
-      <td class="gm-rank">${c.rank}</td>
+      <td class="gm-seq">${idx + 1}</td>
+      <td class="gm-rank">${idx + 1}</td>
       <td class="gm-nick">${esc(c.nickname)}</td>
       <td class="gm-lv"><span class="level-val">${c.level}</span></td>
       <td class="gm-grade"><span class="${gradeCls(gv)}">${gradeIcon(gv)} ${gradeDisplay(gv)}</span></td>
