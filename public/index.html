@@ -331,7 +331,28 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
   .pagination{gap:4px;margin-top:14px}
 
   #toast{bottom:12px;right:12px;left:12px;text-align:center}
+  .support-bar{flex-direction:column;gap:6px;padding:16px}
+  .support-bar .support-msg{font-size:11px}
+  .support-account{font-size:12px}
 }
+
+/* ── SUPPORT FOOTER ── */
+.support-bar{
+  display:flex;align-items:center;justify-content:center;gap:14px;
+  margin-top:24px;padding:14px 20px;
+  background:var(--bg2);border:1px solid var(--border);border-radius:10px;
+  font-size:12px;color:var(--text-dim);text-align:center;
+}
+.support-msg{color:var(--text-faint);font-size:12px}
+.support-msg span{color:var(--gold)}
+.support-account{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--bg3);border:1px solid var(--border);border-radius:6px;
+  padding:5px 12px;font-family:'Courier New',monospace;font-size:13px;color:var(--gold-light);
+  cursor:pointer;transition:all .2s;user-select:all;
+}
+.support-account:hover{border-color:var(--gold);background:rgba(201,162,39,.08)}
+.support-copy{font-size:10px;color:var(--text-faint);font-family:'Noto Sans KR',sans-serif}
 </style>
 </head>
 <body>
@@ -478,6 +499,12 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 </div>
 
 <div class="pagination" id="pagination"></div>
+
+<div class="support-bar">
+  <span class="support-msg">이 랭킹이 도움이 되셨다면... <span>개발자에게 포션 한 병</span> 어떠세요? 🧪</span>
+  <span class="support-account" onclick="copyAccount()" title="클릭하여 복사">카카오뱅크 3333-06-8236156 김수종 <span class="support-copy">복사</span></span>
+</div>
+
 </div>
 <div id="toast"></div>
 
@@ -995,6 +1022,9 @@ function doLogout() {
 }
 
 function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function copyAccount(){
+  navigator.clipboard.writeText('3333068236156').then(()=>showToast('🧪 계좌번호가 복사되었습니다. 감사합니다!'));
+}
 function showToast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),3000); }
 
 // ── GUILD MODAL ──────────────────────────────────────────────────
