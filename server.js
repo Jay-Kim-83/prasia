@@ -187,6 +187,25 @@ app.post('/api/user/login', (req, res) => {
   if (!user || user.password !== password) {
     return res.status(401).json({ success: false, message: '아이디 또는 비밀번호가 틀렸습니다.' });
   }
+  // 만료일 체크
+  if (user.expiresAt) {
+    const now = new Date().toISOString().slice(0, 10);
+    if (now > user.expiresAt) {
+      return res.status(401).json({ success: false, message: '계정이 만료되었습니다. 관리자에게 문의하세요.' });
+    }
+  }
+  // IP 체크
+  if (user.allowedIPs && user.allowedIPs.length > 0) {
+    const clientIP = req.headers['x-forwarded-for']?.split(',')[0]?.trim() || req.socket.remoteAddress || '';
+    const normalizedClient = clientIP.replace(/^::ffff:/, '');
+    const allowed = user.allowedIPs.some(ip => {
+      const normalizedAllowed = ip.replace(/^::ffff:/, '');
+      return normalizedClient === normalizedAllowed;
+    });
+    if (!allowed) {
+      return res.status(401).json({ success: false, message: '허용되지 않은 IP입니다.' });
+    }
+  }
   res.json({ success: true, id: user.id, token: makeToken(user.id), isAdmin: !!user.isAdmin });
 });
 
@@ -214,7 +233,7 @@ app.get('/api/user/check', (req, res) => {
 // ── 사용자 관리 (관리자 전용) ─────────────────────────────────
 app.get('/api/users', (req, res) => {
   const config = loadConfig();
-  res.json(config.users.map(u => ({ id: u.id, isAdmin: !!u.isAdmin })));
+  res.json(config.users.map(u => ({ id: u.id, isAdmin: !!u.isAdmin, expiresAt: u.expiresAt || '', allowedIPs: u.allowedIPs || [] })));
 });
 
 app.post('/api/users', (req, res) => {
@@ -257,6 +276,26 @@ app.post('/api/users/:id/admin', (req, res) => {
   const user = config.users.find(u => u.id === req.params.id);
   if (!user) return res.status(404).json({ success: false, message: '사용자를 찾을 수 없습니다.' });
   user.isAdmin = !!isAdmin;
+  saveConfig(config);
+  res.json({ success: true });
+});
+
+app.post('/api/users/:id/expires', (req, res) => {
+  const { expiresAt } = req.body;
+  const config = loadConfig();
+  const user = config.users.find(u => u.id === req.params.id);
+  if (!user) return res.status(404).json({ success: false, message: '사용자를 찾을 수 없습니다.' });
+  user.expiresAt = expiresAt || '';
+  saveConfig(config);
+  res.json({ success: true });
+});
+
+app.post('/api/users/:id/ips', (req, res) => {
+  const { allowedIPs } = req.body;
+  const config = loadConfig();
+  const user = config.users.find(u => u.id === req.params.id);
+  if (!user) return res.status(404).json({ success: false, message: '사용자를 찾을 수 없습니다.' });
+  user.allowedIPs = Array.isArray(allowedIPs) ? allowedIPs.filter(ip => ip.trim()) : [];
   saveConfig(config);
   res.json({ success: true });
 });

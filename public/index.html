@@ -255,7 +255,6 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 .gm-list tbody tr{border-bottom:1px solid rgba(30,51,88,.4);transition:background .15s}
 .gm-list tbody tr:hover{background:rgba(42,79,138,.1)}
 .gm-list tbody td{padding:10px 14px;font-size:13px}
-.gm-list .gm-seq{text-align:center;width:36px;color:var(--text-faint);font-size:12px}
 .gm-list .gm-rank{text-align:center;width:44px;font-family:'Cinzel',serif;font-weight:700;color:var(--text-dim)}
 .gm-list .gm-nick{font-weight:600;color:var(--text)}
 .gm-list .gm-lv{text-align:center;width:60px}
@@ -267,7 +266,6 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
   .gm-header h2{font-size:15px}
   .gm-stats{padding:12px 16px}
   .gm-list tbody td,.gm-list thead th{padding:8px 6px;font-size:12px}
-  .gm-list .gm-seq{width:28px}
   .gm-list .gm-rank{width:36px}
   .gm-list .gm-lv{width:50px}
 }
@@ -789,7 +787,7 @@ function applyFilters() {
     return (a.rank||0)-(b.rank||0);
   });
 
-  const limitGuilds = !realm && !job && !grade && !lvBand && !q;
+  const limitGuilds = !world;
 
   updateRealmStats(world, realm);
   updateGuildTags(limitGuilds);
@@ -1025,13 +1023,12 @@ function openGuildModal(guildName, realm) {
   document.getElementById('gmStats').innerHTML = statsHtml;
 
   // 리스트
-  let listHtml = '<table><thead><tr><th class="gm-seq">#</th><th class="gm-rank">랭킹</th><th>닉네임</th><th class="gm-lv">레벨</th><th class="gm-grade">토벌</th></tr></thead><tbody>';
+  let listHtml = '<table><thead><tr><th class="gm-rank">랭킹</th><th>닉네임</th><th class="gm-lv">레벨</th><th class="gm-grade">토벌</th></tr></thead><tbody>';
   members.forEach((c, idx) => {
     const gv = c.conquestGrade;
     const bMsg = bubbleMap[(c.guild || '') + '|' + c.nickname];
     const bHtml = bMsg ? `<span class="gm-bubble">💬 ${esc(bMsg)}</span>` : '';
     listHtml += `<tr>
-      <td class="gm-seq">${idx + 1}</td>
       <td class="gm-rank">${idx + 1}</td>
       <td class="gm-nick">${esc(c.nickname)}${bHtml}</td>
       <td class="gm-lv"><span class="level-val">${c.level}</span></td>

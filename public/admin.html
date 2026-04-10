@@ -262,16 +262,6 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
   </div>
 </div>
 
-<!-- 즉시 수집 -->
-<div class="card">
-  <div class="card-title">⚡ 즉시 수집</div>
-  <button class="btn-collect" id="btnCollect" onclick="collectNow()">
-    <div class="spinner" id="spinner"></div>
-    <span id="btnTxt">🚀 지금 수집 시작</span>
-  </button>
-  <div class="log-area" id="logArea"></div>
-</div>
-
 <!-- 표시 설정 -->
 <div class="card">
   <div class="card-title">📊 렐름 통계 표시 설정</div>
@@ -318,6 +308,16 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
 </div>
 
 <!-- 이하 마스터 전용 ──────────────────────────────────── -->
+
+<!-- 즉시 수집 -->
+<div class="card master-only">
+  <div class="card-title">⚡ 즉시 수집</div>
+  <button class="btn-collect" id="btnCollect" onclick="collectNow()">
+    <div class="spinner" id="spinner"></div>
+    <span id="btnTxt">🚀 지금 수집 시작</span>
+  </button>
+  <div class="log-area" id="logArea"></div>
+</div>
 
 <!-- 스케줄 -->
 <div class="card master-only">
@@ -375,9 +375,13 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
 <div class="card master-only">
   <div class="card-title">👥 사용자 관리</div>
   <p style="font-size:12px;color:var(--text-dim);margin-bottom:14px">등록된 사용자만 랭킹 페이지에 접근할 수 있습니다. 사용자가 0명이면 누구나 접근 가능합니다.</p>
-  <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap">
-    <input type="text" class="pw-input" id="newUserId" placeholder="아이디 (2자 이상)" style="width:160px">
-    <input type="password" class="pw-input" id="newUserPw" placeholder="비밀번호 (4자 이상)" style="width:160px">
+  <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;align-items:flex-end">
+    <input type="text" class="pw-input" id="newUserId" placeholder="아이디 (2자 이상)" style="width:140px">
+    <input type="password" class="pw-input" id="newUserPw" placeholder="비밀번호 (4자 이상)" style="width:140px">
+    <div style="display:flex;flex-direction:column;gap:2px">
+      <label style="font-size:10px;color:var(--text-faint)">만료일 (선택)</label>
+      <input type="date" class="pw-input" id="newUserExpires" style="width:140px">
+    </div>
     <button class="btn-primary" style="padding:8px 16px;font-size:12px" onclick="addUser()">+ 추가</button>
   </div>
   <div id="userList" style="display:flex;flex-direction:column;gap:6px"></div>
@@ -930,24 +934,42 @@ async function loadUsers() {
       list.innerHTML = '<div style="font-size:12px;color:var(--text-faint)">등록된 사용자가 없습니다. (모든 사람이 접근 가능)</div>';
       return;
     }
-    list.innerHTML = users.map(u => `
-      <div style="display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:8px 12px;flex-wrap:wrap">
-        <span style="font-size:13px;color:var(--text)">${esc(u.id)}</span>
-        <label style="display:flex;align-items:center;gap:4px;cursor:pointer;font-size:11px;color:${u.isAdmin ? 'var(--gold-light)' : 'var(--text-dim)'}">
-          <input type="checkbox" ${u.isAdmin ? 'checked' : ''} onchange="toggleAdmin('${esc(u.id)}', this.checked)"> 관리자
-        </label>
-        <span style="flex:1"></span>
-        <input type="password" class="pw-input" id="pw_${esc(u.id)}" placeholder="새 비밀번호" style="width:130px;font-size:12px;padding:5px 8px">
-        <button class="btn-sm" onclick="changeUserPw('${esc(u.id)}')" style="font-size:11px;padding:4px 10px">변경</button>
-        <button class="btn-sm danger" onclick="deleteUser('${esc(u.id)}')" style="font-size:11px;padding:4px 10px">삭제</button>
-      </div>
-    `).join('');
+    const today = new Date().toISOString().slice(0,10);
+    list.innerHTML = users.map(u => {
+      const expired = u.expiresAt && u.expiresAt < today;
+      const expLabel = u.expiresAt ? (expired ? `<span style="color:var(--red)">만료됨 (${u.expiresAt})</span>` : `<span style="color:var(--green)">${u.expiresAt}까지</span>`) : '<span style="color:var(--text-faint)">무제한</span>';
+      const ipLabel = u.allowedIPs && u.allowedIPs.length ? `<span style="color:var(--cyan)">${u.allowedIPs.join(', ')}</span>` : '<span style="color:var(--text-faint)">모든 IP</span>';
+      return `
+      <div style="background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:10px 12px;display:flex;flex-direction:column;gap:6px${expired?' ;opacity:.6':''}">
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+          <span style="font-size:13px;font-weight:600;color:var(--text)">${esc(u.id)}</span>
+          <label style="display:flex;align-items:center;gap:4px;cursor:pointer;font-size:11px;color:${u.isAdmin ? 'var(--gold-light)' : 'var(--text-dim)'}">
+            <input type="checkbox" ${u.isAdmin ? 'checked' : ''} onchange="toggleAdmin('${esc(u.id)}', this.checked)"> 관리자
+          </label>
+          <span style="flex:1"></span>
+          <button class="btn-sm danger" onclick="deleteUser('${esc(u.id)}')" style="font-size:11px;padding:4px 10px">삭제</button>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:11px">
+          <span style="color:var(--text-dim)">만료:</span> ${expLabel}
+          <span style="color:var(--text-dim);margin-left:8px">IP:</span> ${ipLabel}
+        </div>
+        <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+          <input type="password" class="pw-input" id="pw_${esc(u.id)}" placeholder="새 비밀번호" style="width:120px;font-size:12px;padding:5px 8px">
+          <button class="btn-sm" onclick="changeUserPw('${esc(u.id)}')" style="font-size:11px;padding:4px 8px">비밀번호 변경</button>
+          <input type="date" class="pw-input" id="exp_${esc(u.id)}" value="${u.expiresAt||''}" style="width:130px;font-size:12px;padding:5px 8px">
+          <button class="btn-sm" onclick="setUserExpiry('${esc(u.id)}')" style="font-size:11px;padding:4px 8px">만료일 설정</button>
+          <input type="text" class="pw-input" id="ip_${esc(u.id)}" value="${(u.allowedIPs||[]).join(', ')}" placeholder="IP (쉼표 구분)" style="width:160px;font-size:12px;padding:5px 8px">
+          <button class="btn-sm" onclick="setUserIPs('${esc(u.id)}')" style="font-size:11px;padding:4px 8px">IP 설정</button>
+        </div>
+      </div>`;
+    }).join('');
   } catch {}
 }
 
 async function addUser() {
   const id = document.getElementById('newUserId').value.trim();
   const pw = document.getElementById('newUserPw').value;
+  const expiresAt = document.getElementById('newUserExpires').value || '';
   if (!id || !pw) return showToast('아이디와 비밀번호를 입력하세요.');
   const res = await fetch('/api/users', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
@@ -955,13 +977,44 @@ async function addUser() {
   });
   const data = await res.json();
   if (data.success) {
+    // 만료일이 있으면 바로 설정
+    if (expiresAt) {
+      await fetch(`/api/users/${encodeURIComponent(id)}/expires`, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ expiresAt })
+      });
+    }
     document.getElementById('newUserId').value = '';
     document.getElementById('newUserPw').value = '';
+    document.getElementById('newUserExpires').value = '';
     showToast('✅ 사용자 추가됨');
     loadUsers();
   } else {
     showToast(data.message || '추가 실패');
   }
+}
+
+async function setUserExpiry(id) {
+  const expiresAt = document.getElementById('exp_' + id)?.value || '';
+  const res = await fetch(`/api/users/${encodeURIComponent(id)}/expires`, {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ expiresAt })
+  });
+  const data = await res.json();
+  if (data.success) { showToast(expiresAt ? `✅ 만료일: ${expiresAt}` : '✅ 만료일 해제'); loadUsers(); }
+  else showToast(data.message || '설정 실패');
+}
+
+async function setUserIPs(id) {
+  const raw = document.getElementById('ip_' + id)?.value || '';
+  const allowedIPs = raw.split(',').map(s => s.trim()).filter(Boolean);
+  const res = await fetch(`/api/users/${encodeURIComponent(id)}/ips`, {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ allowedIPs })
+  });
+  const data = await res.json();
+  if (data.success) { showToast(allowedIPs.length ? `✅ IP ${allowedIPs.length}개 등록` : '✅ IP 제한 해제'); loadUsers(); }
+  else showToast(data.message || '설정 실패');
 }
 
 async function changeUserPw(id) {
