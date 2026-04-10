@@ -233,7 +233,7 @@ app.get('/api/user/check', (req, res) => {
 // ── 사용자 관리 (관리자 전용) ─────────────────────────────────
 app.get('/api/users', (req, res) => {
   const config = loadConfig();
-  res.json(config.users.map(u => ({ id: u.id, isAdmin: !!u.isAdmin, expiresAt: u.expiresAt || '', allowedIPs: u.allowedIPs || [] })));
+  res.json(config.users.map(u => ({ id: u.id, isAdmin: !!u.isAdmin, expiresAt: u.expiresAt || '', allowedIPs: u.allowedIPs || [], memo: u.memo || '' })));
 });
 
 app.post('/api/users', (req, res) => {
@@ -296,6 +296,16 @@ app.post('/api/users/:id/ips', (req, res) => {
   const user = config.users.find(u => u.id === req.params.id);
   if (!user) return res.status(404).json({ success: false, message: '사용자를 찾을 수 없습니다.' });
   user.allowedIPs = Array.isArray(allowedIPs) ? allowedIPs.filter(ip => ip.trim()) : [];
+  saveConfig(config);
+  res.json({ success: true });
+});
+
+app.post('/api/users/:id/memo', (req, res) => {
+  const { memo } = req.body;
+  const config = loadConfig();
+  const user = config.users.find(u => u.id === req.params.id);
+  if (!user) return res.status(404).json({ success: false, message: '사용자를 찾을 수 없습니다.' });
+  user.memo = String(memo || '').slice(0, 200);
   saveConfig(config);
   res.json({ success: true });
 });
