@@ -956,10 +956,8 @@ function updateGuildTags(limitTop) {
   guilds.forEach(g => { g.score = guildScore(g.members); });
   guilds.sort((a,b) => b.score - a.score);
 
-  // 기본: 10명 이상 결사만 top 20
-  if (limitTop) {
-    guilds = guilds.filter(g => g.members.length >= 10).slice(0, 20);
-  }
+  guilds = guilds.filter(g => g.members.length >= 10);
+  if (limitTop) guilds = guilds.slice(0, 20);
 
   if (!guilds.length) { el.classList.add('hidden'); return; }
 
