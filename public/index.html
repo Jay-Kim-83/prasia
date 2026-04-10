@@ -123,7 +123,7 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
 table{width:100%;border-collapse:collapse;table-layout:fixed}
 col.c-rank  {width:60px}
 col.c-nick  {width:auto}   /* flex remaining */
-col.c-tags  {width:0;overflow:hidden;padding:0}  /* hidden on desktop */
+col.c-tags  {width:0}  /* hidden on desktop, shown on mobile */
 col.c-job   {width:130px}
 col.c-level {width:80px}
 col.c-world {width:110px}
@@ -131,7 +131,7 @@ col.c-realm {width:120px}
 col.c-grade {width:120px}
 
 /* 모바일 합쳐진 태그 열: 데스크탑에서 숨김 */
-.td-tags{display:none}
+thead th.td-tags,.td-tags{display:none;padding:0!important;border:0!important;width:0;overflow:hidden}
 .td-tags .level-val{font-size:12px;padding:2px 7px;background:var(--bg3);border:1px solid var(--border);border-radius:4px}
 
 thead tr{background:linear-gradient(90deg,#0d1c35,#0a1628);border-bottom:1px solid var(--border-glow)}
@@ -790,10 +790,10 @@ function applyFilters() {
     return (a.rank||0)-(b.rank||0);
   });
 
-  const limitGuilds = !world;
+  const hasFilter = !!(world || realm || job || grade || lvBand || q);
 
   updateRealmStats(world, realm);
-  updateGuildTags(limitGuilds);
+  updateGuildTags(!world, hasFilter);
 
   currentPage = 1;
   renderTable();
@@ -942,7 +942,7 @@ function guildScore(members) {
   return score;
 }
 
-function updateGuildTags(limitTop) {
+function updateGuildTags(limitTop, hasFilter) {
   const el = document.getElementById('guildTags');
   // 렐름+결사명 복합키로 그룹핑
   const guildMap = {};
@@ -956,12 +956,13 @@ function updateGuildTags(limitTop) {
   guilds.forEach(g => { g.score = guildScore(g.members); });
   guilds.sort((a,b) => b.score - a.score);
 
-  guilds = guilds.filter(g => g.members.length >= 10);
+  // 필터 없을 때만 10명 제한, 필터 적용 시에는 전체 표시
+  if (!hasFilter) guilds = guilds.filter(g => g.members.length >= 10);
   if (limitTop) guilds = guilds.slice(0, 20);
 
   if (!guilds.length) { el.classList.add('hidden'); return; }
 
-  let html = `<span class="gt-label">⚔ 결사${limitTop ? ' top 20' : ''}</span>`;
+  let html = `<span class="gt-label">⚔ 결사</span>`;
   guilds.forEach(g => {
     const realmLabel = g.realm ? ` <span style="opacity:.5;font-size:10px">${esc(g.realm)}</span>` : '';
     html += `<span class="guild-tag" onclick="openGuildModal('${esc(g.guild).replace(/'/g,"\\&#39;")}','${esc(g.realm).replace(/'/g,"\\&#39;")}')">${esc(g.guild)}${realmLabel} <span class="gt-count">${g.members.length}</span></span>`;
