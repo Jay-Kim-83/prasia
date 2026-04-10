@@ -257,6 +257,8 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 .gm-list tbody td{padding:10px 14px;font-size:13px}
 .gm-list .gm-rank{text-align:center;width:44px;font-family:'Cinzel',serif;font-weight:700;color:var(--text-dim)}
 .gm-list .gm-nick{font-weight:600;color:var(--text)}
+.gm-list .gm-job{white-space:nowrap}
+.gm-list .gm-job .job-badge{font-size:11px;padding:1px 6px}
 .gm-list .gm-lv{text-align:center;width:60px}
 .gm-list .gm-grade{text-align:center}
 
@@ -266,8 +268,9 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
   .gm-header h2{font-size:15px}
   .gm-stats{padding:12px 16px}
   .gm-list tbody td,.gm-list thead th{padding:8px 6px;font-size:12px}
-  .gm-list .gm-rank{width:36px}
-  .gm-list .gm-lv{width:50px}
+  .gm-list .gm-rank{width:30px}
+  .gm-list .gm-job .job-badge{font-size:10px;padding:1px 4px}
+  .gm-list .gm-lv{width:44px}
 }
 
 /* ── RESPONSIVE: TABLET ── */
@@ -953,8 +956,10 @@ function updateGuildTags(limitTop) {
   guilds.forEach(g => { g.score = guildScore(g.members); });
   guilds.sort((a,b) => b.score - a.score);
 
-  // 월드 전체 검색이면 결사 top 20만
-  if (limitTop) guilds = guilds.slice(0, 20);
+  // 기본: 10명 이상 결사만 top 20
+  if (limitTop) {
+    guilds = guilds.filter(g => g.members.length >= 10).slice(0, 20);
+  }
 
   if (!guilds.length) { el.classList.add('hidden'); return; }
 
@@ -1023,14 +1028,16 @@ function openGuildModal(guildName, realm) {
   document.getElementById('gmStats').innerHTML = statsHtml;
 
   // 리스트
-  let listHtml = '<table><thead><tr><th class="gm-rank">랭킹</th><th>닉네임</th><th class="gm-lv">레벨</th><th class="gm-grade">토벌</th></tr></thead><tbody>';
+  let listHtml = '<table><thead><tr><th class="gm-rank">랭킹</th><th>닉네임</th><th class="gm-job">직업</th><th class="gm-lv">레벨</th><th class="gm-grade">토벌</th></tr></thead><tbody>';
   members.forEach((c, idx) => {
     const gv = c.conquestGrade;
+    const jobIcon = JOB_ICONS[c.job] || '⚔';
     const bMsg = bubbleMap[(c.guild || '') + '|' + c.nickname];
     const bHtml = bMsg ? `<span class="gm-bubble">💬 ${esc(bMsg)}</span>` : '';
     listHtml += `<tr>
       <td class="gm-rank">${idx + 1}</td>
       <td class="gm-nick">${esc(c.nickname)}${bHtml}</td>
+      <td class="gm-job"><span class="job-badge job-${esc(c.job)}">${jobIcon} ${esc(c.job)}</span></td>
       <td class="gm-lv"><span class="level-val">${c.level}</span></td>
       <td class="gm-grade"><span class="${gradeCls(gv)}">${gradeIcon(gv)} ${gradeDisplay(gv)}</span></td>
     </tr>`;
