@@ -123,7 +123,7 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
 table{width:100%;border-collapse:collapse;table-layout:fixed}
 col.c-rank  {width:60px}
 col.c-nick  {width:auto}   /* flex remaining */
-col.c-tags  {width:0}  /* hidden on desktop, shown on mobile */
+col.c-tags  {visibility:collapse;width:0}  /* hidden on desktop, shown on mobile */
 col.c-job   {width:130px}
 col.c-level {width:80px}
 col.c-world {width:110px}
@@ -131,7 +131,7 @@ col.c-realm {width:120px}
 col.c-grade {width:120px}
 
 /* 모바일 합쳐진 태그 열: 데스크탑에서 숨김 */
-thead th.td-tags,.td-tags{display:none;padding:0!important;border:0!important;width:0;overflow:hidden}
+thead th.td-tags,.td-tags{visibility:collapse;padding:0!important;border:0!important;width:0;overflow:hidden;font-size:0;line-height:0}
 .td-tags .level-val{font-size:12px;padding:2px 7px;background:var(--bg3);border:1px solid var(--border);border-radius:4px}
 
 thead tr{background:linear-gradient(90deg,#0d1c35,#0a1628);border-bottom:1px solid var(--border-glow)}
@@ -318,7 +318,7 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
   .nick-name{font-size:15px;white-space:normal}
 
   /* 합쳐진 태그(직업+레벨+등급): 오른쪽 2행 */
-  .table-wrap tbody td.td-tags{display:flex!important;flex-wrap:wrap;gap:6px;align-items:center;grid-row:2;grid-column:2}
+  .table-wrap tbody td.td-tags{display:flex!important;visibility:visible!important;flex-wrap:wrap;gap:6px;align-items:center;grid-row:2;grid-column:2;width:auto;font-size:12px;line-height:normal;padding:0!important}
 
   /* 개별 직업/레벨/등급 열: 모바일에서 숨김 */
   .table-wrap tbody td.td-job-only,.table-wrap tbody td.td-level-only,.table-wrap tbody td.td-grade-only{display:none!important}
