@@ -540,7 +540,8 @@ async function checkLogin() {
     if (!data.requireLogin || data.loggedIn) {
       overlay.style.display = 'none';
       if (data.isAdmin) document.getElementById('adminLink').style.display = '';
-      startAutoLogout(data.autoLogoutMin ?? 30);
+      // 마스터는 자동 로그아웃 제외
+      if (!data.isMaster) startAutoLogout(data.autoLogoutMin ?? 30);
       init();
     } else {
       overlay.style.display = 'flex';
@@ -1016,7 +1017,7 @@ function startAutoLogout(minutes) {
 function doLogout() {
   localStorage.removeItem(USER_TOKEN_KEY);
   sessionStorage.removeItem(USER_TOKEN_KEY);
-  localStorage.removeItem(ADMIN_TOKEN_KEY);
+  // 관리자 토큰은 건드리지 않음 (별도 로그인 세션)
   userToken = '';
   location.reload();
 }
