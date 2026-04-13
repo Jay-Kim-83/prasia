@@ -382,6 +382,10 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
     </div>
     <button class="btn-primary" style="padding:8px 16px;font-size:12px" onclick="addUser()">+ 추가</button>
   </div>
+  <div style="display:flex;gap:6px;margin-bottom:8px">
+    <button class="btn-sm" onclick="toggleAllUserCards(true)" style="font-size:11px;padding:4px 10px">▼ 모두 펼치기</button>
+    <button class="btn-sm" onclick="toggleAllUserCards(false)" style="font-size:11px;padding:4px 10px">▶ 모두 접기</button>
+  </div>
   <div id="userList" style="display:flex;flex-direction:column;gap:6px"></div>
 </div>
 
@@ -939,35 +943,43 @@ async function loadUsers() {
       return;
     }
     const today = new Date().toISOString().slice(0,10);
+    const savedOpen = JSON.parse(localStorage.getItem('prasia_user_expanded') || '{}');
     list.innerHTML = users.map(u => {
       const expired = u.expiresAt && u.expiresAt < today;
-      const expLabel = u.expiresAt ? (expired ? `<span style="color:var(--red)">만료됨 (${u.expiresAt})</span>` : `<span style="color:var(--green)">${u.expiresAt}까지</span>`) : '<span style="color:var(--text-faint)">무제한</span>';
+      const expLabel = u.expiresAt ? (expired ? `<span style="color:var(--red)">만료 (${u.expiresAt})</span>` : `<span style="color:var(--green)">${u.expiresAt}까지</span>`) : '<span style="color:var(--text-faint)">무제한</span>';
       const ipLabel = u.allowedIPs && u.allowedIPs.length ? `<span style="color:var(--cyan)">${u.allowedIPs.join(', ')}</span>` : '<span style="color:var(--text-faint)">모든 IP</span>';
+      const memoLabel = u.memo ? `<span style="color:var(--text);font-style:italic" title="${esc(u.memo)}">📝 ${esc(u.memo.length > 20 ? u.memo.slice(0,20)+'…' : u.memo)}</span>` : '';
+      const isOpen = !!savedOpen[u.id];
       return `
-      <div style="background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:10px 12px;display:flex;flex-direction:column;gap:6px${expired?' ;opacity:.6':''}">
-        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+      <div class="user-card" data-user-id="${esc(u.id)}" style="background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:10px 12px;display:flex;flex-direction:column;gap:6px${expired?' ;opacity:.6':''}">
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;cursor:pointer" onclick="toggleUserCard('${esc(u.id)}')">
+          <span class="user-toggle" style="font-size:11px;color:var(--text-dim);width:14px;display:inline-block;text-align:center">${isOpen ? '▼' : '▶'}</span>
           <span style="font-size:13px;font-weight:600;color:var(--text)">${esc(u.id)}</span>
-          <label style="display:flex;align-items:center;gap:4px;cursor:pointer;font-size:11px;color:${u.isAdmin ? 'var(--gold-light)' : 'var(--text-dim)'}">
-            <input type="checkbox" ${u.isAdmin ? 'checked' : ''} onchange="toggleAdmin('${esc(u.id)}', this.checked)"> 관리자
-          </label>
+          ${u.isAdmin ? '<span style="font-size:10px;color:var(--gold-light);background:rgba(201,162,39,.12);border:1px solid rgba(201,162,39,.3);border-radius:3px;padding:1px 6px">관리자</span>' : ''}
+          <span style="font-size:11px">${expLabel}</span>
+          ${memoLabel}
           <span style="flex:1"></span>
-          <button class="btn-sm danger" onclick="deleteUser('${esc(u.id)}')" style="font-size:11px;padding:4px 10px">삭제</button>
+          <button class="btn-sm danger" onclick="event.stopPropagation();deleteUser('${esc(u.id)}')" style="font-size:11px;padding:4px 10px">삭제</button>
         </div>
-        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:11px">
-          <span style="color:var(--text-dim)">만료:</span> ${expLabel}
-          <span style="color:var(--text-dim);margin-left:8px">IP:</span> ${ipLabel}
-        </div>
-        <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
-          <input type="password" class="pw-input" id="pw_${esc(u.id)}" placeholder="새 비밀번호" style="width:120px;font-size:12px;padding:5px 8px">
-          <button class="btn-sm" onclick="changeUserPw('${esc(u.id)}')" style="font-size:11px;padding:4px 8px">비밀번호 변경</button>
-          <input type="date" class="pw-input" id="exp_${esc(u.id)}" value="${u.expiresAt||''}" style="width:130px;font-size:12px;padding:5px 8px">
-          <button class="btn-sm" onclick="setUserExpiry('${esc(u.id)}')" style="font-size:11px;padding:4px 8px">만료일 설정</button>
-          <input type="text" class="pw-input" id="ip_${esc(u.id)}" value="${(u.allowedIPs||[]).join(', ')}" placeholder="IP (쉼표 구분)" style="width:160px;font-size:12px;padding:5px 8px">
-          <button class="btn-sm" onclick="setUserIPs('${esc(u.id)}')" style="font-size:11px;padding:4px 8px">IP 설정</button>
-        </div>
-        <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
-          <input type="text" class="pw-input" id="memo_${esc(u.id)}" value="${esc(u.memo||'')}" placeholder="메모" style="flex:1;min-width:160px;font-size:12px;padding:5px 8px">
-          <button class="btn-sm" onclick="setUserMemo('${esc(u.id)}')" style="font-size:11px;padding:4px 8px">메모 저장</button>
+        <div class="user-body" style="display:${isOpen ? 'flex' : 'none'};flex-direction:column;gap:6px;padding-top:6px;border-top:1px solid var(--border)">
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:11px">
+            <label style="display:flex;align-items:center;gap:4px;cursor:pointer;color:${u.isAdmin ? 'var(--gold-light)' : 'var(--text-dim)'}">
+              <input type="checkbox" ${u.isAdmin ? 'checked' : ''} onchange="toggleAdmin('${esc(u.id)}', this.checked)"> 관리자 권한
+            </label>
+            <span style="color:var(--text-dim);margin-left:8px">IP:</span> ${ipLabel}
+          </div>
+          <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+            <input type="password" class="pw-input" id="pw_${esc(u.id)}" placeholder="새 비밀번호" style="width:120px;font-size:12px;padding:5px 8px">
+            <button class="btn-sm" onclick="changeUserPw('${esc(u.id)}')" style="font-size:11px;padding:4px 8px">비밀번호 변경</button>
+            <input type="date" class="pw-input" id="exp_${esc(u.id)}" value="${u.expiresAt||''}" style="width:130px;font-size:12px;padding:5px 8px">
+            <button class="btn-sm" onclick="setUserExpiry('${esc(u.id)}')" style="font-size:11px;padding:4px 8px">만료일 설정</button>
+            <input type="text" class="pw-input" id="ip_${esc(u.id)}" value="${(u.allowedIPs||[]).join(', ')}" placeholder="IP (쉼표 구분)" style="width:160px;font-size:12px;padding:5px 8px">
+            <button class="btn-sm" onclick="setUserIPs('${esc(u.id)}')" style="font-size:11px;padding:4px 8px">IP 설정</button>
+          </div>
+          <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+            <input type="text" class="pw-input" id="memo_${esc(u.id)}" value="${esc(u.memo||'')}" placeholder="메모" style="flex:1;min-width:160px;font-size:12px;padding:5px 8px">
+            <button class="btn-sm" onclick="setUserMemo('${esc(u.id)}')" style="font-size:11px;padding:4px 8px">메모 저장</button>
+          </div>
         </div>
       </div>`;
     }).join('');
@@ -1023,6 +1035,34 @@ async function setUserIPs(id) {
   const data = await res.json();
   if (data.success) { showToast(allowedIPs.length ? `✅ IP ${allowedIPs.length}개 등록` : '✅ IP 제한 해제'); loadUsers(); }
   else showToast(data.message || '설정 실패');
+}
+
+function toggleUserCard(id) {
+  const card = document.querySelector(`.user-card[data-user-id="${CSS.escape(id)}"]`);
+  if (!card) return;
+  const body = card.querySelector('.user-body');
+  const toggle = card.querySelector('.user-toggle');
+  const open = body.style.display === 'none';
+  body.style.display = open ? 'flex' : 'none';
+  toggle.textContent = open ? '▼' : '▶';
+  const saved = JSON.parse(localStorage.getItem('prasia_user_expanded') || '{}');
+  if (open) saved[id] = true; else delete saved[id];
+  localStorage.setItem('prasia_user_expanded', JSON.stringify(saved));
+}
+
+function toggleAllUserCards(expand) {
+  document.querySelectorAll('.user-card').forEach(card => {
+    const body = card.querySelector('.user-body');
+    const toggle = card.querySelector('.user-toggle');
+    if (!body || !toggle) return;
+    body.style.display = expand ? 'flex' : 'none';
+    toggle.textContent = expand ? '▼' : '▶';
+  });
+  const saved = {};
+  if (expand) {
+    document.querySelectorAll('.user-card').forEach(card => { saved[card.dataset.userId] = true; });
+  }
+  localStorage.setItem('prasia_user_expanded', JSON.stringify(saved));
 }
 
 async function setUserMemo(id) {
