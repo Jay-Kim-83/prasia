@@ -164,6 +164,9 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
   .sched-card{min-width:100%;padding:14px;display:flex;align-items:center;gap:12px}
   .sched-card .si{font-size:22px;margin-bottom:0}
   .interval-row{flex-direction:column;align-items:flex-start;gap:8px}
+  .interval-row.keep-row{flex-direction:row;flex-wrap:wrap;align-items:center;gap:6px}
+  .interval-row.keep-row>label:first-child{flex-basis:100%}
+  .interval-row.keep-row .interval-input{width:auto;flex:0 1 auto;min-width:60px}
   .interval-input{font-size:16px;height:40px;width:100%}
   .btn-row{flex-direction:column}
   .btn-primary,.btn-danger{width:100%;text-align:center;padding:12px}
@@ -272,7 +275,7 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
     </label>
     <span style="font-size:12px;color:var(--text-dim)">해제 시 누구나 랭킹 열람 가능</span>
   </div>
-  <div class="interval-row master-only">
+  <div class="interval-row keep-row master-only">
     <label>자동 로그아웃:</label>
     <input type="number" class="interval-input" id="autoLogoutHour" min="0" max="24" value="0" style="width:60px">
     <span style="font-size:13px;color:var(--text-dim)">시간</span>
@@ -280,15 +283,12 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
     <span style="font-size:13px;color:var(--text-dim)">분</span>
     <span style="font-size:12px;color:var(--text-dim)">(0시간 0분 = 사용 안함)</span>
   </div>
-  <div class="interval-row">
-    <label>레벨 최소값:</label>
-    <input type="number" class="interval-input" id="minLevel" min="0" max="100" value="0" style="width:80px">
-    <span style="font-size:12px;color:var(--text-dim)">이상만 표시 (0 = 전체)</span>
-  </div>
-  <div class="interval-row">
-    <label>토벌등급 최소값:</label>
-    <input type="number" class="interval-input" id="minConquestGrade" min="0" max="30" value="0" style="width:80px">
-    <span style="font-size:12px;color:var(--text-dim)">이상만 표시 (0 = 전체)</span>
+  <div class="interval-row keep-row">
+    <label>최소값:</label>
+    <input type="number" class="interval-input" id="minLevel" min="0" max="100" value="0" style="width:70px" placeholder="레벨">
+    <span style="font-size:12px;color:var(--text-dim)">레벨</span>
+    <input type="number" class="interval-input" id="minConquestGrade" min="0" max="30" value="0" style="width:70px" placeholder="토벌">
+    <span style="font-size:12px;color:var(--text-dim)">토벌등급 (0 = 전체)</span>
   </div>
   <button class="btn-primary" style="margin-top:10px" onclick="saveDisplay()">💾 표시 설정 저장</button>
 </div>
@@ -335,7 +335,7 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
   </div>
 
   <!-- 매일 지정 시각 옵션 -->
-  <div class="interval-row" id="dailyRow" style="display:none">
+  <div class="interval-row keep-row" id="dailyRow" style="display:none">
     <label>수집 시각:</label>
     <select class="interval-input" id="dailyHour" style="width:80px"></select>
     <span style="font-size:13px;color:var(--text-dim)">시</span>
@@ -345,22 +345,20 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
 
   <!-- 반복 수집 옵션 -->
   <div id="hourlyRow" style="display:none">
-    <div class="interval-row">
+    <div class="interval-row keep-row">
       <label>시작 시각:</label>
       <select class="interval-input" id="startHour" style="width:80px"></select>
       <span style="font-size:13px;color:var(--text-dim)">시</span>
       <select class="interval-input" id="startMinute" style="width:80px"></select>
       <span style="font-size:13px;color:var(--text-dim)">분 부터</span>
     </div>
-    <div class="interval-row">
-      <label>반복 단위:</label>
+    <div class="interval-row keep-row">
+      <label>반복:</label>
       <select class="interval-input" id="intervalUnit" style="width:90px" onchange="onUnitChange()">
         <option value="hour">시간</option>
         <option value="minute">분</option>
       </select>
-    </div>
-    <div class="interval-row">
-      <label>수집 간격:</label>
+      <span style="font-size:13px;color:var(--text-dim)">단위</span>
       <select class="interval-input" id="intervalVal" style="width:80px"></select>
       <span style="font-size:13px;color:var(--text-dim)" id="intervalLabel">시간마다</span>
     </div>
