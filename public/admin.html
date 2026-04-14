@@ -631,19 +631,24 @@ function initSidebar() {
       }
     });
   });
-  // 스크롤 위치에 따라 활성 카드 하이라이트
+  // 스크롤 위치에 따라 활성 카드 하이라이트 (화면 상단 기준 가장 위에 보이는 카드)
   const cards = [...document.querySelectorAll('.card[id]')];
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.id;
-        document.querySelectorAll('.sidebar-item').forEach(b => {
-          b.classList.toggle('active', b.dataset.target === id);
-        });
-      }
+  const OFFSET = 80; // 뷰포트 상단 오프셋
+  function updateActive() {
+    let active = cards[0];
+    for (const c of cards) {
+      const rect = c.getBoundingClientRect();
+      if (rect.top - OFFSET <= 0) active = c;
+      else break;
+    }
+    if (!active) return;
+    document.querySelectorAll('.sidebar-item').forEach(b => {
+      b.classList.toggle('active', b.dataset.target === active.id);
     });
-  }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
-  cards.forEach(c => observer.observe(c));
+  }
+  window.addEventListener('scroll', updateActive, { passive: true });
+  window.addEventListener('resize', updateActive);
+  updateActive();
 }
 
 async function loadStatus() {
