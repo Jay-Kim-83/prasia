@@ -379,20 +379,24 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
   <!-- 매일 지정 시각 옵션 -->
   <div class="interval-row keep-row" id="dailyRow" style="display:none">
     <label>수집 시각:</label>
-    <select class="interval-input" id="dailyHour" style="width:80px"></select>
+    <select class="interval-input" id="dailyHour" style="width:70px"></select>
     <span style="font-size:13px;color:var(--text-dim)">시</span>
-    <select class="interval-input" id="dailyMinute" style="width:80px"></select>
+    <select class="interval-input" id="dailyMinute" style="width:70px"></select>
     <span style="font-size:13px;color:var(--text-dim)">분</span>
+    <select class="interval-input" id="dailySecond" style="width:70px"></select>
+    <span style="font-size:13px;color:var(--text-dim)">초</span>
   </div>
 
   <!-- 반복 수집 옵션 -->
   <div id="hourlyRow" style="display:none">
     <div class="interval-row keep-row">
       <label>시작 시각:</label>
-      <select class="interval-input" id="startHour" style="width:80px"></select>
+      <select class="interval-input" id="startHour" style="width:70px"></select>
       <span style="font-size:13px;color:var(--text-dim)">시</span>
-      <select class="interval-input" id="startMinute" style="width:80px"></select>
-      <span style="font-size:13px;color:var(--text-dim)">분 부터</span>
+      <select class="interval-input" id="startMinute" style="width:70px"></select>
+      <span style="font-size:13px;color:var(--text-dim)">분</span>
+      <select class="interval-input" id="startSecond" style="width:70px"></select>
+      <span style="font-size:13px;color:var(--text-dim)">초 부터</span>
     </div>
     <div class="interval-row keep-row">
       <label>반복:</label>
@@ -667,9 +671,9 @@ async function loadStatus() {
     const sch = s.schedule || {};
     let schedLabel = '-';
     if (sch.type === 'none') schedLabel = '비활성';
-    else if (sch.type === 'daily') schedLabel = `매일 ${String(sch.hour||0).padStart(2,'0')}:${String(sch.minute||0).padStart(2,'0')}`;
+    else if (sch.type === 'daily') schedLabel = `매일 ${String(sch.hour||0).padStart(2,'0')}:${String(sch.minute||0).padStart(2,'0')}:${String(sch.second||0).padStart(2,'0')}`;
     else if (sch.type === 'hourly') {
-      const start = `${String(sch.startHour||0).padStart(2,'0')}:${String(sch.startMinute||0).padStart(2,'0')}`;
+      const start = `${String(sch.startHour||0).padStart(2,'0')}:${String(sch.startMinute||0).padStart(2,'0')}:${String(sch.startSecond||0).padStart(2,'0')}`;
       schedLabel = sch.unit === 'minute' ? `${start}부터 ${sch.interval}분마다` : `${start}부터 ${sch.interval}시간마다`;
     }
     document.getElementById('statSchedule').textContent = schedLabel;
@@ -805,6 +809,15 @@ function buildTimeSelects() {
       sel.appendChild(o);
     }
   });
+  // 초: 10초 간격
+  ['dailySecond','startSecond'].forEach(id => {
+    const sel = document.getElementById(id);
+    for (let s=0; s<60; s+=10) {
+      const o = document.createElement('option');
+      o.value = s; o.textContent = String(s).padStart(2,'0');
+      sel.appendChild(o);
+    }
+  });
   // 간격 초기: 시간
   buildIntervalOptions('hour');
 }
@@ -839,8 +852,10 @@ async function loadScheduleUI() {
   selectSchedByType(res.type || 'none');
   if (res.hour != null)  document.getElementById('dailyHour').value = res.hour;
   if (res.minute != null) document.getElementById('dailyMinute').value = res.minute;
+  if (res.second != null) document.getElementById('dailySecond').value = res.second;
   if (res.startHour != null) document.getElementById('startHour').value = res.startHour;
   if (res.startMinute != null) document.getElementById('startMinute').value = res.startMinute;
+  if (res.startSecond != null) document.getElementById('startSecond').value = res.startSecond;
   if (res.unit) {
     document.getElementById('intervalUnit').value = res.unit;
     buildIntervalOptions(res.unit);
@@ -868,9 +883,11 @@ async function saveSchedule() {
   if (type === 'daily') {
     body.hour = parseInt(document.getElementById('dailyHour').value) || 0;
     body.minute = parseInt(document.getElementById('dailyMinute').value) || 0;
+    body.second = parseInt(document.getElementById('dailySecond').value) || 0;
   } else if (type === 'hourly') {
     body.startHour = parseInt(document.getElementById('startHour').value) || 0;
     body.startMinute = parseInt(document.getElementById('startMinute').value) || 0;
+    body.startSecond = parseInt(document.getElementById('startSecond').value) || 0;
     body.unit = document.getElementById('intervalUnit').value;
     body.interval = parseInt(document.getElementById('intervalVal').value) || 6;
   }

@@ -71,11 +71,14 @@ function startScheduler(config) {
   let expr;
   const hour = parseInt(config.hour) || 0;
   const minute = parseInt(config.minute) || 0;
+  const second = parseInt(config.second) || 0;
 
   if (config.type === 'daily') {
-    expr = `${minute} ${hour} * * *`;
+    // 6-field cron: second minute hour dom month dow
+    expr = `${second} ${minute} ${hour} * * *`;
   } else if (config.unit === 'minute') {
     const startM = parseInt(config.startMinute) || 0;
+    const startS = parseInt(config.startSecond) || 0;
     const intervalMin = Math.max(10, parseInt(config.interval) || 10);
     // 분 단위 반복: startMinute부터 interval분 간격 (명시적 목록)
     const mins = [];
@@ -84,9 +87,11 @@ function startScheduler(config) {
       mins.push(m);
     }
     mins.sort((a, b) => a - b);
-    expr = `${mins.join(',')} * * * *`;
+    expr = `${startS} ${mins.join(',')} * * * *`;
   } else {
     const startH = parseInt(config.startHour) || 0;
+    const startM = parseInt(config.startMinute) || 0;
+    const startS = parseInt(config.startSecond) || 0;
     const intervalH = Math.max(1, parseInt(config.interval) || 6);
     // 시간 단위 반복: startHour부터 interval시간 간격 (명시적 목록)
     const hrs = [];
@@ -95,7 +100,7 @@ function startScheduler(config) {
       hrs.push(h);
     }
     hrs.sort((a, b) => a - b);
-    expr = `0 ${hrs.join(',')} * * *`;
+    expr = `${startS} ${startM} ${hrs.join(',')} * * *`;
   }
 
   activeJob = cron.schedule(expr, async () => {
@@ -406,12 +411,12 @@ app.get('/api/status', (req, res) => {
 app.get('/api/schedule', (req, res) => res.json(loadSchedule()));
 
 app.post('/api/schedule', (req, res) => {
-  const { type, interval, isRunning, hour, minute, unit, startHour, startMinute } = req.body;
+  const { type, interval, isRunning, hour, minute, second, unit, startHour, startMinute, startSecond } = req.body;
   const s = {
     type, interval: parseInt(interval) || 6, isRunning: !!isRunning,
-    hour: parseInt(hour) || 0, minute: parseInt(minute) || 0,
+    hour: parseInt(hour) || 0, minute: parseInt(minute) || 0, second: parseInt(second) || 0,
     unit: unit || 'hour',
-    startHour: parseInt(startHour) || 0, startMinute: parseInt(startMinute) || 0,
+    startHour: parseInt(startHour) || 0, startMinute: parseInt(startMinute) || 0, startSecond: parseInt(startSecond) || 0,
   };
   saveSchedule(s);
   startScheduler(s);
