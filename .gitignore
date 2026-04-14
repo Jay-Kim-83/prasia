@@ -3,3 +3,17 @@ node_modules/
 data/rankings.json
 data/schedule.json
 data/config.json
+data/meta.json
+
+# Local environment
+.claude/
+.tmp.driveupload/
+.tmp.drivedownload/
+
+# Local docs/workspace
+CLAUDE.md
+Prasia.code-workspace
+
+# Local assets (not used in deployment)
+public/War of Prasia QR Code.png
+public/favicon.png
