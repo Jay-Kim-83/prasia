@@ -436,10 +436,14 @@ app.put('/api/bubbles/:index', (req, res) => {
 app.post('/api/my-guild', (req, res) => {
   const token = req.headers['x-user-token'] || req.query.token;
   if (!verifyAdminToken(token)) return res.status(401).json({ success: false, message: '권한이 없습니다.' });
-  const { guild, realm } = req.body || {};
+  const { guild, realm, autoFilter } = req.body || {};
   const config = loadConfig();
   if (!guild) config.myGuild = null;
-  else config.myGuild = { guild: String(guild).trim(), realm: String(realm || '').trim() };
+  else config.myGuild = {
+    guild: String(guild).trim(),
+    realm: String(realm || '').trim(),
+    autoFilter: !!autoFilter,
+  };
   saveConfig(config);
   res.json({ success: true, myGuild: config.myGuild });
 });

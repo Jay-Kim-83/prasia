@@ -347,6 +347,9 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
     <button class="btn-primary" style="padding:8px 16px;font-size:12px;height:34px" onclick="saveMyGuild()">저장</button>
     <button class="btn-sm danger" style="font-size:12px;padding:8px 14px;height:34px" onclick="clearMyGuild()">해제</button>
   </div>
+  <label style="display:inline-flex;align-items:center;gap:6px;margin-bottom:10px;cursor:pointer;font-size:12px;color:var(--cyan)">
+    <input type="checkbox" id="myGuildAutoFilter"> 메인 페이지 로드 시 월드·렐름 자동 필터
+  </label>
   <div id="myGuildList" style="max-height:320px;overflow-y:auto;border:1px solid var(--border);border-radius:6px;padding:6px;display:flex;flex-direction:column;gap:4px;margin-bottom:12px"></div>
   <div id="myGuildCurrent" style="font-size:13px;color:var(--text-dim)"></div>
 </div>
@@ -1327,6 +1330,7 @@ async function loadMyGuild() {
 
     const current = disp.myGuild;
     myGuildSelectedKey = current ? `${current.realm||''}\t${current.guild}` : '';
+    document.getElementById('myGuildAutoFilter').checked = !!(current && current.autoFilter);
 
     filterMyGuildOptions();
 
@@ -1379,7 +1383,7 @@ async function saveMyGuild() {
   let body = {};
   if (myGuildSelectedKey) {
     const [realm, guild] = myGuildSelectedKey.split('\t');
-    body = { guild, realm };
+    body = { guild, realm, autoFilter: document.getElementById('myGuildAutoFilter').checked };
   }
   const res = await adminFetch('/api/my-guild', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },

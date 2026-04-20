@@ -175,6 +175,11 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 .realm-badge{background:rgba(42,79,138,.15);border:1px solid var(--border-glow);color:#93c5fd}
 /* 동적 월드 컬러는 JS에서 style로 적용 */
 
+/* 클릭 가능한 필터 셀 */
+.clk-filter{cursor:pointer;transition:filter .15s,transform .15s}
+.clk-filter:hover{filter:brightness(1.25)}
+.clk-filter:active{transform:scale(.96)}
+
 /* conquest grade */
 .cq{display:inline-flex;align-items:center;gap:4px;padding:2px 9px;border-radius:20px;font-size:12px;font-weight:600;white-space:nowrap}
 .cq-신화{background:rgba(255,100,30,.15);border:1px solid rgba(255,100,30,.5);color:#ff9966}
@@ -707,6 +712,7 @@ async function init() {
 
     buildMaps();
     buildFilters();
+    applyMyGuildAutoFilter();
     applyFilters();
   } catch(e) {
     document.getElementById('statusText').textContent = '서버 연결 실패';
@@ -755,6 +761,13 @@ function buildFilters() {
     document.getElementById(id).addEventListener('change', applyFilters)
   );
   document.getElementById('fSearch').addEventListener('input', applyFilters);
+
+  document.getElementById('tableBody').addEventListener('click', e => {
+    const el = e.target.closest('.clk-filter');
+    if (!el) return;
+    e.stopPropagation();
+    filterBy(el.dataset.filter, el.dataset.value, el.dataset.world);
+  });
 }
 
 function buildLevelSelect() {
@@ -792,14 +805,11 @@ function naturalSort(a, b) {
 }
 
 // ── WORLD → REALM CASCADE ────────────────────────────────────────
-function onWorldChange() {
-  const world = document.getElementById('fWorld').value;
-  const rs    = document.getElementById('fRealm');
+function populateRealmOptions(world) {
+  const rs = document.getElementById('fRealm');
   rs.innerHTML = '<option value="">전체</option>';
-
   if (world && worldRealmMap[world]) {
-    const realms = [...worldRealmMap[world]].sort(naturalSort);
-    realms.forEach(r => {
+    [...worldRealmMap[world]].sort(naturalSort).forEach(r => {
       const o = document.createElement('option');
       o.value = r; o.textContent = r;
       rs.appendChild(o);
@@ -808,7 +818,47 @@ function onWorldChange() {
   } else {
     rs.disabled = true;
   }
+}
+
+function onWorldChange() {
+  populateRealmOptions(document.getElementById('fWorld').value);
   applyFilters();
+}
+
+function applyMyGuildAutoFilter() {
+  const mg = displayConfig && displayConfig.myGuild;
+  if (!mg || !mg.autoFilter || !mg.realm) return;
+  const sample = allData.find(c => c.realm === mg.realm && c.world);
+  if (!sample) return;
+  document.getElementById('fWorld').value = sample.world;
+  populateRealmOptions(sample.world);
+  document.getElementById('fRealm').value = mg.realm;
+}
+
+function filterBy(type, value, extra) {
+  if (type === 'world') {
+    document.getElementById('fWorld').value = value;
+    populateRealmOptions(value);
+  } else if (type === 'realm') {
+    document.getElementById('fWorld').value = extra || '';
+    populateRealmOptions(extra || '');
+    document.getElementById('fRealm').value = value;
+  } else if (type === 'job') {
+    document.getElementById('fJob').value = value;
+  } else if (type === 'grade') {
+    document.getElementById('fGrade').value = String(value);
+  } else if (type === 'level') {
+    const sel = document.getElementById('fLevel');
+    const lv  = Number(value);
+    const opt = [...sel.options].find(o => {
+      if (!o.value) return false;
+      const [lo, hi] = o.value.split(':').map(Number);
+      return lv >= lo && lv <= hi;
+    });
+    if (opt) sel.value = opt.value;
+  }
+  applyFilters();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // ── APPLY FILTERS & SORT ─────────────────────────────────────────
@@ -876,6 +926,7 @@ function renderRow(c) {
   const rankHtml = crown ? `<span class="crown">${crown}</span>` : `<span class="rank-num">${r}</span>`;
   const jobIcon  = JOB_ICONS[c.job] || '⚔';
   const gv = c.conquestGrade;
+  const gn = gradeNum(gv);
   const gd = gradeDisplay(gv);
   const gi = gradeIcon(gv);
   const gc = gradeCls(gv);
@@ -883,6 +934,11 @@ function renderRow(c) {
   const bubbleIcon = bubbleMsg ? `<span class="bubble-icon" onclick="event.stopPropagation();toggleBubble(this)">💬</span>` : '';
   const bubbleHtml = bubbleMsg ? `<div class="bubble-tooltip">${esc(bubbleMsg)}</div>` : '';
   const trCls = bubbleMsg ? ' class="bubble-row"' : '';
+  const jobAttr   = c.job   ? ` class="clk-filter job-badge job-${esc(c.job)}" data-filter="job" data-value="${esc(c.job)}"` : ` class="job-badge"`;
+  const levelAttr = c.level ? ` class="clk-filter level-val" data-filter="level" data-value="${c.level}"` : ` class="level-val"`;
+  const worldAttr = c.world ? ` class="clk-filter world-badge" style="${worldStyle(c.world)}" data-filter="world" data-value="${esc(c.world)}"` : ` class="world-badge" style="${worldStyle(c.world)}"`;
+  const realmAttr = (c.world && c.realm) ? ` class="clk-filter realm-badge" style="${realmStyle(c.world, c.realm)}" data-filter="realm" data-value="${esc(c.realm)}" data-world="${esc(c.world)}"` : ` class="realm-badge" style="${realmStyle(c.world, c.realm)}"`;
+  const gradeAttr = gn > 0 ? ` class="clk-filter ${gc}" data-filter="grade" data-value="${gn}"` : ` class="${gc}"`;
   return `<tr${trCls}>
     <td class="td-rank rank-${r<=3?r:''}">${rankHtml}</td>
     <td>
@@ -891,15 +947,15 @@ function renderRow(c) {
       ${bubbleHtml}
     </td>
     <td class="td-tags">
-      <span class="job-badge job-${esc(c.job)}">${jobIcon} ${esc(c.job)}</span>
-      <span class="level-val">Lv.${c.level}</span>
-      <span class="${gc}">${gi} ${gd}</span>
+      <span${jobAttr}>${jobIcon} ${esc(c.job)}</span>
+      <span${levelAttr}>Lv.${c.level}</span>
+      <span${gradeAttr}>${gi} ${gd}</span>
     </td>
-    <td class="td-job-only"><span class="job-badge job-${esc(c.job)}">${jobIcon} ${esc(c.job)}</span></td>
-    <td class="td-level-only"><span class="level-val">${c.level}</span></td>
-    <td class="col-world"><span class="world-badge" style="${worldStyle(c.world)}">${esc(c.world)}</span></td>
-    <td class="col-realm"><span class="realm-badge" style="${realmStyle(c.world, c.realm)}">${esc(c.realm||'-')}</span></td>
-    <td class="td-grade-only"><span class="${gc}">${gi} ${gd}</span></td>
+    <td class="td-job-only"><span${jobAttr}>${jobIcon} ${esc(c.job)}</span></td>
+    <td class="td-level-only"><span${levelAttr}>${c.level}</span></td>
+    <td class="col-world"><span${worldAttr}>${esc(c.world)}</span></td>
+    <td class="col-realm"><span${realmAttr}>${esc(c.realm||'-')}</span></td>
+    <td class="td-grade-only"><span${gradeAttr}>${gi} ${gd}</span></td>
   </tr>`;
 }
 
