@@ -255,12 +255,12 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
 <nav class="sidebar" id="sidebar">
   <button class="sidebar-item" data-target="card-status"><span class="sidebar-icon">📊</span><span class="sidebar-label">현황</span></button>
   <button class="sidebar-item" data-target="card-display"><span class="sidebar-icon">📊</span><span class="sidebar-label">표시 설정</span></button>
+  <button class="sidebar-item" data-target="card-myguild"><span class="sidebar-icon">⭐</span><span class="sidebar-label">내 결사</span></button>
   <button class="sidebar-item" data-target="card-worlds"><span class="sidebar-icon">🌍</span><span class="sidebar-label">수집 월드</span></button>
   <button class="sidebar-item master-nav" data-target="card-collect"><span class="sidebar-icon">⚡</span><span class="sidebar-label">즉시 수집</span></button>
   <button class="sidebar-item master-nav" data-target="card-schedule"><span class="sidebar-icon">🕐</span><span class="sidebar-label">스케줄</span></button>
   <button class="sidebar-item master-nav" data-target="card-users"><span class="sidebar-icon">👥</span><span class="sidebar-label">사용자</span></button>
   <button class="sidebar-item master-nav" data-target="card-bubbles"><span class="sidebar-icon">💬</span><span class="sidebar-label">말풍선</span></button>
-  <button class="sidebar-item master-nav" data-target="card-myguild"><span class="sidebar-icon">⭐</span><span class="sidebar-label">내 결사</span></button>
   <button class="sidebar-item master-nav" data-target="card-password"><span class="sidebar-icon">🔑</span><span class="sidebar-label">비밀번호</span></button>
   <button class="sidebar-item master-nav" data-target="card-sync"><span class="sidebar-icon">☁</span><span class="sidebar-label">동기화</span></button>
   <button class="sidebar-item master-nav" data-target="card-taskscheduler"><span class="sidebar-icon">🪟</span><span class="sidebar-label">작업스케줄러</span></button>
@@ -334,6 +334,19 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
     <span style="font-size:12px;color:var(--text-dim)">토벌등급 (0 = 전체)</span>
   </div>
   <button class="btn-primary" style="margin-top:10px" onclick="saveDisplay()">💾 표시 설정 저장</button>
+</div>
+
+<!-- 내 결사 지정 -->
+<div class="card" id="card-myguild">
+  <div class="card-title">⭐ 내 결사 지정</div>
+  <p style="font-size:12px;color:var(--text-dim);margin-bottom:14px">수집된 결사 중 하나를 지정하면, 결사 비교 선택 목록 최상단에 고정됩니다.</p>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px">
+    <input type="text" class="pw-input" id="myGuildSearch" placeholder="🔍 결사명 / 렐름 검색..." style="flex:1;min-width:200px;height:34px" oninput="filterMyGuildOptions()">
+    <button class="btn-primary" style="padding:8px 16px;font-size:12px;height:34px" onclick="saveMyGuild()">저장</button>
+    <button class="btn-sm danger" style="font-size:12px;padding:8px 14px;height:34px" onclick="clearMyGuild()">해제</button>
+  </div>
+  <div id="myGuildList" style="max-height:320px;overflow-y:auto;border:1px solid var(--border);border-radius:6px;padding:6px;display:flex;flex-direction:column;gap:4px;margin-bottom:12px"></div>
+  <div id="myGuildCurrent" style="font-size:13px;color:var(--text-dim)"></div>
 </div>
 
 <!-- 수집 월드 설정 -->
@@ -456,19 +469,6 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
     <button class="btn-primary" style="padding:8px 16px;font-size:12px;height:34px" onclick="addBubble()">+ 추가</button>
   </div>
   <div id="bubbleList" style="display:flex;flex-direction:column;gap:6px"></div>
-</div>
-
-<!-- 내 결사 지정 -->
-<div class="card master-only" id="card-myguild">
-  <div class="card-title">⭐ 내 결사 지정</div>
-  <p style="font-size:12px;color:var(--text-dim);margin-bottom:14px">수집된 결사 중 하나를 지정하면, 결사 비교 선택 목록 최상단에 고정됩니다.</p>
-  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px">
-    <input type="text" class="pw-input" id="myGuildSearch" placeholder="🔍 결사명 / 렐름 검색..." style="flex:1;min-width:200px;height:34px" oninput="filterMyGuildOptions()">
-    <button class="btn-primary" style="padding:8px 16px;font-size:12px;height:34px" onclick="saveMyGuild()">저장</button>
-    <button class="btn-sm danger" style="font-size:12px;padding:8px 14px;height:34px" onclick="clearMyGuild()">해제</button>
-  </div>
-  <div id="myGuildList" style="max-height:320px;overflow-y:auto;border:1px solid var(--border);border-radius:6px;padding:6px;display:flex;flex-direction:column;gap:4px;margin-bottom:12px"></div>
-  <div id="myGuildCurrent" style="font-size:13px;color:var(--text-dim)"></div>
 </div>
 
 <!-- 비밀번호 변경 -->
