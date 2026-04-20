@@ -262,6 +262,28 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 .gm-list .gm-lv{text-align:center;white-space:nowrap;width:50px}
 .gm-list .gm-grade{text-align:center;white-space:nowrap;width:70px}
 
+.gm-header h2{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gm-compare{display:none;background:transparent;border:1px solid var(--border);color:var(--cyan);width:32px;height:32px;border-radius:6px;font-size:14px;cursor:pointer;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0}
+.gm-compare:hover{border-color:var(--cyan-dim);background:rgba(79,195,247,.08)}
+.gm-compare.active{background:var(--cyan-dim);border-color:var(--cyan);color:var(--gold-light)}
+@media(min-width:1200px){.gm-compare{display:inline-flex}}
+
+.guild-modal-overlay.compare-mode{gap:18px;padding:20px;align-items:stretch;justify-content:center}
+.guild-modal-overlay.compare-mode .guild-modal{flex:1 1 0;min-width:0;max-width:580px;width:auto;max-height:100%;margin:0;animation:none}
+.guild-modal-overlay.compare-mode .gm-selector{max-width:420px}
+
+.gm-selector{display:flex;flex-direction:column}
+.gm-selector-list{overflow-y:auto;flex:1;min-height:0;padding:12px 16px;display:flex;flex-direction:column;gap:6px}
+.gm-sel-item{background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:10px 14px;border-radius:8px;font-family:inherit;font-size:13px;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:space-between;text-align:left;width:100%}
+.gm-sel-item:hover{border-color:var(--border-glow);background:rgba(42,79,138,.2)}
+.gm-sel-item.gm-sel-my{border-color:var(--gold-dim);background:rgba(201,162,39,.08);position:sticky;top:0;z-index:1}
+.gm-sel-item.gm-sel-my .gm-sel-name{color:var(--gold-light);font-weight:700}
+.gm-sel-item.gm-sel-my:hover{border-color:var(--gold);background:rgba(201,162,39,.14)}
+.gm-sel-name{color:var(--gold-light);font-weight:500;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-right:8px}
+.gm-sel-realm{opacity:.55;font-size:11px;margin-left:4px;color:var(--text-dim)}
+.gm-sel-count{color:var(--cyan);font-weight:600;font-size:12px;flex-shrink:0}
+.gm-sel-empty{padding:24px;text-align:center;color:var(--text-faint);font-size:13px}
+
 @media(max-width:600px){
   .guild-modal-overlay{align-items:center;justify-content:center;padding:10px;overflow:hidden}
   .guild-modal{width:100%;max-width:100%;max-height:calc(100vh - 20px);border-radius:12px;margin:0;overflow:hidden}
@@ -518,16 +540,7 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 <div id="toast"></div>
 
 <!-- 결사 모달 -->
-<div class="guild-modal-overlay" id="guildModal" onclick="if(event.target===this)closeGuildModal()">
-  <div class="guild-modal">
-    <div class="gm-header">
-      <h2 id="gmTitle">⚔ <span></span></h2>
-      <button class="gm-close" onclick="closeGuildModal()">✕</button>
-    </div>
-    <div class="gm-stats" id="gmStats"></div>
-    <div class="gm-list" id="gmList"></div>
-  </div>
-</div>
+<div class="guild-modal-overlay" id="guildModal" onclick="if(event.target===this)closeGuildModal()"></div>
 
 <script>
 const USER_TOKEN_KEY = 'prasia_user_token';
@@ -1038,19 +1051,23 @@ function copyAccount(){
 function showToast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),3000); }
 
 // ── GUILD MODAL ──────────────────────────────────────────────────
-function openGuildModal(guildName, realm) {
-  const members = allData.filter(c => c.guild === guildName && (!realm || c.realm === realm)).sort((a,b) => (a.rank||0)-(b.rank||0));
-  if (!members.length) return;
+let openGuilds = [];
+let compareSelecting = false;
+
+function guildKey(g) { return `${g.realm||''}\t${g.guild}`; }
+
+function escAttr(s) { return esc(s).replace(/'/g,"\\&#39;"); }
+
+function buildGuildModalHtml({guild, realm}, slotIdx) {
+  const members = allData.filter(c => c.guild === guild && (!realm || c.realm === realm)).sort((a,b) => (a.rank||0)-(b.rank||0));
+  if (!members.length) return '';
 
   const realmLabel = realm ? ` <span style="font-size:12px;color:var(--text-faint)">${esc(realm)}</span>` : '';
-  document.getElementById('gmTitle').innerHTML = `⚔ ${esc(guildName)}${realmLabel} <span>${members.length}명</span>`;
 
-  // 통계: 레벨별
   const levelCounts = {};
   members.forEach(c => { if (c.level > 0) levelCounts[c.level] = (levelCounts[c.level]||0)+1; });
   const levelKeys = Object.keys(levelCounts).map(Number).sort((a,b)=>b-a);
 
-  // 통계: 토벌등급별
   const gCounts = {};
   members.forEach(c => { const g = gradeNum(c.conquestGrade); if (g > 0) gCounts[g] = (gCounts[g]||0)+1; });
   const gKeys = Object.keys(gCounts).map(Number).sort((a,b)=>b-a);
@@ -1058,15 +1075,12 @@ function openGuildModal(guildName, realm) {
   let statsHtml = '<div class="gm-stats-row"><span class="gm-stats-label">레벨</span>';
   levelKeys.forEach(lv => { statsHtml += `<span class="rs-item">Lv.${lv} <span class="rs-num">${levelCounts[lv]}</span></span>`; });
   statsHtml += '</div>';
-
   if (gKeys.length) {
     statsHtml += '<div class="gm-stats-row"><span class="gm-stats-label">토벌</span>';
     gKeys.forEach(g => { statsHtml += `<span class="rs-item"><span class="rs-grade ${gradeCls(g)}">${gradeIcon(g)} ${g}</span> <span class="rs-num">${gCounts[g]}</span></span>`; });
     statsHtml += '</div>';
   }
-  document.getElementById('gmStats').innerHTML = statsHtml;
 
-  // 리스트
   let listHtml = '<table><thead><tr><th class="gm-rank">랭킹</th><th>닉네임</th><th class="gm-job">직업</th><th class="gm-lv">레벨</th><th class="gm-grade">토벌</th></tr></thead><tbody>';
   members.forEach((c, idx) => {
     const gv = c.conquestGrade;
@@ -1082,10 +1096,117 @@ function openGuildModal(guildName, realm) {
     </tr>`;
   });
   listHtml += '</tbody></table>';
-  document.getElementById('gmList').innerHTML = listHtml;
 
-  document.getElementById('guildModal').classList.add('active');
+  const showCompareBtn = openGuilds.length === 1 && slotIdx === 0;
+  const compareActiveCls = compareSelecting ? ' active' : '';
+  const compareBtn = showCompareBtn
+    ? `<button class="gm-compare${compareActiveCls}" onclick="toggleCompare()" title="다른 결사와 비교">⚖</button>`
+    : '';
+
+  return `<div class="guild-modal" data-slot="${slotIdx}">
+    <div class="gm-header">
+      <h2>⚔ ${esc(guild)}${realmLabel} <span>${members.length}명</span></h2>
+      ${compareBtn}
+      <button class="gm-close" onclick="closeSlot(${slotIdx})">✕</button>
+    </div>
+    <div class="gm-stats">${statsHtml}</div>
+    <div class="gm-list">${listHtml}</div>
+  </div>`;
+}
+
+function buildCompareSelectorHtml() {
+  const guildMap = {};
+  allData.forEach(c => {
+    if (!c.guild) return;
+    const key = `${c.realm||''}\t${c.guild}`;
+    if (!guildMap[key]) guildMap[key] = { guild: c.guild, realm: c.realm||'', members: [] };
+    guildMap[key].members.push(c);
+  });
+  let guilds = Object.values(guildMap);
+  guilds.forEach(g => { g.score = guildScore(g.members); });
+  guilds.sort((a,b) => b.score - a.score);
+
+  const openKey = openGuilds[0] ? guildKey(openGuilds[0]) : '';
+  guilds = guilds.filter(g => `${g.realm}\t${g.guild}` !== openKey && g.members.length >= 2);
+
+  const myGuild = (displayConfig && displayConfig.myGuild) || null;
+  const myKey = myGuild ? `${myGuild.realm||''}\t${myGuild.guild}` : '';
+  if (myKey) {
+    const myIdx = guilds.findIndex(g => `${g.realm}\t${g.guild}` === myKey);
+    if (myIdx > 0) {
+      const [pinned] = guilds.splice(myIdx, 1);
+      guilds.unshift(pinned);
+    }
+  }
+
+  let items = '';
+  if (!guilds.length) {
+    items = `<div class="gm-sel-empty">비교 가능한 결사가 없습니다</div>`;
+  } else {
+    guilds.forEach(g => {
+      const isMy = `${g.realm}\t${g.guild}` === myKey;
+      const realmLabel = g.realm ? `<span class="gm-sel-realm">${esc(g.realm)}</span>` : '';
+      const pin = isMy ? '⭐ ' : '⚔ ';
+      const cls = isMy ? 'gm-sel-item gm-sel-my' : 'gm-sel-item';
+      items += `<button class="${cls}" onclick="openGuildModal('${escAttr(g.guild)}','${escAttr(g.realm)}')">
+        <span class="gm-sel-name">${pin}${esc(g.guild)}${realmLabel}</span>
+        <span class="gm-sel-count">${g.members.length}명</span>
+      </button>`;
+    });
+  }
+
+  return `<div class="guild-modal gm-selector">
+    <div class="gm-header">
+      <h2>⚖ 비교할 결사 선택</h2>
+      <button class="gm-close" onclick="toggleCompare()">✕</button>
+    </div>
+    <div class="gm-selector-list">${items}</div>
+  </div>`;
+}
+
+function renderGuildOverlay() {
+  const overlay = document.getElementById('guildModal');
+  const useCompareLayout = openGuilds.length === 2 || (openGuilds.length === 1 && compareSelecting);
+  overlay.classList.toggle('compare-mode', useCompareLayout);
+
+  let html = '';
+  openGuilds.forEach((g, idx) => { html += buildGuildModalHtml(g, idx); });
+  if (compareSelecting && openGuilds.length === 1) html += buildCompareSelectorHtml();
+
+  overlay.innerHTML = html;
+  overlay.classList.add('active');
   document.body.style.overflow = 'hidden';
+}
+
+function openGuildModal(guildName, realm) {
+  const target = { guild: guildName, realm: realm || '' };
+  if (openGuilds.some(g => guildKey(g) === guildKey(target))) return;
+
+  const members = allData.filter(c => c.guild === guildName && (!realm || c.realm === realm));
+  if (!members.length) return;
+
+  if (compareSelecting && openGuilds.length === 1) {
+    openGuilds.push(target);
+    compareSelecting = false;
+  } else if (openGuilds.length >= 2) {
+    openGuilds = [target];
+  } else {
+    openGuilds = [target];
+  }
+  renderGuildOverlay();
+}
+
+function closeSlot(idx) {
+  openGuilds.splice(idx, 1);
+  if (openGuilds.length === 0) { closeGuildModal(); return; }
+  compareSelecting = false;
+  renderGuildOverlay();
+}
+
+function toggleCompare() {
+  if (openGuilds.length !== 1) return;
+  compareSelecting = !compareSelecting;
+  renderGuildOverlay();
 }
 
 // 모바일 말풍선 토글
@@ -1107,7 +1228,11 @@ document.addEventListener('click', e => {
 });
 
 function closeGuildModal() {
-  document.getElementById('guildModal').classList.remove('active');
+  openGuilds = [];
+  compareSelecting = false;
+  const overlay = document.getElementById('guildModal');
+  overlay.classList.remove('active', 'compare-mode');
+  overlay.innerHTML = '';
   document.body.style.overflow = '';
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeGuildModal(); });

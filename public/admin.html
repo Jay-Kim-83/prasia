@@ -260,6 +260,7 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
   <button class="sidebar-item master-nav" data-target="card-schedule"><span class="sidebar-icon">🕐</span><span class="sidebar-label">스케줄</span></button>
   <button class="sidebar-item master-nav" data-target="card-users"><span class="sidebar-icon">👥</span><span class="sidebar-label">사용자</span></button>
   <button class="sidebar-item master-nav" data-target="card-bubbles"><span class="sidebar-icon">💬</span><span class="sidebar-label">말풍선</span></button>
+  <button class="sidebar-item master-nav" data-target="card-myguild"><span class="sidebar-icon">⭐</span><span class="sidebar-label">내 결사</span></button>
   <button class="sidebar-item master-nav" data-target="card-password"><span class="sidebar-icon">🔑</span><span class="sidebar-label">비밀번호</span></button>
   <button class="sidebar-item master-nav" data-target="card-sync"><span class="sidebar-icon">☁</span><span class="sidebar-label">동기화</span></button>
   <button class="sidebar-item master-nav" data-target="card-taskscheduler"><span class="sidebar-icon">🪟</span><span class="sidebar-label">작업스케줄러</span></button>
@@ -457,6 +458,19 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
   <div id="bubbleList" style="display:flex;flex-direction:column;gap:6px"></div>
 </div>
 
+<!-- 내 결사 지정 -->
+<div class="card master-only" id="card-myguild">
+  <div class="card-title">⭐ 내 결사 지정</div>
+  <p style="font-size:12px;color:var(--text-dim);margin-bottom:14px">수집된 결사 중 하나를 지정하면, 결사 비교 선택 목록 최상단에 고정됩니다.</p>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px">
+    <input type="text" class="pw-input" id="myGuildSearch" placeholder="🔍 결사명 / 렐름 검색..." style="flex:1;min-width:200px;height:34px" oninput="filterMyGuildOptions()">
+    <button class="btn-primary" style="padding:8px 16px;font-size:12px;height:34px" onclick="saveMyGuild()">저장</button>
+    <button class="btn-sm danger" style="font-size:12px;padding:8px 14px;height:34px" onclick="clearMyGuild()">해제</button>
+  </div>
+  <div id="myGuildList" style="max-height:320px;overflow-y:auto;border:1px solid var(--border);border-radius:6px;padding:6px;display:flex;flex-direction:column;gap:4px;margin-bottom:12px"></div>
+  <div id="myGuildCurrent" style="font-size:13px;color:var(--text-dim)"></div>
+</div>
+
 <!-- 비밀번호 변경 -->
 <div class="card master-only" id="card-password">
   <div class="card-title">🔑 관리자 비밀번호 변경</div>
@@ -609,6 +623,7 @@ async function initAdmin() {
   loadWorlds();
   loadDisplay();
   loadBubbles();
+  loadMyGuild();
   // 자동 로그아웃 설정 가져오기
   try {
     const chk = await fetch('/api/user/check', { headers: { 'X-User-Token': localStorage.getItem(AUTH_KEY) } }).then(r => r.json());
@@ -1284,6 +1299,107 @@ async function deleteBubble(idx) {
   const data = await res.json();
   if (data.success) { showToast('✅ 말풍선 삭제됨'); loadBubbles(); }
   else showToast(data.message || '삭제 실패');
+}
+
+// ── 내 결사 관리 ─────────────────────────────────────────────────
+function escAttr(s) { return String(s).replace(/"/g, '&quot;').replace(/'/g, '&#39;'); }
+let myGuildAllGuilds = [];
+let myGuildSelectedKey = '';
+async function loadMyGuild() {
+  try {
+    const [dataRes, dispRes] = await Promise.all([
+      adminFetch('/api/data'),
+      fetch('/api/display')
+    ]);
+    const data = await dataRes.json();
+    const disp = await dispRes.json();
+
+    const guildMap = {};
+    (data.characters || []).forEach(c => {
+      if (!c.guild) return;
+      const key = `${c.realm||''}\t${c.guild}`;
+      if (!guildMap[key]) guildMap[key] = { guild: c.guild, realm: c.realm||'', count: 0 };
+      guildMap[key].count++;
+    });
+    myGuildAllGuilds = Object.values(guildMap).sort((a,b) => {
+      if (a.realm !== b.realm) return a.realm.localeCompare(b.realm);
+      return b.count - a.count;
+    });
+
+    const current = disp.myGuild;
+    myGuildSelectedKey = current ? `${current.realm||''}\t${current.guild}` : '';
+
+    filterMyGuildOptions();
+
+    const cur = document.getElementById('myGuildCurrent');
+    if (current) {
+      const realmLabel = current.realm ? ` <span style="color:var(--text-faint);font-size:11px">${esc(current.realm)}</span>` : '';
+      cur.innerHTML = `현재 지정: <strong style="color:var(--gold-light)">⭐ ${esc(current.guild)}</strong>${realmLabel}`;
+    } else {
+      cur.innerHTML = '<span style="color:var(--text-faint)">지정된 결사 없음</span>';
+    }
+  } catch (e) {
+    const cur = document.getElementById('myGuildCurrent');
+    if (cur) cur.innerHTML = '<span style="color:var(--red)">로딩 실패</span>';
+  }
+}
+
+function filterMyGuildOptions() {
+  const q = (document.getElementById('myGuildSearch').value || '').trim().toLowerCase();
+  const list = document.getElementById('myGuildList');
+  const filtered = q
+    ? myGuildAllGuilds.filter(g => g.guild.toLowerCase().includes(q) || g.realm.toLowerCase().includes(q))
+    : myGuildAllGuilds;
+
+  if (!filtered.length) {
+    list.innerHTML = '<div style="padding:16px;text-align:center;color:var(--text-faint);font-size:12px">결과가 없습니다</div>';
+    return;
+  }
+  list.innerHTML = filtered.slice(0, 200).map(g => {
+    const key = `${g.realm}\t${g.guild}`;
+    const active = key === myGuildSelectedKey;
+    const realmLabel = g.realm ? `<span style="color:var(--text-faint);font-size:11px;margin-left:6px">${esc(g.realm)}</span>` : '';
+    const bg = active ? 'background:rgba(201,162,39,.15);border-color:var(--gold-dim)' : 'background:var(--bg3);border-color:var(--border)';
+    const icon = active ? '⭐' : '⚔';
+    return `<button type="button" onclick="pickMyGuild('${escAttr(key)}')" style="display:flex;align-items:center;justify-content:space-between;padding:8px 12px;border:1px solid;border-radius:6px;font-family:inherit;font-size:13px;color:var(--text);cursor:pointer;text-align:left;${bg}">
+      <span><span style="color:var(--gold-light)">${icon} ${esc(g.guild)}</span>${realmLabel}</span>
+      <span style="color:var(--cyan);font-size:12px;font-weight:600">${g.count}명</span>
+    </button>`;
+  }).join('');
+  if (filtered.length > 200) {
+    list.innerHTML += `<div style="padding:8px;text-align:center;color:var(--text-faint);font-size:11px">상위 200개만 표시 (${filtered.length}개 중)</div>`;
+  }
+}
+
+function pickMyGuild(key) {
+  myGuildSelectedKey = myGuildSelectedKey === key ? '' : key;
+  filterMyGuildOptions();
+}
+
+async function saveMyGuild() {
+  let body = {};
+  if (myGuildSelectedKey) {
+    const [realm, guild] = myGuildSelectedKey.split('\t');
+    body = { guild, realm };
+  }
+  const res = await adminFetch('/api/my-guild', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  });
+  const data = await res.json();
+  if (data.success) { showToast('✅ 내 결사 저장됨'); loadMyGuild(); }
+  else showToast(data.message || '저장 실패');
+}
+
+async function clearMyGuild() {
+  if (!confirm('내 결사 지정을 해제하시겠습니까?')) return;
+  const res = await adminFetch('/api/my-guild', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({})
+  });
+  const data = await res.json();
+  if (data.success) { showToast('✅ 해제됨'); loadMyGuild(); }
+  else showToast(data.message || '해제 실패');
 }
 
 // ── 파비콘 상태 ──────────────────────────────────────────────────

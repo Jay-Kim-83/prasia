@@ -367,6 +367,7 @@ app.get('/api/display', (req, res) => {
     minLevel: config.minLevel || 0,
     requireLogin: config.requireLogin !== false,
     autoLogoutMin: config.autoLogoutMin ?? 30,
+    myGuild: config.myGuild || null,
   });
 });
 
@@ -418,6 +419,18 @@ app.put('/api/bubbles/:index', (req, res) => {
   config.bubbles[idx] = { guild: guild.trim(), nickname: nickname.trim(), message: message.trim() };
   saveConfig(config);
   res.json({ success: true });
+});
+
+// ── 내 결사 (관리자 전용) ──────────────────────────────────────
+app.post('/api/my-guild', (req, res) => {
+  const token = req.headers['x-user-token'] || req.query.token;
+  if (!verifyAdminToken(token)) return res.status(401).json({ success: false, message: '권한이 없습니다.' });
+  const { guild, realm } = req.body || {};
+  const config = loadConfig();
+  if (!guild) config.myGuild = null;
+  else config.myGuild = { guild: String(guild).trim(), realm: String(realm || '').trim() };
+  saveConfig(config);
+  res.json({ success: true, myGuild: config.myGuild });
 });
 
 // ── API ───────────────────────────────────────────────────────

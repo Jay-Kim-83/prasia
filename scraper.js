@@ -113,6 +113,7 @@ function postRequest(url, headers, body) {
         'Content-Length': Buffer.byteLength(bodyStr),
       },
     }, res => {
+      res.setEncoding('utf8');
       let data = '';
       res.on('data', c => data += c);
       res.on('end', () => {
