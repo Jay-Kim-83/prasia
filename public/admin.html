@@ -85,6 +85,8 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 }
 .sidebar-item:hover{background:var(--bg3);color:var(--text)}
 .sidebar-item.active{background:rgba(201,162,39,.12);color:var(--gold-light)}
+.sidebar-item.master-nav{display:none}
+body.is-master .sidebar-item.master-nav{display:flex}
 .sidebar-icon{font-size:14px;width:18px;text-align:center}
 .sidebar-label{font-size:11px}
 .sidebar-toggle{
@@ -635,10 +637,7 @@ async function initAdmin() {
 }
 
 function initSidebar() {
-  // 마스터 아니면 마스터 전용 네비 숨김
-  if (!isMaster) {
-    document.querySelectorAll('.sidebar-item.master-nav').forEach(b => b.style.display = 'none');
-  }
+  document.body.classList.toggle('is-master', isMaster);
   // 클릭 시 스크롤
   document.querySelectorAll('.sidebar-item').forEach(btn => {
     btn.addEventListener('click', () => {
