@@ -2,8 +2,34 @@ const express = require('express');
 const cron    = require('node-cron');
 const path    = require('path');
 const fs      = require('fs');
+const { spawn } = require('child_process');
 const { scrapeRankings, loadData, loadMeta } = require('./scraper');
 const github = require('./github-sync');
+
+function isLocalInteractive() {
+    if (process.env.NO_OPEN === '1') return false;
+    if (process.env.NODE_ENV === 'production') return false;
+    if (!process.stdout.isTTY) return false;
+    const host = (process.env.HOST || '').toLowerCase();
+    if (host && host !== 'localhost' && host !== '127.0.0.1' && host !== '0.0.0.0') return false;
+    return true;
+}
+
+function openBrowser(url) {
+    if (!isLocalInteractive()) return;
+    try {
+        const [cmd, args] = process.platform === 'win32'
+            ? ['cmd.exe', ['/c', 'start', '""', url]]
+            : process.platform === 'darwin'
+                ? ['open', [url]]
+                : ['xdg-open', [url]];
+        const child = spawn(cmd, args, { detached: true, stdio: 'ignore', shell: false });
+        child.on('error', err => console.log('[Browser] 자동 실행 실패:', err.message));
+        child.unref();
+    } catch (e) {
+        console.log('[Browser] 자동 실행 실패:', e.message);
+    }
+}
 
 const app  = express();
 const PORT = process.env.PORT || 3000;
@@ -501,9 +527,11 @@ app.get('/api/task-scheduler-cmd', (req, res) => {
   startScheduler(schedule);
 
   app.listen(PORT, () => {
+    const url = `http://localhost:${PORT}`;
     console.log(`\n🗡️  프라시아 전기 랭킹 서버 가동`);
-    console.log(`   http://localhost:${PORT}`);
-    console.log(`   관리자: http://localhost:${PORT}/admin.html`);
+    console.log(`   ${url}`);
+    console.log(`   관리자: ${url}/admin.html`);
     console.log(`   초기 비밀번호: ${config.adminPassword}\n`);
+    openBrowser(url);
   });
 })();
