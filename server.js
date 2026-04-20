@@ -167,6 +167,17 @@ async function runScrape() {
 
 // ── 사용자 인증 ──────────────────────────────────────────────
 function makeToken(id) { return Buffer.from(id + ':prasia_user').toString('base64'); }
+function verifyMasterToken(token) {
+  if (!token) return false;
+  try {
+    const decoded = Buffer.from(token, 'base64').toString('utf8');
+    if (!decoded.endsWith(':prasia')) return false;
+    const pw = decoded.replace(/:prasia$/, '');
+    const config = loadConfig();
+    return pw === config.adminPassword;
+  } catch {}
+  return false;
+}
 function verifyAdminToken(token) {
   if (!token) return false;
   try {
@@ -257,7 +268,7 @@ app.get('/api/user/check', (req, res) => {
   res.json({
     requireLogin: config2.requireLogin !== false,
     autoLogoutMin: config2.autoLogoutMin ?? 30,
-    loggedIn, isAdmin, isMaster: userId === '_admin',
+    loggedIn, isAdmin, isMaster: verifyMasterToken(token),
   });
 });
 
