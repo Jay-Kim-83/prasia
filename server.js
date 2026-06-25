@@ -5,6 +5,8 @@ const fs      = require('fs');
 const { spawn } = require('child_process');
 const { scrapeRankings, loadData, loadMeta } = require('./scraper');
 const github = require('./github-sync');
+const tracker = require('./data/guild-tracker');
+const trackerRoutes = require('./data/tracker-routes');
 
 function isLocalInteractive() {
     if (process.env.NO_OPEN === '1') return false;
@@ -38,6 +40,7 @@ const SCHEDULE_FILE = path.join(__dirname, 'data', 'schedule.json');
 const CONFIG_FILE   = path.join(__dirname, 'data', 'config.json');
 
 app.use(express.json());
+app.use('/api/tracker', trackerRoutes);
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
 
@@ -145,6 +148,7 @@ async function runScrape() {
   try {
     await scrapeRankings();
     // 수집 완료 후 모든 동적 파일 GitHub 동기화
+    try { tracker.syncMembers(); tracker.runDetection(); } catch(e) { console.error('[Tracker]', e.message); }
     github.pushAll().catch(e => console.error('[GitHub] 동기화 오류:', e.message));
     const elapsed = Date.now() - startTime;
     const min = Math.floor(elapsed / 60000);
