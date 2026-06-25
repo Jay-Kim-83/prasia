@@ -712,6 +712,44 @@ async function deleteUser(id) {
 }
 
 // ── 서버 데이터 동기화 ──────────────────────────────────────────────
+const syncDirDB = (() => {
+  let db;
+  const open = () => new Promise((res, rej) => {
+    if (db) return res(db);
+    const req = indexedDB.open('prasia-sync', 1);
+    req.onupgradeneeded = e => e.target.result.createObjectStore('handles');
+    req.onsuccess = e => { db = e.target.result; res(db); };
+    req.onerror = rej;
+  });
+  const tx = async (mode, fn) => {
+    const d = await open();
+    return new Promise((res, rej) => {
+      const t = d.transaction('handles', mode);
+      const req = fn(t.objectStore('handles'));
+      req.onsuccess = () => res(req.result);
+      req.onerror = rej;
+    });
+  };
+  return {
+    get: () => tx('readonly', s => s.get('syncDir')),
+    set: (h) => tx('readwrite', s => s.put(h, 'syncDir')),
+    clear: () => tx('readwrite', s => s.delete('syncDir')),
+  };
+})();
+
+async function getSyncDirHandle() {
+  let handle = await syncDirDB.get();
+  if (handle) {
+    const perm = await handle.queryPermission({ mode: 'readwrite' });
+    if (perm === 'granted') return handle;
+    const req = await handle.requestPermission({ mode: 'readwrite' });
+    if (req === 'granted') return handle;
+  }
+  handle = await window.showDirectoryPicker({ mode: 'readwrite' });
+  await syncDirDB.set(handle);
+  return handle;
+}
+
 async function syncPull() {
   const btn = document.getElementById('btnSyncPull');
   btn.disabled = true;
@@ -724,14 +762,14 @@ async function syncPull() {
     const entries = Object.entries(data.files).filter(([, v]) => v !== null);
 
     if ('showDirectoryPicker' in window) {
-      const dirHandle = await window.showDirectoryPicker({ mode: 'readwrite' });
+      const dirHandle = await getSyncDirHandle();
       for (const [name, fileContent] of entries) {
         const fileHandle = await dirHandle.getFileHandle(name, { create: true });
         const writable = await fileHandle.createWritable();
         await writable.write(JSON.stringify(fileContent, null, 2));
         await writable.close();
       }
-      showToast(`✅ ${entries.length}개 파일 저장 완료`);
+      showToast(`✅ ${entries.length}개 파일 저장 완료 — ${dirHandle.name}`);
     } else {
       for (const [name, fileContent] of entries) {
         const blob = new Blob([JSON.stringify(fileContent, null, 2)], { type: 'application/json' });
@@ -741,7 +779,7 @@ async function syncPull() {
         a.click();
         URL.revokeObjectURL(a.href);
       }
-      showToast(`✅ ${entries.length}개 파일 다운로드 완료 (기본 경로)`);
+      showToast(`✅ ${entries.length}개 파일 다운로드 완료`);
     }
   } catch (e) {
     if (e.name !== 'AbortError') showToast('서버 연결 실패');
@@ -749,6 +787,11 @@ async function syncPull() {
     btn.disabled = false;
     btn.textContent = '📥 서버 → 로컬 다운로드';
   }
+}
+
+async function syncChangeDirHandle() {
+  await syncDirDB.clear();
+  showToast('저장 폴더가 초기화되었습니다. 다음 다운로드 시 폴더를 다시 선택해주세요.');
 }
 
 // ── 말풍선 관리 ───────────────────────────────────────────────────
