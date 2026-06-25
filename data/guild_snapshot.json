@@ -391,17 +391,17 @@
           "realm": "론도 01"
         },
         {
-          "nickname": "추격자",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
           "nickname": "영원해",
           "job": "향사수",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "추격자",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
           "realm": "론도 01"
         },
         {
@@ -3209,7 +3209,7 @@
     "진격의포켓몬|라인소프": {
       "guildName": "진격의포켓몬",
       "world": "라인소프",
-      "memberCount": 12,
+      "memberCount": 13,
       "members": [
         {
           "nickname": "호르몬",
@@ -3293,6 +3293,13 @@
           "job": "향사수",
           "level": 83,
           "conquestGrade": 19,
+          "realm": "라인소프 02"
+        },
+        {
+          "nickname": "꼼녀몬",
+          "job": "주문각인사",
+          "level": 81,
+          "conquestGrade": 15,
           "realm": "라인소프 02"
         }
       ]
@@ -3713,20 +3720,13 @@
     "구찌|라인소프": {
       "guildName": "구찌",
       "world": "라인소프",
-      "memberCount": 11,
+      "memberCount": 10,
       "members": [
         {
           "nickname": "명품렌트",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
-          "realm": "라인소프 03"
-        },
-        {
-          "nickname": "강덕구",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 24,
           "realm": "라인소프 03"
         },
         {
@@ -5914,17 +5914,17 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "아이스쿠림",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "아민타 02"
-        },
-        {
           "nickname": "꾸댕",
           "job": "향사수",
           "level": 89,
           "conquestGrade": 23,
+          "realm": "아민타 02"
+        },
+        {
+          "nickname": "아이스쿠림",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 24,
           "realm": "아민타 02"
         },
         {
@@ -19337,7 +19337,7 @@
     "냐오|아티산": {
       "guildName": "냐오",
       "world": "아티산",
-      "memberCount": 11,
+      "memberCount": 10,
       "members": [
         {
           "nickname": "옥군",
@@ -19407,13 +19407,6 @@
           "job": "향사수",
           "level": 84,
           "conquestGrade": 18,
-          "realm": "아티산 04"
-        },
-        {
-          "nickname": "쌀과자도둑마멋",
-          "job": "집행관",
-          "level": 84,
-          "conquestGrade": 20,
           "realm": "아티산 04"
         }
       ]
@@ -20002,7 +19995,7 @@
     "검은늑대|나세르": {
       "guildName": "검은늑대",
       "world": "나세르",
-      "memberCount": 13,
+      "memberCount": 12,
       "members": [
         {
           "nickname": "흑빛요정",
@@ -20086,13 +20079,6 @@
           "job": "태양감시자",
           "level": 82,
           "conquestGrade": 18,
-          "realm": "나세르 01"
-        },
-        {
-          "nickname": "땡겨요",
-          "job": "향사수",
-          "level": 80,
-          "conquestGrade": 19,
           "realm": "나세르 01"
         }
       ]
@@ -25159,7 +25145,7 @@
         {
           "nickname": "에스파",
           "job": "심연추방자",
-          "level": 89,
+          "level": 88,
           "conquestGrade": 24,
           "realm": "타리아 05"
         },
@@ -27681,7 +27667,7 @@
     "Nan|메르비스": {
       "guildName": "Nan",
       "world": "메르비스",
-      "memberCount": 17,
+      "memberCount": 18,
       "members": [
         {
           "nickname": "전쟁",
@@ -27716,6 +27702,13 @@
           "job": "주문각인사",
           "level": 85,
           "conquestGrade": 22,
+          "realm": "메르비스 04"
+        },
+        {
+          "nickname": "왕지",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 20,
           "realm": "메르비스 04"
         },
         {
@@ -28477,5 +28470,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-25T15:20:45.710Z"
+  "updatedAt": "2026-06-25T15:30:44.577Z"
 }
