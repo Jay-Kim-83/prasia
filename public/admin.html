@@ -73,7 +73,8 @@
 
 <!-- 현황 -->
 <div class="card" id="card-status">
-  <div class="card-title">📊 현황</div>
+  <div class="card-title">📊 현황<i class="tip" data-tip="수집된 랭킹 데이터의 전체 현황입니다.
+최종 수집 시각 및 수집 상태를 확인할 수 있습니다."></i></div>
   <div class="status-grid">
     <div class="stat-item">
       <div class="stat-label">총 캐릭터</div>
@@ -97,14 +98,16 @@
 <div class="card" id="card-display">
   <div class="card-title">📊 렐름 통계 표시 설정</div>
   <div class="interval-row master-only" id="requireLoginRow">
-    <label>로그인 필수:</label>
+    <label>로그인 필수:<i class="tip" data-tip="사용 시 — 로그인하지 않으면 랭킹 페이지에 접근할 수 없습니다.
+미사용 시 — 누구나 랭킹을 볼 수 있습니다."></i></label>
     <label style="display:inline-flex;align-items:center;gap:6px;cursor:pointer;font-size:13px">
       <input type="checkbox" id="requireLogin" checked> <span id="requireLoginLabel" style="color:var(--green)">사용</span>
     </label>
     <span style="font-size:12px;color:var(--text-dim)">해제 시 누구나 랭킹 열람 가능</span>
   </div>
   <div class="interval-row keep-row master-only">
-    <label>자동 로그아웃:</label>
+    <label>자동 로그아웃:<i class="tip" data-tip="마지막 활동 후 설정 시간이 지나면 자동 로그아웃됩니다.
+0분으로 설정하면 자동 로그아웃이 비활성화됩니다."></i></label>
     <input type="number" class="interval-input" id="autoLogoutHour" min="0" max="24" value="0" style="width:60px">
     <span style="font-size:13px;color:var(--text-dim)">시간</span>
     <input type="number" class="interval-input" id="autoLogoutMinute" min="0" max="59" value="30" style="width:60px">
@@ -112,7 +115,8 @@
     <span style="font-size:12px;color:var(--text-dim)">(0시간 0분 = 사용 안함)</span>
   </div>
   <div class="interval-row keep-row">
-    <label>최소값:</label>
+    <label>최소값:<i class="tip" data-tip="입력값 미만인 캐릭터는 사용자 화면에 표시되지 않습니다.
+레벨·토벌등급 모두 0이면 전체 표시됩니다."></i></label>
     <input type="number" class="interval-input" id="minLevel" min="0" max="100" value="0" style="width:70px" placeholder="레벨">
     <span style="font-size:12px;color:var(--text-dim)">레벨</span>
     <input type="number" class="interval-input" id="minConquestGrade" min="0" max="30" value="0" style="width:70px" placeholder="토벌">
@@ -123,7 +127,8 @@
 
 <!-- 내 결사 지정 -->
 <div class="card" id="card-myguild">
-  <div class="card-title">⭐ 내 결사 지정</div>
+  <div class="card-title">⭐ 내 결사 지정<i class="tip" data-tip="우리 결사를 지정하면 결사 비교 시 목록 최상단에 고정됩니다.
+자동 필터 옵션 활성화 시 접속할 때마다 우리 결사 렐름으로 자동 필터됩니다."></i></div>
   <p style="font-size:12px;color:var(--text-dim);margin-bottom:14px">수집된 결사 중 하나를 지정하면, 결사 비교 선택 목록 최상단에 고정됩니다.</p>
   <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px">
     <input type="text" class="pw-input" id="myGuildSearch" placeholder="🔍 결사명 / 렐름 검색..." style="flex:1;min-width:200px;height:34px" oninput="filterMyGuildOptions()">
@@ -131,7 +136,7 @@
     <button class="btn-sm danger" style="font-size:12px;padding:8px 14px;height:34px" onclick="clearMyGuild()">해제</button>
   </div>
   <label style="display:inline-flex;align-items:center;gap:6px;margin-bottom:10px;cursor:pointer;font-size:12px;color:var(--cyan)">
-    <input type="checkbox" id="myGuildAutoFilter"> 메인 페이지 로드 시 월드·렐름 자동 필터
+    <input type="checkbox" id="myGuildAutoFilter"> 메인 페이지 로드 시 월드·렐름 자동 필터<i class="tip" data-tip="체크 시 메인 페이지 접속 시마다 내 결사가 속한 월드·렐름으로 자동 필터됩니다."></i>
   </label>
   <div id="myGuildList" style="max-height:320px;overflow-y:auto;border:1px solid var(--border);border-radius:6px;padding:6px;display:flex;flex-direction:column;gap:4px;margin-bottom:12px"></div>
   <div id="myGuildCurrent" style="font-size:13px;color:var(--text-dim)"></div>
@@ -139,7 +144,8 @@
 
 <!-- 수집 월드 설정 -->
 <div class="card" id="card-worlds">
-  <div class="card-title">🌍 수집 월드 설정</div>
+  <div class="card-title">🌍 수집 월드 설정<i class="tip" data-tip="체크된 월드만 수집합니다.
+초기화 시 게임에서 자동 감지된 활성 월드 목록을 사용합니다."></i></div>
   <p style="font-size:12px;color:var(--text-dim);margin-bottom:10px">수집할 월드를 선택하세요. 선택하지 않으면 페이지에서 자동 감지합니다.</p>
   <label style="display:inline-flex;align-items:center;gap:6px;margin-bottom:10px;cursor:pointer;font-size:12px;color:var(--cyan)">
     <input type="checkbox" id="worldSelectAll" onchange="toggleAllWorlds(this.checked)"> 전체 선택/해제
@@ -154,22 +160,28 @@
 
 <!-- 결사 추적 -->
 <div class="card" id="card-guild-tracker">
-  <div class="card-title">📍 결사 추적</div>
+  <div class="card-title">📍 결사 추적<i class="tip" data-tip="수집 시마다 전체 결사의 멤버 구성을 스냅샷으로 저장합니다.
+이전 스냅샷 대비 멤버가 30% 미만으로 줄어든 결사를 서버 이전 의심으로 감지합니다.
+닉네임 일치율 15% 이상인 결사를 이전 후보로 제시합니다."></i></div>
   <div id="gt-status" style="margin-bottom:16px;padding:8px 10px;background:var(--bg2);border-radius:6px;font-size:12px">로딩 중...</div>
 
   <div id="gt-pending-wrap" style="display:none;margin-bottom:20px">
-    <div style="font-size:12px;color:var(--gold);font-weight:600;margin-bottom:10px">⚠ 이전 감지 대기</div>
+    <div style="font-size:12px;color:var(--gold);font-weight:600;margin-bottom:10px">⚠ 이전 감지 대기<i class="tip" data-tip="스냅샷보다 현재 멤버가 30% 미만으로 줄어든 결사 목록입니다.
+후보 결사 중 맞는 곳을 확정하거나, 이전이 아니면 '이전 아님'을 선택하세요."></i></div>
     <div id="gt-pending-list"></div>
   </div>
 
-  <div style="font-size:12px;color:var(--text-dim);font-weight:600;margin-bottom:8px">확정된 이전 이력</div>
+  <div style="font-size:12px;color:var(--text-dim);font-weight:600;margin-bottom:8px">확정된 이전 이력<i class="tip" data-tip="관리자가 확정한 결사 이전 기록입니다.
+사용자 페이지 결사 모달에서 이 이력이 표시됩니다."></i></div>
   <div id="gt-confirmed-list" style="max-height:300px;overflow-y:auto;margin-bottom:4px"></div>
 </div>
 <!-- 이하 마스터 전용 ──────────────────────────────────── -->
 
 <!-- 즉시 수집 -->
 <div class="card master-only" id="card-collect">
-  <div class="card-title">⚡ 즉시 수집</div>
+  <div class="card-title">⚡ 즉시 수집<i class="tip" data-tip="지금 바로 게임 랭킹 데이터를 크롤링합니다.
+수집 시간은 월드·렐름 수에 따라 30초~수분 소요됩니다.
+수집 완료 후 GitHub에 자동 백업됩니다."></i></div>
   <button class="btn-collect" id="btnCollect" onclick="collectNow()">
     <div class="spinner" id="spinner"></div>
     <span id="btnTxt">🚀 지금 수집 시작</span>
@@ -179,7 +191,9 @@
 
 <!-- 스케줄 -->
 <div class="card master-only" id="card-schedule">
-  <div class="card-title">🕐 자동 수집 스케줄</div>
+  <div class="card-title">🕐 자동 수집 스케줄<i class="tip" data-tip="서버가 실행 중인 동안 자동으로 수집을 반복합니다.
+매일: 지정한 시각에 하루 1회 수집
+반복: 설정한 시간/분 간격으로 반복 수집"></i></div>
   <div class="sched-cards" id="schedCards">
     <div class="sched-card" data-type="none" onclick="selectSched(this)">
       <div class="si">🚫</div><div class="sn">수집 안함</div><div class="sd">자동 수집 비활성</div>
@@ -226,20 +240,23 @@
     </div>
   </div>
   <div class="btn-row">
-    <button class="btn-primary" onclick="saveSchedule()">💾 스케줄 저장</button>
+    <button class="btn-primary" onclick="saveSchedule()">💾 스케줄 저장</button><i class="tip" data-tip="저장 즉시 스케줄이 적용됩니다.
+서버 재시작 후에도 유지됩니다."></i>
     <button class="btn-danger" onclick="stopSchedule()">⏹ 중지</button>
   </div>
 </div>
 
 <!-- 사용자 관리 -->
 <div class="card master-only" id="card-users">
-  <div class="card-title">👥 사용자 관리</div>
+  <div class="card-title">👥 사용자 관리<i class="tip" data-tip="등록된 사용자만 랭킹 페이지에 로그인할 수 있습니다.
+사용자가 0명이면 로그인 없이 누구나 접근 가능합니다."></i></div>
   <p style="font-size:12px;color:var(--text-dim);margin-bottom:14px">등록된 사용자만 랭킹 페이지에 접근할 수 있습니다. 사용자가 0명이면 누구나 접근 가능합니다.</p>
   <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;align-items:flex-end">
     <input type="text" class="pw-input" id="newUserId" placeholder="아이디 (2자 이상)" style="width:140px" autocomplete="off">
     <input type="password" class="pw-input" id="newUserPw" placeholder="비밀번호 (4자 이상)" style="width:140px" autocomplete="off">
     <div style="display:flex;flex-direction:column;gap:2px">
-      <label style="font-size:10px;color:var(--text-faint)">만료일 (선택)</label>
+      <label style="font-size:10px;color:var(--text-faint)">만료일 (선택)<i class="tip" data-tip="설정한 날짜 이후에는 해당 계정으로 로그인할 수 없습니다.
+비워두면 만료 없이 계속 사용 가능합니다."></i></label>
       <input type="date" class="pw-input" id="newUserExpires" style="width:140px">
     </div>
     <button class="btn-primary" style="padding:8px 16px;font-size:12px" onclick="addUser()">+ 추가</button>
@@ -253,7 +270,8 @@
 
 <!-- 말풍선 설정 -->
 <div class="card master-only" id="card-bubbles">
-  <div class="card-title">💬 말풍선 설정</div>
+  <div class="card-title">💬 말풍선 설정<i class="tip" data-tip="결사 모달에서 특정 닉네임에 마우스를 올리면 말풍선 메시지가 표시됩니다.
+결사명 + 닉네임 조합으로 등록합니다."></i></div>
   <p style="font-size:12px;color:var(--text-dim);margin-bottom:14px">특정 결사의 특정 닉네임에 마우스를 올리면 표시할 메시지를 설정합니다.</p>
   <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;align-items:flex-end">
     <div style="display:flex;flex-direction:column;gap:4px">
@@ -275,7 +293,8 @@
 
 <!-- 비밀번호 변경 -->
 <div class="card master-only" id="card-password">
-  <div class="card-title">🔑 관리자 비밀번호 변경</div>
+  <div class="card-title">🔑 관리자 비밀번호 변경<i class="tip" data-tip="마스터 관리자 비밀번호를 변경합니다.
+새 비밀번호는 4자 이상이어야 합니다."></i></div>
   <div class="pw-fields">
     <input type="password" class="pw-input" id="pwOld" placeholder="현재 비밀번호">
     <input type="password" class="pw-input" id="pwNew" placeholder="새 비밀번호 (4자 이상)">
@@ -286,15 +305,20 @@
 
 <!-- 서버 데이터 동기화 -->
 <div class="card master-only" id="card-sync">
-  <div class="card-title">☁ 서버 데이터 다운로드</div>
+  <div class="card-title">☁ 서버 데이터 다운로드<i class="tip" data-tip="Render 서버에서 실행 중인 데이터 파일을 내 PC로 가져옵니다.
+(config, schedule, meta, rankings, 결사 추적 파일 포함)"></i></div>
   <p style="font-size:12px;color:var(--text-dim);margin-bottom:14px">서버에서 실행 중인 설정 파일(config, schedule, meta)을 내 PC로 다운로드합니다.</p>
   <button class="btn-primary" id="btnSyncPull" onclick="syncPull()">📥 서버 → 로컬 다운로드</button>
-  <button class="btn-secondary" onclick="syncChangeDirHandle()">📁 저장 폴더 변경</button>
+  <button class="btn-secondary" onclick="syncChangeDirHandle()">📁 저장 폴더 변경</button><i class="tip tip-left" data-tip="다운로드 파일이 저장될 폴더를 변경합니다.
+첫 다운로드 시 자동으로 폴더 선택 창이 열립니다.
+Chrome·Edge에서만 지원됩니다."></i>
 </div>
 
 <!-- 작업 스케줄러 -->
 <div class="card master-only" id="card-taskscheduler">
-  <div class="card-title">🖥 Windows 작업 스케줄러</div>
+  <div class="card-title">🖥 Windows 작업 스케줄러<i class="tip" data-tip="로컬 PC에서 정기적으로 서버 데이터를 자동 다운로드하도록
+Windows 작업 스케줄러에 등록하는 PowerShell 명령어입니다.
+명령어를 복사 후 PowerShell(관리자)에서 실행하세요."></i></div>
   <div class="cmd-box">
     <button class="copy-btn" onclick="copyCmd()">복사</button>
     <div id="cmdText">로딩 중...</div>

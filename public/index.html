@@ -389,6 +389,11 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 }
 .support-account:hover{border-color:var(--gold);background:rgba(201,162,39,.08)}
 .support-copy{font-size:10px;color:var(--text-faint);font-family:'Noto Sans KR',sans-serif}
+.tip{display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border-radius:50%;background:rgba(255,255,255,.1);color:var(--text-faint);font-size:9px;font-style:normal;cursor:help;position:relative;margin-left:4px;vertical-align:middle;flex-shrink:0;user-select:none}
+.tip::before{content:'?';line-height:1}
+.tip::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 7px);left:50%;transform:translateX(-50%);background:#1a1f2e;color:#e2e8f0;border:1px solid rgba(255,255,255,.12);border-radius:7px;padding:7px 11px;font-size:11px;line-height:1.55;white-space:pre-line;width:max-content;max-width:220px;opacity:0;pointer-events:none;transition:opacity .15s;z-index:9999;text-align:left;font-weight:400}
+.tip:hover::after{opacity:1}
+.tip.tip-left::after{left:auto;right:0;transform:none}
 </style>
 </head>
 <body>
@@ -453,27 +458,31 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 <div class="filters-section">
   <div class="filters-row">
     <div class="fg">
-      <label>월드</label>
+      <label>월드<i class="tip" data-tip="수집된 월드 기준으로 필터합니다.
+론도, 메르비스 등 게임 서버 단위입니다."></i></label>
       <div class="sel-wrap"><select id="fWorld"><option value="">전체</option></select></div>
     </div>
     <div class="fg">
-      <label>렐름</label>
+      <label>렐름<i class="tip" data-tip="월드 내 렐름(채널) 단위로 필터합니다.
+월드를 먼저 선택해야 활성화됩니다."></i></label>
       <div class="sel-wrap"><select id="fRealm" disabled><option value="">전체</option></select></div>
     </div>
     <div class="fg">
-      <label>직업</label>
+      <label>직업<i class="tip" data-tip="선택한 직업 캐릭터만 표시합니다."></i></label>
       <div class="sel-wrap"><select id="fJob"><option value="">전체</option></select></div>
     </div>
     <div class="fg">
-      <label>토벌등급</label>
+      <label>토벌등급<i class="tip" data-tip="선택한 등급 이상인 캐릭터만 표시합니다.
+관리자가 최솟값을 설정하면 그 미만은 숨겨집니다."></i></label>
       <div class="sel-wrap"><select id="fGrade"><option value="">전체</option></select></div>
     </div>
     <div class="fg">
-      <label>레벨</label>
+      <label>레벨<i class="tip" data-tip="선택한 레벨 이상인 캐릭터만 표시합니다."></i></label>
       <div class="sel-wrap"><select id="fLevel"><option value="">전체</option></select></div>
     </div>
     <div class="fg search">
-      <label>닉네임 / 결사명</label>
+      <label>닉네임 / 결사명<i class="tip" data-tip="닉네임 또는 결사명으로 검색합니다.
+결사명 입력 시 해당 결사 전체 멤버가 표시됩니다."></i></label>
       <div class="search-wrap">
         <span class="search-icon">🔍</span>
         <input type="text" id="fSearch" placeholder="닉네임 또는 결사명 검색...">
@@ -489,7 +498,10 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 <div class="stats-bar">
   <div class="result-count" id="resultCount">캐릭터 <strong>0</strong>명</div>
   <div class="sort-wrap">
-    정렬:
+    정렬:<i class="tip tip-left" data-tip="목록 정렬 기준을 선택합니다.
+랭킹순: 게임 내 공식 순위 기준
+레벨순: 캐릭터 레벨 기준
+닉네임순: 가나다 순"></i>
     <div class="sel-wrap">
       <select id="sortBy" onchange="applyFilters()">
         <option value="rank">랭킹순</option>
@@ -1158,7 +1170,7 @@ function buildGuildModalHtml({guild, realm}, slotIdx) {
   const showCompareBtn = openGuilds.length === 1 && slotIdx === 0;
   const compareActiveCls = compareSelecting ? ' active' : '';
   const compareBtn = showCompareBtn
-    ? `<button class="gm-compare${compareActiveCls}" onclick="toggleCompare()" title="다른 결사와 비교">⚖</button>`
+    ? `<button class="gm-compare${compareActiveCls}" onclick="toggleCompare()" title="다른 결사와 나란히 비교합니다 — 클릭 후 비교할 결사를 선택하세요">⚖</button>`
     : '';
 
 
@@ -1320,7 +1332,9 @@ function buildMigrationHistoryHtml(guildName) {
     }).join('');
 
     return `<div class="gm-migration" style="padding:12px 16px;border-top:1px solid var(--border)">
-        <div style="font-size:11px;font-weight:600;color:var(--text-dim);margin-bottom:6px;letter-spacing:.05em">📍 결사 이전 이력</div>
+        <div style="font-size:11px;font-weight:600;color:var(--text-dim);margin-bottom:6px;letter-spacing:.05em">📍 결사 이전 이력<i class="tip tip-left" data-tip="이 결사의 서버 이전 확정 기록입니다.
+이전됨 ← : 다른 결사가 이 이름으로 이전해 옴
+이동함 → : 이 결사가 다른 이름으로 이전함"></i></div>
         ${rows}
     </div>`;
 }
