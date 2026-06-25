@@ -107,6 +107,7 @@ function startAutoLogout(minutes) {
 let statusInterval = null;
 
 async function initAdmin() {
+    initCardCollapse();
   // 마스터가 아니면 마스터 전용 카드 비활성화
   if (!isMaster) {
     document.querySelectorAll('.master-only').forEach(el => el.classList.add('disabled'));
@@ -1126,3 +1127,25 @@ async function gtDismiss(pendingId) {
 }
 
 checkAuth();
+
+// ── 카드 접기/펴기 ────────────────────────────────────────────
+function initCardCollapse() {
+    document.querySelectorAll('.card').forEach(card => {
+        const title = card.querySelector(':scope > .card-title');
+        if (!title) return;
+
+        const body = document.createElement('div');
+        body.className = 'card-body';
+        [...card.children].forEach(el => { if (el !== title) body.appendChild(el); });
+        card.appendChild(body);
+
+        const key = 'card-collapsed-' + (card.id || title.textContent.trim().slice(0, 20));
+        if (localStorage.getItem(key) === '1') card.classList.add('collapsed');
+
+        title.addEventListener('click', e => {
+            if (e.target.closest('.tip')) return;
+            card.classList.toggle('collapsed');
+            localStorage.setItem(key, card.classList.contains('collapsed') ? '1' : '0');
+        });
+    });
+}

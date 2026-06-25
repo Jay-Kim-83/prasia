@@ -225,3 +225,10 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
 .tip:hover::after{opacity:1}
 .tip.tip-right::after{left:0;transform:none}
 .tip.tip-left::after{left:auto;right:0;transform:none}
+
+/* ── 카드 접기/펴기 ──────────────────────────────────────────── */
+.card-title{cursor:pointer}
+.card-title::after{content:'▾';margin-left:auto;font-size:11px;color:var(--text-faint);transition:transform .2s;display:inline-block}
+.card.collapsed .card-title::after{transform:rotate(-90deg)}
+.card-body{overflow:hidden;transition:height .22s ease}
+.card.collapsed .card-body{display:none}
