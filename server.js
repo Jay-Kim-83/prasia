@@ -511,7 +511,7 @@ app.get('/api/sync-download', (req, res) => {
     const decoded = Buffer.from(token, 'base64').toString('utf8');
     if (!decoded.endsWith(':prasia')) return res.status(403).json({ success: false, message: '마스터 관리자만 사용 가능합니다.' });
   } catch { return res.status(403).json({ success: false, message: '토큰 오류' }); }
-  const files = ['config.json', 'schedule.json', 'meta.json', 'rankings.json'];
+  const files = ['config.json', 'schedule.json', 'meta.json', 'rankings.json', 'guild_tracking.json', 'migration_candidates.json', 'guild_snapshot.json'];
   const data = {};
   for (const file of files) {
     const fp = path.join(__dirname, 'data', file);

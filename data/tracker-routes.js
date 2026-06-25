@@ -11,22 +11,11 @@ const handle = (fn) => async (req, res) => {
     }
 };
 
-router.get('/guilds', handle(() => tracker.getTrackedGuilds()));
-
-router.get('/guilds/:id', handle((req) => tracker.getGuildHistory(req.params.id)));
-
-router.post('/guilds', handle((req) => {
-    const { guildName, world } = req.body;
-    if (!guildName || !world) throw new Error('guildName, world 필드가 필요합니다');
-    return tracker.addTrackedGuild(guildName, world, req.user?.id);
-}));
-
-router.delete('/guilds/:id', handle((req) => {
-    tracker.removeTrackedGuild(req.params.id);
-    return null;
-}));
+router.get('/status', handle(() => tracker.getSnapshotInfo()));
 
 router.get('/pending', handle(() => tracker.getPendingMigrations()));
+
+router.get('/confirmed', handle(() => tracker.getConfirmedMigrations()));
 
 router.post('/pending/:id/confirm', handle((req) => {
     const { candidateIndex } = req.body;
@@ -39,11 +28,11 @@ router.post('/pending/:id/dismiss', handle((req) => {
     return null;
 }));
 
-router.post('/detect', handle(() => tracker.runDetection()));
+router.post('/detect', handle(() => tracker.runAutoDetection()));
 
-router.post('/sync', handle(() => {
-    tracker.syncMembers();
-    return null;
+router.post('/snapshot', handle(() => {
+    const count = tracker.snapshotAllGuilds();
+    return { savedGuilds: count };
 }));
 
 module.exports = router;
