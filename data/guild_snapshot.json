@@ -400,7 +400,7 @@
         {
           "nickname": "Cola",
           "job": "환영검사",
-          "level": 93,
+          "level": 92,
           "conquestGrade": 26,
           "realm": "론도 01"
         },
@@ -437,7 +437,7 @@
     "미깡|론도": {
       "guildName": "미깡",
       "world": "론도",
-      "memberCount": 8,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "야생마",
@@ -484,13 +484,6 @@
         {
           "nickname": "레전드감독홍명보",
           "job": "환영검사",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "진땡칠",
-          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "론도 01"
@@ -595,6 +588,34 @@
         },
         {
           "nickname": "강하게때려고멘네",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        }
+      ]
+    },
+    "더킹|론도": {
+      "guildName": "더킹",
+      "world": "론도",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "홍횽",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "집나갔다돌아온일호",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "홍련이",
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
@@ -3073,46 +3094,18 @@
         }
       ]
     },
-    "마루는강쥐|라인소프": {
-      "guildName": "마루는강쥐",
-      "world": "라인소프",
-      "memberCount": 4,
-      "members": [
-        {
-          "nickname": "강서노",
-          "job": "향사수",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "라인소프 02"
-        },
-        {
-          "nickname": "온마님",
-          "job": "환영검사",
-          "level": 87,
-          "conquestGrade": 22,
-          "realm": "라인소프 02"
-        },
-        {
-          "nickname": "도토리묵",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 20,
-          "realm": "라인소프 02"
-        },
-        {
-          "nickname": "강빛구름",
-          "job": "주문각인사",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "라인소프 02"
-        }
-      ]
-    },
     "원피스해적단|라인소프": {
       "guildName": "원피스해적단",
       "world": "라인소프",
-      "memberCount": 6,
+      "memberCount": 7,
       "members": [
+        {
+          "nickname": "강사또",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "라인소프 02"
+        },
         {
           "nickname": "극강케릭",
           "job": "주문각인사",
@@ -3153,6 +3146,41 @@
           "job": "집행관",
           "level": 83,
           "conquestGrade": 19,
+          "realm": "라인소프 02"
+        }
+      ]
+    },
+    "마루는강쥐|라인소프": {
+      "guildName": "마루는강쥐",
+      "world": "라인소프",
+      "memberCount": 4,
+      "members": [
+        {
+          "nickname": "강서노",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "라인소프 02"
+        },
+        {
+          "nickname": "온마님",
+          "job": "환영검사",
+          "level": 87,
+          "conquestGrade": 22,
+          "realm": "라인소프 02"
+        },
+        {
+          "nickname": "도토리묵",
+          "job": "집행관",
+          "level": 86,
+          "conquestGrade": 20,
+          "realm": "라인소프 02"
+        },
+        {
+          "nickname": "강빛구름",
+          "job": "주문각인사",
+          "level": 86,
+          "conquestGrade": 21,
           "realm": "라인소프 02"
         }
       ]
@@ -5928,13 +5956,6 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "아이스쿠림",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "아민타 02"
-        },
-        {
           "nickname": "독불",
           "job": "주문각인사",
           "level": 89,
@@ -5946,6 +5967,13 @@
           "job": "집행관",
           "level": 89,
           "conquestGrade": 22,
+          "realm": "아민타 02"
+        },
+        {
+          "nickname": "아이스쿠림",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 24,
           "realm": "아민타 02"
         },
         {
@@ -21267,7 +21295,7 @@
         {
           "nickname": "오만의탑",
           "job": "집행관",
-          "level": 88,
+          "level": 89,
           "conquestGrade": 24,
           "realm": "나세르 03"
         },
@@ -28519,5 +28547,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-25T18:20:44.418Z"
+  "updatedAt": "2026-06-25T18:30:47.473Z"
 }
