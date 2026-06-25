@@ -148,7 +148,11 @@ async function runScrape() {
   try {
     await scrapeRankings();
     // 수집 완료 후 모든 동적 파일 GitHub 동기화
-    try { tracker.syncMembers(); tracker.runAutoDetection(); } catch(e) { console.error('[Tracker]', e.message); }
+    try {
+      const guildCount = tracker.syncMembers();
+      const detected = tracker.runAutoDetection();
+      console.log(`[Tracker] 스냅샷 저장: ${guildCount}개 결사 | 이전 감지: ${detected?.detected ?? 0}건`);
+    } catch(e) { console.error('[Tracker] 오류:', e.message); }
     github.pushAll().catch(e => console.error('[GitHub] 동기화 오류:', e.message));
     const elapsed = Date.now() - startTime;
     const min = Math.floor(elapsed / 60000);
