@@ -148,7 +148,7 @@ async function runScrape() {
   try {
     await scrapeRankings();
     // 수집 완료 후 모든 동적 파일 GitHub 동기화
-    try { tracker.syncMembers(); tracker.runDetection(); } catch(e) { console.error('[Tracker]', e.message); }
+    try { tracker.syncMembers(); tracker.runAutoDetection(); } catch(e) { console.error('[Tracker]', e.message); }
     github.pushAll().catch(e => console.error('[GitHub] 동기화 오류:', e.message));
     const elapsed = Date.now() - startTime;
     const min = Math.floor(elapsed / 60000);
