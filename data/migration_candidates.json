@@ -1,4 +1,36 @@
 {
-  "pending": [],
+  "pending": [
+    {
+      "id": "pending-001",
+      "guildKey": "철혈군단|메르비스",
+      "guildName": "철혈군단",
+      "world": "메르비스",
+      "detectedAt": "2026-06-25T04:30:00.000Z",
+      "lastMemberCount": 22,
+      "currentMemberCount": 3,
+      "candidates": [
+        {
+          "guildName": "철혈용사단",
+          "world": "카이네",
+          "matchCount": 16,
+          "matchRate": 72.7,
+          "totalMembers": 19,
+          "matchingMembers": ["기사왕", "폭풍검사", "빛의수호자", "어둠의검객", "불꽃전사"],
+          "jobChanges": [
+            { "nickname": "폭풍검사", "from": "검사", "to": "버서커" }
+          ]
+        },
+        {
+          "guildName": "강철의의지",
+          "world": "베리아",
+          "matchCount": 5,
+          "matchRate": 22.7,
+          "totalMembers": 14,
+          "matchingMembers": ["달빛궁수", "바람의전령", "대지의방패"],
+          "jobChanges": []
+        }
+      ]
+    }
+  ],
   "resolved": []
 }
