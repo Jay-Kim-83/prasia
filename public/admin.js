@@ -1072,12 +1072,12 @@ function renderGtPending(pending) {
             <div style="font-size:12px;color:var(--text-dim);margin-bottom:8px">
                 <strong style="color:var(--text)">⚔ ${esc(p.guildName)}</strong>
                 <span style="color:var(--text-faint);font-size:11px;margin-left:4px">${esc(p.world)}</span>
-                <span style="color:var(--gold);font-size:11px;margin-left:8px">→ 이전 감지</span>
+                <span style="color:var(--gold);font-size:11px;margin-left:8px">서버 이전 의심</span>
                 <span style="font-size:10px;color:var(--text-faint);margin-left:8px">${new Date(p.detectedAt).toLocaleString('ko-KR')}</span>
-                <div style="font-size:11px;color:var(--text-faint);margin-top:2px">이전 ${p.lastMemberCount}명 → 현재 ${p.currentMemberCount}명</div>
+                <div style="font-size:11px;color:var(--text-faint);margin-top:2px">스냅샷 ${p.lastMemberCount}명 → 현재 ${p.currentMemberCount}명 (${Math.round(p.currentMemberCount/p.lastMemberCount*100)}% 잔류)</div>
             </div>
             ${candidateRows}
-            <button class="btn-sm" style="font-size:11px;margin-top:6px;color:var(--text-faint)" onclick="gtDismiss('${p.id}')">무시</button>
+            <button class="btn-sm" title="이전이 아님 (해체·자연감소 등) — 대기 목록에서 제거" style="font-size:11px;margin-top:6px;color:var(--text-faint)" onclick="gtDismiss('${p.id}')">✕ 이전 아님</button>
         </div>`;
     }).join('');
 }
