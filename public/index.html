@@ -685,7 +685,7 @@ let bubbleMap = {};  // key: 'guild|nickname' → message
 
 // ── INIT ─────────────────────────────────────────────────────────
 async function init() {
-  gtLoadTracked();
+  gtLoadConfirmedMigrations();
   try {
     const [dRes, sRes, dispRes, bRes] = await Promise.all([authFetch('/api/data'), authFetch('/api/status'), fetch('/api/display'), fetch('/api/bubbles')]);
     const data   = await dRes.json();
@@ -1161,20 +1161,17 @@ function buildGuildModalHtml({guild, realm}, slotIdx) {
     ? `<button class="gm-compare${compareActiveCls}" onclick="toggleCompare()" title="다른 결사와 비교">⚖</button>`
     : '';
 
-  const isTracked = gtTrackedGuildKeys.has(`${guild}|${realm||''}`);
-  const trackBtn = isAdminUser && showCompareBtn
-    ? `<button class="gm-compare${isTracked ? ' active' : ''}" onclick="gtToggleTrack('${escAttr(guild)}','${escAttr(realm||'')}')" title="${isTracked ? '추적 해제' : '결사 추적 등록'}">📍</button>`
-    : '';
+
 
   return `<div class="guild-modal" data-slot="${slotIdx}">
     <div class="gm-header">
       <h2>⚔ ${esc(guild)}${realmLabel} <span>${members.length}명</span></h2>
-      ${trackBtn}
       ${compareBtn}
       <button class="gm-close" onclick="closeSlot(${slotIdx})">✕</button>
     </div>
     <div class="gm-stats">${statsHtml}</div>
     <div class="gm-list">${listHtml}</div>
+    ${buildMigrationHistoryHtml(guild)}
   </div>`;
 }
 
@@ -1292,60 +1289,40 @@ document.addEventListener('click', e => {
 });
 
 
-// ── 결사 추적 (index) ──────────────────────────────────────────
-let gtTrackedGuildKeys = new Set();
+// ── 결사 이전이력 (index) ─────────────────────────────────────
+let allConfirmedMigrations = [];
 
-async function gtLoadTracked() {
-    if (!isAdminUser) return;
+async function gtLoadConfirmedMigrations() {
     try {
-        const res = await authFetch('/api/tracker/guilds');
+        const res = await fetch('/api/tracker/confirmed');
         const data = await res.json();
-        if (!data.ok) return;
-        gtTrackedGuildKeys = new Set(
-            data.data.flatMap(g => {
-                const cur = g.history[g.history.length - 1];
-                return cur ? [`${cur.guildName}|${cur.realm ? cur.realm.split(' ')[0] : ''}`] : [];
-            })
-        );
+        if (data.ok) allConfirmedMigrations = data.data || [];
     } catch {}
 }
 
-async function gtToggleTrack(guild, realm) {
-    if (!isAdminUser) return;
-    const world = realm ? realm.replace(/ \d+$/, '') : '';
-    const key = `${guild}|${realm || ''}`;
-    if (gtTrackedGuildKeys.has(key)) {
-        // 해제: ID 찾아서 DELETE
-        try {
-            const res = await authFetch('/api/tracker/guilds');
-            const data = await res.json();
-            const found = data.ok && data.data.find(g => {
-                const cur = g.history[g.history.length - 1];
-                return cur && cur.guildName === guild;
-            });
-            if (found) {
-                await authFetch('/api/tracker/guilds/' + found.id, { method: 'DELETE' });
-                gtTrackedGuildKeys.delete(key);
-                showToast('추적 해제됨');
-                renderGuildOverlay();
-            }
-        } catch {}
-    } else {
-        try {
-            const res = await authFetch('/api/tracker/guilds', {
-                method: 'POST', headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ guildName: guild, world })
-            });
-            const data = await res.json();
-            if (data.ok) {
-                gtTrackedGuildKeys.add(key);
-                showToast('✅ 결사 추적 등록됨');
-                renderGuildOverlay();
-            } else {
-                showToast('오류: ' + (data.error || '알 수 없음'));
-            }
-        } catch {}
-    }
+function buildMigrationHistoryHtml(guildName) {
+    const related = allConfirmedMigrations.filter(c =>
+        c.from.guildName === guildName || c.to.guildName === guildName
+    );
+    if (!related.length) return '';
+
+    const rows = related.map(c => {
+        const isFrom = c.from.guildName === guildName;
+        const direction = isFrom
+            ? `<span style="color:var(--text-dim)">이동함</span> → <span style="color:var(--cyan)">${esc(c.to.guildName)}</span> <span style="color:var(--text-faint)">${esc(c.to.world)}</span>`
+            : `<span style="color:var(--text-dim)">이전됨</span> ← <span style="color:var(--gold-light)">${esc(c.from.guildName)}</span> <span style="color:var(--text-faint)">${esc(c.from.world)}</span>`;
+        const date = new Date(c.confirmedAt).toLocaleDateString('ko-KR');
+        return `<div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--border);font-size:12px">
+            <span style="font-size:10px;color:var(--text-faint);white-space:nowrap">${date}</span>
+            <span>${direction}</span>
+            <span style="margin-left:auto;color:var(--text-faint);font-size:11px">${c.matchRate}% 일치</span>
+        </div>`;
+    }).join('');
+
+    return `<div class="gm-migration" style="padding:12px 16px;border-top:1px solid var(--border)">
+        <div style="font-size:11px;font-weight:600;color:var(--text-dim);margin-bottom:6px;letter-spacing:.05em">📍 결사 이전 이력</div>
+        ${rows}
+    </div>`;
 }
 
 function closeGuildModal() {

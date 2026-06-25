@@ -1089,16 +1089,23 @@ function renderGtConfirmed(confirmed) {
         el.innerHTML = '<div style="font-size:12px;color:var(--text-faint);padding:6px 0">확정된 이전 이력이 없습니다.</div>';
         return;
     }
-    el.innerHTML = confirmed.slice().reverse().slice(0, 20).map(c => `
-        <div style="padding:8px 10px;background:var(--bg2);border-radius:6px;border:1px solid var(--border);margin-bottom:6px;font-size:12px">
-            <span style="color:var(--text-dim)">${esc(c.from.guildName)}</span>
-            <span style="color:var(--text-faint);margin:0 6px">${esc(c.from.world)}</span>
-            <span style="color:var(--gold)">→</span>
-            <span style="color:var(--cyan);margin:0 6px">${esc(c.to.guildName)}</span>
-            <span style="color:var(--text-faint)">${esc(c.to.world)}</span>
-            <span style="color:var(--text-faint);font-size:10px;margin-left:8px">${c.matchRate}% 일치</span>
-            <div style="font-size:10px;color:var(--text-faint);margin-top:2px">${new Date(c.confirmedAt).toLocaleString('ko-KR')} · ${esc(c.confirmedBy || '')}</div>
-        </div>`).join('');
+    el.innerHTML = confirmed.slice().reverse().slice(0, 50).map(c => {
+        const date = new Date(c.confirmedAt).toLocaleDateString('ko-KR');
+        const matchColor = c.matchRate >= 50 ? 'var(--green,#4caf50)' : c.matchRate >= 30 ? 'var(--gold)' : 'var(--text-faint)';
+        return `<div style="padding:10px 12px;background:var(--bg2);border-radius:7px;border:1px solid var(--border);margin-bottom:8px">
+            <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+                <span style="font-size:13px;font-weight:600;color:var(--text)">${esc(c.from.guildName)}</span>
+                <span style="font-size:11px;color:var(--text-faint)">${esc(c.from.world)}</span>
+                <span style="color:var(--gold);font-size:16px;margin:0 2px">→</span>
+                <span style="font-size:13px;font-weight:600;color:var(--cyan)">${esc(c.to.guildName)}</span>
+                <span style="font-size:11px;color:var(--text-faint)">${esc(c.to.world)}</span>
+                <span style="margin-left:auto;font-size:12px;font-weight:600;color:${matchColor}">${c.matchRate}%</span>
+            </div>
+            <div style="margin-top:5px;font-size:11px;color:var(--text-faint)">
+                멤버 ${c.matchCount}명 일치 · ${date} · ${esc(c.confirmedBy || 'admin')}
+            </div>
+        </div>`;
+    }).join('');
 }
 
 async function gtConfirm(pendingId, candidateIndex) {
