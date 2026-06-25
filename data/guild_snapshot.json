@@ -10655,7 +10655,7 @@
         {
           "nickname": "와일드",
           "job": "집행관",
-          "level": 87,
+          "level": 88,
           "conquestGrade": 24,
           "realm": "가리안 05"
         },
@@ -13152,17 +13152,17 @@
           "realm": "사도바 04"
         },
         {
-          "nickname": "바닐라맛콜라",
-          "job": "주문각인사",
-          "level": 83,
-          "conquestGrade": 20,
-          "realm": "사도바 04"
-        },
-        {
           "nickname": "션샤인",
           "job": "향사수",
           "level": 83,
           "conquestGrade": 19,
+          "realm": "사도바 04"
+        },
+        {
+          "nickname": "바닐라맛콜라",
+          "job": "주문각인사",
+          "level": 83,
+          "conquestGrade": 20,
           "realm": "사도바 04"
         },
         {
@@ -16764,17 +16764,17 @@
           "realm": "제롬 05"
         },
         {
-          "nickname": "혼자왔냥",
-          "job": "주문각인사",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "제롬 05"
-        },
-        {
           "nickname": "기염냥",
           "job": "향사수",
           "level": 86,
           "conquestGrade": 22,
+          "realm": "제롬 05"
+        },
+        {
+          "nickname": "혼자왔냥",
+          "job": "주문각인사",
+          "level": 86,
+          "conquestGrade": 21,
           "realm": "제롬 05"
         },
         {
@@ -19330,7 +19330,7 @@
     "냐오|아티산": {
       "guildName": "냐오",
       "world": "아티산",
-      "memberCount": 10,
+      "memberCount": 11,
       "members": [
         {
           "nickname": "옥군",
@@ -19400,6 +19400,13 @@
           "job": "향사수",
           "level": 84,
           "conquestGrade": 18,
+          "realm": "아티산 04"
+        },
+        {
+          "nickname": "쌀과자도둑마멋",
+          "job": "집행관",
+          "level": 84,
+          "conquestGrade": 20,
           "realm": "아티산 04"
         }
       ]
@@ -24545,7 +24552,7 @@
     "neo|타리아": {
       "guildName": "neo",
       "world": "타리아",
-      "memberCount": 40,
+      "memberCount": 39,
       "members": [
         {
           "nickname": "DNA",
@@ -24818,13 +24825,6 @@
           "job": "주문각인사",
           "level": 83,
           "conquestGrade": 17,
-          "realm": "타리아 04"
-        },
-        {
-          "nickname": "멍이",
-          "job": "환영검사",
-          "level": 83,
-          "conquestGrade": 19,
           "realm": "타리아 04"
         }
       ]
@@ -27691,6 +27691,13 @@
       "memberCount": 5,
       "members": [
         {
+          "nickname": "얍사",
+          "job": "야만투사",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "메르비스 04"
+        },
+        {
           "nickname": "딱딱딱",
           "job": "향사수",
           "level": 90,
@@ -27699,13 +27706,6 @@
         },
         {
           "nickname": "백사",
-          "job": "야만투사",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "메르비스 04"
-        },
-        {
-          "nickname": "얍사",
           "job": "야만투사",
           "level": 90,
           "conquestGrade": 25,
@@ -28540,5 +28540,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-25T17:30:47.353Z"
+  "updatedAt": "2026-06-25T17:40:45.325Z"
 }
