@@ -719,25 +719,32 @@ async function syncPull() {
   try {
     const res = await adminFetch('/api/sync-download');
     const data = await res.json();
-    if (data.success && data.files) {
-      const files = data.files;
-      let count = 0;
-      for (const [name, content] of Object.entries(files)) {
-        if (content === null) continue;
-        const blob = new Blob([JSON.stringify(content, null, 2)], { type: 'application/json' });
+    if (!data.success || !data.files) { showToast(data.message || '다운로드 실패'); return; }
+
+    const entries = Object.entries(data.files).filter(([, v]) => v !== null);
+
+    if ('showDirectoryPicker' in window) {
+      const dirHandle = await window.showDirectoryPicker({ mode: 'readwrite' });
+      for (const [name, fileContent] of entries) {
+        const fileHandle = await dirHandle.getFileHandle(name, { create: true });
+        const writable = await fileHandle.createWritable();
+        await writable.write(JSON.stringify(fileContent, null, 2));
+        await writable.close();
+      }
+      showToast(`✅ ${entries.length}개 파일 저장 완료`);
+    } else {
+      for (const [name, fileContent] of entries) {
+        const blob = new Blob([JSON.stringify(fileContent, null, 2)], { type: 'application/json' });
         const a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
         a.download = name;
         a.click();
         URL.revokeObjectURL(a.href);
-        count++;
       }
-      showToast(`✅ ${count}개 파일 다운로드 완료`);
-    } else {
-      showToast(data.message || '다운로드 실패');
+      showToast(`✅ ${entries.length}개 파일 다운로드 완료 (기본 경로)`);
     }
-  } catch {
-    showToast('서버 연결 실패');
+  } catch (e) {
+    if (e.name !== 'AbortError') showToast('서버 연결 실패');
   } finally {
     btn.disabled = false;
     btn.textContent = '📥 서버 → 로컬 다운로드';
