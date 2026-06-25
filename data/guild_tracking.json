@@ -1,37 +1,3 @@
 {
-  "confirmed": [
-    {
-      "id": "dummy-001",
-      "from": { "guildName": "붉은여명", "world": "메르비스" },
-      "to":   { "guildName": "새벽의기사단", "world": "카이네" },
-      "matchRate": 73.5,
-      "matchCount": 14,
-      "memberCount": 18,
-      "confirmedAt": "2026-05-15T14:22:00.000Z",
-      "confirmedBy": "admin",
-      "detectedAt": "2026-05-15T10:00:00.000Z"
-    },
-    {
-      "id": "dummy-002",
-      "from": { "guildName": "폭풍의눈", "world": "메르비스" },
-      "to":   { "guildName": "폭풍기사단", "world": "베리아" },
-      "matchRate": 58.3,
-      "matchCount": 7,
-      "memberCount": 11,
-      "confirmedAt": "2026-05-16T09:45:00.000Z",
-      "confirmedBy": "admin",
-      "detectedAt": "2026-05-15T22:00:00.000Z"
-    },
-    {
-      "id": "dummy-003",
-      "from": { "guildName": "새벽의기사단", "world": "카이네" },
-      "to":   { "guildName": "여명기사단", "world": "메르비스" },
-      "matchRate": 81.2,
-      "matchCount": 17,
-      "memberCount": 20,
-      "confirmedAt": "2026-06-20T16:10:00.000Z",
-      "confirmedBy": "admin",
-      "detectedAt": "2026-06-20T12:00:00.000Z"
-    }
-  ]
+  "confirmed": []
 }
