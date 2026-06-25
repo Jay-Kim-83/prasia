@@ -3972,7 +3972,7 @@
     "빨간펜|라인소프": {
       "guildName": "빨간펜",
       "world": "라인소프",
-      "memberCount": 4,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "술집언니",
@@ -3999,6 +3999,13 @@
           "nickname": "연홍이",
           "job": "주문각인사",
           "level": 82,
+          "conquestGrade": 18,
+          "realm": "라인소프 03"
+        },
+        {
+          "nickname": "욕쟁이언니",
+          "job": "태양감시자",
+          "level": 81,
           "conquestGrade": 18,
           "realm": "라인소프 03"
         }
@@ -4686,7 +4693,7 @@
     "산방산구경오세요|라인소프": {
       "guildName": "산방산구경오세요",
       "world": "라인소프",
-      "memberCount": 10,
+      "memberCount": 9,
       "members": [
         {
           "nickname": "관짝이의광휘",
@@ -4749,13 +4756,6 @@
           "job": "태양감시자",
           "level": 79,
           "conquestGrade": 18,
-          "realm": "라인소프 05"
-        },
-        {
-          "nickname": "이미랑",
-          "job": "주문각인사",
-          "level": 79,
-          "conquestGrade": 15,
           "realm": "라인소프 05"
         }
       ]
@@ -5963,17 +5963,17 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "공듀",
-          "job": "집행관",
-          "level": 88,
-          "conquestGrade": 23,
-          "realm": "아민타 02"
-        },
-        {
           "nickname": "땃쥐가화나면돈땃쥐",
           "job": "향사수",
           "level": 88,
           "conquestGrade": 24,
+          "realm": "아민타 02"
+        },
+        {
+          "nickname": "공듀",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 23,
           "realm": "아민타 02"
         },
         {
@@ -28519,5 +28519,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-25T18:00:47.689Z"
+  "updatedAt": "2026-06-25T18:10:45.815Z"
 }
