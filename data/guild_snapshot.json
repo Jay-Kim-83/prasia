@@ -461,13 +461,6 @@
           "realm": "론도 01"
         },
         {
-          "nickname": "영원해",
-          "job": "향사수",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "론도 01"
-        },
-        {
           "nickname": "추격자",
           "job": "야만투사",
           "level": 92,
@@ -475,8 +468,8 @@
           "realm": "론도 01"
         },
         {
-          "nickname": "김땡칠",
-          "job": "야만투사",
+          "nickname": "영원해",
+          "job": "향사수",
           "level": 92,
           "conquestGrade": 25,
           "realm": "론도 01"
@@ -484,6 +477,13 @@
         {
           "nickname": "엑땡칠",
           "job": "집행관",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "김땡칠",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "론도 01"
@@ -7409,8 +7409,15 @@
     "신전|아민타": {
       "guildName": "신전",
       "world": "아민타",
-      "memberCount": 4,
+      "memberCount": 5,
       "members": [
+        {
+          "nickname": "잔나비",
+          "job": "환영검사",
+          "level": 85,
+          "conquestGrade": 20,
+          "realm": "아민타 04"
+        },
         {
           "nickname": "태감",
           "job": "태양감시자",
@@ -11108,17 +11115,17 @@
           "realm": "사도바 01"
         },
         {
-          "nickname": "금강불괴",
-          "job": "야만투사",
-          "level": 90,
-          "conquestGrade": 23,
-          "realm": "사도바 01"
-        },
-        {
           "nickname": "라비엘",
           "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "사도바 01"
+        },
+        {
+          "nickname": "금강불괴",
+          "job": "야만투사",
+          "level": 90,
+          "conquestGrade": 23,
           "realm": "사도바 01"
         },
         {
@@ -21071,7 +21078,7 @@
         {
           "nickname": "켄시",
           "job": "태양감시자",
-          "level": 84,
+          "level": 85,
           "conquestGrade": 21,
           "realm": "나세르 02"
         },
@@ -21414,7 +21421,7 @@
         {
           "nickname": "오만의탑",
           "job": "집행관",
-          "level": 88,
+          "level": 89,
           "conquestGrade": 24,
           "realm": "나세르 03"
         },
@@ -25507,17 +25514,17 @@
           "realm": "타리아 05"
         },
         {
-          "nickname": "유해진",
-          "job": "환영검사",
-          "level": 83,
-          "conquestGrade": 20,
-          "realm": "타리아 05"
-        },
-        {
           "nickname": "남궁민",
           "job": "야만투사",
           "level": 83,
           "conquestGrade": 19,
+          "realm": "타리아 05"
+        },
+        {
+          "nickname": "유해진",
+          "job": "환영검사",
+          "level": 83,
+          "conquestGrade": 20,
           "realm": "타리아 05"
         }
       ]
@@ -28736,5 +28743,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-26T03:50:47.163Z"
+  "updatedAt": "2026-06-26T04:00:50.783Z"
 }
