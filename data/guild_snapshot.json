@@ -5624,7 +5624,7 @@
     "위스키|아민타": {
       "guildName": "위스키",
       "world": "아민타",
-      "memberCount": 14,
+      "memberCount": 15,
       "members": [
         {
           "nickname": "예천동",
@@ -5720,6 +5720,13 @@
         {
           "nickname": "블링블링",
           "job": "태양감시자",
+          "level": 83,
+          "conquestGrade": 18,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "발광머리앤",
+          "job": "향사수",
           "level": 83,
           "conquestGrade": 18,
           "realm": "아민타 01"
@@ -6793,7 +6800,7 @@
     "중립|아민타": {
       "guildName": "중립",
       "world": "아민타",
-      "memberCount": 10,
+      "memberCount": 9,
       "members": [
         {
           "nickname": "황금제국",
@@ -6856,13 +6863,6 @@
           "job": "향사수",
           "level": 79,
           "conquestGrade": 13,
-          "realm": "아민타 03"
-        },
-        {
-          "nickname": "가루다",
-          "job": "주문각인사",
-          "level": 78,
-          "conquestGrade": 16,
           "realm": "아민타 03"
         }
       ]
@@ -6993,10 +6993,45 @@
         }
       ]
     },
+    "영원히|아민타": {
+      "guildName": "영원히",
+      "world": "아민타",
+      "memberCount": 4,
+      "members": [
+        {
+          "nickname": "바른말고운말",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "아민타 04"
+        },
+        {
+          "nickname": "힘들어요",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 25,
+          "realm": "아민타 04"
+        },
+        {
+          "nickname": "sle",
+          "job": "집행관",
+          "level": 80,
+          "conquestGrade": 16,
+          "realm": "아민타 04"
+        },
+        {
+          "nickname": "그리움",
+          "job": "환영검사",
+          "level": 80,
+          "conquestGrade": 16,
+          "realm": "아민타 04"
+        }
+      ]
+    },
     "동쪽이|아민타": {
       "guildName": "동쪽이",
       "world": "아민타",
-      "memberCount": 21,
+      "memberCount": 22,
       "members": [
         {
           "nickname": "덩치",
@@ -7029,6 +7064,13 @@
         {
           "nickname": "CoIa",
           "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 22,
+          "realm": "아민타 04"
+        },
+        {
+          "nickname": "귀신",
+          "job": "집행관",
           "level": 88,
           "conquestGrade": 22,
           "realm": "아민타 04"
@@ -7143,34 +7185,6 @@
           "job": "환영검사",
           "level": 78,
           "conquestGrade": 12,
-          "realm": "아민타 04"
-        }
-      ]
-    },
-    "영원히|아민타": {
-      "guildName": "영원히",
-      "world": "아민타",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "힘들어요",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 25,
-          "realm": "아민타 04"
-        },
-        {
-          "nickname": "sle",
-          "job": "집행관",
-          "level": 80,
-          "conquestGrade": 16,
-          "realm": "아민타 04"
-        },
-        {
-          "nickname": "그리움",
-          "job": "환영검사",
-          "level": 80,
-          "conquestGrade": 16,
           "realm": "아민타 04"
         }
       ]
@@ -27012,17 +27026,17 @@
           "realm": "메르비스 03"
         },
         {
-          "nickname": "메잘",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 25,
-          "realm": "메르비스 03"
-        },
-        {
           "nickname": "제라드",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "메르비스 03"
+        },
+        {
+          "nickname": "메잘",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 25,
           "realm": "메르비스 03"
         },
         {
@@ -28601,17 +28615,17 @@
           "realm": "메르비스 05"
         },
         {
-          "nickname": "하늘",
-          "job": "심연추방자",
-          "level": 82,
-          "conquestGrade": 19,
-          "realm": "메르비스 05"
-        },
-        {
           "nickname": "박보영",
           "job": "야만투사",
           "level": 82,
           "conquestGrade": 17,
+          "realm": "메르비스 05"
+        },
+        {
+          "nickname": "하늘",
+          "job": "심연추방자",
+          "level": 81,
+          "conquestGrade": 19,
           "realm": "메르비스 05"
         },
         {
@@ -28715,5 +28729,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-26T03:20:47.563Z"
+  "updatedAt": "2026-06-26T03:30:48.059Z"
 }
