@@ -5354,17 +5354,17 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "환타사랑",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "아민타 01"
-        },
-        {
           "nickname": "평경장",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "환타사랑",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "아민타 01"
         },
         {
@@ -9229,7 +9229,7 @@
     "위젤|가리안": {
       "guildName": "위젤",
       "world": "가리안",
-      "memberCount": 9,
+      "memberCount": 8,
       "members": [
         {
           "nickname": "하라랑",
@@ -9257,13 +9257,6 @@
           "job": "집행관",
           "level": 89,
           "conquestGrade": 23,
-          "realm": "가리안 02"
-        },
-        {
-          "nickname": "감귤이아빠",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 24,
           "realm": "가리안 02"
         },
         {
@@ -9457,10 +9450,38 @@
         }
       ]
     },
+    "슈퍼|가리안": {
+      "guildName": "슈퍼",
+      "world": "가리안",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "창원마산",
+          "job": "향사수",
+          "level": 85,
+          "conquestGrade": 20,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "매콤달콤",
+          "job": "주문각인사",
+          "level": 85,
+          "conquestGrade": 19,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "이리왕",
+          "job": "향사수",
+          "level": 84,
+          "conquestGrade": 18,
+          "realm": "가리안 02"
+        }
+      ]
+    },
     "인연|가리안": {
       "guildName": "인연",
       "world": "가리안",
-      "memberCount": 22,
+      "memberCount": 20,
       "members": [
         {
           "nickname": "이카",
@@ -9474,13 +9495,6 @@
           "job": "집행관",
           "level": 92,
           "conquestGrade": 26,
-          "realm": "가리안 03"
-        },
-        {
-          "nickname": "침공",
-          "job": "집행관",
-          "level": 91,
-          "conquestGrade": 25,
           "realm": "가리안 03"
         },
         {
@@ -9593,13 +9607,6 @@
           "job": "주문각인사",
           "level": 83,
           "conquestGrade": 19,
-          "realm": "가리안 03"
-        },
-        {
-          "nickname": "홍의",
-          "job": "야만투사",
-          "level": 83,
-          "conquestGrade": 20,
           "realm": "가리안 03"
         },
         {
@@ -27016,7 +27023,7 @@
     "삼전|메르비스": {
       "guildName": "삼전",
       "world": "메르비스",
-      "memberCount": 6,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "후이즈",
@@ -27058,6 +27065,13 @@
           "job": "향사수",
           "level": 80,
           "conquestGrade": 13,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "어이쿠쿠웅",
+          "job": "야만투사",
+          "level": 79,
+          "conquestGrade": 17,
           "realm": "메르비스 02"
         }
       ]
@@ -28038,7 +28052,7 @@
     "Nan|메르비스": {
       "guildName": "Nan",
       "world": "메르비스",
-      "memberCount": 18,
+      "memberCount": 19,
       "members": [
         {
           "nickname": "전쟁",
@@ -28165,13 +28179,20 @@
           "level": 83,
           "conquestGrade": 20,
           "realm": "메르비스 04"
+        },
+        {
+          "nickname": "추성훈",
+          "job": "심연추방자",
+          "level": 83,
+          "conquestGrade": 20,
+          "realm": "메르비스 04"
         }
       ]
     },
     "홍콩반점|메르비스": {
       "guildName": "홍콩반점",
       "world": "메르비스",
-      "memberCount": 20,
+      "memberCount": 19,
       "members": [
         {
           "nickname": "개미식당",
@@ -28302,13 +28323,6 @@
         {
           "nickname": "울면",
           "job": "태양감시자",
-          "level": 83,
-          "conquestGrade": 20,
-          "realm": "메르비스 04"
-        },
-        {
-          "nickname": "짜장면",
-          "job": "집행관",
           "level": 83,
           "conquestGrade": 20,
           "realm": "메르비스 04"
@@ -28925,5 +28939,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-26T10:10:49.845Z"
+  "updatedAt": "2026-06-26T10:20:50.256Z"
 }
