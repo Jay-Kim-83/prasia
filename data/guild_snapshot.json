@@ -3825,7 +3825,7 @@
     "임시정부|라인소프": {
       "guildName": "임시정부",
       "world": "라인소프",
-      "memberCount": 3,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "깨부",
@@ -3846,6 +3846,13 @@
           "job": "향사수",
           "level": 82,
           "conquestGrade": 18,
+          "realm": "라인소프 03"
+        },
+        {
+          "nickname": "비에이라",
+          "job": "집행관",
+          "level": 78,
+          "conquestGrade": 15,
           "realm": "라인소프 03"
         }
       ]
@@ -4056,7 +4063,7 @@
     "콜드|라인소프": {
       "guildName": "콜드",
       "world": "라인소프",
-      "memberCount": 30,
+      "memberCount": 29,
       "members": [
         {
           "nickname": "제토",
@@ -4124,13 +4131,6 @@
         {
           "nickname": "펭귄이",
           "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 25,
-          "realm": "라인소프 04"
-        },
-        {
-          "nickname": "팍씨",
-          "job": "집행관",
           "level": 89,
           "conquestGrade": 25,
           "realm": "라인소프 04"
@@ -11955,17 +11955,17 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "골까는골뱅이",
-          "job": "환영검사",
-          "level": 85,
-          "conquestGrade": 21,
-          "realm": "사도바 02"
-        },
-        {
           "nickname": "금송",
           "job": "집행관",
           "level": 85,
           "conquestGrade": 22,
+          "realm": "사도바 02"
+        },
+        {
+          "nickname": "골까는골뱅이",
+          "job": "환영검사",
+          "level": 85,
+          "conquestGrade": 21,
           "realm": "사도바 02"
         },
         {
@@ -26281,7 +26281,7 @@
     "로맨틱|메르비스": {
       "guildName": "로맨틱",
       "world": "메르비스",
-      "memberCount": 4,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "말티즈",
@@ -26309,6 +26309,13 @@
           "job": "향사수",
           "level": 83,
           "conquestGrade": 20,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "마동석",
+          "job": "집행관",
+          "level": 83,
+          "conquestGrade": 18,
           "realm": "메르비스 01"
         }
       ]
@@ -28673,5 +28680,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-26T02:30:46.779Z"
+  "updatedAt": "2026-06-26T02:40:50.716Z"
 }
