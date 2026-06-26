@@ -925,7 +925,7 @@
         {
           "nickname": "클레오파트라",
           "job": "주문각인사",
-          "level": 87,
+          "level": 86,
           "conquestGrade": 23,
           "realm": "론도 02"
         },
@@ -16488,13 +16488,27 @@
     "제과점|제롬": {
       "guildName": "제과점",
       "world": "제롬",
-      "memberCount": 44,
+      "memberCount": 46,
       "members": [
+        {
+          "nickname": "통발",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "제롬 05"
+        },
         {
           "nickname": "뿌셔뿌셔",
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
+          "realm": "제롬 05"
+        },
+        {
+          "nickname": "대머리모꼬꼬",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 25,
           "realm": "제롬 05"
         },
         {
@@ -17174,7 +17188,7 @@
     "우주|제롬": {
       "guildName": "우주",
       "world": "제롬",
-      "memberCount": 5,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "왕밤빵",
@@ -17202,13 +17216,6 @@
           "job": "주문각인사",
           "level": 84,
           "conquestGrade": 20,
-          "realm": "제롬 05"
-        },
-        {
-          "nickname": "튀김소보로",
-          "job": "환영검사",
-          "level": 84,
-          "conquestGrade": 21,
           "realm": "제롬 05"
         }
       ]
@@ -22865,7 +22872,7 @@
     "마커스평화|나세르": {
       "guildName": "마커스평화",
       "world": "나세르",
-      "memberCount": 6,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "강태공",
@@ -22907,6 +22914,13 @@
           "job": "주문각인사",
           "level": 80,
           "conquestGrade": 17,
+          "realm": "나세르 05"
+        },
+        {
+          "nickname": "그러하다",
+          "job": "집행관",
+          "level": 80,
+          "conquestGrade": 15,
           "realm": "나세르 05"
         }
       ]
@@ -26410,17 +26424,17 @@
           "realm": "메르비스 02"
         },
         {
-          "nickname": "무기",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 22,
-          "realm": "메르비스 02"
-        },
-        {
           "nickname": "세균맨",
           "job": "향사수",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "무기",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 22,
           "realm": "메르비스 02"
         },
         {
@@ -28715,5 +28729,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-26T05:20:47.387Z"
+  "updatedAt": "2026-06-26T05:30:51.430Z"
 }
