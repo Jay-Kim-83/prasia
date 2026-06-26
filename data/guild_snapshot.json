@@ -3,7 +3,7 @@
     "DOG|론도": {
       "guildName": "DOG",
       "world": "론도",
-      "memberCount": 12,
+      "memberCount": 11,
       "members": [
         {
           "nickname": "유튜브맛나는꼬꼬",
@@ -80,13 +80,6 @@
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "오월의우니",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
           "realm": "론도 01"
         }
       ]
@@ -581,6 +574,34 @@
         },
         {
           "nickname": "강하게때려고멘네",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        }
+      ]
+    },
+    "더킹|론도": {
+      "guildName": "더킹",
+      "world": "론도",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "홍횽",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "집나갔다돌아온일호",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "홍련이",
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
@@ -8016,7 +8037,7 @@
         {
           "nickname": "키키",
           "job": "주문각인사",
-          "level": 82,
+          "level": 83,
           "conquestGrade": 19,
           "realm": "아민타 05"
         },
@@ -8570,7 +8591,7 @@
           "nickname": "샤크",
           "job": "주문각인사",
           "level": 86,
-          "conquestGrade": 20,
+          "conquestGrade": 21,
           "realm": "가리안 01"
         },
         {
@@ -11108,17 +11129,17 @@
           "realm": "사도바 01"
         },
         {
-          "nickname": "은비",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "사도바 01"
-        },
-        {
           "nickname": "먹골배",
           "job": "야만투사",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "사도바 01"
+        },
+        {
+          "nickname": "은비",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 23,
           "realm": "사도바 01"
         },
         {
@@ -13140,7 +13161,7 @@
         {
           "nickname": "검은양",
           "job": "환영검사",
-          "level": 84,
+          "level": 85,
           "conquestGrade": 20,
           "realm": "사도바 04"
         },
@@ -23089,15 +23110,8 @@
     "프리아|타리아": {
       "guildName": "프리아",
       "world": "타리아",
-      "memberCount": 34,
+      "memberCount": 33,
       "members": [
-        {
-          "nickname": "타잔",
-          "job": "야만투사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "타리아 01"
-        },
         {
           "nickname": "니얼굴쏜다",
           "job": "주문각인사",
@@ -28209,13 +28223,6 @@
           "realm": "메르비스 04"
         },
         {
-          "nickname": "나홀리집에",
-          "job": "집행관",
-          "level": 84,
-          "conquestGrade": 19,
-          "realm": "메르비스 04"
-        },
-        {
           "nickname": "유산슬",
           "job": "집행관",
           "level": 84,
@@ -28223,15 +28230,22 @@
           "realm": "메르비스 04"
         },
         {
-          "nickname": "태풍",
-          "job": "향사수",
+          "nickname": "나홀리집에",
+          "job": "집행관",
           "level": 84,
-          "conquestGrade": 20,
+          "conquestGrade": 19,
           "realm": "메르비스 04"
         },
         {
           "nickname": "신속배달",
           "job": "집행관",
+          "level": 84,
+          "conquestGrade": 20,
+          "realm": "메르비스 04"
+        },
+        {
+          "nickname": "태풍",
+          "job": "향사수",
           "level": 84,
           "conquestGrade": 20,
           "realm": "메르비스 04"
@@ -28855,5 +28869,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-26T18:10:46.057Z"
+  "updatedAt": "2026-06-26T18:20:48.154Z"
 }
