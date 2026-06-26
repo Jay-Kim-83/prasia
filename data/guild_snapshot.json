@@ -4325,15 +4325,15 @@
           "realm": "라인소프 04"
         },
         {
-          "nickname": "레에게",
-          "job": "야만투사",
+          "nickname": "세턴",
+          "job": "집행관",
           "level": 88,
           "conquestGrade": 22,
           "realm": "라인소프 04"
         },
         {
-          "nickname": "세턴",
-          "job": "집행관",
+          "nickname": "레에게",
+          "job": "야만투사",
           "level": 88,
           "conquestGrade": 22,
           "realm": "라인소프 04"
@@ -5984,14 +5984,14 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "아이스쿠림",
+          "nickname": "수호킹",
           "job": "집행관",
           "level": 89,
           "conquestGrade": 24,
           "realm": "아민타 02"
         },
         {
-          "nickname": "수호킹",
+          "nickname": "아이스쿠림",
           "job": "집행관",
           "level": 89,
           "conquestGrade": 24,
@@ -7094,7 +7094,7 @@
     "동쪽이|아민타": {
       "guildName": "동쪽이",
       "world": "아민타",
-      "memberCount": 19,
+      "memberCount": 18,
       "members": [
         {
           "nickname": "덩치",
@@ -7220,13 +7220,6 @@
           "job": "주문각인사",
           "level": 78,
           "conquestGrade": 15,
-          "realm": "아민타 04"
-        },
-        {
-          "nickname": "리명박그네",
-          "job": "환영검사",
-          "level": 78,
-          "conquestGrade": 12,
           "realm": "아민타 04"
         }
       ]
@@ -27576,7 +27569,7 @@
     "빌런|메르비스": {
       "guildName": "빌런",
       "world": "메르비스",
-      "memberCount": 19,
+      "memberCount": 20,
       "members": [
         {
           "nickname": "Mu",
@@ -27644,6 +27637,13 @@
         {
           "nickname": "백사",
           "job": "야만투사",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "메르비스 04"
+        },
+        {
+          "nickname": "창빌런",
+          "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
           "realm": "메르비스 04"
@@ -27761,13 +27761,6 @@
           "realm": "메르비스 04"
         },
         {
-          "nickname": "이글",
-          "job": "야만투사",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "메르비스 04"
-        },
-        {
           "nickname": "카와이",
           "job": "야만투사",
           "level": 90,
@@ -27776,6 +27769,13 @@
         },
         {
           "nickname": "딱구리",
+          "job": "야만투사",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "메르비스 04"
+        },
+        {
+          "nickname": "이글",
           "job": "야만투사",
           "level": 90,
           "conquestGrade": 25,
@@ -28188,13 +28188,6 @@
           "realm": "메르비스 04"
         },
         {
-          "nickname": "나홀리집에",
-          "job": "집행관",
-          "level": 84,
-          "conquestGrade": 19,
-          "realm": "메르비스 04"
-        },
-        {
           "nickname": "유산슬",
           "job": "집행관",
           "level": 84,
@@ -28202,15 +28195,22 @@
           "realm": "메르비스 04"
         },
         {
-          "nickname": "신속배달",
+          "nickname": "나홀리집에",
           "job": "집행관",
           "level": 84,
-          "conquestGrade": 20,
+          "conquestGrade": 19,
           "realm": "메르비스 04"
         },
         {
           "nickname": "태풍",
           "job": "향사수",
+          "level": 84,
+          "conquestGrade": 20,
+          "realm": "메르비스 04"
+        },
+        {
+          "nickname": "신속배달",
+          "job": "집행관",
           "level": 84,
           "conquestGrade": 20,
           "realm": "메르비스 04"
@@ -28388,7 +28388,7 @@
     "시나브로|메르비스": {
       "guildName": "시나브로",
       "world": "메르비스",
-      "memberCount": 13,
+      "memberCount": 14,
       "members": [
         {
           "nickname": "미나미",
@@ -28402,6 +28402,13 @@
           "job": "집행관",
           "level": 87,
           "conquestGrade": 21,
+          "realm": "메르비스 05"
+        },
+        {
+          "nickname": "라곤",
+          "job": "주문각인사",
+          "level": 86,
+          "conquestGrade": 22,
           "realm": "메르비스 05"
         },
         {
@@ -28827,5 +28834,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-26T21:20:49.111Z"
+  "updatedAt": "2026-06-26T21:30:46.167Z"
 }
