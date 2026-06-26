@@ -3487,7 +3487,7 @@
         {
           "nickname": "만트라",
           "job": "주문각인사",
-          "level": 82,
+          "level": 83,
           "conquestGrade": 1,
           "realm": "라인소프 02"
         },
@@ -7531,13 +7531,6 @@
           "realm": "아민타 05"
         },
         {
-          "nickname": "AB",
-          "job": "향사수",
-          "level": 88,
-          "conquestGrade": 23,
-          "realm": "아민타 05"
-        },
-        {
           "nickname": "투썸",
           "job": "집행관",
           "level": 88,
@@ -7546,6 +7539,13 @@
         },
         {
           "nickname": "대추랑",
+          "job": "향사수",
+          "level": 88,
+          "conquestGrade": 23,
+          "realm": "아민타 05"
+        },
+        {
+          "nickname": "AB",
           "job": "향사수",
           "level": 88,
           "conquestGrade": 23,
@@ -22378,15 +22378,15 @@
           "realm": "나세르 04"
         },
         {
-          "nickname": "유언",
-          "job": "향사수",
-          "level": 81,
+          "nickname": "백정",
+          "job": "야만투사",
+          "level": 82,
           "conquestGrade": 19,
           "realm": "나세르 04"
         },
         {
-          "nickname": "백정",
-          "job": "야만투사",
+          "nickname": "유언",
+          "job": "향사수",
           "level": 81,
           "conquestGrade": 19,
           "realm": "나세르 04"
@@ -22730,7 +22730,7 @@
         {
           "nickname": "무엇이든",
           "job": "심연추방자",
-          "level": 84,
+          "level": 85,
           "conquestGrade": 21,
           "realm": "나세르 05"
         },
@@ -27233,7 +27233,7 @@
     "미르|메르비스": {
       "guildName": "미르",
       "world": "메르비스",
-      "memberCount": 9,
+      "memberCount": 10,
       "members": [
         {
           "nickname": "볼빵빵다람쥐",
@@ -27282,6 +27282,13 @@
           "job": "태양감시자",
           "level": 82,
           "conquestGrade": 17,
+          "realm": "메르비스 03"
+        },
+        {
+          "nickname": "말자",
+          "job": "심연추방자",
+          "level": 82,
+          "conquestGrade": 19,
           "realm": "메르비스 03"
         },
         {
@@ -28708,5 +28715,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-26T03:00:45.758Z"
+  "updatedAt": "2026-06-26T03:10:47.616Z"
 }
