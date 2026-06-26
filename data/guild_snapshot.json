@@ -3,7 +3,7 @@
     "DOG|론도": {
       "guildName": "DOG",
       "world": "론도",
-      "memberCount": 11,
+      "memberCount": 12,
       "members": [
         {
           "nickname": "유튜브맛나는꼬꼬",
@@ -80,6 +80,13 @@
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "오월의우니",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
           "realm": "론도 01"
         }
       ]
@@ -8431,7 +8438,7 @@
     "고스톱|가리안": {
       "guildName": "고스톱",
       "world": "가리안",
-      "memberCount": 15,
+      "memberCount": 16,
       "members": [
         {
           "nickname": "액티언",
@@ -8533,6 +8540,13 @@
         },
         {
           "nickname": "하얀마음",
+          "job": "향사수",
+          "level": 82,
+          "conquestGrade": 18,
+          "realm": "가리안 01"
+        },
+        {
+          "nickname": "헨젤과그럼안돼",
           "job": "향사수",
           "level": 82,
           "conquestGrade": 18,
@@ -8840,17 +8854,17 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "구경만",
-          "job": "태양감시자",
-          "level": 89,
-          "conquestGrade": 22,
-          "realm": "가리안 02"
-        },
-        {
           "nickname": "속쓰리면트리겔정",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "구경만",
+          "job": "태양감시자",
+          "level": 89,
+          "conquestGrade": 22,
           "realm": "가리안 02"
         },
         {
@@ -11892,15 +11906,15 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "최병운",
-          "job": "향사수",
+          "nickname": "골까는골뱅이",
+          "job": "환영검사",
           "level": 85,
           "conquestGrade": 21,
           "realm": "사도바 02"
         },
         {
-          "nickname": "골까는골뱅이",
-          "job": "환영검사",
+          "nickname": "최병운",
+          "job": "향사수",
           "level": 85,
           "conquestGrade": 21,
           "realm": "사도바 02"
@@ -13483,7 +13497,7 @@
         {
           "nickname": "스윗",
           "job": "집행관",
-          "level": 82,
+          "level": 83,
           "conquestGrade": 20,
           "realm": "사도바 04"
         }
@@ -19116,15 +19130,15 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "짙은",
-          "job": "향사수",
+          "nickname": "육퇴하고싶나봄",
+          "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
           "realm": "아티산 04"
         },
         {
-          "nickname": "육퇴하고싶나봄",
-          "job": "주문각인사",
+          "nickname": "짙은",
+          "job": "향사수",
           "level": 89,
           "conquestGrade": 24,
           "realm": "아티산 04"
@@ -20373,7 +20387,7 @@
     "시간의힘|나세르": {
       "guildName": "시간의힘",
       "world": "나세르",
-      "memberCount": 12,
+      "memberCount": 13,
       "members": [
         {
           "nickname": "낙동강오리알",
@@ -20458,13 +20472,20 @@
           "level": 81,
           "conquestGrade": 18,
           "realm": "나세르 01"
+        },
+        {
+          "nickname": "연양갱",
+          "job": "향사수",
+          "level": 81,
+          "conquestGrade": 18,
+          "realm": "나세르 01"
         }
       ]
     },
     "우정|나세르": {
       "guildName": "우정",
       "world": "나세르",
-      "memberCount": 11,
+      "memberCount": 10,
       "members": [
         {
           "nickname": "밀라보레아스",
@@ -20534,13 +20555,6 @@
           "job": "주문각인사",
           "level": 82,
           "conquestGrade": 18,
-          "realm": "나세르 01"
-        },
-        {
-          "nickname": "요아",
-          "job": "집행관",
-          "level": 81,
-          "conquestGrade": 17,
           "realm": "나세르 01"
         }
       ]
@@ -26392,7 +26406,7 @@
           "nickname": "마동석",
           "job": "집행관",
           "level": 83,
-          "conquestGrade": 18,
+          "conquestGrade": 19,
           "realm": "메르비스 01"
         },
         {
@@ -28834,5 +28848,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-26T14:40:48.280Z"
+  "updatedAt": "2026-06-26T14:50:46.447Z"
 }
