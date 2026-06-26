@@ -9754,7 +9754,7 @@
     "동행복권|가리안": {
       "guildName": "동행복권",
       "world": "가리안",
-      "memberCount": 3,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "민란의시대",
@@ -9775,6 +9775,13 @@
           "job": "야만투사",
           "level": 83,
           "conquestGrade": 19,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "천운소환",
+          "job": "집행관",
+          "level": 81,
+          "conquestGrade": 17,
           "realm": "가리안 03"
         }
       ]
@@ -12046,15 +12053,15 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "유비할인",
-          "job": "집행관",
+          "nickname": "파파",
+          "job": "태양감시자",
           "level": 85,
           "conquestGrade": 20,
           "realm": "사도바 02"
         },
         {
-          "nickname": "파파",
-          "job": "태양감시자",
+          "nickname": "유비할인",
+          "job": "집행관",
           "level": 85,
           "conquestGrade": 20,
           "realm": "사도바 02"
@@ -18019,7 +18026,7 @@
         {
           "nickname": "야인",
           "job": "집행관",
-          "level": 90,
+          "level": 91,
           "conquestGrade": 24,
           "realm": "아티산 02"
         },
@@ -20279,83 +20286,6 @@
         }
       ]
     },
-    "TT|나세르": {
-      "guildName": "TT",
-      "world": "나세르",
-      "memberCount": 10,
-      "members": [
-        {
-          "nickname": "김밥천국",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "나세르 01"
-        },
-        {
-          "nickname": "엘리",
-          "job": "태양감시자",
-          "level": 84,
-          "conquestGrade": 17,
-          "realm": "나세르 01"
-        },
-        {
-          "nickname": "손책",
-          "job": "집행관",
-          "level": 84,
-          "conquestGrade": 17,
-          "realm": "나세르 01"
-        },
-        {
-          "nickname": "오마주",
-          "job": "환영검사",
-          "level": 83,
-          "conquestGrade": 18,
-          "realm": "나세르 01"
-        },
-        {
-          "nickname": "대박하루",
-          "job": "집행관",
-          "level": 82,
-          "conquestGrade": 19,
-          "realm": "나세르 01"
-        },
-        {
-          "nickname": "삐삐",
-          "job": "주문각인사",
-          "level": 82,
-          "conquestGrade": 18,
-          "realm": "나세르 01"
-        },
-        {
-          "nickname": "조운",
-          "job": "환영검사",
-          "level": 82,
-          "conquestGrade": 16,
-          "realm": "나세르 01"
-        },
-        {
-          "nickname": "김민아",
-          "job": "심연추방자",
-          "level": 82,
-          "conquestGrade": 11,
-          "realm": "나세르 01"
-        },
-        {
-          "nickname": "케찹도둑",
-          "job": "집행관",
-          "level": 82,
-          "conquestGrade": 19,
-          "realm": "나세르 01"
-        },
-        {
-          "nickname": "견희",
-          "job": "태양감시자",
-          "level": 81,
-          "conquestGrade": 15,
-          "realm": "나세르 01"
-        }
-      ]
-    },
     "시간의힘|나세르": {
       "guildName": "시간의힘",
       "world": "나세르",
@@ -20646,6 +20576,76 @@
           "job": "주문각인사",
           "level": 82,
           "conquestGrade": 19,
+          "realm": "나세르 01"
+        }
+      ]
+    },
+    "TT|나세르": {
+      "guildName": "TT",
+      "world": "나세르",
+      "memberCount": 9,
+      "members": [
+        {
+          "nickname": "엘리",
+          "job": "태양감시자",
+          "level": 84,
+          "conquestGrade": 17,
+          "realm": "나세르 01"
+        },
+        {
+          "nickname": "손책",
+          "job": "집행관",
+          "level": 84,
+          "conquestGrade": 17,
+          "realm": "나세르 01"
+        },
+        {
+          "nickname": "오마주",
+          "job": "환영검사",
+          "level": 83,
+          "conquestGrade": 18,
+          "realm": "나세르 01"
+        },
+        {
+          "nickname": "대박하루",
+          "job": "집행관",
+          "level": 82,
+          "conquestGrade": 19,
+          "realm": "나세르 01"
+        },
+        {
+          "nickname": "삐삐",
+          "job": "주문각인사",
+          "level": 82,
+          "conquestGrade": 18,
+          "realm": "나세르 01"
+        },
+        {
+          "nickname": "조운",
+          "job": "환영검사",
+          "level": 82,
+          "conquestGrade": 16,
+          "realm": "나세르 01"
+        },
+        {
+          "nickname": "김민아",
+          "job": "심연추방자",
+          "level": 82,
+          "conquestGrade": 11,
+          "realm": "나세르 01"
+        },
+        {
+          "nickname": "케찹도둑",
+          "job": "집행관",
+          "level": 82,
+          "conquestGrade": 19,
+          "realm": "나세르 01"
+        },
+        {
+          "nickname": "견희",
+          "job": "태양감시자",
+          "level": 81,
+          "conquestGrade": 15,
           "realm": "나세르 01"
         }
       ]
@@ -22042,17 +22042,17 @@
           "realm": "나세르 04"
         },
         {
-          "nickname": "알새우칩",
-          "job": "집행관",
-          "level": 88,
-          "conquestGrade": 23,
-          "realm": "나세르 04"
-        },
-        {
           "nickname": "쇼군",
           "job": "태양감시자",
           "level": 88,
           "conquestGrade": 21,
+          "realm": "나세르 04"
+        },
+        {
+          "nickname": "알새우칩",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 23,
           "realm": "나세르 04"
         },
         {
@@ -22525,14 +22525,14 @@
           "realm": "나세르 05"
         },
         {
-          "nickname": "수요힐",
+          "nickname": "복학생",
           "job": "주문각인사",
           "level": 80,
           "conquestGrade": 17,
           "realm": "나세르 05"
         },
         {
-          "nickname": "복학생",
+          "nickname": "수요힐",
           "job": "주문각인사",
           "level": 80,
           "conquestGrade": 17,
@@ -28827,5 +28827,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-26T20:40:47.362Z"
+  "updatedAt": "2026-06-26T20:50:45.579Z"
 }
