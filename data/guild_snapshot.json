@@ -9390,7 +9390,7 @@
     "인연|가리안": {
       "guildName": "인연",
       "world": "가리안",
-      "memberCount": 19,
+      "memberCount": 20,
       "members": [
         {
           "nickname": "이카",
@@ -9425,6 +9425,13 @@
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "이킹",
+          "job": "향사수",
+          "level": 89,
+          "conquestGrade": 21,
           "realm": "가리안 03"
         },
         {
@@ -9747,7 +9754,7 @@
     "동행복권|가리안": {
       "guildName": "동행복권",
       "world": "가리안",
-      "memberCount": 4,
+      "memberCount": 3,
       "members": [
         {
           "nickname": "민란의시대",
@@ -9768,13 +9775,6 @@
           "job": "야만투사",
           "level": 83,
           "conquestGrade": 19,
-          "realm": "가리안 03"
-        },
-        {
-          "nickname": "천운소환",
-          "job": "집행관",
-          "level": 81,
-          "conquestGrade": 17,
           "realm": "가리안 03"
         }
       ]
@@ -11353,17 +11353,17 @@
           "realm": "사도바 01"
         },
         {
-          "nickname": "라미래스",
-          "job": "환영검사",
-          "level": 83,
-          "conquestGrade": 18,
-          "realm": "사도바 01"
-        },
-        {
           "nickname": "베르사유",
           "job": "집행관",
           "level": 83,
           "conquestGrade": 19,
+          "realm": "사도바 01"
+        },
+        {
+          "nickname": "라미래스",
+          "job": "환영검사",
+          "level": 83,
+          "conquestGrade": 18,
           "realm": "사도바 01"
         },
         {
@@ -25472,15 +25472,15 @@
           "realm": "타리아 05"
         },
         {
-          "nickname": "김종민",
-          "job": "향사수",
+          "nickname": "연예인빽가",
+          "job": "주문각인사",
           "level": 85,
           "conquestGrade": 21,
           "realm": "타리아 05"
         },
         {
-          "nickname": "연예인빽가",
-          "job": "주문각인사",
+          "nickname": "김종민",
+          "job": "향사수",
           "level": 85,
           "conquestGrade": 21,
           "realm": "타리아 05"
@@ -28841,5 +28841,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-26T20:00:49.256Z"
+  "updatedAt": "2026-06-26T20:10:49.618Z"
 }
