@@ -5162,7 +5162,7 @@
     "동물사랑|아민타": {
       "guildName": "동물사랑",
       "world": "아민타",
-      "memberCount": 47,
+      "memberCount": 48,
       "members": [
         {
           "nickname": "귤귤",
@@ -5492,13 +5492,20 @@
           "level": 85,
           "conquestGrade": 21,
           "realm": "아민타 01"
+        },
+        {
+          "nickname": "낙타사랑",
+          "job": "환영검사",
+          "level": 83,
+          "conquestGrade": 20,
+          "realm": "아민타 01"
         }
       ]
     },
     "최고|아민타": {
       "guildName": "최고",
       "world": "아민타",
-      "memberCount": 6,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "꿀탱이",
@@ -5517,13 +5524,6 @@
         {
           "nickname": "마력",
           "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "아민타 01"
-        },
-        {
-          "nickname": "도령",
-          "job": "태양감시자",
           "level": 89,
           "conquestGrade": 23,
           "realm": "아민타 01"
@@ -11136,17 +11136,17 @@
           "realm": "사도바 01"
         },
         {
-          "nickname": "딸기몽땅라떼",
-          "job": "향사수",
-          "level": 88,
-          "conquestGrade": 21,
-          "realm": "사도바 01"
-        },
-        {
           "nickname": "강동원",
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 22,
+          "realm": "사도바 01"
+        },
+        {
+          "nickname": "딸기몽땅라떼",
+          "job": "향사수",
+          "level": 88,
+          "conquestGrade": 21,
           "realm": "사도바 01"
         },
         {
@@ -28834,5 +28834,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-26T22:00:47.832Z"
+  "updatedAt": "2026-06-26T22:10:53.317Z"
 }
