@@ -1609,17 +1609,17 @@
           "realm": "론도 03"
         },
         {
-          "nickname": "콩콩",
-          "job": "태양감시자",
-          "level": 84,
-          "conquestGrade": 18,
-          "realm": "론도 03"
-        },
-        {
           "nickname": "크리피스",
           "job": "집행관",
           "level": 84,
           "conquestGrade": 20,
+          "realm": "론도 03"
+        },
+        {
+          "nickname": "콩콩",
+          "job": "태양감시자",
+          "level": 84,
+          "conquestGrade": 18,
           "realm": "론도 03"
         },
         {
@@ -17174,7 +17174,7 @@
     "짤짤이|아티산": {
       "guildName": "짤짤이",
       "world": "아티산",
-      "memberCount": 4,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "퉁퉁이",
@@ -17202,6 +17202,13 @@
           "job": "야만투사",
           "level": 84,
           "conquestGrade": 19,
+          "realm": "아티산 01"
+        },
+        {
+          "nickname": "릉릉이",
+          "job": "주문각인사",
+          "level": 83,
+          "conquestGrade": 18,
           "realm": "아티산 01"
         }
       ]
@@ -17545,7 +17552,7 @@
     "환영여단|아티산": {
       "guildName": "환영여단",
       "world": "아티산",
-      "memberCount": 4,
+      "memberCount": 3,
       "members": [
         {
           "nickname": "하양돼지당",
@@ -17566,13 +17573,6 @@
           "job": "환영검사",
           "level": 84,
           "conquestGrade": 20,
-          "realm": "아티산 01"
-        },
-        {
-          "nickname": "삼겹살돼지",
-          "job": "집행관",
-          "level": 79,
-          "conquestGrade": 10,
           "realm": "아티산 01"
         }
       ]
@@ -26617,7 +26617,7 @@
     "하라리|메르비스": {
       "guildName": "하라리",
       "world": "메르비스",
-      "memberCount": 8,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "흑곰",
@@ -26643,13 +26643,6 @@
         {
           "nickname": "얼음불꽃",
           "job": "집행관",
-          "level": 85,
-          "conquestGrade": 21,
-          "realm": "메르비스 02"
-        },
-        {
-          "nickname": "참이슬두병",
-          "job": "심연추방자",
           "level": 85,
           "conquestGrade": 21,
           "realm": "메르비스 02"
@@ -27474,17 +27467,17 @@
           "realm": "메르비스 04"
         },
         {
-          "nickname": "이글",
-          "job": "야만투사",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "메르비스 04"
-        },
-        {
           "nickname": "카와이",
           "job": "야만투사",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "메르비스 04"
+        },
+        {
+          "nickname": "이글",
+          "job": "야만투사",
+          "level": 90,
+          "conquestGrade": 24,
           "realm": "메르비스 04"
         },
         {
@@ -28185,7 +28178,7 @@
     "진짜중립|메르비스": {
       "guildName": "진짜중립",
       "world": "메르비스",
-      "memberCount": 14,
+      "memberCount": 15,
       "members": [
         {
           "nickname": "로즈",
@@ -28241,6 +28234,13 @@
           "job": "주문각인사",
           "level": 85,
           "conquestGrade": 21,
+          "realm": "메르비스 05"
+        },
+        {
+          "nickname": "미남",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 20,
           "realm": "메르비스 05"
         },
         {
@@ -28659,5 +28659,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-26T00:30:45.579Z"
+  "updatedAt": "2026-06-26T00:40:47.708Z"
 }
