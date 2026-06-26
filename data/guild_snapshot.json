@@ -8179,7 +8179,7 @@
     "야구여왕|가리안": {
       "guildName": "야구여왕",
       "world": "가리안",
-      "memberCount": 42,
+      "memberCount": 41,
       "members": [
         {
           "nickname": "해피티",
@@ -8254,13 +8254,6 @@
         {
           "nickname": "아윤",
           "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "가리안 01"
-        },
-        {
-          "nickname": "귀남이",
-          "job": "집행관",
           "level": 91,
           "conquestGrade": 25,
           "realm": "가리안 01"
@@ -8480,7 +8473,7 @@
     "투견|가리안": {
       "guildName": "투견",
       "world": "가리안",
-      "memberCount": 11,
+      "memberCount": 10,
       "members": [
         {
           "nickname": "Arrrrrrrr",
@@ -8512,13 +8505,6 @@
         },
         {
           "nickname": "Arrrr",
-          "job": "주문각인사",
-          "level": 86,
-          "conquestGrade": 23,
-          "realm": "가리안 01"
-        },
-        {
-          "nickname": "홍명보사퇴",
           "job": "주문각인사",
           "level": 86,
           "conquestGrade": 23,
@@ -14526,7 +14512,7 @@
         {
           "nickname": "또치아빠",
           "job": "향사수",
-          "level": 81,
+          "level": 82,
           "conquestGrade": 19,
           "realm": "제롬 01"
         },
@@ -15319,8 +15305,15 @@
     "천사|제롬": {
       "guildName": "천사",
       "world": "제롬",
-      "memberCount": 4,
+      "memberCount": 5,
       "members": [
+        {
+          "nickname": "피크닉고구마",
+          "job": "야만투사",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "제롬 02"
+        },
         {
           "nickname": "윈터",
           "job": "주문각인사",
@@ -19834,7 +19827,7 @@
     "법무법인노쑈|아티산": {
       "guildName": "법무법인노쑈",
       "world": "아티산",
-      "memberCount": 12,
+      "memberCount": 13,
       "members": [
         {
           "nickname": "존윅",
@@ -19918,6 +19911,13 @@
           "job": "주문각인사",
           "level": 79,
           "conquestGrade": 10,
+          "realm": "아티산 05"
+        },
+        {
+          "nickname": "문의는나에게",
+          "job": "집행관",
+          "level": 77,
+          "conquestGrade": 11,
           "realm": "아티산 05"
         }
       ]
@@ -28904,5 +28904,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-26T09:00:46.987Z"
+  "updatedAt": "2026-06-26T09:10:46.319Z"
 }
