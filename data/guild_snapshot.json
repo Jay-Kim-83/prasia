@@ -6320,17 +6320,17 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "GD",
-          "job": "향사수",
-          "level": 86,
-          "conquestGrade": 20,
-          "realm": "아민타 02"
-        },
-        {
           "nickname": "민이님",
           "job": "집행관",
           "level": 86,
           "conquestGrade": 21,
+          "realm": "아민타 02"
+        },
+        {
+          "nickname": "GD",
+          "job": "향사수",
+          "level": 86,
+          "conquestGrade": 20,
           "realm": "아민타 02"
         },
         {
@@ -8569,7 +8569,7 @@
         {
           "nickname": "샤크",
           "job": "주문각인사",
-          "level": 85,
+          "level": 86,
           "conquestGrade": 20,
           "realm": "가리안 01"
         },
@@ -9390,7 +9390,7 @@
     "인연|가리안": {
       "guildName": "인연",
       "world": "가리안",
-      "memberCount": 20,
+      "memberCount": 19,
       "members": [
         {
           "nickname": "이카",
@@ -9502,13 +9502,6 @@
           "job": "주문각인사",
           "level": 85,
           "conquestGrade": 21,
-          "realm": "가리안 03"
-        },
-        {
-          "nickname": "단초선",
-          "job": "집행관",
-          "level": 83,
-          "conquestGrade": 16,
           "realm": "가리안 03"
         },
         {
@@ -9754,7 +9747,7 @@
     "동행복권|가리안": {
       "guildName": "동행복권",
       "world": "가리안",
-      "memberCount": 3,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "민란의시대",
@@ -9775,6 +9768,13 @@
           "job": "야만투사",
           "level": 83,
           "conquestGrade": 19,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "천운소환",
+          "job": "집행관",
+          "level": 81,
+          "conquestGrade": 17,
           "realm": "가리안 03"
         }
       ]
@@ -22415,7 +22415,7 @@
         {
           "nickname": "유언",
           "job": "향사수",
-          "level": 81,
+          "level": 82,
           "conquestGrade": 19,
           "realm": "나세르 04"
         },
@@ -27607,14 +27607,14 @@
           "realm": "메르비스 04"
         },
         {
-          "nickname": "아빌런",
+          "nickname": "빌런",
           "job": "집행관",
           "level": 91,
           "conquestGrade": 25,
           "realm": "메르비스 04"
         },
         {
-          "nickname": "빌런",
+          "nickname": "아빌런",
           "job": "집행관",
           "level": 91,
           "conquestGrade": 25,
@@ -28855,5 +28855,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-26T17:50:46.182Z"
+  "updatedAt": "2026-06-26T18:00:45.814Z"
 }
