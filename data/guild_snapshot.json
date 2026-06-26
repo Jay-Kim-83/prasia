@@ -651,6 +651,41 @@
         }
       ]
     },
+    "매드|론도": {
+      "guildName": "매드",
+      "world": "론도",
+      "memberCount": 4,
+      "members": [
+        {
+          "nickname": "매드뉴사신",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "뉴프알",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "인간백정이",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "김과장",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        }
+      ]
+    },
     "시그니처|론도": {
       "guildName": "시그니처",
       "world": "론도",
@@ -679,41 +714,6 @@
         },
         {
           "nickname": "심청이",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        }
-      ]
-    },
-    "매드|론도": {
-      "guildName": "매드",
-      "world": "론도",
-      "memberCount": 4,
-      "members": [
-        {
-          "nickname": "뉴프알",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "매드뉴사신",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "인간백정이",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "김과장",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
@@ -1084,14 +1084,14 @@
           "realm": "론도 02"
         },
         {
-          "nickname": "회오리",
+          "nickname": "찐따클럽백곰",
           "job": "집행관",
           "level": 85,
           "conquestGrade": 21,
           "realm": "론도 02"
         },
         {
-          "nickname": "찐따클럽백곰",
+          "nickname": "회오리",
           "job": "집행관",
           "level": 85,
           "conquestGrade": 21,
@@ -9460,7 +9460,7 @@
     "인연|가리안": {
       "guildName": "인연",
       "world": "가리안",
-      "memberCount": 16,
+      "memberCount": 18,
       "members": [
         {
           "nickname": "이카",
@@ -9488,6 +9488,13 @@
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 24,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "양갱",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "가리안 03"
         },
         {
@@ -9521,6 +9528,13 @@
         {
           "nickname": "필로테스",
           "job": "태양감시자",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "나야티티",
+          "job": "환영검사",
           "level": 86,
           "conquestGrade": 21,
           "realm": "가리안 03"
@@ -9789,7 +9803,7 @@
     "동행복권|가리안": {
       "guildName": "동행복권",
       "world": "가리안",
-      "memberCount": 4,
+      "memberCount": 3,
       "members": [
         {
           "nickname": "민란의시대",
@@ -9810,13 +9824,6 @@
           "job": "야만투사",
           "level": 83,
           "conquestGrade": 19,
-          "realm": "가리안 03"
-        },
-        {
-          "nickname": "천운소환",
-          "job": "집행관",
-          "level": 81,
-          "conquestGrade": 17,
           "realm": "가리안 03"
         }
       ]
@@ -27642,15 +27649,15 @@
           "realm": "메르비스 04"
         },
         {
-          "nickname": "창빌런",
-          "job": "주문각인사",
+          "nickname": "그린사",
+          "job": "태양감시자",
           "level": 90,
           "conquestGrade": 25,
           "realm": "메르비스 04"
         },
         {
-          "nickname": "그린사",
-          "job": "태양감시자",
+          "nickname": "창빌런",
+          "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
           "realm": "메르비스 04"
@@ -28827,5 +28834,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-26T13:20:49.422Z"
+  "updatedAt": "2026-06-26T13:30:49.387Z"
 }
