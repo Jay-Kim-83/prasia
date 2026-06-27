@@ -6019,17 +6019,17 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "아이스쿠림",
-          "job": "집행관",
-          "level": 88,
-          "conquestGrade": 24,
-          "realm": "아민타 02"
-        },
-        {
           "nickname": "공듀",
           "job": "집행관",
           "level": 88,
           "conquestGrade": 23,
+          "realm": "아민타 02"
+        },
+        {
+          "nickname": "아이스쿠림",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 24,
           "realm": "아민타 02"
         },
         {
@@ -23324,48 +23324,6 @@
         }
       ]
     },
-    "통크게쏜다|타리아": {
-      "guildName": "통크게쏜다",
-      "world": "타리아",
-      "memberCount": 5,
-      "members": [
-        {
-          "nickname": "통크",
-          "job": "주문각인사",
-          "level": 87,
-          "conquestGrade": 22,
-          "realm": "타리아 01"
-        },
-        {
-          "nickname": "빡꾸",
-          "job": "환영검사",
-          "level": 87,
-          "conquestGrade": 22,
-          "realm": "타리아 01"
-        },
-        {
-          "nickname": "뻑꾸",
-          "job": "주문각인사",
-          "level": 84,
-          "conquestGrade": 20,
-          "realm": "타리아 01"
-        },
-        {
-          "nickname": "왕창다쏜다",
-          "job": "집행관",
-          "level": 84,
-          "conquestGrade": 19,
-          "realm": "타리아 01"
-        },
-        {
-          "nickname": "오늘만쏜다",
-          "job": "환영검사",
-          "level": 82,
-          "conquestGrade": 17,
-          "realm": "타리아 01"
-        }
-      ]
-    },
     "라이트|타리아": {
       "guildName": "라이트",
       "world": "타리아",
@@ -23438,6 +23396,41 @@
           "nickname": "TEN",
           "job": "향사수",
           "level": 83,
+          "conquestGrade": 17,
+          "realm": "타리아 01"
+        }
+      ]
+    },
+    "통크게쏜다|타리아": {
+      "guildName": "통크게쏜다",
+      "world": "타리아",
+      "memberCount": 4,
+      "members": [
+        {
+          "nickname": "빡꾸",
+          "job": "환영검사",
+          "level": 87,
+          "conquestGrade": 22,
+          "realm": "타리아 01"
+        },
+        {
+          "nickname": "뻑꾸",
+          "job": "주문각인사",
+          "level": 84,
+          "conquestGrade": 20,
+          "realm": "타리아 01"
+        },
+        {
+          "nickname": "왕창다쏜다",
+          "job": "집행관",
+          "level": 84,
+          "conquestGrade": 19,
+          "realm": "타리아 01"
+        },
+        {
+          "nickname": "오늘만쏜다",
+          "job": "환영검사",
+          "level": 82,
           "conquestGrade": 17,
           "realm": "타리아 01"
         }
@@ -28547,5 +28540,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-27T21:40:47.743Z"
+  "updatedAt": "2026-06-27T21:50:51.308Z"
 }
