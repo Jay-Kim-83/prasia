@@ -468,13 +468,6 @@
           "realm": "론도 01"
         },
         {
-          "nickname": "김땡칠",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "론도 01"
-        },
-        {
           "nickname": "엑땡칠",
           "job": "집행관",
           "level": 92,
@@ -484,6 +477,13 @@
         {
           "nickname": "레전드감독홍명보",
           "job": "환영검사",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "김땡칠",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "론도 01"
@@ -637,6 +637,48 @@
         }
       ]
     },
+    "매드|론도": {
+      "guildName": "매드",
+      "world": "론도",
+      "memberCount": 5,
+      "members": [
+        {
+          "nickname": "매드뉴사신",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "뉴프알",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "인간백정이",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "멸망",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "김과장",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        }
+      ]
+    },
     "시그니처|론도": {
       "guildName": "시그니처",
       "world": "론도",
@@ -665,48 +707,6 @@
         },
         {
           "nickname": "심청이",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        }
-      ]
-    },
-    "매드|론도": {
-      "guildName": "매드",
-      "world": "론도",
-      "memberCount": 5,
-      "members": [
-        {
-          "nickname": "뉴프알",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "매드뉴사신",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "인간백정이",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "멸망",
-          "job": "집행관",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "김과장",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
@@ -15357,15 +15357,15 @@
           "realm": "제롬 03"
         },
         {
-          "nickname": "가을이",
-          "job": "심연추방자",
+          "nickname": "합기도",
+          "job": "집행관",
           "level": 84,
           "conquestGrade": 20,
           "realm": "제롬 03"
         },
         {
-          "nickname": "합기도",
-          "job": "집행관",
+          "nickname": "가을이",
+          "job": "심연추방자",
           "level": 84,
           "conquestGrade": 20,
           "realm": "제롬 03"
@@ -20163,7 +20163,7 @@
     "우정|나세르": {
       "guildName": "우정",
       "world": "나세르",
-      "memberCount": 10,
+      "memberCount": 11,
       "members": [
         {
           "nickname": "밀라보레아스",
@@ -20233,6 +20233,13 @@
           "job": "주문각인사",
           "level": 82,
           "conquestGrade": 18,
+          "realm": "나세르 01"
+        },
+        {
+          "nickname": "요아",
+          "job": "집행관",
+          "level": 81,
+          "conquestGrade": 17,
           "realm": "나세르 01"
         }
       ]
@@ -28498,5 +28505,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-27T17:00:46.593Z"
+  "updatedAt": "2026-06-27T17:10:47.110Z"
 }
