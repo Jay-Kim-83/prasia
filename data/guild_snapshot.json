@@ -825,17 +825,17 @@
           "realm": "론도 02"
         },
         {
-          "nickname": "야냐",
-          "job": "태양감시자",
-          "level": 88,
-          "conquestGrade": 24,
-          "realm": "론도 02"
-        },
-        {
           "nickname": "골든햄스터",
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 23,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "야냐",
+          "job": "태양감시자",
+          "level": 88,
+          "conquestGrade": 24,
           "realm": "론도 02"
         },
         {
@@ -4530,7 +4530,7 @@
         {
           "nickname": "솜푸딩",
           "job": "주문각인사",
-          "level": 85,
+          "level": 84,
           "conquestGrade": 21,
           "realm": "라인소프 04"
         },
@@ -5862,7 +5862,7 @@
     "AUPU|아민타": {
       "guildName": "AUPU",
       "world": "아민타",
-      "memberCount": 48,
+      "memberCount": 49,
       "members": [
         {
           "nickname": "Holic",
@@ -5937,6 +5937,13 @@
         {
           "nickname": "베리밤",
           "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "아민타 02"
+        },
+        {
+          "nickname": "리쌍",
+          "job": "집행관",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아민타 02"
@@ -17073,34 +17080,6 @@
         }
       ]
     },
-    "노바|제롬": {
-      "guildName": "노바",
-      "world": "제롬",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "늙은늑대",
-          "job": "야만투사",
-          "level": 88,
-          "conquestGrade": 23,
-          "realm": "제롬 05"
-        },
-        {
-          "nickname": "일휘",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 20,
-          "realm": "제롬 05"
-        },
-        {
-          "nickname": "별휘",
-          "job": "집행관",
-          "level": 85,
-          "conquestGrade": 17,
-          "realm": "제롬 05"
-        }
-      ]
-    },
     "감정|제롬": {
       "guildName": "감정",
       "world": "제롬",
@@ -22368,7 +22347,7 @@
     "령왕|나세르": {
       "guildName": "령왕",
       "world": "나세르",
-      "memberCount": 9,
+      "memberCount": 8,
       "members": [
         {
           "nickname": "베르가",
@@ -22389,13 +22368,6 @@
           "job": "향사수",
           "level": 89,
           "conquestGrade": 24,
-          "realm": "나세르 04"
-        },
-        {
-          "nickname": "귀비",
-          "job": "환영검사",
-          "level": 89,
-          "conquestGrade": 23,
           "realm": "나세르 04"
         },
         {
@@ -27684,15 +27656,15 @@
           "realm": "메르비스 04"
         },
         {
-          "nickname": "이글",
-          "job": "야만투사",
+          "nickname": "피카츄",
+          "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
           "realm": "메르비스 04"
         },
         {
-          "nickname": "피카츄",
-          "job": "주문각인사",
+          "nickname": "이글",
+          "job": "야만투사",
           "level": 90,
           "conquestGrade": 25,
           "realm": "메르비스 04"
@@ -28771,5 +28743,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-27T11:30:45.806Z"
+  "updatedAt": "2026-06-27T11:40:47.334Z"
 }
