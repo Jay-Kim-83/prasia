@@ -825,15 +825,15 @@
           "realm": "론도 02"
         },
         {
-          "nickname": "야냐",
-          "job": "태양감시자",
+          "nickname": "하잇",
+          "job": "야만투사",
           "level": 88,
           "conquestGrade": 24,
           "realm": "론도 02"
         },
         {
-          "nickname": "하잇",
-          "job": "야만투사",
+          "nickname": "야냐",
+          "job": "태양감시자",
           "level": 88,
           "conquestGrade": 24,
           "realm": "론도 02"
@@ -2257,19 +2257,12 @@
     "미루|론도": {
       "guildName": "미루",
       "world": "론도",
-      "memberCount": 15,
+      "memberCount": 14,
       "members": [
         {
           "nickname": "리산드라",
           "job": "집행관",
           "level": 88,
-          "conquestGrade": 22,
-          "realm": "론도 05"
-        },
-        {
-          "nickname": "대장집행",
-          "job": "집행관",
-          "level": 87,
           "conquestGrade": 22,
           "realm": "론도 05"
         },
@@ -6797,41 +6790,6 @@
         }
       ]
     },
-    "YY|아민타": {
-      "guildName": "YY",
-      "world": "아민타",
-      "memberCount": 4,
-      "members": [
-        {
-          "nickname": "SWQ",
-          "job": "환영검사",
-          "level": 84,
-          "conquestGrade": 20,
-          "realm": "아민타 03"
-        },
-        {
-          "nickname": "합니다",
-          "job": "집행관",
-          "level": 84,
-          "conquestGrade": 19,
-          "realm": "아민타 03"
-        },
-        {
-          "nickname": "희자",
-          "job": "집행관",
-          "level": 83,
-          "conquestGrade": 14,
-          "realm": "아민타 03"
-        },
-        {
-          "nickname": "보잉",
-          "job": "집행관",
-          "level": 80,
-          "conquestGrade": 18,
-          "realm": "아민타 03"
-        }
-      ]
-    },
     "중립|아민타": {
       "guildName": "중립",
       "world": "아민타",
@@ -6898,6 +6856,41 @@
           "job": "향사수",
           "level": 79,
           "conquestGrade": 13,
+          "realm": "아민타 03"
+        }
+      ]
+    },
+    "YY|아민타": {
+      "guildName": "YY",
+      "world": "아민타",
+      "memberCount": 4,
+      "members": [
+        {
+          "nickname": "SWQ",
+          "job": "환영검사",
+          "level": 84,
+          "conquestGrade": 20,
+          "realm": "아민타 03"
+        },
+        {
+          "nickname": "합니다",
+          "job": "집행관",
+          "level": 84,
+          "conquestGrade": 19,
+          "realm": "아민타 03"
+        },
+        {
+          "nickname": "희자",
+          "job": "집행관",
+          "level": 83,
+          "conquestGrade": 14,
+          "realm": "아민타 03"
+        },
+        {
+          "nickname": "보잉",
+          "job": "집행관",
+          "level": 80,
+          "conquestGrade": 18,
           "realm": "아민타 03"
         }
       ]
@@ -11080,17 +11073,17 @@
           "realm": "사도바 01"
         },
         {
-          "nickname": "오션",
-          "job": "야만투사",
-          "level": 90,
-          "conquestGrade": 23,
-          "realm": "사도바 01"
-        },
-        {
           "nickname": "당근당근",
           "job": "야만투사",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "사도바 01"
+        },
+        {
+          "nickname": "오션",
+          "job": "야만투사",
+          "level": 90,
+          "conquestGrade": 23,
           "realm": "사도바 01"
         },
         {
@@ -13329,7 +13322,7 @@
         {
           "nickname": "에릭머피",
           "job": "태양감시자",
-          "level": 83,
+          "level": 84,
           "conquestGrade": 19,
           "realm": "사도바 04"
         }
@@ -26034,7 +26027,7 @@
         {
           "nickname": "밤도둑",
           "job": "집행관",
-          "level": 86,
+          "level": 87,
           "conquestGrade": 23,
           "realm": "메르비스 01"
         },
@@ -27938,7 +27931,7 @@
         {
           "nickname": "라이츄",
           "job": "집행관",
-          "level": 87,
+          "level": 86,
           "conquestGrade": 22,
           "realm": "메르비스 04"
         },
@@ -28869,5 +28862,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-27T02:40:46.880Z"
+  "updatedAt": "2026-06-27T02:50:50.316Z"
 }
