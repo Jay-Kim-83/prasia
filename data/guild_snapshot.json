@@ -343,48 +343,6 @@
         }
       ]
     },
-    "백야행|론도": {
-      "guildName": "백야행",
-      "world": "론도",
-      "memberCount": 5,
-      "members": [
-        {
-          "nickname": "백야펜서",
-          "job": "집행관",
-          "level": 93,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "백뮤즈",
-          "job": "야만투사",
-          "level": 93,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "백야광속",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "백야이현",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "백야무형",
-          "job": "태양감시자",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        }
-      ]
-    },
     "금쪽이|론도": {
       "guildName": "금쪽이",
       "world": "론도",
@@ -435,6 +393,48 @@
         {
           "nickname": "어머련",
           "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        }
+      ]
+    },
+    "백야행|론도": {
+      "guildName": "백야행",
+      "world": "론도",
+      "memberCount": 5,
+      "members": [
+        {
+          "nickname": "백야펜서",
+          "job": "집행관",
+          "level": 93,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "백뮤즈",
+          "job": "야만투사",
+          "level": 93,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "백야광속",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "백야이현",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "백야무형",
+          "job": "태양감시자",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 01"
@@ -825,15 +825,15 @@
           "realm": "론도 02"
         },
         {
-          "nickname": "하잇",
-          "job": "야만투사",
+          "nickname": "야냐",
+          "job": "태양감시자",
           "level": 88,
           "conquestGrade": 24,
           "realm": "론도 02"
         },
         {
-          "nickname": "야냐",
-          "job": "태양감시자",
+          "nickname": "하잇",
+          "job": "야만투사",
           "level": 88,
           "conquestGrade": 24,
           "realm": "론도 02"
@@ -5991,14 +5991,14 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "아이스쿠림",
+          "nickname": "수호킹",
           "job": "집행관",
           "level": 89,
           "conquestGrade": 24,
           "realm": "아민타 02"
         },
         {
-          "nickname": "수호킹",
+          "nickname": "아이스쿠림",
           "job": "집행관",
           "level": 89,
           "conquestGrade": 24,
@@ -6026,6 +6026,13 @@
           "realm": "아민타 02"
         },
         {
+          "nickname": "땃쥐가화나면돈땃쥐",
+          "job": "향사수",
+          "level": 88,
+          "conquestGrade": 24,
+          "realm": "아민타 02"
+        },
+        {
           "nickname": "핫바",
           "job": "주문각인사",
           "level": 88,
@@ -6037,13 +6044,6 @@
           "job": "집행관",
           "level": 88,
           "conquestGrade": 23,
-          "realm": "아민타 02"
-        },
-        {
-          "nickname": "땃쥐가화나면돈땃쥐",
-          "job": "향사수",
-          "level": 88,
-          "conquestGrade": 24,
           "realm": "아민타 02"
         },
         {
@@ -20112,7 +20112,7 @@
         {
           "nickname": "임한림",
           "job": "향사수",
-          "level": 90,
+          "level": 91,
           "conquestGrade": 25,
           "realm": "나세르 01"
         },
@@ -20917,7 +20917,7 @@
         {
           "nickname": "켄시",
           "job": "태양감시자",
-          "level": 85,
+          "level": 84,
           "conquestGrade": 21,
           "realm": "나세르 02"
         },
@@ -28820,5 +28820,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-27T06:30:47.485Z"
+  "updatedAt": "2026-06-27T06:40:47.995Z"
 }
