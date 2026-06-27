@@ -647,7 +647,7 @@
     "매드|론도": {
       "guildName": "매드",
       "world": "론도",
-      "memberCount": 4,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "매드뉴사신",
@@ -668,6 +668,13 @@
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "멸망",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 25,
           "realm": "론도 01"
         },
         {
@@ -3194,7 +3201,7 @@
           "nickname": "미루미루",
           "job": "환영검사",
           "level": 87,
-          "conquestGrade": 21,
+          "conquestGrade": 22,
           "realm": "라인소프 02"
         },
         {
@@ -6033,17 +6040,17 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "땃쥐가화나면돈땃쥐",
-          "job": "향사수",
-          "level": 88,
-          "conquestGrade": 24,
-          "realm": "아민타 02"
-        },
-        {
           "nickname": "핫바",
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 23,
+          "realm": "아민타 02"
+        },
+        {
+          "nickname": "땃쥐가화나면돈땃쥐",
+          "job": "향사수",
+          "level": 88,
+          "conquestGrade": 24,
           "realm": "아민타 02"
         },
         {
@@ -6525,7 +6532,7 @@
         {
           "nickname": "쎈해바라기짝꿍",
           "job": "환영검사",
-          "level": 88,
+          "level": 87,
           "conquestGrade": 22,
           "realm": "아민타 03"
         },
@@ -10688,17 +10695,17 @@
           "realm": "가리안 05"
         },
         {
-          "nickname": "아르테스",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "가리안 05"
-        },
-        {
           "nickname": "이타도리",
           "job": "태양감시자",
           "level": 86,
           "conquestGrade": 22,
+          "realm": "가리안 05"
+        },
+        {
+          "nickname": "아르테스",
+          "job": "집행관",
+          "level": 86,
+          "conquestGrade": 21,
           "realm": "가리안 05"
         },
         {
@@ -11752,17 +11759,17 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "길왕",
-          "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 22,
-          "realm": "사도바 02"
-        },
-        {
           "nickname": "은혜",
           "job": "심연추방자",
           "level": 88,
           "conquestGrade": 23,
+          "realm": "사도바 02"
+        },
+        {
+          "nickname": "길왕",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 22,
           "realm": "사도바 02"
         },
         {
@@ -13411,14 +13418,14 @@
           "realm": "사도바 04"
         },
         {
-          "nickname": "산전수전",
+          "nickname": "스탠다더",
           "job": "주문각인사",
           "level": 83,
           "conquestGrade": 19,
           "realm": "사도바 04"
         },
         {
-          "nickname": "스탠다더",
+          "nickname": "산전수전",
           "job": "주문각인사",
           "level": 83,
           "conquestGrade": 19,
@@ -16547,17 +16554,17 @@
           "realm": "제롬 05"
         },
         {
-          "nickname": "아니카",
-          "job": "주문각인사",
-          "level": 87,
-          "conquestGrade": 22,
-          "realm": "제롬 05"
-        },
-        {
           "nickname": "은하철도",
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 21,
+          "realm": "제롬 05"
+        },
+        {
+          "nickname": "아니카",
+          "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 22,
           "realm": "제롬 05"
         },
         {
@@ -21675,7 +21682,7 @@
     "Neo|나세르": {
       "guildName": "Neo",
       "world": "나세르",
-      "memberCount": 29,
+      "memberCount": 30,
       "members": [
         {
           "nickname": "토루크막토",
@@ -21808,6 +21815,13 @@
           "job": "향사수",
           "level": 87,
           "conquestGrade": 22,
+          "realm": "나세르 04"
+        },
+        {
+          "nickname": "숭아",
+          "job": "집행관",
+          "level": 86,
+          "conquestGrade": 21,
           "realm": "나세르 04"
         },
         {
@@ -24454,7 +24468,7 @@
     "shadow|타리아": {
       "guildName": "shadow",
       "world": "타리아",
-      "memberCount": 23,
+      "memberCount": 24,
       "members": [
         {
           "nickname": "휴식",
@@ -24576,6 +24590,13 @@
           "realm": "타리아 04"
         },
         {
+          "nickname": "프리맨",
+          "job": "향사수",
+          "level": 87,
+          "conquestGrade": 22,
+          "realm": "타리아 04"
+        },
+        {
           "nickname": "무커",
           "job": "향사수",
           "level": 86,
@@ -24619,10 +24640,38 @@
         }
       ]
     },
+    "중국|타리아": {
+      "guildName": "중국",
+      "world": "타리아",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "중국인",
+          "job": "야만투사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "타리아 04"
+        },
+        {
+          "nickname": "쌀먹중",
+          "job": "심연추방자",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "타리아 04"
+        },
+        {
+          "nickname": "양택조",
+          "job": "향사수",
+          "level": 87,
+          "conquestGrade": 23,
+          "realm": "타리아 04"
+        }
+      ]
+    },
     "망고|타리아": {
       "guildName": "망고",
       "world": "타리아",
-      "memberCount": 5,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "시절인연",
@@ -24646,13 +24695,6 @@
           "realm": "타리아 04"
         },
         {
-          "nickname": "앙기모링",
-          "job": "주문각인사",
-          "level": 84,
-          "conquestGrade": 19,
-          "realm": "타리아 04"
-        },
-        {
           "nickname": "프레야",
           "job": "향사수",
           "level": 83,
@@ -24664,7 +24706,7 @@
     "파도|타리아": {
       "guildName": "파도",
       "world": "타리아",
-      "memberCount": 3,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "소설",
@@ -24677,6 +24719,13 @@
           "nickname": "카타",
           "job": "환영검사",
           "level": 86,
+          "conquestGrade": 21,
+          "realm": "타리아 04"
+        },
+        {
+          "nickname": "파라파라",
+          "job": "태양감시자",
+          "level": 85,
           "conquestGrade": 21,
           "realm": "타리아 04"
         },
@@ -25805,13 +25854,20 @@
     "월하익송|메르비스": {
       "guildName": "월하익송",
       "world": "메르비스",
-      "memberCount": 24,
+      "memberCount": 25,
       "members": [
         {
           "nickname": "변처럼",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 26,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "수한",
+          "job": "환영검사",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "메르비스 01"
         },
         {
@@ -26379,7 +26435,7 @@
     "군체|메르비스": {
       "guildName": "군체",
       "world": "메르비스",
-      "memberCount": 4,
+      "memberCount": 6,
       "members": [
         {
           "nickname": "소떡소떡",
@@ -26393,6 +26449,20 @@
           "job": "집행관",
           "level": 82,
           "conquestGrade": 19,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "귀엽기만하면안되는교",
+          "job": "주문각인사",
+          "level": 80,
+          "conquestGrade": 16,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "뚠댕뚠냥",
+          "job": "주문각인사",
+          "level": 80,
+          "conquestGrade": 16,
           "realm": "메르비스 02"
         },
         {
@@ -26449,7 +26519,7 @@
     "북두칠성|메르비스": {
       "guildName": "북두칠성",
       "world": "메르비스",
-      "memberCount": 30,
+      "memberCount": 31,
       "members": [
         {
           "nickname": "별님",
@@ -26498,6 +26568,13 @@
           "job": "집행관",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "메르비스 03"
+        },
+        {
+          "nickname": "독끼끼",
+          "job": "야만투사",
+          "level": 91,
+          "conquestGrade": 24,
           "realm": "메르비스 03"
         },
         {
@@ -27009,7 +27086,7 @@
     "몬스터볼|메르비스": {
       "guildName": "몬스터볼",
       "world": "메르비스",
-      "memberCount": 21,
+      "memberCount": 30,
       "members": [
         {
           "nickname": "선비",
@@ -27033,10 +27110,24 @@
           "realm": "메르비스 04"
         },
         {
+          "nickname": "이글",
+          "job": "야만투사",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "메르비스 04"
+        },
+        {
           "nickname": "모로하지",
           "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "메르비스 04"
+        },
+        {
+          "nickname": "피카츄",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "메르비스 04"
         },
         {
@@ -27049,6 +27140,13 @@
         {
           "nickname": "딱구리",
           "job": "야만투사",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "메르비스 04"
+        },
+        {
+          "nickname": "미뇽",
+          "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
           "realm": "메르비스 04"
@@ -27082,6 +27180,13 @@
           "realm": "메르비스 04"
         },
         {
+          "nickname": "리자몽",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 25,
+          "realm": "메르비스 04"
+        },
+        {
           "nickname": "돌맹이",
           "job": "집행관",
           "level": 88,
@@ -27089,10 +27194,24 @@
           "realm": "메르비스 04"
         },
         {
+          "nickname": "진리",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 23,
+          "realm": "메르비스 04"
+        },
+        {
           "nickname": "신비",
           "job": "심연추방자",
           "level": 88,
           "conquestGrade": 24,
+          "realm": "메르비스 04"
+        },
+        {
+          "nickname": "냐옹이",
+          "job": "심연추방자",
+          "level": 87,
+          "conquestGrade": 23,
           "realm": "메르비스 04"
         },
         {
@@ -27107,6 +27226,27 @@
           "job": "집행관",
           "level": 87,
           "conquestGrade": 22,
+          "realm": "메르비스 04"
+        },
+        {
+          "nickname": "마자용",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 21,
+          "realm": "메르비스 04"
+        },
+        {
+          "nickname": "롯데자이언봉",
+          "job": "야만투사",
+          "level": 86,
+          "conquestGrade": 22,
+          "realm": "메르비스 04"
+        },
+        {
+          "nickname": "회복약",
+          "job": "주문각인사",
+          "level": 86,
+          "conquestGrade": 21,
           "realm": "메르비스 04"
         },
         {
@@ -27163,7 +27303,7 @@
     "Nan|메르비스": {
       "guildName": "Nan",
       "world": "메르비스",
-      "memberCount": 23,
+      "memberCount": 22,
       "members": [
         {
           "nickname": "전쟁",
@@ -27316,13 +27456,6 @@
           "nickname": "꼬꼬마엠",
           "job": "주문각인사",
           "level": 82,
-          "conquestGrade": 19,
-          "realm": "메르비스 04"
-        },
-        {
-          "nickname": "구글",
-          "job": "집행관",
-          "level": 81,
           "conquestGrade": 19,
           "realm": "메르비스 04"
         }
@@ -28141,5 +28274,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-27T15:10:45.545Z"
+  "updatedAt": "2026-06-27T15:20:47.762Z"
 }
