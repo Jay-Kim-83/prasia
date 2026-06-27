@@ -3,7 +3,7 @@
     "DOG|론도": {
       "guildName": "DOG",
       "world": "론도",
-      "memberCount": 11,
+      "memberCount": 12,
       "members": [
         {
           "nickname": "유튜브맛나는꼬꼬",
@@ -80,6 +80,13 @@
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "오월의우니",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
           "realm": "론도 01"
         }
       ]
@@ -259,62 +266,6 @@
         }
       ]
     },
-    "노타치|론도": {
-      "guildName": "노타치",
-      "world": "론도",
-      "memberCount": 7,
-      "members": [
-        {
-          "nickname": "굴맛사탕",
-          "job": "야만투사",
-          "level": 93,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "헤르오빠",
-          "job": "주문각인사",
-          "level": 93,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "점멸형",
-          "job": "집행관",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "왕자형",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "세마형",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "춘이형",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "새로형",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        }
-      ]
-    },
     "싸이월드|론도": {
       "guildName": "싸이월드",
       "world": "론도",
@@ -435,6 +386,55 @@
         {
           "nickname": "백야무형",
           "job": "태양감시자",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        }
+      ]
+    },
+    "노타치|론도": {
+      "guildName": "노타치",
+      "world": "론도",
+      "memberCount": 6,
+      "members": [
+        {
+          "nickname": "굴맛사탕",
+          "job": "야만투사",
+          "level": 93,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "헤르오빠",
+          "job": "주문각인사",
+          "level": 93,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "점멸형",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "왕자형",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "세마형",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "새로형",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 01"
@@ -12994,7 +12994,7 @@
           "nickname": "칼리스타",
           "job": "태양감시자",
           "level": 86,
-          "conquestGrade": 21,
+          "conquestGrade": 22,
           "realm": "사도바 04"
         },
         {
@@ -14514,7 +14514,7 @@
     "농부|제롬": {
       "guildName": "농부",
       "world": "제롬",
-      "memberCount": 8,
+      "memberCount": 9,
       "members": [
         {
           "nickname": "지수",
@@ -14570,6 +14570,13 @@
           "job": "향사수",
           "level": 82,
           "conquestGrade": 19,
+          "realm": "제롬 01"
+        },
+        {
+          "nickname": "슉슉슉슉",
+          "job": "향사수",
+          "level": 81,
+          "conquestGrade": 15,
           "realm": "제롬 01"
         }
       ]
@@ -20966,7 +20973,7 @@
         {
           "nickname": "메스를든사냥꾼",
           "job": "심연추방자",
-          "level": 89,
+          "level": 88,
           "conquestGrade": 25,
           "realm": "나세르 02"
         },
@@ -21351,7 +21358,7 @@
         {
           "nickname": "힐링여행",
           "job": "집행관",
-          "level": 91,
+          "level": 92,
           "conquestGrade": 26,
           "realm": "나세르 03"
         },
@@ -26679,7 +26686,7 @@
           "nickname": "얼음불꽃",
           "job": "집행관",
           "level": 85,
-          "conquestGrade": 21,
+          "conquestGrade": 22,
           "realm": "메르비스 02"
         },
         {
@@ -28792,5 +28799,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-27T05:30:47.003Z"
+  "updatedAt": "2026-06-27T05:40:45.364Z"
 }
