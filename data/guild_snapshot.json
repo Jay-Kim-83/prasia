@@ -11731,13 +11731,6 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "드루왕",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 22,
-          "realm": "사도바 02"
-        },
-        {
           "nickname": "llllIIII",
           "job": "집행관",
           "level": 88,
@@ -11745,10 +11738,10 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "은혜",
-          "job": "심연추방자",
+          "nickname": "드루왕",
+          "job": "집행관",
           "level": 88,
-          "conquestGrade": 23,
+          "conquestGrade": 22,
           "realm": "사도바 02"
         },
         {
@@ -11756,6 +11749,13 @@
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 22,
+          "realm": "사도바 02"
+        },
+        {
+          "nickname": "은혜",
+          "job": "심연추방자",
+          "level": 88,
+          "conquestGrade": 23,
           "realm": "사도바 02"
         },
         {
@@ -24235,7 +24235,7 @@
         {
           "nickname": "대관령",
           "job": "주문각인사",
-          "level": 86,
+          "level": 87,
           "conquestGrade": 21,
           "realm": "타리아 03"
         },
@@ -27324,7 +27324,7 @@
     "몬스터볼|메르비스": {
       "guildName": "몬스터볼",
       "world": "메르비스",
-      "memberCount": 40,
+      "memberCount": 41,
       "members": [
         {
           "nickname": "선비",
@@ -27579,6 +27579,13 @@
           "realm": "메르비스 04"
         },
         {
+          "nickname": "티잎",
+          "job": "주문각인사",
+          "level": 84,
+          "conquestGrade": 20,
+          "realm": "메르비스 04"
+        },
+        {
           "nickname": "우주",
           "job": "주문각인사",
           "level": 84,
@@ -27611,7 +27618,7 @@
     "Nan|메르비스": {
       "guildName": "Nan",
       "world": "메르비스",
-      "memberCount": 22,
+      "memberCount": 21,
       "members": [
         {
           "nickname": "전쟁",
@@ -27756,13 +27763,6 @@
         {
           "nickname": "황근출",
           "job": "심연추방자",
-          "level": 82,
-          "conquestGrade": 19,
-          "realm": "메르비스 04"
-        },
-        {
-          "nickname": "꼬꼬마엠",
-          "job": "주문각인사",
           "level": 82,
           "conquestGrade": 19,
           "realm": "메르비스 04"
@@ -28561,5 +28561,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-27T22:40:50.151Z"
+  "updatedAt": "2026-06-27T22:50:46.896Z"
 }
