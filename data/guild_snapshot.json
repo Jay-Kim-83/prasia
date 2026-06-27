@@ -7167,17 +7167,17 @@
           "realm": "아민타 04"
         },
         {
+          "nickname": "귀신",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 22,
+          "realm": "아민타 04"
+        },
+        {
           "nickname": "애옹",
           "job": "집행관",
           "level": 88,
           "conquestGrade": 23,
-          "realm": "아민타 04"
-        },
-        {
-          "nickname": "귀신",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 22,
           "realm": "아민타 04"
         },
         {
@@ -9418,7 +9418,7 @@
     "인연|가리안": {
       "guildName": "인연",
       "world": "가리안",
-      "memberCount": 20,
+      "memberCount": 19,
       "members": [
         {
           "nickname": "이카",
@@ -9453,13 +9453,6 @@
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
-          "realm": "가리안 03"
-        },
-        {
-          "nickname": "이킹",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 21,
           "realm": "가리안 03"
         },
         {
@@ -9684,7 +9677,7 @@
     "시아|가리안": {
       "guildName": "시아",
       "world": "가리안",
-      "memberCount": 13,
+      "memberCount": 14,
       "members": [
         {
           "nickname": "승천",
@@ -9773,6 +9766,13 @@
         {
           "nickname": "커피우유",
           "job": "향사수",
+          "level": 81,
+          "conquestGrade": 17,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "테오",
+          "job": "태양감시자",
           "level": 81,
           "conquestGrade": 17,
           "realm": "가리안 03"
@@ -15193,7 +15193,7 @@
     "천사|제롬": {
       "guildName": "천사",
       "world": "제롬",
-      "memberCount": 5,
+      "memberCount": 6,
       "members": [
         {
           "nickname": "피크닉고구마",
@@ -15228,6 +15228,13 @@
           "job": "주문각인사",
           "level": 82,
           "conquestGrade": 19,
+          "realm": "제롬 04"
+        },
+        {
+          "nickname": "백마법사",
+          "job": "주문각인사",
+          "level": 81,
+          "conquestGrade": 18,
           "realm": "제롬 04"
         }
       ]
@@ -16432,7 +16439,7 @@
     "Reddragon|제롬": {
       "guildName": "Reddragon",
       "world": "제롬",
-      "memberCount": 5,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "Goldsnake",
@@ -16446,13 +16453,6 @@
           "job": "향사수",
           "level": 84,
           "conquestGrade": 19,
-          "realm": "제롬 04"
-        },
-        {
-          "nickname": "SNOWBOARD",
-          "job": "주문각인사",
-          "level": 82,
-          "conquestGrade": 20,
           "realm": "제롬 04"
         },
         {
@@ -18451,17 +18451,17 @@
           "realm": "아티산 02"
         },
         {
-          "nickname": "세라스트",
-          "job": "향사수",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "아티산 02"
-        },
-        {
           "nickname": "슈퍼하마",
           "job": "주문각인사",
           "level": 86,
           "conquestGrade": 22,
+          "realm": "아티산 02"
+        },
+        {
+          "nickname": "세라스트",
+          "job": "향사수",
+          "level": 86,
+          "conquestGrade": 21,
           "realm": "아티산 02"
         },
         {
@@ -27526,7 +27526,7 @@
           "nickname": "못된다워니",
           "job": "심연추방자",
           "level": 82,
-          "conquestGrade": 18,
+          "conquestGrade": 19,
           "realm": "메르비스 03"
         },
         {
@@ -27768,17 +27768,17 @@
           "realm": "메르비스 04"
         },
         {
-          "nickname": "모로하지",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "메르비스 04"
-        },
-        {
           "nickname": "이글",
           "job": "야만투사",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "메르비스 04"
+        },
+        {
+          "nickname": "모로하지",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 24,
           "realm": "메르비스 04"
         },
         {
@@ -28862,5 +28862,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-27T00:40:47.458Z"
+  "updatedAt": "2026-06-27T00:50:46.284Z"
 }
