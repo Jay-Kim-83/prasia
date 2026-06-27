@@ -6040,13 +6040,6 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "아이스쿠림",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "아민타 02"
-        },
-        {
           "nickname": "버니",
           "job": "집행관",
           "level": 89,
@@ -6056,6 +6049,13 @@
         {
           "nickname": "소아",
           "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "아민타 02"
+        },
+        {
+          "nickname": "아이스쿠림",
+          "job": "집행관",
           "level": 89,
           "conquestGrade": 24,
           "realm": "아민타 02"
@@ -19026,6 +19026,34 @@
         }
       ]
     },
+    "그늘|아티산": {
+      "guildName": "그늘",
+      "world": "아티산",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "익살",
+          "job": "태양감시자",
+          "level": 84,
+          "conquestGrade": 18,
+          "realm": "아티산 03"
+        },
+        {
+          "nickname": "드레우스",
+          "job": "환영검사",
+          "level": 83,
+          "conquestGrade": 18,
+          "realm": "아티산 03"
+        },
+        {
+          "nickname": "난레스비",
+          "job": "향사수",
+          "level": 80,
+          "conquestGrade": 15,
+          "realm": "아티산 03"
+        }
+      ]
+    },
     "겨울|아티산": {
       "guildName": "겨울",
       "world": "아티산",
@@ -26515,15 +26543,15 @@
           "realm": "메르비스 02"
         },
         {
-          "nickname": "이것참난감하구먼",
-          "job": "주문각인사",
+          "nickname": "하이볼",
+          "job": "집행관",
           "level": 89,
           "conquestGrade": 24,
           "realm": "메르비스 02"
         },
         {
-          "nickname": "하이볼",
-          "job": "집행관",
+          "nickname": "이것참난감하구먼",
+          "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
           "realm": "메르비스 02"
@@ -28869,5 +28897,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-27T01:10:46.890Z"
+  "updatedAt": "2026-06-27T01:20:50.510Z"
 }
