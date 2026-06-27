@@ -308,34 +308,6 @@
         }
       ]
     },
-    "싸이월드|론도": {
-      "guildName": "싸이월드",
-      "world": "론도",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "축복온달",
-          "job": "집행관",
-          "level": 93,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "축복나나",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "안개",
-          "job": "집행관",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        }
-      ]
-    },
     "금쪽이|론도": {
       "guildName": "금쪽이",
       "world": "론도",
@@ -386,6 +358,34 @@
         {
           "nickname": "어머련",
           "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        }
+      ]
+    },
+    "싸이월드|론도": {
+      "guildName": "싸이월드",
+      "world": "론도",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "축복온달",
+          "job": "집행관",
+          "level": 93,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "축복나나",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "안개",
+          "job": "집행관",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 01"
@@ -16659,17 +16659,17 @@
           "realm": "제롬 05"
         },
         {
-          "nickname": "혼자왔냥",
-          "job": "주문각인사",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "제롬 05"
-        },
-        {
           "nickname": "기염냥",
           "job": "향사수",
           "level": 86,
           "conquestGrade": 22,
+          "realm": "제롬 05"
+        },
+        {
+          "nickname": "혼자왔냥",
+          "job": "주문각인사",
+          "level": 86,
+          "conquestGrade": 21,
           "realm": "제롬 05"
         },
         {
@@ -21899,11 +21899,18 @@
     "짱구|나세르": {
       "guildName": "짱구",
       "world": "나세르",
-      "memberCount": 7,
+      "memberCount": 10,
       "members": [
         {
           "nickname": "훈이",
           "job": "집행관",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "나세르 04"
+        },
+        {
+          "nickname": "재미있게요",
+          "job": "향사수",
           "level": 92,
           "conquestGrade": 25,
           "realm": "나세르 04"
@@ -21949,13 +21956,27 @@
           "level": 88,
           "conquestGrade": 23,
           "realm": "나세르 04"
+        },
+        {
+          "nickname": "온정",
+          "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 22,
+          "realm": "나세르 04"
+        },
+        {
+          "nickname": "샤갈",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 22,
+          "realm": "나세르 04"
         }
       ]
     },
     "골드문|나세르": {
       "guildName": "골드문",
       "world": "나세르",
-      "memberCount": 32,
+      "memberCount": 31,
       "members": [
         {
           "nickname": "암행어사",
@@ -22172,13 +22193,6 @@
           "job": "향사수",
           "level": 84,
           "conquestGrade": 21,
-          "realm": "나세르 04"
-        },
-        {
-          "nickname": "산리오",
-          "job": "향사수",
-          "level": 83,
-          "conquestGrade": 20,
           "realm": "나세르 04"
         }
       ]
@@ -26512,8 +26526,15 @@
     "군체|메르비스": {
       "guildName": "군체",
       "world": "메르비스",
-      "memberCount": 9,
+      "memberCount": 10,
       "members": [
+        {
+          "nickname": "와르릉",
+          "job": "주문각인사",
+          "level": 85,
+          "conquestGrade": 20,
+          "realm": "메르비스 02"
+        },
         {
           "nickname": "내이름은조용식",
           "job": "집행관",
@@ -28407,5 +28428,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-27T15:50:48.658Z"
+  "updatedAt": "2026-06-27T16:00:47.856Z"
 }
