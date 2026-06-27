@@ -10520,17 +10520,17 @@
           "realm": "가리안 05"
         },
         {
-          "nickname": "에스프레소",
-          "job": "주문각인사",
-          "level": 82,
-          "conquestGrade": 18,
-          "realm": "가리안 05"
-        },
-        {
           "nickname": "테스토스테론",
           "job": "집행관",
           "level": 82,
           "conquestGrade": 17,
+          "realm": "가리안 05"
+        },
+        {
+          "nickname": "에스프레소",
+          "job": "주문각인사",
+          "level": 82,
+          "conquestGrade": 18,
           "realm": "가리안 05"
         },
         {
@@ -14589,7 +14589,7 @@
         {
           "nickname": "애슐린",
           "job": "심연추방자",
-          "level": 88,
+          "level": 89,
           "conquestGrade": 22,
           "realm": "제롬 03"
         },
@@ -20867,6 +20867,41 @@
         }
       ]
     },
+    "라|나세르": {
+      "guildName": "라",
+      "world": "나세르",
+      "memberCount": 4,
+      "members": [
+        {
+          "nickname": "ION",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 24,
+          "realm": "나세르 02"
+        },
+        {
+          "nickname": "둥이",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 22,
+          "realm": "나세르 02"
+        },
+        {
+          "nickname": "또율",
+          "job": "주문각인사",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "나세르 02"
+        },
+        {
+          "nickname": "카르마",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 20,
+          "realm": "나세르 02"
+        }
+      ]
+    },
     "아기고양이|나세르": {
       "guildName": "아기고양이",
       "world": "나세르",
@@ -21899,7 +21934,7 @@
     "짱구|나세르": {
       "guildName": "짱구",
       "world": "나세르",
-      "memberCount": 10,
+      "memberCount": 11,
       "members": [
         {
           "nickname": "훈이",
@@ -21932,6 +21967,13 @@
         {
           "nickname": "형들잠들면죽는거야",
           "job": "집행관",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "나세르 04"
+        },
+        {
+          "nickname": "함께하는즐거움",
+          "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
           "realm": "나세르 04"
@@ -26638,7 +26680,7 @@
     "북두칠성|메르비스": {
       "guildName": "북두칠성",
       "world": "메르비스",
-      "memberCount": 36,
+      "memberCount": 37,
       "members": [
         {
           "nickname": "별님",
@@ -26841,6 +26883,13 @@
           "job": "집행관",
           "level": 86,
           "conquestGrade": 20,
+          "realm": "메르비스 03"
+        },
+        {
+          "nickname": "두부전",
+          "job": "주문각인사",
+          "level": 86,
+          "conquestGrade": 21,
           "realm": "메르비스 03"
         },
         {
@@ -28428,5 +28477,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-27T16:10:48.499Z"
+  "updatedAt": "2026-06-27T16:20:46.265Z"
 }
