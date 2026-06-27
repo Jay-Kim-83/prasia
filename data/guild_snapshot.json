@@ -925,7 +925,7 @@
         {
           "nickname": "마젠타",
           "job": "집행관",
-          "level": 86,
+          "level": 87,
           "conquestGrade": 23,
           "realm": "론도 02"
         },
@@ -4248,6 +4248,13 @@
           "realm": "라인소프 04"
         },
         {
+          "nickname": "산적",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "라인소프 04"
+        },
+        {
           "nickname": "은슬",
           "job": "집행관",
           "level": 90,
@@ -4266,13 +4273,6 @@
           "job": "집행관",
           "level": 90,
           "conquestGrade": 23,
-          "realm": "라인소프 04"
-        },
-        {
-          "nickname": "산적",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 24,
           "realm": "라인소프 04"
         },
         {
@@ -7254,7 +7254,7 @@
           "nickname": "욜로",
           "job": "주문각인사",
           "level": 85,
-          "conquestGrade": 19,
+          "conquestGrade": 20,
           "realm": "아민타 04"
         },
         {
@@ -18276,17 +18276,17 @@
           "realm": "아티산 03"
         },
         {
-          "nickname": "준삐양",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 24,
-          "realm": "아티산 03"
-        },
-        {
           "nickname": "집행양",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "아티산 03"
+        },
+        {
+          "nickname": "준삐양",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 24,
           "realm": "아티산 03"
         },
         {
@@ -20877,7 +20877,7 @@
     "라|나세르": {
       "guildName": "라",
       "world": "나세르",
-      "memberCount": 6,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "ION",
@@ -20919,6 +20919,13 @@
           "job": "태양감시자",
           "level": 85,
           "conquestGrade": 21,
+          "realm": "나세르 02"
+        },
+        {
+          "nickname": "노란고래",
+          "job": "태양감시자",
+          "level": 84,
+          "conquestGrade": 20,
           "realm": "나세르 02"
         }
       ]
@@ -21738,7 +21745,7 @@
     "Neo|나세르": {
       "guildName": "Neo",
       "world": "나세르",
-      "memberCount": 29,
+      "memberCount": 28,
       "members": [
         {
           "nickname": "토루크막토",
@@ -21935,20 +21942,13 @@
           "level": 84,
           "conquestGrade": 21,
           "realm": "나세르 04"
-        },
-        {
-          "nickname": "이즈리얼",
-          "job": "향사수",
-          "level": 84,
-          "conquestGrade": 21,
-          "realm": "나세르 04"
         }
       ]
     },
     "짱구|나세르": {
       "guildName": "짱구",
       "world": "나세르",
-      "memberCount": 19,
+      "memberCount": 20,
       "members": [
         {
           "nickname": "훈이",
@@ -22046,6 +22046,13 @@
           "job": "집행관",
           "level": 88,
           "conquestGrade": 23,
+          "realm": "나세르 04"
+        },
+        {
+          "nickname": "에이사",
+          "job": "향사수",
+          "level": 88,
+          "conquestGrade": 22,
           "realm": "나세르 04"
         },
         {
@@ -24594,7 +24601,7 @@
     "shadow|타리아": {
       "guildName": "shadow",
       "world": "타리아",
-      "memberCount": 27,
+      "memberCount": 28,
       "members": [
         {
           "nickname": "휴식",
@@ -24692,6 +24699,13 @@
           "job": "집행관",
           "level": 88,
           "conquestGrade": 22,
+          "realm": "타리아 04"
+        },
+        {
+          "nickname": "키네네",
+          "job": "태양감시자",
+          "level": 87,
+          "conquestGrade": 21,
           "realm": "타리아 04"
         },
         {
@@ -25018,34 +25032,6 @@
         }
       ]
     },
-    "맑은샘물|타리아": {
-      "guildName": "맑은샘물",
-      "world": "타리아",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "진라면",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "타리아 04"
-        },
-        {
-          "nickname": "레드와인",
-          "job": "집행관",
-          "level": 85,
-          "conquestGrade": 20,
-          "realm": "타리아 04"
-        },
-        {
-          "nickname": "안동소주",
-          "job": "향사수",
-          "level": 83,
-          "conquestGrade": 20,
-          "realm": "타리아 04"
-        }
-      ]
-    },
     "귀칼|타리아": {
       "guildName": "귀칼",
       "world": "타리아",
@@ -25091,7 +25077,7 @@
     "연예인결사|타리아": {
       "guildName": "연예인결사",
       "world": "타리아",
-      "memberCount": 39,
+      "memberCount": 40,
       "members": [
         {
           "nickname": "윤정",
@@ -25105,6 +25091,13 @@
           "job": "심연추방자",
           "level": 91,
           "conquestGrade": 26,
+          "realm": "타리아 05"
+        },
+        {
+          "nickname": "고박",
+          "job": "심연추방자",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "타리아 05"
         },
         {
@@ -28561,5 +28554,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-27T23:00:48.613Z"
+  "updatedAt": "2026-06-27T23:10:49.164Z"
 }
