@@ -189,6 +189,41 @@
         }
       ]
     },
+    "코드네임|론도": {
+      "guildName": "코드네임",
+      "world": "론도",
+      "memberCount": 4,
+      "members": [
+        {
+          "nickname": "뚜껑",
+          "job": "야만투사",
+          "level": 93,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "문왕기",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "GOMTV",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "김토리",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        }
+      ]
+    },
     "GOAT|론도": {
       "guildName": "GOAT",
       "world": "론도",
@@ -218,90 +253,6 @@
         {
           "nickname": "마우이",
           "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        }
-      ]
-    },
-    "코드네임|론도": {
-      "guildName": "코드네임",
-      "world": "론도",
-      "memberCount": 4,
-      "members": [
-        {
-          "nickname": "뚜껑",
-          "job": "야만투사",
-          "level": 93,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "문왕기",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "김토리",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "GOMTV",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        }
-      ]
-    },
-    "노타치|론도": {
-      "guildName": "노타치",
-      "world": "론도",
-      "memberCount": 6,
-      "members": [
-        {
-          "nickname": "굴맛사탕",
-          "job": "야만투사",
-          "level": 93,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "헤르오빠",
-          "job": "주문각인사",
-          "level": 93,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "점멸형",
-          "job": "집행관",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "왕자형",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "세마형",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "새로형",
-          "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 01"
@@ -428,6 +379,55 @@
         {
           "nickname": "백야무형",
           "job": "태양감시자",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        }
+      ]
+    },
+    "노타치|론도": {
+      "guildName": "노타치",
+      "world": "론도",
+      "memberCount": 6,
+      "members": [
+        {
+          "nickname": "굴맛사탕",
+          "job": "야만투사",
+          "level": 93,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "헤르오빠",
+          "job": "주문각인사",
+          "level": 93,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "점멸형",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "왕자형",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "세마형",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "새로형",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 01"
@@ -12958,7 +12958,7 @@
         {
           "nickname": "칼리스타",
           "job": "태양감시자",
-          "level": 86,
+          "level": 87,
           "conquestGrade": 22,
           "realm": "사도바 04"
         },
@@ -17681,17 +17681,17 @@
           "realm": "아티산 02"
         },
         {
-          "nickname": "십자가든스님",
-          "job": "태양감시자",
-          "level": 88,
-          "conquestGrade": 24,
-          "realm": "아티산 02"
-        },
-        {
           "nickname": "매버릭",
           "job": "태양감시자",
           "level": 88,
           "conquestGrade": 22,
+          "realm": "아티산 02"
+        },
+        {
+          "nickname": "십자가든스님",
+          "job": "태양감시자",
+          "level": 88,
+          "conquestGrade": 24,
           "realm": "아티산 02"
         },
         {
@@ -28505,5 +28505,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-27T18:00:50.221Z"
+  "updatedAt": "2026-06-27T18:10:47.440Z"
 }
