@@ -3678,7 +3678,7 @@
     "임시정부|라인소프": {
       "guildName": "임시정부",
       "world": "라인소프",
-      "memberCount": 4,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "명품렌트",
@@ -3699,6 +3699,13 @@
           "job": "집행관",
           "level": 85,
           "conquestGrade": 20,
+          "realm": "라인소프 03"
+        },
+        {
+          "nickname": "해피타임",
+          "job": "주문각인사",
+          "level": 85,
+          "conquestGrade": 19,
           "realm": "라인소프 03"
         },
         {
@@ -14575,7 +14582,7 @@
         {
           "nickname": "애슐린",
           "job": "심연추방자",
-          "level": 88,
+          "level": 89,
           "conquestGrade": 22,
           "realm": "제롬 03"
         },
@@ -16365,15 +16372,15 @@
           "realm": "제롬 05"
         },
         {
-          "nickname": "라이크",
-          "job": "향사수",
+          "nickname": "물약",
+          "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
           "realm": "제롬 05"
         },
         {
-          "nickname": "물약",
-          "job": "주문각인사",
+          "nickname": "라이크",
+          "job": "향사수",
           "level": 90,
           "conquestGrade": 24,
           "realm": "제롬 05"
@@ -19401,34 +19408,6 @@
           "level": 77,
           "conquestGrade": 11,
           "realm": "아티산 05"
-        }
-      ]
-    },
-    "천상|아티산": {
-      "guildName": "천상",
-      "world": "아티산",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "환동",
-          "job": "향사수",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "아티산 04"
-        },
-        {
-          "nickname": "세련",
-          "job": "집행관",
-          "level": 85,
-          "conquestGrade": 21,
-          "realm": "아티산 04"
-        },
-        {
-          "nickname": "리화",
-          "job": "집행관",
-          "level": 84,
-          "conquestGrade": 20,
-          "realm": "아티산 04"
         }
       ]
     },
@@ -25514,17 +25493,17 @@
           "realm": "타리아 05"
         },
         {
-          "nickname": "무커",
-          "job": "집행관",
-          "level": 83,
-          "conquestGrade": 19,
-          "realm": "타리아 05"
-        },
-        {
           "nickname": "니스",
           "job": "향사수",
           "level": 83,
           "conquestGrade": 20,
+          "realm": "타리아 05"
+        },
+        {
+          "nickname": "무커",
+          "job": "집행관",
+          "level": 83,
+          "conquestGrade": 19,
           "realm": "타리아 05"
         },
         {
@@ -25894,7 +25873,7 @@
         {
           "nickname": "댕글이",
           "job": "주문각인사",
-          "level": 88,
+          "level": 89,
           "conquestGrade": 24,
           "realm": "메르비스 01"
         },
@@ -27954,7 +27933,7 @@
     "진짜중립|메르비스": {
       "guildName": "진짜중립",
       "world": "메르비스",
-      "memberCount": 19,
+      "memberCount": 20,
       "members": [
         {
           "nickname": "로즈",
@@ -28043,6 +28022,13 @@
         {
           "nickname": "워록",
           "job": "향사수",
+          "level": 85,
+          "conquestGrade": 21,
+          "realm": "메르비스 05"
+        },
+        {
+          "nickname": "지원",
+          "job": "집행관",
           "level": 85,
           "conquestGrade": 21,
           "realm": "메르비스 05"
@@ -28547,5 +28533,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-28T13:50:46.863Z"
+  "updatedAt": "2026-06-28T14:00:47.464Z"
 }
