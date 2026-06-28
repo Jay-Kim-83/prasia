@@ -461,6 +461,13 @@
           "realm": "론도 01"
         },
         {
+          "nickname": "김땡칠",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "론도 01"
+        },
+        {
           "nickname": "엑땡칠",
           "job": "집행관",
           "level": 92,
@@ -470,13 +477,6 @@
         {
           "nickname": "레전드감독홍명보",
           "job": "환영검사",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "김땡칠",
-          "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "론도 01"
@@ -7597,7 +7597,7 @@
           "nickname": "프전",
           "job": "주문각인사",
           "level": 87,
-          "conquestGrade": 22,
+          "conquestGrade": 23,
           "realm": "아민타 05"
         },
         {
@@ -15568,34 +15568,6 @@
         }
       ]
     },
-    "결사투|제롬": {
-      "guildName": "결사투",
-      "world": "제롬",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "미나사나모모",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 22,
-          "realm": "제롬 03"
-        },
-        {
-          "nickname": "데헤아",
-          "job": "향사수",
-          "level": 84,
-          "conquestGrade": 20,
-          "realm": "제롬 03"
-        },
-        {
-          "nickname": "성게알",
-          "job": "향사수",
-          "level": 78,
-          "conquestGrade": 15,
-          "realm": "제롬 03"
-        }
-      ]
-    },
     "HERO|제롬": {
       "guildName": "HERO",
       "world": "제롬",
@@ -18941,14 +18913,14 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "펄스",
+          "nickname": "뭘봄",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아티산 04"
         },
         {
-          "nickname": "뭘봄",
+          "nickname": "펄스",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
@@ -27642,17 +27614,17 @@
           "realm": "메르비스 04"
         },
         {
-          "nickname": "리자드",
-          "job": "야만투사",
-          "level": 86,
-          "conquestGrade": 22,
-          "realm": "메르비스 04"
-        },
-        {
           "nickname": "이브이",
           "job": "집행관",
           "level": 86,
           "conquestGrade": 21,
+          "realm": "메르비스 04"
+        },
+        {
+          "nickname": "리자드",
+          "job": "야만투사",
+          "level": 86,
+          "conquestGrade": 22,
           "realm": "메르비스 04"
         },
         {
@@ -28652,5 +28624,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-28T05:00:49.630Z"
+  "updatedAt": "2026-06-28T05:10:48.062Z"
 }
