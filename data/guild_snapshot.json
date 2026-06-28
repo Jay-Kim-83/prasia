@@ -3055,15 +3055,8 @@
     "원피스해적단|라인소프": {
       "guildName": "원피스해적단",
       "world": "라인소프",
-      "memberCount": 6,
+      "memberCount": 5,
       "members": [
-        {
-          "nickname": "강사또",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "라인소프 02"
-        },
         {
           "nickname": "극강케릭",
           "job": "주문각인사",
@@ -4175,7 +4168,7 @@
     "극야|라인소프": {
       "guildName": "극야",
       "world": "라인소프",
-      "memberCount": 21,
+      "memberCount": 22,
       "members": [
         {
           "nickname": "디그다",
@@ -4250,6 +4243,13 @@
         {
           "nickname": "꿀물",
           "job": "집행관",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "라인소프 04"
+        },
+        {
+          "nickname": "새총",
+          "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
           "realm": "라인소프 04"
@@ -8399,15 +8399,15 @@
           "realm": "가리안 01"
         },
         {
-          "nickname": "돌돔",
-          "job": "집행관",
+          "nickname": "장구봉",
+          "job": "환영검사",
           "level": 84,
           "conquestGrade": 20,
           "realm": "가리안 01"
         },
         {
-          "nickname": "장구봉",
-          "job": "환영검사",
+          "nickname": "돌돔",
+          "job": "집행관",
           "level": 84,
           "conquestGrade": 20,
           "realm": "가리안 01"
@@ -14118,17 +14118,17 @@
           "realm": "제롬 01"
         },
         {
-          "nickname": "판매",
-          "job": "환영검사",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "제롬 01"
-        },
-        {
           "nickname": "어게인",
           "job": "향사수",
           "level": 89,
           "conquestGrade": 22,
+          "realm": "제롬 01"
+        },
+        {
+          "nickname": "판매",
+          "job": "환영검사",
+          "level": 89,
+          "conquestGrade": 24,
           "realm": "제롬 01"
         },
         {
@@ -25689,15 +25689,15 @@
           "realm": "메르비스 01"
         },
         {
-          "nickname": "오팬무",
-          "job": "태양감시자",
+          "nickname": "블랙",
+          "job": "야만투사",
           "level": 90,
           "conquestGrade": 25,
           "realm": "메르비스 01"
         },
         {
-          "nickname": "블랙",
-          "job": "야만투사",
+          "nickname": "오팬무",
+          "job": "태양감시자",
           "level": 90,
           "conquestGrade": 25,
           "realm": "메르비스 01"
@@ -28561,5 +28561,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-28T11:40:46.190Z"
+  "updatedAt": "2026-06-28T11:50:47.940Z"
 }
