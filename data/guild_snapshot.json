@@ -323,7 +323,7 @@
         {
           "nickname": "Cola",
           "job": "환영검사",
-          "level": 93,
+          "level": 92,
           "conquestGrade": 26,
           "realm": "론도 01"
         },
@@ -5958,7 +5958,7 @@
         {
           "nickname": "프리드",
           "job": "환영검사",
-          "level": 89,
+          "level": 90,
           "conquestGrade": 24,
           "realm": "아민타 02"
         },
@@ -9890,17 +9890,17 @@
           "realm": "가리안 04"
         },
         {
-          "nickname": "메밀",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 26,
-          "realm": "가리안 04"
-        },
-        {
           "nickname": "루체",
           "job": "집행관",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "가리안 04"
+        },
+        {
+          "nickname": "메밀",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 26,
           "realm": "가리안 04"
         },
         {
@@ -17753,7 +17753,7 @@
         {
           "nickname": "진하",
           "job": "향사수",
-          "level": 87,
+          "level": 88,
           "conquestGrade": 22,
           "realm": "아티산 02"
         },
@@ -18297,17 +18297,17 @@
           "realm": "아티산 03"
         },
         {
-          "nickname": "준삐양",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 24,
-          "realm": "아티산 03"
-        },
-        {
           "nickname": "집행양",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "아티산 03"
+        },
+        {
+          "nickname": "준삐양",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 24,
           "realm": "아티산 03"
         },
         {
@@ -23380,6 +23380,48 @@
         }
       ]
     },
+    "통크게쏜다|타리아": {
+      "guildName": "통크게쏜다",
+      "world": "타리아",
+      "memberCount": 5,
+      "members": [
+        {
+          "nickname": "통크",
+          "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 22,
+          "realm": "타리아 01"
+        },
+        {
+          "nickname": "빡꾸",
+          "job": "환영검사",
+          "level": 87,
+          "conquestGrade": 22,
+          "realm": "타리아 01"
+        },
+        {
+          "nickname": "뻑꾸",
+          "job": "주문각인사",
+          "level": 84,
+          "conquestGrade": 20,
+          "realm": "타리아 01"
+        },
+        {
+          "nickname": "왕창다쏜다",
+          "job": "집행관",
+          "level": 84,
+          "conquestGrade": 19,
+          "realm": "타리아 01"
+        },
+        {
+          "nickname": "오늘만쏜다",
+          "job": "환영검사",
+          "level": 82,
+          "conquestGrade": 17,
+          "realm": "타리아 01"
+        }
+      ]
+    },
     "라이트|타리아": {
       "guildName": "라이트",
       "world": "타리아",
@@ -23452,41 +23494,6 @@
           "nickname": "TEN",
           "job": "향사수",
           "level": 83,
-          "conquestGrade": 17,
-          "realm": "타리아 01"
-        }
-      ]
-    },
-    "통크게쏜다|타리아": {
-      "guildName": "통크게쏜다",
-      "world": "타리아",
-      "memberCount": 4,
-      "members": [
-        {
-          "nickname": "빡꾸",
-          "job": "환영검사",
-          "level": 87,
-          "conquestGrade": 22,
-          "realm": "타리아 01"
-        },
-        {
-          "nickname": "뻑꾸",
-          "job": "주문각인사",
-          "level": 84,
-          "conquestGrade": 20,
-          "realm": "타리아 01"
-        },
-        {
-          "nickname": "왕창다쏜다",
-          "job": "집행관",
-          "level": 84,
-          "conquestGrade": 19,
-          "realm": "타리아 01"
-        },
-        {
-          "nickname": "오늘만쏜다",
-          "job": "환영검사",
-          "level": 82,
           "conquestGrade": 17,
           "realm": "타리아 01"
         }
@@ -28610,5 +28617,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-28T02:30:46.270Z"
+  "updatedAt": "2026-06-28T02:40:46.127Z"
 }
