@@ -1437,7 +1437,7 @@
           "nickname": "뚱인데요",
           "job": "주문각인사",
           "level": 80,
-          "conquestGrade": 17,
+          "conquestGrade": 18,
           "realm": "론도 03"
         },
         {
@@ -5172,15 +5172,15 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "간때문이야우루사랑",
-          "job": "야만투사",
+          "nickname": "오리",
+          "job": "집행관",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아민타 01"
         },
         {
-          "nickname": "오리",
-          "job": "집행관",
+          "nickname": "간때문이야우루사랑",
+          "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아민타 01"
@@ -5914,17 +5914,17 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "핫바",
-          "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 23,
-          "realm": "아민타 02"
-        },
-        {
           "nickname": "땃쥐가화나면돈땃쥐",
           "job": "향사수",
           "level": 88,
           "conquestGrade": 24,
+          "realm": "아민타 02"
+        },
+        {
+          "nickname": "핫바",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 23,
           "realm": "아민타 02"
         },
         {
@@ -8378,15 +8378,15 @@
           "realm": "가리안 01"
         },
         {
-          "nickname": "장구봉",
-          "job": "환영검사",
+          "nickname": "돌돔",
+          "job": "집행관",
           "level": 84,
           "conquestGrade": 20,
           "realm": "가리안 01"
         },
         {
-          "nickname": "돌돔",
-          "job": "집행관",
+          "nickname": "장구봉",
+          "job": "환영검사",
           "level": 84,
           "conquestGrade": 20,
           "realm": "가리안 01"
@@ -16976,7 +16976,7 @@
         {
           "nickname": "삥삥이",
           "job": "주문각인사",
-          "level": 86,
+          "level": 87,
           "conquestGrade": 21,
           "realm": "아티산 01"
         },
@@ -18262,6 +18262,13 @@
           "realm": "아티산 03"
         },
         {
+          "nickname": "마요양",
+          "job": "야만투사",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "아티산 03"
+        },
+        {
           "nickname": "한양",
           "job": "주문각인사",
           "level": 89,
@@ -18277,13 +18284,6 @@
         },
         {
           "nickname": "앤티",
-          "job": "야만투사",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "아티산 03"
-        },
-        {
-          "nickname": "마요양",
           "job": "야만투사",
           "level": 89,
           "conquestGrade": 24,
@@ -25637,8 +25637,15 @@
     "TOP|메르비스": {
       "guildName": "TOP",
       "world": "메르비스",
-      "memberCount": 47,
+      "memberCount": 49,
       "members": [
+        {
+          "nickname": "해태",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "메르비스 01"
+        },
         {
           "nickname": "한우",
           "job": "주문각인사",
@@ -25728,6 +25735,13 @@
           "job": "집행관",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "김애옹",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 26,
           "realm": "메르비스 01"
         },
         {
@@ -26582,7 +26596,7 @@
     "군체|메르비스": {
       "guildName": "군체",
       "world": "메르비스",
-      "memberCount": 9,
+      "memberCount": 8,
       "members": [
         {
           "nickname": "와르릉",
@@ -26610,13 +26624,6 @@
           "job": "집행관",
           "level": 81,
           "conquestGrade": 17,
-          "realm": "메르비스 02"
-        },
-        {
-          "nickname": "내이름은김두겸",
-          "job": "야만투사",
-          "level": 80,
-          "conquestGrade": 16,
           "realm": "메르비스 02"
         },
         {
@@ -28002,7 +28009,7 @@
           "nickname": "스프라이트",
           "job": "주문각인사",
           "level": 85,
-          "conquestGrade": 20,
+          "conquestGrade": 21,
           "realm": "메르비스 05"
         },
         {
@@ -28519,5 +28526,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-28T12:50:47.440Z"
+  "updatedAt": "2026-06-28T13:00:46.726Z"
 }
