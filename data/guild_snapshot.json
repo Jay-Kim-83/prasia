@@ -3692,8 +3692,15 @@
     "임시정부|라인소프": {
       "guildName": "임시정부",
       "world": "라인소프",
-      "memberCount": 3,
+      "memberCount": 4,
       "members": [
+        {
+          "nickname": "명품렌트",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "라인소프 03"
+        },
         {
           "nickname": "명품대김",
           "job": "태양감시자",
@@ -5349,7 +5356,7 @@
         {
           "nickname": "공작사랑",
           "job": "야만투사",
-          "level": 88,
+          "level": 89,
           "conquestGrade": 22,
           "realm": "아민타 01"
         },
@@ -5928,17 +5935,17 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "땃쥐가화나면돈땃쥐",
-          "job": "향사수",
-          "level": 88,
-          "conquestGrade": 24,
-          "realm": "아민타 02"
-        },
-        {
           "nickname": "핫바",
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 23,
+          "realm": "아민타 02"
+        },
+        {
+          "nickname": "땃쥐가화나면돈땃쥐",
+          "job": "향사수",
+          "level": 88,
+          "conquestGrade": 24,
           "realm": "아민타 02"
         },
         {
@@ -11122,17 +11129,17 @@
           "realm": "사도바 01"
         },
         {
-          "nickname": "전쟁광트럼프",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 22,
-          "realm": "사도바 01"
-        },
-        {
           "nickname": "잔디꽃",
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 20,
+          "realm": "사도바 01"
+        },
+        {
+          "nickname": "전쟁광트럼프",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 22,
           "realm": "사도바 01"
         },
         {
@@ -18290,14 +18297,14 @@
           "realm": "아티산 03"
         },
         {
-          "nickname": "마요양",
+          "nickname": "앤티",
           "job": "야만투사",
           "level": 89,
           "conquestGrade": 24,
           "realm": "아티산 03"
         },
         {
-          "nickname": "앤티",
+          "nickname": "마요양",
           "job": "야만투사",
           "level": 89,
           "conquestGrade": 24,
@@ -25738,15 +25745,15 @@
           "realm": "메르비스 01"
         },
         {
-          "nickname": "불꽃남자",
-          "job": "야만투사",
+          "nickname": "밤티",
+          "job": "집행관",
           "level": 91,
           "conquestGrade": 25,
           "realm": "메르비스 01"
         },
         {
-          "nickname": "밤티",
-          "job": "집행관",
+          "nickname": "불꽃남자",
+          "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "메르비스 01"
@@ -26337,7 +26344,7 @@
     "하라리|메르비스": {
       "guildName": "하라리",
       "world": "메르비스",
-      "memberCount": 8,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "흑곰",
@@ -26350,13 +26357,6 @@
           "nickname": "XXX",
           "job": "향사수",
           "level": 86,
-          "conquestGrade": 22,
-          "realm": "메르비스 02"
-        },
-        {
-          "nickname": "얼음불꽃",
-          "job": "집행관",
-          "level": 85,
           "conquestGrade": 22,
           "realm": "메르비스 02"
         },
@@ -26610,7 +26610,7 @@
     "군체|메르비스": {
       "guildName": "군체",
       "world": "메르비스",
-      "memberCount": 10,
+      "memberCount": 9,
       "members": [
         {
           "nickname": "와르릉",
@@ -26623,13 +26623,6 @@
           "nickname": "내이름은조용식",
           "job": "집행관",
           "level": 84,
-          "conquestGrade": 20,
-          "realm": "메르비스 02"
-        },
-        {
-          "nickname": "소떡소떡",
-          "job": "주문각인사",
-          "level": 83,
           "conquestGrade": 20,
           "realm": "메르비스 02"
         },
@@ -28554,5 +28547,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-28T12:30:46.338Z"
+  "updatedAt": "2026-06-28T12:40:49.932Z"
 }
