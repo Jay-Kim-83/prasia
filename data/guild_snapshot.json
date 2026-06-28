@@ -1,5 +1,33 @@
 {
   "guilds": {
+    "고트|론도": {
+      "guildName": "고트",
+      "world": "론도",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "유튜브맛나는꼬꼬",
+          "job": "주문각인사",
+          "level": 93,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "롬멜",
+          "job": "야만투사",
+          "level": 93,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "란마",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "론도 01"
+        }
+      ]
+    },
     "블랙중독|론도": {
       "guildName": "블랙중독",
       "world": "론도",
@@ -34,17 +62,17 @@
           "realm": "론도 01"
         },
         {
-          "nickname": "짱슈룹",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
           "nickname": "더유비",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "짱슈룹",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 26,
           "realm": "론도 01"
         },
         {
@@ -300,15 +328,15 @@
           "realm": "론도 01"
         },
         {
-          "nickname": "안개",
-          "job": "집행관",
+          "nickname": "축복나나",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 01"
         },
         {
-          "nickname": "축복나나",
-          "job": "야만투사",
+          "nickname": "안개",
+          "job": "집행관",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 01"
@@ -638,7 +666,7 @@
         {
           "nickname": "통닭",
           "job": "집행관",
-          "level": 91,
+          "level": 92,
           "conquestGrade": 26,
           "realm": "론도 02"
         },
@@ -967,7 +995,7 @@
         {
           "nickname": "마지막",
           "job": "집행관",
-          "level": 86,
+          "level": 87,
           "conquestGrade": 22,
           "realm": "론도 02"
         },
@@ -23750,17 +23778,17 @@
           "realm": "타리아 02"
         },
         {
-          "nickname": "레퀴엠",
-          "job": "주문각인사",
-          "level": 81,
-          "conquestGrade": 17,
-          "realm": "타리아 02"
-        },
-        {
           "nickname": "인사",
           "job": "태양감시자",
           "level": 81,
           "conquestGrade": 19,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "레퀴엠",
+          "job": "주문각인사",
+          "level": 81,
+          "conquestGrade": 17,
           "realm": "타리아 02"
         },
         {
@@ -23843,7 +23871,7 @@
         {
           "nickname": "오로라핑",
           "job": "집행관",
-          "level": 84,
+          "level": 85,
           "conquestGrade": 20,
           "realm": "타리아 02"
         },
@@ -25550,34 +25578,6 @@
         }
       ]
     },
-    "꾸러기수비대|타리아": {
-      "guildName": "꾸러기수비대",
-      "world": "타리아",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "슉숙",
-          "job": "집행관",
-          "level": 85,
-          "conquestGrade": 20,
-          "realm": "타리아 05"
-        },
-        {
-          "nickname": "소금이",
-          "job": "주문각인사",
-          "level": 82,
-          "conquestGrade": 19,
-          "realm": "타리아 05"
-        },
-        {
-          "nickname": "설탕이",
-          "job": "집행관",
-          "level": 82,
-          "conquestGrade": 19,
-          "realm": "타리아 05"
-        }
-      ]
-    },
     "커피|타리아": {
       "guildName": "커피",
       "world": "타리아",
@@ -26372,7 +26372,7 @@
     "삼전|메르비스": {
       "guildName": "삼전",
       "world": "메르비스",
-      "memberCount": 12,
+      "memberCount": 13,
       "members": [
         {
           "nickname": "맛나",
@@ -26399,6 +26399,13 @@
           "nickname": "라이",
           "job": "집행관",
           "level": 82,
+          "conquestGrade": 19,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "믹스",
+          "job": "집행관",
+          "level": 81,
           "conquestGrade": 19,
           "realm": "메르비스 02"
         },
@@ -28491,5 +28498,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-28T16:30:46.180Z"
+  "updatedAt": "2026-06-28T16:40:48.308Z"
 }
