@@ -318,7 +318,7 @@
     "백야행|론도": {
       "guildName": "백야행",
       "world": "론도",
-      "memberCount": 3,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "백야펜서",
@@ -337,6 +337,13 @@
         {
           "nickname": "백야광속",
           "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "백야무형",
+          "job": "태양감시자",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 01"
@@ -559,15 +566,15 @@
           "realm": "론도 01"
         },
         {
-          "nickname": "인간백정이",
-          "job": "주문각인사",
+          "nickname": "뉴프알",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 01"
         },
         {
-          "nickname": "뉴프알",
-          "job": "야만투사",
+          "nickname": "인간백정이",
+          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 01"
@@ -6992,17 +6999,17 @@
           "realm": "아민타 04"
         },
         {
-          "nickname": "귀신",
-          "job": "집행관",
-          "level": 88,
-          "conquestGrade": 22,
-          "realm": "아민타 04"
-        },
-        {
           "nickname": "애옹",
           "job": "집행관",
           "level": 88,
           "conquestGrade": 23,
+          "realm": "아민타 04"
+        },
+        {
+          "nickname": "귀신",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 22,
           "realm": "아민타 04"
         },
         {
@@ -11059,17 +11066,17 @@
           "realm": "사도바 01"
         },
         {
-          "nickname": "먹골배",
-          "job": "야만투사",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "사도바 01"
-        },
-        {
           "nickname": "은비",
           "job": "집행관",
           "level": 89,
           "conquestGrade": 23,
+          "realm": "사도바 01"
+        },
+        {
+          "nickname": "먹골배",
+          "job": "야만투사",
+          "level": 89,
+          "conquestGrade": 24,
           "realm": "사도바 01"
         },
         {
@@ -28470,5 +28477,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-28T19:50:47.111Z"
+  "updatedAt": "2026-06-28T20:00:47.199Z"
 }
