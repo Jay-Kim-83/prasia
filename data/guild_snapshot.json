@@ -190,7 +190,7 @@
         {
           "nickname": "헤르오빠",
           "job": "주문각인사",
-          "level": 92,
+          "level": 93,
           "conquestGrade": 26,
           "realm": "론도 01"
         },
@@ -300,15 +300,15 @@
           "realm": "론도 01"
         },
         {
-          "nickname": "축복나나",
-          "job": "야만투사",
+          "nickname": "안개",
+          "job": "집행관",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 01"
         },
         {
-          "nickname": "안개",
-          "job": "집행관",
+          "nickname": "축복나나",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 01"
@@ -384,13 +384,6 @@
           "realm": "론도 01"
         },
         {
-          "nickname": "김땡칠",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "론도 01"
-        },
-        {
           "nickname": "엑땡칠",
           "job": "집행관",
           "level": 92,
@@ -400,6 +393,13 @@
         {
           "nickname": "레전드감독홍명보",
           "job": "환영검사",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "김땡칠",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "론도 01"
@@ -1857,7 +1857,7 @@
           "nickname": "서연",
           "job": "향사수",
           "level": 79,
-          "conquestGrade": 15,
+          "conquestGrade": 16,
           "realm": "론도 04"
         }
       ]
@@ -21727,17 +21727,17 @@
           "realm": "나세르 04"
         },
         {
-          "nickname": "흑소",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "나세르 04"
-        },
-        {
           "nickname": "AgentSmith",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "나세르 04"
+        },
+        {
+          "nickname": "흑소",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 24,
           "realm": "나세르 04"
         },
         {
@@ -24559,7 +24559,7 @@
     "shadow|타리아": {
       "guildName": "shadow",
       "world": "타리아",
-      "memberCount": 31,
+      "memberCount": 32,
       "members": [
         {
           "nickname": "휴식",
@@ -24773,6 +24773,13 @@
         },
         {
           "nickname": "깡총",
+          "job": "주문각인사",
+          "level": 83,
+          "conquestGrade": 19,
+          "realm": "타리아 04"
+        },
+        {
+          "nickname": "대충하자",
           "job": "주문각인사",
           "level": 83,
           "conquestGrade": 19,
@@ -25028,7 +25035,7 @@
     "연예인결사|타리아": {
       "guildName": "연예인결사",
       "world": "타리아",
-      "memberCount": 41,
+      "memberCount": 42,
       "members": [
         {
           "nickname": "윤정",
@@ -25075,6 +25082,13 @@
         {
           "nickname": "ABBA",
           "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "타리아 05"
+        },
+        {
+          "nickname": "추밬",
+          "job": "심연추방자",
           "level": 90,
           "conquestGrade": 25,
           "realm": "타리아 05"
@@ -28477,5 +28491,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-28T16:20:47.035Z"
+  "updatedAt": "2026-06-28T16:30:46.180Z"
 }
