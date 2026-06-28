@@ -482,6 +482,13 @@
           "realm": "론도 01"
         },
         {
+          "nickname": "김땡칠",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "론도 01"
+        },
+        {
           "nickname": "엑땡칠",
           "job": "집행관",
           "level": 92,
@@ -491,13 +498,6 @@
         {
           "nickname": "레전드감독홍명보",
           "job": "환영검사",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "김땡칠",
-          "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "론도 01"
@@ -1630,17 +1630,17 @@
           "realm": "론도 03"
         },
         {
-          "nickname": "콩콩",
-          "job": "태양감시자",
-          "level": 84,
-          "conquestGrade": 18,
-          "realm": "론도 03"
-        },
-        {
           "nickname": "통닭",
           "job": "향사수",
           "level": 84,
           "conquestGrade": 19,
+          "realm": "론도 03"
+        },
+        {
+          "nickname": "콩콩",
+          "job": "태양감시자",
+          "level": 84,
+          "conquestGrade": 18,
           "realm": "론도 03"
         },
         {
@@ -5566,7 +5566,7 @@
         {
           "nickname": "시바견",
           "job": "집행관",
-          "level": 86,
+          "level": 87,
           "conquestGrade": 20,
           "realm": "아민타 01"
         },
@@ -14118,17 +14118,17 @@
           "realm": "제롬 01"
         },
         {
-          "nickname": "어게인",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 22,
-          "realm": "제롬 01"
-        },
-        {
           "nickname": "판매",
           "job": "환영검사",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "제롬 01"
+        },
+        {
+          "nickname": "어게인",
+          "job": "향사수",
+          "level": 89,
+          "conquestGrade": 22,
           "realm": "제롬 01"
         },
         {
@@ -15400,6 +15400,55 @@
         }
       ]
     },
+    "Me|제롬": {
+      "guildName": "Me",
+      "world": "제롬",
+      "memberCount": 6,
+      "members": [
+        {
+          "nickname": "주문각사또",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 23,
+          "realm": "제롬 03"
+        },
+        {
+          "nickname": "펀런",
+          "job": "야만투사",
+          "level": 85,
+          "conquestGrade": 21,
+          "realm": "제롬 03"
+        },
+        {
+          "nickname": "Mq",
+          "job": "집행관",
+          "level": 83,
+          "conquestGrade": 18,
+          "realm": "제롬 03"
+        },
+        {
+          "nickname": "Oq",
+          "job": "집행관",
+          "level": 83,
+          "conquestGrade": 17,
+          "realm": "제롬 03"
+        },
+        {
+          "nickname": "Nq",
+          "job": "집행관",
+          "level": 82,
+          "conquestGrade": 17,
+          "realm": "제롬 03"
+        },
+        {
+          "nickname": "Pq",
+          "job": "집행관",
+          "level": 79,
+          "conquestGrade": 12,
+          "realm": "제롬 03"
+        }
+      ]
+    },
     "유목민|제롬": {
       "guildName": "유목민",
       "world": "제롬",
@@ -15690,41 +15739,6 @@
           "job": "집행관",
           "level": 83,
           "conquestGrade": 19,
-          "realm": "제롬 03"
-        }
-      ]
-    },
-    "Me|제롬": {
-      "guildName": "Me",
-      "world": "제롬",
-      "memberCount": 4,
-      "members": [
-        {
-          "nickname": "Mq",
-          "job": "집행관",
-          "level": 83,
-          "conquestGrade": 18,
-          "realm": "제롬 03"
-        },
-        {
-          "nickname": "Oq",
-          "job": "집행관",
-          "level": 83,
-          "conquestGrade": 17,
-          "realm": "제롬 03"
-        },
-        {
-          "nickname": "Nq",
-          "job": "집행관",
-          "level": 82,
-          "conquestGrade": 17,
-          "realm": "제롬 03"
-        },
-        {
-          "nickname": "Pq",
-          "job": "집행관",
-          "level": 79,
-          "conquestGrade": 12,
           "realm": "제롬 03"
         }
       ]
@@ -23771,17 +23785,17 @@
           "realm": "타리아 02"
         },
         {
-          "nickname": "츄츄",
-          "job": "야만투사",
-          "level": 82,
-          "conquestGrade": 19,
-          "realm": "타리아 02"
-        },
-        {
           "nickname": "죽통한방",
           "job": "집행관",
           "level": 82,
           "conquestGrade": 20,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "츄츄",
+          "job": "야만투사",
+          "level": 82,
+          "conquestGrade": 19,
           "realm": "타리아 02"
         },
         {
@@ -25655,244 +25669,6 @@
         }
       ]
     },
-    "월하익송|메르비스": {
-      "guildName": "월하익송",
-      "world": "메르비스",
-      "memberCount": 33,
-      "members": [
-        {
-          "nickname": "해태",
-          "job": "집행관",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "변처럼",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 26,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "김애옹",
-          "job": "집행관",
-          "level": 91,
-          "conquestGrade": 26,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "수한",
-          "job": "환영검사",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "블랙",
-          "job": "야만투사",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "오팬무",
-          "job": "태양감시자",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "젖팔개",
-          "job": "향사수",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "우즈",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "달달",
-          "job": "환영검사",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "그린",
-          "job": "태양감시자",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "땅호",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "고양이겨울",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "불두",
-          "job": "향사수",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "유디",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "웅이아부지",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 25,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "놈팽",
-          "job": "태양감시자",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "실프",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 22,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "유산균",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "애기",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 22,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "도기",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "스타트",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "북뚜뻑칠성",
-          "job": "집행관",
-          "level": 88,
-          "conquestGrade": 24,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "샤인",
-          "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 24,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "목탁맨",
-          "job": "집행관",
-          "level": 88,
-          "conquestGrade": 24,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "스티쁜짭쓰",
-          "job": "집행관",
-          "level": 88,
-          "conquestGrade": 23,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "랸꾸",
-          "job": "집행관",
-          "level": 88,
-          "conquestGrade": 23,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "보라도리",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 22,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "엘뜨",
-          "job": "태양감시자",
-          "level": 87,
-          "conquestGrade": 22,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "냉월",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 23,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "무사형팬클럽",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 24,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "유기",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 23,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "팔공",
-          "job": "야만투사",
-          "level": 87,
-          "conquestGrade": 23,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "니책임",
-          "job": "주문각인사",
-          "level": 86,
-          "conquestGrade": 22,
-          "realm": "메르비스 01"
-        }
-      ]
-    },
     "TOP|메르비스": {
       "guildName": "TOP",
       "world": "메르비스",
@@ -26267,6 +26043,230 @@
           "job": "집행관",
           "level": 87,
           "conquestGrade": 21,
+          "realm": "메르비스 01"
+        }
+      ]
+    },
+    "월하익송|메르비스": {
+      "guildName": "월하익송",
+      "world": "메르비스",
+      "memberCount": 31,
+      "members": [
+        {
+          "nickname": "변처럼",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 26,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "수한",
+          "job": "환영검사",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "오팬무",
+          "job": "태양감시자",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "블랙",
+          "job": "야만투사",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "젖팔개",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "우즈",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "달달",
+          "job": "환영검사",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "그린",
+          "job": "태양감시자",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "땅호",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "고양이겨울",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "불두",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "유디",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "웅이아부지",
+          "job": "향사수",
+          "level": 89,
+          "conquestGrade": 25,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "놈팽",
+          "job": "태양감시자",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "실프",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 22,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "유산균",
+          "job": "향사수",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "애기",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 22,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "도기",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "스타트",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "북뚜뻑칠성",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 24,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "샤인",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 24,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "목탁맨",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 24,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "스티쁜짭쓰",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 23,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "랸꾸",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 23,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "보라도리",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 22,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "엘뜨",
+          "job": "태양감시자",
+          "level": 87,
+          "conquestGrade": 22,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "냉월",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 23,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "무사형팬클럽",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 24,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "유기",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 23,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "팔공",
+          "job": "야만투사",
+          "level": 87,
+          "conquestGrade": 23,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "니책임",
+          "job": "주문각인사",
+          "level": 86,
+          "conquestGrade": 22,
           "realm": "메르비스 01"
         }
       ]
@@ -28561,5 +28561,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-28T11:50:47.940Z"
+  "updatedAt": "2026-06-28T12:00:48.861Z"
 }
