@@ -105,41 +105,6 @@
         }
       ]
     },
-    "코드네임|론도": {
-      "guildName": "코드네임",
-      "world": "론도",
-      "memberCount": 4,
-      "members": [
-        {
-          "nickname": "뚜껑",
-          "job": "야만투사",
-          "level": 93,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "문왕기",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "김토리",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "GOMTV",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        }
-      ]
-    },
     "GOAT|론도": {
       "guildName": "GOAT",
       "world": "론도",
@@ -168,6 +133,41 @@
         },
         {
           "nickname": "마우이",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        }
+      ]
+    },
+    "코드네임|론도": {
+      "guildName": "코드네임",
+      "world": "론도",
+      "memberCount": 4,
+      "members": [
+        {
+          "nickname": "뚜껑",
+          "job": "야만투사",
+          "level": 93,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "문왕기",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "김토리",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "GOMTV",
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
@@ -1501,7 +1501,7 @@
     "중립|론도": {
       "guildName": "중립",
       "world": "론도",
-      "memberCount": 13,
+      "memberCount": 12,
       "members": [
         {
           "nickname": "일루",
@@ -1585,13 +1585,6 @@
           "job": "향사수",
           "level": 80,
           "conquestGrade": 9,
-          "realm": "론도 03"
-        },
-        {
-          "nickname": "바론이십",
-          "job": "주문각인사",
-          "level": 78,
-          "conquestGrade": 10,
           "realm": "론도 03"
         }
       ]
@@ -6728,7 +6721,7 @@
         {
           "nickname": "불꽃여신",
           "job": "심연추방자",
-          "level": 82,
+          "level": 83,
           "conquestGrade": 18,
           "realm": "아민타 03"
         },
@@ -19764,7 +19757,7 @@
     "솔로|아티산": {
       "guildName": "솔로",
       "world": "아티산",
-      "memberCount": 4,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "히미소사",
@@ -19792,6 +19785,13 @@
           "job": "주문각인사",
           "level": 75,
           "conquestGrade": 15,
+          "realm": "아티산 05"
+        },
+        {
+          "nickname": "치악산구렁이",
+          "job": "심연추방자",
+          "level": 75,
+          "conquestGrade": 14,
           "realm": "아티산 05"
         }
       ]
@@ -28456,5 +28456,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-28T20:30:48.299Z"
+  "updatedAt": "2026-06-28T20:40:45.144Z"
 }
