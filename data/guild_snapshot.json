@@ -10744,6 +10744,13 @@
           "realm": "가리안 05"
         },
         {
+          "nickname": "헬하데스",
+          "job": "야만투사",
+          "level": 84,
+          "conquestGrade": 17,
+          "realm": "가리안 05"
+        },
+        {
           "nickname": "하이설",
           "job": "주문각인사",
           "level": 84,
@@ -10762,13 +10769,6 @@
           "job": "집행관",
           "level": 84,
           "conquestGrade": 20,
-          "realm": "가리안 05"
-        },
-        {
-          "nickname": "헬하데스",
-          "job": "야만투사",
-          "level": 83,
-          "conquestGrade": 17,
           "realm": "가리안 05"
         },
         {
@@ -11775,7 +11775,7 @@
         {
           "nickname": "암사자남편임다",
           "job": "야만투사",
-          "level": 87,
+          "level": 88,
           "conquestGrade": 22,
           "realm": "사도바 02"
         },
@@ -26309,7 +26309,7 @@
     "바다|메르비스": {
       "guildName": "바다",
       "world": "메르비스",
-      "memberCount": 9,
+      "memberCount": 10,
       "members": [
         {
           "nickname": "알리타",
@@ -26341,6 +26341,13 @@
         },
         {
           "nickname": "굿보이",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 22,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "곽씨",
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 22,
@@ -26435,6 +26442,90 @@
           "job": "심연추방자",
           "level": 77,
           "conquestGrade": 14,
+          "realm": "메르비스 02"
+        }
+      ]
+    },
+    "군체|메르비스": {
+      "guildName": "군체",
+      "world": "메르비스",
+      "memberCount": 11,
+      "members": [
+        {
+          "nickname": "XXX",
+          "job": "향사수",
+          "level": 86,
+          "conquestGrade": 22,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "와르릉",
+          "job": "주문각인사",
+          "level": 85,
+          "conquestGrade": 20,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "내이름은조용식",
+          "job": "집행관",
+          "level": 84,
+          "conquestGrade": 20,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "소떡소떡",
+          "job": "주문각인사",
+          "level": 83,
+          "conquestGrade": 20,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "내이름은정준토",
+          "job": "집행관",
+          "level": 82,
+          "conquestGrade": 19,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "내이름은곽두팔",
+          "job": "집행관",
+          "level": 81,
+          "conquestGrade": 17,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "내이름은김두겸",
+          "job": "야만투사",
+          "level": 80,
+          "conquestGrade": 16,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "귀엽기만하면안되는교",
+          "job": "주문각인사",
+          "level": 80,
+          "conquestGrade": 16,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "뚠댕뚠냥",
+          "job": "주문각인사",
+          "level": 80,
+          "conquestGrade": 16,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "사카낙션내한해줘",
+          "job": "환영검사",
+          "level": 80,
+          "conquestGrade": 17,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "코파",
+          "job": "향사수",
+          "level": 79,
+          "conquestGrade": 16,
           "realm": "메르비스 02"
         }
       ]
@@ -26652,83 +26743,6 @@
           "job": "심연추방자",
           "level": 78,
           "conquestGrade": 15,
-          "realm": "메르비스 02"
-        }
-      ]
-    },
-    "군체|메르비스": {
-      "guildName": "군체",
-      "world": "메르비스",
-      "memberCount": 10,
-      "members": [
-        {
-          "nickname": "와르릉",
-          "job": "주문각인사",
-          "level": 85,
-          "conquestGrade": 20,
-          "realm": "메르비스 02"
-        },
-        {
-          "nickname": "내이름은조용식",
-          "job": "집행관",
-          "level": 84,
-          "conquestGrade": 20,
-          "realm": "메르비스 02"
-        },
-        {
-          "nickname": "소떡소떡",
-          "job": "주문각인사",
-          "level": 83,
-          "conquestGrade": 20,
-          "realm": "메르비스 02"
-        },
-        {
-          "nickname": "내이름은정준토",
-          "job": "집행관",
-          "level": 82,
-          "conquestGrade": 19,
-          "realm": "메르비스 02"
-        },
-        {
-          "nickname": "내이름은곽두팔",
-          "job": "집행관",
-          "level": 81,
-          "conquestGrade": 17,
-          "realm": "메르비스 02"
-        },
-        {
-          "nickname": "내이름은김두겸",
-          "job": "야만투사",
-          "level": 80,
-          "conquestGrade": 16,
-          "realm": "메르비스 02"
-        },
-        {
-          "nickname": "귀엽기만하면안되는교",
-          "job": "주문각인사",
-          "level": 80,
-          "conquestGrade": 16,
-          "realm": "메르비스 02"
-        },
-        {
-          "nickname": "뚠댕뚠냥",
-          "job": "주문각인사",
-          "level": 80,
-          "conquestGrade": 16,
-          "realm": "메르비스 02"
-        },
-        {
-          "nickname": "사카낙션내한해줘",
-          "job": "환영검사",
-          "level": 80,
-          "conquestGrade": 17,
-          "realm": "메르비스 02"
-        },
-        {
-          "nickname": "코파",
-          "job": "향사수",
-          "level": 79,
-          "conquestGrade": 16,
           "realm": "메르비스 02"
         }
       ]
@@ -27908,13 +27922,6 @@
           "realm": "메르비스 04"
         },
         {
-          "nickname": "꽃빵",
-          "job": "주문각인사",
-          "level": 83,
-          "conquestGrade": 20,
-          "realm": "메르비스 04"
-        },
-        {
           "nickname": "울면",
           "job": "태양감시자",
           "level": 83,
@@ -27924,6 +27931,13 @@
         {
           "nickname": "짜장면",
           "job": "집행관",
+          "level": 83,
+          "conquestGrade": 20,
+          "realm": "메르비스 04"
+        },
+        {
+          "nickname": "꽃빵",
+          "job": "주문각인사",
           "level": 83,
           "conquestGrade": 20,
           "realm": "메르비스 04"
@@ -28003,7 +28017,7 @@
     "진짜중립|메르비스": {
       "guildName": "진짜중립",
       "world": "메르비스",
-      "memberCount": 19,
+      "memberCount": 18,
       "members": [
         {
           "nickname": "로즈",
@@ -28085,13 +28099,6 @@
         {
           "nickname": "워록",
           "job": "향사수",
-          "level": 85,
-          "conquestGrade": 21,
-          "realm": "메르비스 05"
-        },
-        {
-          "nickname": "지원",
-          "job": "집행관",
           "level": 85,
           "conquestGrade": 21,
           "realm": "메르비스 05"
@@ -28596,5 +28603,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-28T01:30:49.243Z"
+  "updatedAt": "2026-06-28T01:40:48.045Z"
 }
