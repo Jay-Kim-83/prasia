@@ -4773,17 +4773,17 @@
           "realm": "라인소프 05"
         },
         {
-          "nickname": "아르망",
-          "job": "집행관",
-          "level": 82,
-          "conquestGrade": 17,
-          "realm": "라인소프 05"
-        },
-        {
           "nickname": "약쟁이",
           "job": "야만투사",
           "level": 82,
           "conquestGrade": 15,
+          "realm": "라인소프 05"
+        },
+        {
+          "nickname": "아르망",
+          "job": "집행관",
+          "level": 82,
+          "conquestGrade": 17,
           "realm": "라인소프 05"
         }
       ]
@@ -26383,6 +26383,34 @@
         }
       ]
     },
+    "결사주인있음|메르비스": {
+      "guildName": "결사주인있음",
+      "world": "메르비스",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "나띠",
+          "job": "집행관",
+          "level": 86,
+          "conquestGrade": 22,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "얼음불꽃",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 22,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "소떡소떡",
+          "job": "주문각인사",
+          "level": 83,
+          "conquestGrade": 20,
+          "realm": "메르비스 02"
+        }
+      ]
+    },
     "삼전|메르비스": {
       "guildName": "삼전",
       "world": "메르비스",
@@ -28526,5 +28554,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-28T13:30:46.465Z"
+  "updatedAt": "2026-06-28T13:40:47.692Z"
 }
