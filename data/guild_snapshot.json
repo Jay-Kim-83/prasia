@@ -395,7 +395,7 @@
     "백야행|론도": {
       "guildName": "백야행",
       "world": "론도",
-      "memberCount": 5,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "백야펜서",
@@ -413,13 +413,6 @@
         },
         {
           "nickname": "백야광속",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "백야이현",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
@@ -4035,7 +4028,7 @@
     "콜드|라인소프": {
       "guildName": "콜드",
       "world": "라인소프",
-      "memberCount": 23,
+      "memberCount": 24,
       "members": [
         {
           "nickname": "제토",
@@ -4152,6 +4145,13 @@
         {
           "nickname": "월레스",
           "job": "향사수",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "라인소프 04"
+        },
+        {
+          "nickname": "다막아줄라니까",
+          "job": "집행관",
           "level": 86,
           "conquestGrade": 21,
           "realm": "라인소프 04"
@@ -22518,17 +22518,17 @@
           "realm": "나세르 05"
         },
         {
-          "nickname": "늠름",
-          "job": "환영검사",
-          "level": 88,
-          "conquestGrade": 23,
-          "realm": "나세르 05"
-        },
-        {
           "nickname": "개찔러",
           "job": "야만투사",
           "level": 88,
           "conquestGrade": 24,
+          "realm": "나세르 05"
+        },
+        {
+          "nickname": "늠름",
+          "job": "환영검사",
+          "level": 88,
+          "conquestGrade": 23,
           "realm": "나세르 05"
         },
         {
@@ -26407,12 +26407,19 @@
     "하라리|메르비스": {
       "guildName": "하라리",
       "world": "메르비스",
-      "memberCount": 8,
+      "memberCount": 9,
       "members": [
         {
           "nickname": "흑곰",
           "job": "집행관",
           "level": 87,
+          "conquestGrade": 22,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "XXX",
+          "job": "향사수",
+          "level": 86,
           "conquestGrade": 22,
           "realm": "메르비스 02"
         },
@@ -26543,17 +26550,17 @@
           "realm": "메르비스 02"
         },
         {
-          "nickname": "폭룡",
-          "job": "주문각인사",
-          "level": 77,
-          "conquestGrade": 15,
-          "realm": "메르비스 02"
-        },
-        {
           "nickname": "진뢰",
           "job": "집행관",
           "level": 77,
           "conquestGrade": 17,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "폭룡",
+          "job": "주문각인사",
+          "level": 77,
+          "conquestGrade": 15,
           "realm": "메르비스 02"
         },
         {
@@ -28617,5 +28624,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-28T02:50:48.231Z"
+  "updatedAt": "2026-06-28T03:00:46.303Z"
 }
