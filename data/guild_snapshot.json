@@ -202,14 +202,14 @@
           "realm": "론도 01"
         },
         {
-          "nickname": "러너너너너너너너너너",
+          "nickname": "글로벌리더더더더더더",
           "job": "야만투사",
           "level": 93,
           "conquestGrade": 26,
           "realm": "론도 01"
         },
         {
-          "nickname": "글로벌리더더더더더더",
+          "nickname": "러너너너너너너너너너",
           "job": "야만투사",
           "level": 93,
           "conquestGrade": 26,
@@ -9927,7 +9927,7 @@
         {
           "nickname": "지소",
           "job": "집행관",
-          "level": 88,
+          "level": 89,
           "conquestGrade": 24,
           "realm": "가리안 04"
         },
@@ -11355,7 +11355,7 @@
         {
           "nickname": "베르사유",
           "job": "집행관",
-          "level": 83,
+          "level": 84,
           "conquestGrade": 19,
           "realm": "사도바 01"
         },
@@ -17629,7 +17629,7 @@
     "어택|아티산": {
       "guildName": "어택",
       "world": "아티산",
-      "memberCount": 8,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "아마",
@@ -17656,13 +17656,6 @@
           "nickname": "오또상",
           "job": "주문각인사",
           "level": 87,
-          "conquestGrade": 21,
-          "realm": "아티산 02"
-        },
-        {
-          "nickname": "질서",
-          "job": "주문각인사",
-          "level": 86,
           "conquestGrade": 21,
           "realm": "아티산 02"
         },
@@ -17930,7 +17923,7 @@
     "킹덤|아티산": {
       "guildName": "킹덤",
       "world": "아티산",
-      "memberCount": 21,
+      "memberCount": 22,
       "members": [
         {
           "nickname": "또르르",
@@ -18077,6 +18070,13 @@
           "job": "향사수",
           "level": 83,
           "conquestGrade": 22,
+          "realm": "아티산 02"
+        },
+        {
+          "nickname": "Genesis",
+          "job": "향사수",
+          "level": 83,
+          "conquestGrade": 20,
           "realm": "아티산 02"
         }
       ]
@@ -19499,6 +19499,34 @@
           "level": 77,
           "conquestGrade": 11,
           "realm": "아티산 05"
+        }
+      ]
+    },
+    "천상|아티산": {
+      "guildName": "천상",
+      "world": "아티산",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "환동",
+          "job": "향사수",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "아티산 04"
+        },
+        {
+          "nickname": "세련",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 21,
+          "realm": "아티산 04"
+        },
+        {
+          "nickname": "리화",
+          "job": "집행관",
+          "level": 84,
+          "conquestGrade": 20,
+          "realm": "아티산 04"
         }
       ]
     },
@@ -21024,7 +21052,7 @@
     "악마|나세르": {
       "guildName": "악마",
       "world": "나세르",
-      "memberCount": 10,
+      "memberCount": 9,
       "members": [
         {
           "nickname": "화영",
@@ -21086,13 +21114,6 @@
           "nickname": "유람",
           "job": "태양감시자",
           "level": 83,
-          "conquestGrade": 18,
-          "realm": "나세르 02"
-        },
-        {
-          "nickname": "그롱크",
-          "job": "환영검사",
-          "level": 82,
           "conquestGrade": 18,
           "realm": "나세르 02"
         }
@@ -25353,15 +25374,15 @@
           "realm": "타리아 05"
         },
         {
-          "nickname": "연예인빽가",
-          "job": "주문각인사",
+          "nickname": "클린",
+          "job": "집행관",
           "level": 85,
           "conquestGrade": 21,
           "realm": "타리아 05"
         },
         {
-          "nickname": "클린",
-          "job": "집행관",
+          "nickname": "연예인빽가",
+          "job": "주문각인사",
           "level": 85,
           "conquestGrade": 21,
           "realm": "타리아 05"
@@ -28132,17 +28153,17 @@
           "realm": "메르비스 05"
         },
         {
-          "nickname": "오점",
-          "job": "집행관",
-          "level": 82,
-          "conquestGrade": 18,
-          "realm": "메르비스 05"
-        },
-        {
           "nickname": "김독자",
           "job": "주문각인사",
           "level": 82,
           "conquestGrade": 19,
+          "realm": "메르비스 05"
+        },
+        {
+          "nickname": "오점",
+          "job": "집행관",
+          "level": 82,
+          "conquestGrade": 18,
           "realm": "메르비스 05"
         },
         {
@@ -28540,5 +28561,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-28T23:00:46.885Z"
+  "updatedAt": "2026-06-28T23:10:47.254Z"
 }
