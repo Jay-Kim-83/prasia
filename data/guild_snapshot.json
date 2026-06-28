@@ -959,6 +959,34 @@
         }
       ]
     },
+    "청량리|론도": {
+      "guildName": "청량리",
+      "world": "론도",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "Benz",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 24,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "Orange",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 22,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "칭찬을",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 21,
+          "realm": "론도 02"
+        }
+      ]
+    },
     "사탕|론도": {
       "guildName": "사탕",
       "world": "론도",
@@ -3594,20 +3622,13 @@
     "몬스터|라인소프": {
       "guildName": "몬스터",
       "world": "라인소프",
-      "memberCount": 5,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "설윤님접속중",
           "job": "집행관",
           "level": 91,
           "conquestGrade": 25,
-          "realm": "라인소프 03"
-        },
-        {
-          "nickname": "강덕구",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 24,
           "realm": "라인소프 03"
         },
         {
@@ -3845,7 +3866,7 @@
           "nickname": "선물",
           "job": "주문각인사",
           "level": 81,
-          "conquestGrade": 18,
+          "conquestGrade": 19,
           "realm": "라인소프 03"
         },
         {
@@ -8728,17 +8749,17 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "속쓰리면트리겔정",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "가리안 02"
-        },
-        {
           "nickname": "구경만",
           "job": "태양감시자",
           "level": 89,
           "conquestGrade": 22,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "속쓰리면트리겔정",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 24,
           "realm": "가리안 02"
         },
         {
@@ -13586,6 +13607,13 @@
           "realm": "사도바 05"
         },
         {
+          "nickname": "그라펜",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 21,
+          "realm": "사도바 05"
+        },
+        {
           "nickname": "은가비",
           "job": "주문각인사",
           "level": 87,
@@ -13625,13 +13653,6 @@
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 22,
-          "realm": "사도바 05"
-        },
-        {
-          "nickname": "그라펜",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 21,
           "realm": "사도바 05"
         },
         {
@@ -25297,15 +25318,15 @@
           "realm": "타리아 05"
         },
         {
-          "nickname": "독고구패",
-          "job": "집행관",
+          "nickname": "아현",
+          "job": "향사수",
           "level": 85,
           "conquestGrade": 21,
           "realm": "타리아 05"
         },
         {
-          "nickname": "아현",
-          "job": "향사수",
+          "nickname": "독고구패",
+          "job": "집행관",
           "level": 85,
           "conquestGrade": 21,
           "realm": "타리아 05"
@@ -25937,7 +25958,7 @@
           "nickname": "별처럼야이걔섀야",
           "job": "향사수",
           "level": 88,
-          "conquestGrade": 23,
+          "conquestGrade": 24,
           "realm": "메르비스 01"
         },
         {
@@ -26330,18 +26351,11 @@
     "하라리|메르비스": {
       "guildName": "하라리",
       "world": "메르비스",
-      "memberCount": 9,
+      "memberCount": 8,
       "members": [
         {
           "nickname": "흑곰",
           "job": "집행관",
-          "level": 87,
-          "conquestGrade": 22,
-          "realm": "메르비스 02"
-        },
-        {
-          "nickname": "XXX",
-          "job": "향사수",
           "level": 87,
           "conquestGrade": 22,
           "realm": "메르비스 02"
@@ -28526,5 +28540,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-28T22:30:47.630Z"
+  "updatedAt": "2026-06-28T22:40:47.627Z"
 }
