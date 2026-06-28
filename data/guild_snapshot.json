@@ -591,7 +591,7 @@
     "매드|론도": {
       "guildName": "매드",
       "world": "론도",
-      "memberCount": 4,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "매드뉴사신",
@@ -603,6 +603,13 @@
         {
           "nickname": "뉴프알",
           "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "인간백정이",
+          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 01"
@@ -13698,15 +13705,15 @@
           "realm": "사도바 05"
         },
         {
-          "nickname": "귀검사",
-          "job": "야만투사",
+          "nickname": "하지만",
+          "job": "주문각인사",
           "level": 85,
           "conquestGrade": 20,
           "realm": "사도바 05"
         },
         {
-          "nickname": "하지만",
-          "job": "주문각인사",
+          "nickname": "귀검사",
+          "job": "야만투사",
           "level": 85,
           "conquestGrade": 20,
           "realm": "사도바 05"
@@ -16360,7 +16367,7 @@
         {
           "nickname": "킷캣",
           "job": "집행관",
-          "level": 91,
+          "level": 92,
           "conquestGrade": 25,
           "realm": "제롬 05"
         },
@@ -25063,7 +25070,7 @@
     "연예인결사|타리아": {
       "guildName": "연예인결사",
       "world": "타리아",
-      "memberCount": 43,
+      "memberCount": 44,
       "members": [
         {
           "nickname": "윤정",
@@ -25091,6 +25098,13 @@
           "job": "집행관",
           "level": 91,
           "conquestGrade": 24,
+          "realm": "타리아 05"
+        },
+        {
+          "nickname": "윤정꼬붕호동",
+          "job": "야만투사",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "타리아 05"
         },
         {
@@ -28153,17 +28167,17 @@
           "realm": "메르비스 05"
         },
         {
-          "nickname": "당근",
-          "job": "태양감시자",
-          "level": 80,
-          "conquestGrade": 1,
-          "realm": "메르비스 05"
-        },
-        {
           "nickname": "아야야",
           "job": "향사수",
           "level": 80,
           "conquestGrade": 17,
+          "realm": "메르비스 05"
+        },
+        {
+          "nickname": "당근",
+          "job": "태양감시자",
+          "level": 80,
+          "conquestGrade": 1,
           "realm": "메르비스 05"
         }
       ]
@@ -28505,5 +28519,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-28T17:30:46.095Z"
+  "updatedAt": "2026-06-28T17:40:45.967Z"
 }
