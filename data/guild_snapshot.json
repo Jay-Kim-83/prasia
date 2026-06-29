@@ -8728,17 +8728,17 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "구경만",
-          "job": "태양감시자",
-          "level": 89,
-          "conquestGrade": 22,
-          "realm": "가리안 02"
-        },
-        {
           "nickname": "속쓰리면트리겔정",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "구경만",
+          "job": "태양감시자",
+          "level": 89,
+          "conquestGrade": 22,
           "realm": "가리안 02"
         },
         {
@@ -15837,7 +15837,7 @@
     "당근마트|제롬": {
       "guildName": "당근마트",
       "world": "제롬",
-      "memberCount": 27,
+      "memberCount": 28,
       "members": [
         {
           "nickname": "무례합니당",
@@ -15911,6 +15911,13 @@
         },
         {
           "nickname": "깃발든과장",
+          "job": "집행관",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "제롬 04"
+        },
+        {
+          "nickname": "비유",
           "job": "집행관",
           "level": 86,
           "conquestGrade": 21,
@@ -28596,5 +28603,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-29T01:30:45.984Z"
+  "updatedAt": "2026-06-29T01:40:50.417Z"
 }
