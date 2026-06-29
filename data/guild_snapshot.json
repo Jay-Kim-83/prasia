@@ -3,7 +3,7 @@
     "DOGG|론도": {
       "guildName": "DOGG",
       "world": "론도",
-      "memberCount": 9,
+      "memberCount": 10,
       "members": [
         {
           "nickname": "유튜브맛나는꼬꼬",
@@ -43,6 +43,13 @@
         {
           "nickname": "빠비",
           "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "무치무치기무치",
+          "job": "집행관",
           "level": 92,
           "conquestGrade": 25,
           "realm": "론도 01"
@@ -2635,7 +2642,7 @@
     "블시|라인소프": {
       "guildName": "블시",
       "world": "라인소프",
-      "memberCount": 6,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "루비토끼",
@@ -2666,6 +2673,13 @@
           "realm": "라인소프 01"
         },
         {
+          "nickname": "갸루귀신",
+          "job": "주문각인사",
+          "level": 82,
+          "conquestGrade": 17,
+          "realm": "라인소프 01"
+        },
+        {
           "nickname": "HoHoHo",
           "job": "집행관",
           "level": 82,
@@ -2684,7 +2698,7 @@
     "귀뚤|라인소프": {
       "guildName": "귀뚤",
       "world": "라인소프",
-      "memberCount": 22,
+      "memberCount": 21,
       "members": [
         {
           "nickname": "귀뚤민갱",
@@ -2719,13 +2733,6 @@
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 20,
-          "realm": "라인소프 01"
-        },
-        {
-          "nickname": "담배토끼",
-          "job": "주문각인사",
-          "level": 87,
-          "conquestGrade": 23,
           "realm": "라인소프 01"
         },
         {
@@ -8896,15 +8903,15 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "창세기",
-          "job": "집행관",
+          "nickname": "낚시하는댕냥이",
+          "job": "주문각인사",
           "level": 87,
           "conquestGrade": 22,
           "realm": "가리안 02"
         },
         {
-          "nickname": "낚시하는댕냥이",
-          "job": "주문각인사",
+          "nickname": "창세기",
+          "job": "집행관",
           "level": 87,
           "conquestGrade": 22,
           "realm": "가리안 02"
@@ -18572,7 +18579,7 @@
         {
           "nickname": "수양대군",
           "job": "주문각인사",
-          "level": 84,
+          "level": 85,
           "conquestGrade": 20,
           "realm": "아티산 03"
         },
@@ -27831,17 +27838,17 @@
           "realm": "메르비스 04"
         },
         {
-          "nickname": "이카르스",
-          "job": "태양감시자",
-          "level": 84,
-          "conquestGrade": 20,
-          "realm": "메르비스 04"
-        },
-        {
           "nickname": "김또",
           "job": "환영검사",
           "level": 84,
           "conquestGrade": 21,
+          "realm": "메르비스 04"
+        },
+        {
+          "nickname": "이카르스",
+          "job": "태양감시자",
+          "level": 84,
+          "conquestGrade": 20,
           "realm": "메르비스 04"
         },
         {
@@ -28645,5 +28652,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-29T00:20:47.297Z"
+  "updatedAt": "2026-06-29T00:30:47.108Z"
 }
