@@ -794,7 +794,7 @@
     "더킹|론도": {
       "guildName": "더킹",
       "world": "론도",
-      "memberCount": 22,
+      "memberCount": 23,
       "members": [
         {
           "nickname": "홍횽",
@@ -913,6 +913,13 @@
           "job": "집행관",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "딩가딩",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 23,
           "realm": "론도 02"
         },
         {
@@ -1109,7 +1116,7 @@
     "돈타치|론도": {
       "guildName": "돈타치",
       "world": "론도",
-      "memberCount": 16,
+      "memberCount": 15,
       "members": [
         {
           "nickname": "죄악",
@@ -1215,20 +1222,13 @@
           "level": 88,
           "conquestGrade": 23,
           "realm": "론도 02"
-        },
-        {
-          "nickname": "코숏",
-          "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 22,
-          "realm": "론도 02"
         }
       ]
     },
     "블랙중독|론도": {
       "guildName": "블랙중독",
       "world": "론도",
-      "memberCount": 38,
+      "memberCount": 39,
       "members": [
         {
           "nickname": "쌍팔형",
@@ -1464,6 +1464,13 @@
         {
           "nickname": "뻡꾸",
           "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "론도 03"
+        },
+        {
+          "nickname": "지킴",
+          "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
           "realm": "론도 03"
@@ -5372,7 +5379,7 @@
     "코드네임|라인소프": {
       "guildName": "코드네임",
       "world": "라인소프",
-      "memberCount": 31,
+      "memberCount": 32,
       "members": [
         {
           "nickname": "뚜껑",
@@ -5468,6 +5475,13 @@
         {
           "nickname": "햇님씨",
           "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 26,
+          "realm": "라인소프 05"
+        },
+        {
+          "nickname": "민하리",
+          "job": "야만투사",
           "level": 91,
           "conquestGrade": 26,
           "realm": "라인소프 05"
@@ -5820,7 +5834,7 @@
     "찌릿|라인소프": {
       "guildName": "찌릿",
       "world": "라인소프",
-      "memberCount": 6,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "삐삐빠빠",
@@ -5855,13 +5869,6 @@
           "job": "집행관",
           "level": 81,
           "conquestGrade": 8,
-          "realm": "라인소프 05"
-        },
-        {
-          "nickname": "지리일일",
-          "job": "집행관",
-          "level": 80,
-          "conquestGrade": 15,
           "realm": "라인소프 05"
         }
       ]
@@ -18222,7 +18229,7 @@
         {
           "nickname": "강땡초",
           "job": "주문각인사",
-          "level": 87,
+          "level": 88,
           "conquestGrade": 23,
           "realm": "아티산 01"
         },
@@ -19468,7 +19475,7 @@
         {
           "nickname": "블랙팬서",
           "job": "집행관",
-          "level": 90,
+          "level": 89,
           "conquestGrade": 24,
           "realm": "아티산 03"
         },
@@ -25600,7 +25607,7 @@
         {
           "nickname": "엔하",
           "job": "주문각인사",
-          "level": 80,
+          "level": 81,
           "conquestGrade": 19,
           "realm": "타리아 03"
         }
@@ -27315,7 +27322,7 @@
         {
           "nickname": "맛도둑",
           "job": "집행관",
-          "level": 87,
+          "level": 88,
           "conquestGrade": 22,
           "realm": "메르비스 01"
         },
@@ -30017,5 +30024,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-29T19:20:48.749Z"
+  "updatedAt": "2026-06-29T19:30:49.433Z"
 }
