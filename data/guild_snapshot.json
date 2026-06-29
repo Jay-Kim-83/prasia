@@ -1228,7 +1228,7 @@
     "블랙중독|론도": {
       "guildName": "블랙중독",
       "world": "론도",
-      "memberCount": 39,
+      "memberCount": 40,
       "members": [
         {
           "nickname": "쌍팔형",
@@ -1255,6 +1255,13 @@
           "nickname": "어퍼",
           "job": "주문각인사",
           "level": 93,
+          "conquestGrade": 26,
+          "realm": "론도 03"
+        },
+        {
+          "nickname": "슈루룹",
+          "job": "주문각인사",
+          "level": 92,
           "conquestGrade": 26,
           "realm": "론도 03"
         },
@@ -1508,7 +1515,7 @@
     "물고기|론도": {
       "guildName": "물고기",
       "world": "론도",
-      "memberCount": 20,
+      "memberCount": 19,
       "members": [
         {
           "nickname": "청새치",
@@ -1642,13 +1649,6 @@
           "level": 86,
           "conquestGrade": 21,
           "realm": "론도 03"
-        },
-        {
-          "nickname": "브랜딩",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 20,
-          "realm": "론도 03"
         }
       ]
     },
@@ -1711,6 +1711,13 @@
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "론도 03"
+        },
+        {
+          "nickname": "주황",
+          "job": "태양감시자",
+          "level": 89,
+          "conquestGrade": 22,
           "realm": "론도 03"
         },
         {
@@ -1799,13 +1806,6 @@
         },
         {
           "nickname": "워녕짱",
-          "job": "주문각인사",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "론도 03"
-        },
-        {
-          "nickname": "구궁",
           "job": "주문각인사",
           "level": 86,
           "conquestGrade": 21,
@@ -13866,17 +13866,17 @@
           "realm": "사도바 04"
         },
         {
-          "nickname": "아가",
-          "job": "향사수",
-          "level": 88,
-          "conquestGrade": 22,
-          "realm": "사도바 04"
-        },
-        {
           "nickname": "유나라",
           "job": "향사수",
           "level": 87,
           "conquestGrade": 21,
+          "realm": "사도바 04"
+        },
+        {
+          "nickname": "아가",
+          "job": "향사수",
+          "level": 87,
+          "conquestGrade": 22,
           "realm": "사도바 04"
         },
         {
@@ -18028,7 +18028,7 @@
     "슈팅스타|아티산": {
       "guildName": "슈팅스타",
       "world": "아티산",
-      "memberCount": 32,
+      "memberCount": 33,
       "members": [
         {
           "nickname": "강남베인",
@@ -18056,6 +18056,13 @@
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "아티산 01"
+        },
+        {
+          "nickname": "강커리",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 26,
           "realm": "아티산 01"
         },
         {
@@ -23876,6 +23883,13 @@
           "realm": "나세르 05"
         },
         {
+          "nickname": "토끼딘",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "나세르 05"
+        },
+        {
           "nickname": "초코토끼",
           "job": "주문각인사",
           "level": 89,
@@ -23887,13 +23901,6 @@
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 21,
-          "realm": "나세르 05"
-        },
-        {
-          "nickname": "토끼딘",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 24,
           "realm": "나세르 05"
         },
         {
@@ -30024,5 +30031,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-29T19:30:49.433Z"
+  "updatedAt": "2026-06-29T19:40:45.356Z"
 }
