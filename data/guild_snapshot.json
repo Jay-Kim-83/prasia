@@ -21108,7 +21108,7 @@
     "악마|나세르": {
       "guildName": "악마",
       "world": "나세르",
-      "memberCount": 9,
+      "memberCount": 10,
       "members": [
         {
           "nickname": "화영",
@@ -21170,6 +21170,13 @@
           "nickname": "유람",
           "job": "태양감시자",
           "level": 83,
+          "conquestGrade": 18,
+          "realm": "나세르 02"
+        },
+        {
+          "nickname": "그롱크",
+          "job": "환영검사",
+          "level": 82,
           "conquestGrade": 18,
           "realm": "나세르 02"
         }
@@ -22938,15 +22945,15 @@
           "realm": "나세르 05"
         },
         {
-          "nickname": "받아",
-          "job": "주문각인사",
+          "nickname": "행님",
+          "job": "집행관",
           "level": 80,
           "conquestGrade": 15,
           "realm": "나세르 05"
         },
         {
-          "nickname": "행님",
-          "job": "집행관",
+          "nickname": "받아",
+          "job": "주문각인사",
           "level": 80,
           "conquestGrade": 15,
           "realm": "나세르 05"
@@ -28045,7 +28052,7 @@
     "진짜중립|메르비스": {
       "guildName": "진짜중립",
       "world": "메르비스",
-      "memberCount": 20,
+      "memberCount": 19,
       "members": [
         {
           "nickname": "로즈",
@@ -28066,13 +28073,6 @@
           "job": "야만투사",
           "level": 90,
           "conquestGrade": 25,
-          "realm": "메르비스 05"
-        },
-        {
-          "nickname": "빵빵",
-          "job": "집행관",
-          "level": 88,
-          "conquestGrade": 23,
           "realm": "메르비스 05"
         },
         {
@@ -28192,7 +28192,7 @@
     "시나브로|메르비스": {
       "guildName": "시나브로",
       "world": "메르비스",
-      "memberCount": 15,
+      "memberCount": 16,
       "members": [
         {
           "nickname": "미나미",
@@ -28297,6 +28297,13 @@
           "job": "향사수",
           "level": 80,
           "conquestGrade": 17,
+          "realm": "메르비스 05"
+        },
+        {
+          "nickname": "당근",
+          "job": "태양감시자",
+          "level": 80,
+          "conquestGrade": 1,
           "realm": "메르비스 05"
         }
       ]
@@ -28625,11 +28632,11 @@
           "nickname": "AA",
           "job": "심연추방자",
           "level": 81,
-          "conquestGrade": 15,
+          "conquestGrade": 17,
           "realm": "메르비스 05"
         }
       ]
     }
   },
-  "updatedAt": "2026-06-29T00:00:47.374Z"
+  "updatedAt": "2026-06-29T00:10:47.107Z"
 }
