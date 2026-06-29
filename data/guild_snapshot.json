@@ -647,7 +647,7 @@
     "매드|론도": {
       "guildName": "매드",
       "world": "론도",
-      "memberCount": 5,
+      "memberCount": 6,
       "members": [
         {
           "nickname": "매드뉴사신",
@@ -665,6 +665,13 @@
         },
         {
           "nickname": "뉴프알",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "백야이현",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
@@ -4581,7 +4588,7 @@
     "물약공장|라인소프": {
       "guildName": "물약공장",
       "world": "라인소프",
-      "memberCount": 8,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "찬양뮤즈",
@@ -4609,13 +4616,6 @@
           "job": "향사수",
           "level": 85,
           "conquestGrade": 20,
-          "realm": "라인소프 05"
-        },
-        {
-          "nickname": "고파",
-          "job": "집행관",
-          "level": 84,
-          "conquestGrade": 19,
           "realm": "라인소프 05"
         },
         {
@@ -5029,7 +5029,7 @@
     "광명|라인소프": {
       "guildName": "광명",
       "world": "라인소프",
-      "memberCount": 5,
+      "memberCount": 6,
       "members": [
         {
           "nickname": "십이섭",
@@ -5065,13 +5065,20 @@
           "level": 80,
           "conquestGrade": 16,
           "realm": "라인소프 05"
+        },
+        {
+          "nickname": "십섭",
+          "job": "환영검사",
+          "level": 79,
+          "conquestGrade": 15,
+          "realm": "라인소프 05"
         }
       ]
     },
     "귤귤여친구함|아민타": {
       "guildName": "귤귤여친구함",
       "world": "아민타",
-      "memberCount": 14,
+      "memberCount": 11,
       "members": [
         {
           "nickname": "귤귤",
@@ -5098,13 +5105,6 @@
           "nickname": "하이볼",
           "job": "집행관",
           "level": 92,
-          "conquestGrade": 26,
-          "realm": "아민타 01"
-        },
-        {
-          "nickname": "언정사랑",
-          "job": "환영검사",
-          "level": 91,
           "conquestGrade": 26,
           "realm": "아민타 01"
         },
@@ -5137,24 +5137,10 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "시츄사랑",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "아민타 01"
-        },
-        {
           "nickname": "팔공산",
           "job": "향사수",
           "level": 87,
           "conquestGrade": 21,
-          "realm": "아민타 01"
-        },
-        {
-          "nickname": "골프사랑",
-          "job": "환영검사",
-          "level": 87,
-          "conquestGrade": 22,
           "realm": "아민타 01"
         },
         {
@@ -5575,6 +5561,34 @@
           "job": "주문각인사",
           "level": 83,
           "conquestGrade": 19,
+          "realm": "아민타 01"
+        }
+      ]
+    },
+    "코카|아민타": {
+      "guildName": "코카",
+      "world": "아민타",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "코카",
+          "job": "심연추방자",
+          "level": 84,
+          "conquestGrade": 19,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "부귀",
+          "job": "집행관",
+          "level": 82,
+          "conquestGrade": 18,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "쿵푸",
+          "job": "집행관",
+          "level": 82,
+          "conquestGrade": 17,
           "realm": "아민타 01"
         }
       ]
@@ -23596,17 +23610,17 @@
           "realm": "타리아 02"
         },
         {
-          "nickname": "드루왕",
-          "job": "심연추방자",
-          "level": 82,
-          "conquestGrade": 18,
-          "realm": "타리아 02"
-        },
-        {
           "nickname": "표예진",
           "job": "향사수",
           "level": 82,
           "conquestGrade": 20,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "드루왕",
+          "job": "심연추방자",
+          "level": 82,
+          "conquestGrade": 18,
           "realm": "타리아 02"
         },
         {
@@ -24478,6 +24492,13 @@
           "realm": "타리아 04"
         },
         {
+          "nickname": "은애",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "타리아 04"
+        },
+        {
           "nickname": "피카츄",
           "job": "향사수",
           "level": 89,
@@ -24678,13 +24699,6 @@
           "job": "주문각인사",
           "level": 83,
           "conquestGrade": 19,
-          "realm": "타리아 04"
-        },
-        {
-          "nickname": "남윤지",
-          "job": "주문각인사",
-          "level": 83,
-          "conquestGrade": 18,
           "realm": "타리아 04"
         }
       ]
@@ -28365,5 +28379,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-29T06:20:46.467Z"
+  "updatedAt": "2026-06-29T06:30:47.214Z"
 }
