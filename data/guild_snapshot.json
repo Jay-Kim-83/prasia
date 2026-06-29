@@ -2823,7 +2823,7 @@
           "nickname": "나라싱하",
           "job": "환영검사",
           "level": 82,
-          "conquestGrade": 19,
+          "conquestGrade": 20,
           "realm": "라인소프 01"
         },
         {
@@ -4665,13 +4665,27 @@
     "산방산구경오세요|라인소프": {
       "guildName": "산방산구경오세요",
       "world": "라인소프",
-      "memberCount": 4,
+      "memberCount": 6,
       "members": [
+        {
+          "nickname": "도라에몽",
+          "job": "야만투사",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "라인소프 05"
+        },
         {
           "nickname": "돈까스망치",
           "job": "집행관",
           "level": 88,
           "conquestGrade": 24,
+          "realm": "라인소프 05"
+        },
+        {
+          "nickname": "잎비",
+          "job": "주문각인사",
+          "level": 84,
+          "conquestGrade": 20,
           "realm": "라인소프 05"
         },
         {
@@ -5015,7 +5029,7 @@
     "광명|라인소프": {
       "guildName": "광명",
       "world": "라인소프",
-      "memberCount": 6,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "십이섭",
@@ -5050,13 +5064,6 @@
           "job": "집행관",
           "level": 80,
           "conquestGrade": 16,
-          "realm": "라인소프 05"
-        },
-        {
-          "nickname": "십섭",
-          "job": "환영검사",
-          "level": 79,
-          "conquestGrade": 15,
           "realm": "라인소프 05"
         }
       ]
@@ -16673,14 +16680,14 @@
           "realm": "제롬 05"
         },
         {
-          "nickname": "모할꼬냥",
+          "nickname": "혼자왔냥",
           "job": "주문각인사",
           "level": 86,
           "conquestGrade": 21,
           "realm": "제롬 05"
         },
         {
-          "nickname": "혼자왔냥",
+          "nickname": "모할꼬냥",
           "job": "주문각인사",
           "level": 86,
           "conquestGrade": 21,
@@ -19162,7 +19169,7 @@
     "모범택시|아티산": {
       "guildName": "모범택시",
       "world": "아티산",
-      "memberCount": 7,
+      "memberCount": 8,
       "members": [
         {
           "nickname": "빅매치운수드루와",
@@ -19212,13 +19219,20 @@
           "level": 84,
           "conquestGrade": 19,
           "realm": "아티산 04"
+        },
+        {
+          "nickname": "데이즈",
+          "job": "주문각인사",
+          "level": 84,
+          "conquestGrade": 17,
+          "realm": "아티산 04"
         }
       ]
     },
     "고블린하우스|아티산": {
       "guildName": "고블린하우스",
       "world": "아티산",
-      "memberCount": 10,
+      "memberCount": 9,
       "members": [
         {
           "nickname": "범인",
@@ -19251,13 +19265,6 @@
         {
           "nickname": "해골",
           "job": "환영검사",
-          "level": 86,
-          "conquestGrade": 20,
-          "realm": "아티산 04"
-        },
-        {
-          "nickname": "초딩형",
-          "job": "주문각인사",
           "level": 86,
           "conquestGrade": 20,
           "realm": "아티산 04"
@@ -19414,7 +19421,7 @@
     "조용한가족|아티산": {
       "guildName": "조용한가족",
       "world": "아티산",
-      "memberCount": 7,
+      "memberCount": 6,
       "members": [
         {
           "nickname": "조용한향슈",
@@ -19428,13 +19435,6 @@
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 23,
-          "realm": "아티산 04"
-        },
-        {
-          "nickname": "조용한태감",
-          "job": "태양감시자",
-          "level": 87,
-          "conquestGrade": 22,
           "realm": "아티산 04"
         },
         {
@@ -19470,7 +19470,7 @@
     "천상|아티산": {
       "guildName": "천상",
       "world": "아티산",
-      "memberCount": 3,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "환동",
@@ -19488,6 +19488,13 @@
         },
         {
           "nickname": "리화",
+          "job": "집행관",
+          "level": 84,
+          "conquestGrade": 20,
+          "realm": "아티산 04"
+        },
+        {
+          "nickname": "악독",
           "job": "집행관",
           "level": 84,
           "conquestGrade": 20,
@@ -28561,5 +28568,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-29T02:20:46.030Z"
+  "updatedAt": "2026-06-29T02:30:46.102Z"
 }
