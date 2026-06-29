@@ -1654,7 +1654,7 @@
           "nickname": "콩콩",
           "job": "태양감시자",
           "level": 84,
-          "conquestGrade": 18,
+          "conquestGrade": 19,
           "realm": "론도 03"
         },
         {
@@ -4581,7 +4581,7 @@
     "물약공장|라인소프": {
       "guildName": "물약공장",
       "world": "라인소프",
-      "memberCount": 4,
+      "memberCount": 3,
       "members": [
         {
           "nickname": "찬양뮤즈",
@@ -4595,13 +4595,6 @@
           "job": "집행관",
           "level": 86,
           "conquestGrade": 21,
-          "realm": "라인소프 05"
-        },
-        {
-          "nickname": "버벅일",
-          "job": "향사수",
-          "level": 85,
-          "conquestGrade": 20,
           "realm": "라인소프 05"
         },
         {
@@ -4861,7 +4854,7 @@
     "텅텅결사|라인소프": {
       "guildName": "텅텅결사",
       "world": "라인소프",
-      "memberCount": 7,
+      "memberCount": 8,
       "members": [
         {
           "nickname": "쿄쿄쿄",
@@ -4907,6 +4900,13 @@
         },
         {
           "nickname": "농사라이다",
+          "job": "환영검사",
+          "level": 79,
+          "conquestGrade": 15,
+          "realm": "라인소프 05"
+        },
+        {
+          "nickname": "하얀라이더",
           "job": "환영검사",
           "level": 79,
           "conquestGrade": 15,
@@ -16505,14 +16505,14 @@
           "realm": "제롬 05"
         },
         {
-          "nickname": "모할꼬냥",
+          "nickname": "혼자왔냥",
           "job": "주문각인사",
           "level": 86,
           "conquestGrade": 21,
           "realm": "제롬 05"
         },
         {
-          "nickname": "혼자왔냥",
+          "nickname": "모할꼬냥",
           "job": "주문각인사",
           "level": 86,
           "conquestGrade": 21,
@@ -28393,5 +28393,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-29T07:20:48.189Z"
+  "updatedAt": "2026-06-29T07:30:48.217Z"
 }
