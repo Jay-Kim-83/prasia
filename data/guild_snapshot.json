@@ -5379,7 +5379,7 @@
     "코드네임|라인소프": {
       "guildName": "코드네임",
       "world": "라인소프",
-      "memberCount": 32,
+      "memberCount": 33,
       "members": [
         {
           "nickname": "뚜껑",
@@ -5442,6 +5442,13 @@
           "job": "향사수",
           "level": 92,
           "conquestGrade": 26,
+          "realm": "라인소프 05"
+        },
+        {
+          "nickname": "냉동",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "라인소프 05"
         },
         {
@@ -11784,7 +11791,7 @@
     "매드|사도바": {
       "guildName": "매드",
       "world": "사도바",
-      "memberCount": 41,
+      "memberCount": 42,
       "members": [
         {
           "nickname": "뉴사신",
@@ -12011,6 +12018,13 @@
           "realm": "사도바 01"
         },
         {
+          "nickname": "서동",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 22,
+          "realm": "사도바 01"
+        },
+        {
           "nickname": "후추추",
           "job": "야만투사",
           "level": 89,
@@ -12078,7 +12092,7 @@
     "가을|사도바": {
       "guildName": "가을",
       "world": "사도바",
-      "memberCount": 37,
+      "memberCount": 36,
       "members": [
         {
           "nickname": "대박",
@@ -12330,13 +12344,6 @@
           "job": "집행관",
           "level": 86,
           "conquestGrade": 20,
-          "realm": "사도바 01"
-        },
-        {
-          "nickname": "테라",
-          "job": "향사수",
-          "level": 86,
-          "conquestGrade": 22,
           "realm": "사도바 01"
         }
       ]
@@ -26292,6 +26299,41 @@
         }
       ]
     },
+    "라|타리아": {
+      "guildName": "라",
+      "world": "타리아",
+      "memberCount": 4,
+      "members": [
+        {
+          "nickname": "또율",
+          "job": "주문각인사",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "타리아 04"
+        },
+        {
+          "nickname": "파무더",
+          "job": "향사수",
+          "level": 85,
+          "conquestGrade": 20,
+          "realm": "타리아 04"
+        },
+        {
+          "nickname": "광끼",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 20,
+          "realm": "타리아 04"
+        },
+        {
+          "nickname": "천천히",
+          "job": "주문각인사",
+          "level": 85,
+          "conquestGrade": 20,
+          "realm": "타리아 04"
+        }
+      ]
+    },
     "MILLI|타리아": {
       "guildName": "MILLI",
       "world": "타리아",
@@ -27667,7 +27709,7 @@
     "월하|메르비스": {
       "guildName": "월하",
       "world": "메르비스",
-      "memberCount": 37,
+      "memberCount": 38,
       "members": [
         {
           "nickname": "변처럼",
@@ -27719,6 +27761,13 @@
           "realm": "메르비스 02"
         },
         {
+          "nickname": "땅호",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "메르비스 02"
+        },
+        {
           "nickname": "고양이겨울",
           "job": "집행관",
           "level": 90,
@@ -27735,7 +27784,7 @@
         {
           "nickname": "벨라라라",
           "job": "주문각인사",
-          "level": 89,
+          "level": 90,
           "conquestGrade": 24,
           "realm": "메르비스 02"
         },
@@ -28206,7 +28255,7 @@
     "북두칠성|메르비스": {
       "guildName": "북두칠성",
       "world": "메르비스",
-      "memberCount": 38,
+      "memberCount": 39,
       "members": [
         {
           "nickname": "별님",
@@ -28276,6 +28325,13 @@
           "job": "집행관",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "메르비스 03"
+        },
+        {
+          "nickname": "바리",
+          "job": "태양감시자",
+          "level": 90,
+          "conquestGrade": 24,
           "realm": "메르비스 03"
         },
         {
@@ -28598,7 +28654,7 @@
     "독도|메르비스": {
       "guildName": "독도",
       "world": "메르비스",
-      "memberCount": 7,
+      "memberCount": 6,
       "members": [
         {
           "nickname": "혼나",
@@ -28639,13 +28695,6 @@
           "nickname": "초코빵",
           "job": "심연추방자",
           "level": 82,
-          "conquestGrade": 18,
-          "realm": "메르비스 03"
-        },
-        {
-          "nickname": "강치",
-          "job": "심연추방자",
-          "level": 81,
           "conquestGrade": 18,
           "realm": "메르비스 03"
         }
@@ -30031,5 +30080,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-29T19:40:45.356Z"
+  "updatedAt": "2026-06-29T19:50:47.506Z"
 }
