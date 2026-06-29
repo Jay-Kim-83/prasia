@@ -2369,7 +2369,7 @@
     "뿌리깊은나무|론도": {
       "guildName": "뿌리깊은나무",
       "world": "론도",
-      "memberCount": 32,
+      "memberCount": 33,
       "members": [
         {
           "nickname": "홍명보",
@@ -2402,6 +2402,13 @@
         {
           "nickname": "에이아이",
           "job": "집행관",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "론도 05"
+        },
+        {
+          "nickname": "풀소유",
+          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "론도 05"
@@ -5561,6 +5568,41 @@
           "job": "주문각인사",
           "level": 82,
           "conquestGrade": 15,
+          "realm": "라인소프 05"
+        }
+      ]
+    },
+    "성심당|라인소프": {
+      "guildName": "성심당",
+      "world": "라인소프",
+      "memberCount": 4,
+      "members": [
+        {
+          "nickname": "성심을다해모시겠슴다",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "라인소프 05"
+        },
+        {
+          "nickname": "열다섯겹크레페",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 21,
+          "realm": "라인소프 05"
+        },
+        {
+          "nickname": "플레인치즈케이크",
+          "job": "야만투사",
+          "level": 85,
+          "conquestGrade": 21,
+          "realm": "라인소프 05"
+        },
+        {
+          "nickname": "샤인멜론타르트",
+          "job": "심연추방자",
+          "level": 83,
+          "conquestGrade": 17,
           "realm": "라인소프 05"
         }
       ]
@@ -9568,17 +9610,17 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "속쓰리면트리겔정",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "가리안 02"
-        },
-        {
           "nickname": "베르세르크",
           "job": "향사수",
           "level": 89,
           "conquestGrade": 22,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "속쓰리면트리겔정",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 24,
           "realm": "가리안 02"
         },
         {
@@ -24436,15 +24478,15 @@
           "realm": "타리아 01"
         },
         {
-          "nickname": "몽쉘리",
-          "job": "향사수",
+          "nickname": "도브",
+          "job": "주문각인사",
           "level": 84,
           "conquestGrade": 20,
           "realm": "타리아 01"
         },
         {
-          "nickname": "도브",
-          "job": "주문각인사",
+          "nickname": "몽쉘리",
+          "job": "향사수",
           "level": 84,
           "conquestGrade": 20,
           "realm": "타리아 01"
@@ -24842,17 +24884,17 @@
           "realm": "타리아 02"
         },
         {
-          "nickname": "돌돔",
-          "job": "향사수",
-          "level": 87,
-          "conquestGrade": 23,
-          "realm": "타리아 02"
-        },
-        {
           "nickname": "버슨누나",
           "job": "집행관",
           "level": 87,
           "conquestGrade": 22,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "돌돔",
+          "job": "향사수",
+          "level": 87,
+          "conquestGrade": 23,
           "realm": "타리아 02"
         },
         {
@@ -29954,5 +29996,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-29T18:00:51.007Z"
+  "updatedAt": "2026-06-29T18:10:45.670Z"
 }
