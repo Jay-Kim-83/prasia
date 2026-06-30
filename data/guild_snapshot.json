@@ -2022,17 +2022,17 @@
           "realm": "론도 04"
         },
         {
-          "nickname": "춘향이",
-          "job": "환영검사",
-          "level": 91,
-          "conquestGrade": 24,
-          "realm": "론도 04"
-        },
-        {
           "nickname": "노바",
           "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "론도 04"
+        },
+        {
+          "nickname": "춘향이",
+          "job": "환영검사",
+          "level": 91,
+          "conquestGrade": 24,
           "realm": "론도 04"
         },
         {
@@ -3503,7 +3503,7 @@
     "고트|라인소프": {
       "guildName": "고트",
       "world": "라인소프",
-      "memberCount": 11,
+      "memberCount": 12,
       "members": [
         {
           "nickname": "야광토끼",
@@ -3531,6 +3531,13 @@
           "job": "환영검사",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "라인소프 01"
+        },
+        {
+          "nickname": "시인도",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 23,
           "realm": "라인소프 01"
         },
         {
@@ -5029,15 +5036,8 @@
     "동쪽이|라인소프": {
       "guildName": "동쪽이",
       "world": "라인소프",
-      "memberCount": 9,
+      "memberCount": 8,
       "members": [
-        {
-          "nickname": "만코",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "라인소프 03"
-        },
         {
           "nickname": "꼴통분쇄기",
           "job": "환영검사",
@@ -12925,7 +12925,7 @@
     "유니크|사도바": {
       "guildName": "유니크",
       "world": "사도바",
-      "memberCount": 42,
+      "memberCount": 44,
       "members": [
         {
           "nickname": "카신",
@@ -13194,6 +13194,13 @@
           "realm": "사도바 02"
         },
         {
+          "nickname": "똘마니얌",
+          "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 22,
+          "realm": "사도바 02"
+        },
+        {
           "nickname": "대지",
           "job": "주문각인사",
           "level": 87,
@@ -13215,6 +13222,13 @@
           "realm": "사도바 02"
         },
         {
+          "nickname": "미니스트로우",
+          "job": "주문각인사",
+          "level": 86,
+          "conquestGrade": 22,
+          "realm": "사도바 02"
+        },
+        {
           "nickname": "천왕뮨",
           "job": "주문각인사",
           "level": 85,
@@ -13226,7 +13240,7 @@
     "우왕|사도바": {
       "guildName": "우왕",
       "world": "사도바",
-      "memberCount": 36,
+      "memberCount": 35,
       "members": [
         {
           "nickname": "리얼하게",
@@ -13472,13 +13486,6 @@
           "level": 85,
           "conquestGrade": 21,
           "realm": "사도바 02"
-        },
-        {
-          "nickname": "여귀검",
-          "job": "환영검사",
-          "level": 85,
-          "conquestGrade": 22,
-          "realm": "사도바 02"
         }
       ]
     },
@@ -13576,7 +13583,7 @@
     "이장님|사도바": {
       "guildName": "이장님",
       "world": "사도바",
-      "memberCount": 5,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "킹순신",
@@ -13602,13 +13609,6 @@
         {
           "nickname": "뜌감자",
           "job": "주문각인사",
-          "level": 85,
-          "conquestGrade": 20,
-          "realm": "사도바 02"
-        },
-        {
-          "nickname": "파파",
-          "job": "태양감시자",
           "level": 85,
           "conquestGrade": 20,
           "realm": "사도바 02"
@@ -20035,7 +20035,7 @@
         {
           "nickname": "막둥이양",
           "job": "환영검사",
-          "level": 88,
+          "level": 89,
           "conquestGrade": 24,
           "realm": "아티산 03"
         },
@@ -21591,7 +21591,7 @@
     "NO|나세르": {
       "guildName": "NO",
       "world": "나세르",
-      "memberCount": 38,
+      "memberCount": 39,
       "members": [
         {
           "nickname": "노덴버",
@@ -21764,6 +21764,13 @@
         {
           "nickname": "드림캐처",
           "job": "향사수",
+          "level": 89,
+          "conquestGrade": 23,
+          "realm": "나세르 01"
+        },
+        {
+          "nickname": "뚱땡이",
+          "job": "주문각인사",
           "level": 89,
           "conquestGrade": 23,
           "realm": "나세르 01"
@@ -30661,5 +30668,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-30T04:00:44.815Z"
+  "updatedAt": "2026-06-30T04:10:46.966Z"
 }
