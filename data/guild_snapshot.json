@@ -8137,7 +8137,7 @@
     "바다|아민타": {
       "guildName": "바다",
       "world": "아민타",
-      "memberCount": 9,
+      "memberCount": 10,
       "members": [
         {
           "nickname": "하늘구름",
@@ -8193,6 +8193,13 @@
           "job": "야만투사",
           "level": 79,
           "conquestGrade": 13,
+          "realm": "아민타 04"
+        },
+        {
+          "nickname": "다다다",
+          "job": "심연추방자",
+          "level": 79,
+          "conquestGrade": 17,
           "realm": "아민타 04"
         },
         {
@@ -13600,8 +13607,8 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "뜌감자",
-          "job": "주문각인사",
+          "nickname": "파파",
+          "job": "태양감시자",
           "level": 85,
           "conquestGrade": 20,
           "realm": "사도바 02"
@@ -14778,7 +14785,7 @@
         {
           "nickname": "스미마셍",
           "job": "향사수",
-          "level": 90,
+          "level": 91,
           "conquestGrade": 22,
           "realm": "사도바 05"
         },
@@ -17773,6 +17780,34 @@
         }
       ]
     },
+    "즁립|제롬": {
+      "guildName": "즁립",
+      "world": "제롬",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "깃발든과장",
+          "job": "집행관",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "제롬 04"
+        },
+        {
+          "nickname": "가져와라",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 21,
+          "realm": "제롬 04"
+        },
+        {
+          "nickname": "쌀먹즁",
+          "job": "태양감시자",
+          "level": 82,
+          "conquestGrade": 18,
+          "realm": "제롬 04"
+        }
+      ]
+    },
     "두두|제롬": {
       "guildName": "두두",
       "world": "제롬",
@@ -20499,7 +20534,7 @@
     "봄봄|아티산": {
       "guildName": "봄봄",
       "world": "아티산",
-      "memberCount": 46,
+      "memberCount": 47,
       "members": [
         {
           "nickname": "디케",
@@ -20749,6 +20784,13 @@
         {
           "nickname": "혜민수민",
           "job": "향사수",
+          "level": 87,
+          "conquestGrade": 21,
+          "realm": "아티산 04"
+        },
+        {
+          "nickname": "도라이몽",
+          "job": "야만투사",
           "level": 87,
           "conquestGrade": 21,
           "realm": "아티산 04"
@@ -30626,5 +30668,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-30T04:40:44.495Z"
+  "updatedAt": "2026-06-30T04:50:45.563Z"
 }
