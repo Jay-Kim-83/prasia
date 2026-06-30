@@ -825,15 +825,15 @@
           "realm": "론도 02"
         },
         {
-          "nickname": "일호야호",
-          "job": "집행관",
+          "nickname": "농부야호",
+          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 02"
         },
         {
-          "nickname": "농부야호",
-          "job": "주문각인사",
+          "nickname": "일호야호",
+          "job": "집행관",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 02"
@@ -9141,17 +9141,17 @@
           "realm": "가리안 01"
         },
         {
-          "nickname": "파라툼몬",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 24,
-          "realm": "가리안 01"
-        },
-        {
           "nickname": "망망몬",
           "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "가리안 01"
+        },
+        {
+          "nickname": "파라툼몬",
+          "job": "향사수",
+          "level": 91,
+          "conquestGrade": 24,
           "realm": "가리안 01"
         },
         {
@@ -10198,6 +10198,13 @@
           "realm": "가리안 02"
         },
         {
+          "nickname": "Flow",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 22,
+          "realm": "가리안 02"
+        },
+        {
           "nickname": "애옹",
           "job": "주문각인사",
           "level": 87,
@@ -10223,13 +10230,6 @@
           "job": "환영검사",
           "level": 87,
           "conquestGrade": 21,
-          "realm": "가리안 02"
-        },
-        {
-          "nickname": "Flow",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 22,
           "realm": "가리안 02"
         },
         {
@@ -14806,7 +14806,7 @@
         {
           "nickname": "스미마셍",
           "job": "향사수",
-          "level": 91,
+          "level": 90,
           "conquestGrade": 22,
           "realm": "사도바 05"
         },
@@ -27940,7 +27940,7 @@
     "동물유치원|메르비스": {
       "guildName": "동물유치원",
       "world": "메르비스",
-      "memberCount": 13,
+      "memberCount": 12,
       "members": [
         {
           "nickname": "디비",
@@ -28010,13 +28010,6 @@
           "job": "심연추방자",
           "level": 85,
           "conquestGrade": 21,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "잠백이",
-          "job": "집행관",
-          "level": 85,
-          "conquestGrade": 20,
           "realm": "메르비스 01"
         },
         {
@@ -30703,5 +30696,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-30T06:40:46.075Z"
+  "updatedAt": "2026-06-30T06:50:45.505Z"
 }
