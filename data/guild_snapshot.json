@@ -9621,7 +9621,7 @@
     "황혼|가리안": {
       "guildName": "황혼",
       "world": "가리안",
-      "memberCount": 40,
+      "memberCount": 41,
       "members": [
         {
           "nickname": "곰표",
@@ -9662,6 +9662,13 @@
           "nickname": "신쿠야",
           "job": "집행관",
           "level": 92,
+          "conquestGrade": 25,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "딴딴",
+          "job": "야만투사",
+          "level": 91,
           "conquestGrade": 25,
           "realm": "가리안 02"
         },
@@ -10160,7 +10167,7 @@
     "전설|가리안": {
       "guildName": "전설",
       "world": "가리안",
-      "memberCount": 12,
+      "memberCount": 11,
       "members": [
         {
           "nickname": "영원형",
@@ -10238,13 +10245,6 @@
           "level": 87,
           "conquestGrade": 24,
           "realm": "가리안 02"
-        },
-        {
-          "nickname": "주란",
-          "job": "주문각인사",
-          "level": 87,
-          "conquestGrade": 22,
-          "realm": "가리안 02"
         }
       ]
     },
@@ -10321,7 +10321,7 @@
     "신백야|가리안": {
       "guildName": "신백야",
       "world": "가리안",
-      "memberCount": 40,
+      "memberCount": 41,
       "members": [
         {
           "nickname": "블랙팬서",
@@ -10503,6 +10503,13 @@
           "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "니얼굴오징어",
+          "job": "야만투사",
+          "level": 91,
+          "conquestGrade": 26,
           "realm": "가리안 03"
         },
         {
@@ -19155,7 +19162,7 @@
     "민트초코|아티산": {
       "guildName": "민트초코",
       "world": "아티산",
-      "memberCount": 34,
+      "memberCount": 35,
       "members": [
         {
           "nickname": "온달",
@@ -19253,6 +19260,13 @@
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 26,
+          "realm": "아티산 02"
+        },
+        {
+          "nickname": "축복희동",
+          "job": "향사수",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "아티산 02"
         },
         {
@@ -19701,7 +19715,7 @@
     "지능|아티산": {
       "guildName": "지능",
       "world": "아티산",
-      "memberCount": 18,
+      "memberCount": 17,
       "members": [
         {
           "nickname": "카에데카렌",
@@ -19820,13 +19834,6 @@
           "job": "태양감시자",
           "level": 85,
           "conquestGrade": 19,
-          "realm": "아티산 02"
-        },
-        {
-          "nickname": "귀장",
-          "job": "주문각인사",
-          "level": 85,
-          "conquestGrade": 20,
           "realm": "아티산 02"
         }
       ]
@@ -20852,15 +20859,15 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "냐오",
-          "job": "집행관",
+          "nickname": "하얀빛",
+          "job": "야만투사",
           "level": 86,
           "conquestGrade": 20,
           "realm": "아티산 04"
         },
         {
-          "nickname": "하얀빛",
-          "job": "야만투사",
+          "nickname": "냐오",
+          "job": "집행관",
           "level": 86,
           "conquestGrade": 20,
           "realm": "아티산 04"
@@ -29896,15 +29903,15 @@
           "realm": "메르비스 04"
         },
         {
-          "nickname": "꽃빵",
-          "job": "주문각인사",
+          "nickname": "울면",
+          "job": "태양감시자",
           "level": 83,
           "conquestGrade": 20,
           "realm": "메르비스 04"
         },
         {
-          "nickname": "울면",
-          "job": "태양감시자",
+          "nickname": "꽃빵",
+          "job": "주문각인사",
           "level": 83,
           "conquestGrade": 20,
           "realm": "메르비스 04"
@@ -30556,5 +30563,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-30T01:20:48.669Z"
+  "updatedAt": "2026-06-30T01:30:46.082Z"
 }
