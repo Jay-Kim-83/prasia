@@ -325,15 +325,8 @@
     "쉼터|론도": {
       "guildName": "쉼터",
       "world": "론도",
-      "memberCount": 11,
+      "memberCount": 10,
       "members": [
-        {
-          "nickname": "츄악구옥주희",
-          "job": "향사수",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "론도 01"
-        },
         {
           "nickname": "띠또",
           "job": "주문각인사",
@@ -444,7 +437,7 @@
     "카르페디엠|론도": {
       "guildName": "카르페디엠",
       "world": "론도",
-      "memberCount": 10,
+      "memberCount": 12,
       "members": [
         {
           "nickname": "냥냥펀치",
@@ -482,8 +475,22 @@
           "realm": "론도 01"
         },
         {
+          "nickname": "표월",
+          "job": "주문각인사",
+          "level": 84,
+          "conquestGrade": 19,
+          "realm": "론도 01"
+        },
+        {
           "nickname": "이지안",
           "job": "향사수",
+          "level": 84,
+          "conquestGrade": 19,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "해월",
+          "job": "태양감시자",
           "level": 84,
           "conquestGrade": 19,
           "realm": "론도 01"
@@ -11703,17 +11710,17 @@
           "realm": "가리안 05"
         },
         {
-          "nickname": "그라제",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "가리안 05"
-        },
-        {
           "nickname": "유월",
           "job": "집행관",
           "level": 91,
           "conquestGrade": 26,
+          "realm": "가리안 05"
+        },
+        {
+          "nickname": "그라제",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "가리안 05"
         },
         {
@@ -16768,7 +16775,7 @@
     "천사|제롬": {
       "guildName": "천사",
       "world": "제롬",
-      "memberCount": 6,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "피크닉고구마",
@@ -16778,21 +16785,14 @@
           "realm": "제롬 02"
         },
         {
-          "nickname": "백국장",
-          "job": "야만투사",
-          "level": 85,
-          "conquestGrade": 20,
-          "realm": "제롬 02"
-        },
-        {
-          "nickname": "피크닉오디",
+          "nickname": "윈터",
           "job": "주문각인사",
           "level": 84,
           "conquestGrade": 20,
           "realm": "제롬 02"
         },
         {
-          "nickname": "윈터",
+          "nickname": "피크닉오디",
           "job": "주문각인사",
           "level": 84,
           "conquestGrade": 20,
@@ -18882,7 +18882,7 @@
     "아몬드봉봉|아티산": {
       "guildName": "아몬드봉봉",
       "world": "아티산",
-      "memberCount": 23,
+      "memberCount": 22,
       "members": [
         {
           "nickname": "강윅",
@@ -19037,13 +19037,6 @@
           "level": 88,
           "conquestGrade": 24,
           "realm": "아티산 01"
-        },
-        {
-          "nickname": "강츄핑",
-          "job": "야만투사",
-          "level": 88,
-          "conquestGrade": 24,
-          "realm": "아티산 01"
         }
       ]
     },
@@ -19186,6 +19179,13 @@
           "realm": "아티산 01"
         },
         {
+          "nickname": "비비빅",
+          "job": "향사수",
+          "level": 89,
+          "conquestGrade": 25,
+          "realm": "아티산 01"
+        },
+        {
           "nickname": "뽕따",
           "job": "집행관",
           "level": 89,
@@ -19237,13 +19237,6 @@
         {
           "nickname": "사빠딸",
           "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 23,
-          "realm": "아티산 01"
-        },
-        {
-          "nickname": "폴라포",
-          "job": "집행관",
           "level": 88,
           "conquestGrade": 23,
           "realm": "아티산 01"
@@ -29623,15 +29616,15 @@
           "realm": "메르비스 04"
         },
         {
-          "nickname": "이글",
-          "job": "야만투사",
+          "nickname": "피카츄",
+          "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
           "realm": "메르비스 04"
         },
         {
-          "nickname": "피카츄",
-          "job": "주문각인사",
+          "nickname": "이글",
+          "job": "야만투사",
           "level": 90,
           "conquestGrade": 25,
           "realm": "메르비스 04"
@@ -30815,5 +30808,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-30T12:30:43.092Z"
+  "updatedAt": "2026-06-30T12:40:45.430Z"
 }
