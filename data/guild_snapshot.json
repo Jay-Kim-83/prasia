@@ -2556,7 +2556,7 @@
         {
           "nickname": "도솔산낙지볶음밥",
           "job": "야만투사",
-          "level": 90,
+          "level": 91,
           "conquestGrade": 25,
           "realm": "론도 05"
         },
@@ -5050,8 +5050,15 @@
     "동쪽이|라인소프": {
       "guildName": "동쪽이",
       "world": "라인소프",
-      "memberCount": 4,
+      "memberCount": 5,
       "members": [
+        {
+          "nickname": "히릿",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "라인소프 03"
+        },
         {
           "nickname": "콜라힐러",
           "job": "주문각인사",
@@ -6985,13 +6992,6 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "아이스쿠림",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "아민타 02"
-        },
-        {
           "nickname": "꾸댕",
           "job": "향사수",
           "level": 89,
@@ -7000,6 +7000,13 @@
         },
         {
           "nickname": "수호킹",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "아민타 02"
+        },
+        {
+          "nickname": "아이스쿠림",
           "job": "집행관",
           "level": 89,
           "conquestGrade": 24,
@@ -16274,17 +16281,17 @@
           "realm": "제롬 02"
         },
         {
-          "nickname": "츄잉껌",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "제롬 02"
-        },
-        {
           "nickname": "츄내일",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 25,
+          "realm": "제롬 02"
+        },
+        {
+          "nickname": "츄잉껌",
+          "job": "향사수",
+          "level": 89,
+          "conquestGrade": 24,
           "realm": "제롬 02"
         },
         {
@@ -18532,7 +18539,7 @@
     "슈팅스타|아티산": {
       "guildName": "슈팅스타",
       "world": "아티산",
-      "memberCount": 39,
+      "memberCount": 40,
       "members": [
         {
           "nickname": "강남베인",
@@ -18787,6 +18794,13 @@
           "realm": "아티산 01"
         },
         {
+          "nickname": "강마피아",
+          "job": "향사수",
+          "level": 88,
+          "conquestGrade": 24,
+          "realm": "아티산 01"
+        },
+        {
           "nickname": "강토깽",
           "job": "주문각인사",
           "level": 88,
@@ -18980,7 +18994,7 @@
     "피스타치오아몬드|아티산": {
       "guildName": "피스타치오아몬드",
       "world": "아티산",
-      "memberCount": 29,
+      "memberCount": 28,
       "members": [
         {
           "nickname": "아빠는딸바봉",
@@ -19177,13 +19191,6 @@
           "level": 88,
           "conquestGrade": 23,
           "realm": "아티산 01"
-        },
-        {
-          "nickname": "뉴욕치즈케이크",
-          "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 24,
-          "realm": "아티산 01"
         }
       ]
     },
@@ -19246,7 +19253,7 @@
     "민트초코|아티산": {
       "guildName": "민트초코",
       "world": "아티산",
-      "memberCount": 38,
+      "memberCount": 39,
       "members": [
         {
           "nickname": "온달",
@@ -19473,6 +19480,13 @@
           "realm": "아티산 02"
         },
         {
+          "nickname": "산들",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "아티산 02"
+        },
+        {
           "nickname": "산군",
           "job": "집행관",
           "level": 90,
@@ -19519,7 +19533,7 @@
     "냐옹|아티산": {
       "guildName": "냐옹",
       "world": "아티산",
-      "memberCount": 26,
+      "memberCount": 25,
       "members": [
         {
           "nickname": "야인",
@@ -19692,13 +19706,6 @@
         {
           "nickname": "자유이",
           "job": "향사수",
-          "level": 85,
-          "conquestGrade": 21,
-          "realm": "아티산 02"
-        },
-        {
-          "nickname": "히드라",
-          "job": "집행관",
           "level": 85,
           "conquestGrade": 21,
           "realm": "아티산 02"
@@ -30752,5 +30759,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-30T09:20:45.261Z"
+  "updatedAt": "2026-06-30T09:30:45.742Z"
 }
