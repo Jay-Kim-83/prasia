@@ -3450,17 +3450,17 @@
           "realm": "라인소프 01"
         },
         {
-          "nickname": "리읭",
-          "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 23,
-          "realm": "라인소프 01"
-        },
-        {
           "nickname": "타쪼",
           "job": "향사수",
           "level": 88,
           "conquestGrade": 22,
+          "realm": "라인소프 01"
+        },
+        {
+          "nickname": "리읭",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 23,
           "realm": "라인소프 01"
         },
         {
@@ -5099,7 +5099,7 @@
     "동쪽이|라인소프": {
       "guildName": "동쪽이",
       "world": "라인소프",
-      "memberCount": 4,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "히릿",
@@ -5126,6 +5126,13 @@
           "nickname": "주르기",
           "job": "주문각인사",
           "level": 87,
+          "conquestGrade": 22,
+          "realm": "라인소프 03"
+        },
+        {
+          "nickname": "작작쓰",
+          "job": "주문각인사",
+          "level": 86,
           "conquestGrade": 22,
           "realm": "라인소프 03"
         }
@@ -17079,13 +17086,6 @@
           "realm": "제롬 03"
         },
         {
-          "nickname": "주문각사또",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 23,
-          "realm": "제롬 03"
-        },
-        {
           "nickname": "개망나니",
           "job": "주문각인사",
           "level": 90,
@@ -17097,6 +17097,13 @@
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "제롬 03"
+        },
+        {
+          "nickname": "주문각사또",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 23,
           "realm": "제롬 03"
         },
         {
@@ -30864,5 +30871,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-30T16:50:44.149Z"
+  "updatedAt": "2026-06-30T17:00:44.890Z"
 }
