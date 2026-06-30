@@ -9134,17 +9134,17 @@
           "realm": "가리안 01"
         },
         {
-          "nickname": "파라툼몬",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 24,
-          "realm": "가리안 01"
-        },
-        {
           "nickname": "망망몬",
           "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "가리안 01"
+        },
+        {
+          "nickname": "파라툼몬",
+          "job": "향사수",
+          "level": 91,
+          "conquestGrade": 24,
           "realm": "가리안 01"
         },
         {
@@ -14330,7 +14330,7 @@
         {
           "nickname": "유나라",
           "job": "향사수",
-          "level": 87,
+          "level": 88,
           "conquestGrade": 21,
           "realm": "사도바 04"
         },
@@ -18535,6 +18535,13 @@
           "realm": "아티산 01"
         },
         {
+          "nickname": "강커리",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "아티산 01"
+        },
+        {
           "nickname": "강꿀꿀",
           "job": "주문각인사",
           "level": 92,
@@ -18546,13 +18553,6 @@
           "job": "태양감시자",
           "level": 92,
           "conquestGrade": 25,
-          "realm": "아티산 01"
-        },
-        {
-          "nickname": "강커리",
-          "job": "집행관",
-          "level": 92,
-          "conquestGrade": 26,
           "realm": "아티산 01"
         },
         {
@@ -19232,7 +19232,7 @@
     "민트초코|아티산": {
       "guildName": "민트초코",
       "world": "아티산",
-      "memberCount": 36,
+      "memberCount": 37,
       "members": [
         {
           "nickname": "온달",
@@ -19477,6 +19477,13 @@
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 22,
+          "realm": "아티산 02"
+        },
+        {
+          "nickname": "상천",
+          "job": "향사수",
+          "level": 88,
+          "conquestGrade": 23,
           "realm": "아티산 02"
         },
         {
@@ -19792,7 +19799,7 @@
     "지능|아티산": {
       "guildName": "지능",
       "world": "아티산",
-      "memberCount": 17,
+      "memberCount": 16,
       "members": [
         {
           "nickname": "카에데카렌",
@@ -19904,13 +19911,6 @@
           "job": "태양감시자",
           "level": 85,
           "conquestGrade": 21,
-          "realm": "아티산 02"
-        },
-        {
-          "nickname": "펜디",
-          "job": "태양감시자",
-          "level": 85,
-          "conquestGrade": 19,
           "realm": "아티산 02"
         }
       ]
@@ -22378,17 +22378,17 @@
           "realm": "나세르 02"
         },
         {
-          "nickname": "크로미",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "나세르 02"
-        },
-        {
           "nickname": "영희는휴식중",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "나세르 02"
+        },
+        {
+          "nickname": "크로미",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 24,
           "realm": "나세르 02"
         },
         {
@@ -27552,6 +27552,34 @@
         }
       ]
     },
+    "아레스|타리아": {
+      "guildName": "아레스",
+      "world": "타리아",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "깨부",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 20,
+          "realm": "타리아 05"
+        },
+        {
+          "nickname": "해피해피",
+          "job": "주문각인사",
+          "level": 85,
+          "conquestGrade": 20,
+          "realm": "타리아 05"
+        },
+        {
+          "nickname": "피존",
+          "job": "태양감시자",
+          "level": 85,
+          "conquestGrade": 21,
+          "realm": "타리아 05"
+        }
+      ]
+    },
     "TOP|메르비스": {
       "guildName": "TOP",
       "world": "메르비스",
@@ -30675,5 +30703,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-30T05:40:45.951Z"
+  "updatedAt": "2026-06-30T05:50:44.356Z"
 }
