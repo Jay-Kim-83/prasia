@@ -230,5 +230,5 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
 .card-title{cursor:pointer}
 .card-title::after{content:'▾';margin-left:auto;font-size:16px;color:var(--text-dim);transition:transform .2s;display:inline-block;line-height:1}
 .card.collapsed .card-title::after{transform:rotate(-90deg)}
-.card-body{overflow:hidden;transition:height .22s ease}
+.card-body{overflow:visible;transition:height .22s ease}
 .card.collapsed .card-body{display:none}
