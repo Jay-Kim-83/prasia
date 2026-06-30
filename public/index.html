@@ -153,13 +153,13 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 .nick-name{font-size:14px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .nick-clk{cursor:pointer;transition:color .15s}
 .nick-clk:hover{color:var(--cyan);text-decoration:underline;text-underline-offset:2px}
-.ch-modal{background:var(--bg2);border:1px solid var(--border-glow);border-radius:16px;width:95%;max-width:440px;max-height:80vh;max-height:80dvh;display:flex;flex-direction:column;box-shadow:0 16px 64px var(--shadow);animation:gm-in .2s ease-out}
+.ch-modal{background:var(--bg2);border:1px solid var(--border-glow);border-radius:16px;width:95%;max-width:440px;min-height:240px;max-height:80vh;max-height:80dvh;display:flex;flex-direction:column;box-shadow:0 16px 64px var(--shadow);animation:gm-in .2s ease-out}
 .ch-head{display:flex;align-items:center;justify-content:space-between;padding:18px 20px 14px;border-bottom:1px solid var(--border);flex-shrink:0}
 .ch-head h2{font-size:16px;color:var(--gold-light);display:flex;align-items:center;gap:8px;min-width:0}
 .ch-head h2 .ch-sub{font-size:12px;color:var(--text-dim);font-weight:400;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .ch-close{background:none;border:none;color:var(--text-dim);font-size:18px;cursor:pointer;padding:2px 6px;border-radius:6px;flex-shrink:0}
 .ch-close:hover{background:var(--bg3);color:var(--text)}
-.ch-body{overflow-y:auto;flex:1;min-height:0;padding:16px 20px}
+.ch-body{overflow-y:auto;flex:1;min-height:0;padding:16px 20px;display:flex;flex-direction:column}
 .ch-now{font-size:12px;color:var(--text-dim);margin-bottom:14px}
 .ch-now strong{color:var(--cyan);font-weight:700}
 .ch-timeline{display:flex;flex-direction:column;gap:0}
@@ -171,7 +171,7 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 .ch-step-move .ch-arrow{color:var(--gold)}
 .ch-step-move .ch-to{color:var(--gold-light)}
 .ch-step-date{font-size:11px;color:var(--text-faint);margin-top:3px}
-.ch-empty{padding:20px 0;text-align:center;color:var(--text-faint);font-size:13px}
+.ch-empty{margin:auto 0;padding:20px 0;text-align:center;color:var(--text-faint);font-size:13px}
 .guild-name{display:inline-block;font-size:11px;color:var(--text-dim);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
 .guild-name::before{content:'⚔ '}
 .guild-name:hover{color:var(--cyan);text-decoration:underline;text-underline-offset:2px}
