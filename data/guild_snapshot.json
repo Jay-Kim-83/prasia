@@ -7475,6 +7475,13 @@
       "memberCount": 20,
       "members": [
         {
+          "nickname": "쎈전설",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "아민타 03"
+        },
+        {
           "nickname": "쎈어비",
           "job": "주문각인사",
           "level": 92,
@@ -7486,13 +7493,6 @@
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
-          "realm": "아민타 03"
-        },
-        {
-          "nickname": "쎈전설",
-          "job": "집행관",
-          "level": 92,
-          "conquestGrade": 26,
           "realm": "아민타 03"
         },
         {
@@ -12610,7 +12610,7 @@
     "가을|사도바": {
       "guildName": "가을",
       "world": "사도바",
-      "memberCount": 34,
+      "memberCount": 33,
       "members": [
         {
           "nickname": "대박",
@@ -12842,13 +12842,6 @@
           "level": 87,
           "conquestGrade": 20,
           "realm": "사도바 01"
-        },
-        {
-          "nickname": "갱스리",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "사도바 01"
         }
       ]
     },
@@ -12918,13 +12911,20 @@
     "새드|사도바": {
       "guildName": "새드",
       "world": "사도바",
-      "memberCount": 3,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "별의",
           "job": "향사수",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "사도바 01"
+        },
+        {
+          "nickname": "불량감자",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 23,
           "realm": "사도바 01"
         },
         {
@@ -14821,7 +14821,7 @@
           "nickname": "스미마셍",
           "job": "향사수",
           "level": 91,
-          "conquestGrade": 22,
+          "conquestGrade": 23,
           "realm": "사도바 05"
         },
         {
@@ -22697,7 +22697,7 @@
     "트레비어|나세르": {
       "guildName": "트레비어",
       "world": "나세르",
-      "memberCount": 29,
+      "memberCount": 30,
       "members": [
         {
           "nickname": "말본",
@@ -22898,6 +22898,13 @@
         {
           "nickname": "오로치",
           "job": "태양감시자",
+          "level": 85,
+          "conquestGrade": 22,
+          "realm": "나세르 02"
+        },
+        {
+          "nickname": "클로어",
+          "job": "주문각인사",
           "level": 85,
           "conquestGrade": 22,
           "realm": "나세르 02"
@@ -30780,5 +30787,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-30T09:50:45.086Z"
+  "updatedAt": "2026-06-30T10:00:45.059Z"
 }
