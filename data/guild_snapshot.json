@@ -836,7 +836,7 @@
     "더킹|론도": {
       "guildName": "더킹",
       "world": "론도",
-      "memberCount": 31,
+      "memberCount": 32,
       "members": [
         {
           "nickname": "홍횽",
@@ -946,6 +946,13 @@
         {
           "nickname": "킹파민",
           "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "삼호야호",
+          "job": "야만투사",
           "level": 90,
           "conquestGrade": 25,
           "realm": "론도 02"
@@ -2036,17 +2043,17 @@
           "realm": "론도 04"
         },
         {
-          "nickname": "춘향이",
-          "job": "환영검사",
-          "level": 91,
-          "conquestGrade": 24,
-          "realm": "론도 04"
-        },
-        {
           "nickname": "노바",
           "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "론도 04"
+        },
+        {
+          "nickname": "춘향이",
+          "job": "환영검사",
+          "level": 91,
+          "conquestGrade": 24,
           "realm": "론도 04"
         },
         {
@@ -8949,7 +8956,7 @@
     "진격의디지몬|가리안": {
       "guildName": "진격의디지몬",
       "world": "가리안",
-      "memberCount": 49,
+      "memberCount": 50,
       "members": [
         {
           "nickname": "현이몬",
@@ -9173,6 +9180,13 @@
           "job": "향사수",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "가리안 01"
+        },
+        {
+          "nickname": "인노몬",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 23,
           "realm": "가리안 01"
         },
         {
@@ -9890,17 +9904,17 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "애니",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 24,
-          "realm": "가리안 02"
-        },
-        {
           "nickname": "선구안",
           "job": "환영검사",
           "level": 87,
           "conquestGrade": 19,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "애니",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 24,
           "realm": "가리안 02"
         },
         {
@@ -10074,7 +10088,7 @@
         {
           "nickname": "폭군특임대",
           "job": "집행관",
-          "level": 88,
+          "level": 89,
           "conquestGrade": 24,
           "realm": "가리안 02"
         },
@@ -19389,13 +19403,6 @@
           "realm": "아티산 02"
         },
         {
-          "nickname": "곰순이",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "아티산 02"
-        },
-        {
           "nickname": "구윙",
           "job": "주문각인사",
           "level": 90,
@@ -19407,6 +19414,13 @@
           "job": "집행관",
           "level": 90,
           "conquestGrade": 22,
+          "realm": "아티산 02"
+        },
+        {
+          "nickname": "곰순이",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "아티산 02"
         },
         {
@@ -27492,7 +27506,7 @@
     "TOP|메르비스": {
       "guildName": "TOP",
       "world": "메르비스",
-      "memberCount": 48,
+      "memberCount": 49,
       "members": [
         {
           "nickname": "해태",
@@ -27817,6 +27831,13 @@
           "realm": "메르비스 01"
         },
         {
+          "nickname": "프로토콜",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 23,
+          "realm": "메르비스 01"
+        },
+        {
           "nickname": "또또잉",
           "job": "주문각인사",
           "level": 86,
@@ -27835,7 +27856,7 @@
     "동물유치원|메르비스": {
       "guildName": "동물유치원",
       "world": "메르비스",
-      "memberCount": 14,
+      "memberCount": 13,
       "members": [
         {
           "nickname": "디비",
@@ -27926,13 +27947,6 @@
           "job": "집행관",
           "level": 84,
           "conquestGrade": 20,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "코코맥스",
-          "job": "심연추방자",
-          "level": 84,
-          "conquestGrade": 21,
           "realm": "메르비스 01"
         }
       ]
@@ -29039,7 +29053,7 @@
     "고블린노조|메르비스": {
       "guildName": "고블린노조",
       "world": "메르비스",
-      "memberCount": 6,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "고회장",
@@ -29053,6 +29067,13 @@
           "job": "주문각인사",
           "level": 86,
           "conquestGrade": 21,
+          "realm": "메르비스 03"
+        },
+        {
+          "nickname": "계수",
+          "job": "집행관",
+          "level": 86,
+          "conquestGrade": 22,
           "realm": "메르비스 03"
         },
         {
@@ -30598,5 +30619,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-30T02:00:45.071Z"
+  "updatedAt": "2026-06-30T02:10:44.101Z"
 }
