@@ -5580,7 +5580,7 @@
         {
           "nickname": "초아별",
           "job": "야만투사",
-          "level": 85,
+          "level": 86,
           "conquestGrade": 20,
           "realm": "라인소프 04"
         },
@@ -8623,17 +8623,17 @@
           "realm": "아민타 05"
         },
         {
-          "nickname": "백미르",
-          "job": "향사수",
-          "level": 84,
-          "conquestGrade": 19,
-          "realm": "아민타 05"
-        },
-        {
           "nickname": "독사다",
           "job": "집행관",
           "level": 84,
           "conquestGrade": 21,
+          "realm": "아민타 05"
+        },
+        {
+          "nickname": "백미르",
+          "job": "향사수",
+          "level": 84,
+          "conquestGrade": 19,
           "realm": "아민타 05"
         },
         {
@@ -15546,13 +15546,6 @@
           "realm": "제롬 01"
         },
         {
-          "nickname": "꼰대가르송",
-          "job": "집행관",
-          "level": 88,
-          "conquestGrade": 24,
-          "realm": "제롬 01"
-        },
-        {
           "nickname": "악쀼",
           "job": "주문각인사",
           "level": 88,
@@ -15564,6 +15557,13 @@
           "job": "향사수",
           "level": 88,
           "conquestGrade": 22,
+          "realm": "제롬 01"
+        },
+        {
+          "nickname": "꼰대가르송",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 24,
           "realm": "제롬 01"
         },
         {
@@ -17943,7 +17943,7 @@
           "nickname": "쿠크다스",
           "job": "집행관",
           "level": 91,
-          "conquestGrade": 25,
+          "conquestGrade": 26,
           "realm": "제롬 05"
         },
         {
@@ -28297,8 +28297,15 @@
     "월하|메르비스": {
       "guildName": "월하",
       "world": "메르비스",
-      "memberCount": 45,
+      "memberCount": 46,
       "members": [
+        {
+          "nickname": "변처럼",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 26,
+          "realm": "메르비스 02"
+        },
         {
           "nickname": "수수한",
           "job": "환영검사",
@@ -30745,5 +30752,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-30T08:50:45.059Z"
+  "updatedAt": "2026-06-30T09:00:44.454Z"
 }
