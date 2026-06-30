@@ -7,6 +7,7 @@ const { scrapeRankings, loadData, loadMeta } = require('./scraper');
 const github = require('./github-sync');
 const tracker = require('./data/guild-tracker');
 const trackerRoutes = require('./data/tracker-routes');
+const charHistory = require('./data/char-history');
 
 function isLocalInteractive() {
     if (process.env.NO_OPEN === '1') return false;
@@ -153,6 +154,10 @@ async function runScrape() {
       const detected = tracker.runAutoDetection();
       console.log(`[Tracker] 스냅샷 저장: ${guildCount}개 결사 | 이전 감지: ${detected?.detected ?? 0}건`);
     } catch(e) { console.error('[Tracker] 오류:', e.message); }
+    try {
+      const r = charHistory.trackGuildChanges();
+      console.log(`[CharHistory] 캐릭터 결사 변경: ${r.changes}건`);
+    } catch(e) { console.error('[CharHistory] 오류:', e.message); }
     github.pushAll().catch(e => console.error('[GitHub] 동기화 오류:', e.message));
     const elapsed = Date.now() - startTime;
     const min = Math.floor(elapsed / 60000);
@@ -515,7 +520,7 @@ app.get('/api/sync-download', (req, res) => {
     const decoded = Buffer.from(token, 'base64').toString('utf8');
     if (!decoded.endsWith(':prasia')) return res.status(403).json({ success: false, message: '마스터 관리자만 사용 가능합니다.' });
   } catch { return res.status(403).json({ success: false, message: '토큰 오류' }); }
-  const files = ['config.json', 'schedule.json', 'meta.json', 'rankings.json', 'guild_tracking.json', 'migration_candidates.json', 'guild_snapshot.json'];
+  const files = ['config.json', 'schedule.json', 'meta.json', 'rankings.json', 'guild_tracking.json', 'migration_candidates.json', 'guild_snapshot.json', 'char_guild_state.json', 'char_guild_history.json'];
   const data = {};
   for (const file of files) {
     const fp = path.join(__dirname, 'data', file);
@@ -547,6 +552,16 @@ app.post('/api/collect', (req, res) => {
   }
   res.json({ success: true, message: '수집 시작됨' });
   runScrape();
+});
+
+app.get('/api/char-history', (req, res) => {
+  const { nickname, world, realm } = req.query;
+  if (!nickname) return res.status(400).json({ success: false, message: '닉네임이 필요합니다.' });
+  try {
+    res.json({ success: true, history: charHistory.getHistory(nickname, world, realm) });
+  } catch (e) {
+    res.status(500).json({ success: false, message: e.message });
+  }
 });
 
 app.get('/api/task-scheduler-cmd', (req, res) => {

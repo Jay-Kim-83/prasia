@@ -35,7 +35,7 @@ const BRANCH = process.env.GITHUB_BRANCH || 'data';
 const DATA_DIR = path.join(__dirname, 'data');
 
 // 동기화 대상 파일
-const SYNC_FILES = ['rankings.json', 'schedule.json', 'meta.json', 'config.json', 'guild_snapshot.json', 'guild_tracking.json', 'migration_candidates.json'];
+const SYNC_FILES = ['rankings.json', 'schedule.json', 'meta.json', 'config.json', 'guild_snapshot.json', 'guild_tracking.json', 'migration_candidates.json', 'char_guild_state.json', 'char_guild_history.json'];
 
 function isEnabled() {
   return !!(REPO && TOKEN);

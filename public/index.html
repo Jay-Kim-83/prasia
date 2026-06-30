@@ -151,6 +151,27 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 
 /* nick */
 .nick-name{font-size:14px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nick-clk{cursor:pointer;transition:color .15s}
+.nick-clk:hover{color:var(--cyan);text-decoration:underline;text-underline-offset:2px}
+.ch-modal{background:var(--bg2);border:1px solid var(--border-glow);border-radius:16px;width:95%;max-width:440px;max-height:80vh;max-height:80dvh;display:flex;flex-direction:column;box-shadow:0 16px 64px var(--shadow);animation:gm-in .2s ease-out}
+.ch-head{display:flex;align-items:center;justify-content:space-between;padding:18px 20px 14px;border-bottom:1px solid var(--border);flex-shrink:0}
+.ch-head h2{font-size:16px;color:var(--gold-light);display:flex;align-items:center;gap:8px;min-width:0}
+.ch-head h2 .ch-sub{font-size:12px;color:var(--text-dim);font-weight:400;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ch-close{background:none;border:none;color:var(--text-dim);font-size:18px;cursor:pointer;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.ch-close:hover{background:var(--bg3);color:var(--text)}
+.ch-body{overflow-y:auto;flex:1;min-height:0;padding:16px 20px}
+.ch-now{font-size:12px;color:var(--text-dim);margin-bottom:14px}
+.ch-now strong{color:var(--cyan);font-weight:700}
+.ch-timeline{display:flex;flex-direction:column;gap:0}
+.ch-step{position:relative;padding:0 0 16px 22px;border-left:2px solid var(--border)}
+.ch-step:last-child{border-left-color:transparent;padding-bottom:0}
+.ch-step::before{content:'';position:absolute;left:-6px;top:2px;width:10px;height:10px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 3px var(--bg2)}
+.ch-step-move{font-size:13px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.ch-step-move .ch-from{color:var(--text-dim)}
+.ch-step-move .ch-arrow{color:var(--gold)}
+.ch-step-move .ch-to{color:var(--gold-light)}
+.ch-step-date{font-size:11px;color:var(--text-faint);margin-top:3px}
+.ch-empty{padding:20px 0;text-align:center;color:var(--text-faint);font-size:13px}
 .guild-name{display:inline-block;font-size:11px;color:var(--text-dim);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
 .guild-name::before{content:'⚔ '}
 .guild-name:hover{color:var(--cyan);text-decoration:underline;text-underline-offset:2px}
@@ -564,6 +585,9 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 <!-- 결사 모달 -->
 <div class="guild-modal-overlay" id="guildModal" onclick="if(event.target===this)closeGuildModal()"></div>
 
+<!-- 캐릭터 결사 이동 이력 모달 -->
+<div class="guild-modal-overlay" id="charHistoryModal" onclick="if(event.target===this)closeCharHistory()"></div>
+
 <script>
 const USER_TOKEN_KEY = 'prasia_user_token';
 const ADMIN_TOKEN_KEY = 'prasia_admin_token';
@@ -961,7 +985,7 @@ function renderRow(c) {
   return `<tr${trCls}>
     <td class="td-rank rank-${r<=3?r:''}">${rankHtml}</td>
     <td>
-      <div class="nick-name">${esc(c.nickname)}${bubbleIcon}</div>
+      <div class="nick-name"><span class="nick-clk" onclick="event.stopPropagation();showCharHistory('${escAttr(c.nickname)}','${escAttr(c.world||'')}','${escAttr(c.realm||'')}','${escAttr(c.guild||'')}')">${esc(c.nickname)}</span>${bubbleIcon}</div>
       ${c.guild?`<div class="guild-name" style="cursor:pointer" onclick="event.stopPropagation();openGuildModal('${esc(c.guild).replace(/'/g,"\\&#39;")}','${esc(c.realm||'').replace(/'/g,"\\&#39;")}')">${esc(c.guild)}</div>`:''}
       ${bubbleHtml}
     </td>
@@ -1372,7 +1396,60 @@ function closeGuildModal() {
   overlay.innerHTML = '';
   document.body.style.overflow = '';
 }
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeGuildModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeGuildModal(); closeCharHistory(); } });
+
+function closeCharHistory() {
+  const overlay = document.getElementById('charHistoryModal');
+  overlay.classList.remove('active');
+  overlay.innerHTML = '';
+  document.body.style.overflow = '';
+}
+
+function guildLabel(name) {
+  return name ? esc(name) : '<span style="opacity:.6">무소속</span>';
+}
+
+async function showCharHistory(nickname, world, realm, curGuild) {
+  const overlay = document.getElementById('charHistoryModal');
+  const loc = [world, realm].filter(Boolean).join(' · ');
+  const sub = loc ? `<span class="ch-sub">${esc(loc)}</span>` : '';
+  const shell = body => `<div class="ch-modal">
+    <div class="ch-head">
+      <h2>📜 ${esc(nickname)} ${sub}</h2>
+      <button class="ch-close" onclick="closeCharHistory()">✕</button>
+    </div>
+    <div class="ch-body">${body}</div>
+  </div>`;
+
+  overlay.innerHTML = shell(`<div class="ch-empty">불러오는 중…</div>`);
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+
+  try {
+    const params = new URLSearchParams({ nickname, world, realm });
+    const res = await fetch(`/api/char-history?${params}`);
+    const data = await res.json();
+    const history = (data && data.history) || [];
+
+    const nowHtml = `<div class="ch-now">현재 결사 <strong>${curGuild ? esc(curGuild) : '무소속'}</strong></div>`;
+    let listHtml;
+    if (!history.length) {
+      listHtml = `<div class="ch-empty">기록된 결사 이동이 없습니다.<br><span style="font-size:11px;opacity:.7">수집 이후 결사가 바뀌면 여기에 표시됩니다.</span></div>`;
+    } else {
+      listHtml = `<div class="ch-timeline">` + history.slice().reverse().map(h => {
+        const d = new Date(h.at);
+        const date = `${d.toLocaleDateString('ko-KR')} ${d.toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'})}`;
+        return `<div class="ch-step">
+          <div class="ch-step-move"><span class="ch-from">${guildLabel(h.from)}</span><span class="ch-arrow">→</span><span class="ch-to">${guildLabel(h.to)}</span></div>
+          <div class="ch-step-date">${date}</div>
+        </div>`;
+      }).join('') + `</div>`;
+    }
+    overlay.innerHTML = shell(nowHtml + listHtml);
+  } catch (e) {
+    overlay.innerHTML = shell(`<div class="ch-empty">이력을 불러오지 못했습니다.</div>`);
+  }
+}
 
 // ── THEME TOGGLE ────────────────────────────────────────────────
 (function initTheme() {
