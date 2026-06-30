@@ -34,14 +34,14 @@
           "realm": "론도 01"
         },
         {
-          "nickname": "루시펠",
+          "nickname": "초당",
           "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
           "realm": "론도 01"
         },
         {
-          "nickname": "초당",
+          "nickname": "루시펠",
           "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
@@ -1973,17 +1973,17 @@
           "realm": "론도 04"
         },
         {
-          "nickname": "춘향이",
-          "job": "환영검사",
-          "level": 91,
-          "conquestGrade": 24,
-          "realm": "론도 04"
-        },
-        {
           "nickname": "노바",
           "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "론도 04"
+        },
+        {
+          "nickname": "춘향이",
+          "job": "환영검사",
+          "level": 91,
+          "conquestGrade": 24,
           "realm": "론도 04"
         },
         {
@@ -3538,7 +3538,7 @@
     "블시|라인소프": {
       "guildName": "블시",
       "world": "라인소프",
-      "memberCount": 6,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "박준형",
@@ -3559,13 +3559,6 @@
           "job": "주문각인사",
           "level": 85,
           "conquestGrade": 21,
-          "realm": "라인소프 01"
-        },
-        {
-          "nickname": "헬싱",
-          "job": "야만투사",
-          "level": 84,
-          "conquestGrade": 20,
           "realm": "라인소프 01"
         },
         {
@@ -27989,7 +27982,7 @@
     "월하|메르비스": {
       "guildName": "월하",
       "world": "메르비스",
-      "memberCount": 42,
+      "memberCount": 43,
       "members": [
         {
           "nickname": "변처럼",
@@ -28120,6 +28113,13 @@
         {
           "nickname": "차르봄바",
           "job": "집행관",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "스타트",
+          "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
           "realm": "메르비스 02"
@@ -30395,5 +30395,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-30T00:00:44.417Z"
+  "updatedAt": "2026-06-30T00:10:46.907Z"
 }
