@@ -3633,48 +3633,6 @@
         }
       ]
     },
-    "블시|라인소프": {
-      "guildName": "블시",
-      "world": "라인소프",
-      "memberCount": 5,
-      "members": [
-        {
-          "nickname": "박준형",
-          "job": "집행관",
-          "level": 88,
-          "conquestGrade": 22,
-          "realm": "라인소프 01"
-        },
-        {
-          "nickname": "삼팔광땡",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "라인소프 01"
-        },
-        {
-          "nickname": "여섯시내고환",
-          "job": "주문각인사",
-          "level": 85,
-          "conquestGrade": 21,
-          "realm": "라인소프 01"
-        },
-        {
-          "nickname": "갸루귀신",
-          "job": "주문각인사",
-          "level": 82,
-          "conquestGrade": 17,
-          "realm": "라인소프 01"
-        },
-        {
-          "nickname": "HoHoHo",
-          "job": "집행관",
-          "level": 82,
-          "conquestGrade": 19,
-          "realm": "라인소프 01"
-        }
-      ]
-    },
     "라비엘|라인소프": {
       "guildName": "라비엘",
       "world": "라인소프",
@@ -3706,6 +3664,41 @@
           "job": "환영검사",
           "level": 83,
           "conquestGrade": 20,
+          "realm": "라인소프 01"
+        }
+      ]
+    },
+    "블시|라인소프": {
+      "guildName": "블시",
+      "world": "라인소프",
+      "memberCount": 4,
+      "members": [
+        {
+          "nickname": "삼팔광땡",
+          "job": "집행관",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "라인소프 01"
+        },
+        {
+          "nickname": "여섯시내고환",
+          "job": "주문각인사",
+          "level": 85,
+          "conquestGrade": 21,
+          "realm": "라인소프 01"
+        },
+        {
+          "nickname": "갸루귀신",
+          "job": "주문각인사",
+          "level": 82,
+          "conquestGrade": 17,
+          "realm": "라인소프 01"
+        },
+        {
+          "nickname": "HoHoHo",
+          "job": "집행관",
+          "level": 82,
+          "conquestGrade": 19,
           "realm": "라인소프 01"
         }
       ]
@@ -4756,7 +4749,7 @@
     "은쪽이|라인소프": {
       "guildName": "은쪽이",
       "world": "라인소프",
-      "memberCount": 41,
+      "memberCount": 42,
       "members": [
         {
           "nickname": "핵망치",
@@ -4948,6 +4941,13 @@
           "realm": "라인소프 03"
         },
         {
+          "nickname": "응크",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 22,
+          "realm": "라인소프 03"
+        },
+        {
           "nickname": "광우",
           "job": "주문각인사",
           "level": 88,
@@ -5050,7 +5050,7 @@
     "동쪽이|라인소프": {
       "guildName": "동쪽이",
       "world": "라인소프",
-      "memberCount": 6,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "꼴통분쇄기",
@@ -5071,13 +5071,6 @@
           "job": "집행관",
           "level": 88,
           "conquestGrade": 23,
-          "realm": "라인소프 03"
-        },
-        {
-          "nickname": "쭈각",
-          "job": "주문각인사",
-          "level": 87,
-          "conquestGrade": 22,
           "realm": "라인소프 03"
         },
         {
@@ -9967,13 +9960,6 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "애니",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 24,
-          "realm": "가리안 02"
-        },
-        {
           "nickname": "선구안",
           "job": "환영검사",
           "level": 87,
@@ -9985,6 +9971,13 @@
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 22,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "애니",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 24,
           "realm": "가리안 02"
         },
         {
@@ -12641,17 +12634,17 @@
           "realm": "사도바 01"
         },
         {
-          "nickname": "늑대왕",
-          "job": "야만투사",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "사도바 01"
-        },
-        {
           "nickname": "김단풍",
           "job": "향사수",
           "level": 90,
           "conquestGrade": 23,
+          "realm": "사도바 01"
+        },
+        {
+          "nickname": "늑대왕",
+          "job": "야만투사",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "사도바 01"
         },
         {
@@ -30731,5 +30724,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-30T07:50:44.629Z"
+  "updatedAt": "2026-06-30T08:00:45.415Z"
 }
