@@ -5050,15 +5050,8 @@
     "동쪽이|라인소프": {
       "guildName": "동쪽이",
       "world": "라인소프",
-      "memberCount": 5,
+      "memberCount": 4,
       "members": [
-        {
-          "nickname": "꼴통분쇄기",
-          "job": "환영검사",
-          "level": 88,
-          "conquestGrade": 24,
-          "realm": "라인소프 03"
-        },
         {
           "nickname": "콜라힐러",
           "job": "주문각인사",
@@ -6406,7 +6399,7 @@
         {
           "nickname": "KingZrZl",
           "job": "향사수",
-          "level": 85,
+          "level": 86,
           "conquestGrade": 21,
           "realm": "아민타 01"
         },
@@ -12960,7 +12953,7 @@
     "유니크|사도바": {
       "guildName": "유니크",
       "world": "사도바",
-      "memberCount": 43,
+      "memberCount": 44,
       "members": [
         {
           "nickname": "카신",
@@ -13262,13 +13255,20 @@
           "level": 86,
           "conquestGrade": 22,
           "realm": "사도바 02"
+        },
+        {
+          "nickname": "천왕뮨",
+          "job": "주문각인사",
+          "level": 85,
+          "conquestGrade": 20,
+          "realm": "사도바 02"
         }
       ]
     },
     "우왕|사도바": {
       "guildName": "우왕",
       "world": "사도바",
-      "memberCount": 35,
+      "memberCount": 34,
       "members": [
         {
           "nickname": "리얼하게",
@@ -13506,13 +13506,6 @@
           "job": "집행관",
           "level": 85,
           "conquestGrade": 22,
-          "realm": "사도바 02"
-        },
-        {
-          "nickname": "최병운",
-          "job": "향사수",
-          "level": 85,
-          "conquestGrade": 21,
           "realm": "사도바 02"
         }
       ]
@@ -18812,7 +18805,7 @@
     "아몬드봉봉|아티산": {
       "guildName": "아몬드봉봉",
       "world": "아티산",
-      "memberCount": 22,
+      "memberCount": 23,
       "members": [
         {
           "nickname": "강윅",
@@ -18934,6 +18927,13 @@
           "realm": "아티산 01"
         },
         {
+          "nickname": "강나미",
+          "job": "환영검사",
+          "level": 89,
+          "conquestGrade": 22,
+          "realm": "아티산 01"
+        },
+        {
           "nickname": "강아재",
           "job": "집행관",
           "level": 89,
@@ -18973,7 +18973,7 @@
     "피스타치오아몬드|아티산": {
       "guildName": "피스타치오아몬드",
       "world": "아티산",
-      "memberCount": 30,
+      "memberCount": 29,
       "members": [
         {
           "nickname": "아빠는딸바봉",
@@ -19173,13 +19173,6 @@
         },
         {
           "nickname": "뉴욕치즈케이크",
-          "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 24,
-          "realm": "아티산 01"
-        },
-        {
-          "nickname": "꼬마버스타요",
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 24,
@@ -23871,7 +23864,7 @@
         {
           "nickname": "료지",
           "job": "야만투사",
-          "level": 87,
+          "level": 88,
           "conquestGrade": 22,
           "realm": "나세르 04"
         },
@@ -25528,17 +25521,17 @@
           "realm": "타리아 02"
         },
         {
-          "nickname": "계부",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 20,
-          "realm": "타리아 02"
-        },
-        {
           "nickname": "후추",
           "job": "주문각인사",
           "level": 86,
           "conquestGrade": 21,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "계부",
+          "job": "집행관",
+          "level": 86,
+          "conquestGrade": 20,
           "realm": "타리아 02"
         },
         {
@@ -30752,5 +30745,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-30T09:00:44.454Z"
+  "updatedAt": "2026-06-30T09:10:44.296Z"
 }
