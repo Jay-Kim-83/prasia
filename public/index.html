@@ -172,6 +172,9 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 .ch-step-move .ch-to{color:var(--gold-light)}
 .ch-step-date{font-size:11px;color:var(--text-faint);margin-top:3px}
 .ch-empty{margin:auto 0;padding:20px 0;text-align:center;color:var(--text-faint);font-size:13px}
+.ch-loading{display:flex;flex-direction:column;align-items:center;gap:10px}
+.ch-spinner{width:22px;height:22px;border:2px solid var(--border);border-top-color:var(--cyan);border-radius:50%;animation:ch-spin .7s linear infinite}
+@keyframes ch-spin{to{transform:rotate(360deg)}}
 .guild-name{display:inline-block;font-size:11px;color:var(--text-dim);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
 .guild-name::before{content:'⚔ '}
 .guild-name:hover{color:var(--cyan);text-decoration:underline;text-underline-offset:2px}
@@ -1413,17 +1416,16 @@ async function showCharHistory(nickname, world, realm, curGuild) {
   const overlay = document.getElementById('charHistoryModal');
   const loc = [world, realm].filter(Boolean).join(' · ');
   const sub = loc ? `<span class="ch-sub">${esc(loc)}</span>` : '';
-  const shell = body => `<div class="ch-modal">
+  overlay.innerHTML = `<div class="ch-modal">
     <div class="ch-head">
       <h2>📜 ${esc(nickname)} ${sub}</h2>
       <button class="ch-close" onclick="closeCharHistory()">✕</button>
     </div>
-    <div class="ch-body">${body}</div>
+    <div class="ch-body"><div class="ch-empty ch-loading"><span class="ch-spinner"></span>불러오는 중…</div></div>
   </div>`;
-
-  overlay.innerHTML = shell(`<div class="ch-empty">불러오는 중…</div>`);
   overlay.classList.add('active');
   document.body.style.overflow = 'hidden';
+  const body = overlay.querySelector('.ch-body');
 
   try {
     const params = new URLSearchParams({ nickname, world, realm });
@@ -1445,9 +1447,9 @@ async function showCharHistory(nickname, world, realm, curGuild) {
         </div>`;
       }).join('') + `</div>`;
     }
-    overlay.innerHTML = shell(nowHtml + listHtml);
+    if (body) body.innerHTML = nowHtml + listHtml;
   } catch (e) {
-    overlay.innerHTML = shell(`<div class="ch-empty">이력을 불러오지 못했습니다.</div>`);
+    if (body) body.innerHTML = `<div class="ch-empty">이력을 불러오지 못했습니다.</div>`;
   }
 }
 
