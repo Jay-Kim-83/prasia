@@ -5106,7 +5106,7 @@
     "시그니처|라인소프": {
       "guildName": "시그니처",
       "world": "라인소프",
-      "memberCount": 47,
+      "memberCount": 50,
       "members": [
         {
           "nickname": "탱끄",
@@ -5389,6 +5389,13 @@
           "realm": "라인소프 04"
         },
         {
+          "nickname": "축구",
+          "job": "향사수",
+          "level": 88,
+          "conquestGrade": 23,
+          "realm": "라인소프 04"
+        },
+        {
           "nickname": "테츠",
           "job": "집행관",
           "level": 88,
@@ -5435,6 +5442,20 @@
           "job": "향사수",
           "level": 87,
           "conquestGrade": 23,
+          "realm": "라인소프 04"
+        },
+        {
+          "nickname": "비상구",
+          "job": "태양감시자",
+          "level": 85,
+          "conquestGrade": 22,
+          "realm": "라인소프 04"
+        },
+        {
+          "nickname": "시오니",
+          "job": "향사수",
+          "level": 85,
+          "conquestGrade": 21,
           "realm": "라인소프 04"
         }
       ]
@@ -10618,14 +10639,14 @@
           "realm": "가리안 03"
         },
         {
-          "nickname": "시작이",
+          "nickname": "아줌야호",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
           "realm": "가리안 03"
         },
         {
-          "nickname": "아줌야호",
+          "nickname": "시작이",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
@@ -13496,34 +13517,6 @@
         }
       ]
     },
-    "이마트e|사도바": {
-      "guildName": "이마트e",
-      "world": "사도바",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "고야드",
-          "job": "환영검사",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "사도바 02"
-        },
-        {
-          "nickname": "똘복",
-          "job": "향사수",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "사도바 02"
-        },
-        {
-          "nickname": "사천왕",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "사도바 02"
-        }
-      ]
-    },
     "숙숙|사도바": {
       "guildName": "숙숙",
       "world": "사도바",
@@ -15429,7 +15422,7 @@
         {
           "nickname": "곰이여",
           "job": "향사수",
-          "level": 91,
+          "level": 90,
           "conquestGrade": 25,
           "realm": "제롬 01"
         },
@@ -24685,7 +24678,7 @@
     "귀뚤단|나세르": {
       "guildName": "귀뚤단",
       "world": "나세르",
-      "memberCount": 10,
+      "memberCount": 9,
       "members": [
         {
           "nickname": "포스",
@@ -24699,13 +24692,6 @@
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 20,
-          "realm": "나세르 05"
-        },
-        {
-          "nickname": "담배토끼",
-          "job": "주문각인사",
-          "level": 87,
-          "conquestGrade": 23,
           "realm": "나세르 05"
         },
         {
@@ -25586,7 +25572,7 @@
         {
           "nickname": "잘때양치해라죽는다",
           "job": "향사수",
-          "level": 83,
+          "level": 84,
           "conquestGrade": 19,
           "realm": "타리아 02"
         },
@@ -27513,7 +27499,7 @@
     "마왕군|타리아": {
       "guildName": "마왕군",
       "world": "타리아",
-      "memberCount": 15,
+      "memberCount": 14,
       "members": [
         {
           "nickname": "FAKER",
@@ -27609,13 +27595,6 @@
         {
           "nickname": "갈비탕",
           "job": "향사수",
-          "level": 85,
-          "conquestGrade": 20,
-          "realm": "타리아 05"
-        },
-        {
-          "nickname": "악령",
-          "job": "집행관",
           "level": 85,
           "conquestGrade": 20,
           "realm": "타리아 05"
@@ -30766,5 +30745,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-30T11:10:44.244Z"
+  "updatedAt": "2026-06-30T11:20:44.508Z"
 }
