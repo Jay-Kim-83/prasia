@@ -1952,15 +1952,15 @@
           "realm": "론도 04"
         },
         {
-          "nickname": "빅찬스",
-          "job": "야만투사",
+          "nickname": "영원해",
+          "job": "향사수",
           "level": 92,
           "conquestGrade": 25,
           "realm": "론도 04"
         },
         {
-          "nickname": "영원해",
-          "job": "향사수",
+          "nickname": "빅찬스",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "론도 04"
@@ -2474,20 +2474,13 @@
     "뿌리깊은나무|론도": {
       "guildName": "뿌리깊은나무",
       "world": "론도",
-      "memberCount": 38,
+      "memberCount": 37,
       "members": [
         {
           "nickname": "홍명보",
           "job": "집행관",
           "level": 93,
           "conquestGrade": 24,
-          "realm": "론도 05"
-        },
-        {
-          "nickname": "특별",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
           "realm": "론도 05"
         },
         {
@@ -9775,13 +9768,20 @@
     "진격의포켓몬|가리안": {
       "guildName": "진격의포켓몬",
       "world": "가리안",
-      "memberCount": 3,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "소리찔러몬",
           "job": "야만투사",
           "level": 88,
           "conquestGrade": 24,
+          "realm": "가리안 01"
+        },
+        {
+          "nickname": "닥사몬",
+          "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 20,
           "realm": "가리안 01"
         },
         {
@@ -10268,15 +10268,15 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "조광창",
-          "job": "집행관",
+          "nickname": "수준유지",
+          "job": "향사수",
           "level": 88,
           "conquestGrade": 22,
           "realm": "가리안 02"
         },
         {
-          "nickname": "수준유지",
-          "job": "향사수",
+          "nickname": "조광창",
+          "job": "집행관",
           "level": 88,
           "conquestGrade": 22,
           "realm": "가리안 02"
@@ -10473,7 +10473,7 @@
         {
           "nickname": "꺄우",
           "job": "주문각인사",
-          "level": 88,
+          "level": 89,
           "conquestGrade": 23,
           "realm": "가리안 02"
         },
@@ -15745,7 +15745,7 @@
           "nickname": "어게인",
           "job": "향사수",
           "level": 89,
-          "conquestGrade": 22,
+          "conquestGrade": 23,
           "realm": "제롬 01"
         },
         {
@@ -17391,34 +17391,6 @@
           "job": "집행관",
           "level": 83,
           "conquestGrade": 19,
-          "realm": "제롬 03"
-        }
-      ]
-    },
-    "Me|제롬": {
-      "guildName": "Me",
-      "world": "제롬",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "Mq",
-          "job": "집행관",
-          "level": 83,
-          "conquestGrade": 18,
-          "realm": "제롬 03"
-        },
-        {
-          "nickname": "Oq",
-          "job": "집행관",
-          "level": 83,
-          "conquestGrade": 17,
-          "realm": "제롬 03"
-        },
-        {
-          "nickname": "Nq",
-          "job": "집행관",
-          "level": 82,
-          "conquestGrade": 17,
           "realm": "제롬 03"
         }
       ]
@@ -21804,17 +21776,17 @@
           "realm": "나세르 01"
         },
         {
-          "nickname": "쏘우",
-          "job": "야만투사",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "나세르 01"
-        },
-        {
           "nickname": "스으추장",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 22,
+          "realm": "나세르 01"
+        },
+        {
+          "nickname": "쏘우",
+          "job": "야만투사",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "나세르 01"
         },
         {
@@ -28617,7 +28589,7 @@
         {
           "nickname": "수색",
           "job": "심연추방자",
-          "level": 84,
+          "level": 85,
           "conquestGrade": 21,
           "realm": "메르비스 02"
         },
@@ -30780,5 +30752,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-30T14:30:45.133Z"
+  "updatedAt": "2026-06-30T14:40:44.650Z"
 }
