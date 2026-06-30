@@ -3685,7 +3685,7 @@
     "DOG|라인소프": {
       "guildName": "DOG",
       "world": "라인소프",
-      "memberCount": 47,
+      "memberCount": 48,
       "members": [
         {
           "nickname": "유튜브맛나는꼬꼬",
@@ -3900,6 +3900,13 @@
         {
           "nickname": "모래",
           "job": "집행관",
+          "level": 91,
+          "conquestGrade": 26,
+          "realm": "라인소프 02"
+        },
+        {
+          "nickname": "뽕망치",
+          "job": "야만투사",
           "level": 91,
           "conquestGrade": 26,
           "realm": "라인소프 02"
@@ -4994,7 +5001,7 @@
     "동쪽이|라인소프": {
       "guildName": "동쪽이",
       "world": "라인소프",
-      "memberCount": 9,
+      "memberCount": 8,
       "members": [
         {
           "nickname": "만코",
@@ -5028,13 +5035,6 @@
           "nickname": "애옹",
           "job": "집행관",
           "level": 88,
-          "conquestGrade": 23,
-          "realm": "라인소프 03"
-        },
-        {
-          "nickname": "인생원샷",
-          "job": "주문각인사",
-          "level": 87,
           "conquestGrade": 23,
           "realm": "라인소프 03"
         },
@@ -5442,7 +5442,7 @@
     "시그니엘|라인소프": {
       "guildName": "시그니엘",
       "world": "라인소프",
-      "memberCount": 21,
+      "memberCount": 22,
       "members": [
         {
           "nickname": "쿠로롱",
@@ -5512,6 +5512,13 @@
           "job": "환영검사",
           "level": 86,
           "conquestGrade": 21,
+          "realm": "라인소프 04"
+        },
+        {
+          "nickname": "배르배르",
+          "job": "향사수",
+          "level": 86,
+          "conquestGrade": 22,
           "realm": "라인소프 04"
         },
         {
@@ -8296,7 +8303,7 @@
         {
           "nickname": "앙리",
           "job": "향사수",
-          "level": 75,
+          "level": 76,
           "conquestGrade": 1,
           "realm": "아민타 04"
         }
@@ -10321,7 +10328,7 @@
     "신백야|가리안": {
       "guildName": "신백야",
       "world": "가리안",
-      "memberCount": 41,
+      "memberCount": 40,
       "members": [
         {
           "nickname": "블랙팬서",
@@ -10602,97 +10609,6 @@
           "level": 89,
           "conquestGrade": 25,
           "realm": "가리안 03"
-        },
-        {
-          "nickname": "꼴통야호",
-          "job": "향사수",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "가리안 03"
-        }
-      ]
-    },
-    "흑야|가리안": {
-      "guildName": "흑야",
-      "world": "가리안",
-      "memberCount": 11,
-      "members": [
-        {
-          "nickname": "제토",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "가리안 03"
-        },
-        {
-          "nickname": "은슬야호",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "가리안 03"
-        },
-        {
-          "nickname": "꿀물",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "가리안 03"
-        },
-        {
-          "nickname": "새총야호",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "가리안 03"
-        },
-        {
-          "nickname": "세턴",
-          "job": "집행관",
-          "level": 88,
-          "conquestGrade": 22,
-          "realm": "가리안 03"
-        },
-        {
-          "nickname": "누이",
-          "job": "주문각인사",
-          "level": 87,
-          "conquestGrade": 21,
-          "realm": "가리안 03"
-        },
-        {
-          "nickname": "피키",
-          "job": "주문각인사",
-          "level": 87,
-          "conquestGrade": 22,
-          "realm": "가리안 03"
-        },
-        {
-          "nickname": "이오네스코",
-          "job": "향사수",
-          "level": 87,
-          "conquestGrade": 21,
-          "realm": "가리안 03"
-        },
-        {
-          "nickname": "왕붕어빵",
-          "job": "향사수",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "가리안 03"
-        },
-        {
-          "nickname": "고윤정",
-          "job": "야만투사",
-          "level": 85,
-          "conquestGrade": 21,
-          "realm": "가리안 03"
-        },
-        {
-          "nickname": "보랑",
-          "job": "향사수",
-          "level": 85,
-          "conquestGrade": 20,
-          "realm": "가리안 03"
         }
       ]
     },
@@ -10809,6 +10725,83 @@
         {
           "nickname": "에렌예거",
           "job": "집행관",
+          "level": 85,
+          "conquestGrade": 20,
+          "realm": "가리안 03"
+        }
+      ]
+    },
+    "흑야|가리안": {
+      "guildName": "흑야",
+      "world": "가리안",
+      "memberCount": 10,
+      "members": [
+        {
+          "nickname": "은슬야호",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "꿀물",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "새총야호",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "세턴",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 22,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "누이",
+          "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 21,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "피키",
+          "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 22,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "이오네스코",
+          "job": "향사수",
+          "level": 87,
+          "conquestGrade": 21,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "왕붕어빵",
+          "job": "향사수",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "고윤정",
+          "job": "야만투사",
+          "level": 85,
+          "conquestGrade": 21,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "보랑",
+          "job": "향사수",
           "level": 85,
           "conquestGrade": 20,
           "realm": "가리안 03"
@@ -30591,5 +30584,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-30T02:20:44.345Z"
+  "updatedAt": "2026-06-30T02:30:43.491Z"
 }
