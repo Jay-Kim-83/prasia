@@ -3517,7 +3517,7 @@
     "고트|라인소프": {
       "guildName": "고트",
       "world": "라인소프",
-      "memberCount": 13,
+      "memberCount": 14,
       "members": [
         {
           "nickname": "야광토끼",
@@ -3572,6 +3572,13 @@
           "nickname": "다히",
           "job": "주문각인사",
           "level": 86,
+          "conquestGrade": 21,
+          "realm": "라인소프 01"
+        },
+        {
+          "nickname": "신쪽이",
+          "job": "야만투사",
+          "level": 85,
           "conquestGrade": 21,
           "realm": "라인소프 01"
         },
@@ -9712,7 +9719,7 @@
     "황혼|가리안": {
       "guildName": "황혼",
       "world": "가리안",
-      "memberCount": 41,
+      "memberCount": 42,
       "members": [
         {
           "nickname": "곰표",
@@ -9934,6 +9941,13 @@
         {
           "nickname": "하멜",
           "job": "향사수",
+          "level": 87,
+          "conquestGrade": 23,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "위즈",
+          "job": "주문각인사",
           "level": 87,
           "conquestGrade": 23,
           "realm": "가리안 02"
@@ -14559,17 +14573,17 @@
           "realm": "사도바 04"
         },
         {
-          "nickname": "쵸우",
-          "job": "태양감시자",
-          "level": 84,
-          "conquestGrade": 19,
-          "realm": "사도바 04"
-        },
-        {
           "nickname": "스미레님",
           "job": "주문각인사",
           "level": 84,
           "conquestGrade": 17,
+          "realm": "사도바 04"
+        },
+        {
+          "nickname": "쵸우",
+          "job": "태양감시자",
+          "level": 84,
+          "conquestGrade": 19,
           "realm": "사도바 04"
         },
         {
@@ -19888,7 +19902,7 @@
         {
           "nickname": "해달",
           "job": "주문각인사",
-          "level": 87,
+          "level": 86,
           "conquestGrade": 21,
           "realm": "아티산 02"
         },
@@ -24366,6 +24380,13 @@
           "realm": "나세르 05"
         },
         {
+          "nickname": "토끼딘",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "나세르 05"
+        },
+        {
           "nickname": "초코토끼",
           "job": "주문각인사",
           "level": 89,
@@ -24384,13 +24405,6 @@
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 21,
-          "realm": "나세르 05"
-        },
-        {
-          "nickname": "토끼딘",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 24,
           "realm": "나세르 05"
         },
         {
@@ -30745,5 +30759,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-30T11:20:44.508Z"
+  "updatedAt": "2026-06-30T11:30:43.142Z"
 }
