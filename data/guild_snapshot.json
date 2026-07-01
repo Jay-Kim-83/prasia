@@ -268,7 +268,7 @@
           "nickname": "나율량",
           "job": "환영검사",
           "level": 85,
-          "conquestGrade": 21,
+          "conquestGrade": 22,
           "realm": "론도 01"
         },
         {
@@ -3753,7 +3753,7 @@
         {
           "nickname": "여섯시내고환",
           "job": "주문각인사",
-          "level": 85,
+          "level": 86,
           "conquestGrade": 21,
           "realm": "라인소프 01"
         },
@@ -4395,17 +4395,17 @@
           "realm": "라인소프 02"
         },
         {
-          "nickname": "인간물약",
-          "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 23,
-          "realm": "라인소프 02"
-        },
-        {
           "nickname": "강알리",
           "job": "향사수",
           "level": 88,
           "conquestGrade": 22,
+          "realm": "라인소프 02"
+        },
+        {
+          "nickname": "인간물약",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 23,
           "realm": "라인소프 02"
         },
         {
@@ -9957,7 +9957,7 @@
     "황혼|가리안": {
       "guildName": "황혼",
       "world": "가리안",
-      "memberCount": 41,
+      "memberCount": 42,
       "members": [
         {
           "nickname": "곰표",
@@ -10024,6 +10024,13 @@
         },
         {
           "nickname": "파치파치",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "거친자",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
@@ -11607,7 +11614,7 @@
         {
           "nickname": "롤러",
           "job": "태양감시자",
-          "level": 79,
+          "level": 80,
           "conquestGrade": 13,
           "realm": "가리안 04"
         }
@@ -21923,15 +21930,15 @@
           "realm": "나세르 01"
         },
         {
-          "nickname": "도끼",
-          "job": "집행관",
+          "nickname": "유노",
+          "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "나세르 01"
         },
         {
-          "nickname": "유노",
-          "job": "주문각인사",
+          "nickname": "도끼",
+          "job": "집행관",
           "level": 91,
           "conquestGrade": 25,
           "realm": "나세르 01"
@@ -22700,17 +22707,17 @@
           "realm": "나세르 02"
         },
         {
-          "nickname": "영희는휴식중",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "나세르 02"
-        },
-        {
           "nickname": "크로미",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "나세르 02"
+        },
+        {
+          "nickname": "영희는휴식중",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "나세르 02"
         },
         {
@@ -31179,5 +31186,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-01T17:40:44.932Z"
+  "updatedAt": "2026-07-01T17:50:44.116Z"
 }
