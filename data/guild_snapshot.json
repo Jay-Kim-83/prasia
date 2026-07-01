@@ -5263,13 +5263,6 @@
           "realm": "라인소프 04"
         },
         {
-          "nickname": "모하니",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "라인소프 04"
-        },
-        {
           "nickname": "우히히힣",
           "job": "주문각인사",
           "level": 92,
@@ -5279,6 +5272,13 @@
         {
           "nickname": "띠용",
           "job": "태양감시자",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "라인소프 04"
+        },
+        {
+          "nickname": "모하니",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "라인소프 04"
@@ -7202,15 +7202,15 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "수호킹",
-          "job": "집행관",
+          "nickname": "독불",
+          "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
           "realm": "아민타 02"
         },
         {
-          "nickname": "독불",
-          "job": "주문각인사",
+          "nickname": "수호킹",
+          "job": "집행관",
           "level": 89,
           "conquestGrade": 24,
           "realm": "아민타 02"
@@ -7437,7 +7437,7 @@
     "AURA|아민타": {
       "guildName": "AURA",
       "world": "아민타",
-      "memberCount": 24,
+      "memberCount": 23,
       "members": [
         {
           "nickname": "야월랑",
@@ -7598,13 +7598,6 @@
           "job": "태양감시자",
           "level": 84,
           "conquestGrade": 21,
-          "realm": "아민타 02"
-        },
-        {
-          "nickname": "이모뉨",
-          "job": "집행관",
-          "level": 84,
-          "conquestGrade": 22,
           "realm": "아민타 02"
         }
       ]
@@ -13120,7 +13113,7 @@
           "nickname": "뷰티",
           "job": "향사수",
           "level": 87,
-          "conquestGrade": 21,
+          "conquestGrade": 22,
           "realm": "사도바 01"
         }
       ]
@@ -15289,7 +15282,7 @@
         {
           "nickname": "수니갓",
           "job": "집행관",
-          "level": 89,
+          "level": 88,
           "conquestGrade": 24,
           "realm": "사도바 05"
         },
@@ -15763,17 +15756,17 @@
           "realm": "제롬 01"
         },
         {
-          "nickname": "악쀼",
-          "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 24,
-          "realm": "제롬 01"
-        },
-        {
           "nickname": "초코핑",
           "job": "향사수",
           "level": 88,
           "conquestGrade": 22,
+          "realm": "제롬 01"
+        },
+        {
+          "nickname": "악쀼",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 24,
           "realm": "제롬 01"
         },
         {
@@ -19985,7 +19978,7 @@
         },
         {
           "nickname": "캡틴브루클린",
-          "job": "야만투사",
+          "job": "향사수",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아티산 02"
@@ -31186,5 +31179,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-01T17:20:44.548Z"
+  "updatedAt": "2026-07-01T17:30:43.564Z"
 }
