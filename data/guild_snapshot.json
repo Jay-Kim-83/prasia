@@ -902,6 +902,13 @@
           "realm": "론도 02"
         },
         {
+          "nickname": "으뜸대장",
+          "job": "야만투사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "론도 02"
+        },
+        {
           "nickname": "오호야호",
           "job": "집행관",
           "level": 91,
@@ -1054,13 +1061,6 @@
           "level": 89,
           "conquestGrade": 24,
           "realm": "론도 02"
-        },
-        {
-          "nickname": "술귀신",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 25,
-          "realm": "론도 02"
         }
       ]
     },
@@ -1192,7 +1192,7 @@
           "nickname": "룬부장",
           "job": "주문각인사",
           "level": 91,
-          "conquestGrade": 25,
+          "conquestGrade": 26,
           "realm": "론도 02"
         },
         {
@@ -7126,7 +7126,7 @@
         },
         {
           "nickname": "버니",
-          "job": "집행관",
+          "job": "태양감시자",
           "level": 89,
           "conquestGrade": 22,
           "realm": "아민타 02"
@@ -7153,17 +7153,17 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "핫바",
-          "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 23,
-          "realm": "아민타 02"
-        },
-        {
           "nickname": "슈엘",
           "job": "집행관",
           "level": 88,
           "conquestGrade": 25,
+          "realm": "아민타 02"
+        },
+        {
+          "nickname": "핫바",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 23,
           "realm": "아민타 02"
         },
         {
@@ -10619,7 +10619,7 @@
         },
         {
           "nickname": "사악",
-          "job": "야만투사",
+          "job": "심연추방자",
           "level": 92,
           "conquestGrade": 25,
           "realm": "가리안 03"
@@ -10822,7 +10822,7 @@
         },
         {
           "nickname": "소엘야호",
-          "job": "야만투사",
+          "job": "향사수",
           "level": 90,
           "conquestGrade": 24,
           "realm": "가리안 03"
@@ -10906,7 +10906,7 @@
         },
         {
           "nickname": "앗뜨거맥반석오징어",
-          "job": "야만투사",
+          "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
           "realm": "가리안 03"
@@ -18959,7 +18959,7 @@
     "아몬드봉봉|아티산": {
       "guildName": "아몬드봉봉",
       "world": "아티산",
-      "memberCount": 14,
+      "memberCount": 15,
       "members": [
         {
           "nickname": "강윅",
@@ -19014,6 +19014,13 @@
           "nickname": "강똘끼",
           "job": "향사수",
           "level": 91,
+          "conquestGrade": 25,
+          "realm": "아티산 01"
+        },
+        {
+          "nickname": "아맛나",
+          "job": "향사수",
+          "level": 90,
           "conquestGrade": 25,
           "realm": "아티산 01"
         },
@@ -19663,7 +19670,7 @@
         },
         {
           "nickname": "노우",
-          "job": "주문각인사",
+          "job": "향사수",
           "level": 88,
           "conquestGrade": 23,
           "realm": "아티산 02"
@@ -24289,17 +24296,17 @@
           "realm": "나세르 05"
         },
         {
-          "nickname": "이초토끼",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "나세르 05"
-        },
-        {
           "nickname": "토끼물어버린냥이",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 21,
+          "realm": "나세르 05"
+        },
+        {
+          "nickname": "이초토끼",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 24,
           "realm": "나세르 05"
         },
         {
@@ -29560,15 +29567,15 @@
           "realm": "메르비스 04"
         },
         {
-          "nickname": "모로하지",
-          "job": "집행관",
+          "nickname": "이글",
+          "job": "환영검사",
           "level": 90,
           "conquestGrade": 25,
           "realm": "메르비스 04"
         },
         {
-          "nickname": "이글",
-          "job": "환영검사",
+          "nickname": "모로하지",
+          "job": "집행관",
           "level": 90,
           "conquestGrade": 25,
           "realm": "메르비스 04"
@@ -30780,5 +30787,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-01T04:50:46.557Z"
+  "updatedAt": "2026-07-01T05:00:46.126Z"
 }
