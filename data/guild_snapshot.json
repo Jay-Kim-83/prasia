@@ -217,7 +217,7 @@
         },
         {
           "nickname": "중달공주",
-          "job": "집행관",
+          "job": "향사수",
           "level": 87,
           "conquestGrade": 23,
           "realm": "론도 01"
@@ -658,7 +658,7 @@
         },
         {
           "nickname": "곰형",
-          "job": "주문각인사",
+          "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
           "realm": "론도 02"
@@ -4110,7 +4110,7 @@
         {
           "nickname": "쩌비",
           "job": "향사수",
-          "level": 91,
+          "level": 92,
           "conquestGrade": 25,
           "realm": "라인소프 02"
         },
@@ -7111,17 +7111,17 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "슈엘",
-          "job": "집행관",
-          "level": 88,
-          "conquestGrade": 25,
-          "realm": "아민타 02"
-        },
-        {
           "nickname": "핫바",
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 23,
+          "realm": "아민타 02"
+        },
+        {
+          "nickname": "슈엘",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 25,
           "realm": "아민타 02"
         },
         {
@@ -15900,7 +15900,7 @@
     "시악|제롬": {
       "guildName": "시악",
       "world": "제롬",
-      "memberCount": 8,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "에프킬라",
@@ -15942,13 +15942,6 @@
           "job": "주문각인사",
           "level": 85,
           "conquestGrade": 20,
-          "realm": "제롬 01"
-        },
-        {
-          "nickname": "사슴",
-          "job": "집행관",
-          "level": 84,
-          "conquestGrade": 21,
           "realm": "제롬 01"
         },
         {
@@ -18887,7 +18880,7 @@
         {
           "nickname": "강꽁",
           "job": "주문각인사",
-          "level": 88,
+          "level": 89,
           "conquestGrade": 22,
           "realm": "아티산 01"
         },
@@ -18931,7 +18924,7 @@
     "아몬드봉봉|아티산": {
       "guildName": "아몬드봉봉",
       "world": "아티산",
-      "memberCount": 36,
+      "memberCount": 37,
       "members": [
         {
           "nickname": "강윅",
@@ -19022,6 +19015,13 @@
           "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "아티산 01"
+        },
+        {
+          "nickname": "레몬소르베",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 26,
           "realm": "아티산 01"
         },
         {
@@ -29324,7 +29324,7 @@
         {
           "nickname": "반딧불",
           "job": "집행관",
-          "level": 83,
+          "level": 84,
           "conquestGrade": 20,
           "realm": "메르비스 03"
         },
@@ -30948,5 +30948,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-01T06:30:48.473Z"
+  "updatedAt": "2026-07-01T06:40:43.232Z"
 }
