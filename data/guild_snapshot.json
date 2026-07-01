@@ -3727,7 +3727,7 @@
     "DOG|라인소프": {
       "guildName": "DOG",
       "world": "라인소프",
-      "memberCount": 50,
+      "memberCount": 49,
       "members": [
         {
           "nickname": "유튜브맛나는꼬꼬",
@@ -3971,13 +3971,6 @@
           "nickname": "랑랑",
           "job": "주문각인사",
           "level": 91,
-          "conquestGrade": 25,
-          "realm": "라인소프 02"
-        },
-        {
-          "nickname": "DOA",
-          "job": "야만투사",
-          "level": 90,
           "conquestGrade": 25,
           "realm": "라인소프 02"
         },
@@ -4921,7 +4914,7 @@
         },
         {
           "nickname": "버프장미",
-          "job": "환영검사",
+          "job": "집행관",
           "level": 88,
           "conquestGrade": 23,
           "realm": "라인소프 03"
@@ -17058,17 +17051,17 @@
           "realm": "제롬 03"
         },
         {
-          "nickname": "주문각사또",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 23,
-          "realm": "제롬 03"
-        },
-        {
           "nickname": "개망나니",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "제롬 03"
+        },
+        {
+          "nickname": "주문각사또",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 23,
           "realm": "제롬 03"
         },
         {
@@ -17297,7 +17290,7 @@
         },
         {
           "nickname": "속궁",
-          "job": "태양감시자",
+          "job": "주문각인사",
           "level": 82,
           "conquestGrade": 19,
           "realm": "제롬 03"
@@ -18917,7 +18910,7 @@
     "아몬드봉봉|아티산": {
       "guildName": "아몬드봉봉",
       "world": "아티산",
-      "memberCount": 33,
+      "memberCount": 34,
       "members": [
         {
           "nickname": "강윅",
@@ -19060,6 +19053,13 @@
           "realm": "아티산 01"
         },
         {
+          "nickname": "누누와함께사라지다",
+          "job": "태양감시자",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "아티산 01"
+        },
+        {
           "nickname": "강누룽",
           "job": "집행관",
           "level": 89,
@@ -19155,13 +19155,20 @@
     "피스타치오아몬드|아티산": {
       "guildName": "피스타치오아몬드",
       "world": "아티산",
-      "memberCount": 5,
+      "memberCount": 6,
       "members": [
         {
           "nickname": "바람과함께사라졌총",
           "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "아티산 01"
+        },
+        {
+          "nickname": "강오라",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 23,
           "realm": "아티산 01"
         },
         {
@@ -22371,15 +22378,15 @@
           "realm": "나세르 02"
         },
         {
-          "nickname": "씸꽁",
-          "job": "환영검사",
+          "nickname": "더위야가라",
+          "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
           "realm": "나세르 02"
         },
         {
-          "nickname": "더위야가라",
-          "job": "향사수",
+          "nickname": "씸꽁",
+          "job": "환영검사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "나세르 02"
@@ -22714,17 +22721,17 @@
       "memberCount": 31,
       "members": [
         {
-          "nickname": "멜롱",
-          "job": "야만투사",
-          "level": 91,
-          "conquestGrade": 26,
-          "realm": "나세르 02"
-        },
-        {
           "nickname": "말본",
           "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "나세르 02"
+        },
+        {
+          "nickname": "멜롱",
+          "job": "야만투사",
+          "level": 91,
+          "conquestGrade": 26,
           "realm": "나세르 02"
         },
         {
@@ -22988,7 +22995,7 @@
       "members": [
         {
           "nickname": "쑥쑥",
-          "job": "집행관",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "나세르 03"
@@ -27013,7 +27020,7 @@
         },
         {
           "nickname": "죽염",
-          "job": "심연추방자",
+          "job": "주문각인사",
           "level": 85,
           "conquestGrade": 18,
           "realm": "타리아 04"
@@ -30906,5 +30913,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-01T06:10:45.104Z"
+  "updatedAt": "2026-07-01T06:20:45.711Z"
 }
