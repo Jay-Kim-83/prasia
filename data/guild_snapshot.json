@@ -9751,7 +9751,7 @@
         },
         {
           "nickname": "라스테어",
-          "job": "태양감시자",
+          "job": "야만투사",
           "level": 87,
           "conquestGrade": 21,
           "realm": "가리안 01"
@@ -15275,7 +15275,7 @@
         {
           "nickname": "미르가람",
           "job": "주문각인사",
-          "level": 84,
+          "level": 85,
           "conquestGrade": 21,
           "realm": "사도바 05"
         },
@@ -15410,8 +15410,15 @@
     "악시|제롬": {
       "guildName": "악시",
       "world": "제롬",
-      "memberCount": 44,
+      "memberCount": 45,
       "members": [
+        {
+          "nickname": "괴물쥐",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "제롬 01"
+        },
         {
           "nickname": "초기화",
           "job": "야만투사",
@@ -17107,17 +17114,17 @@
           "realm": "제롬 03"
         },
         {
-          "nickname": "내이름은민은규",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 21,
-          "realm": "제롬 03"
-        },
-        {
           "nickname": "수호이",
           "job": "환영검사",
           "level": 89,
           "conquestGrade": 23,
+          "realm": "제롬 03"
+        },
+        {
+          "nickname": "내이름은민은규",
+          "job": "향사수",
+          "level": 89,
+          "conquestGrade": 21,
           "realm": "제롬 03"
         },
         {
@@ -18616,7 +18623,7 @@
     "슈팅스타|아티산": {
       "guildName": "슈팅스타",
       "world": "아티산",
-      "memberCount": 43,
+      "memberCount": 44,
       "members": [
         {
           "nickname": "강남베인",
@@ -18819,6 +18826,13 @@
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "아티산 01"
+        },
+        {
+          "nickname": "강탄산수",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 24,
           "realm": "아티산 01"
         },
         {
@@ -25964,7 +25978,7 @@
         {
           "nickname": "스빙구",
           "job": "주문각인사",
-          "level": 80,
+          "level": 81,
           "conquestGrade": 17,
           "realm": "타리아 02"
         },
@@ -30948,5 +30962,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-01T06:40:43.232Z"
+  "updatedAt": "2026-07-01T06:50:45.966Z"
 }
