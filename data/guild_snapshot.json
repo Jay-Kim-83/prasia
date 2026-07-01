@@ -7181,6 +7181,13 @@
           "realm": "아민타 02"
         },
         {
+          "nickname": "수호킹",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "아민타 02"
+        },
+        {
           "nickname": "아이스쿠림",
           "job": "집행관",
           "level": 89,
@@ -7190,13 +7197,6 @@
         {
           "nickname": "독불",
           "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "아민타 02"
-        },
-        {
-          "nickname": "수호킹",
-          "job": "집행관",
           "level": 89,
           "conquestGrade": 24,
           "realm": "아민타 02"
@@ -13650,7 +13650,7 @@
         },
         {
           "nickname": "한치",
-          "job": "주문각인사",
+          "job": "심연추방자",
           "level": 87,
           "conquestGrade": 22,
           "realm": "사도바 02"
@@ -16632,7 +16632,7 @@
         },
         {
           "nickname": "미라클인베스트",
-          "job": "야만투사",
+          "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
           "realm": "제롬 02"
@@ -18193,7 +18193,7 @@
         },
         {
           "nickname": "킷캣",
-          "job": "태양감시자",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "제롬 05"
@@ -20383,14 +20383,14 @@
           "realm": "아티산 03"
         },
         {
-          "nickname": "연산군",
+          "nickname": "디오르",
           "job": "집행관",
           "level": 86,
           "conquestGrade": 21,
           "realm": "아티산 03"
         },
         {
-          "nickname": "디오르",
+          "nickname": "연산군",
           "job": "집행관",
           "level": 86,
           "conquestGrade": 21,
@@ -24076,7 +24076,7 @@
     "골드문|나세르": {
       "guildName": "골드문",
       "world": "나세르",
-      "memberCount": 32,
+      "memberCount": 33,
       "members": [
         {
           "nickname": "암행어사",
@@ -24300,6 +24300,13 @@
           "job": "향사수",
           "level": 84,
           "conquestGrade": 21,
+          "realm": "나세르 04"
+        },
+        {
+          "nickname": "일루미",
+          "job": "향사수",
+          "level": 83,
+          "conquestGrade": 19,
           "realm": "나세르 04"
         }
       ]
@@ -27768,14 +27775,14 @@
           "realm": "타리아 05"
         },
         {
-          "nickname": "박해수",
+          "nickname": "이제훈",
           "job": "향사수",
           "level": 86,
           "conquestGrade": 21,
           "realm": "타리아 05"
         },
         {
-          "nickname": "이제훈",
+          "nickname": "박해수",
           "job": "향사수",
           "level": 86,
           "conquestGrade": 21,
@@ -31158,5 +31165,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-01T12:50:46.708Z"
+  "updatedAt": "2026-07-01T13:00:46.221Z"
 }
