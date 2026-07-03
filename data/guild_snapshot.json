@@ -3734,7 +3734,7 @@
     "라비엘|라인소프": {
       "guildName": "라비엘",
       "world": "라인소프",
-      "memberCount": 5,
+      "memberCount": 6,
       "members": [
         {
           "nickname": "딸깍킹",
@@ -3768,6 +3768,13 @@
           "nickname": "딸깍신",
           "job": "환영검사",
           "level": 83,
+          "conquestGrade": 20,
+          "realm": "라인소프 01"
+        },
+        {
+          "nickname": "나라싱하",
+          "job": "환영검사",
+          "level": 82,
           "conquestGrade": 20,
           "realm": "라인소프 01"
         }
@@ -10765,15 +10772,15 @@
           "realm": "가리안 03"
         },
         {
-          "nickname": "망고야호",
-          "job": "향사수",
+          "nickname": "사악",
+          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "가리안 03"
         },
         {
-          "nickname": "사악",
-          "job": "주문각인사",
+          "nickname": "망고야호",
+          "job": "향사수",
           "level": 92,
           "conquestGrade": 25,
           "realm": "가리안 03"
@@ -24814,13 +24821,6 @@
           "realm": "나세르 05"
         },
         {
-          "nickname": "바빵토끼",
-          "job": "향사수",
-          "level": 88,
-          "conquestGrade": 22,
-          "realm": "나세르 05"
-        },
-        {
           "nickname": "은연우",
           "job": "주문각인사",
           "level": 88,
@@ -24830,6 +24830,13 @@
         {
           "nickname": "개빈",
           "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 22,
+          "realm": "나세르 05"
+        },
+        {
+          "nickname": "바빵토끼",
+          "job": "향사수",
           "level": 87,
           "conquestGrade": 22,
           "realm": "나세르 05"
@@ -28776,17 +28783,17 @@
           "realm": "메르비스 02"
         },
         {
-          "nickname": "할렐루야",
-          "job": "향사수",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "메르비스 02"
-        },
-        {
           "nickname": "퍼플",
           "job": "야만투사",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "할렐루야",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 24,
           "realm": "메르비스 02"
         },
         {
@@ -29436,7 +29443,7 @@
         {
           "nickname": "작처니",
           "job": "주문각인사",
-          "level": 89,
+          "level": 90,
           "conquestGrade": 24,
           "realm": "메르비스 03"
         },
@@ -31165,5 +31172,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-03T00:30:43.958Z"
+  "updatedAt": "2026-07-03T00:40:47.555Z"
 }
