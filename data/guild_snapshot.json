@@ -6637,7 +6637,7 @@
         {
           "nickname": "하녀",
           "job": "주문각인사",
-          "level": 78,
+          "level": 79,
           "conquestGrade": 16,
           "realm": "아민타 01"
         }
@@ -10765,15 +10765,15 @@
           "realm": "가리안 03"
         },
         {
-          "nickname": "사악",
-          "job": "주문각인사",
+          "nickname": "망고야호",
+          "job": "향사수",
           "level": 92,
           "conquestGrade": 25,
           "realm": "가리안 03"
         },
         {
-          "nickname": "망고야호",
-          "job": "향사수",
+          "nickname": "사악",
+          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "가리안 03"
@@ -14979,17 +14979,17 @@
           "realm": "사도바 04"
         },
         {
-          "nickname": "루페스",
-          "job": "야만투사",
-          "level": 82,
-          "conquestGrade": 16,
-          "realm": "사도바 04"
-        },
-        {
           "nickname": "산신령",
           "job": "집행관",
           "level": 82,
           "conquestGrade": 19,
+          "realm": "사도바 04"
+        },
+        {
+          "nickname": "루페스",
+          "job": "야만투사",
+          "level": 82,
+          "conquestGrade": 16,
           "realm": "사도바 04"
         }
       ]
@@ -19902,7 +19902,7 @@
         {
           "nickname": "상태빡큐",
           "job": "집행관",
-          "level": 89,
+          "level": 88,
           "conquestGrade": 22,
           "realm": "아티산 02"
         },
@@ -22287,15 +22287,15 @@
           "realm": "나세르 01"
         },
         {
-          "nickname": "촉법소년",
-          "job": "환영검사",
+          "nickname": "촉법소녀",
+          "job": "주문각인사",
           "level": 88,
           "conquestGrade": 23,
           "realm": "나세르 01"
         },
         {
-          "nickname": "촉법소녀",
-          "job": "주문각인사",
+          "nickname": "촉법소년",
+          "job": "환영검사",
           "level": 88,
           "conquestGrade": 23,
           "realm": "나세르 01"
@@ -24849,17 +24849,17 @@
           "realm": "나세르 05"
         },
         {
-          "nickname": "라희파파",
-          "job": "주문각인사",
-          "level": 87,
-          "conquestGrade": 22,
-          "realm": "나세르 05"
-        },
-        {
           "nickname": "소주토끼",
           "job": "향사수",
           "level": 87,
           "conquestGrade": 21,
+          "realm": "나세르 05"
+        },
+        {
+          "nickname": "라희파파",
+          "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 22,
           "realm": "나세르 05"
         },
         {
@@ -26642,48 +26642,6 @@
         }
       ]
     },
-    "도비|타리아": {
-      "guildName": "도비",
-      "world": "타리아",
-      "memberCount": 5,
-      "members": [
-        {
-          "nickname": "푸딩좋아",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "타리아 03"
-        },
-        {
-          "nickname": "도비",
-          "job": "환영검사",
-          "level": 83,
-          "conquestGrade": 21,
-          "realm": "타리아 03"
-        },
-        {
-          "nickname": "키드",
-          "job": "향사수",
-          "level": 83,
-          "conquestGrade": 16,
-          "realm": "타리아 03"
-        },
-        {
-          "nickname": "코드",
-          "job": "환영검사",
-          "level": 83,
-          "conquestGrade": 16,
-          "realm": "타리아 03"
-        },
-        {
-          "nickname": "머시냐",
-          "job": "주문각인사",
-          "level": 81,
-          "conquestGrade": 19,
-          "realm": "타리아 03"
-        }
-      ]
-    },
     "본드|타리아": {
       "guildName": "본드",
       "world": "타리아",
@@ -26813,6 +26771,41 @@
           "job": "주문각인사",
           "level": 78,
           "conquestGrade": 15,
+          "realm": "타리아 03"
+        }
+      ]
+    },
+    "도비|타리아": {
+      "guildName": "도비",
+      "world": "타리아",
+      "memberCount": 4,
+      "members": [
+        {
+          "nickname": "도비",
+          "job": "환영검사",
+          "level": 83,
+          "conquestGrade": 21,
+          "realm": "타리아 03"
+        },
+        {
+          "nickname": "키드",
+          "job": "향사수",
+          "level": 83,
+          "conquestGrade": 16,
+          "realm": "타리아 03"
+        },
+        {
+          "nickname": "코드",
+          "job": "환영검사",
+          "level": 83,
+          "conquestGrade": 16,
+          "realm": "타리아 03"
+        },
+        {
+          "nickname": "머시냐",
+          "job": "주문각인사",
+          "level": 81,
+          "conquestGrade": 19,
           "realm": "타리아 03"
         }
       ]
@@ -31172,5 +31165,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-03T00:20:45.659Z"
+  "updatedAt": "2026-07-03T00:30:43.958Z"
 }
