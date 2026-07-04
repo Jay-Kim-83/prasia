@@ -1291,7 +1291,7 @@
     "블랙중독|론도": {
       "guildName": "블랙중독",
       "world": "론도",
-      "memberCount": 48,
+      "memberCount": 49,
       "members": [
         {
           "nickname": "쌍팔형",
@@ -1408,6 +1408,13 @@
         {
           "nickname": "말랑창억떡",
           "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "론도 03"
+        },
+        {
+          "nickname": "샌드봇",
+          "job": "태양감시자",
           "level": 92,
           "conquestGrade": 25,
           "realm": "론도 03"
@@ -5109,14 +5116,14 @@
           "realm": "라인소프 03"
         },
         {
-          "nickname": "인생원샷",
+          "nickname": "쭈각",
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 23,
           "realm": "라인소프 03"
         },
         {
-          "nickname": "쭈각",
+          "nickname": "인생원샷",
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 23,
@@ -10772,15 +10779,15 @@
           "realm": "가리안 03"
         },
         {
-          "nickname": "키엘야호",
-          "job": "집행관",
+          "nickname": "신백야호",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "가리안 03"
         },
         {
-          "nickname": "신백야호",
-          "job": "야만투사",
+          "nickname": "키엘야호",
+          "job": "집행관",
           "level": 92,
           "conquestGrade": 25,
           "realm": "가리안 03"
@@ -13537,15 +13544,15 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "사마귀",
-          "job": "주문각인사",
+          "nickname": "용기통발일호",
+          "job": "집행관",
           "level": 88,
           "conquestGrade": 23,
           "realm": "사도바 02"
         },
         {
-          "nickname": "용기통발일호",
-          "job": "집행관",
+          "nickname": "사마귀",
+          "job": "주문각인사",
           "level": 88,
           "conquestGrade": 23,
           "realm": "사도바 02"
@@ -17387,17 +17394,17 @@
           "realm": "제롬 03"
         },
         {
-          "nickname": "주문각사또",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 23,
-          "realm": "제롬 03"
-        },
-        {
           "nickname": "개망나니",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "제롬 03"
+        },
+        {
+          "nickname": "주문각사또",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 23,
           "realm": "제롬 03"
         },
         {
@@ -19151,15 +19158,15 @@
           "realm": "아티산 01"
         },
         {
-          "nickname": "강유신",
-          "job": "집행관",
+          "nickname": "강분홍",
+          "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
           "realm": "아티산 01"
         },
         {
-          "nickname": "강분홍",
-          "job": "주문각인사",
+          "nickname": "강유신",
+          "job": "집행관",
           "level": 90,
           "conquestGrade": 25,
           "realm": "아티산 01"
@@ -21174,17 +21181,17 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "혈포",
-          "job": "집행관",
-          "level": 88,
-          "conquestGrade": 24,
-          "realm": "아티산 04"
-        },
-        {
           "nickname": "늦봄",
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 21,
+          "realm": "아티산 04"
+        },
+        {
+          "nickname": "혈포",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 24,
           "realm": "아티산 04"
         },
         {
@@ -24982,6 +24989,13 @@
           "realm": "나세르 05"
         },
         {
+          "nickname": "토끼선인",
+          "job": "향사수",
+          "level": 86,
+          "conquestGrade": 20,
+          "realm": "나세르 05"
+        },
+        {
           "nickname": "명보",
           "job": "집행관",
           "level": 86,
@@ -25007,13 +25021,6 @@
           "job": "향사수",
           "level": 86,
           "conquestGrade": 19,
-          "realm": "나세르 05"
-        },
-        {
-          "nickname": "토끼선인",
-          "job": "향사수",
-          "level": 86,
-          "conquestGrade": 20,
           "realm": "나세르 05"
         },
         {
@@ -31298,5 +31305,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-04T21:30:46.700Z"
+  "updatedAt": "2026-07-04T21:40:45.800Z"
 }
