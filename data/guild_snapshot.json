@@ -5340,15 +5340,15 @@
           "realm": "라인소프 04"
         },
         {
-          "nickname": "하까",
-          "job": "주문각인사",
+          "nickname": "다슬",
+          "job": "태양감시자",
           "level": 91,
           "conquestGrade": 25,
           "realm": "라인소프 04"
         },
         {
-          "nickname": "다슬",
-          "job": "태양감시자",
+          "nickname": "하까",
+          "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "라인소프 04"
@@ -7279,6 +7279,13 @@
           "realm": "아민타 02"
         },
         {
+          "nickname": "핫바",
+          "job": "야만투사",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "아민타 02"
+        },
+        {
           "nickname": "베르사유",
           "job": "집행관",
           "level": 88,
@@ -7293,13 +7300,6 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "오뚜기",
-          "job": "집행관",
-          "level": 88,
-          "conquestGrade": 23,
-          "realm": "아민타 02"
-        },
-        {
           "nickname": "캐치캐치",
           "job": "집행관",
           "level": 88,
@@ -7307,10 +7307,10 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "핫바",
-          "job": "야만투사",
+          "nickname": "오뚜기",
+          "job": "집행관",
           "level": 88,
-          "conquestGrade": 24,
+          "conquestGrade": 23,
           "realm": "아민타 02"
         },
         {
@@ -13289,7 +13289,7 @@
     "유니크|사도바": {
       "guildName": "유니크",
       "world": "사도바",
-      "memberCount": 45,
+      "memberCount": 44,
       "members": [
         {
           "nickname": "카신",
@@ -13598,13 +13598,6 @@
           "level": 86,
           "conquestGrade": 22,
           "realm": "사도바 02"
-        },
-        {
-          "nickname": "천왕뮨",
-          "job": "주문각인사",
-          "level": 85,
-          "conquestGrade": 21,
-          "realm": "사도바 02"
         }
       ]
     },
@@ -13856,7 +13849,7 @@
     "이장님|사도바": {
       "guildName": "이장님",
       "world": "사도바",
-      "memberCount": 4,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "바로",
@@ -13884,6 +13877,13 @@
           "job": "향사수",
           "level": 86,
           "conquestGrade": 21,
+          "realm": "사도바 02"
+        },
+        {
+          "nickname": "파파",
+          "job": "태양감시자",
+          "level": 85,
+          "conquestGrade": 20,
           "realm": "사도바 02"
         }
       ]
@@ -16080,7 +16080,7 @@
         {
           "nickname": "어게인",
           "job": "향사수",
-          "level": 90,
+          "level": 89,
           "conquestGrade": 23,
           "realm": "제롬 01"
         },
@@ -16407,17 +16407,17 @@
           "realm": "제롬 01"
         },
         {
-          "nickname": "jjj",
-          "job": "주문각인사",
-          "level": 85,
-          "conquestGrade": 20,
-          "realm": "제롬 01"
-        },
-        {
           "nickname": "비상중",
           "job": "집행관",
           "level": 85,
           "conquestGrade": 21,
+          "realm": "제롬 01"
+        },
+        {
+          "nickname": "jjj",
+          "job": "주문각인사",
+          "level": 85,
+          "conquestGrade": 20,
           "realm": "제롬 01"
         }
       ]
@@ -22532,15 +22532,15 @@
           "realm": "나세르 01"
         },
         {
-          "nickname": "청룡",
-          "job": "집행관",
+          "nickname": "검은윌크",
+          "job": "향사수",
           "level": 86,
           "conquestGrade": 21,
           "realm": "나세르 01"
         },
         {
-          "nickname": "검은윌크",
-          "job": "향사수",
+          "nickname": "청룡",
+          "job": "집행관",
           "level": 86,
           "conquestGrade": 21,
           "realm": "나세르 01"
@@ -22931,15 +22931,15 @@
           "realm": "나세르 02"
         },
         {
-          "nickname": "바오",
-          "job": "집행관",
+          "nickname": "구찮",
+          "job": "주문각인사",
           "level": 88,
           "conquestGrade": 24,
           "realm": "나세르 02"
         },
         {
-          "nickname": "구찮",
-          "job": "주문각인사",
+          "nickname": "바오",
+          "job": "집행관",
           "level": 88,
           "conquestGrade": 24,
           "realm": "나세르 02"
@@ -31263,5 +31263,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-04T14:40:45.171Z"
+  "updatedAt": "2026-07-04T14:50:45.659Z"
 }
