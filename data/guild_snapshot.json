@@ -776,6 +776,13 @@
           "realm": "론도 02"
         },
         {
+          "nickname": "왕진이",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "론도 02"
+        },
+        {
           "nickname": "샤드",
           "job": "주문각인사",
           "level": 90,
@@ -787,13 +794,6 @@
           "job": "집행관",
           "level": 90,
           "conquestGrade": 25,
-          "realm": "론도 02"
-        },
-        {
-          "nickname": "왕진이",
-          "job": "향사수",
-          "level": 90,
-          "conquestGrade": 24,
           "realm": "론도 02"
         },
         {
@@ -5398,7 +5398,7 @@
         {
           "nickname": "월급루팡",
           "job": "향사수",
-          "level": 91,
+          "level": 90,
           "conquestGrade": 25,
           "realm": "라인소프 04"
         },
@@ -9715,6 +9715,13 @@
           "realm": "가리안 01"
         },
         {
+          "nickname": "아이스바나",
+          "job": "야만투사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "가리안 01"
+        },
+        {
           "nickname": "은둔형외톨이",
           "job": "집행관",
           "level": 91,
@@ -9724,13 +9731,6 @@
         {
           "nickname": "타투교주",
           "job": "집행관",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "가리안 01"
-        },
-        {
-          "nickname": "아이스바나",
-          "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "가리안 01"
@@ -12918,8 +12918,15 @@
     "가을|사도바": {
       "guildName": "가을",
       "world": "사도바",
-      "memberCount": 32,
+      "memberCount": 33,
       "members": [
+        {
+          "nickname": "인간백정",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "사도바 01"
+        },
         {
           "nickname": "대박",
           "job": "야만투사",
@@ -15434,17 +15441,17 @@
           "realm": "사도바 05"
         },
         {
-          "nickname": "그라펜",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 22,
-          "realm": "사도바 05"
-        },
-        {
           "nickname": "은가비",
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 23,
+          "realm": "사도바 05"
+        },
+        {
+          "nickname": "그라펜",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 22,
           "realm": "사도바 05"
         },
         {
@@ -21820,7 +21827,7 @@
         {
           "nickname": "노잼",
           "job": "집행관",
-          "level": 86,
+          "level": 87,
           "conquestGrade": 22,
           "realm": "아티산 05"
         },
@@ -24982,17 +24989,17 @@
           "realm": "나세르 05"
         },
         {
-          "nickname": "앙탈",
-          "job": "향사수",
-          "level": 86,
-          "conquestGrade": 19,
-          "realm": "나세르 05"
-        },
-        {
           "nickname": "삼초토끼",
           "job": "집행관",
           "level": 86,
           "conquestGrade": 22,
+          "realm": "나세르 05"
+        },
+        {
+          "nickname": "앙탈",
+          "job": "향사수",
+          "level": 86,
+          "conquestGrade": 19,
           "realm": "나세르 05"
         },
         {
@@ -28944,17 +28951,17 @@
           "realm": "메르비스 02"
         },
         {
-          "nickname": "Holic",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 22,
-          "realm": "메르비스 02"
-        },
-        {
           "nickname": "유산균",
           "job": "향사수",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "Holic",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 22,
           "realm": "메르비스 02"
         },
         {
@@ -31256,5 +31263,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-04T10:30:45.670Z"
+  "updatedAt": "2026-07-04T10:40:46.510Z"
 }
