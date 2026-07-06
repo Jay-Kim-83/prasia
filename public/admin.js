@@ -1264,7 +1264,7 @@ async function loadBossLog() {
     const countEl = document.getElementById('bossLogViewCount');
     tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:16px;color:var(--text-faint)">로딩 중...</td></tr>';
     try {
-        const res = await authFetch(url);
+        const res = await adminFetch(url);
         const data = await res.json();
         if (!data.ok) {
             tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;color:var(--text-faint)">${data.error}</td></tr>`;
