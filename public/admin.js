@@ -1249,3 +1249,43 @@ async function bossSaveConfig() {
         showToast(data.ok ? '✅ 보스 설정 저장됨' : '저장 실패: ' + data.error);
     } catch { showToast('서버 연결 실패'); }
 }
+
+async function bossLogView() {
+    document.getElementById('bossLogViewModal').style.display = 'flex';
+    const today = new Date().toISOString().slice(0, 10);
+    document.getElementById('bossLogViewDate').value = today;
+    await loadBossLog();
+}
+
+async function loadBossLog() {
+    const date = document.getElementById('bossLogViewDate').value;
+    const url = date ? `/api/boss/log?date=${date}` : '/api/boss/log';
+    const tbody = document.getElementById('bossLogViewBody');
+    const countEl = document.getElementById('bossLogViewCount');
+    tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:16px;color:var(--text-faint)">로딩 중...</td></tr>';
+    try {
+        const res = await authFetch(url);
+        const data = await res.json();
+        if (!data.ok) {
+            tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;color:var(--text-faint)">${data.error}</td></tr>`;
+            return;
+        }
+        const entries = data.data;
+        countEl.textContent = entries.length ? `총 ${entries.length}건` : '';
+        if (!entries.length) {
+            tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:20px;color:var(--text-faint)">로그 없음</td></tr>';
+            return;
+        }
+        const fmt = iso => new Date(iso).toLocaleString('ko-KR', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        const sourceLabel = s => ({ paste: '붙여넣기', csv: 'CSV', manual: '직접입력' })[s] || (s || '-');
+        tbody.innerHTML = entries.map(e => `<tr>
+            <td style="padding:6px 8px;border-bottom:1px solid var(--border);color:var(--text-dim);white-space:nowrap">${fmt(e.ts)}</td>
+            <td style="padding:6px 8px;border-bottom:1px solid var(--border)">${e.bossName || e.bossId}</td>
+            <td style="padding:6px 8px;border-bottom:1px solid var(--border);color:var(--text-dim);white-space:nowrap">${e.cutTime ? fmt(e.cutTime) : '-'}</td>
+            <td style="padding:6px 8px;border-bottom:1px solid var(--border)">${e.by || '-'}</td>
+            <td style="padding:6px 8px;border-bottom:1px solid var(--border);color:var(--text-faint)">${sourceLabel(e.source)}</td>
+        </tr>`).join('');
+    } catch {
+        tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:var(--text-faint)">로드 실패</td></tr>';
+    }
+}

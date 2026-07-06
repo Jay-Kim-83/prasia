@@ -907,7 +907,9 @@ async function bossLogSave() {
     if (!toSave.length) { showToast('저장할 항목이 없습니다'); return; }
 
     const userName = localStorage.getItem('prasia_user') || 'unknown';
+    const source = bossLogColTime === '__time__' ? 'paste' : 'csv';
     let saved = 0, failed = 0;
+    const logEntries = [];
 
     for (const m of toSave) {
         try {
@@ -920,17 +922,28 @@ async function bossLogSave() {
                         body: JSON.stringify({ by: userName, time: t })
                     });
                     if (!(await res.json()).ok) throw new Error('kill 저장 실패');
+                    logEntries.push({ ts: new Date().toISOString(), bossId: m.boss.id, bossName: m.boss.name, action: 'kill', cutTime: t, by: userName, source });
                 }
             } else {
+                const cutTime = m.times[m.times.length - 1];
                 const res = await authFetch(`/api/boss/cuts/${m.boss.id}`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ cutTime: m.times[m.times.length - 1], updatedBy: userName })
+                    body: JSON.stringify({ cutTime, updatedBy: userName })
                 });
                 if (!(await res.json()).ok) throw new Error('cutTime 저장 실패');
+                logEntries.push({ ts: new Date().toISOString(), bossId: m.boss.id, bossName: m.boss.name, action: 'cut', cutTime, by: userName, source });
             }
             saved++;
         } catch (e) { failed++; console.error(m.boss.name, e); }
+    }
+
+    if (logEntries.length) {
+        authFetch('/api/boss/log', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(logEntries)
+        }).catch(() => {});
     }
 
     document.getElementById('bossLogModal').style.display = 'none';

@@ -7,6 +7,7 @@ const github = require('../github-sync');
 const DATA_DIR = path.join(__dirname);
 const CONFIG_FILE = path.join(DATA_DIR, 'boss-config.json');
 const CUTS_FILE   = path.join(DATA_DIR, 'boss-cuts.json');
+const LOG_FILE    = path.join(DATA_DIR, 'boss-log.json');
 
 const readJson  = (f) => JSON.parse(fs.readFileSync(f, 'utf8'));
 const writeJson = (f, d) => fs.writeFileSync(f, JSON.stringify(d, null, 2), 'utf8');
@@ -18,6 +19,20 @@ function loadConfig() {
 function loadCuts() {
     if (!fs.existsSync(CUTS_FILE)) writeJson(CUTS_FILE, {});
     return readJson(CUTS_FILE);
+}
+
+
+function loadLog() {
+    if (!fs.existsSync(LOG_FILE)) writeJson(LOG_FILE, []);
+    return readJson(LOG_FILE);
+}
+
+function appendLog(entries) {
+    const cutoff = Date.now() - 90 * 24 * 3600 * 1000;
+    let log = loadLog().filter(e => new Date(e.ts).getTime() > cutoff);
+    log = log.concat(entries);
+    writeJson(LOG_FILE, log);
+    github.pushFiles(['boss-log.json']).catch(() => {});
 }
 
 router.get('/config', (req, res) => {
@@ -101,6 +116,29 @@ router.delete('/cuts/:id/kill', (req, res) => {
             writeJson(CUTS_FILE, cuts);
             github.pushFiles(['boss-cuts.json']).catch(() => {});
         }
+        res.json({ ok: true });
+    } catch (e) { res.status(500).json({ ok: false, error: e.message }); }
+});
+
+
+router.get('/log', (req, res) => {
+    const { verifyAdminToken } = require('../server');
+    if (!verifyAdminToken(req.headers['x-user-token'])) return res.status(403).json({ ok: false, error: '권한 없음' });
+    try {
+        let log = loadLog();
+        const { date } = req.query;
+        if (date) log = log.filter(e => e.ts.startsWith(date));
+        res.json({ ok: true, data: log.slice().reverse() });
+    } catch (e) { res.status(500).json({ ok: false, error: e.message }); }
+});
+
+router.post('/log', (req, res) => {
+    const { verifyUserToken } = require('../server');
+    if (!verifyUserToken(req.headers['x-user-token'])) return res.status(403).json({ ok: false, error: '로그인 필요' });
+    try {
+        const entries = req.body;
+        if (!Array.isArray(entries)) return res.status(400).json({ ok: false, error: 'array required' });
+        appendLog(entries);
         res.json({ ok: true });
     } catch (e) { res.status(500).json({ ok: false, error: e.message }); }
 });
