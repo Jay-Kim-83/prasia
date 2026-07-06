@@ -56,6 +56,7 @@ router.post('/cuts/:id', (req, res) => {
         const { cutTime, updatedBy } = req.body;
         cuts[req.params.id] = { cutTime, updatedAt: new Date().toISOString(), updatedBy: updatedBy || 'unknown' };
         writeJson(CUTS_FILE, cuts);
+        github.pushFiles(['boss-cuts.json']).catch(() => {});
         res.json({ ok: true, data: cuts[req.params.id] });
     } catch (e) { res.status(500).json({ ok: false, error: e.message }); }
 });
@@ -67,6 +68,39 @@ router.delete('/cuts/:id', (req, res) => {
         const cuts = loadCuts();
         delete cuts[req.params.id];
         writeJson(CUTS_FILE, cuts);
+        github.pushFiles(['boss-cuts.json']).catch(() => {});
+        res.json({ ok: true });
+    } catch (e) { res.status(500).json({ ok: false, error: e.message }); }
+});
+
+router.post('/cuts/:id/kill', (req, res) => {
+    const { verifyUserToken } = require('../server');
+    if (!verifyUserToken(req.headers['x-user-token'])) return res.status(403).json({ ok: false, error: '로그인 필요' });
+    try {
+        const cuts = loadCuts();
+        if (!cuts[req.params.id]) cuts[req.params.id] = { kills: [] };
+        if (!cuts[req.params.id].kills) cuts[req.params.id].kills = [];
+        cuts[req.params.id].kills.push({ time: new Date().toISOString(), by: req.body.by || 'unknown' });
+        cuts[req.params.id].updatedAt = new Date().toISOString();
+        writeJson(CUTS_FILE, cuts);
+        github.pushFiles(['boss-cuts.json']).catch(() => {});
+        res.json({ ok: true, data: cuts[req.params.id] });
+    } catch (e) { res.status(500).json({ ok: false, error: e.message }); }
+});
+
+router.delete('/cuts/:id/kill', (req, res) => {
+    const { verifyUserToken } = require('../server');
+    if (!verifyUserToken(req.headers['x-user-token'])) return res.status(403).json({ ok: false, error: '로그인 필요' });
+    try {
+        const cuts = loadCuts();
+        const entry = cuts[req.params.id];
+        if (entry?.kills?.length > 0) {
+            entry.kills.pop();
+            entry.updatedAt = new Date().toISOString();
+            if (entry.kills.length === 0) delete cuts[req.params.id];
+            writeJson(CUTS_FILE, cuts);
+            github.pushFiles(['boss-cuts.json']).catch(() => {});
+        }
         res.json({ ok: true });
     } catch (e) { res.status(500).json({ ok: false, error: e.message }); }
 });
