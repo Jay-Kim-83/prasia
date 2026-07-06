@@ -1,1 +1,13 @@
-{"bosses":[],"maintenanceDay":3,"maintenanceTime":"22:00"}
+{
+  "bosses": [
+    {
+      "id": "98dd8f9a-79fd-4a95-a150-97d51c2f9f33",
+      "name": "파나스",
+      "type": "cycle",
+      "enabled": true,
+      "cycleHours": 120
+    }
+  ],
+  "maintenanceDay": 3,
+  "maintenanceTime": "22:00"
+}
