@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const fs = require('fs');
 const path = require('path');
+const github = require('../github-sync');
 
 const DATA_DIR = path.join(__dirname);
 const CONFIG_FILE = path.join(DATA_DIR, 'boss-config.json');
@@ -30,6 +31,7 @@ router.post('/config', (req, res) => {
     try {
         const { bosses, maintenanceDay, maintenanceTime } = req.body;
         writeJson(CONFIG_FILE, { bosses, maintenanceDay: Number(maintenanceDay), maintenanceTime });
+        github.pushFiles(['boss-config.json']).catch(() => {});
         res.json({ ok: true });
     } catch (e) { res.status(500).json({ ok: false, error: e.message }); }
 });
