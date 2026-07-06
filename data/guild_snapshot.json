@@ -485,7 +485,7 @@
           "nickname": "에필로그",
           "job": "집행관",
           "level": 85,
-          "conquestGrade": 21,
+          "conquestGrade": 22,
           "realm": "론도 01"
         },
         {
@@ -9834,17 +9834,17 @@
           "realm": "가리안 01"
         },
         {
-          "nickname": "비상비상",
-          "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 21,
-          "realm": "가리안 01"
-        },
-        {
           "nickname": "로하아빠",
           "job": "환영검사",
           "level": 88,
           "conquestGrade": 24,
+          "realm": "가리안 01"
+        },
+        {
+          "nickname": "비상비상",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 21,
           "realm": "가리안 01"
         },
         {
@@ -12063,7 +12063,7 @@
           "nickname": "팔봉산",
           "job": "향사수",
           "level": 87,
-          "conquestGrade": 21,
+          "conquestGrade": 22,
           "realm": "가리안 05"
         },
         {
@@ -18018,6 +18018,34 @@
         }
       ]
     },
+    "컴백홈|제롬": {
+      "guildName": "컴백홈",
+      "world": "제롬",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "젠틀맨",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 17,
+          "realm": "제롬 04"
+        },
+        {
+          "nickname": "명왕",
+          "job": "태양감시자",
+          "level": 85,
+          "conquestGrade": 19,
+          "realm": "제롬 04"
+        },
+        {
+          "nickname": "불스",
+          "job": "향사수",
+          "level": 84,
+          "conquestGrade": 18,
+          "realm": "제롬 04"
+        }
+      ]
+    },
     "디아블로|제롬": {
       "guildName": "디아블로",
       "world": "제롬",
@@ -18084,34 +18112,6 @@
           "job": "주문각인사",
           "level": 81,
           "conquestGrade": 19,
-          "realm": "제롬 04"
-        }
-      ]
-    },
-    "컴백홈|제롬": {
-      "guildName": "컴백홈",
-      "world": "제롬",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "젠틀맨",
-          "job": "집행관",
-          "level": 88,
-          "conquestGrade": 17,
-          "realm": "제롬 04"
-        },
-        {
-          "nickname": "명왕",
-          "job": "태양감시자",
-          "level": 85,
-          "conquestGrade": 19,
-          "realm": "제롬 04"
-        },
-        {
-          "nickname": "불스",
-          "job": "향사수",
-          "level": 84,
-          "conquestGrade": 18,
           "realm": "제롬 04"
         }
       ]
@@ -31291,5 +31291,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-06T04:00:47.106Z"
+  "updatedAt": "2026-07-06T04:10:44.523Z"
 }
