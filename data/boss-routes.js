@@ -80,7 +80,7 @@ router.post('/cuts/:id/kill', (req, res) => {
         const cuts = loadCuts();
         if (!cuts[req.params.id]) cuts[req.params.id] = { kills: [] };
         if (!cuts[req.params.id].kills) cuts[req.params.id].kills = [];
-        cuts[req.params.id].kills.push({ time: new Date().toISOString(), by: req.body.by || 'unknown' });
+        cuts[req.params.id].kills.push({ time: req.body.time || new Date().toISOString(), by: req.body.by || 'unknown' });
         cuts[req.params.id].updatedAt = new Date().toISOString();
         writeJson(CUTS_FILE, cuts);
         github.pushFiles(['boss-cuts.json']).catch(() => {});

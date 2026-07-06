@@ -432,6 +432,13 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 .boss-panel-header{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:1px solid var(--border);font-size:14px;font-weight:600;color:var(--gold);flex-shrink:0}
 .boss-panel-close{background:none;border:none;color:var(--text-faint);font-size:18px;cursor:pointer;padding:0 4px;line-height:1}
 .boss-panel-close:hover{color:var(--text)}
+.boss-log-modal{position:fixed;inset:0;background:var(--overlay-bg);display:none;align-items:center;justify-content:center;z-index:2000}
+.boss-log-inner{background:var(--bg2);border:1px solid var(--border-glow);border-radius:14px;padding:24px;width:92%;max-width:600px;max-height:80vh;display:flex;flex-direction:column;gap:12px}
+.boss-log-scroll{overflow-y:auto;flex:1;min-height:0}
+.boss-log-table{width:100%;border-collapse:collapse;font-size:12px}
+.boss-log-table th{text-align:left;padding:6px 8px;color:var(--text-faint);border-bottom:1px solid var(--border)}
+.boss-log-table td{padding:7px 8px;border-bottom:1px solid var(--border);vertical-align:top}
+.boss-log-unmatched{font-size:11px;color:var(--text-faint);margin-top:6px;padding:6px 8px;background:var(--bg);border-radius:6px}
 .boss-panel-body{flex:1;overflow-y:auto;padding:14px}
 .boss-row{padding:12px 14px;background:var(--bg);border-radius:8px;border:1px solid var(--border);margin-bottom:8px;cursor:default}
 .boss-row.spawned{border-color:var(--green,#4caf50)}
@@ -700,6 +707,197 @@ async function bossKillUndo(id) {
     } catch { showToast('서버 연결 실패'); }
 }
 
+function bossLogTrigger() {
+    document.getElementById('bossLogInput').click();
+}
+
+function bossLogParse(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    event.target.value = '';
+    const reader = new FileReader();
+    reader.onload = e => {
+        try {
+            let text = e.target.result;
+            if (text.charCodeAt(0) === 0xFEFF) text = text.slice(1);
+            const rows = csvToRows(text);
+            if (!rows.length) { showToast('CSV 데이터가 없습니다'); return; }
+            bossLogParsedRows = rows;
+            const headers = Object.keys(rows[0]);
+            bossLogColBoss = headers.find(h => /보스|몬스터|이름|boss|monster/i.test(h)) || '';
+            bossLogColTime = headers.find(h => /날짜|일시|시간|time|date|처치/i.test(h)) || '';
+            if (bossLogColBoss && bossLogColTime) {
+                bossLogShowPreview();
+            } else {
+                bossLogShowColSelect(headers);
+            }
+        } catch (err) { showToast('CSV 파싱 오류: ' + err.message); }
+    };
+    reader.readAsText(file, 'utf-8');
+}
+
+function csvToRows(text) {
+    const lines = text.trim().split('\n').map(l => l.replace(/\n$/, ''));
+    if (lines.length < 2) return [];
+    const headers = parseCsvLine(lines[0]);
+    return lines.slice(1).filter(l => l.trim()).map(line => {
+        const cells = parseCsvLine(line);
+        const row = {};
+        headers.forEach((h, i) => row[h.trim()] = (cells[i] || '').trim());
+        return row;
+    });
+}
+
+function parseCsvLine(line) {
+    const result = [];
+    let cur = '', inQ = false;
+    for (let i = 0; i < line.length; i++) {
+        const ch = line[i];
+        if (ch === '"') { inQ = !inQ; }
+        else if (ch === ',' && !inQ) { result.push(cur); cur = ''; }
+        else { cur += ch; }
+    }
+    result.push(cur);
+    return result;
+}
+
+function bossNameScore(csvName, regName) {
+    const a = csvName.replace(/\s/g, '').toLowerCase();
+    const b = regName.replace(/\s/g, '').toLowerCase();
+    if (a === b) return 3;
+    if (a.includes(b) || b.includes(a)) return 2;
+    if (a.includes(b.slice(0, Math.ceil(b.length * 0.6)))) return 1;
+    return 0;
+}
+
+function bossLogMatchAll() {
+    if (!bossConfig?.bosses) return [];
+    const groups = {};
+    for (const row of bossLogParsedRows) {
+        const name = (row[bossLogColBoss] || '').trim();
+        const timeStr = (row[bossLogColTime] || '').trim();
+        if (!name || !timeStr) continue;
+        const normalized = timeStr
+            .replace(/(\d{4})[.\/-](\d{1,2})[.\/-](\d{1,2})\s+(\d{1,2}):(\d{2})/, '$1-$2-$3T$4:$5:00')
+            .replace(/(\d{4})[.\/-](\d{1,2})[.\/-](\d{1,2})/, '$1-$2-$3T00:00:00');
+        const t = new Date(normalized);
+        if (isNaN(t)) continue;
+        if (!groups[name]) groups[name] = [];
+        groups[name].push(t.toISOString());
+    }
+    return Object.entries(groups).map(([csvName, times]) => {
+        times.sort();
+        let bestBoss = null, bestScore = 0;
+        for (const b of bossConfig.bosses) {
+            const s = bossNameScore(csvName, b.name);
+            if (s > bestScore) { bestScore = s; bestBoss = b; }
+        }
+        return bestScore > 0
+            ? { csvName, boss: bestBoss, times, matched: true }
+            : { csvName, boss: null, times, matched: false };
+    });
+}
+
+function bossLogShowColSelect(headers) {
+    const opts = headers.map(h => `<option value="${esc(h)}">${esc(h)}</option>`).join('');
+    document.getElementById('bossLogPreviewBody').innerHTML = `
+        <div style="font-size:12px;color:var(--text-dim);margin-bottom:12px">컬럼을 자동 감지하지 못했습니다. 직접 선택하세요.</div>
+        <div style="display:flex;gap:12px;margin-bottom:14px;flex-wrap:wrap">
+            <label style="font-size:12px;color:var(--text-dim)">보스명 컬럼<br>
+                <select id="bossLogSelectBoss" class="interval-input" style="margin-top:4px">${opts}</select></label>
+            <label style="font-size:12px;color:var(--text-dim)">처치 시각 컬럼<br>
+                <select id="bossLogSelectTime" class="interval-input" style="margin-top:4px">${opts}</select></label>
+        </div>
+        <button class="btn-primary" style="font-size:12px" onclick="bossLogApplyColSelect()">매칭 시작</button>`;
+    document.getElementById('bossLogModal').style.display = 'flex';
+}
+
+function bossLogApplyColSelect() {
+    bossLogColBoss = document.getElementById('bossLogSelectBoss').value;
+    bossLogColTime = document.getElementById('bossLogSelectTime').value;
+    bossLogShowPreview();
+}
+
+function bossLogShowPreview() {
+    const matches = bossLogMatchAll();
+    const matched = matches.filter(m => m.matched);
+    const unmatched = matches.filter(m => !m.matched);
+
+    let html = `<div style="font-size:12px;color:var(--text-dim);margin-bottom:10px">감지된 보스 ${matches.length}개 · 매칭 성공 <strong style="color:var(--gold)">${matched.length}개</strong></div>`;
+
+    if (matched.length) {
+        html += `<table class="boss-log-table"><thead><tr>
+            <th>CSV 보스명</th><th>등록 보스</th><th>처치 시각</th><th style="text-align:center">저장</th>
+        </tr></thead><tbody>`;
+        matched.forEach((m, i) => {
+            const isTrigger = m.boss.type === 'trigger';
+            const fmt = t => new Date(t).toLocaleString('ko-KR',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'});
+            const timesHtml = isTrigger
+                ? m.times.map((t, n) => `<span style="display:block">${n+1}회: ${fmt(t)}</span>`).join('')
+                : fmt(m.times[m.times.length - 1]);
+            const typeTag = isTrigger ? '<span style="font-size:10px;color:#f0b429;margin-right:4px">[연쇄]</span>' : '';
+            html += `<tr>
+                <td style="color:var(--text)">${esc(m.csvName)}</td>
+                <td>${typeTag}${esc(m.boss.name)}</td>
+                <td style="color:var(--text-dim)">${timesHtml}</td>
+                <td style="text-align:center"><input type="checkbox" checked data-idx="${i}" class="boss-log-check"></td>
+            </tr>`;
+        });
+        html += '</tbody></table>';
+    }
+
+    if (unmatched.length) {
+        html += `<div class="boss-log-unmatched">미매칭: ${unmatched.map(m => esc(m.csvName)).join(' · ')}</div>`;
+    }
+    if (!matched.length) {
+        html += `<div style="color:var(--text-faint);text-align:center;padding:20px">매칭된 보스가 없습니다.<br><small>관리자에서 보스명 등록 여부를 확인하세요.</small></div>`;
+    }
+
+    document.getElementById('bossLogPreviewBody').innerHTML = html;
+    document.getElementById('bossLogMatchData').value = JSON.stringify(matched);
+    document.getElementById('bossLogModal').style.display = 'flex';
+}
+
+async function bossLogSave() {
+    const matched = JSON.parse(document.getElementById('bossLogMatchData').value || '[]');
+    const checked = [...document.querySelectorAll('.boss-log-check:checked')].map(el => Number(el.dataset.idx));
+    const toSave = checked.map(i => matched[i]).filter(Boolean);
+    if (!toSave.length) { showToast('저장할 항목이 없습니다'); return; }
+
+    const userName = localStorage.getItem('prasia_user') || 'unknown';
+    let saved = 0, failed = 0;
+
+    for (const m of toSave) {
+        try {
+            if (m.boss.type === 'trigger') {
+                await authFetch(`/api/boss/cuts/${m.boss.id}`, { method: 'DELETE' });
+                for (const t of m.times) {
+                    const res = await authFetch(`/api/boss/cuts/${m.boss.id}/kill`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ by: userName, time: t })
+                    });
+                    if (!(await res.json()).ok) throw new Error('kill 저장 실패');
+                }
+            } else {
+                const res = await authFetch(`/api/boss/cuts/${m.boss.id}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ cutTime: m.times[m.times.length - 1], updatedBy: userName })
+                });
+                if (!(await res.json()).ok) throw new Error('cutTime 저장 실패');
+            }
+            saved++;
+        } catch (e) { failed++; console.error(m.boss.name, e); }
+    }
+
+    document.getElementById('bossLogModal').style.display = 'none';
+    await bossLoadAll();
+    showToast(failed ? `✅ ${saved}개 저장 · ${failed}개 실패` : `✅ ${saved}개 저장 완료`);
+}
+
+let bossLogParsedRows = [], bossLogColBoss = '', bossLogColTime = '';
+
 async function bossResetAll() {
     if (!confirm('이번 주 전체 컷 기록을 초기화할까요?')) return;
     try {
@@ -759,8 +957,10 @@ async function bossResetAll() {
   <div class="boss-panel-header">
     <span>🐉 보스젠 타이머</span>
     <div style="display:flex;gap:8px;align-items:center">
+      <button class="btn-sm" onclick="bossLogTrigger()" title="보스일지 CSV 업로드로 컷 시간 자동 저장">📋 보스일지</button>
       <button class="btn-sm" onclick="bossResetAll()" title="이번 주 전체 컷 초기화">↺ 전체 초기화</button>
       <button class="boss-panel-close" onclick="toggleBossPanel()">✕</button>
+      <input type="file" id="bossLogInput" accept=".csv" style="display:none" onchange="bossLogParse(event)">
     </div>
   </div>
   <div id="bossPanelBody" class="boss-panel-body">
@@ -781,6 +981,21 @@ async function bossResetAll() {
   </div>
 </div>
 
+<!-- 보스일지 CSV 업로드 모달 -->
+<div id="bossLogModal" class="boss-log-modal">
+  <div class="boss-log-inner">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <span style="font-size:14px;font-weight:600;color:var(--gold)">📋 보스일지 CSV 매칭 결과</span>
+      <button class="boss-panel-close" onclick="document.getElementById('bossLogModal').style.display='none'">✕</button>
+    </div>
+    <div id="bossLogPreviewBody" class="boss-log-scroll"></div>
+    <input type="hidden" id="bossLogMatchData" value="[]">
+    <div style="display:flex;gap:8px;justify-content:flex-end">
+      <button class="btn-sm" onclick="document.getElementById('bossLogModal').style.display='none'">취소</button>
+      <button class="btn-primary" style="font-size:12px;padding:6px 18px" onclick="bossLogSave()">✅ 저장</button>
+    </div>
+  </div>
+</div>
 
 <div class="sample-banner hidden" id="sampleBanner">
   ⚠ 샘플 데이터입니다. 관리 페이지에서 실제 데이터를 수집해 주세요.
