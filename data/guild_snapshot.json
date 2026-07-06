@@ -4916,7 +4916,7 @@
           "nickname": "사고",
           "job": "향사수",
           "level": 90,
-          "conquestGrade": 23,
+          "conquestGrade": 24,
           "realm": "라인소프 03"
         },
         {
@@ -6754,17 +6754,17 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "파스",
-          "job": "향사수",
-          "level": 81,
-          "conquestGrade": 17,
-          "realm": "아민타 01"
-        },
-        {
           "nickname": "제갈금자",
           "job": "향사수",
           "level": 81,
           "conquestGrade": 19,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "파스",
+          "job": "향사수",
+          "level": 81,
+          "conquestGrade": 17,
           "realm": "아민타 01"
         },
         {
@@ -7736,7 +7736,7 @@
         {
           "nickname": "쎈꿀탱이",
           "job": "환영검사",
-          "level": 90,
+          "level": 91,
           "conquestGrade": 25,
           "realm": "아민타 03"
         },
@@ -13719,15 +13719,15 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "한치",
-          "job": "심연추방자",
+          "nickname": "유리왕",
+          "job": "주문각인사",
           "level": 87,
           "conquestGrade": 22,
           "realm": "사도바 02"
         },
         {
-          "nickname": "유리왕",
-          "job": "주문각인사",
+          "nickname": "한치",
+          "job": "심연추방자",
           "level": 87,
           "conquestGrade": 22,
           "realm": "사도바 02"
@@ -24926,13 +24926,6 @@
           "realm": "나세르 05"
         },
         {
-          "nickname": "일초토끼",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 23,
-          "realm": "나세르 05"
-        },
-        {
           "nickname": "토끼선인",
           "job": "향사수",
           "level": 86,
@@ -24944,6 +24937,13 @@
           "job": "집행관",
           "level": 86,
           "conquestGrade": 22,
+          "realm": "나세르 05"
+        },
+        {
+          "nickname": "일초토끼",
+          "job": "집행관",
+          "level": 86,
+          "conquestGrade": 23,
           "realm": "나세르 05"
         },
         {
@@ -29323,6 +29323,48 @@
         }
       ]
     },
+    "꿍해서아야해써용|메르비스": {
+      "guildName": "꿍해서아야해써용",
+      "world": "메르비스",
+      "memberCount": 5,
+      "members": [
+        {
+          "nickname": "마데",
+          "job": "집행관",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "넥플로접",
+          "job": "심연추방자",
+          "level": 83,
+          "conquestGrade": 20,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "남선생님",
+          "job": "환영검사",
+          "level": 81,
+          "conquestGrade": 17,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "스투",
+          "job": "태양감시자",
+          "level": 80,
+          "conquestGrade": 18,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "버터왕자",
+          "job": "심연추방자",
+          "level": 80,
+          "conquestGrade": 16,
+          "realm": "메르비스 02"
+        }
+      ]
+    },
     "하라리|메르비스": {
       "guildName": "하라리",
       "world": "메르비스",
@@ -29375,41 +29417,6 @@
           "job": "야만투사",
           "level": 80,
           "conquestGrade": 18,
-          "realm": "메르비스 02"
-        }
-      ]
-    },
-    "꿍해서아야해써용|메르비스": {
-      "guildName": "꿍해서아야해써용",
-      "world": "메르비스",
-      "memberCount": 4,
-      "members": [
-        {
-          "nickname": "넥플로접",
-          "job": "심연추방자",
-          "level": 83,
-          "conquestGrade": 20,
-          "realm": "메르비스 02"
-        },
-        {
-          "nickname": "남선생님",
-          "job": "환영검사",
-          "level": 81,
-          "conquestGrade": 17,
-          "realm": "메르비스 02"
-        },
-        {
-          "nickname": "스투",
-          "job": "태양감시자",
-          "level": 80,
-          "conquestGrade": 18,
-          "realm": "메르비스 02"
-        },
-        {
-          "nickname": "버터왕자",
-          "job": "심연추방자",
-          "level": 80,
-          "conquestGrade": 16,
           "realm": "메르비스 02"
         }
       ]
@@ -31270,5 +31277,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-06T16:10:48.729Z"
+  "updatedAt": "2026-07-06T16:20:46.738Z"
 }
