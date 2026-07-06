@@ -566,7 +566,7 @@ async function loadUsers() {
           <span style="font-size:11px">${expLabel}</span>
           ${memoLabel}
           <span style="flex:1"></span>
-          <button class="btn-sm danger" onclick="event.stopPropagation();deleteUser('${esc(u.id)}')" style="font-size:11px;padding:4px 10px">삭제</button>
+          <button class="btn-sm danger" onclick="event.stopPropagation();deleteUser('${esc(u.id)}')">삭제</button>
         </div>
         <div class="user-body" style="display:${isOpen ? 'flex' : 'none'};flex-direction:column;gap:6px;padding-top:6px;border-top:1px solid var(--border)">
           <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:11px">
@@ -577,15 +577,15 @@ async function loadUsers() {
           </div>
           <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
             <input type="password" class="pw-input" id="pw_${esc(u.id)}" placeholder="새 비밀번호" style="width:120px;font-size:12px;padding:5px 8px">
-            <button class="btn-sm" onclick="changeUserPw('${esc(u.id)}')" style="font-size:11px;padding:4px 8px">비밀번호 변경</button>
+            <button class="btn-sm" onclick="changeUserPw('${esc(u.id)}')">비밀번호 변경</button>
             <input type="date" class="pw-input" id="exp_${esc(u.id)}" value="${u.expiresAt||''}" style="width:130px;font-size:12px;padding:5px 8px">
-            <button class="btn-sm" onclick="setUserExpiry('${esc(u.id)}')" style="font-size:11px;padding:4px 8px">만료일 설정</button>
+            <button class="btn-sm" onclick="setUserExpiry('${esc(u.id)}')">만료일 설정</button>
             <input type="text" class="pw-input" id="ip_${esc(u.id)}" value="${(u.allowedIPs||[]).join(', ')}" placeholder="IP (쉼표 구분)" style="width:160px;font-size:12px;padding:5px 8px">
-            <button class="btn-sm" onclick="setUserIPs('${esc(u.id)}')" style="font-size:11px;padding:4px 8px">IP 설정</button>
+            <button class="btn-sm" onclick="setUserIPs('${esc(u.id)}')">IP 설정</button>
           </div>
           <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
             <input type="text" class="pw-input" id="memo_${esc(u.id)}" value="${esc(u.memo||'')}" placeholder="메모" style="flex:1;min-width:160px;font-size:12px;padding:5px 8px">
-            <button class="btn-sm" onclick="setUserMemo('${esc(u.id)}')" style="font-size:11px;padding:4px 8px">메모 저장</button>
+            <button class="btn-sm" onclick="setUserMemo('${esc(u.id)}')">메모 저장</button>
           </div>
         </div>
       </div>`;
@@ -812,7 +812,7 @@ async function loadBubbles() {
         <span style="font-size:12px;color:var(--gold-light)">${esc(b.nickname)}</span>
         <span style="font-size:12px;color:var(--text-faint)">›</span>
         <span style="font-size:12px;color:var(--text);flex:1">💬 ${esc(b.message)}</span>
-        <button class="btn-sm danger" onclick="deleteBubble(${i})" style="font-size:11px;padding:4px 10px">삭제</button>
+        <button class="btn-sm danger" onclick="deleteBubble(${i})">삭제</button>
       </div>
     `).join('');
   } catch {}
@@ -1067,7 +1067,7 @@ function renderGtPending(pending) {
                     ${jobChangeLabel}
                     <div style="font-size:11px;color:var(--cyan)">${c.matchCount}명 일치 (${c.matchRate}%)</div>
                 </div>
-                <button class="btn-primary" style="font-size:11px;padding:5px 12px" onclick="gtConfirm('${p.id}', ${i})">✓ 확정</button>
+                <button class="btn-secondary" onclick="gtConfirm('${p.id}', ${i})">✓ 확정</button>
             </div>`;
         }).join('');
         return `<div style="padding:12px;background:var(--bg2);border:1px solid var(--gold);border-radius:8px;margin-bottom:10px">
@@ -1203,7 +1203,7 @@ function renderBossList() {
             <label style="display:flex;align-items:center;gap:4px;font-size:11px;color:var(--text-dim);cursor:pointer">
                 <input type="checkbox" ${b.enabled ? 'checked' : ''} onchange="bossToggleEnabled(${i}, this.checked)"> 활성
             </label>
-            <button class="btn-sm danger" style="font-size:11px;padding:3px 8px" onclick="bossDelete(${i})">삭제</button>
+            <button class="btn-sm danger" onclick="bossDelete(${i})">삭제</button>
         </div>`;
     }).join('');
 }
