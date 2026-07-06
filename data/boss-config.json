@@ -6,6 +6,15 @@
       "type": "cycle",
       "enabled": true,
       "cycleHours": 120
+    },
+    {
+      "id": "1050e198-f394-4845-a4a9-d04cfa4e5617",
+      "name": "속박된 파나스",
+      "type": "trigger",
+      "enabled": true,
+      "triggerBoss": "파나스",
+      "requiredKills": 4,
+      "delayMinutes": 5
     }
   ],
   "maintenanceDay": 3,
