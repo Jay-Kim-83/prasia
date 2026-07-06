@@ -1167,31 +1167,62 @@ async function loadBossConfig() {
     } catch {}
 }
 
+function bossTypeChange() {
+    const type = document.getElementById('bossNewType').value;
+    document.getElementById('bossNewCyclePart').style.display = type === 'cycle' ? 'flex' : 'none';
+    document.getElementById('bossNewTriggerPart').style.display = type === 'trigger' ? 'flex' : 'none';
+}
+
+function bossUpdateCycle(idx, val) {
+    bossConfigData.bosses[idx].cycleHours = Number(val);
+}
+
 function renderBossList() {
     const el = document.getElementById('bossList');
     if (!el) return;
-    const CYCLE_LABELS = { 24: '24시간', 48: '48시간', 72: '3일', 120: '5일', 168: '7일' };
+    const CYCLE_OPTS = [
+        { v: 24, l: '24시간' }, { v: 48, l: '48시간' }, { v: 72, l: '3일' },
+        { v: 120, l: '5일' }, { v: 168, l: '7일' }
+    ];
     if (!bossConfigData.bosses.length) {
         el.innerHTML = '<div style="font-size:12px;color:var(--text-faint)">등록된 보스가 없습니다.</div>';
         return;
     }
-    el.innerHTML = bossConfigData.bosses.map((b, i) => `
-        <div style="display:flex;align-items:center;gap:8px;padding:8px 10px;background:var(--bg);border-radius:6px;border:1px solid var(--border)">
+    el.innerHTML = bossConfigData.bosses.map((b, i) => {
+        const isTrigger = b.type === 'trigger';
+        const typeTag = isTrigger
+            ? `<span style="font-size:10px;color:#f0b429;background:rgba(240,180,41,0.12);padding:2px 6px;border-radius:4px;white-space:nowrap">연쇄형</span>`
+            : '';
+        const infoEl = isTrigger
+            ? `<span style="font-size:11px;color:var(--text-faint);background:var(--bg2);padding:2px 8px;border-radius:4px;white-space:nowrap">${esc(b.triggerBoss||'')} ×${b.requiredKills||1} +${b.delayMinutes||5}분</span>`
+            : `<select style="font-size:11px;background:var(--bg2);color:var(--text-dim);border:1px solid var(--border);border-radius:4px;padding:2px 4px;cursor:pointer" onchange="bossUpdateCycle(${i}, this.value)">${CYCLE_OPTS.map(o => `<option value="${o.v}"${b.cycleHours == o.v ? ' selected' : ''}>${o.l}</option>`).join('')}</select>`;
+        return `<div style="display:flex;align-items:center;gap:8px;padding:8px 10px;background:var(--bg);border-radius:6px;border:1px solid var(--border)">
             <span style="font-size:13px;flex:1;color:var(--text)">${esc(b.name)}</span>
-            <span style="font-size:11px;color:var(--text-faint);background:var(--bg2);padding:2px 8px;border-radius:4px">${CYCLE_LABELS[b.cycleHours] || b.cycleHours + 'h'}</span>
+            ${typeTag}
+            ${infoEl}
             <label style="display:flex;align-items:center;gap:4px;font-size:11px;color:var(--text-dim);cursor:pointer">
                 <input type="checkbox" ${b.enabled ? 'checked' : ''} onchange="bossToggleEnabled(${i}, this.checked)"> 활성
             </label>
             <button class="btn-sm danger" style="font-size:11px;padding:3px 8px" onclick="bossDelete(${i})">삭제</button>
-        </div>`).join('');
+        </div>`;
+    }).join('');
 }
 
 function bossAddNew() {
     const name = document.getElementById('bossNewName').value.trim();
-    const cycleHours = Number(document.getElementById('bossNewCycle').value);
     if (!name) { showToast('보스명을 입력하세요'); return; }
     if (bossConfigData.bosses.find(b => b.name === name)) { showToast('이미 등록된 보스명입니다'); return; }
-    bossConfigData.bosses.push({ id: crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(), name, cycleHours, enabled: true });
+    const type = document.getElementById('bossNewType').value;
+    const boss = { id: crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(), name, type, enabled: true };
+    if (type === 'trigger') {
+        boss.triggerBoss = document.getElementById('bossNewTriggerBoss').value.trim();
+        boss.requiredKills = Number(document.getElementById('bossNewRequiredKills').value) || 1;
+        boss.delayMinutes = Number(document.getElementById('bossNewDelayMin').value) || 5;
+        if (!boss.triggerBoss) { showToast('트리거 보스명을 입력하세요'); return; }
+    } else {
+        boss.cycleHours = Number(document.getElementById('bossNewCycle').value);
+    }
+    bossConfigData.bosses.push(boss);
     document.getElementById('bossNewName').value = '';
     renderBossList();
 }

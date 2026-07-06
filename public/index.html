@@ -500,9 +500,17 @@ async function bossLoadAll() {
 
 function bossCalcNextSpawn(boss) {
     const now = Date.now();
-    const cycleMs = boss.cycleHours * 3600000;
     const cut = bossCuts[boss.id];
 
+    if (boss.type === 'trigger') {
+        if (cut && cut.cutTime) {
+            const spawnMs = new Date(cut.cutTime).getTime() + (boss.delayMinutes || 5) * 60000;
+            return { nextMs: spawnMs, fromCut: true, cutTime: cut.cutTime, updatedBy: cut.updatedBy };
+        }
+        return { nextMs: null, fromCut: false };
+    }
+
+    const cycleMs = boss.cycleHours * 3600000;
     if (cut && cut.cutTime) {
         const cutMs = new Date(cut.cutTime).getTime();
         let next = cutMs + cycleMs;
@@ -510,17 +518,14 @@ function bossCalcNextSpawn(boss) {
         return { nextMs: next, fromCut: true, cutTime: cut.cutTime, updatedBy: cut.updatedBy };
     }
 
-    // 컷 없음: 마지막 정기점검 기준 계산
     const [hh, mm] = bossConfig.maintenanceTime.split(':').map(Number);
     const base = new Date();
     base.setHours(hh, mm, 0, 0);
     const day = base.getDay();
     const diff = (bossConfig.maintenanceDay - day + 7) % 7;
     base.setDate(base.getDate() - (diff === 0 ? 0 : 7 - diff));
-    // 가장 최근 정기점검 기준일
     let baseMs = base.getTime();
     if (baseMs > now) baseMs -= 7 * 86400000;
-    // 주기로 현재 이후 첫 젠 계산
     let next = baseMs;
     while (next <= now) next += cycleMs;
     return { nextMs: next, fromCut: false };
@@ -536,38 +541,46 @@ function bossRenderRows() {
     const now = Date.now();
     const rows = bosses.map(b => {
         const { nextMs, fromCut, cutTime, updatedBy } = bossCalcNextSpawn(b);
-        const diffMs = nextMs - now;
-        const spawned = diffMs <= 0;
+        const isTrigger = b.type === 'trigger';
+        let countdown, badge, badgeCls, rowCls = 'boss-row', spawnDate;
 
-        let countdown, badge, badgeCls, rowCls = 'boss-row';
-        if (spawned) {
-            countdown = '젠 됨!';
-            badge = '젠됨'; badgeCls = 'badge-spawned'; rowCls += ' spawned';
-        } else if (diffMs < 3600000) {
-            const m = Math.floor(diffMs / 60000), s = Math.floor((diffMs % 60000) / 1000);
-            countdown = `${m}분 ${String(s).padStart(2,'0')}초`;
-            badge = '곧 젠'; badgeCls = 'badge-soon'; rowCls += ' soon';
+        if (nextMs === null) {
+            countdown = '—';
+            badge = '미입력'; badgeCls = 'badge-waiting';
+            spawnDate = '처치 시간 입력 필요';
         } else {
-            const h = Math.floor(diffMs / 3600000), m = Math.floor((diffMs % 3600000) / 60000);
-            countdown = `${h}시간 ${String(m).padStart(2,'0')}분`;
-            badge = '대기중'; badgeCls = 'badge-waiting';
+            const diffMs = nextMs - now;
+            const spawned = diffMs <= 0;
+            if (spawned) {
+                countdown = isTrigger ? '젠 됨!' : '젠 됨!';
+                badge = '젠됨'; badgeCls = 'badge-spawned'; rowCls += ' spawned';
+            } else if (diffMs < 3600000) {
+                const m = Math.floor(diffMs / 60000), s = Math.floor((diffMs % 60000) / 1000);
+                countdown = `${m}분 ${String(s).padStart(2,'0')}초`;
+                badge = '곧 젠'; badgeCls = 'badge-soon'; rowCls += ' soon';
+            } else {
+                const h = Math.floor(diffMs / 3600000), m = Math.floor((diffMs % 3600000) / 60000);
+                countdown = `${h}시간 ${String(m).padStart(2,'0')}분`;
+                badge = '대기중'; badgeCls = 'badge-waiting';
+            }
+            spawnDate = `다음 젠: ${new Date(nextMs).toLocaleString('ko-KR', { month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit' })}`;
         }
 
-        const spawnDate = new Date(nextMs).toLocaleString('ko-KR', { month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit' });
+        const cutBtnLabel = isTrigger ? `⚔ 처치 입력` : `✂ 컷 입력`;
         const cutInfo = fromCut
-            ? `✂ 컷: ${new Date(cutTime).toLocaleString('ko-KR',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})} (${esc(updatedBy)})`
-            : '컷 미입력 (점검 기준)';
+            ? `${isTrigger ? '⚔ 처치' : '✂ 컷'}: ${new Date(cutTime).toLocaleString('ko-KR',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})} (${esc(updatedBy)})`
+            : isTrigger ? '처치 시간 미입력' : '컷 미입력 (점검 기준)';
 
         return `<div class="${rowCls}" data-id="${b.id}">
             <div class="boss-row-top">
                 <span class="boss-name">${esc(b.name)}</span>
                 <span class="boss-status-badge ${badgeCls}">${badge}</span>
             </div>
-            <div class="boss-countdown${spawned?' spawned':''}">${countdown}</div>
-            <div class="boss-spawn-time">다음 젠: ${spawnDate}</div>
+            <div class="boss-countdown${nextMs !== null && nextMs - now <= 0 ? ' spawned' : ''}">${countdown}</div>
+            <div class="boss-spawn-time">${spawnDate}</div>
             <div class="boss-cut-info">${cutInfo}</div>
             <div class="boss-actions">
-                <button class="btn-sm" style="font-size:11px" onclick="bossCutOpen('${b.id}','${esc(b.name)}')">✂ 컷 입력</button>
+                <button class="btn-sm" style="font-size:11px" onclick="bossCutOpen('${b.id}','${esc(b.name)}')">&#9986; ${isTrigger ? '처치 입력' : '컷 입력'}</button>
                 ${fromCut ? `<button class="btn-sm" style="font-size:11px;color:var(--text-faint)" onclick="bossCutClear('${b.id}')">↺ 초기화</button>` : ''}
             </div>
         </div>`;
@@ -582,7 +595,11 @@ function bossRenderBody(html) {
 
 function bossCutOpen(id, name) {
     bossCutTargetId = id;
-    document.getElementById('bossCutTitle').textContent = `✂ 컷 시간 입력 — ${name}`;
+    const boss = bossConfig.bosses.find(b => b.id === id);
+    const isTrigger = boss?.type === 'trigger';
+    document.getElementById('bossCutTitle').textContent = isTrigger
+        ? `⚔ 처치 시간 입력 — ${name} (${boss.triggerBoss||''} ${boss.requiredKills||1}회)`
+        : `✂ 컷 시간 입력 — ${name}`;
     const now = new Date();
     now.setSeconds(0, 0);
     document.getElementById('bossCutInput').value = now.toISOString().slice(0, 16);
