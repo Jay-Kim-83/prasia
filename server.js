@@ -42,6 +42,7 @@ const CONFIG_FILE   = path.join(__dirname, 'data', 'config.json');
 
 app.use(express.json());
 app.use('/api/tracker', trackerRoutes);
+app.use('/api/boss', require('./data/boss-routes'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
 
@@ -585,4 +586,6 @@ app.get('/api/task-scheduler-cmd', (req, res) => {
     console.log(`   초기 비밀번호: ${config.adminPassword}\n`);
     openBrowser(url);
   });
+module.exports = { verifyAdminToken, verifyUserToken };
+
 })();

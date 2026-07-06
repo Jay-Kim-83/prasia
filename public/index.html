@@ -423,6 +423,33 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 .tip::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 7px);left:50%;transform:translateX(-50%);background:#1a1f2e;color:#e2e8f0;border:1px solid rgba(255,255,255,.12);border-radius:7px;padding:7px 11px;font-size:11px;line-height:1.55;white-space:pre-line;width:max-content;max-width:220px;opacity:0;pointer-events:none;transition:opacity .15s;z-index:9999;text-align:left;font-weight:400}
 .tip:hover::after{opacity:1}
 .tip.tip-left::after{left:auto;right:0;transform:none}
+
+/* ── 보스젠 패널 ───────────────────────────────────────────── */
+.boss-panel{position:fixed;top:0;right:-360px;width:340px;height:100vh;background:var(--bg2);border-left:1px solid var(--border);z-index:800;display:flex;flex-direction:column;transition:right .28s ease;box-shadow:-4px 0 20px rgba(0,0,0,.4)}
+.boss-panel.open{right:0}
+.boss-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:799}
+.boss-overlay.open{display:block}
+.boss-panel-header{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:1px solid var(--border);font-size:14px;font-weight:600;color:var(--gold);flex-shrink:0}
+.boss-panel-close{background:none;border:none;color:var(--text-faint);font-size:18px;cursor:pointer;padding:0 4px;line-height:1}
+.boss-panel-close:hover{color:var(--text)}
+.boss-panel-body{flex:1;overflow-y:auto;padding:14px}
+.boss-row{padding:12px 14px;background:var(--bg);border-radius:8px;border:1px solid var(--border);margin-bottom:8px;cursor:default}
+.boss-row.spawned{border-color:var(--green,#4caf50)}
+.boss-row.soon{border-color:var(--gold)}
+.boss-row-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.boss-name{font-size:13px;font-weight:600;color:var(--text)}
+.boss-status-badge{font-size:10px;padding:2px 7px;border-radius:10px;font-weight:600}
+.badge-spawned{background:rgba(76,175,80,.2);color:#81c784}
+.badge-soon{background:rgba(255,193,7,.2);color:#ffd54f}
+.badge-waiting{background:rgba(255,255,255,.08);color:var(--text-faint)}
+.boss-countdown{font-size:18px;font-weight:700;color:var(--cyan);letter-spacing:.02em;margin-bottom:4px;font-variant-numeric:tabular-nums}
+.boss-countdown.spawned{color:#81c784}
+.boss-spawn-time{font-size:11px;color:var(--text-faint)}
+.boss-cut-info{font-size:11px;color:var(--text-dim);margin-top:4px}
+.boss-actions{display:flex;gap:6px;margin-top:8px}
+.boss-cut-modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:1000;background:rgba(0,0,0,.5)}
+.boss-cut-inner{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:20px;width:280px}
+@media(max-width:400px){.boss-panel{width:100%;right:-100%}}
 </style>
 </head>
 <body>
@@ -436,6 +463,173 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
   }
   document.documentElement.setAttribute('data-theme', theme);
 })();
+
+// ── 보스젠 ─────────────────────────────────────────────────────
+let bossConfig = null;
+let bossCuts = {};
+let bossTimerInterval = null;
+let bossCutTargetId = null;
+
+function toggleBossPanel() {
+    const panel = document.getElementById('bossPanel');
+    const overlay = document.getElementById('bossOverlay');
+    const isOpen = panel.classList.toggle('open');
+    overlay.classList.toggle('open', isOpen);
+    if (isOpen) {
+        bossLoadAll();
+        if (!bossTimerInterval) bossTimerInterval = setInterval(bossRenderRows, 1000);
+    } else {
+        clearInterval(bossTimerInterval);
+        bossTimerInterval = null;
+    }
+}
+
+async function bossLoadAll() {
+    try {
+        const [cfgRes, cutRes] = await Promise.all([
+            authFetch('/api/boss/config'),
+            authFetch('/api/boss/cuts')
+        ]);
+        const cfg = await cfgRes.json();
+        const cut = await cutRes.json();
+        if (cfg.ok) bossConfig = cfg.data;
+        if (cut.ok) bossCuts = cut.data;
+        bossRenderRows();
+    } catch { bossRenderBody('<div style="color:var(--text-faint);text-align:center;padding:20px">불러오기 실패</div>'); }
+}
+
+function bossCalcNextSpawn(boss) {
+    const now = Date.now();
+    const cycleMs = boss.cycleHours * 3600000;
+    const cut = bossCuts[boss.id];
+
+    if (cut && cut.cutTime) {
+        const cutMs = new Date(cut.cutTime).getTime();
+        let next = cutMs + cycleMs;
+        while (next < now - cycleMs) next += cycleMs;
+        return { nextMs: next, fromCut: true, cutTime: cut.cutTime, updatedBy: cut.updatedBy };
+    }
+
+    // 컷 없음: 마지막 정기점검 기준 계산
+    const [hh, mm] = bossConfig.maintenanceTime.split(':').map(Number);
+    const base = new Date();
+    base.setHours(hh, mm, 0, 0);
+    const day = base.getDay();
+    const diff = (bossConfig.maintenanceDay - day + 7) % 7;
+    base.setDate(base.getDate() - (diff === 0 ? 0 : 7 - diff));
+    // 가장 최근 정기점검 기준일
+    let baseMs = base.getTime();
+    if (baseMs > now) baseMs -= 7 * 86400000;
+    // 주기로 현재 이후 첫 젠 계산
+    let next = baseMs;
+    while (next <= now) next += cycleMs;
+    return { nextMs: next, fromCut: false };
+}
+
+function bossRenderRows() {
+    if (!bossConfig) return;
+    const bosses = bossConfig.bosses.filter(b => b.enabled);
+    if (!bosses.length) {
+        bossRenderBody('<div style="font-size:12px;color:var(--text-faint);text-align:center;padding:30px 0">관리자에서 보스를 등록해주세요.</div>');
+        return;
+    }
+    const now = Date.now();
+    const rows = bosses.map(b => {
+        const { nextMs, fromCut, cutTime, updatedBy } = bossCalcNextSpawn(b);
+        const diffMs = nextMs - now;
+        const spawned = diffMs <= 0;
+
+        let countdown, badge, badgeCls, rowCls = 'boss-row';
+        if (spawned) {
+            countdown = '젠 됨!';
+            badge = '젠됨'; badgeCls = 'badge-spawned'; rowCls += ' spawned';
+        } else if (diffMs < 3600000) {
+            const m = Math.floor(diffMs / 60000), s = Math.floor((diffMs % 60000) / 1000);
+            countdown = `${m}분 ${String(s).padStart(2,'0')}초`;
+            badge = '곧 젠'; badgeCls = 'badge-soon'; rowCls += ' soon';
+        } else {
+            const h = Math.floor(diffMs / 3600000), m = Math.floor((diffMs % 3600000) / 60000);
+            countdown = `${h}시간 ${String(m).padStart(2,'0')}분`;
+            badge = '대기중'; badgeCls = 'badge-waiting';
+        }
+
+        const spawnDate = new Date(nextMs).toLocaleString('ko-KR', { month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit' });
+        const cutInfo = fromCut
+            ? `✂ 컷: ${new Date(cutTime).toLocaleString('ko-KR',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})} (${esc(updatedBy)})`
+            : '컷 미입력 (점검 기준)';
+
+        return `<div class="${rowCls}" data-id="${b.id}">
+            <div class="boss-row-top">
+                <span class="boss-name">${esc(b.name)}</span>
+                <span class="boss-status-badge ${badgeCls}">${badge}</span>
+            </div>
+            <div class="boss-countdown${spawned?' spawned':''}">${countdown}</div>
+            <div class="boss-spawn-time">다음 젠: ${spawnDate}</div>
+            <div class="boss-cut-info">${cutInfo}</div>
+            <div class="boss-actions">
+                <button class="btn-sm" style="font-size:11px" onclick="bossCutOpen('${b.id}','${esc(b.name)}')">✂ 컷 입력</button>
+                ${fromCut ? `<button class="btn-sm" style="font-size:11px;color:var(--text-faint)" onclick="bossCutClear('${b.id}')">↺ 초기화</button>` : ''}
+            </div>
+        </div>`;
+    }).join('');
+    bossRenderBody(rows);
+}
+
+function bossRenderBody(html) {
+    const el = document.getElementById('bossPanelBody');
+    if (el) el.innerHTML = html;
+}
+
+function bossCutOpen(id, name) {
+    bossCutTargetId = id;
+    document.getElementById('bossCutTitle').textContent = `✂ 컷 시간 입력 — ${name}`;
+    const now = new Date();
+    now.setSeconds(0, 0);
+    document.getElementById('bossCutInput').value = now.toISOString().slice(0, 16);
+    document.getElementById('bossCutModal').style.display = 'flex';
+}
+
+function bossCutCancel() {
+    document.getElementById('bossCutModal').style.display = 'none';
+    bossCutTargetId = null;
+}
+
+async function bossCutSave() {
+    if (!bossCutTargetId) return;
+    const cutTime = new Date(document.getElementById('bossCutInput').value).toISOString();
+    const userName = localStorage.getItem('prasia_user') || 'unknown';
+    try {
+        const res = await authFetch(`/api/boss/cuts/${bossCutTargetId}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ cutTime, updatedBy: userName })
+        });
+        const data = await res.json();
+        if (data.ok) {
+            bossCuts[bossCutTargetId] = data.data;
+            bossCutCancel();
+            bossRenderRows();
+        } else { showToast('저장 실패: ' + data.error); }
+    } catch { showToast('서버 연결 실패'); }
+}
+
+async function bossCutClear(id) {
+    try {
+        const res = await authFetch(`/api/boss/cuts/${id}`, { method: 'DELETE' });
+        const data = await res.json();
+        if (data.ok) { delete bossCuts[id]; bossRenderRows(); }
+    } catch { showToast('서버 연결 실패'); }
+}
+
+async function bossResetAll() {
+    if (!confirm('이번 주 전체 컷 기록을 초기화할까요?')) return;
+    try {
+        const res = await authFetch('/api/boss/cuts/reset', { method: 'POST' });
+        const data = await res.json();
+        if (data.ok) { bossCuts = {}; bossRenderRows(); showToast('✅ 전체 초기화됨'); }
+    } catch { showToast('서버 연결 실패'); }
+}
+
 </script>
 
 <!-- 로그인 오버레이 -->
@@ -475,10 +669,39 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
       <span class="status-dot offline" id="statusDot"></span>
       <span id="statusText">불러오는 중...</span>
     </div>
+    <button class="btn-admin" id="bossBtn" onclick="toggleBossPanel()" style="display:none">🐉 보스젠</button>
     <a href="/admin.html" class="btn-admin" id="adminLink" style="display:none">⚙ 관리</a>
     <button onclick="doLogout()" class="btn-admin" style="border-color:rgba(239,83,80,.4);color:#ef9a9a">로그아웃</button>
   </div>
 </header>
+
+<!-- 보스젠 패널 -->
+<div id="bossPanel" class="boss-panel">
+  <div class="boss-panel-header">
+    <span>🐉 보스젠 타이머</span>
+    <div style="display:flex;gap:8px;align-items:center">
+      <button class="btn-sm" onclick="bossResetAll()" title="이번 주 전체 컷 초기화">↺ 전체 초기화</button>
+      <button class="boss-panel-close" onclick="toggleBossPanel()">✕</button>
+    </div>
+  </div>
+  <div id="bossPanelBody" class="boss-panel-body">
+    <div style="font-size:12px;color:var(--text-faint);text-align:center;padding:30px 0">보스 목록을 불러오는 중...</div>
+  </div>
+</div>
+<div id="bossOverlay" class="boss-overlay" onclick="toggleBossPanel()"></div>
+
+<!-- 컷 시간 입력 모달 -->
+<div id="bossCutModal" class="boss-cut-modal" style="display:none">
+  <div class="boss-cut-inner">
+    <div style="font-size:13px;font-weight:600;color:var(--gold);margin-bottom:12px" id="bossCutTitle">컷 시간 입력</div>
+    <input type="datetime-local" id="bossCutInput" class="pw-input" style="width:100%;margin-bottom:12px">
+    <div style="display:flex;gap:8px;justify-content:flex-end">
+      <button class="btn-sm" onclick="bossCutCancel()">취소</button>
+      <button class="btn-primary" style="font-size:12px;padding:6px 16px" onclick="bossCutSave()">저장</button>
+    </div>
+  </div>
+</div>
+
 
 <div class="sample-banner hidden" id="sampleBanner">
   ⚠ 샘플 데이터입니다. 관리 페이지에서 실제 데이터를 수집해 주세요.
@@ -612,6 +835,8 @@ async function checkLogin() {
     if (!data.requireLogin || data.loggedIn) {
       overlay.style.display = 'none';
       if (data.isAdmin) { document.getElementById('adminLink').style.display = ''; isAdminUser = true; }
+            document.getElementById('bossBtn').style.display = '';
+            localStorage.setItem('prasia_user', data.userId || 'admin');
       // 마스터는 자동 로그아웃 제외
       if (!data.isMaster) startAutoLogout(data.autoLogoutMin ?? 30);
       init();
@@ -646,6 +871,8 @@ async function doUserLogin() {
       }
       document.getElementById('loginOverlay').style.display = 'none';
       if (data.isAdmin) { document.getElementById('adminLink').style.display = ''; isAdminUser = true; }
+            document.getElementById('bossBtn').style.display = '';
+            localStorage.setItem('prasia_user', data.userId || 'admin');
       init();
     } else {
       err.textContent = data.message || '로그인 실패';

@@ -108,6 +108,7 @@ let statusInterval = null;
 
 async function initAdmin() {
     initCardCollapse();
+    loadBossConfig();
   // 마스터가 아니면 마스터 전용 카드 비활성화
   if (!isMaster) {
     document.querySelectorAll('.master-only').forEach(el => el.classList.add('disabled'));
@@ -1148,4 +1149,72 @@ function initCardCollapse() {
             localStorage.setItem(key, card.classList.contains('collapsed') ? '1' : '0');
         });
     });
+}
+
+// ── 보스젠 관리 ───────────────────────────────────────────────
+let bossConfigData = { bosses: [], maintenanceDay: 3, maintenanceTime: '22:00' };
+
+async function loadBossConfig() {
+    try {
+        const res = await adminFetch('/api/boss/config');
+        const data = await res.json();
+        if (data.ok) {
+            bossConfigData = data.data;
+            document.getElementById('bossMainDay').value = bossConfigData.maintenanceDay;
+            document.getElementById('bossMainTime').value = bossConfigData.maintenanceTime;
+            renderBossList();
+        }
+    } catch {}
+}
+
+function renderBossList() {
+    const el = document.getElementById('bossList');
+    if (!el) return;
+    const CYCLE_LABELS = { 24: '24시간', 48: '48시간', 72: '3일', 120: '5일', 168: '7일' };
+    if (!bossConfigData.bosses.length) {
+        el.innerHTML = '<div style="font-size:12px;color:var(--text-faint)">등록된 보스가 없습니다.</div>';
+        return;
+    }
+    el.innerHTML = bossConfigData.bosses.map((b, i) => `
+        <div style="display:flex;align-items:center;gap:8px;padding:8px 10px;background:var(--bg);border-radius:6px;border:1px solid var(--border)">
+            <span style="font-size:13px;flex:1;color:var(--text)">${esc(b.name)}</span>
+            <span style="font-size:11px;color:var(--text-faint);background:var(--bg2);padding:2px 8px;border-radius:4px">${CYCLE_LABELS[b.cycleHours] || b.cycleHours + 'h'}</span>
+            <label style="display:flex;align-items:center;gap:4px;font-size:11px;color:var(--text-dim);cursor:pointer">
+                <input type="checkbox" ${b.enabled ? 'checked' : ''} onchange="bossToggleEnabled(${i}, this.checked)"> 활성
+            </label>
+            <button class="btn-sm danger" style="font-size:11px;padding:3px 8px" onclick="bossDelete(${i})">삭제</button>
+        </div>`).join('');
+}
+
+function bossAddNew() {
+    const name = document.getElementById('bossNewName').value.trim();
+    const cycleHours = Number(document.getElementById('bossNewCycle').value);
+    if (!name) { showToast('보스명을 입력하세요'); return; }
+    if (bossConfigData.bosses.find(b => b.name === name)) { showToast('이미 등록된 보스명입니다'); return; }
+    bossConfigData.bosses.push({ id: crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(), name, cycleHours, enabled: true });
+    document.getElementById('bossNewName').value = '';
+    renderBossList();
+}
+
+function bossDelete(idx) {
+    bossConfigData.bosses.splice(idx, 1);
+    renderBossList();
+}
+
+function bossToggleEnabled(idx, val) {
+    bossConfigData.bosses[idx].enabled = val;
+}
+
+async function bossSaveConfig() {
+    bossConfigData.maintenanceDay = Number(document.getElementById('bossMainDay').value);
+    bossConfigData.maintenanceTime = document.getElementById('bossMainTime').value;
+    try {
+        const res = await adminFetch('/api/boss/config', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(bossConfigData)
+        });
+        const data = await res.json();
+        showToast(data.ok ? '✅ 보스 설정 저장됨' : '저장 실패: ' + data.error);
+    } catch { showToast('서버 연결 실패'); }
 }

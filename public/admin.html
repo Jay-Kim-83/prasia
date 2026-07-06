@@ -41,6 +41,7 @@
   <button class="sidebar-item" data-target="card-display"><span class="sidebar-icon">📊</span><span class="sidebar-label">표시 설정</span></button>
   <button class="sidebar-item" data-target="card-myguild"><span class="sidebar-icon">⭐</span><span class="sidebar-label">내 결사</span></button>
   <button class="sidebar-item" data-target="card-worlds"><span class="sidebar-icon">🌍</span><span class="sidebar-label">수집 월드</span></button>
+  <button class="sidebar-item" data-target="card-boss"><span class="sidebar-icon">🐉</span><span class="sidebar-label">보스젠</span></button>
   <button class="sidebar-item" data-target="card-guild-tracker"><span class="sidebar-icon">📍</span><span class="sidebar-label">결사 추적</span><span id="gt-badge" style="display:none;background:var(--red,#e53e3e);color:#fff;border-radius:10px;font-size:10px;padding:1px 5px;min-width:16px;text-align:center">0</span></button>
   <button class="sidebar-item master-nav" data-target="card-collect"><span class="sidebar-icon">⚡</span><span class="sidebar-label">즉시 수집</span></button>
   <button class="sidebar-item master-nav" data-target="card-schedule"><span class="sidebar-icon">🕐</span><span class="sidebar-label">스케줄</span></button>
@@ -157,6 +158,44 @@
   </div>
 </div>
 
+
+<!-- 보스젠 설정 -->
+<div class="card" id="card-boss">
+  <div class="card-title">🐉 보스젠 설정<i class="tip" data-tip="보스 목록과 젠 주기를 설정합니다.&#10;수요일 정기점검 기준으로 컷 시간이 초기화됩니다."></i></div>
+  <div class="interval-row" style="margin-bottom:14px">
+    <label>정기점검 요일:</label>
+    <select class="interval-input" id="bossMainDay" style="width:90px">
+      <option value="0">일요일</option>
+      <option value="1">월요일</option>
+      <option value="2">화요일</option>
+      <option value="3" selected>수요일</option>
+      <option value="4">목요일</option>
+      <option value="5">금요일</option>
+      <option value="6">토요일</option>
+    </select>
+    <label style="margin-left:12px">초기화 시각:</label>
+    <input type="time" class="interval-input" id="bossMainTime" value="22:00" style="width:90px">
+    <i class="tip" data-tip="정기점검 후 보스가 다시 젠되는 기준 시각입니다.&#10;이 시각 이후 첫 컷부터 주기가 시작됩니다."></i>
+  </div>
+
+  <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;align-items:flex-end">
+    <input type="text" class="pw-input" id="bossNewName" placeholder="보스명" style="width:140px">
+    <select class="interval-input" id="bossNewCycle" style="width:110px">
+      <option value="24">24시간</option>
+      <option value="48">48시간</option>
+      <option value="72">3일 (72시간)</option>
+      <option value="120">5일 (120시간)</option>
+      <option value="168">7일 (168시간)</option>
+    </select>
+    <button class="btn-primary" style="padding:8px 16px;font-size:12px" onclick="bossAddNew()">+ 추가</button>
+  </div>
+
+  <div id="bossList" style="display:flex;flex-direction:column;gap:6px;margin-bottom:14px"></div>
+
+  <div class="btn-row">
+    <button class="btn-primary" onclick="bossSaveConfig()">💾 보스 설정 저장</button>
+  </div>
+</div>
 
 <!-- 결사 추적 -->
 <div class="card" id="card-guild-tracker">
