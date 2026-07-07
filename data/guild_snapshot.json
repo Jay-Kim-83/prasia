@@ -965,17 +965,17 @@
           "realm": "론도 02"
         },
         {
-          "nickname": "리제",
-          "job": "향사수",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "론도 02"
-        },
-        {
           "nickname": "삼호야호",
           "job": "야만투사",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "리제",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 24,
           "realm": "론도 02"
         },
         {
@@ -3388,7 +3388,7 @@
         },
         {
           "nickname": "환읭",
-          "job": "집행관",
+          "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
           "realm": "라인소프 01"
@@ -3920,7 +3920,7 @@
         },
         {
           "nickname": "쉼터",
-          "job": "집행관",
+          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "라인소프 02"
@@ -9047,7 +9047,7 @@
     "PIG|아민타": {
       "guildName": "PIG",
       "world": "아민타",
-      "memberCount": 9,
+      "memberCount": 8,
       "members": [
         {
           "nickname": "단단",
@@ -9067,13 +9067,6 @@
           "nickname": "코카콜라맛있다",
           "job": "주문각인사",
           "level": 86,
-          "conquestGrade": 21,
-          "realm": "아민타 05"
-        },
-        {
-          "nickname": "난나얌",
-          "job": "환영검사",
-          "level": 85,
           "conquestGrade": 21,
           "realm": "아민타 05"
         },
@@ -10326,7 +10319,7 @@
         {
           "nickname": "오늘도수고하셨습니다",
           "job": "집행관",
-          "level": 90,
+          "level": 91,
           "conquestGrade": 26,
           "realm": "가리안 02"
         },
@@ -19830,6 +19823,13 @@
           "realm": "아티산 02"
         },
         {
+          "nickname": "아범",
+          "job": "환영검사",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "아티산 02"
+        },
+        {
           "nickname": "생강",
           "job": "환영검사",
           "level": 90,
@@ -19841,13 +19841,6 @@
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
-          "realm": "아티산 02"
-        },
-        {
-          "nickname": "아범",
-          "job": "환영검사",
-          "level": 90,
-          "conquestGrade": 24,
           "realm": "아티산 02"
         },
         {
@@ -20474,13 +20467,6 @@
           "realm": "아티산 03"
         },
         {
-          "nickname": "쥬댕양",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "아티산 03"
-        },
-        {
           "nickname": "막둥이양",
           "job": "환영검사",
           "level": 89,
@@ -20489,6 +20475,13 @@
         },
         {
           "nickname": "쾌걸양",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "아티산 03"
+        },
+        {
+          "nickname": "쥬댕양",
           "job": "집행관",
           "level": 89,
           "conquestGrade": 24,
@@ -22112,17 +22105,17 @@
           "realm": "나세르 01"
         },
         {
-          "nickname": "하트",
-          "job": "야만투사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "나세르 01"
-        },
-        {
           "nickname": "스으대장",
           "job": "집행관",
           "level": 91,
           "conquestGrade": 24,
+          "realm": "나세르 01"
+        },
+        {
+          "nickname": "하트",
+          "job": "야만투사",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "나세르 01"
         },
         {
@@ -28244,14 +28237,14 @@
           "realm": "메르비스 01"
         },
         {
-          "nickname": "Musa",
+          "nickname": "쟁탈",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "메르비스 01"
         },
         {
-          "nickname": "쟁탈",
+          "nickname": "Musa",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
@@ -29679,17 +29672,17 @@
           "realm": "메르비스 03"
         },
         {
-          "nickname": "해성",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 20,
-          "realm": "메르비스 03"
-        },
-        {
           "nickname": "맥캘란",
           "job": "심연추방자",
           "level": 86,
           "conquestGrade": 22,
+          "realm": "메르비스 03"
+        },
+        {
+          "nickname": "해성",
+          "job": "집행관",
+          "level": 86,
+          "conquestGrade": 20,
           "realm": "메르비스 03"
         },
         {
@@ -31326,5 +31319,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-07T11:30:47.938Z"
+  "updatedAt": "2026-07-07T11:40:47.027Z"
 }
