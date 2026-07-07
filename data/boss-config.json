@@ -6,7 +6,7 @@
       "type": "cycle",
       "enabled": true,
       "cycleHours": 120,
-      "resetTime": "22:02"
+      "resetTime": "22:00"
     },
     {
       "id": "1050e198-f394-4845-a4a9-d04cfa4e5617",
@@ -22,14 +22,16 @@
       "name": "타오르는 눈의 절멸자",
       "type": "cycle",
       "enabled": true,
-      "cycleHours": 120
+      "cycleHours": 120,
+      "resetTime": "22:00"
     },
     {
       "id": "e2a8bf03-0237-4f7e-a938-1f356ef2b993",
       "name": "고래사자",
       "type": "cycle",
       "enabled": true,
-      "cycleHours": 48
+      "cycleHours": 48,
+      "resetTime": "22:00"
     },
     {
       "id": "e3550aec-8582-42c4-be32-674e5344e334",
@@ -45,14 +47,24 @@
       "name": "푸른 화염의 나뭇돌골렘",
       "type": "cycle",
       "enabled": true,
-      "cycleHours": 168
+      "cycleHours": 168,
+      "resetTime": "22:00"
     },
     {
       "id": "240148d9-6e63-44da-aa25-4e8eb9114de9",
       "name": "백야의 왕",
       "type": "cycle",
       "enabled": true,
-      "cycleHours": 120
+      "cycleHours": 120,
+      "resetTime": "22:00"
+    },
+    {
+      "id": "c74b6488-27c2-4857-af11-063c5223f829",
+      "name": "케리움",
+      "type": "cycle",
+      "enabled": true,
+      "cycleHours": 72,
+      "resetTime": "22:00"
     }
   ],
   "maintenanceDate": "",
