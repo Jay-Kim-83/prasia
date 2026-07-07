@@ -1190,7 +1190,7 @@ function renderBossList() {
     if (!el) return;
     const CYCLE_OPTS = [
         { v: 24, l: '24시간' }, { v: 48, l: '48시간' }, { v: 72, l: '3일' },
-        { v: 120, l: '5일' }, { v: 168, l: '7일' }
+        { v: 96, l: '4일' }, { v: 120, l: '5일' }, { v: 168, l: '7일' }
     ];
     if (!bossConfigData.bosses.length) {
         el.innerHTML = '<div style="font-size:12px;color:var(--text-faint)">등록된 보스가 없습니다.</div>';
