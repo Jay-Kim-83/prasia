@@ -5,7 +5,8 @@
       "name": "파나스",
       "type": "cycle",
       "enabled": true,
-      "cycleHours": 120
+      "cycleHours": 120,
+      "resetTime": "22:02"
     },
     {
       "id": "1050e198-f394-4845-a4a9-d04cfa4e5617",
@@ -54,6 +55,6 @@
       "cycleHours": 120
     }
   ],
-  "maintenanceDay": 3,
+  "maintenanceDate": "",
   "maintenanceTime": "05:00"
 }
