@@ -3331,6 +3331,13 @@
           "realm": "라인소프 01"
         },
         {
+          "nickname": "가사아",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "라인소프 01"
+        },
+        {
           "nickname": "카시아",
           "job": "집행관",
           "level": 91,
@@ -3347,13 +3354,6 @@
         {
           "nickname": "하읭",
           "job": "향사수",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "라인소프 01"
-        },
-        {
-          "nickname": "가사아",
-          "job": "집행관",
           "level": 91,
           "conquestGrade": 25,
           "realm": "라인소프 01"
@@ -3415,15 +3415,15 @@
           "realm": "라인소프 01"
         },
         {
-          "nickname": "앰릿",
-          "job": "주문각인사",
+          "nickname": "중복",
+          "job": "향사수",
           "level": 90,
           "conquestGrade": 24,
           "realm": "라인소프 01"
         },
         {
-          "nickname": "중복",
-          "job": "향사수",
+          "nickname": "앰릿",
+          "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
           "realm": "라인소프 01"
@@ -4612,13 +4612,6 @@
           "realm": "라인소프 03"
         },
         {
-          "nickname": "어둠라미",
-          "job": "향사수",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "라인소프 03"
-        },
-        {
           "nickname": "귀찮다",
           "job": "야만투사",
           "level": 92,
@@ -4634,6 +4627,13 @@
         },
         {
           "nickname": "켄지",
+          "job": "향사수",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "라인소프 03"
+        },
+        {
+          "nickname": "어둠라미",
           "job": "향사수",
           "level": 92,
           "conquestGrade": 25,
@@ -5529,17 +5529,17 @@
           "realm": "라인소프 04"
         },
         {
-          "nickname": "핫걸",
-          "job": "향사수",
-          "level": 88,
-          "conquestGrade": 21,
-          "realm": "라인소프 04"
-        },
-        {
           "nickname": "시그마님",
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 22,
+          "realm": "라인소프 04"
+        },
+        {
+          "nickname": "핫걸",
+          "job": "향사수",
+          "level": 88,
+          "conquestGrade": 21,
           "realm": "라인소프 04"
         },
         {
@@ -15870,7 +15870,7 @@
         {
           "nickname": "꼰대가르송",
           "job": "집행관",
-          "level": 88,
+          "level": 89,
           "conquestGrade": 24,
           "realm": "제롬 01"
         },
@@ -21735,41 +21735,6 @@
         }
       ]
     },
-    "불꽃야구|아티산": {
-      "guildName": "불꽃야구",
-      "world": "아티산",
-      "memberCount": 4,
-      "members": [
-        {
-          "nickname": "유소유",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "아티산 05"
-        },
-        {
-          "nickname": "돌부처",
-          "job": "야만투사",
-          "level": 83,
-          "conquestGrade": 18,
-          "realm": "아티산 05"
-        },
-        {
-          "nickname": "나노마신",
-          "job": "환영검사",
-          "level": 79,
-          "conquestGrade": 15,
-          "realm": "아티산 05"
-        },
-        {
-          "nickname": "나노머신",
-          "job": "집행관",
-          "level": 79,
-          "conquestGrade": 15,
-          "realm": "아티산 05"
-        }
-      ]
-    },
     "지박령|아티산": {
       "guildName": "지박령",
       "world": "아티산",
@@ -21947,6 +21912,34 @@
           "nickname": "이슬톡톡",
           "job": "주문각인사",
           "level": 77,
+          "conquestGrade": 15,
+          "realm": "아티산 05"
+        }
+      ]
+    },
+    "불꽃야구|아티산": {
+      "guildName": "불꽃야구",
+      "world": "아티산",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "돌부처",
+          "job": "야만투사",
+          "level": 83,
+          "conquestGrade": 18,
+          "realm": "아티산 05"
+        },
+        {
+          "nickname": "나노마신",
+          "job": "환영검사",
+          "level": 79,
+          "conquestGrade": 15,
+          "realm": "아티산 05"
+        },
+        {
+          "nickname": "나노머신",
+          "job": "집행관",
+          "level": 79,
           "conquestGrade": 15,
           "realm": "아티산 05"
         }
@@ -31298,5 +31291,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-07T01:50:47.814Z"
+  "updatedAt": "2026-07-07T02:00:49.032Z"
 }
