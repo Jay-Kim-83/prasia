@@ -2255,7 +2255,7 @@
         {
           "nickname": "곰여사하팅",
           "job": "주문각인사",
-          "level": 87,
+          "level": 88,
           "conquestGrade": 22,
           "realm": "론도 04"
         },
@@ -3296,15 +3296,15 @@
           "realm": "라인소프 01"
         },
         {
-          "nickname": "둠둠",
-          "job": "야만투사",
+          "nickname": "흑구",
+          "job": "주문각인사",
           "level": 91,
           "conquestGrade": 26,
           "realm": "라인소프 01"
         },
         {
-          "nickname": "흑구",
-          "job": "주문각인사",
+          "nickname": "둠둠",
+          "job": "야만투사",
           "level": 91,
           "conquestGrade": 26,
           "realm": "라인소프 01"
@@ -10184,17 +10184,17 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "토쓰",
-          "job": "환영검사",
-          "level": 88,
-          "conquestGrade": 24,
-          "realm": "가리안 02"
-        },
-        {
           "nickname": "양송이스프",
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 23,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "토쓰",
+          "job": "환영검사",
+          "level": 88,
+          "conquestGrade": 24,
           "realm": "가리안 02"
         },
         {
@@ -21735,6 +21735,41 @@
         }
       ]
     },
+    "불꽃야구|아티산": {
+      "guildName": "불꽃야구",
+      "world": "아티산",
+      "memberCount": 4,
+      "members": [
+        {
+          "nickname": "유소유",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "아티산 05"
+        },
+        {
+          "nickname": "돌부처",
+          "job": "야만투사",
+          "level": 83,
+          "conquestGrade": 18,
+          "realm": "아티산 05"
+        },
+        {
+          "nickname": "나노마신",
+          "job": "환영검사",
+          "level": 79,
+          "conquestGrade": 15,
+          "realm": "아티산 05"
+        },
+        {
+          "nickname": "나노머신",
+          "job": "집행관",
+          "level": 79,
+          "conquestGrade": 15,
+          "realm": "아티산 05"
+        }
+      ]
+    },
     "지박령|아티산": {
       "guildName": "지박령",
       "world": "아티산",
@@ -21912,34 +21947,6 @@
           "nickname": "이슬톡톡",
           "job": "주문각인사",
           "level": 77,
-          "conquestGrade": 15,
-          "realm": "아티산 05"
-        }
-      ]
-    },
-    "불꽃야구|아티산": {
-      "guildName": "불꽃야구",
-      "world": "아티산",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "돌부처",
-          "job": "야만투사",
-          "level": 83,
-          "conquestGrade": 18,
-          "realm": "아티산 05"
-        },
-        {
-          "nickname": "나노마신",
-          "job": "환영검사",
-          "level": 79,
-          "conquestGrade": 15,
-          "realm": "아티산 05"
-        },
-        {
-          "nickname": "나노머신",
-          "job": "집행관",
-          "level": 79,
           "conquestGrade": 15,
           "realm": "아티산 05"
         }
@@ -31291,5 +31298,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-07T00:10:47.993Z"
+  "updatedAt": "2026-07-07T00:20:47.148Z"
 }
