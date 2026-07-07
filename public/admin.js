@@ -1152,7 +1152,7 @@ function initCardCollapse() {
 }
 
 // ── 보스젠 관리 ───────────────────────────────────────────────
-let bossConfigData = { bosses: [], maintenanceDay: 3, maintenanceTime: '22:00' };
+let bossConfigData = { bosses: [], maintenanceDate: '', maintenanceTime: '22:00' };
 
 async function loadBossConfig() {
     try {
@@ -1160,7 +1160,7 @@ async function loadBossConfig() {
         const data = await res.json();
         if (data.ok) {
             bossConfigData = data.data;
-            document.getElementById('bossMainDay').value = bossConfigData.maintenanceDay;
+            document.getElementById('bossMainDate').value = bossConfigData.maintenanceDate || '';
             document.getElementById('bossMainTime').value = bossConfigData.maintenanceTime;
             renderBossList();
         }
@@ -1175,6 +1175,10 @@ function bossTypeChange() {
 
 function bossUpdateCycle(idx, val) {
     bossConfigData.bosses[idx].cycleHours = Number(val);
+}
+
+function bossUpdateResetTime(idx, val) {
+    bossConfigData.bosses[idx].resetTime = val;
 }
 
 function renderBossList() {
@@ -1196,10 +1200,14 @@ function renderBossList() {
         const infoEl = isTrigger
             ? `<span style="font-size:11px;color:var(--text-faint);background:var(--bg2);padding:2px 8px;border-radius:4px;white-space:nowrap">${esc(b.triggerBoss||'')} ×${b.requiredKills||1} +${b.delayMinutes||5}분</span>`
             : `<select style="font-size:11px;background:var(--bg2);color:var(--text-dim);border:1px solid var(--border);border-radius:4px;padding:2px 4px;cursor:pointer" onchange="bossUpdateCycle(${i}, this.value)">${CYCLE_OPTS.map(o => `<option value="${o.v}"${b.cycleHours == o.v ? ' selected' : ''}>${o.l}</option>`).join('')}</select>`;
-        return `<div style="display:flex;align-items:center;gap:8px;padding:8px 10px;background:var(--bg);border-radius:6px;border:1px solid var(--border)">
-            <span style="font-size:13px;flex:1;color:var(--text)">${esc(b.name)}</span>
+        const resetInput = !isTrigger
+            ? `<input type="time" value="${b.resetTime||''}" title="점검 초기화 시각 (비어있으면 기본 시각)" style="font-size:11px;background:var(--bg2);color:var(--text-dim);border:1px solid var(--border);border-radius:4px;padding:2px 4px;width:88px" onchange="bossUpdateResetTime(${i}, this.value)">`
+            : '';
+        return `<div style="display:flex;align-items:center;gap:8px;padding:8px 10px;background:var(--bg);border-radius:6px;border:1px solid var(--border);flex-wrap:wrap">
+            <span style="font-size:13px;flex:1;color:var(--text);min-width:80px">${esc(b.name)}</span>
             ${typeTag}
             ${infoEl}
+            ${resetInput}
             <label style="display:flex;align-items:center;gap:4px;font-size:11px;color:var(--text-dim);cursor:pointer">
                 <input type="checkbox" ${b.enabled ? 'checked' : ''} onchange="bossToggleEnabled(${i}, this.checked)"> 활성
             </label>
@@ -1237,7 +1245,7 @@ function bossToggleEnabled(idx, val) {
 }
 
 async function bossSaveConfig() {
-    bossConfigData.maintenanceDay = Number(document.getElementById('bossMainDay').value);
+    bossConfigData.maintenanceDate = document.getElementById('bossMainDate').value;
     bossConfigData.maintenanceTime = document.getElementById('bossMainTime').value;
     try {
         const res = await adminFetch('/api/boss/config', {
@@ -1248,6 +1256,37 @@ async function bossSaveConfig() {
         const data = await res.json();
         showToast(data.ok ? '✅ 보스 설정 저장됨' : '저장 실패: ' + data.error);
     } catch { showToast('서버 연결 실패'); }
+}
+
+async function bossApplyMaintenance() {
+    const date = document.getElementById('bossMainDate').value;
+    const defaultTime = document.getElementById('bossMainTime').value;
+    if (!date) { showToast('정기점검 날짜를 선택하세요'); return; }
+    const [y, mo, d] = date.split('-');
+    const displayDate = y + '년 ' + parseInt(mo) + '월 ' + parseInt(d) + '일';
+    const defaultDisplay = defaultTime ? ' (기본 ' + defaultTime + ')' : '';
+    if (!confirm(displayDate + ' 기준으로 모든 보스를 초기화하시겠습니까?' + defaultDisplay)) return;
+    let ok = 0, fail = 0;
+    const enabled = bossConfigData.bosses.filter(b => b.enabled);
+    for (const boss of enabled) {
+        try {
+            if (boss.type === 'trigger') {
+                const res = await adminFetch('/api/boss/cuts/' + boss.id, { method: 'DELETE' });
+                if ((await res.json()).ok) ok++; else throw new Error();
+            } else {
+                const time = boss.resetTime || defaultTime;
+                if (!time) { ok++; continue; }
+                const cutTime = new Date(date + 'T' + time + ':00').toISOString();
+                const res = await adminFetch('/api/boss/cuts/' + boss.id, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ cutTime, updatedBy: 'maintenance' })
+                });
+                if ((await res.json()).ok) ok++; else throw new Error();
+            }
+        } catch { fail++; }
+    }
+    showToast(fail ? '✅ ' + ok + '개 초기화 · ' + fail + '개 실패' : '✅ ' + ok + '개 보스 초기화 완료');
 }
 
 async function bossLogView() {

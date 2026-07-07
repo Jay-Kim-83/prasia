@@ -527,17 +527,7 @@ function bossCalcNextSpawn(boss) {
         return { nextMs: next, fromCut: true, cutTime: cut.cutTime, updatedBy: cut.updatedBy };
     }
 
-    const [hh, mm] = bossConfig.maintenanceTime.split(':').map(Number);
-    const base = new Date();
-    base.setHours(hh, mm, 0, 0);
-    const day = base.getDay();
-    const diff = (bossConfig.maintenanceDay - day + 7) % 7;
-    base.setDate(base.getDate() - (diff === 0 ? 0 : 7 - diff));
-    let baseMs = base.getTime();
-    if (baseMs > now) baseMs -= 7 * 86400000;
-    let next = baseMs;
-    while (next <= now) next += cycleMs;
-    return { nextMs: next, fromCut: false };
+    return { nextMs: null, fromCut: false };
 }
 
 function bossRenderRows() {
@@ -579,12 +569,26 @@ function formatCountdown(diffMs) {
 
 function renderCycleRow(b, result, now) {
     const { nextMs, fromCut, cutTime, updatedBy } = result;
+    if (!nextMs) {
+        return `<div class="boss-row" data-id="${b.id}">
+            <div class="boss-row-top">
+                <span class="boss-name">${esc(b.name)}</span>
+                <span class="boss-status-badge badge-waiting" style="opacity:0.5">미등록</span>
+            </div>
+            <div class="boss-countdown" style="color:var(--text-faint);font-size:16px">컷 미입력</div>
+            <div class="boss-spawn-time">다음 젠: -</div>
+            <div class="boss-cut-info">컷 시간을 입력하세요</div>
+            <div class="boss-actions">
+                <button class="btn-sm" onclick="bossCutOpen('${b.id}','${esc(b.name)}')">✂ 컷 입력</button>
+            </div>
+        </div>`;
+    }
     const diffMs = nextMs - now;
     const { badge, cls, rowExtra } = calcBadge(diffMs);
     const spawnDate = new Date(nextMs).toLocaleString('ko-KR', { month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit' });
     const cutInfo = fromCut
         ? `✂ 컷: ${new Date(cutTime).toLocaleString('ko-KR',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})} (${esc(updatedBy)})`
-        : '컷 미입력 (점검 기준)';
+        : '컷 미입력';
     return `<div class="boss-row${rowExtra}" data-id="${b.id}">
         <div class="boss-row-top">
             <span class="boss-name">${esc(b.name)}</span>

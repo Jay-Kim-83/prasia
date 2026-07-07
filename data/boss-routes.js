@@ -44,8 +44,8 @@ router.post('/config', (req, res) => {
     const { verifyAdminToken } = require('../server');
     if (!verifyAdminToken(req.headers['x-user-token'])) return res.status(403).json({ ok: false, error: '권한 없음' });
     try {
-        const { bosses, maintenanceDay, maintenanceTime } = req.body;
-        writeJson(CONFIG_FILE, { bosses, maintenanceDay: Number(maintenanceDay), maintenanceTime });
+        const { bosses, maintenanceDate, maintenanceTime } = req.body;
+        writeJson(CONFIG_FILE, { bosses, maintenanceDate: maintenanceDate || '', maintenanceTime });
         github.pushFiles(['boss-config.json']).catch(() => {});
         res.json({ ok: true });
     } catch (e) { res.status(500).json({ ok: false, error: e.message }); }
