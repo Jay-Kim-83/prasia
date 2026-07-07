@@ -7842,7 +7842,7 @@
           "nickname": "쎈쎈쎈쎈",
           "job": "집행관",
           "level": 81,
-          "conquestGrade": 18,
+          "conquestGrade": 19,
           "realm": "아민타 03"
         }
       ]
@@ -24996,17 +24996,17 @@
           "realm": "나세르 05"
         },
         {
-          "nickname": "앙탈",
-          "job": "향사수",
-          "level": 86,
-          "conquestGrade": 19,
-          "realm": "나세르 05"
-        },
-        {
           "nickname": "삼초토끼",
           "job": "집행관",
           "level": 86,
           "conquestGrade": 22,
+          "realm": "나세르 05"
+        },
+        {
+          "nickname": "앙탈",
+          "job": "향사수",
+          "level": 86,
+          "conquestGrade": 19,
           "realm": "나세르 05"
         },
         {
@@ -27992,15 +27992,15 @@
           "realm": "타리아 05"
         },
         {
-          "nickname": "이제훈",
-          "job": "향사수",
+          "nickname": "이선빈",
+          "job": "주문각인사",
           "level": 87,
           "conquestGrade": 22,
           "realm": "타리아 05"
         },
         {
-          "nickname": "이선빈",
-          "job": "주문각인사",
+          "nickname": "이제훈",
+          "job": "향사수",
           "level": 87,
           "conquestGrade": 22,
           "realm": "타리아 05"
@@ -28560,109 +28560,18 @@
         }
       ]
     },
-    "동물유치원|메르비스": {
-      "guildName": "동물유치원",
-      "world": "메르비스",
-      "memberCount": 13,
-      "members": [
-        {
-          "nickname": "디비",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "국산댕댕이",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "밤토끼",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "해달",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 22,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "미카엘",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 22,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "주각사",
-          "job": "주문각인사",
-          "level": 87,
-          "conquestGrade": 21,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "국산호랑이",
-          "job": "태양감시자",
-          "level": 86,
-          "conquestGrade": 23,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "레서판다",
-          "job": "주문각인사",
-          "level": 86,
-          "conquestGrade": 22,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "얼음불꽃",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 22,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "성운",
-          "job": "심연추방자",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "잠백이",
-          "job": "집행관",
-          "level": 85,
-          "conquestGrade": 20,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "공주",
-          "job": "집행관",
-          "level": 85,
-          "conquestGrade": 21,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "조드래곤",
-          "job": "집행관",
-          "level": 85,
-          "conquestGrade": 20,
-          "realm": "메르비스 01"
-        }
-      ]
-    },
     "바다|메르비스": {
       "guildName": "바다",
       "world": "메르비스",
-      "memberCount": 25,
+      "memberCount": 26,
       "members": [
+        {
+          "nickname": "JoyBoy",
+          "job": "태양감시자",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "메르비스 01"
+        },
         {
           "nickname": "알리타",
           "job": "향사수",
@@ -28836,6 +28745,104 @@
           "job": "주문각인사",
           "level": 84,
           "conquestGrade": 19,
+          "realm": "메르비스 01"
+        }
+      ]
+    },
+    "동물유치원|메르비스": {
+      "guildName": "동물유치원",
+      "world": "메르비스",
+      "memberCount": 13,
+      "members": [
+        {
+          "nickname": "디비",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "국산댕댕이",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "밤토끼",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 23,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "해달",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 22,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "미카엘",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 22,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "주각사",
+          "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 21,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "국산호랑이",
+          "job": "태양감시자",
+          "level": 86,
+          "conquestGrade": 23,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "레서판다",
+          "job": "주문각인사",
+          "level": 86,
+          "conquestGrade": 22,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "얼음불꽃",
+          "job": "집행관",
+          "level": 86,
+          "conquestGrade": 22,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "성운",
+          "job": "심연추방자",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "잠백이",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 20,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "공주",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 21,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "조드래곤",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 20,
           "realm": "메르비스 01"
         }
       ]
@@ -31326,5 +31333,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-07T19:50:46.345Z"
+  "updatedAt": "2026-07-07T20:00:45.088Z"
 }
