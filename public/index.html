@@ -453,7 +453,16 @@ tbody td{padding:12px 14px;vertical-align:middle;overflow:hidden}
 .boss-countdown.spawned{color:#81c784}
 .boss-spawn-time{font-size:11px;color:var(--text-faint)}
 .boss-cut-info{font-size:11px;color:var(--text-dim);margin-top:4px}
-.boss-actions{display:flex;gap:6px;margin-top:8px}
+.boss-actions{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.bb{padding:5px 12px;border-radius:6px;font-size:11.5px;cursor:pointer;font-family:inherit;transition:all .18s;font-weight:600;border:1px solid;white-space:nowrap;letter-spacing:.01em}
+.bb-cut{background:rgba(212,175,55,.1);border-color:rgba(212,175,55,.45);color:#f5d87a}
+.bb-cut:hover{background:rgba(212,175,55,.22);border-color:var(--gold)}
+.bb-undo{background:rgba(100,160,240,.08);border-color:rgba(100,160,240,.4);color:#89b4f5}
+.bb-undo:hover{background:rgba(100,160,240,.18);border-color:rgba(100,160,240,.65)}
+.bb-reset{background:rgba(239,83,80,.07);border-color:rgba(239,83,80,.38);color:#ef9a9a}
+.bb-reset:hover{background:rgba(239,83,80,.16);border-color:rgba(239,83,80,.6)}
+.bb-log{background:rgba(72,199,199,.07);border-color:rgba(72,199,199,.35);color:var(--cyan)}
+.bb-log:hover{background:rgba(72,199,199,.16)}
 .boss-cut-modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:1000;background:rgba(0,0,0,.5)}
 .boss-cut-inner{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:20px;width:280px}
 @media(max-width:400px){.boss-panel{width:100%;right:-100%}}
@@ -579,7 +588,7 @@ function renderCycleRow(b, result, now) {
             <div class="boss-spawn-time">다음 젠: -</div>
             <div class="boss-cut-info">컷 시간을 입력하세요</div>
             <div class="boss-actions">
-                ${isAdminUser ? `<button class="btn-sm" onclick="bossCutOpen('${b.id}','${esc(b.name)}')">✂ 컷 입력</button>` : ''}
+                ${isAdminUser ? `<button class="bb bb-cut" onclick="bossCutOpen('${b.id}','${esc(b.name)}')">✂ 컷 입력</button>` : ''}
             </div>
         </div>`;
     }
@@ -598,8 +607,8 @@ function renderCycleRow(b, result, now) {
         <div class="boss-spawn-time">다음 젠: ${spawnDate}</div>
         <div class="boss-cut-info">${cutInfo}</div>
         <div class="boss-actions">
-            ${isAdminUser ? `<button class="btn-sm" onclick="bossCutOpen('${b.id}','${esc(b.name)}')">✂ 컷 입력</button>` : ''}
-            ${isAdminUser && fromCut ? `<button class="btn-sm" style="color:var(--text-faint)" onclick="bossCutClear('${b.id}')">↺ 초기화</button>` : ''}
+            ${isAdminUser ? `<button class="bb bb-cut" onclick="bossCutOpen('${b.id}','${esc(b.name)}')">✂ 컷 입력</button>` : ''}
+            ${isAdminUser && fromCut ? `<button class="bb bb-reset" onclick="bossCutClear('${b.id}')">↺ 초기화</button>` : ''}
         </div>
     </div>`;
 }
@@ -632,9 +641,9 @@ function renderTriggerRow(b, result, now) {
                   <div class="boss-spawn-time">젠 예정: ${new Date(nextMs).toLocaleString('ko-KR',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})}</div>` : ''}
         <div class="boss-cut-info">${triggerLabel}<br>${progressBar}${killList ? '<br>' + killList : ''}</div>
         <div class="boss-actions">
-            ${isAdminUser && !done ? `<button class="btn-sm" onclick="bossKillAdd('${b.id}')">⚔ 처치 등록</button>` : ''}
-            ${isAdminUser && kills.length > 0 ? `<button class="btn-sm" style="color:var(--text-faint)" onclick="bossKillUndo('${b.id}')">↩ 마지막 취소</button>` : ''}
-            ${isAdminUser && done ? `<button class="btn-sm" style="color:var(--text-faint)" onclick="bossCutClear('${b.id}')">↺ 초기화</button>` : ''}
+            ${isAdminUser && !done ? `<button class="bb bb-cut" onclick="bossKillAdd('${b.id}')">⚔ 처치 등록</button>` : ''}
+            ${isAdminUser && kills.length > 0 ? `<button class="bb bb-undo" onclick="bossKillUndo('${b.id}')">↩ 마지막 취소</button>` : ''}
+            ${isAdminUser && done ? `<button class="bb bb-reset" onclick="bossCutClear('${b.id}')">↺ 초기화</button>` : ''}
         </div>
     </div>`;
 }
@@ -1022,8 +1031,8 @@ async function bossResetAll() {
     <span>🐉 보스젠 타이머</span>
     <div style="display:flex;gap:8px;align-items:center">
       <div id="bossAdminBtns" style="display:none;gap:8px;align-items:center">
-        <button class="btn-sm" onclick="bossLogTrigger()" title="보스일지 CSV 업로드로 컷 시간 자동 저장">📋 보스일지</button>
-        <button class="btn-sm" onclick="bossResetAll()" title="이번 주 전체 컷 초기화">↺ 전체 초기화</button>
+        <button class="bb bb-log" onclick="bossLogTrigger()" title="보스일지 CSV 업로드로 컷 시간 자동 저장">📋 보스일지</button>
+        <button class="bb bb-reset" onclick="bossResetAll()" title="이번 주 전체 컷 초기화">↺ 전체 초기화</button>
       </div>
       <button class="boss-panel-close" onclick="toggleBossPanel()">✕</button>
       <input type="file" id="bossLogInput" accept=".csv" style="display:none" onchange="bossLogFromFile(event)">
@@ -1056,7 +1065,7 @@ async function bossResetAll() {
     </div>
     <textarea id="bossLogPasteArea" placeholder="게임에서 복사한 보스일지를 붙여넣으세요." style="width:100%;height:220px;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px;color:var(--text);font-size:12px;resize:vertical;font-family:inherit;line-height:1.5"></textarea>
     <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
-      <button class="btn-secondary" onclick="document.getElementById('bossLogInput').click()">📁 CSV 파일</button>
+      <button class="bb bb-log" onclick="document.getElementById('bossLogInput').click()">📁 CSV 파일</button>
       <span style="font-size:11px;color:var(--text-faint)">또는 위에 붙여넣기</span>
       <div style="flex:1"></div>
       <button class="btn-secondary" onclick="document.getElementById('bossInputModal').style.display='none'">취소</button>
