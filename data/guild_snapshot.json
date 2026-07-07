@@ -931,7 +931,7 @@
         },
         {
           "nickname": "하늘색",
-          "job": "심연추방자",
+          "job": "향사수",
           "level": 91,
           "conquestGrade": 26,
           "realm": "론도 02"
@@ -1088,7 +1088,7 @@
     "헌터|론도": {
       "guildName": "헌터",
       "world": "론도",
-      "memberCount": 13,
+      "memberCount": 12,
       "members": [
         {
           "nickname": "불닭",
@@ -1173,20 +1173,13 @@
           "level": 89,
           "conquestGrade": 24,
           "realm": "론도 02"
-        },
-        {
-          "nickname": "야냐",
-          "job": "태양감시자",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "론도 02"
         }
       ]
     },
     "돈타치|론도": {
       "guildName": "돈타치",
       "world": "론도",
-      "memberCount": 14,
+      "memberCount": 15,
       "members": [
         {
           "nickname": "죄악",
@@ -1284,6 +1277,13 @@
           "job": "집행관",
           "level": 89,
           "conquestGrade": 25,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "퇴근지옥",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 23,
           "realm": "론도 02"
         }
       ]
@@ -1770,17 +1770,17 @@
           "realm": "론도 03"
         },
         {
-          "nickname": "개복치뱃살",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 22,
-          "realm": "론도 03"
-        },
-        {
           "nickname": "연어",
           "job": "집행관",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "론도 03"
+        },
+        {
+          "nickname": "개복치뱃살",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 22,
           "realm": "론도 03"
         },
         {
@@ -6623,7 +6623,7 @@
         {
           "nickname": "애송이",
           "job": "주문각인사",
-          "level": 84,
+          "level": 85,
           "conquestGrade": 20,
           "realm": "아민타 01"
         },
@@ -10247,6 +10247,13 @@
           "realm": "가리안 02"
         },
         {
+          "nickname": "선구안",
+          "job": "환영검사",
+          "level": 87,
+          "conquestGrade": 19,
+          "realm": "가리안 02"
+        },
+        {
           "nickname": "얼탱",
           "job": "주문각인사",
           "level": 87,
@@ -10258,13 +10265,6 @@
           "job": "향사수",
           "level": 87,
           "conquestGrade": 23,
-          "realm": "가리안 02"
-        },
-        {
-          "nickname": "누가바",
-          "job": "주문각인사",
-          "level": 87,
-          "conquestGrade": 20,
           "realm": "가리안 02"
         }
       ]
@@ -13369,17 +13369,17 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "오징어",
-          "job": "야만투사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "사도바 02"
-        },
-        {
           "nickname": "그늘이얌",
           "job": "환영검사",
           "level": 91,
           "conquestGrade": 26,
+          "realm": "사도바 02"
+        },
+        {
+          "nickname": "오징어",
+          "job": "야만투사",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "사도바 02"
         },
         {
@@ -17823,7 +17823,7 @@
         {
           "nickname": "검혼",
           "job": "집행관",
-          "level": 88,
+          "level": 87,
           "conquestGrade": 22,
           "realm": "제롬 04"
         },
@@ -19397,7 +19397,7 @@
         },
         {
           "nickname": "강똘끼",
-          "job": "향사수",
+          "job": "태양감시자",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아티산 01"
@@ -19705,7 +19705,7 @@
       "members": [
         {
           "nickname": "온달",
-          "job": "심연추방자",
+          "job": "집행관",
           "level": 93,
           "conquestGrade": 26,
           "realm": "아티산 02"
@@ -27643,7 +27643,7 @@
         },
         {
           "nickname": "명품데이",
-          "job": "집행관",
+          "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
           "realm": "타리아 05"
@@ -31319,5 +31319,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-07T15:20:44.989Z"
+  "updatedAt": "2026-07-07T15:30:44.568Z"
 }
