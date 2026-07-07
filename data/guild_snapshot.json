@@ -13768,17 +13768,17 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "제빵왕",
-          "job": "태양감시자",
-          "level": 86,
-          "conquestGrade": 22,
-          "realm": "사도바 02"
-        },
-        {
           "nickname": "밀크쵸코",
           "job": "심연추방자",
           "level": 86,
           "conquestGrade": 21,
+          "realm": "사도바 02"
+        },
+        {
+          "nickname": "제빵왕",
+          "job": "태양감시자",
+          "level": 86,
+          "conquestGrade": 22,
           "realm": "사도바 02"
         },
         {
@@ -15304,7 +15304,7 @@
           "nickname": "이리얼",
           "job": "태양감시자",
           "level": 84,
-          "conquestGrade": 17,
+          "conquestGrade": 19,
           "realm": "사도바 05"
         },
         {
@@ -18018,34 +18018,6 @@
         }
       ]
     },
-    "컴백홈|제롬": {
-      "guildName": "컴백홈",
-      "world": "제롬",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "젠틀맨",
-          "job": "집행관",
-          "level": 88,
-          "conquestGrade": 17,
-          "realm": "제롬 04"
-        },
-        {
-          "nickname": "명왕",
-          "job": "태양감시자",
-          "level": 85,
-          "conquestGrade": 19,
-          "realm": "제롬 04"
-        },
-        {
-          "nickname": "불스",
-          "job": "향사수",
-          "level": 84,
-          "conquestGrade": 18,
-          "realm": "제롬 04"
-        }
-      ]
-    },
     "디아블로|제롬": {
       "guildName": "디아블로",
       "world": "제롬",
@@ -18112,6 +18084,34 @@
           "job": "주문각인사",
           "level": 81,
           "conquestGrade": 19,
+          "realm": "제롬 04"
+        }
+      ]
+    },
+    "컴백홈|제롬": {
+      "guildName": "컴백홈",
+      "world": "제롬",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "젠틀맨",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 17,
+          "realm": "제롬 04"
+        },
+        {
+          "nickname": "명왕",
+          "job": "태양감시자",
+          "level": 85,
+          "conquestGrade": 19,
+          "realm": "제롬 04"
+        },
+        {
+          "nickname": "불스",
+          "job": "향사수",
+          "level": 84,
+          "conquestGrade": 18,
           "realm": "제롬 04"
         }
       ]
@@ -31340,5 +31340,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-07T20:20:45.088Z"
+  "updatedAt": "2026-07-07T20:30:45.250Z"
 }
