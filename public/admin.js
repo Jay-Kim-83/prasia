@@ -1201,7 +1201,7 @@ function renderBossList() {
             ? `<span style="font-size:11px;color:var(--text-faint);background:var(--bg2);padding:2px 8px;border-radius:4px;white-space:nowrap">${esc(b.triggerBoss||'')} ×${b.requiredKills||1} +${b.delayMinutes||5}분</span>`
             : `<select style="font-size:11px;background:var(--bg2);color:var(--text-dim);border:1px solid var(--border);border-radius:4px;padding:2px 4px;cursor:pointer" onchange="bossUpdateCycle(${i}, this.value)">${CYCLE_OPTS.map(o => `<option value="${o.v}"${b.cycleHours == o.v ? ' selected' : ''}>${o.l}</option>`).join('')}</select>`;
         const resetInput = !isTrigger
-            ? `<input type="time" value="${b.resetTime||''}" title="점검 초기화 시각 (비어있으면 기본 시각)" style="font-size:11px;background:var(--bg2);color:var(--text-dim);border:1px solid var(--border);border-radius:4px;padding:2px 4px;width:88px" onchange="bossUpdateResetTime(${i}, this.value)">`
+            ? `<input type="time" value="${b.resetTime||''}" title="점검 초기화 시각 (비어있으면 기본 시각)" style="font-size:11px;background:var(--bg2);color:var(--text-dim);border:1px solid var(--border);border-radius:4px;padding:2px 4px;width:105px" onchange="bossUpdateResetTime(${i}, this.value)">`
             : '';
         return `<div style="display:flex;align-items:center;gap:8px;padding:8px 10px;background:var(--bg);border-radius:6px;border:1px solid var(--border);flex-wrap:wrap">
             <span style="font-size:13px;flex:1;color:var(--text);min-width:80px">${esc(b.name)}</span>
