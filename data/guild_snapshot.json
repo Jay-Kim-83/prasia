@@ -982,7 +982,7 @@
           "nickname": "킹마스가",
           "job": "집행관",
           "level": 90,
-          "conquestGrade": 25,
+          "conquestGrade": 26,
           "realm": "론도 02"
         },
         {
@@ -1987,6 +1987,13 @@
           "realm": "론도 04"
         },
         {
+          "nickname": "김땡칠",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "론도 04"
+        },
+        {
           "nickname": "깡엑스",
           "job": "야만투사",
           "level": 92,
@@ -1998,13 +2005,6 @@
           "job": "환영검사",
           "level": 92,
           "conquestGrade": 26,
-          "realm": "론도 04"
-        },
-        {
-          "nickname": "김땡칠",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 25,
           "realm": "론도 04"
         },
         {
@@ -2803,7 +2803,7 @@
     "악연|론도": {
       "guildName": "악연",
       "world": "론도",
-      "memberCount": 43,
+      "memberCount": 42,
       "members": [
         {
           "nickname": "려리",
@@ -3098,20 +3098,13 @@
           "level": 87,
           "conquestGrade": 22,
           "realm": "론도 05"
-        },
-        {
-          "nickname": "나야브라더",
-          "job": "환영검사",
-          "level": 87,
-          "conquestGrade": 24,
-          "realm": "론도 05"
         }
       ]
     },
     "비키니시티|론도": {
       "guildName": "비키니시티",
       "world": "론도",
-      "memberCount": 5,
+      "memberCount": 6,
       "members": [
         {
           "nickname": "향사수",
@@ -3146,6 +3139,13 @@
           "job": "야만투사",
           "level": 88,
           "conquestGrade": 22,
+          "realm": "론도 05"
+        },
+        {
+          "nickname": "세금",
+          "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 21,
           "realm": "론도 05"
         }
       ]
@@ -3870,15 +3870,15 @@
           "realm": "라인소프 02"
         },
         {
-          "nickname": "애월",
-          "job": "주문각인사",
+          "nickname": "청룡",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "라인소프 02"
         },
         {
-          "nickname": "청룡",
-          "job": "야만투사",
+          "nickname": "애월",
+          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "라인소프 02"
@@ -10254,6 +10254,13 @@
           "realm": "가리안 02"
         },
         {
+          "nickname": "선구안",
+          "job": "환영검사",
+          "level": 87,
+          "conquestGrade": 19,
+          "realm": "가리안 02"
+        },
+        {
           "nickname": "얼탱",
           "job": "주문각인사",
           "level": 87,
@@ -10265,13 +10272,6 @@
           "job": "향사수",
           "level": 87,
           "conquestGrade": 23,
-          "realm": "가리안 02"
-        },
-        {
-          "nickname": "선구안",
-          "job": "환영검사",
-          "level": 87,
-          "conquestGrade": 19,
           "realm": "가리안 02"
         }
       ]
@@ -19326,17 +19326,17 @@
           "realm": "아티산 01"
         },
         {
-          "nickname": "강뻔짜",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 26,
-          "realm": "아티산 01"
-        },
-        {
           "nickname": "사랑에빠진딸기",
           "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "아티산 01"
+        },
+        {
+          "nickname": "강뻔짜",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 26,
           "realm": "아티산 01"
         },
         {
@@ -26911,7 +26911,7 @@
     "shadow|타리아": {
       "guildName": "shadow",
       "world": "타리아",
-      "memberCount": 42,
+      "memberCount": 41,
       "members": [
         {
           "nickname": "휴식",
@@ -27198,13 +27198,6 @@
           "job": "주문각인사",
           "level": 83,
           "conquestGrade": 18,
-          "realm": "타리아 04"
-        },
-        {
-          "nickname": "대충하자",
-          "job": "주문각인사",
-          "level": 83,
-          "conquestGrade": 19,
           "realm": "타리아 04"
         }
       ]
@@ -31291,5 +31284,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-07T02:30:48.823Z"
+  "updatedAt": "2026-07-07T02:40:49.560Z"
 }
