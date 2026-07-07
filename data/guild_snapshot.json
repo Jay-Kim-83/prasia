@@ -1088,7 +1088,7 @@
     "헌터|론도": {
       "guildName": "헌터",
       "world": "론도",
-      "memberCount": 12,
+      "memberCount": 13,
       "members": [
         {
           "nickname": "불닭",
@@ -1173,13 +1173,20 @@
           "level": 89,
           "conquestGrade": 24,
           "realm": "론도 02"
+        },
+        {
+          "nickname": "야냐",
+          "job": "태양감시자",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "론도 02"
         }
       ]
     },
     "돈타치|론도": {
       "guildName": "돈타치",
       "world": "론도",
-      "memberCount": 15,
+      "memberCount": 14,
       "members": [
         {
           "nickname": "죄악",
@@ -1277,13 +1284,6 @@
           "job": "집행관",
           "level": 89,
           "conquestGrade": 25,
-          "realm": "론도 02"
-        },
-        {
-          "nickname": "퇴근지옥",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 23,
           "realm": "론도 02"
         }
       ]
@@ -5494,17 +5494,17 @@
           "realm": "라인소프 04"
         },
         {
-          "nickname": "볼테",
-          "job": "환영검사",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "라인소프 04"
-        },
-        {
           "nickname": "멸절",
           "job": "집행관",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "라인소프 04"
+        },
+        {
+          "nickname": "볼테",
+          "job": "환영검사",
+          "level": 89,
+          "conquestGrade": 23,
           "realm": "라인소프 04"
         },
         {
@@ -10100,17 +10100,17 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "설슥",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "가리안 02"
-        },
-        {
           "nickname": "꼼이랑",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "설슥",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 24,
           "realm": "가리안 02"
         },
         {
@@ -10178,7 +10178,7 @@
         },
         {
           "nickname": "토쓰",
-          "job": "환영검사",
+          "job": "야만투사",
           "level": 88,
           "conquestGrade": 24,
           "realm": "가리안 02"
@@ -27749,7 +27749,7 @@
         {
           "nickname": "명품뻥치시네",
           "job": "주문각인사",
-          "level": 88,
+          "level": 89,
           "conquestGrade": 24,
           "realm": "타리아 05"
         },
@@ -31326,5 +31326,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-07T17:20:46.449Z"
+  "updatedAt": "2026-07-07T17:30:46.271Z"
 }
