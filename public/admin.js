@@ -1208,7 +1208,7 @@ function renderBossList() {
             ? `<input type="time" value="${b.resetTime||''}" title="점검 초기화 시각 (비어있으면 기본 시각)" style="font-size:11px;background:var(--bg2);color:var(--text-dim);border:1px solid var(--border);border-radius:4px;padding:2px 4px;width:105px" onchange="bossUpdateResetTime(${i}, this.value)">`
             : '';
         return `<div style="display:flex;align-items:center;gap:8px;padding:8px 10px;background:var(--bg);border-radius:6px;border:1px solid var(--border);flex-wrap:wrap">
-            <input type="text" value="${esc(b.name)}" style="font-size:13px;flex:1;min-width:80px;background:transparent;color:var(--text);border:none;border-bottom:1px solid transparent;outline:none;padding:2px 4px;border-radius:4px" onfocus="this.style.borderBottomColor='var(--border-glow)'" onblur="this.style.borderBottomColor='transparent'" onchange="bossUpdateName(${i}, this.value)">
+            <input type="text" value="${esc(b.name)}" style="font-size:13px;flex:1;min-width:80px;background:var(--bg2);color:var(--text);border:1px solid var(--border);border-radius:4px;outline:none;padding:3px 7px;cursor:text" onfocus="this.style.borderColor='var(--border-glow)'" onblur="this.style.borderColor='var(--border)'" oninput="bossUpdateName(${i}, this.value)">
             ${typeTag}
             ${infoEl}
             ${resetInput}
