@@ -568,7 +568,7 @@
         {
           "nickname": "똥차",
           "job": "향사수",
-          "level": 82,
+          "level": 83,
           "conquestGrade": 19,
           "realm": "론도 01"
         }
@@ -1784,17 +1784,17 @@
           "realm": "론도 03"
         },
         {
-          "nickname": "고래상어",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "론도 03"
-        },
-        {
           "nickname": "밤베타",
           "job": "야만투사",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "론도 03"
+        },
+        {
+          "nickname": "고래상어",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 23,
           "realm": "론도 03"
         }
       ]
@@ -7230,17 +7230,17 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "수호킹",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 25,
-          "realm": "아민타 02"
-        },
-        {
           "nickname": "꾸댕",
           "job": "향사수",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "아민타 02"
+        },
+        {
+          "nickname": "수호킹",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 25,
           "realm": "아민타 02"
         },
         {
@@ -15147,17 +15147,17 @@
           "realm": "사도바 05"
         },
         {
-          "nickname": "김준달",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "사도바 05"
-        },
-        {
           "nickname": "샤갈",
           "job": "향사수",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "사도바 05"
+        },
+        {
+          "nickname": "김준달",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 24,
           "realm": "사도바 05"
         },
         {
@@ -20870,7 +20870,7 @@
     "별의조각|아티산": {
       "guildName": "별의조각",
       "world": "아티산",
-      "memberCount": 9,
+      "memberCount": 10,
       "members": [
         {
           "nickname": "별수호자",
@@ -20934,13 +20934,20 @@
           "level": 81,
           "conquestGrade": 18,
           "realm": "아티산 03"
+        },
+        {
+          "nickname": "초우니태양",
+          "job": "태양감시자",
+          "level": 80,
+          "conquestGrade": 17,
+          "realm": "아티산 03"
         }
       ]
     },
     "겨울|아티산": {
       "guildName": "겨울",
       "world": "아티산",
-      "memberCount": 6,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "빠바",
@@ -20974,13 +20981,6 @@
           "nickname": "중대장",
           "job": "주문각인사",
           "level": 81,
-          "conquestGrade": 16,
-          "realm": "아티산 03"
-        },
-        {
-          "nickname": "냐옹이",
-          "job": "향사수",
-          "level": 80,
           "conquestGrade": 16,
           "realm": "아티산 03"
         }
@@ -30633,7 +30633,7 @@
         {
           "nickname": "유산슬",
           "job": "집행관",
-          "level": 84,
+          "level": 85,
           "conquestGrade": 19,
           "realm": "메르비스 04"
         },
@@ -31326,5 +31326,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-07T17:40:44.788Z"
+  "updatedAt": "2026-07-07T17:50:45.611Z"
 }
