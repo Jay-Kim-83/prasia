@@ -579,7 +579,7 @@ function renderCycleRow(b, result, now) {
             <div class="boss-spawn-time">다음 젠: -</div>
             <div class="boss-cut-info">컷 시간을 입력하세요</div>
             <div class="boss-actions">
-                <button class="btn-sm" onclick="bossCutOpen('${b.id}','${esc(b.name)}')">✂ 컷 입력</button>
+                ${isAdminUser ? `<button class="btn-sm" onclick="bossCutOpen('${b.id}','${esc(b.name)}')">✂ 컷 입력</button>` : ''}
             </div>
         </div>`;
     }
@@ -598,8 +598,8 @@ function renderCycleRow(b, result, now) {
         <div class="boss-spawn-time">다음 젠: ${spawnDate}</div>
         <div class="boss-cut-info">${cutInfo}</div>
         <div class="boss-actions">
-            <button class="btn-sm" onclick="bossCutOpen('${b.id}','${esc(b.name)}')">✂ 컷 입력</button>
-            ${fromCut ? `<button class="btn-sm" style="color:var(--text-faint)" onclick="bossCutClear('${b.id}')">↺ 초기화</button>` : ''}
+            ${isAdminUser ? `<button class="btn-sm" onclick="bossCutOpen('${b.id}','${esc(b.name)}')">✂ 컷 입력</button>` : ''}
+            ${isAdminUser && fromCut ? `<button class="btn-sm" style="color:var(--text-faint)" onclick="bossCutClear('${b.id}')">↺ 초기화</button>` : ''}
         </div>
     </div>`;
 }
@@ -632,9 +632,9 @@ function renderTriggerRow(b, result, now) {
                   <div class="boss-spawn-time">젠 예정: ${new Date(nextMs).toLocaleString('ko-KR',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})}</div>` : ''}
         <div class="boss-cut-info">${triggerLabel}<br>${progressBar}${killList ? '<br>' + killList : ''}</div>
         <div class="boss-actions">
-            ${!done ? `<button class="btn-sm" onclick="bossKillAdd('${b.id}')">⚔ 처치 등록</button>` : ''}
-            ${kills.length > 0 ? `<button class="btn-sm" style="color:var(--text-faint)" onclick="bossKillUndo('${b.id}')">↩ 마지막 취소</button>` : ''}
-            ${done ? `<button class="btn-sm" style="color:var(--text-faint)" onclick="bossCutClear('${b.id}')">↺ 초기화</button>` : ''}
+            ${isAdminUser && !done ? `<button class="btn-sm" onclick="bossKillAdd('${b.id}')">⚔ 처치 등록</button>` : ''}
+            ${isAdminUser && kills.length > 0 ? `<button class="btn-sm" style="color:var(--text-faint)" onclick="bossKillUndo('${b.id}')">↩ 마지막 취소</button>` : ''}
+            ${isAdminUser && done ? `<button class="btn-sm" style="color:var(--text-faint)" onclick="bossCutClear('${b.id}')">↺ 초기화</button>` : ''}
         </div>
     </div>`;
 }
@@ -1021,8 +1021,10 @@ async function bossResetAll() {
   <div class="boss-panel-header">
     <span>🐉 보스젠 타이머</span>
     <div style="display:flex;gap:8px;align-items:center">
-      <button class="btn-sm" onclick="bossLogTrigger()" title="보스일지 CSV 업로드로 컷 시간 자동 저장">📋 보스일지</button>
-      <button class="btn-sm" onclick="bossResetAll()" title="이번 주 전체 컷 초기화">↺ 전체 초기화</button>
+      <div id="bossAdminBtns" style="display:none;gap:8px;align-items:center">
+        <button class="btn-sm" onclick="bossLogTrigger()" title="보스일지 CSV 업로드로 컷 시간 자동 저장">📋 보스일지</button>
+        <button class="btn-sm" onclick="bossResetAll()" title="이번 주 전체 컷 초기화">↺ 전체 초기화</button>
+      </div>
       <button class="boss-panel-close" onclick="toggleBossPanel()">✕</button>
       <input type="file" id="bossLogInput" accept=".csv" style="display:none" onchange="bossLogFromFile(event)">
     </div>
@@ -1210,7 +1212,7 @@ async function checkLogin() {
     const data = await res.json();
     if (!data.requireLogin || data.loggedIn) {
       overlay.style.display = 'none';
-      if (data.isAdmin) { document.getElementById('adminLink').style.display = ''; isAdminUser = true; }
+      if (data.isAdmin) { document.getElementById('adminLink').style.display = ''; isAdminUser = true; const ab = document.getElementById('bossAdminBtns'); if (ab) ab.style.display = 'flex'; }
             document.getElementById('bossBtn').style.display = '';
             localStorage.setItem('prasia_user', data.userId || 'admin');
       // 마스터는 자동 로그아웃 제외
@@ -1246,7 +1248,7 @@ async function doUserLogin() {
         sessionStorage.setItem(USER_TOKEN_KEY, userToken);
       }
       document.getElementById('loginOverlay').style.display = 'none';
-      if (data.isAdmin) { document.getElementById('adminLink').style.display = ''; isAdminUser = true; }
+      if (data.isAdmin) { document.getElementById('adminLink').style.display = ''; isAdminUser = true; const ab = document.getElementById('bossAdminBtns'); if (ab) ab.style.display = 'flex'; }
             document.getElementById('bossBtn').style.display = '';
             localStorage.setItem('prasia_user', data.userId || 'admin');
       init();

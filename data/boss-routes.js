@@ -57,15 +57,15 @@ router.get('/cuts', (req, res) => {
 });
 
 router.post('/cuts/reset', (req, res) => {
-    const { verifyUserToken } = require('../server');
-    if (!verifyUserToken(req.headers['x-user-token'])) return res.status(403).json({ ok: false, error: '로그인 필요' });
+    const { verifyAdminToken } = require('../server');
+    if (!verifyAdminToken(req.headers['x-user-token'])) return res.status(403).json({ ok: false, error: '관리자 권한 필요' });
     try { writeJson(CUTS_FILE, {}); res.json({ ok: true }); }
     catch (e) { res.status(500).json({ ok: false, error: e.message }); }
 });
 
 router.post('/cuts/:id', (req, res) => {
-    const { verifyUserToken } = require('../server');
-    if (!verifyUserToken(req.headers['x-user-token'])) return res.status(403).json({ ok: false, error: '로그인 필요' });
+    const { verifyAdminToken } = require('../server');
+    if (!verifyAdminToken(req.headers['x-user-token'])) return res.status(403).json({ ok: false, error: '관리자 권한 필요' });
     try {
         const cuts = loadCuts();
         const { cutTime, updatedBy } = req.body;
@@ -77,8 +77,8 @@ router.post('/cuts/:id', (req, res) => {
 });
 
 router.delete('/cuts/:id', (req, res) => {
-    const { verifyUserToken } = require('../server');
-    if (!verifyUserToken(req.headers['x-user-token'])) return res.status(403).json({ ok: false, error: '로그인 필요' });
+    const { verifyAdminToken } = require('../server');
+    if (!verifyAdminToken(req.headers['x-user-token'])) return res.status(403).json({ ok: false, error: '관리자 권한 필요' });
     try {
         const cuts = loadCuts();
         delete cuts[req.params.id];
@@ -89,8 +89,8 @@ router.delete('/cuts/:id', (req, res) => {
 });
 
 router.post('/cuts/:id/kill', (req, res) => {
-    const { verifyUserToken } = require('../server');
-    if (!verifyUserToken(req.headers['x-user-token'])) return res.status(403).json({ ok: false, error: '로그인 필요' });
+    const { verifyAdminToken } = require('../server');
+    if (!verifyAdminToken(req.headers['x-user-token'])) return res.status(403).json({ ok: false, error: '관리자 권한 필요' });
     try {
         const cuts = loadCuts();
         if (!cuts[req.params.id]) cuts[req.params.id] = { kills: [] };
@@ -104,8 +104,8 @@ router.post('/cuts/:id/kill', (req, res) => {
 });
 
 router.delete('/cuts/:id/kill', (req, res) => {
-    const { verifyUserToken } = require('../server');
-    if (!verifyUserToken(req.headers['x-user-token'])) return res.status(403).json({ ok: false, error: '로그인 필요' });
+    const { verifyAdminToken } = require('../server');
+    if (!verifyAdminToken(req.headers['x-user-token'])) return res.status(403).json({ ok: false, error: '관리자 권한 필요' });
     try {
         const cuts = loadCuts();
         const entry = cuts[req.params.id];
@@ -133,8 +133,8 @@ router.get('/log', (req, res) => {
 });
 
 router.post('/log', (req, res) => {
-    const { verifyUserToken } = require('../server');
-    if (!verifyUserToken(req.headers['x-user-token'])) return res.status(403).json({ ok: false, error: '로그인 필요' });
+    const { verifyAdminToken } = require('../server');
+    if (!verifyAdminToken(req.headers['x-user-token'])) return res.status(403).json({ ok: false, error: '관리자 권한 필요' });
     try {
         const entries = req.body;
         if (!Array.isArray(entries)) return res.status(400).json({ ok: false, error: 'array required' });
