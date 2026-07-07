@@ -2071,14 +2071,14 @@
           "realm": "론도 04"
         },
         {
-          "nickname": "쥬기",
+          "nickname": "이방지",
           "job": "향사수",
           "level": 91,
           "conquestGrade": 24,
           "realm": "론도 04"
         },
         {
-          "nickname": "이방지",
+          "nickname": "쥬기",
           "job": "향사수",
           "level": 91,
           "conquestGrade": 24,
@@ -6033,15 +6033,15 @@
           "realm": "라인소프 05"
         },
         {
-          "nickname": "뿌힝",
-          "job": "환영검사",
+          "nickname": "흑설",
+          "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "라인소프 05"
         },
         {
-          "nickname": "흑설",
-          "job": "야만투사",
+          "nickname": "뿌힝",
+          "job": "환영검사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "라인소프 05"
@@ -6126,7 +6126,7 @@
         {
           "nickname": "비에이",
           "job": "주문각인사",
-          "level": 89,
+          "level": 90,
           "conquestGrade": 24,
           "realm": "라인소프 05"
         },
@@ -8427,17 +8427,17 @@
           "realm": "아민타 04"
         },
         {
-          "nickname": "감자통발",
-          "job": "야만투사",
-          "level": 79,
-          "conquestGrade": 13,
-          "realm": "아민타 04"
-        },
-        {
           "nickname": "다다다",
           "job": "심연추방자",
           "level": 79,
           "conquestGrade": 17,
+          "realm": "아민타 04"
+        },
+        {
+          "nickname": "감자통발",
+          "job": "야만투사",
+          "level": 79,
+          "conquestGrade": 13,
           "realm": "아민타 04"
         },
         {
@@ -10072,16 +10072,16 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "붕붕",
-          "job": "향사수",
+          "nickname": "소간지",
+          "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "가리안 02"
         },
         {
-          "nickname": "소간지",
-          "job": "야만투사",
-          "level": 90,
+          "nickname": "붕붕",
+          "job": "향사수",
+          "level": 91,
           "conquestGrade": 25,
           "realm": "가리안 02"
         },
@@ -14043,7 +14043,7 @@
         {
           "nickname": "소주중독자",
           "job": "집행관",
-          "level": 86,
+          "level": 87,
           "conquestGrade": 21,
           "realm": "사도바 03"
         },
@@ -15183,7 +15183,7 @@
         },
         {
           "nickname": "YONEX",
-          "job": "향사수",
+          "job": "집행관",
           "level": 89,
           "conquestGrade": 25,
           "realm": "사도바 05"
@@ -22660,7 +22660,7 @@
         {
           "nickname": "물들임",
           "job": "주문각인사",
-          "level": 85,
+          "level": 86,
           "conquestGrade": 21,
           "realm": "나세르 01"
         },
@@ -25784,7 +25784,7 @@
     "표국|타리아": {
       "guildName": "표국",
       "world": "타리아",
-      "memberCount": 5,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "쿠샨",
@@ -25811,13 +25811,6 @@
           "nickname": "니지",
           "job": "향사수",
           "level": 83,
-          "conquestGrade": 19,
-          "realm": "타리아 01"
-        },
-        {
-          "nickname": "플랫폼",
-          "job": "집행관",
-          "level": 82,
           "conquestGrade": 19,
           "realm": "타리아 01"
         }
@@ -25859,6 +25852,34 @@
         {
           "nickname": "서클마법사",
           "job": "주문각인사",
+          "level": 82,
+          "conquestGrade": 18,
+          "realm": "타리아 01"
+        }
+      ]
+    },
+    "여름|타리아": {
+      "guildName": "여름",
+      "world": "타리아",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "중국공산당만세",
+          "job": "심연추방자",
+          "level": 84,
+          "conquestGrade": 20,
+          "realm": "타리아 01"
+        },
+        {
+          "nickname": "유이",
+          "job": "주문각인사",
+          "level": 82,
+          "conquestGrade": 18,
+          "realm": "타리아 01"
+        },
+        {
+          "nickname": "MINII",
+          "job": "향사수",
           "level": 82,
           "conquestGrade": 18,
           "realm": "타리아 01"
@@ -31291,5 +31312,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-07T04:40:46.007Z"
+  "updatedAt": "2026-07-07T04:50:45.381Z"
 }
