@@ -1048,7 +1048,7 @@ async function bossResetAll() {
 <div id="bossCutModal" class="boss-cut-modal" style="display:none">
   <div class="boss-cut-inner" style="width:320px">
     <div style="font-size:13px;font-weight:600;color:var(--gold);margin-bottom:12px" id="bossCutTitle">컷 시간 입력</div>
-    <input type="datetime-local" id="bossCutInput" class="pw-input" style="width:100%;margin-bottom:14px;font-size:14px;letter-spacing:.03em;color:var(--text)">
+    <input type="datetime-local" id="bossCutInput" style="width:100%;margin-bottom:14px;font-size:14px;font-family:inherit;letter-spacing:.02em;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:8px 12px;border-radius:6px;outline:none;transition:border-color .2s">
     <div style="display:flex;gap:8px;justify-content:flex-end">
       <button class="bb bb-reset" onclick="bossCutCancel()">취소</button>
       <button class="bb bb-cut" onclick="bossCutSave()">✔ 저장</button>
