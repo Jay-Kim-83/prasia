@@ -6716,7 +6716,7 @@
     "캉사부홍사오대그릇면|아민타": {
       "guildName": "캉사부홍사오대그릇면",
       "world": "아민타",
-      "memberCount": 15,
+      "memberCount": 16,
       "members": [
         {
           "nickname": "가만히있어봐",
@@ -6820,6 +6820,13 @@
           "nickname": "윤서이",
           "job": "향사수",
           "level": 79,
+          "conquestGrade": 15,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "먼진",
+          "job": "환영검사",
+          "level": 78,
           "conquestGrade": 15,
           "realm": "아민타 01"
         }
@@ -6947,7 +6954,7 @@
     "돗단배|아민타": {
       "guildName": "돗단배",
       "world": "아민타",
-      "memberCount": 6,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "인형사",
@@ -6982,13 +6989,6 @@
           "job": "집행관",
           "level": 79,
           "conquestGrade": 16,
-          "realm": "아민타 01"
-        },
-        {
-          "nickname": "드라우",
-          "job": "야만투사",
-          "level": 78,
-          "conquestGrade": 12,
           "realm": "아민타 01"
         }
       ]
@@ -13558,14 +13558,14 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "똘마니얌",
+          "nickname": "대지",
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 22,
           "realm": "사도바 02"
         },
         {
-          "nickname": "대지",
+          "nickname": "똘마니얌",
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 22,
@@ -16575,17 +16575,17 @@
           "realm": "제롬 02"
         },
         {
-          "nickname": "살생",
-          "job": "향사수",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "제롬 02"
-        },
-        {
           "nickname": "구자룡",
           "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "제롬 02"
+        },
+        {
+          "nickname": "살생",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "제롬 02"
         },
         {
@@ -26167,7 +26167,7 @@
         {
           "nickname": "표예진",
           "job": "향사수",
-          "level": 83,
+          "level": 82,
           "conquestGrade": 20,
           "realm": "타리아 02"
         },
@@ -31382,5 +31382,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-08T16:40:44.966Z"
+  "updatedAt": "2026-07-08T16:50:43.839Z"
 }
