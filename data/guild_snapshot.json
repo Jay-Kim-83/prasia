@@ -90,17 +90,17 @@
           "realm": "론도 01"
         },
         {
-          "nickname": "짐승실장",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "론도 01"
-        },
-        {
           "nickname": "사하구",
           "job": "환영검사",
           "level": 89,
           "conquestGrade": 25,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "짐승실장",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 23,
           "realm": "론도 01"
         },
         {
@@ -12571,13 +12571,6 @@
       "memberCount": 49,
       "members": [
         {
-          "nickname": "frrrrrrrr",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "사도바 01"
-        },
-        {
           "nickname": "대방어",
           "job": "야만투사",
           "level": 92,
@@ -12593,6 +12586,13 @@
         },
         {
           "nickname": "매드해태",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "사도바 01"
+        },
+        {
+          "nickname": "frrrrrrrr",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
@@ -16360,7 +16360,7 @@
         {
           "nickname": "애슐린",
           "job": "심연추방자",
-          "level": 89,
+          "level": 88,
           "conquestGrade": 22,
           "realm": "제롬 03"
         },
@@ -18046,6 +18046,34 @@
         }
       ]
     },
+    "컴백홈|제롬": {
+      "guildName": "컴백홈",
+      "world": "제롬",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "젠틀맨",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 17,
+          "realm": "제롬 04"
+        },
+        {
+          "nickname": "명왕",
+          "job": "태양감시자",
+          "level": 85,
+          "conquestGrade": 19,
+          "realm": "제롬 04"
+        },
+        {
+          "nickname": "불스",
+          "job": "향사수",
+          "level": 84,
+          "conquestGrade": 18,
+          "realm": "제롬 04"
+        }
+      ]
+    },
     "삐까|제롬": {
       "guildName": "삐까",
       "world": "제롬",
@@ -18076,34 +18104,6 @@
           "nickname": "자몽에이드",
           "job": "집행관",
           "level": 82,
-          "conquestGrade": 18,
-          "realm": "제롬 04"
-        }
-      ]
-    },
-    "컴백홈|제롬": {
-      "guildName": "컴백홈",
-      "world": "제롬",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "젠틀맨",
-          "job": "집행관",
-          "level": 88,
-          "conquestGrade": 17,
-          "realm": "제롬 04"
-        },
-        {
-          "nickname": "명왕",
-          "job": "태양감시자",
-          "level": 85,
-          "conquestGrade": 19,
-          "realm": "제롬 04"
-        },
-        {
-          "nickname": "불스",
-          "job": "향사수",
-          "level": 84,
           "conquestGrade": 18,
           "realm": "제롬 04"
         }
@@ -24380,17 +24380,17 @@
           "realm": "나세르 04"
         },
         {
-          "nickname": "알새우칩",
-          "job": "집행관",
-          "level": 88,
-          "conquestGrade": 24,
-          "realm": "나세르 04"
-        },
-        {
           "nickname": "팔팔",
           "job": "야만투사",
           "level": 88,
           "conquestGrade": 21,
+          "realm": "나세르 04"
+        },
+        {
+          "nickname": "알새우칩",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 24,
           "realm": "나세르 04"
         },
         {
@@ -31382,5 +31382,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-09T04:00:43.752Z"
+  "updatedAt": "2026-07-09T04:10:43.382Z"
 }
