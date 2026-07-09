@@ -7272,17 +7272,17 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "아이스쿠림",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "아민타 02"
-        },
-        {
           "nickname": "슈엘",
           "job": "집행관",
           "level": 89,
           "conquestGrade": 25,
+          "realm": "아민타 02"
+        },
+        {
+          "nickname": "아이스쿠림",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 24,
           "realm": "아민타 02"
         },
         {
@@ -9750,17 +9750,17 @@
           "realm": "가리안 01"
         },
         {
-          "nickname": "은둔형외톨이",
-          "job": "집행관",
-          "level": 91,
-          "conquestGrade": 26,
-          "realm": "가리안 01"
-        },
-        {
           "nickname": "타투교주",
           "job": "집행관",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "가리안 01"
+        },
+        {
+          "nickname": "은둔형외톨이",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 26,
           "realm": "가리안 01"
         },
         {
@@ -10527,15 +10527,15 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "창세기",
-          "job": "집행관",
+          "nickname": "애옹",
+          "job": "주문각인사",
           "level": 87,
           "conquestGrade": 23,
           "realm": "가리안 02"
         },
         {
-          "nickname": "애옹",
-          "job": "주문각인사",
+          "nickname": "창세기",
+          "job": "집행관",
           "level": 87,
           "conquestGrade": 23,
           "realm": "가리안 02"
@@ -13474,14 +13474,14 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "두두",
+          "nickname": "텔미트",
           "job": "향사수",
           "level": 91,
           "conquestGrade": 24,
           "realm": "사도바 02"
         },
         {
-          "nickname": "텔미트",
+          "nickname": "두두",
           "job": "향사수",
           "level": 91,
           "conquestGrade": 24,
@@ -14673,7 +14673,7 @@
         {
           "nickname": "순자",
           "job": "주문각인사",
-          "level": 91,
+          "level": 90,
           "conquestGrade": 23,
           "realm": "사도바 04"
         },
@@ -15625,7 +15625,7 @@
         {
           "nickname": "치지직",
           "job": "야만투사",
-          "level": 84,
+          "level": 85,
           "conquestGrade": 20,
           "realm": "사도바 05"
         },
@@ -17576,17 +17576,17 @@
           "realm": "제롬 03"
         },
         {
-          "nickname": "동글이",
-          "job": "환영검사",
-          "level": 87,
-          "conquestGrade": 20,
-          "realm": "제롬 03"
-        },
-        {
           "nickname": "에피소드",
           "job": "집행관",
           "level": 87,
           "conquestGrade": 23,
+          "realm": "제롬 03"
+        },
+        {
+          "nickname": "동글이",
+          "job": "환영검사",
+          "level": 87,
+          "conquestGrade": 20,
           "realm": "제롬 03"
         },
         {
@@ -18577,15 +18577,15 @@
           "realm": "제롬 05"
         },
         {
-          "nickname": "초코하임",
-          "job": "환영검사",
+          "nickname": "몽쉘",
+          "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
           "realm": "제롬 05"
         },
         {
-          "nickname": "몽쉘",
-          "job": "주문각인사",
+          "nickname": "초코하임",
+          "job": "환영검사",
           "level": 89,
           "conquestGrade": 24,
           "realm": "제롬 05"
@@ -22165,12 +22165,19 @@
     "검은늑대|나세르": {
       "guildName": "검은늑대",
       "world": "나세르",
-      "memberCount": 13,
+      "memberCount": 14,
       "members": [
         {
           "nickname": "노덴버",
           "job": "야만투사",
           "level": 93,
+          "conquestGrade": 25,
+          "realm": "나세르 01"
+        },
+        {
+          "nickname": "레만",
+          "job": "야만투사",
+          "level": 92,
           "conquestGrade": 25,
           "realm": "나세르 01"
         },
@@ -31431,5 +31438,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-09T23:10:44.543Z"
+  "updatedAt": "2026-07-09T23:20:43.514Z"
 }
