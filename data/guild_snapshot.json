@@ -1088,7 +1088,7 @@
     "헌터|론도": {
       "guildName": "헌터",
       "world": "론도",
-      "memberCount": 13,
+      "memberCount": 12,
       "members": [
         {
           "nickname": "불닭",
@@ -1173,20 +1173,13 @@
           "level": 89,
           "conquestGrade": 24,
           "realm": "론도 02"
-        },
-        {
-          "nickname": "야냐",
-          "job": "태양감시자",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "론도 02"
         }
       ]
     },
     "돈타치|론도": {
       "guildName": "돈타치",
       "world": "론도",
-      "memberCount": 14,
+      "memberCount": 15,
       "members": [
         {
           "nickname": "죄악",
@@ -1284,6 +1277,13 @@
           "job": "향사수",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "퇴근지옥",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 23,
           "realm": "론도 02"
         }
       ]
@@ -3382,7 +3382,7 @@
         {
           "nickname": "캡틴",
           "job": "주문각인사",
-          "level": 90,
+          "level": 91,
           "conquestGrade": 24,
           "realm": "라인소프 01"
         },
@@ -13532,7 +13532,7 @@
         {
           "nickname": "북극여우",
           "job": "향사수",
-          "level": 88,
+          "level": 89,
           "conquestGrade": 23,
           "realm": "사도바 02"
         },
@@ -22595,15 +22595,15 @@
           "realm": "나세르 01"
         },
         {
-          "nickname": "청룡",
-          "job": "집행관",
+          "nickname": "검은윌크",
+          "job": "향사수",
           "level": 86,
           "conquestGrade": 21,
           "realm": "나세르 01"
         },
         {
-          "nickname": "검은윌크",
-          "job": "향사수",
+          "nickname": "청룡",
+          "job": "집행관",
           "level": 86,
           "conquestGrade": 21,
           "realm": "나세르 01"
@@ -26074,17 +26074,17 @@
           "realm": "타리아 02"
         },
         {
-          "nickname": "디그다디그다닥트닥트",
-          "job": "주문각인사",
-          "level": 87,
-          "conquestGrade": 23,
-          "realm": "타리아 02"
-        },
-        {
           "nickname": "무사마씨",
           "job": "향사수",
           "level": 87,
           "conquestGrade": 21,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "디그다디그다닥트닥트",
+          "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 23,
           "realm": "타리아 02"
         },
         {
@@ -30543,7 +30543,7 @@
           "nickname": "생각없이",
           "job": "집행관",
           "level": 85,
-          "conquestGrade": 20,
+          "conquestGrade": 21,
           "realm": "메르비스 04"
         },
         {
@@ -31389,5 +31389,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-09T11:50:44.155Z"
+  "updatedAt": "2026-07-09T12:00:43.824Z"
 }
