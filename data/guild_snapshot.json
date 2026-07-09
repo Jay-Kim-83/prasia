@@ -6979,41 +6979,6 @@
         }
       ]
     },
-    "영광|아민타": {
-      "guildName": "영광",
-      "world": "아민타",
-      "memberCount": 4,
-      "members": [
-        {
-          "nickname": "유틸리티",
-          "job": "주문각인사",
-          "level": 83,
-          "conquestGrade": 18,
-          "realm": "아민타 01"
-        },
-        {
-          "nickname": "NISI",
-          "job": "향사수",
-          "level": 79,
-          "conquestGrade": 15,
-          "realm": "아민타 01"
-        },
-        {
-          "nickname": "ToL",
-          "job": "집행관",
-          "level": 79,
-          "conquestGrade": 15,
-          "realm": "아민타 01"
-        },
-        {
-          "nickname": "블리츠",
-          "job": "환영검사",
-          "level": 78,
-          "conquestGrade": 15,
-          "realm": "아민타 01"
-        }
-      ]
-    },
     "돗단배|아민타": {
       "guildName": "돗단배",
       "world": "아민타",
@@ -7052,6 +7017,41 @@
           "job": "집행관",
           "level": 79,
           "conquestGrade": 16,
+          "realm": "아민타 01"
+        }
+      ]
+    },
+    "영광|아민타": {
+      "guildName": "영광",
+      "world": "아민타",
+      "memberCount": 4,
+      "members": [
+        {
+          "nickname": "유틸리티",
+          "job": "주문각인사",
+          "level": 83,
+          "conquestGrade": 18,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "NISI",
+          "job": "향사수",
+          "level": 79,
+          "conquestGrade": 15,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "ToL",
+          "job": "집행관",
+          "level": 79,
+          "conquestGrade": 15,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "블리츠",
+          "job": "환영검사",
+          "level": 78,
+          "conquestGrade": 15,
           "realm": "아민타 01"
         }
       ]
@@ -15854,6 +15854,13 @@
           "realm": "제롬 01"
         },
         {
+          "nickname": "마부스",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "제롬 01"
+        },
+        {
           "nickname": "거악",
           "job": "주문각인사",
           "level": 91,
@@ -15865,13 +15872,6 @@
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
-          "realm": "제롬 01"
-        },
-        {
-          "nickname": "마부스",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 25,
           "realm": "제롬 01"
         },
         {
@@ -21335,17 +21335,17 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "외교",
-          "job": "환영검사",
-          "level": 87,
-          "conquestGrade": 22,
-          "realm": "아티산 04"
-        },
-        {
           "nickname": "파르룸",
           "job": "야만투사",
           "level": 87,
           "conquestGrade": 18,
+          "realm": "아티산 04"
+        },
+        {
+          "nickname": "외교",
+          "job": "환영검사",
+          "level": 87,
+          "conquestGrade": 22,
           "realm": "아티산 04"
         },
         {
@@ -31417,5 +31417,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-09T21:10:44.094Z"
+  "updatedAt": "2026-07-09T21:20:43.878Z"
 }
