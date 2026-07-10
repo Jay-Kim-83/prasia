@@ -1088,7 +1088,7 @@
     "헌터|론도": {
       "guildName": "헌터",
       "world": "론도",
-      "memberCount": 13,
+      "memberCount": 12,
       "members": [
         {
           "nickname": "불닭",
@@ -1173,20 +1173,13 @@
           "level": 89,
           "conquestGrade": 24,
           "realm": "론도 02"
-        },
-        {
-          "nickname": "야냐",
-          "job": "태양감시자",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "론도 02"
         }
       ]
     },
     "돈타치|론도": {
       "guildName": "돈타치",
       "world": "론도",
-      "memberCount": 14,
+      "memberCount": 15,
       "members": [
         {
           "nickname": "죄악",
@@ -1284,6 +1277,13 @@
           "job": "향사수",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "퇴근지옥",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 23,
           "realm": "론도 02"
         }
       ]
@@ -17569,13 +17569,6 @@
           "realm": "제롬 03"
         },
         {
-          "nickname": "달토끼",
-          "job": "향사수",
-          "level": 87,
-          "conquestGrade": 21,
-          "realm": "제롬 03"
-        },
-        {
           "nickname": "에피소드",
           "job": "집행관",
           "level": 87,
@@ -17585,6 +17578,13 @@
         {
           "nickname": "연어",
           "job": "집행관",
+          "level": 87,
+          "conquestGrade": 21,
+          "realm": "제롬 03"
+        },
+        {
+          "nickname": "달토끼",
+          "job": "향사수",
           "level": 87,
           "conquestGrade": 21,
           "realm": "제롬 03"
@@ -19998,6 +19998,13 @@
           "realm": "아티산 02"
         },
         {
+          "nickname": "구윙",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "아티산 02"
+        },
+        {
           "nickname": "곰순이",
           "job": "집행관",
           "level": 90,
@@ -20009,13 +20016,6 @@
           "job": "집행관",
           "level": 90,
           "conquestGrade": 22,
-          "realm": "아티산 02"
-        },
-        {
-          "nickname": "구윙",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 25,
           "realm": "아티산 02"
         },
         {
@@ -20210,7 +20210,7 @@
         {
           "nickname": "괴물",
           "job": "주문각인사",
-          "level": 86,
+          "level": 87,
           "conquestGrade": 21,
           "realm": "아티산 02"
         },
@@ -21300,17 +21300,17 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "혈포",
-          "job": "집행관",
-          "level": 88,
-          "conquestGrade": 24,
-          "realm": "아티산 04"
-        },
-        {
           "nickname": "투쟁",
           "job": "집행관",
           "level": 88,
           "conquestGrade": 22,
+          "realm": "아티산 04"
+        },
+        {
+          "nickname": "혈포",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 24,
           "realm": "아티산 04"
         },
         {
@@ -28489,15 +28489,15 @@
           "realm": "메르비스 01"
         },
         {
-          "nickname": "덕배",
-          "job": "태양감시자",
+          "nickname": "야신",
+          "job": "주문각인사",
           "level": 90,
           "conquestGrade": 26,
           "realm": "메르비스 01"
         },
         {
-          "nickname": "야신",
-          "job": "주문각인사",
+          "nickname": "덕배",
+          "job": "태양감시자",
           "level": 90,
           "conquestGrade": 26,
           "realm": "메르비스 01"
@@ -30309,17 +30309,17 @@
           "realm": "메르비스 04"
         },
         {
-          "nickname": "이브",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "메르비스 04"
-        },
-        {
           "nickname": "리자몽",
           "job": "집행관",
           "level": 89,
           "conquestGrade": 25,
+          "realm": "메르비스 04"
+        },
+        {
+          "nickname": "이브",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 23,
           "realm": "메르비스 04"
         },
         {
@@ -31438,5 +31438,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-10T18:30:45.202Z"
+  "updatedAt": "2026-07-10T18:40:44.105Z"
 }
