@@ -12522,17 +12522,17 @@
           "realm": "가리안 05"
         },
         {
-          "nickname": "플라시보",
-          "job": "환영검사",
-          "level": 84,
-          "conquestGrade": 18,
-          "realm": "가리안 05"
-        },
-        {
           "nickname": "택이네새우맛집",
           "job": "태양감시자",
           "level": 84,
           "conquestGrade": 21,
+          "realm": "가리안 05"
+        },
+        {
+          "nickname": "플라시보",
+          "job": "환영검사",
+          "level": 84,
+          "conquestGrade": 18,
           "realm": "가리안 05"
         },
         {
@@ -15919,7 +15919,7 @@
         {
           "nickname": "괴물쥐랄랄랄랄랄랄랄",
           "job": "주문각인사",
-          "level": 89,
+          "level": 90,
           "conquestGrade": 23,
           "realm": "제롬 01"
         },
@@ -20254,7 +20254,7 @@
     "킹덤|아티산": {
       "guildName": "킹덤",
       "world": "아티산",
-      "memberCount": 15,
+      "memberCount": 14,
       "members": [
         {
           "nickname": "또르르",
@@ -20353,20 +20353,13 @@
           "level": 86,
           "conquestGrade": 22,
           "realm": "아티산 02"
-        },
-        {
-          "nickname": "길냥패스",
-          "job": "집행관",
-          "level": 85,
-          "conquestGrade": 21,
-          "realm": "아티산 02"
         }
       ]
     },
     "지능|아티산": {
       "guildName": "지능",
       "world": "아티산",
-      "memberCount": 15,
+      "memberCount": 16,
       "members": [
         {
           "nickname": "카에데카렌",
@@ -20470,6 +20463,13 @@
           "nickname": "푸름푸름",
           "job": "태양감시자",
           "level": 86,
+          "conquestGrade": 21,
+          "realm": "아티산 02"
+        },
+        {
+          "nickname": "키안",
+          "job": "태양감시자",
+          "level": 85,
           "conquestGrade": 21,
           "realm": "아티산 02"
         }
@@ -24331,17 +24331,17 @@
           "realm": "나세르 04"
         },
         {
-          "nickname": "냥냥펀치",
-          "job": "집행관",
-          "level": 84,
-          "conquestGrade": 20,
-          "realm": "나세르 04"
-        },
-        {
           "nickname": "흰수염",
           "job": "집행관",
           "level": 84,
           "conquestGrade": 19,
+          "realm": "나세르 04"
+        },
+        {
+          "nickname": "냥냥펀치",
+          "job": "집행관",
+          "level": 84,
+          "conquestGrade": 20,
           "realm": "나세르 04"
         },
         {
@@ -31438,5 +31438,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-10T18:10:43.854Z"
+  "updatedAt": "2026-07-10T18:20:44.327Z"
 }
