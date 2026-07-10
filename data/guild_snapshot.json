@@ -4325,13 +4325,6 @@
           "realm": "라인소프 02"
         },
         {
-          "nickname": "슈란",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "라인소프 02"
-        },
-        {
           "nickname": "독자",
           "job": "심연추방자",
           "level": 90,
@@ -4339,15 +4332,22 @@
           "realm": "라인소프 02"
         },
         {
-          "nickname": "대석궁",
-          "job": "향사수",
-          "level": 89,
+          "nickname": "슈란",
+          "job": "집행관",
+          "level": 90,
           "conquestGrade": 24,
           "realm": "라인소프 02"
         },
         {
           "nickname": "그램",
           "job": "집행관",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "라인소프 02"
+        },
+        {
+          "nickname": "대석궁",
+          "job": "향사수",
           "level": 89,
           "conquestGrade": 24,
           "realm": "라인소프 02"
@@ -9491,17 +9491,17 @@
           "realm": "가리안 01"
         },
         {
-          "nickname": "쫄탱이",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 24,
-          "realm": "가리안 01"
-        },
-        {
           "nickname": "정탄",
           "job": "환영검사",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "가리안 01"
+        },
+        {
+          "nickname": "쫄탱이",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 24,
           "realm": "가리안 01"
         },
         {
@@ -10198,15 +10198,15 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "산림",
-          "job": "야만투사",
+          "nickname": "임상",
+          "job": "향사수",
           "level": 89,
           "conquestGrade": 24,
           "realm": "가리안 02"
         },
         {
-          "nickname": "임상",
-          "job": "향사수",
+          "nickname": "산림",
+          "job": "야만투사",
           "level": 89,
           "conquestGrade": 24,
           "realm": "가리안 02"
@@ -10303,13 +10303,6 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "선구안",
-          "job": "환영검사",
-          "level": 87,
-          "conquestGrade": 19,
-          "realm": "가리안 02"
-        },
-        {
           "nickname": "얼탱",
           "job": "주문각인사",
           "level": 87,
@@ -10321,6 +10314,13 @@
           "job": "향사수",
           "level": 87,
           "conquestGrade": 23,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "선구안",
+          "job": "환영검사",
+          "level": 87,
+          "conquestGrade": 19,
           "realm": "가리안 02"
         }
       ]
@@ -22497,15 +22497,15 @@
           "realm": "나세르 01"
         },
         {
-          "nickname": "제드",
-          "job": "환영검사",
+          "nickname": "지로",
+          "job": "주문각인사",
           "level": 88,
           "conquestGrade": 23,
           "realm": "나세르 01"
         },
         {
-          "nickname": "지로",
-          "job": "주문각인사",
+          "nickname": "제드",
+          "job": "환영검사",
           "level": 88,
           "conquestGrade": 23,
           "realm": "나세르 01"
@@ -22910,17 +22910,17 @@
           "realm": "나세르 02"
         },
         {
-          "nickname": "씸꽁",
-          "job": "집행관",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "나세르 02"
-        },
-        {
           "nickname": "더위야가라",
           "job": "향사수",
           "level": 91,
           "conquestGrade": 26,
+          "realm": "나세르 02"
+        },
+        {
+          "nickname": "씸꽁",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "나세르 02"
         },
         {
@@ -23087,7 +23087,7 @@
         {
           "nickname": "링쿠",
           "job": "향사수",
-          "level": 87,
+          "level": 88,
           "conquestGrade": 21,
           "realm": "나세르 02"
         },
@@ -24912,15 +24912,15 @@
           "realm": "나세르 05"
         },
         {
-          "nickname": "초코토끼",
-          "job": "주문각인사",
+          "nickname": "저격토끼",
+          "job": "향사수",
           "level": 89,
           "conquestGrade": 24,
           "realm": "나세르 05"
         },
         {
-          "nickname": "저격토끼",
-          "job": "향사수",
+          "nickname": "초코토끼",
+          "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
           "realm": "나세르 05"
@@ -31445,5 +31445,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-10T10:40:44.953Z"
+  "updatedAt": "2026-07-10T10:50:45.354Z"
 }
