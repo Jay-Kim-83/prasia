@@ -577,7 +577,7 @@
     "노타치|론도": {
       "guildName": "노타치",
       "world": "론도",
-      "memberCount": 36,
+      "memberCount": 37,
       "members": [
         {
           "nickname": "굴맛사탕",
@@ -820,6 +820,13 @@
         {
           "nickname": "리카누나",
           "job": "향사수",
+          "level": 89,
+          "conquestGrade": 23,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "잭팟옹",
+          "job": "주문각인사",
           "level": 89,
           "conquestGrade": 23,
           "realm": "론도 02"
@@ -1179,7 +1186,7 @@
     "돈타치|론도": {
       "guildName": "돈타치",
       "world": "론도",
-      "memberCount": 15,
+      "memberCount": 14,
       "members": [
         {
           "nickname": "죄악",
@@ -1277,13 +1284,6 @@
           "job": "향사수",
           "level": 89,
           "conquestGrade": 24,
-          "realm": "론도 02"
-        },
-        {
-          "nickname": "퇴근지옥",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 23,
           "realm": "론도 02"
         }
       ]
@@ -10114,15 +10114,15 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "소간지",
-          "job": "야만투사",
+          "nickname": "붕붕",
+          "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
           "realm": "가리안 02"
         },
         {
-          "nickname": "붕붕",
-          "job": "향사수",
+          "nickname": "소간지",
+          "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "가리안 02"
@@ -10515,7 +10515,7 @@
         {
           "nickname": "창세기",
           "job": "집행관",
-          "level": 88,
+          "level": 87,
           "conquestGrade": 23,
           "realm": "가리안 02"
         },
@@ -14979,17 +14979,17 @@
           "realm": "사도바 04"
         },
         {
-          "nickname": "쵸우",
-          "job": "태양감시자",
-          "level": 84,
-          "conquestGrade": 19,
-          "realm": "사도바 04"
-        },
-        {
           "nickname": "신화",
           "job": "집행관",
           "level": 84,
           "conquestGrade": 21,
+          "realm": "사도바 04"
+        },
+        {
+          "nickname": "쵸우",
+          "job": "태양감시자",
+          "level": 84,
+          "conquestGrade": 19,
           "realm": "사도바 04"
         },
         {
@@ -20665,7 +20665,7 @@
         {
           "nickname": "디오르",
           "job": "집행관",
-          "level": 86,
+          "level": 87,
           "conquestGrade": 21,
           "realm": "아티산 03"
         },
@@ -22434,13 +22434,6 @@
           "realm": "나세르 01"
         },
         {
-          "nickname": "뚱땡이",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "나세르 01"
-        },
-        {
           "nickname": "한백",
           "job": "향사수",
           "level": 89,
@@ -22452,6 +22445,13 @@
           "job": "집행관",
           "level": 89,
           "conquestGrade": 23,
+          "realm": "나세르 01"
+        },
+        {
+          "nickname": "뚱땡이",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 24,
           "realm": "나세르 01"
         },
         {
@@ -26070,7 +26070,7 @@
           "nickname": "다이소",
           "job": "집행관",
           "level": 88,
-          "conquestGrade": 23,
+          "conquestGrade": 24,
           "realm": "타리아 02"
         },
         {
@@ -26249,17 +26249,17 @@
           "realm": "타리아 02"
         },
         {
-          "nickname": "드루왕",
-          "job": "심연추방자",
-          "level": 82,
-          "conquestGrade": 18,
-          "realm": "타리아 02"
-        },
-        {
           "nickname": "마이카",
           "job": "집행관",
           "level": 82,
           "conquestGrade": 19,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "드루왕",
+          "job": "심연추방자",
+          "level": 82,
+          "conquestGrade": 18,
           "realm": "타리아 02"
         },
         {
@@ -26748,7 +26748,7 @@
         {
           "nickname": "부여백제",
           "job": "집행관",
-          "level": 85,
+          "level": 86,
           "conquestGrade": 20,
           "realm": "타리아 03"
         },
@@ -31438,5 +31438,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-10T07:40:46.175Z"
+  "updatedAt": "2026-07-10T07:50:44.044Z"
 }
