@@ -1088,7 +1088,7 @@
     "헌터|론도": {
       "guildName": "헌터",
       "world": "론도",
-      "memberCount": 12,
+      "memberCount": 13,
       "members": [
         {
           "nickname": "불닭",
@@ -1173,13 +1173,20 @@
           "level": 89,
           "conquestGrade": 24,
           "realm": "론도 02"
+        },
+        {
+          "nickname": "야냐",
+          "job": "태양감시자",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "론도 02"
         }
       ]
     },
     "돈타치|론도": {
       "guildName": "돈타치",
       "world": "론도",
-      "memberCount": 15,
+      "memberCount": 14,
       "members": [
         {
           "nickname": "죄악",
@@ -1277,13 +1284,6 @@
           "job": "향사수",
           "level": 89,
           "conquestGrade": 24,
-          "realm": "론도 02"
-        },
-        {
-          "nickname": "퇴근지옥",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 23,
           "realm": "론도 02"
         }
       ]
@@ -1695,7 +1695,7 @@
         {
           "nickname": "나는연어",
           "job": "집행관",
-          "level": 90,
+          "level": 91,
           "conquestGrade": 25,
           "realm": "론도 03"
         },
@@ -3380,17 +3380,17 @@
           "realm": "라인소프 01"
         },
         {
-          "nickname": "까페",
-          "job": "심연추방자",
-          "level": 91,
-          "conquestGrade": 26,
-          "realm": "라인소프 01"
-        },
-        {
           "nickname": "캡틴",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 24,
+          "realm": "라인소프 01"
+        },
+        {
+          "nickname": "까페",
+          "job": "심연추방자",
+          "level": 91,
+          "conquestGrade": 26,
           "realm": "라인소프 01"
         },
         {
@@ -7818,17 +7818,17 @@
           "realm": "아민타 03"
         },
         {
-          "nickname": "쎈종훈",
-          "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 21,
-          "realm": "아민타 03"
-        },
-        {
           "nickname": "쎈해바라기짝꿍",
           "job": "환영검사",
           "level": 88,
           "conquestGrade": 23,
+          "realm": "아민타 03"
+        },
+        {
+          "nickname": "쎈종훈",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 21,
           "realm": "아민타 03"
         },
         {
@@ -26937,7 +26937,7 @@
         {
           "nickname": "행복달",
           "job": "집행관",
-          "level": 84,
+          "level": 85,
           "conquestGrade": 20,
           "realm": "타리아 03"
         },
@@ -31445,5 +31445,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-10T10:10:44.278Z"
+  "updatedAt": "2026-07-10T10:20:44.458Z"
 }
