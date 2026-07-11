@@ -1088,7 +1088,7 @@
     "헌터|론도": {
       "guildName": "헌터",
       "world": "론도",
-      "memberCount": 12,
+      "memberCount": 13,
       "members": [
         {
           "nickname": "불닭",
@@ -1173,13 +1173,20 @@
           "level": 89,
           "conquestGrade": 23,
           "realm": "론도 02"
+        },
+        {
+          "nickname": "야냐",
+          "job": "태양감시자",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "론도 02"
         }
       ]
     },
     "돈타치|론도": {
       "guildName": "돈타치",
       "world": "론도",
-      "memberCount": 15,
+      "memberCount": 14,
       "members": [
         {
           "nickname": "죄악",
@@ -1277,13 +1284,6 @@
           "job": "향사수",
           "level": 89,
           "conquestGrade": 24,
-          "realm": "론도 02"
-        },
-        {
-          "nickname": "퇴근지옥",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 23,
           "realm": "론도 02"
         }
       ]
@@ -7279,17 +7279,17 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "꾸댕",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "아민타 02"
-        },
-        {
           "nickname": "수호킹",
           "job": "집행관",
           "level": 89,
           "conquestGrade": 25,
+          "realm": "아민타 02"
+        },
+        {
+          "nickname": "꾸댕",
+          "job": "향사수",
+          "level": 89,
+          "conquestGrade": 24,
           "realm": "아민타 02"
         },
         {
@@ -13434,7 +13434,7 @@
         {
           "nickname": "낭아",
           "job": "주문각인사",
-          "level": 92,
+          "level": 91,
           "conquestGrade": 26,
           "realm": "사도바 02"
         },
@@ -21307,17 +21307,17 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "혈포",
-          "job": "집행관",
-          "level": 88,
-          "conquestGrade": 24,
-          "realm": "아티산 04"
-        },
-        {
           "nickname": "늦봄",
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 21,
+          "realm": "아티산 04"
+        },
+        {
+          "nickname": "혈포",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 24,
           "realm": "아티산 04"
         },
         {
@@ -22420,16 +22420,16 @@
           "realm": "나세르 01"
         },
         {
-          "nickname": "제드",
-          "job": "환영검사",
+          "nickname": "지로",
+          "job": "주문각인사",
           "level": 88,
           "conquestGrade": 23,
           "realm": "나세르 01"
         },
         {
-          "nickname": "지로",
-          "job": "주문각인사",
-          "level": 87,
+          "nickname": "제드",
+          "job": "환영검사",
+          "level": 88,
           "conquestGrade": 23,
           "realm": "나세르 01"
         },
@@ -23631,13 +23631,6 @@
           "realm": "나세르 03"
         },
         {
-          "nickname": "후추를후추추",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 23,
-          "realm": "나세르 03"
-        },
-        {
           "nickname": "부탄가스",
           "job": "집행관",
           "level": 87,
@@ -23647,6 +23640,13 @@
         {
           "nickname": "슈란",
           "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 23,
+          "realm": "나세르 03"
+        },
+        {
+          "nickname": "후추를후추추",
+          "job": "집행관",
           "level": 87,
           "conquestGrade": 23,
           "realm": "나세르 03"
@@ -30309,17 +30309,17 @@
           "realm": "메르비스 04"
         },
         {
-          "nickname": "이브",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "메르비스 04"
-        },
-        {
           "nickname": "투슬리스",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "메르비스 04"
+        },
+        {
+          "nickname": "이브",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 23,
           "realm": "메르비스 04"
         },
         {
@@ -31438,5 +31438,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-11T06:50:44.149Z"
+  "updatedAt": "2026-07-11T07:00:44.062Z"
 }
