@@ -2304,7 +2304,7 @@
         {
           "nickname": "절망",
           "job": "집행관",
-          "level": 86,
+          "level": 87,
           "conquestGrade": 21,
           "realm": "론도 04"
         },
@@ -9477,15 +9477,15 @@
           "realm": "가리안 01"
         },
         {
-          "nickname": "무쇠몬",
-          "job": "집행관",
+          "nickname": "수호몬",
+          "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
           "realm": "가리안 01"
         },
         {
-          "nickname": "수호몬",
-          "job": "향사수",
+          "nickname": "무쇠몬",
+          "job": "집행관",
           "level": 91,
           "conquestGrade": 25,
           "realm": "가리안 01"
@@ -17576,6 +17576,13 @@
           "realm": "제롬 03"
         },
         {
+          "nickname": "달토끼",
+          "job": "향사수",
+          "level": 87,
+          "conquestGrade": 21,
+          "realm": "제롬 03"
+        },
+        {
           "nickname": "에피소드",
           "job": "집행관",
           "level": 87,
@@ -17594,13 +17601,6 @@
           "job": "환영검사",
           "level": 87,
           "conquestGrade": 20,
-          "realm": "제롬 03"
-        },
-        {
-          "nickname": "달토끼",
-          "job": "향사수",
-          "level": 87,
-          "conquestGrade": 21,
           "realm": "제롬 03"
         },
         {
@@ -20933,7 +20933,7 @@
     "별의조각|아티산": {
       "guildName": "별의조각",
       "world": "아티산",
-      "memberCount": 10,
+      "memberCount": 9,
       "members": [
         {
           "nickname": "별수호자",
@@ -20996,13 +20996,6 @@
           "job": "주문각인사",
           "level": 81,
           "conquestGrade": 18,
-          "realm": "아티산 03"
-        },
-        {
-          "nickname": "초우니태양",
-          "job": "태양감시자",
-          "level": 81,
-          "conquestGrade": 17,
           "realm": "아티산 03"
         }
       ]
@@ -21146,15 +21139,15 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "제리봄",
-          "job": "야만투사",
+          "nickname": "설원",
+          "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아티산 04"
         },
         {
-          "nickname": "설원",
-          "job": "집행관",
+          "nickname": "제리봄",
+          "job": "야만투사",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아티산 04"
@@ -31410,5 +31403,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-11T20:10:42.948Z"
+  "updatedAt": "2026-07-11T20:20:44.664Z"
 }
