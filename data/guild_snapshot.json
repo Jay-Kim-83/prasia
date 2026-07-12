@@ -5890,8 +5890,15 @@
     "제우스|라인소프": {
       "guildName": "제우스",
       "world": "라인소프",
-      "memberCount": 3,
+      "memberCount": 4,
       "members": [
+        {
+          "nickname": "꼬락내",
+          "job": "집행관",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "라인소프 04"
+        },
         {
           "nickname": "햄이",
           "job": "향사수",
@@ -28083,6 +28090,13 @@
           "realm": "타리아 05"
         },
         {
+          "nickname": "이제훈",
+          "job": "향사수",
+          "level": 87,
+          "conquestGrade": 22,
+          "realm": "타리아 05"
+        },
+        {
           "nickname": "이선빈",
           "job": "주문각인사",
           "level": 87,
@@ -28094,13 +28108,6 @@
           "job": "향사수",
           "level": 87,
           "conquestGrade": 23,
-          "realm": "타리아 05"
-        },
-        {
-          "nickname": "이제훈",
-          "job": "향사수",
-          "level": 87,
-          "conquestGrade": 22,
           "realm": "타리아 05"
         },
         {
@@ -28318,7 +28325,7 @@
     "TOP|메르비스": {
       "guildName": "TOP",
       "world": "메르비스",
-      "memberCount": 49,
+      "memberCount": 50,
       "members": [
         {
           "nickname": "해태",
@@ -28458,6 +28465,13 @@
           "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "당총무",
+          "job": "야만투사",
+          "level": 91,
+          "conquestGrade": 26,
           "realm": "메르비스 01"
         },
         {
@@ -29371,17 +29385,17 @@
           "realm": "메르비스 02"
         },
         {
-          "nickname": "김태리",
-          "job": "주문각인사",
-          "level": 81,
-          "conquestGrade": 16,
-          "realm": "메르비스 02"
-        },
-        {
           "nickname": "코코댁",
           "job": "환영검사",
           "level": 81,
           "conquestGrade": 19,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "김태리",
+          "job": "주문각인사",
+          "level": 81,
+          "conquestGrade": 16,
           "realm": "메르비스 02"
         },
         {
@@ -31424,5 +31438,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-12T14:20:44.512Z"
+  "updatedAt": "2026-07-12T14:30:44.341Z"
 }
