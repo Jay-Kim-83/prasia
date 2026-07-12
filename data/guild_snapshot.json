@@ -5041,7 +5041,7 @@
         {
           "nickname": "비벼",
           "job": "집행관",
-          "level": 89,
+          "level": 88,
           "conquestGrade": 24,
           "realm": "라인소프 03"
         },
@@ -9354,7 +9354,7 @@
           "nickname": "탱준이",
           "job": "야만투사",
           "level": 93,
-          "conquestGrade": 25,
+          "conquestGrade": 26,
           "realm": "가리안 01"
         },
         {
@@ -10926,15 +10926,15 @@
           "realm": "가리안 03"
         },
         {
-          "nickname": "깜둥야호",
-          "job": "야만투사",
+          "nickname": "짭이",
+          "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "가리안 03"
         },
         {
-          "nickname": "짭이",
-          "job": "주문각인사",
+          "nickname": "깜둥야호",
+          "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "가리안 03"
@@ -13425,15 +13425,15 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "팍팍이얌",
-          "job": "향사수",
+          "nickname": "낭아",
+          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "사도바 02"
         },
         {
-          "nickname": "낭아",
-          "job": "주문각인사",
+          "nickname": "팍팍이얌",
+          "job": "향사수",
           "level": 92,
           "conquestGrade": 26,
           "realm": "사도바 02"
@@ -15539,15 +15539,15 @@
           "realm": "사도바 05"
         },
         {
-          "nickname": "팔레트",
-          "job": "주문각인사",
+          "nickname": "굴니르",
+          "job": "향사수",
           "level": 88,
           "conquestGrade": 22,
           "realm": "사도바 05"
         },
         {
-          "nickname": "굴니르",
-          "job": "향사수",
+          "nickname": "팔레트",
+          "job": "주문각인사",
           "level": 88,
           "conquestGrade": 22,
           "realm": "사도바 05"
@@ -17766,6 +17766,34 @@
         }
       ]
     },
+    "결사투|제롬": {
+      "guildName": "결사투",
+      "world": "제롬",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "요비",
+          "job": "향사수",
+          "level": 86,
+          "conquestGrade": 19,
+          "realm": "제롬 03"
+        },
+        {
+          "nickname": "가을이",
+          "job": "주문각인사",
+          "level": 84,
+          "conquestGrade": 20,
+          "realm": "제롬 03"
+        },
+        {
+          "nickname": "데헤아",
+          "job": "향사수",
+          "level": 84,
+          "conquestGrade": 21,
+          "realm": "제롬 03"
+        }
+      ]
+    },
     "일본|제롬": {
       "guildName": "일본",
       "world": "제롬",
@@ -19893,14 +19921,14 @@
           "realm": "아티산 02"
         },
         {
-          "nickname": "밤양갱",
+          "nickname": "힐러숭이",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아티산 02"
         },
         {
-          "nickname": "힐러숭이",
+          "nickname": "밤양갱",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
@@ -20926,7 +20954,7 @@
     "별의조각|아티산": {
       "guildName": "별의조각",
       "world": "아티산",
-      "memberCount": 9,
+      "memberCount": 10,
       "members": [
         {
           "nickname": "별수호자",
@@ -20989,6 +21017,13 @@
           "job": "주문각인사",
           "level": 81,
           "conquestGrade": 18,
+          "realm": "아티산 03"
+        },
+        {
+          "nickname": "초우니태양",
+          "job": "태양감시자",
+          "level": 81,
+          "conquestGrade": 17,
           "realm": "아티산 03"
         }
       ]
@@ -24275,15 +24310,15 @@
           "realm": "나세르 04"
         },
         {
-          "nickname": "이즈리얼",
-          "job": "향사수",
+          "nickname": "빨강참이슬",
+          "job": "환영검사",
           "level": 85,
           "conquestGrade": 21,
           "realm": "나세르 04"
         },
         {
-          "nickname": "빨강참이슬",
-          "job": "환영검사",
+          "nickname": "이즈리얼",
+          "job": "향사수",
           "level": 85,
           "conquestGrade": 21,
           "realm": "나세르 04"
@@ -24849,17 +24884,17 @@
           "realm": "나세르 05"
         },
         {
-          "nickname": "토끼딘",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 25,
-          "realm": "나세르 05"
-        },
-        {
           "nickname": "초코토끼",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "나세르 05"
+        },
+        {
+          "nickname": "토끼딘",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 25,
           "realm": "나세르 05"
         },
         {
@@ -31396,5 +31431,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-12T05:10:44.205Z"
+  "updatedAt": "2026-07-12T05:20:44.695Z"
 }
