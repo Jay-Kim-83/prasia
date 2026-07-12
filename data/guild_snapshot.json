@@ -386,7 +386,7 @@
         {
           "nickname": "리센",
           "job": "집행관",
-          "level": 85,
+          "level": 84,
           "conquestGrade": 21,
           "realm": "론도 01"
         },
@@ -916,17 +916,17 @@
           "realm": "론도 02"
         },
         {
-          "nickname": "으뜸대장",
-          "job": "야만투사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "론도 02"
-        },
-        {
           "nickname": "오호야호",
           "job": "집행관",
           "level": 91,
           "conquestGrade": 26,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "으뜸대장",
+          "job": "야만투사",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "론도 02"
         },
         {
@@ -1021,13 +1021,6 @@
           "realm": "론도 02"
         },
         {
-          "nickname": "신사답게행동해",
-          "job": "야만투사",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "론도 02"
-        },
-        {
           "nickname": "딩가딩",
           "job": "향사수",
           "level": 90,
@@ -1037,6 +1030,13 @@
         {
           "nickname": "얏호",
           "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "신사답게행동해",
+          "job": "야만투사",
           "level": 90,
           "conquestGrade": 24,
           "realm": "론도 02"
@@ -10034,7 +10034,7 @@
     "황혼|가리안": {
       "guildName": "황혼",
       "world": "가리안",
-      "memberCount": 40,
+      "memberCount": 39,
       "members": [
         {
           "nickname": "곰표",
@@ -10308,13 +10308,6 @@
           "level": 87,
           "conquestGrade": 23,
           "realm": "가리안 02"
-        },
-        {
-          "nickname": "금꽃",
-          "job": "주문각인사",
-          "level": 87,
-          "conquestGrade": 23,
-          "realm": "가리안 02"
         }
       ]
     },
@@ -10573,7 +10566,7 @@
     "전설|가리안": {
       "guildName": "전설",
       "world": "가리안",
-      "memberCount": 12,
+      "memberCount": 13,
       "members": [
         {
           "nickname": "영원형",
@@ -10657,6 +10650,13 @@
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 22,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "몽실",
+          "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 23,
           "realm": "가리안 02"
         }
       ]
@@ -14477,7 +14477,7 @@
         {
           "nickname": "조심해",
           "job": "집행관",
-          "level": 85,
+          "level": 84,
           "conquestGrade": 17,
           "realm": "사도바 03"
         },
@@ -19078,7 +19078,7 @@
     "슈팅스타|아티산": {
       "guildName": "슈팅스타",
       "world": "아티산",
-      "memberCount": 45,
+      "memberCount": 44,
       "members": [
         {
           "nickname": "강남베인",
@@ -19387,20 +19387,13 @@
           "level": 88,
           "conquestGrade": 24,
           "realm": "아티산 01"
-        },
-        {
-          "nickname": "강약사",
-          "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 22,
-          "realm": "아티산 01"
         }
       ]
     },
     "아몬드봉봉|아티산": {
       "guildName": "아몬드봉봉",
       "world": "아티산",
-      "memberCount": 37,
+      "memberCount": 38,
       "members": [
         {
           "nickname": "강윅",
@@ -19659,6 +19652,13 @@
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 24,
+          "realm": "아티산 01"
+        },
+        {
+          "nickname": "사빠딸",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 23,
           "realm": "아티산 01"
         }
       ]
@@ -28162,7 +28162,7 @@
         {
           "nickname": "김종민",
           "job": "향사수",
-          "level": 85,
+          "level": 86,
           "conquestGrade": 22,
           "realm": "타리아 05"
         },
@@ -31124,7 +31124,7 @@
           "nickname": "해원",
           "job": "향사수",
           "level": 82,
-          "conquestGrade": 17,
+          "conquestGrade": 18,
           "realm": "메르비스 05"
         },
         {
@@ -31424,5 +31424,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-12T14:10:43.561Z"
+  "updatedAt": "2026-07-12T14:20:44.512Z"
 }
