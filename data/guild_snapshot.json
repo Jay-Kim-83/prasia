@@ -7183,7 +7183,7 @@
         {
           "nickname": "베리밤",
           "job": "주문각인사",
-          "level": 92,
+          "level": 91,
           "conquestGrade": 26,
           "realm": "아민타 02"
         },
@@ -7846,17 +7846,17 @@
           "realm": "아민타 03"
         },
         {
-          "nickname": "쎈진니",
-          "job": "환영검사",
-          "level": 87,
-          "conquestGrade": 21,
-          "realm": "아민타 03"
-        },
-        {
           "nickname": "쎈짱이",
           "job": "집행관",
           "level": 87,
           "conquestGrade": 23,
+          "realm": "아민타 03"
+        },
+        {
+          "nickname": "쎈진니",
+          "job": "환영검사",
+          "level": 87,
+          "conquestGrade": 21,
           "realm": "아민타 03"
         },
         {
@@ -9733,7 +9733,7 @@
     "야구여왕|가리안": {
       "guildName": "야구여왕",
       "world": "가리안",
-      "memberCount": 36,
+      "memberCount": 35,
       "members": [
         {
           "nickname": "해피티",
@@ -9979,13 +9979,6 @@
           "level": 87,
           "conquestGrade": 22,
           "realm": "가리안 01"
-        },
-        {
-          "nickname": "청령",
-          "job": "야만투사",
-          "level": 87,
-          "conquestGrade": 23,
-          "realm": "가리안 01"
         }
       ]
     },
@@ -10034,7 +10027,7 @@
     "진격의포켓몬|가리안": {
       "guildName": "진격의포켓몬",
       "world": "가리안",
-      "memberCount": 4,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "소리찔러몬",
@@ -10060,6 +10053,13 @@
         {
           "nickname": "미루미루",
           "job": "집행관",
+          "level": 87,
+          "conquestGrade": 22,
+          "realm": "가리안 01"
+        },
+        {
+          "nickname": "메추리알빠몬",
+          "job": "야만투사",
           "level": 87,
           "conquestGrade": 22,
           "realm": "가리안 01"
@@ -20145,15 +20145,15 @@
           "realm": "아티산 02"
         },
         {
-          "nickname": "상태빡큐",
-          "job": "집행관",
+          "nickname": "매버릭",
+          "job": "태양감시자",
           "level": 89,
           "conquestGrade": 22,
           "realm": "아티산 02"
         },
         {
-          "nickname": "매버릭",
-          "job": "태양감시자",
+          "nickname": "상태빡큐",
+          "job": "집행관",
           "level": 89,
           "conquestGrade": 22,
           "realm": "아티산 02"
@@ -21328,17 +21328,17 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "늦봄",
-          "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 21,
-          "realm": "아티산 04"
-        },
-        {
           "nickname": "혈포",
           "job": "집행관",
           "level": 88,
           "conquestGrade": 24,
+          "realm": "아티산 04"
+        },
+        {
+          "nickname": "늦봄",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 21,
           "realm": "아티산 04"
         },
         {
@@ -22413,15 +22413,15 @@
           "realm": "나세르 01"
         },
         {
-          "nickname": "왕밤빵",
-          "job": "야만투사",
+          "nickname": "스으무장",
+          "job": "집행관",
           "level": 88,
           "conquestGrade": 23,
           "realm": "나세르 01"
         },
         {
-          "nickname": "스으무장",
-          "job": "집행관",
+          "nickname": "왕밤빵",
+          "job": "야만투사",
           "level": 88,
           "conquestGrade": 23,
           "realm": "나세르 01"
@@ -31459,5 +31459,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-13T05:10:44.534Z"
+  "updatedAt": "2026-07-13T05:20:43.603Z"
 }
