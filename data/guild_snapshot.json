@@ -83,13 +83,6 @@
           "realm": "론도 01"
         },
         {
-          "nickname": "아현",
-          "job": "태양감시자",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "론도 01"
-        },
-        {
           "nickname": "짐승실장",
           "job": "집행관",
           "level": 90,
@@ -101,6 +94,13 @@
           "job": "환영검사",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "아현",
+          "job": "태양감시자",
+          "level": 90,
+          "conquestGrade": 24,
           "realm": "론도 01"
         },
         {
@@ -5165,17 +5165,17 @@
           "realm": "라인소프 03"
         },
         {
-          "nickname": "체스",
-          "job": "주문각인사",
-          "level": 87,
-          "conquestGrade": 21,
-          "realm": "라인소프 03"
-        },
-        {
           "nickname": "벨루가",
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 23,
+          "realm": "라인소프 03"
+        },
+        {
+          "nickname": "체스",
+          "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 21,
           "realm": "라인소프 03"
         },
         {
@@ -6105,7 +6105,7 @@
         {
           "nickname": "빵댕이",
           "job": "향사수",
-          "level": 91,
+          "level": 90,
           "conquestGrade": 26,
           "realm": "라인소프 05"
         },
@@ -9477,13 +9477,6 @@
           "realm": "가리안 01"
         },
         {
-          "nickname": "망망몬",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "가리안 01"
-        },
-        {
           "nickname": "무쇠몬",
           "job": "집행관",
           "level": 91,
@@ -9491,8 +9484,8 @@
           "realm": "가리안 01"
         },
         {
-          "nickname": "쪼렙몬",
-          "job": "야만투사",
+          "nickname": "망망몬",
+          "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
           "realm": "가리안 01"
@@ -9500,6 +9493,13 @@
         {
           "nickname": "수호몬",
           "job": "향사수",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "가리안 01"
+        },
+        {
+          "nickname": "쪼렙몬",
+          "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "가리안 01"
@@ -9603,15 +9603,15 @@
           "realm": "가리안 01"
         },
         {
-          "nickname": "티몬",
-          "job": "향사수",
+          "nickname": "린우몬",
+          "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
           "realm": "가리안 01"
         },
         {
-          "nickname": "린우몬",
-          "job": "주문각인사",
+          "nickname": "티몬",
+          "job": "향사수",
           "level": 89,
           "conquestGrade": 24,
           "realm": "가리안 01"
@@ -10685,7 +10685,7 @@
     "휘황|가리안": {
       "guildName": "휘황",
       "world": "가리안",
-      "memberCount": 9,
+      "memberCount": 10,
       "members": [
         {
           "nickname": "김띨빵",
@@ -10746,6 +10746,13 @@
         {
           "nickname": "시리우스",
           "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 22,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "스타듀밸리할까요",
+          "job": "집행관",
           "level": 87,
           "conquestGrade": 22,
           "realm": "가리안 02"
@@ -16806,14 +16813,14 @@
           "realm": "제롬 02"
         },
         {
-          "nickname": "러비",
+          "nickname": "밀본",
           "job": "향사수",
           "level": 86,
           "conquestGrade": 21,
           "realm": "제롬 02"
         },
         {
-          "nickname": "밀본",
+          "nickname": "러비",
           "job": "향사수",
           "level": 86,
           "conquestGrade": 21,
@@ -23682,7 +23689,7 @@
         {
           "nickname": "뇌사",
           "job": "주문각인사",
-          "level": 86,
+          "level": 87,
           "conquestGrade": 21,
           "realm": "나세르 03"
         },
@@ -31487,5 +31494,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-14T07:20:43.860Z"
+  "updatedAt": "2026-07-14T07:30:44.783Z"
 }
