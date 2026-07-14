@@ -3731,34 +3731,6 @@
         }
       ]
     },
-    "토깽이|라인소프": {
-      "guildName": "토깽이",
-      "world": "라인소프",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "쩡이라고하자",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "라인소프 01"
-        },
-        {
-          "nickname": "쇼츠",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "라인소프 01"
-        },
-        {
-          "nickname": "검은콩두유",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "라인소프 01"
-        }
-      ]
-    },
     "라비엘|라인소프": {
       "guildName": "라비엘",
       "world": "라인소프",
@@ -9603,17 +9575,17 @@
           "realm": "가리안 01"
         },
         {
-          "nickname": "후루몬",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "가리안 01"
-        },
-        {
           "nickname": "인노몬",
           "job": "향사수",
           "level": 90,
           "conquestGrade": 23,
+          "realm": "가리안 01"
+        },
+        {
+          "nickname": "후루몬",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "가리안 01"
         },
         {
@@ -20369,17 +20341,17 @@
           "realm": "아티산 02"
         },
         {
-          "nickname": "류지학",
-          "job": "야만투사",
-          "level": 88,
-          "conquestGrade": 22,
-          "realm": "아티산 02"
-        },
-        {
           "nickname": "나무꾼",
           "job": "집행관",
           "level": 88,
           "conquestGrade": 24,
+          "realm": "아티산 02"
+        },
+        {
+          "nickname": "류지학",
+          "job": "야만투사",
+          "level": 87,
+          "conquestGrade": 22,
           "realm": "아티산 02"
         },
         {
@@ -25887,7 +25859,7 @@
         {
           "nickname": "왕창다쏜다",
           "job": "집행관",
-          "level": 84,
+          "level": 85,
           "conquestGrade": 19,
           "realm": "타리아 01"
         },
@@ -27705,6 +27677,13 @@
       "memberCount": 39,
       "members": [
         {
+          "nickname": "명품리더",
+          "job": "야만투사",
+          "level": 93,
+          "conquestGrade": 26,
+          "realm": "타리아 05"
+        },
+        {
           "nickname": "명품맥스",
           "job": "야만투사",
           "level": 93,
@@ -27714,13 +27693,6 @@
         {
           "nickname": "명품무릎",
           "job": "향사수",
-          "level": 93,
-          "conquestGrade": 26,
-          "realm": "타리아 05"
-        },
-        {
-          "nickname": "명품리더",
-          "job": "야만투사",
           "level": 93,
           "conquestGrade": 26,
           "realm": "타리아 05"
@@ -31508,5 +31480,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-14T00:20:44.574Z"
+  "updatedAt": "2026-07-14T00:30:43.534Z"
 }
