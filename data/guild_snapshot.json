@@ -3825,7 +3825,7 @@
     "DOG|라인소프": {
       "guildName": "DOG",
       "world": "라인소프",
-      "memberCount": 49,
+      "memberCount": 50,
       "members": [
         {
           "nickname": "유튜브맛나는꼬꼬",
@@ -4146,6 +4146,13 @@
           "nickname": "준꼬",
           "job": "야만투사",
           "level": 90,
+          "conquestGrade": 25,
+          "realm": "라인소프 02"
+        },
+        {
+          "nickname": "델라꼬",
+          "job": "주문각인사",
+          "level": 89,
           "conquestGrade": 25,
           "realm": "라인소프 02"
         },
@@ -8408,7 +8415,7 @@
         {
           "nickname": "유별",
           "job": "주문각인사",
-          "level": 85,
+          "level": 86,
           "conquestGrade": 19,
           "realm": "아민타 04"
         },
@@ -9705,7 +9712,7 @@
     "야구여왕|가리안": {
       "guildName": "야구여왕",
       "world": "가리안",
-      "memberCount": 36,
+      "memberCount": 35,
       "members": [
         {
           "nickname": "해피티",
@@ -9951,13 +9958,6 @@
           "level": 87,
           "conquestGrade": 23,
           "realm": "가리안 01"
-        },
-        {
-          "nickname": "이나바츄르",
-          "job": "주문각인사",
-          "level": 87,
-          "conquestGrade": 22,
-          "realm": "가리안 01"
         }
       ]
     },
@@ -10006,7 +10006,7 @@
     "진격의포켓몬|가리안": {
       "guildName": "진격의포켓몬",
       "world": "가리안",
-      "memberCount": 4,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "소리찔러몬",
@@ -10032,6 +10032,13 @@
         {
           "nickname": "미루미루",
           "job": "집행관",
+          "level": 87,
+          "conquestGrade": 22,
+          "realm": "가리안 01"
+        },
+        {
+          "nickname": "메추리알빠몬",
+          "job": "야만투사",
           "level": 87,
           "conquestGrade": 22,
           "realm": "가리안 01"
@@ -13425,15 +13432,15 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "낭아",
-          "job": "주문각인사",
+          "nickname": "팍팍이얌",
+          "job": "향사수",
           "level": 92,
           "conquestGrade": 26,
           "realm": "사도바 02"
         },
         {
-          "nickname": "팍팍이얌",
-          "job": "향사수",
+          "nickname": "낭아",
+          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "사도바 02"
@@ -13838,17 +13845,17 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "밀크쵸코",
-          "job": "심연추방자",
-          "level": 87,
-          "conquestGrade": 21,
-          "realm": "사도바 02"
-        },
-        {
           "nickname": "제빵왕",
           "job": "태양감시자",
           "level": 87,
           "conquestGrade": 22,
+          "realm": "사도바 02"
+        },
+        {
+          "nickname": "밀크쵸코",
+          "job": "심연추방자",
+          "level": 87,
+          "conquestGrade": 21,
           "realm": "사도바 02"
         },
         {
@@ -16596,17 +16603,17 @@
           "realm": "제롬 02"
         },
         {
-          "nickname": "얄루",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 26,
-          "realm": "제롬 02"
-        },
-        {
           "nickname": "츄동산",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "제롬 02"
+        },
+        {
+          "nickname": "얄루",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 26,
           "realm": "제롬 02"
         },
         {
@@ -19091,7 +19098,7 @@
           "nickname": "별님",
           "job": "주문각인사",
           "level": 85,
-          "conquestGrade": 20,
+          "conquestGrade": 21,
           "realm": "제롬 05"
         },
         {
@@ -31459,5 +31466,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-14T16:10:43.670Z"
+  "updatedAt": "2026-07-14T16:20:43.638Z"
 }
