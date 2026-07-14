@@ -6541,7 +6541,7 @@
     "문|아민타": {
       "guildName": "문",
       "world": "아민타",
-      "memberCount": 11,
+      "memberCount": 12,
       "members": [
         {
           "nickname": "중개사",
@@ -6617,6 +6617,13 @@
           "nickname": "뱅뱅",
           "job": "집행관",
           "level": 79,
+          "conquestGrade": 1,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "빙빙빙",
+          "job": "태양감시자",
+          "level": 78,
           "conquestGrade": 1,
           "realm": "아민타 01"
         }
@@ -6730,7 +6737,7 @@
     "캉사부홍사오대그릇면|아민타": {
       "guildName": "캉사부홍사오대그릇면",
       "world": "아민타",
-      "memberCount": 17,
+      "memberCount": 16,
       "members": [
         {
           "nickname": "가만히있어봐",
@@ -6841,13 +6848,6 @@
           "nickname": "윤서이",
           "job": "향사수",
           "level": 79,
-          "conquestGrade": 15,
-          "realm": "아민타 01"
-        },
-        {
-          "nickname": "먼진",
-          "job": "환영검사",
-          "level": 78,
           "conquestGrade": 15,
           "realm": "아민타 01"
         }
@@ -14246,7 +14246,7 @@
         {
           "nickname": "무서운지렁이",
           "job": "집행관",
-          "level": 89,
+          "level": 90,
           "conquestGrade": 25,
           "realm": "사도바 03"
         },
@@ -21237,13 +21237,6 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "봄담아",
-          "job": "향사수",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "아티산 04"
-        },
-        {
           "nickname": "데센테",
           "job": "환영검사",
           "level": 90,
@@ -21252,6 +21245,13 @@
         },
         {
           "nickname": "짙은",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "아티산 04"
+        },
+        {
+          "nickname": "봄담아",
           "job": "향사수",
           "level": 90,
           "conquestGrade": 24,
@@ -29252,17 +29252,17 @@
           "realm": "메르비스 02"
         },
         {
-          "nickname": "나띠",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 22,
-          "realm": "메르비스 02"
-        },
-        {
           "nickname": "퍼피다이아",
           "job": "주문각인사",
           "level": 86,
           "conquestGrade": 21,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "나띠",
+          "job": "집행관",
+          "level": 86,
+          "conquestGrade": 22,
           "realm": "메르비스 02"
         },
         {
@@ -31466,5 +31466,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-14T18:40:43.510Z"
+  "updatedAt": "2026-07-14T18:50:43.619Z"
 }
