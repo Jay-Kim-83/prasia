@@ -14482,14 +14482,14 @@
           "realm": "사도바 03"
         },
         {
-          "nickname": "로엘",
+          "nickname": "이벨",
           "job": "집행관",
           "level": 87,
           "conquestGrade": 21,
           "realm": "사도바 03"
         },
         {
-          "nickname": "이벨",
+          "nickname": "로엘",
           "job": "집행관",
           "level": 87,
           "conquestGrade": 21,
@@ -16729,17 +16729,17 @@
           "realm": "제롬 02"
         },
         {
-          "nickname": "츄다",
-          "job": "야만투사",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "제롬 02"
-        },
-        {
           "nickname": "츄잉껌",
           "job": "향사수",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "제롬 02"
+        },
+        {
+          "nickname": "츄다",
+          "job": "야만투사",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "제롬 02"
         },
         {
@@ -17251,12 +17251,19 @@
     "바다|제롬": {
       "guildName": "바다",
       "world": "제롬",
-      "memberCount": 22,
+      "memberCount": 23,
       "members": [
         {
           "nickname": "daddy",
           "job": "주문각인사",
           "level": 93,
+          "conquestGrade": 26,
+          "realm": "제롬 03"
+        },
+        {
+          "nickname": "ACE",
+          "job": "태양감시자",
+          "level": 92,
           "conquestGrade": 26,
           "realm": "제롬 03"
         },
@@ -20152,17 +20159,17 @@
           "realm": "아티산 02"
         },
         {
-          "nickname": "상태빡큐",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "아티산 02"
-        },
-        {
           "nickname": "매버릭",
           "job": "태양감시자",
           "level": 89,
           "conquestGrade": 22,
+          "realm": "아티산 02"
+        },
+        {
+          "nickname": "상태빡큐",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 23,
           "realm": "아티산 02"
         },
         {
@@ -24914,7 +24921,7 @@
         {
           "nickname": "커피토끼",
           "job": "주문각인사",
-          "level": 91,
+          "level": 90,
           "conquestGrade": 25,
           "realm": "나세르 05"
         },
@@ -24949,7 +24956,7 @@
         {
           "nickname": "토끼딘",
           "job": "집행관",
-          "level": 89,
+          "level": 90,
           "conquestGrade": 25,
           "realm": "나세르 05"
         },
@@ -25031,13 +25038,6 @@
           "realm": "나세르 05"
         },
         {
-          "nickname": "바빵토끼",
-          "job": "향사수",
-          "level": 88,
-          "conquestGrade": 22,
-          "realm": "나세르 05"
-        },
-        {
           "nickname": "라기토끼",
           "job": "주문각인사",
           "level": 88,
@@ -25049,6 +25049,13 @@
           "job": "태양감시자",
           "level": 88,
           "conquestGrade": 23,
+          "realm": "나세르 05"
+        },
+        {
+          "nickname": "바빵토끼",
+          "job": "향사수",
+          "level": 88,
+          "conquestGrade": 22,
           "realm": "나세르 05"
         },
         {
@@ -31494,5 +31501,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-15T02:50:43.488Z"
+  "updatedAt": "2026-07-15T03:00:44.052Z"
 }
