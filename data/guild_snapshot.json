@@ -13824,17 +13824,17 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "밀크쵸코",
-          "job": "심연추방자",
-          "level": 87,
-          "conquestGrade": 21,
-          "realm": "사도바 02"
-        },
-        {
           "nickname": "제빵왕",
           "job": "태양감시자",
           "level": 87,
           "conquestGrade": 22,
+          "realm": "사도바 02"
+        },
+        {
+          "nickname": "밀크쵸코",
+          "job": "심연추방자",
+          "level": 87,
+          "conquestGrade": 21,
           "realm": "사도바 02"
         },
         {
@@ -16472,7 +16472,7 @@
         {
           "nickname": "독재",
           "job": "집행관",
-          "level": 87,
+          "level": 86,
           "conquestGrade": 22,
           "realm": "제롬 01"
         },
@@ -17450,13 +17450,6 @@
           "realm": "제롬 03"
         },
         {
-          "nickname": "주문각사또",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 23,
-          "realm": "제롬 03"
-        },
-        {
           "nickname": "프레첼",
           "job": "야만투사",
           "level": 91,
@@ -17468,6 +17461,13 @@
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 24,
+          "realm": "제롬 03"
+        },
+        {
+          "nickname": "주문각사또",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 23,
           "realm": "제롬 03"
         },
         {
@@ -27496,48 +27496,6 @@
         }
       ]
     },
-    "라|타리아": {
-      "guildName": "라",
-      "world": "타리아",
-      "memberCount": 5,
-      "members": [
-        {
-          "nickname": "또율",
-          "job": "주문각인사",
-          "level": 87,
-          "conquestGrade": 21,
-          "realm": "타리아 04"
-        },
-        {
-          "nickname": "파무더",
-          "job": "향사수",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "타리아 04"
-        },
-        {
-          "nickname": "광끼",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 20,
-          "realm": "타리아 04"
-        },
-        {
-          "nickname": "천천히",
-          "job": "주문각인사",
-          "level": 85,
-          "conquestGrade": 20,
-          "realm": "타리아 04"
-        },
-        {
-          "nickname": "필라이트",
-          "job": "주문각인사",
-          "level": 84,
-          "conquestGrade": 20,
-          "realm": "타리아 04"
-        }
-      ]
-    },
     "MILLI|타리아": {
       "guildName": "MILLI",
       "world": "타리아",
@@ -27583,6 +27541,48 @@
           "job": "향사수",
           "level": 84,
           "conquestGrade": 19,
+          "realm": "타리아 04"
+        }
+      ]
+    },
+    "라|타리아": {
+      "guildName": "라",
+      "world": "타리아",
+      "memberCount": 5,
+      "members": [
+        {
+          "nickname": "또율",
+          "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 21,
+          "realm": "타리아 04"
+        },
+        {
+          "nickname": "파무더",
+          "job": "향사수",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "타리아 04"
+        },
+        {
+          "nickname": "광끼",
+          "job": "집행관",
+          "level": 86,
+          "conquestGrade": 20,
+          "realm": "타리아 04"
+        },
+        {
+          "nickname": "천천히",
+          "job": "주문각인사",
+          "level": 85,
+          "conquestGrade": 20,
+          "realm": "타리아 04"
+        },
+        {
+          "nickname": "필라이트",
+          "job": "주문각인사",
+          "level": 84,
+          "conquestGrade": 20,
           "realm": "타리아 04"
         }
       ]
@@ -31473,5 +31473,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-15T11:30:43.790Z"
+  "updatedAt": "2026-07-15T11:40:45.186Z"
 }
