@@ -1000,15 +1000,15 @@
           "realm": "론도 02"
         },
         {
-          "nickname": "마벨",
-          "job": "집행관",
+          "nickname": "목욕탕",
+          "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
           "realm": "론도 02"
         },
         {
-          "nickname": "목욕탕",
-          "job": "주문각인사",
+          "nickname": "마벨",
+          "job": "집행관",
           "level": 90,
           "conquestGrade": 25,
           "realm": "론도 02"
@@ -10233,14 +10233,14 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "뚠뚠도치",
+          "nickname": "다냐",
           "job": "향사수",
           "level": 89,
           "conquestGrade": 24,
           "realm": "가리안 02"
         },
         {
-          "nickname": "다냐",
+          "nickname": "뚠뚠도치",
           "job": "향사수",
           "level": 89,
           "conquestGrade": 24,
@@ -10303,6 +10303,13 @@
           "realm": "가리안 02"
         },
         {
+          "nickname": "선구안",
+          "job": "환영검사",
+          "level": 87,
+          "conquestGrade": 20,
+          "realm": "가리안 02"
+        },
+        {
           "nickname": "들개",
           "job": "향사수",
           "level": 87,
@@ -10321,13 +10328,6 @@
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 22,
-          "realm": "가리안 02"
-        },
-        {
-          "nickname": "선구안",
-          "job": "환영검사",
-          "level": 87,
-          "conquestGrade": 20,
           "realm": "가리안 02"
         },
         {
@@ -23171,7 +23171,7 @@
         {
           "nickname": "러너스하이",
           "job": "집행관",
-          "level": 89,
+          "level": 90,
           "conquestGrade": 24,
           "realm": "나세르 02"
         },
@@ -25305,6 +25305,41 @@
         }
       ]
     },
+    "결사|나세르": {
+      "guildName": "결사",
+      "world": "나세르",
+      "memberCount": 4,
+      "members": [
+        {
+          "nickname": "별레",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 22,
+          "realm": "나세르 05"
+        },
+        {
+          "nickname": "LED",
+          "job": "주문각인사",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "나세르 05"
+        },
+        {
+          "nickname": "테오드",
+          "job": "향사수",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "나세르 05"
+        },
+        {
+          "nickname": "시에나",
+          "job": "주문각인사",
+          "level": 84,
+          "conquestGrade": 19,
+          "realm": "나세르 05"
+        }
+      ]
+    },
     "귀뚤단|나세르": {
       "guildName": "귀뚤단",
       "world": "나세르",
@@ -25357,41 +25392,6 @@
           "job": "주문각인사",
           "level": 84,
           "conquestGrade": 20,
-          "realm": "나세르 05"
-        }
-      ]
-    },
-    "결사|나세르": {
-      "guildName": "결사",
-      "world": "나세르",
-      "memberCount": 4,
-      "members": [
-        {
-          "nickname": "별레",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 22,
-          "realm": "나세르 05"
-        },
-        {
-          "nickname": "LED",
-          "job": "주문각인사",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "나세르 05"
-        },
-        {
-          "nickname": "테오드",
-          "job": "향사수",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "나세르 05"
-        },
-        {
-          "nickname": "시에나",
-          "job": "주문각인사",
-          "level": 84,
-          "conquestGrade": 19,
           "realm": "나세르 05"
         }
       ]
@@ -28293,14 +28293,14 @@
           "realm": "타리아 05"
         },
         {
-          "nickname": "모미",
+          "nickname": "비트코인",
           "job": "야만투사",
           "level": 87,
           "conquestGrade": 22,
           "realm": "타리아 05"
         },
         {
-          "nickname": "비트코인",
+          "nickname": "모미",
           "job": "야만투사",
           "level": 87,
           "conquestGrade": 22,
@@ -31494,5 +31494,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-15T01:20:45.096Z"
+  "updatedAt": "2026-07-15T01:30:44.602Z"
 }
