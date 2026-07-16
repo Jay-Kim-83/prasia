@@ -258,17 +258,17 @@
           "realm": "론도 01"
         },
         {
-          "nickname": "보물섬",
-          "job": "집행관",
-          "level": 85,
-          "conquestGrade": 21,
-          "realm": "론도 01"
-        },
-        {
           "nickname": "나율량",
           "job": "환영검사",
           "level": 85,
           "conquestGrade": 22,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "보물섬",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 21,
           "realm": "론도 01"
         },
         {
@@ -25616,13 +25616,20 @@
     "시작|타리아": {
       "guildName": "시작",
       "world": "타리아",
-      "memberCount": 7,
+      "memberCount": 8,
       "members": [
         {
           "nickname": "반이다",
           "job": "집행관",
           "level": 91,
           "conquestGrade": 24,
+          "realm": "타리아 01"
+        },
+        {
+          "nickname": "제주오목눈이",
+          "job": "야만투사",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "타리아 01"
         },
         {
@@ -27817,17 +27824,17 @@
           "realm": "타리아 05"
         },
         {
-          "nickname": "명품차차",
-          "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 24,
-          "realm": "타리아 05"
-        },
-        {
           "nickname": "명품별난",
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 23,
+          "realm": "타리아 05"
+        },
+        {
+          "nickname": "명품차차",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 24,
           "realm": "타리아 05"
         },
         {
@@ -29973,17 +29980,17 @@
           "realm": "메르비스 03"
         },
         {
-          "nickname": "사자",
-          "job": "집행관",
-          "level": 84,
-          "conquestGrade": 20,
-          "realm": "메르비스 03"
-        },
-        {
           "nickname": "조이",
           "job": "주문각인사",
           "level": 84,
           "conquestGrade": 21,
+          "realm": "메르비스 03"
+        },
+        {
+          "nickname": "사자",
+          "job": "집행관",
+          "level": 84,
+          "conquestGrade": 20,
           "realm": "메르비스 03"
         },
         {
@@ -31382,5 +31389,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-16T12:20:43.518Z"
+  "updatedAt": "2026-07-16T12:30:44.795Z"
 }
