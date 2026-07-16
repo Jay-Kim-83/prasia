@@ -7237,15 +7237,15 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "아이스쿠림",
-          "job": "집행관",
+          "nickname": "독불",
+          "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
           "realm": "아민타 02"
         },
         {
-          "nickname": "독불",
-          "job": "주문각인사",
+          "nickname": "아이스쿠림",
+          "job": "집행관",
           "level": 89,
           "conquestGrade": 24,
           "realm": "아민타 02"
@@ -9736,15 +9736,15 @@
           "realm": "가리안 01"
         },
         {
-          "nickname": "빠밤",
-          "job": "주문각인사",
+          "nickname": "마데카솔겔",
+          "job": "태양감시자",
           "level": 91,
           "conquestGrade": 25,
           "realm": "가리안 01"
         },
         {
-          "nickname": "마데카솔겔",
-          "job": "태양감시자",
+          "nickname": "빠밤",
+          "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "가리안 01"
@@ -13334,6 +13334,13 @@
           "realm": "사도바 02"
         },
         {
+          "nickname": "밤미니",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "사도바 02"
+        },
+        {
           "nickname": "수경이얌",
           "job": "주문각인사",
           "level": 92,
@@ -13352,13 +13359,6 @@
           "job": "향사수",
           "level": 92,
           "conquestGrade": 26,
-          "realm": "사도바 02"
-        },
-        {
-          "nickname": "밤미니",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 25,
           "realm": "사도바 02"
         },
         {
@@ -14064,7 +14064,7 @@
         {
           "nickname": "붕어킹",
           "job": "주문각인사",
-          "level": 86,
+          "level": 87,
           "conquestGrade": 22,
           "realm": "사도바 03"
         },
@@ -18263,6 +18263,34 @@
         }
       ]
     },
+    "즁립|제롬": {
+      "guildName": "즁립",
+      "world": "제롬",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "가져와라",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 21,
+          "realm": "제롬 04"
+        },
+        {
+          "nickname": "쌀먹즁",
+          "job": "태양감시자",
+          "level": 82,
+          "conquestGrade": 18,
+          "realm": "제롬 04"
+        },
+        {
+          "nickname": "자몽에이드",
+          "job": "집행관",
+          "level": 82,
+          "conquestGrade": 18,
+          "realm": "제롬 04"
+        }
+      ]
+    },
     "두두|제롬": {
       "guildName": "두두",
       "world": "제롬",
@@ -19270,17 +19298,17 @@
           "realm": "아티산 01"
         },
         {
-          "nickname": "강펀치",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 21,
-          "realm": "아티산 01"
-        },
-        {
           "nickname": "강심기돌검뽑",
           "job": "태양감시자",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "아티산 01"
+        },
+        {
+          "nickname": "강펀치",
+          "job": "향사수",
+          "level": 89,
+          "conquestGrade": 21,
           "realm": "아티산 01"
         },
         {
@@ -31368,5 +31396,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-16T02:30:43.761Z"
+  "updatedAt": "2026-07-16T02:40:43.418Z"
 }
