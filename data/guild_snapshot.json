@@ -6068,6 +6068,13 @@
           "realm": "라인소프 05"
         },
         {
+          "nickname": "쭈바쭈바",
+          "job": "환영검사",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "라인소프 05"
+        },
+        {
           "nickname": "요술빠빠",
           "job": "주문각인사",
           "level": 90,
@@ -6077,13 +6084,6 @@
         {
           "nickname": "니피치쩔더라",
           "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "라인소프 05"
-        },
-        {
-          "nickname": "쭈바쭈바",
-          "job": "환영검사",
           "level": 90,
           "conquestGrade": 25,
           "realm": "라인소프 05"
@@ -8350,14 +8350,14 @@
           "realm": "아민타 04"
         },
         {
-          "nickname": "포화",
+          "nickname": "알약",
           "job": "향사수",
           "level": 77,
           "conquestGrade": 15,
           "realm": "아민타 04"
         },
         {
-          "nickname": "알약",
+          "nickname": "포화",
           "job": "향사수",
           "level": 77,
           "conquestGrade": 15,
@@ -13572,17 +13572,17 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "미니스트로우",
-          "job": "주문각인사",
-          "level": 86,
-          "conquestGrade": 22,
-          "realm": "사도바 02"
-        },
-        {
           "nickname": "용기통발이호",
           "job": "주문각인사",
           "level": 86,
           "conquestGrade": 20,
+          "realm": "사도바 02"
+        },
+        {
+          "nickname": "미니스트로우",
+          "job": "주문각인사",
+          "level": 86,
+          "conquestGrade": 22,
           "realm": "사도바 02"
         },
         {
@@ -19284,17 +19284,17 @@
           "realm": "아티산 01"
         },
         {
-          "nickname": "강탄산수",
-          "job": "향사수",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "아티산 01"
-        },
-        {
           "nickname": "강나비",
           "job": "향사수",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "아티산 01"
+        },
+        {
+          "nickname": "강탄산수",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 24,
           "realm": "아티산 01"
         },
         {
@@ -21995,7 +21995,7 @@
         {
           "nickname": "다온",
           "job": "집행관",
-          "level": 84,
+          "level": 85,
           "conquestGrade": 19,
           "realm": "아티산 05"
         },
@@ -28777,6 +28777,34 @@
         }
       ]
     },
+    "야화|메르비스": {
+      "guildName": "야화",
+      "world": "메르비스",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "왕조의부활",
+          "job": "야만투사",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "미나수",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 20,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "주유",
+          "job": "주문각인사",
+          "level": 85,
+          "conquestGrade": 20,
+          "realm": "메르비스 01"
+        }
+      ]
+    },
     "바다|메르비스": {
       "guildName": "바다",
       "world": "메르비스",
@@ -30736,17 +30764,17 @@
           "realm": "메르비스 04"
         },
         {
-          "nickname": "유산슬",
-          "job": "집행관",
-          "level": 85,
-          "conquestGrade": 19,
-          "realm": "메르비스 04"
-        },
-        {
           "nickname": "미성",
           "job": "주문각인사",
           "level": 85,
           "conquestGrade": 21,
+          "realm": "메르비스 04"
+        },
+        {
+          "nickname": "유산슬",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 19,
           "realm": "메르비스 04"
         },
         {
@@ -31431,5 +31459,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-17T23:40:44.375Z"
+  "updatedAt": "2026-07-17T23:50:43.048Z"
 }
