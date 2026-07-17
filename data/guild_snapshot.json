@@ -16610,17 +16610,17 @@
           "realm": "제롬 02"
         },
         {
-          "nickname": "츄엔나",
-          "job": "향사수",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "제롬 02"
-        },
-        {
           "nickname": "구자룡",
           "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "제롬 02"
+        },
+        {
+          "nickname": "츄엔나",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "제롬 02"
         },
         {
@@ -18619,17 +18619,17 @@
           "realm": "제롬 05"
         },
         {
-          "nickname": "초코콘",
-          "job": "향사수",
-          "level": 87,
-          "conquestGrade": 21,
-          "realm": "제롬 05"
-        },
-        {
           "nickname": "피스타치오소보루",
           "job": "향사수",
           "level": 87,
           "conquestGrade": 22,
+          "realm": "제롬 05"
+        },
+        {
+          "nickname": "초코콘",
+          "job": "향사수",
+          "level": 87,
+          "conquestGrade": 21,
           "realm": "제롬 05"
         },
         {
@@ -28661,12 +28661,19 @@
     "동물유치원|메르비스": {
       "guildName": "동물유치원",
       "world": "메르비스",
-      "memberCount": 14,
+      "memberCount": 15,
       "members": [
         {
           "nickname": "디비",
           "job": "주문각인사",
           "level": 92,
+          "conquestGrade": 26,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "창인턴",
+          "job": "야만투사",
+          "level": 91,
           "conquestGrade": 26,
           "realm": "메르비스 01"
         },
@@ -31417,5 +31424,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-17T17:10:45.423Z"
+  "updatedAt": "2026-07-17T17:20:46.800Z"
 }
