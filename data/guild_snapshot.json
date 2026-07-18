@@ -5277,17 +5277,17 @@
           "realm": "라인소프 04"
         },
         {
-          "nickname": "몰래탈출실패한잭팟",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "라인소프 04"
-        },
-        {
           "nickname": "내성발톱",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
+          "realm": "라인소프 04"
+        },
+        {
+          "nickname": "몰래탈출실패한잭팟",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 25,
           "realm": "라인소프 04"
         },
         {
@@ -8317,7 +8317,7 @@
         {
           "nickname": "마블",
           "job": "주문각인사",
-          "level": 81,
+          "level": 82,
           "conquestGrade": 19,
           "realm": "아민타 04"
         },
@@ -11830,18 +11830,39 @@
         }
       ]
     },
+    "thepink|가리안": {
+      "guildName": "thepink",
+      "world": "가리안",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "칼로",
+          "job": "환영검사",
+          "level": 84,
+          "conquestGrade": 20,
+          "realm": "가리안 04"
+        },
+        {
+          "nickname": "듀오링고",
+          "job": "태양감시자",
+          "level": 84,
+          "conquestGrade": 18,
+          "realm": "가리안 04"
+        },
+        {
+          "nickname": "한대콩",
+          "job": "집행관",
+          "level": 83,
+          "conquestGrade": 19,
+          "realm": "가리안 04"
+        }
+      ]
+    },
     "닌텐도코리아|가리안": {
       "guildName": "닌텐도코리아",
       "world": "가리안",
-      "memberCount": 5,
+      "memberCount": 4,
       "members": [
-        {
-          "nickname": "슈퍼마리오",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 21,
-          "realm": "가리안 04"
-        },
         {
           "nickname": "장송의프리렌",
           "job": "향사수",
@@ -11868,34 +11889,6 @@
           "job": "향사수",
           "level": 79,
           "conquestGrade": 14,
-          "realm": "가리안 04"
-        }
-      ]
-    },
-    "thepink|가리안": {
-      "guildName": "thepink",
-      "world": "가리안",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "칼로",
-          "job": "환영검사",
-          "level": 84,
-          "conquestGrade": 20,
-          "realm": "가리안 04"
-        },
-        {
-          "nickname": "듀오링고",
-          "job": "태양감시자",
-          "level": 84,
-          "conquestGrade": 18,
-          "realm": "가리안 04"
-        },
-        {
-          "nickname": "한대콩",
-          "job": "집행관",
-          "level": 83,
-          "conquestGrade": 19,
           "realm": "가리안 04"
         }
       ]
@@ -12613,14 +12606,14 @@
           "realm": "사도바 01"
         },
         {
-          "nickname": "뉴사신",
+          "nickname": "매드해태",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "사도바 01"
         },
         {
-          "nickname": "매드해태",
+          "nickname": "뉴사신",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
@@ -13355,15 +13348,15 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "리옹",
-          "job": "야만투사",
+          "nickname": "밤미니",
+          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "사도바 02"
         },
         {
-          "nickname": "밤미니",
-          "job": "주문각인사",
+          "nickname": "리옹",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "사도바 02"
@@ -19179,15 +19172,15 @@
           "realm": "아티산 01"
         },
         {
-          "nickname": "강루루",
-          "job": "야만투사",
+          "nickname": "강춘삼",
+          "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아티산 01"
         },
         {
-          "nickname": "강춘삼",
-          "job": "향사수",
+          "nickname": "강루루",
+          "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아티산 01"
@@ -20117,17 +20110,17 @@
           "realm": "아티산 02"
         },
         {
-          "nickname": "매버릭",
-          "job": "태양감시자",
-          "level": 89,
-          "conquestGrade": 22,
-          "realm": "아티산 02"
-        },
-        {
           "nickname": "상태빡큐",
           "job": "집행관",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "아티산 02"
+        },
+        {
+          "nickname": "매버릭",
+          "job": "태양감시자",
+          "level": 89,
+          "conquestGrade": 22,
           "realm": "아티산 02"
         },
         {
@@ -31431,5 +31424,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-18T23:00:58.248Z"
+  "updatedAt": "2026-07-18T23:10:44.148Z"
 }
