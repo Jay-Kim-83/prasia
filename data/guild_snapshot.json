@@ -7335,17 +7335,17 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "만세",
-          "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 23,
-          "realm": "아민타 02"
-        },
-        {
           "nickname": "혈압",
           "job": "태양감시자",
           "level": 88,
           "conquestGrade": 24,
+          "realm": "아민타 02"
+        },
+        {
+          "nickname": "만세",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 23,
           "realm": "아민타 02"
         },
         {
@@ -19599,15 +19599,15 @@
           "realm": "아티산 01"
         },
         {
-          "nickname": "딸기치오",
-          "job": "태양감시자",
+          "nickname": "메롱멜론",
+          "job": "향사수",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아티산 01"
         },
         {
-          "nickname": "메롱멜론",
-          "job": "향사수",
+          "nickname": "딸기치오",
+          "job": "태양감시자",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아티산 01"
@@ -21230,13 +21230,6 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "봄담아",
-          "job": "향사수",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "아티산 04"
-        },
-        {
           "nickname": "데센테",
           "job": "환영검사",
           "level": 90,
@@ -21245,6 +21238,13 @@
         },
         {
           "nickname": "짙은",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "아티산 04"
+        },
+        {
+          "nickname": "봄담아",
           "job": "향사수",
           "level": 90,
           "conquestGrade": 24,
@@ -23103,7 +23103,7 @@
     "드라마|나세르": {
       "guildName": "드라마",
       "world": "나세르",
-      "memberCount": 18,
+      "memberCount": 19,
       "members": [
         {
           "nickname": "쏘주",
@@ -23226,6 +23226,13 @@
         },
         {
           "nickname": "이리나",
+          "job": "향사수",
+          "level": 85,
+          "conquestGrade": 21,
+          "realm": "나세르 02"
+        },
+        {
+          "nickname": "태양의군주",
           "job": "향사수",
           "level": 85,
           "conquestGrade": 21,
@@ -23467,7 +23474,7 @@
     "아기고양이|나세르": {
       "guildName": "아기고양이",
       "world": "나세르",
-      "memberCount": 6,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "선물",
@@ -23501,13 +23508,6 @@
           "nickname": "밤토끼",
           "job": "향사수",
           "level": 86,
-          "conquestGrade": 21,
-          "realm": "나세르 02"
-        },
-        {
-          "nickname": "KunGen",
-          "job": "야만투사",
-          "level": 85,
           "conquestGrade": 21,
           "realm": "나세르 02"
         }
@@ -31452,5 +31452,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-18T22:20:45.744Z"
+  "updatedAt": "2026-07-18T22:30:46.467Z"
 }
