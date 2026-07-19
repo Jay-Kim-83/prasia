@@ -8786,7 +8786,7 @@
         {
           "nickname": "투썸",
           "job": "집행관",
-          "level": 88,
+          "level": 89,
           "conquestGrade": 22,
           "realm": "아민타 05"
         },
@@ -13817,17 +13817,17 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "밀크쵸코",
-          "job": "심연추방자",
-          "level": 87,
-          "conquestGrade": 21,
-          "realm": "사도바 02"
-        },
-        {
           "nickname": "제빵왕",
           "job": "태양감시자",
           "level": 87,
           "conquestGrade": 22,
+          "realm": "사도바 02"
+        },
+        {
+          "nickname": "밀크쵸코",
+          "job": "심연추방자",
+          "level": 87,
+          "conquestGrade": 21,
           "realm": "사도바 02"
         },
         {
@@ -17450,17 +17450,17 @@
           "realm": "제롬 03"
         },
         {
-          "nickname": "개망나니",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 24,
-          "realm": "제롬 03"
-        },
-        {
           "nickname": "프레첼",
           "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "제롬 03"
+        },
+        {
+          "nickname": "개망나니",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 24,
           "realm": "제롬 03"
         },
         {
@@ -17562,17 +17562,17 @@
           "realm": "제롬 03"
         },
         {
-          "nickname": "에피소드",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 23,
-          "realm": "제롬 03"
-        },
-        {
           "nickname": "연어",
           "job": "집행관",
           "level": 87,
           "conquestGrade": 21,
+          "realm": "제롬 03"
+        },
+        {
+          "nickname": "에피소드",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 23,
           "realm": "제롬 03"
         },
         {
@@ -19040,34 +19040,6 @@
         }
       ]
     },
-    "센스|제롬": {
-      "guildName": "센스",
-      "world": "제롬",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "화가난김과장",
-          "job": "향사수",
-          "level": 88,
-          "conquestGrade": 22,
-          "realm": "제롬 05"
-        },
-        {
-          "nickname": "쿄주로",
-          "job": "태양감시자",
-          "level": 86,
-          "conquestGrade": 20,
-          "realm": "제롬 05"
-        },
-        {
-          "nickname": "추락",
-          "job": "주문각인사",
-          "level": 84,
-          "conquestGrade": 20,
-          "realm": "제롬 05"
-        }
-      ]
-    },
     "감정|제롬": {
       "guildName": "감정",
       "world": "제롬",
@@ -19127,6 +19099,34 @@
           "job": "환영검사",
           "level": 85,
           "conquestGrade": 21,
+          "realm": "제롬 05"
+        }
+      ]
+    },
+    "밤|제롬": {
+      "guildName": "밤",
+      "world": "제롬",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "밤하늘",
+          "job": "집행관",
+          "level": 84,
+          "conquestGrade": 19,
+          "realm": "제롬 05"
+        },
+        {
+          "nickname": "밤바다",
+          "job": "집행관",
+          "level": 84,
+          "conquestGrade": 19,
+          "realm": "제롬 05"
+        },
+        {
+          "nickname": "밤바람",
+          "job": "집행관",
+          "level": 84,
+          "conquestGrade": 19,
           "realm": "제롬 05"
         }
       ]
@@ -27782,15 +27782,15 @@
           "realm": "타리아 05"
         },
         {
-          "nickname": "추밬",
-          "job": "주문각인사",
+          "nickname": "ABBA",
+          "job": "집행관",
           "level": 91,
           "conquestGrade": 25,
           "realm": "타리아 05"
         },
         {
-          "nickname": "ABBA",
-          "job": "집행관",
+          "nickname": "추밬",
+          "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "타리아 05"
@@ -31564,5 +31564,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-19T19:20:46.561Z"
+  "updatedAt": "2026-07-19T19:30:44.459Z"
 }
