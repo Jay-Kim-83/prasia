@@ -16631,13 +16631,6 @@
           "realm": "제롬 02"
         },
         {
-          "nickname": "츄리닝",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "제롬 02"
-        },
-        {
           "nickname": "츄요",
           "job": "향사수",
           "level": 90,
@@ -16646,6 +16639,13 @@
         },
         {
           "nickname": "츄쵸파",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "제롬 02"
+        },
+        {
+          "nickname": "츄리닝",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
@@ -25308,7 +25308,7 @@
     "결사|나세르": {
       "guildName": "결사",
       "world": "나세르",
-      "memberCount": 4,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "별레",
@@ -25335,6 +25335,13 @@
           "nickname": "시에나",
           "job": "주문각인사",
           "level": 84,
+          "conquestGrade": 19,
+          "realm": "나세르 05"
+        },
+        {
+          "nickname": "힘빼라",
+          "job": "환영검사",
+          "level": 83,
           "conquestGrade": 19,
           "realm": "나세르 05"
         }
@@ -31529,5 +31536,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-19T16:20:44.899Z"
+  "updatedAt": "2026-07-19T16:30:44.090Z"
 }
