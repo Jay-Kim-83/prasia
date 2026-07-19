@@ -4462,12 +4462,19 @@
     "원피스해적단|라인소프": {
       "guildName": "원피스해적단",
       "world": "라인소프",
-      "memberCount": 4,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "극강케릭",
           "job": "주문각인사",
           "level": 90,
+          "conquestGrade": 24,
+          "realm": "라인소프 02"
+        },
+        {
+          "nickname": "여름",
+          "job": "야만투사",
+          "level": 89,
           "conquestGrade": 24,
           "realm": "라인소프 02"
         },
@@ -6145,17 +6152,17 @@
           "realm": "라인소프 05"
         },
         {
-          "nickname": "전담",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "라인소프 05"
-        },
-        {
           "nickname": "제니루비제인",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "라인소프 05"
+        },
+        {
+          "nickname": "전담",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 23,
           "realm": "라인소프 05"
         },
         {
@@ -7230,17 +7237,17 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "독불",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "아민타 02"
-        },
-        {
           "nickname": "수호킹",
           "job": "집행관",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "아민타 02"
+        },
+        {
+          "nickname": "독불",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 24,
           "realm": "아민타 02"
         },
         {
@@ -10261,13 +10268,6 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "선구안",
-          "job": "환영검사",
-          "level": 87,
-          "conquestGrade": 20,
-          "realm": "가리안 02"
-        },
-        {
           "nickname": "금꽃",
           "job": "주문각인사",
           "level": 87,
@@ -10279,6 +10279,13 @@
           "job": "향사수",
           "level": 87,
           "conquestGrade": 23,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "선구안",
+          "job": "환영검사",
+          "level": 87,
+          "conquestGrade": 20,
           "realm": "가리안 02"
         },
         {
@@ -10415,15 +10422,15 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "고래상어",
-          "job": "향사수",
+          "nickname": "속쓰리면트리겔정",
+          "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
           "realm": "가리안 02"
         },
         {
-          "nickname": "속쓰리면트리겔정",
-          "job": "주문각인사",
+          "nickname": "고래상어",
+          "job": "향사수",
           "level": 89,
           "conquestGrade": 24,
           "realm": "가리안 02"
@@ -12265,7 +12272,7 @@
         {
           "nickname": "빙룡",
           "job": "주문각인사",
-          "level": 85,
+          "level": 86,
           "conquestGrade": 22,
           "realm": "가리안 05"
         },
@@ -16596,6 +16603,13 @@
           "realm": "제롬 02"
         },
         {
+          "nickname": "구자룡",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "제롬 02"
+        },
+        {
           "nickname": "츄요",
           "job": "향사수",
           "level": 90,
@@ -16607,13 +16621,6 @@
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
-          "realm": "제롬 02"
-        },
-        {
-          "nickname": "구자룡",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 24,
           "realm": "제롬 02"
         },
         {
@@ -26221,17 +26228,17 @@
           "realm": "타리아 02"
         },
         {
-          "nickname": "죽통한방",
-          "job": "집행관",
-          "level": 82,
-          "conquestGrade": 21,
-          "realm": "타리아 02"
-        },
-        {
           "nickname": "DEEP",
           "job": "환영검사",
           "level": 82,
           "conquestGrade": 20,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "죽통한방",
+          "job": "집행관",
+          "level": 82,
+          "conquestGrade": 21,
           "realm": "타리아 02"
         },
         {
@@ -31459,5 +31466,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-19T10:20:45.098Z"
+  "updatedAt": "2026-07-19T10:30:43.622Z"
 }
