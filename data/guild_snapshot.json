@@ -3408,17 +3408,17 @@
           "realm": "라인소프 01"
         },
         {
-          "nickname": "환읭",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "라인소프 01"
-        },
-        {
           "nickname": "참꺠",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 26,
+          "realm": "라인소프 01"
+        },
+        {
+          "nickname": "환읭",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "라인소프 01"
         },
         {
@@ -4766,17 +4766,17 @@
           "realm": "라인소프 03"
         },
         {
-          "nickname": "에드",
-          "job": "집행관",
-          "level": 91,
-          "conquestGrade": 23,
-          "realm": "라인소프 03"
-        },
-        {
           "nickname": "홀리쉣",
           "job": "집행관",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "라인소프 03"
+        },
+        {
+          "nickname": "에드",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 23,
           "realm": "라인소프 03"
         },
         {
@@ -16822,7 +16822,7 @@
         {
           "nickname": "러비",
           "job": "향사수",
-          "level": 87,
+          "level": 86,
           "conquestGrade": 21,
           "realm": "제롬 02"
         },
@@ -19991,17 +19991,17 @@
           "realm": "아티산 02"
         },
         {
-          "nickname": "사케",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "아티산 02"
-        },
-        {
           "nickname": "포수",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "아티산 02"
+        },
+        {
+          "nickname": "사케",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 26,
           "realm": "아티산 02"
         },
         {
@@ -26715,7 +26715,7 @@
     "디아블로|타리아": {
       "guildName": "디아블로",
       "world": "타리아",
-      "memberCount": 16,
+      "memberCount": 15,
       "members": [
         {
           "nickname": "뚱땅뚱땅",
@@ -26820,13 +26820,6 @@
           "job": "태양감시자",
           "level": 82,
           "conquestGrade": 18,
-          "realm": "타리아 03"
-        },
-        {
-          "nickname": "땃쥐",
-          "job": "태양감시자",
-          "level": 79,
-          "conquestGrade": 17,
           "realm": "타리아 03"
         }
       ]
@@ -27119,6 +27112,34 @@
         {
           "nickname": "방사선과",
           "job": "향사수",
+          "level": 79,
+          "conquestGrade": 18,
+          "realm": "타리아 03"
+        }
+      ]
+    },
+    "염원|타리아": {
+      "guildName": "염원",
+      "world": "타리아",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "의불씨",
+          "job": "집행관",
+          "level": 84,
+          "conquestGrade": 19,
+          "realm": "타리아 03"
+        },
+        {
+          "nickname": "불염",
+          "job": "집행관",
+          "level": 82,
+          "conquestGrade": 15,
+          "realm": "타리아 03"
+        },
+        {
+          "nickname": "염불",
+          "job": "주문각인사",
           "level": 79,
           "conquestGrade": 18,
           "realm": "타리아 03"
@@ -31550,5 +31571,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-20T09:10:44.562Z"
+  "updatedAt": "2026-07-20T09:20:45.162Z"
 }
