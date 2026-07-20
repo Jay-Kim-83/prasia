@@ -13117,17 +13117,17 @@
           "realm": "사도바 01"
         },
         {
-          "nickname": "고속연사",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 24,
-          "realm": "사도바 01"
-        },
-        {
           "nickname": "살찐병아리",
           "job": "집행관",
           "level": 91,
           "conquestGrade": 22,
+          "realm": "사도바 01"
+        },
+        {
+          "nickname": "고속연사",
+          "job": "향사수",
+          "level": 91,
+          "conquestGrade": 24,
           "realm": "사도바 01"
         },
         {
@@ -19764,20 +19764,13 @@
     "피스타치오아몬드|아티산": {
       "guildName": "피스타치오아몬드",
       "world": "아티산",
-      "memberCount": 8,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "바람과함께사라졌총",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 26,
-          "realm": "아티산 01"
-        },
-        {
-          "nickname": "강남강모찌",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 25,
           "realm": "아티산 01"
         },
         {
@@ -29151,7 +29144,7 @@
     "월하|메르비스": {
       "guildName": "월하",
       "world": "메르비스",
-      "memberCount": 45,
+      "memberCount": 46,
       "members": [
         {
           "nickname": "변처럼",
@@ -29394,6 +29387,13 @@
         {
           "nickname": "퍼피다이아",
           "job": "주문각인사",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "메르비스 02"
+        },
+        {
+          "nickname": "킨콘",
+          "job": "집행관",
           "level": 86,
           "conquestGrade": 21,
           "realm": "메르비스 02"
@@ -31571,5 +31571,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-20T13:00:44.350Z"
+  "updatedAt": "2026-07-20T13:10:43.945Z"
 }
