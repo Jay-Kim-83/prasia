@@ -4612,13 +4612,6 @@
           "realm": "라인소프 03"
         },
         {
-          "nickname": "어둠라미",
-          "job": "향사수",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "라인소프 03"
-        },
-        {
           "nickname": "켄지",
           "job": "향사수",
           "level": 92,
@@ -4628,6 +4621,13 @@
         {
           "nickname": "귀찮다",
           "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "라인소프 03"
+        },
+        {
+          "nickname": "어둠라미",
+          "job": "향사수",
           "level": 92,
           "conquestGrade": 25,
           "realm": "라인소프 03"
@@ -11507,15 +11507,15 @@
           "realm": "가리안 04"
         },
         {
-          "nickname": "무민",
-          "job": "주문각인사",
+          "nickname": "야백",
+          "job": "향사수",
           "level": 90,
           "conquestGrade": 25,
           "realm": "가리안 04"
         },
         {
-          "nickname": "야백",
-          "job": "향사수",
+          "nickname": "무민",
+          "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
           "realm": "가리안 04"
@@ -17174,7 +17174,7 @@
     "천사|제롬": {
       "guildName": "천사",
       "world": "제롬",
-      "memberCount": 5,
+      "memberCount": 6,
       "members": [
         {
           "nickname": "피크닉고구마",
@@ -17209,6 +17209,13 @@
           "job": "주문각인사",
           "level": 81,
           "conquestGrade": 19,
+          "realm": "제롬 04"
+        },
+        {
+          "nickname": "법사",
+          "job": "주문각인사",
+          "level": 81,
+          "conquestGrade": 18,
           "realm": "제롬 04"
         }
       ]
@@ -24975,17 +24982,17 @@
           "realm": "나세르 05"
         },
         {
+          "nickname": "토끼딘",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "나세르 05"
+        },
+        {
           "nickname": "초코토끼",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
-          "realm": "나세르 05"
-        },
-        {
-          "nickname": "토끼딘",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 25,
           "realm": "나세르 05"
         },
         {
@@ -30708,17 +30715,17 @@
           "realm": "메르비스 04"
         },
         {
-          "nickname": "llll",
-          "job": "태양감시자",
-          "level": 84,
-          "conquestGrade": 19,
-          "realm": "메르비스 04"
-        },
-        {
           "nickname": "김또",
           "job": "환영검사",
           "level": 84,
           "conquestGrade": 21,
+          "realm": "메르비스 04"
+        },
+        {
+          "nickname": "llll",
+          "job": "태양감시자",
+          "level": 84,
+          "conquestGrade": 19,
           "realm": "메르비스 04"
         },
         {
@@ -31508,5 +31515,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-20T05:00:44.873Z"
+  "updatedAt": "2026-07-20T05:10:44.129Z"
 }
