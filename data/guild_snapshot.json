@@ -1490,13 +1490,6 @@
           "realm": "론도 03"
         },
         {
-          "nickname": "쇠주형",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "론도 03"
-        },
-        {
           "nickname": "블랑형",
           "job": "주문각인사",
           "level": 91,
@@ -1506,6 +1499,13 @@
         {
           "nickname": "우리딸",
           "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "론도 03"
+        },
+        {
+          "nickname": "쇠주형",
+          "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
           "realm": "론도 03"
@@ -9360,7 +9360,7 @@
         {
           "nickname": "dfvdsg",
           "job": "집행관",
-          "level": 81,
+          "level": 82,
           "conquestGrade": 18,
           "realm": "아민타 05"
         },
@@ -13425,17 +13425,17 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "수경이얌",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "사도바 02"
-        },
-        {
           "nickname": "밤미니",
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "사도바 02"
+        },
+        {
+          "nickname": "수경이얌",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 26,
           "realm": "사도바 02"
         },
         {
@@ -13775,15 +13775,15 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "핀볼왕",
-          "job": "주문각인사",
+          "nickname": "은혜",
+          "job": "심연추방자",
           "level": 89,
           "conquestGrade": 23,
           "realm": "사도바 02"
         },
         {
-          "nickname": "은혜",
-          "job": "심연추방자",
+          "nickname": "핀볼왕",
+          "job": "주문각인사",
           "level": 89,
           "conquestGrade": 23,
           "realm": "사도바 02"
@@ -14542,15 +14542,8 @@
     "이수지|사도바": {
       "guildName": "이수지",
       "world": "사도바",
-      "memberCount": 8,
+      "memberCount": 7,
       "members": [
-        {
-          "nickname": "백야대장",
-          "job": "주문각인사",
-          "level": 84,
-          "conquestGrade": 20,
-          "realm": "사도바 03"
-        },
         {
           "nickname": "스마일클리닉",
           "job": "주문각인사",
@@ -28111,17 +28104,17 @@
           "realm": "타리아 05"
         },
         {
-          "nickname": "명품광기",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 26,
-          "realm": "타리아 05"
-        },
-        {
           "nickname": "명품쟁이",
           "job": "집행관",
           "level": 91,
           "conquestGrade": 24,
+          "realm": "타리아 05"
+        },
+        {
+          "nickname": "명품광기",
+          "job": "향사수",
+          "level": 91,
+          "conquestGrade": 26,
           "realm": "타리아 05"
         },
         {
@@ -29856,7 +29849,7 @@
         {
           "nickname": "POS",
           "job": "향사수",
-          "level": 88,
+          "level": 89,
           "conquestGrade": 23,
           "realm": "메르비스 03"
         },
@@ -30204,17 +30197,17 @@
           "realm": "메르비스 03"
         },
         {
-          "nickname": "유라",
-          "job": "태양감시자",
-          "level": 82,
-          "conquestGrade": 18,
-          "realm": "메르비스 03"
-        },
-        {
           "nickname": "트라이",
           "job": "집행관",
           "level": 82,
           "conquestGrade": 19,
+          "realm": "메르비스 03"
+        },
+        {
+          "nickname": "유라",
+          "job": "태양감시자",
+          "level": 82,
+          "conquestGrade": 18,
           "realm": "메르비스 03"
         }
       ]
@@ -30575,15 +30568,15 @@
           "realm": "메르비스 04"
         },
         {
-          "nickname": "김오순",
-          "job": "환영검사",
+          "nickname": "우주",
+          "job": "집행관",
           "level": 85,
           "conquestGrade": 21,
           "realm": "메르비스 04"
         },
         {
-          "nickname": "우주",
-          "job": "집행관",
+          "nickname": "김오순",
+          "job": "환영검사",
           "level": 85,
           "conquestGrade": 21,
           "realm": "메르비스 04"
@@ -31529,5 +31522,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-20T19:00:44.326Z"
+  "updatedAt": "2026-07-20T19:10:43.942Z"
 }
