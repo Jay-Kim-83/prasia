@@ -9992,8 +9992,15 @@
     "고스톱|가리안": {
       "guildName": "고스톱",
       "world": "가리안",
-      "memberCount": 5,
+      "memberCount": 6,
       "members": [
+        {
+          "nickname": "고래몬",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "가리안 01"
+        },
         {
           "nickname": "사시",
           "job": "향사수",
@@ -10450,17 +10457,17 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "하츠코이",
-          "job": "태양감시자",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "가리안 02"
-        },
-        {
           "nickname": "라이드",
           "job": "향사수",
           "level": 90,
           "conquestGrade": 23,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "하츠코이",
+          "job": "태양감시자",
+          "level": 90,
+          "conquestGrade": 24,
           "realm": "가리안 02"
         },
         {
@@ -20149,7 +20156,7 @@
     "냐옹|아티산": {
       "guildName": "냐옹",
       "world": "아티산",
-      "memberCount": 26,
+      "memberCount": 25,
       "members": [
         {
           "nickname": "야인",
@@ -20182,13 +20189,6 @@
         {
           "nickname": "십자가든스님",
           "job": "태양감시자",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "아티산 02"
-        },
-        {
-          "nickname": "견우",
-          "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아티산 02"
@@ -31445,5 +31445,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-22T00:00:45.167Z"
+  "updatedAt": "2026-07-22T00:10:44.239Z"
 }
