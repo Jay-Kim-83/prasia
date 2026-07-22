@@ -12844,13 +12844,6 @@
           "realm": "사도바 01"
         },
         {
-          "nickname": "진안",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "사도바 01"
-        },
-        {
           "nickname": "말랑이",
           "job": "주문각인사",
           "level": 89,
@@ -12860,6 +12853,13 @@
         {
           "nickname": "슈즄",
           "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 23,
+          "realm": "사도바 01"
+        },
+        {
+          "nickname": "진안",
+          "job": "집행관",
           "level": 89,
           "conquestGrade": 23,
           "realm": "사도바 01"
@@ -13842,13 +13842,20 @@
     "평화|사도바": {
       "guildName": "평화",
       "world": "사도바",
-      "memberCount": 3,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "수기대사",
           "job": "집행관",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "사도바 02"
+        },
+        {
+          "nickname": "대마",
+          "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 23,
           "realm": "사도바 02"
         },
         {
@@ -18579,7 +18586,7 @@
         {
           "nickname": "소보로빵",
           "job": "향사수",
-          "level": 89,
+          "level": 88,
           "conquestGrade": 24,
           "realm": "제롬 05"
         },
@@ -31319,5 +31326,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-22T06:30:45.116Z"
+  "updatedAt": "2026-07-22T06:40:43.775Z"
 }
