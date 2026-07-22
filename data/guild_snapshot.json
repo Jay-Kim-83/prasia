@@ -1291,10 +1291,17 @@
     "블랙중독|론도": {
       "guildName": "블랙중독",
       "world": "론도",
-      "memberCount": 46,
+      "memberCount": 47,
       "members": [
         {
           "nickname": "아처",
+          "job": "야만투사",
+          "level": 93,
+          "conquestGrade": 26,
+          "realm": "론도 03"
+        },
+        {
+          "nickname": "어퍼",
           "job": "야만투사",
           "level": 93,
           "conquestGrade": 26,
@@ -4983,17 +4990,17 @@
           "realm": "라인소프 03"
         },
         {
-          "nickname": "홍랑",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "라인소프 03"
-        },
-        {
           "nickname": "탁주",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 23,
+          "realm": "라인소프 03"
+        },
+        {
+          "nickname": "홍랑",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 24,
           "realm": "라인소프 03"
         },
         {
@@ -11158,6 +11165,41 @@
         }
       ]
     },
+    "노량진|가리안": {
+      "guildName": "노량진",
+      "world": "가리안",
+      "memberCount": 4,
+      "members": [
+        {
+          "nickname": "깜둥야호",
+          "job": "야만투사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "꾼야호",
+          "job": "야만투사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "방어",
+          "job": "집행관",
+          "level": 86,
+          "conquestGrade": 20,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "제일도",
+          "job": "집행관",
+          "level": 86,
+          "conquestGrade": 22,
+          "realm": "가리안 03"
+        }
+      ]
+    },
     "조사병단|가리안": {
       "guildName": "조사병단",
       "world": "가리안",
@@ -11196,34 +11238,6 @@
           "job": "집행관",
           "level": 86,
           "conquestGrade": 21,
-          "realm": "가리안 03"
-        }
-      ]
-    },
-    "노량진|가리안": {
-      "guildName": "노량진",
-      "world": "가리안",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "꾼야호",
-          "job": "야만투사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "가리안 03"
-        },
-        {
-          "nickname": "방어",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 20,
-          "realm": "가리안 03"
-        },
-        {
-          "nickname": "제일도",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 22,
           "realm": "가리안 03"
         }
       ]
@@ -12193,17 +12207,17 @@
           "realm": "가리안 05"
         },
         {
-          "nickname": "테레사",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 21,
-          "realm": "가리안 05"
-        },
-        {
           "nickname": "어린신부",
           "job": "집행관",
           "level": 87,
           "conquestGrade": 22,
+          "realm": "가리안 05"
+        },
+        {
+          "nickname": "테레사",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 21,
           "realm": "가리안 05"
         },
         {
@@ -19536,15 +19550,15 @@
           "realm": "아티산 01"
         },
         {
-          "nickname": "딸기치오",
-          "job": "태양감시자",
+          "nickname": "메롱멜론",
+          "job": "향사수",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아티산 01"
         },
         {
-          "nickname": "메롱멜론",
-          "job": "향사수",
+          "nickname": "딸기치오",
+          "job": "태양감시자",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아티산 01"
@@ -27803,15 +27817,15 @@
           "realm": "타리아 05"
         },
         {
-          "nickname": "명품맥스",
-          "job": "야만투사",
+          "nickname": "명품무릎",
+          "job": "향사수",
           "level": 93,
           "conquestGrade": 26,
           "realm": "타리아 05"
         },
         {
-          "nickname": "명품무릎",
-          "job": "향사수",
+          "nickname": "명품맥스",
+          "job": "야만투사",
           "level": 93,
           "conquestGrade": 26,
           "realm": "타리아 05"
@@ -28113,7 +28127,7 @@
         {
           "nickname": "반지요정",
           "job": "향사수",
-          "level": 88,
+          "level": 87,
           "conquestGrade": 22,
           "realm": "타리아 05"
         },
@@ -31298,5 +31312,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-22T05:50:45.767Z"
+  "updatedAt": "2026-07-22T06:00:45.681Z"
 }
