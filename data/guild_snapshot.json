@@ -7272,17 +7272,17 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "독불",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "아민타 02"
-        },
-        {
           "nickname": "수호킹",
           "job": "집행관",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "아민타 02"
+        },
+        {
+          "nickname": "독불",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 24,
           "realm": "아민타 02"
         },
         {
@@ -10345,13 +10345,6 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "선구안",
-          "job": "환영검사",
-          "level": 87,
-          "conquestGrade": 20,
-          "realm": "가리안 02"
-        },
-        {
           "nickname": "우하",
           "job": "향사수",
           "level": 87,
@@ -10370,6 +10363,13 @@
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 23,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "선구안",
+          "job": "환영검사",
+          "level": 87,
+          "conquestGrade": 20,
           "realm": "가리안 02"
         }
       ]
@@ -15612,7 +15612,7 @@
           "nickname": "미야옹",
           "job": "주문각인사",
           "level": 84,
-          "conquestGrade": 20,
+          "conquestGrade": 21,
           "realm": "사도바 05"
         },
         {
@@ -19375,17 +19375,17 @@
           "realm": "아티산 01"
         },
         {
-          "nickname": "강심기돌검뽑",
-          "job": "태양감시자",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "아티산 01"
-        },
-        {
           "nickname": "강펀치",
           "job": "향사수",
           "level": 89,
           "conquestGrade": 21,
+          "realm": "아티산 01"
+        },
+        {
+          "nickname": "강심기돌검뽑",
+          "job": "태양감시자",
+          "level": 89,
+          "conquestGrade": 24,
           "realm": "아티산 01"
         },
         {
@@ -22616,15 +22616,15 @@
           "realm": "나세르 01"
         },
         {
-          "nickname": "촉법소년",
-          "job": "환영검사",
-          "level": 88,
+          "nickname": "촉법소녀",
+          "job": "주문각인사",
+          "level": 89,
           "conquestGrade": 23,
           "realm": "나세르 01"
         },
         {
-          "nickname": "촉법소녀",
-          "job": "주문각인사",
+          "nickname": "촉법소년",
+          "job": "환영검사",
           "level": 88,
           "conquestGrade": 23,
           "realm": "나세르 01"
@@ -24900,7 +24900,7 @@
         {
           "nickname": "죠코몽",
           "job": "향사수",
-          "level": 91,
+          "level": 90,
           "conquestGrade": 24,
           "realm": "나세르 05"
         },
@@ -24996,15 +24996,15 @@
           "realm": "나세르 05"
         },
         {
-          "nickname": "담비토끼",
-          "job": "주문각인사",
-          "level": 89,
+          "nickname": "헌신토끼",
+          "job": "집행관",
+          "level": 88,
           "conquestGrade": 23,
           "realm": "나세르 05"
         },
         {
-          "nickname": "헌신토끼",
-          "job": "집행관",
+          "nickname": "담비토끼",
+          "job": "주문각인사",
           "level": 88,
           "conquestGrade": 23,
           "realm": "나세르 05"
@@ -26530,18 +26530,53 @@
         }
       ]
     },
-    "시정잡배|타리아": {
-      "guildName": "시정잡배",
+    "따봉도치야고마워|타리아": {
+      "guildName": "따봉도치야고마워",
       "world": "타리아",
-      "memberCount": 6,
+      "memberCount": 5,
       "members": [
         {
-          "nickname": "호래기멍게미더덕귀신",
-          "job": "집행관",
+          "nickname": "샤이탄",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "타리아 03"
         },
+        {
+          "nickname": "캘리포니아비치",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "타리아 03"
+        },
+        {
+          "nickname": "지리산거믄아거",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 24,
+          "realm": "타리아 03"
+        },
+        {
+          "nickname": "도마뱀헌터",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "타리아 03"
+        },
+        {
+          "nickname": "율라린",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "타리아 03"
+        }
+      ]
+    },
+    "시정잡배|타리아": {
+      "guildName": "시정잡배",
+      "world": "타리아",
+      "memberCount": 5,
+      "members": [
         {
           "nickname": "간단요정가민이",
           "job": "태양감시자",
@@ -31410,5 +31445,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-22T02:50:43.665Z"
+  "updatedAt": "2026-07-22T03:00:47.084Z"
 }
