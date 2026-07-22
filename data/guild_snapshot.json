@@ -10069,7 +10069,7 @@
     "황혼|가리안": {
       "guildName": "황혼",
       "world": "가리안",
-      "memberCount": 40,
+      "memberCount": 42,
       "members": [
         {
           "nickname": "곰표",
@@ -10166,6 +10166,13 @@
           "nickname": "부키",
           "job": "집행관",
           "level": 91,
+          "conquestGrade": 24,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "이그니스",
+          "job": "야만투사",
+          "level": 90,
           "conquestGrade": 24,
           "realm": "가리안 02"
         },
@@ -10300,6 +10307,13 @@
           "job": "집행관",
           "level": 88,
           "conquestGrade": 24,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "시리우스",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 22,
           "realm": "가리안 02"
         },
         {
@@ -13212,7 +13226,7 @@
     "편하게|사도바": {
       "guildName": "편하게",
       "world": "사도바",
-      "memberCount": 4,
+      "memberCount": 3,
       "members": [
         {
           "nickname": "으누",
@@ -13233,13 +13247,6 @@
           "job": "향사수",
           "level": 88,
           "conquestGrade": 22,
-          "realm": "사도바 01"
-        },
-        {
-          "nickname": "덥다",
-          "job": "태양감시자",
-          "level": 87,
-          "conquestGrade": 21,
           "realm": "사도바 01"
         }
       ]
@@ -13282,6 +13289,34 @@
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 20,
+          "realm": "사도바 01"
+        }
+      ]
+    },
+    "영웅|사도바": {
+      "guildName": "영웅",
+      "world": "사도바",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "초로이",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 22,
+          "realm": "사도바 01"
+        },
+        {
+          "nickname": "현대",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 22,
+          "realm": "사도바 01"
+        },
+        {
+          "nickname": "머슴아",
+          "job": "향사수",
+          "level": 87,
+          "conquestGrade": 21,
           "realm": "사도바 01"
         }
       ]
@@ -19006,7 +19041,7 @@
         {
           "nickname": "하데스",
           "job": "집행관",
-          "level": 85,
+          "level": 86,
           "conquestGrade": 22,
           "realm": "제롬 05"
         },
@@ -19613,15 +19648,15 @@
           "realm": "아티산 01"
         },
         {
-          "nickname": "딸기치오",
-          "job": "태양감시자",
+          "nickname": "메롱멜론",
+          "job": "향사수",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아티산 01"
         },
         {
-          "nickname": "메롱멜론",
-          "job": "향사수",
+          "nickname": "딸기치오",
+          "job": "태양감시자",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아티산 01"
@@ -26519,8 +26554,15 @@
     "자전거로살이빠지냐|타리아": {
       "guildName": "자전거로살이빠지냐",
       "world": "타리아",
-      "memberCount": 3,
+      "memberCount": 4,
       "members": [
+        {
+          "nickname": "호래기멍게미더덕귀신",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "타리아 03"
+        },
         {
           "nickname": "샤이탄",
           "job": "야만투사",
@@ -31341,7 +31383,7 @@
           "nickname": "박보영",
           "job": "야만투사",
           "level": 83,
-          "conquestGrade": 17,
+          "conquestGrade": 19,
           "realm": "메르비스 05"
         },
         {
@@ -31403,5 +31445,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-22T07:20:46.047Z"
+  "updatedAt": "2026-07-22T07:30:44.216Z"
 }
