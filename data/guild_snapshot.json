@@ -1413,15 +1413,15 @@
           "realm": "론도 03"
         },
         {
-          "nickname": "연두",
-          "job": "주문각인사",
+          "nickname": "샌드봇",
+          "job": "태양감시자",
           "level": 92,
           "conquestGrade": 25,
           "realm": "론도 03"
         },
         {
-          "nickname": "샌드봇",
-          "job": "태양감시자",
+          "nickname": "연두",
+          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "론도 03"
@@ -9533,15 +9533,15 @@
           "realm": "가리안 01"
         },
         {
-          "nickname": "수호몬",
-          "job": "향사수",
+          "nickname": "나빵몬",
+          "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "가리안 01"
         },
         {
-          "nickname": "나빵몬",
-          "job": "주문각인사",
+          "nickname": "수호몬",
+          "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
           "realm": "가리안 01"
@@ -10333,7 +10333,7 @@
         {
           "nickname": "금꽃",
           "job": "주문각인사",
-          "level": 87,
+          "level": 88,
           "conquestGrade": 24,
           "realm": "가리안 02"
         },
@@ -16108,7 +16108,7 @@
         {
           "nickname": "오블라디오블라다",
           "job": "주문각인사",
-          "level": 87,
+          "level": 86,
           "conquestGrade": 22,
           "realm": "제롬 01"
         },
@@ -22163,7 +22163,7 @@
         {
           "nickname": "씬즈",
           "job": "집행관",
-          "level": 82,
+          "level": 81,
           "conquestGrade": 19,
           "realm": "아티산 05"
         },
@@ -23579,7 +23579,7 @@
     "신분증|나세르": {
       "guildName": "신분증",
       "world": "나세르",
-      "memberCount": 41,
+      "memberCount": 40,
       "members": [
         {
           "nickname": "쑥쑥",
@@ -23590,13 +23590,6 @@
         },
         {
           "nickname": "힐링여행",
-          "job": "집행관",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "나세르 03"
-        },
-        {
-          "nickname": "왕두팔",
           "job": "집행관",
           "level": 92,
           "conquestGrade": 26,
@@ -30194,8 +30187,15 @@
     "몬스터볼|메르비스": {
       "guildName": "몬스터볼",
       "world": "메르비스",
-      "memberCount": 44,
+      "memberCount": 45,
       "members": [
+        {
+          "nickname": "선비",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "메르비스 04"
+        },
         {
           "nickname": "고라파덕",
           "job": "집행관",
@@ -31424,5 +31424,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-22T08:20:43.066Z"
+  "updatedAt": "2026-07-22T08:30:45.049Z"
 }
