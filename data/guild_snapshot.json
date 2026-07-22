@@ -1641,7 +1641,7 @@
     "물고기|론도": {
       "guildName": "물고기",
       "world": "론도",
-      "memberCount": 20,
+      "memberCount": 19,
       "members": [
         {
           "nickname": "페르",
@@ -1674,13 +1674,6 @@
         {
           "nickname": "메렁",
           "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 24,
-          "realm": "론도 03"
-        },
-        {
-          "nickname": "쏘가리",
-          "job": "집행관",
           "level": 91,
           "conquestGrade": 24,
           "realm": "론도 03"
@@ -5949,15 +5942,15 @@
           "realm": "라인소프 05"
         },
         {
-          "nickname": "흑곰파",
-          "job": "야만투사",
+          "nickname": "니큐브쩔더라",
+          "job": "향사수",
           "level": 92,
           "conquestGrade": 26,
           "realm": "라인소프 05"
         },
         {
-          "nickname": "니큐브쩔더라",
-          "job": "향사수",
+          "nickname": "흑곰파",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "라인소프 05"
@@ -7174,14 +7167,14 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "느와르",
+          "nickname": "주각",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아민타 02"
         },
         {
-          "nickname": "주각",
+          "nickname": "느와르",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
@@ -10345,6 +10338,13 @@
           "realm": "가리안 02"
         },
         {
+          "nickname": "선구안",
+          "job": "환영검사",
+          "level": 87,
+          "conquestGrade": 20,
+          "realm": "가리안 02"
+        },
+        {
           "nickname": "우하",
           "job": "향사수",
           "level": 87,
@@ -10363,13 +10363,6 @@
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 23,
-          "realm": "가리안 02"
-        },
-        {
-          "nickname": "선구안",
-          "job": "환영검사",
-          "level": 87,
-          "conquestGrade": 20,
           "realm": "가리안 02"
         }
       ]
@@ -26547,11 +26540,18 @@
     "시정잡배|타리아": {
       "guildName": "시정잡배",
       "world": "타리아",
-      "memberCount": 4,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "호래기멍게미더덕귀신",
           "job": "집행관",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "타리아 03"
+        },
+        {
+          "nickname": "캘리포니아비치",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "타리아 03"
@@ -31424,5 +31424,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-22T08:50:44.656Z"
+  "updatedAt": "2026-07-22T09:00:43.461Z"
 }
