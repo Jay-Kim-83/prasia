@@ -4378,7 +4378,7 @@
     "파랑|라인소프": {
       "guildName": "파랑",
       "world": "라인소프",
-      "memberCount": 19,
+      "memberCount": 20,
       "members": [
         {
           "nickname": "우하하",
@@ -4405,6 +4405,13 @@
           "nickname": "몸냥",
           "job": "주문각인사",
           "level": 88,
+          "conquestGrade": 23,
+          "realm": "라인소프 04"
+        },
+        {
+          "nickname": "Kirao",
+          "job": "향사수",
+          "level": 86,
           "conquestGrade": 23,
           "realm": "라인소프 04"
         },
@@ -7118,14 +7125,14 @@
           "realm": "아민타 04"
         },
         {
-          "nickname": "노조위원장",
+          "nickname": "애플",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아민타 04"
         },
         {
-          "nickname": "애플",
+          "nickname": "노조위원장",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
@@ -9407,17 +9414,17 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "에베베베베에",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 22,
-          "realm": "가리안 02"
-        },
-        {
           "nickname": "뒷목잡는맹꽁이",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "에베베베베에",
+          "job": "향사수",
+          "level": 89,
+          "conquestGrade": 22,
           "realm": "가리안 02"
         },
         {
@@ -10296,17 +10303,17 @@
           "realm": "가리안 03"
         },
         {
-          "nickname": "에드",
-          "job": "집행관",
-          "level": 91,
-          "conquestGrade": 23,
-          "realm": "가리안 03"
-        },
-        {
           "nickname": "홀리쉣",
           "job": "집행관",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "에드",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 23,
           "realm": "가리안 03"
         },
         {
@@ -19585,14 +19592,14 @@
           "realm": "아티산 03"
         },
         {
-          "nickname": "초전양",
+          "nickname": "별이양",
           "job": "향사수",
           "level": 86,
           "conquestGrade": 21,
           "realm": "아티산 03"
         },
         {
-          "nickname": "별이양",
+          "nickname": "초전양",
           "job": "향사수",
           "level": 86,
           "conquestGrade": 21,
@@ -20951,34 +20958,6 @@
         }
       ]
     },
-    "불꽃야구|아티산": {
-      "guildName": "불꽃야구",
-      "world": "아티산",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "돌부처",
-          "job": "야만투사",
-          "level": 83,
-          "conquestGrade": 18,
-          "realm": "아티산 05"
-        },
-        {
-          "nickname": "나노마신",
-          "job": "환영검사",
-          "level": 79,
-          "conquestGrade": 15,
-          "realm": "아티산 05"
-        },
-        {
-          "nickname": "나노머신",
-          "job": "집행관",
-          "level": 79,
-          "conquestGrade": 15,
-          "realm": "아티산 05"
-        }
-      ]
-    },
     "펩시|아티산": {
       "guildName": "펩시",
       "world": "아티산",
@@ -21295,7 +21274,7 @@
         {
           "nickname": "자려고누웠는데알람이",
           "job": "집행관",
-          "level": 89,
+          "level": 90,
           "conquestGrade": 25,
           "realm": "나세르 01"
         },
@@ -30010,5 +29989,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-23T21:50:43.936Z"
+  "updatedAt": "2026-07-23T22:00:43.930Z"
 }
