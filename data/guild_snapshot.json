@@ -1683,7 +1683,7 @@
     "골드중독|론도": {
       "guildName": "골드중독",
       "world": "론도",
-      "memberCount": 30,
+      "memberCount": 31,
       "members": [
         {
           "nickname": "청새치",
@@ -1892,6 +1892,13 @@
           "nickname": "갓쏘붓",
           "job": "집행관",
           "level": 88,
+          "conquestGrade": 22,
+          "realm": "론도 03"
+        },
+        {
+          "nickname": "더앙심",
+          "job": "주문각인사",
+          "level": 87,
           "conquestGrade": 22,
           "realm": "론도 03"
         }
@@ -7794,7 +7801,7 @@
     "중립|아민타": {
       "guildName": "중립",
       "world": "아민타",
-      "memberCount": 9,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "황금제국",
@@ -7829,20 +7836,6 @@
           "job": "심연추방자",
           "level": 83,
           "conquestGrade": 18,
-          "realm": "아민타 03"
-        },
-        {
-          "nickname": "주군의태양",
-          "job": "야만투사",
-          "level": 80,
-          "conquestGrade": 16,
-          "realm": "아민타 03"
-        },
-        {
-          "nickname": "검투사",
-          "job": "환영검사",
-          "level": 80,
-          "conquestGrade": 16,
           "realm": "아민타 03"
         },
         {
@@ -8200,7 +8193,7 @@
     "스타|아민타": {
       "guildName": "스타",
       "world": "아민타",
-      "memberCount": 10,
+      "memberCount": 11,
       "members": [
         {
           "nickname": "냉정",
@@ -8267,6 +8260,13 @@
         },
         {
           "nickname": "슈퍼",
+          "job": "향사수",
+          "level": 75,
+          "conquestGrade": 1,
+          "realm": "아민타 04"
+        },
+        {
+          "nickname": "딩요",
           "job": "향사수",
           "level": 75,
           "conquestGrade": 1,
@@ -9162,17 +9162,17 @@
           "realm": "가리안 01"
         },
         {
-          "nickname": "후루몬",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "가리안 01"
-        },
-        {
           "nickname": "주나몬",
           "job": "태양감시자",
           "level": 90,
           "conquestGrade": 23,
+          "realm": "가리안 01"
+        },
+        {
+          "nickname": "후루몬",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "가리안 01"
         },
         {
@@ -9549,7 +9549,7 @@
         {
           "nickname": "액티언",
           "job": "집행관",
-          "level": 89,
+          "level": 90,
           "conquestGrade": 24,
           "realm": "가리안 01"
         },
@@ -12760,15 +12760,15 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "팍팍이얌",
-          "job": "향사수",
+          "nickname": "낭아",
+          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "사도바 02"
         },
         {
-          "nickname": "낭아",
-          "job": "주문각인사",
+          "nickname": "팍팍이얌",
+          "job": "향사수",
           "level": 92,
           "conquestGrade": 26,
           "realm": "사도바 02"
@@ -16935,7 +16935,7 @@
           "nickname": "속궁",
           "job": "주문각인사",
           "level": 82,
-          "conquestGrade": 19,
+          "conquestGrade": 20,
           "realm": "제롬 03"
         }
       ]
@@ -19179,17 +19179,17 @@
           "realm": "아티산 02"
         },
         {
-          "nickname": "석화",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "아티산 02"
-        },
-        {
           "nickname": "축복매화",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 24,
+          "realm": "아티산 02"
+        },
+        {
+          "nickname": "석화",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "아티산 02"
         },
         {
@@ -20511,7 +20511,7 @@
         {
           "nickname": "꼬맹이",
           "job": "향사수",
-          "level": 89,
+          "level": 90,
           "conquestGrade": 24,
           "realm": "아티산 04"
         },
@@ -30318,5 +30318,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-23T06:00:44.095Z"
+  "updatedAt": "2026-07-23T06:10:43.806Z"
 }
