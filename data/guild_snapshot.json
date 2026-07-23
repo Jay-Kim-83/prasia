@@ -7441,41 +7441,6 @@
         }
       ]
     },
-    "123|아민타": {
-      "guildName": "123",
-      "world": "아민타",
-      "memberCount": 4,
-      "members": [
-        {
-          "nickname": "갓당근",
-          "job": "심연추방자",
-          "level": 88,
-          "conquestGrade": 21,
-          "realm": "아민타 04"
-        },
-        {
-          "nickname": "NumBering",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 20,
-          "realm": "아민타 04"
-        },
-        {
-          "nickname": "유별",
-          "job": "주문각인사",
-          "level": 86,
-          "conquestGrade": 19,
-          "realm": "아민타 04"
-        },
-        {
-          "nickname": "들국화",
-          "job": "심연추방자",
-          "level": 82,
-          "conquestGrade": 19,
-          "realm": "아민타 04"
-        }
-      ]
-    },
     "KPOP|아민타": {
       "guildName": "KPOP",
       "world": "아민타",
@@ -12592,14 +12557,14 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "사마귀",
+          "nickname": "용기통발일호",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 23,
           "realm": "사도바 02"
         },
         {
-          "nickname": "용기통발일호",
+          "nickname": "사마귀",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 23,
@@ -18325,17 +18290,17 @@
           "realm": "아티산 01"
         },
         {
-          "nickname": "강뻔짜",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "아티산 01"
-        },
-        {
           "nickname": "강북일식",
           "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "아티산 01"
+        },
+        {
+          "nickname": "강뻔짜",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 26,
           "realm": "아티산 01"
         },
         {
@@ -21538,15 +21503,15 @@
           "realm": "나세르 01"
         },
         {
-          "nickname": "레제",
-          "job": "주문각인사",
+          "nickname": "드림캐처",
+          "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
           "realm": "나세르 01"
         },
         {
-          "nickname": "드림캐처",
-          "job": "집행관",
+          "nickname": "레제",
+          "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
           "realm": "나세르 01"
@@ -21801,7 +21766,7 @@
     "르센느|나세르": {
       "guildName": "르센느",
       "world": "나세르",
-      "memberCount": 29,
+      "memberCount": 30,
       "members": [
         {
           "nickname": "심판야호",
@@ -21906,6 +21871,13 @@
           "job": "환영검사",
           "level": 91,
           "conquestGrade": 24,
+          "realm": "나세르 02"
+        },
+        {
+          "nickname": "르센느리센느야호",
+          "job": "야만투사",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "나세르 02"
         },
         {
@@ -22312,7 +22284,7 @@
     "트레비어|나세르": {
       "guildName": "트레비어",
       "world": "나세르",
-      "memberCount": 23,
+      "memberCount": 22,
       "members": [
         {
           "nickname": "말본",
@@ -22466,13 +22438,6 @@
           "job": "집행관",
           "level": 88,
           "conquestGrade": 23,
-          "realm": "나세르 02"
-        },
-        {
-          "nickname": "Crosstalk",
-          "job": "야만투사",
-          "level": 88,
-          "conquestGrade": 21,
           "realm": "나세르 02"
         }
       ]
@@ -27240,7 +27205,7 @@
     "골드거래용2|메르비스": {
       "guildName": "골드거래용2",
       "world": "메르비스",
-      "memberCount": 20,
+      "memberCount": 21,
       "members": [
         {
           "nickname": "야생마",
@@ -27268,6 +27233,13 @@
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "뉴월",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 25,
           "realm": "메르비스 01"
         },
         {
@@ -30031,5 +30003,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-23T21:20:43.994Z"
+  "updatedAt": "2026-07-23T21:30:44.446Z"
 }
