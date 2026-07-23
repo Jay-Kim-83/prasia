@@ -3625,17 +3625,17 @@
           "realm": "라인소프 02"
         },
         {
-          "nickname": "진빼이꼬",
-          "job": "집행관",
-          "level": 91,
-          "conquestGrade": 24,
-          "realm": "라인소프 02"
-        },
-        {
           "nickname": "DOA",
           "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "라인소프 02"
+        },
+        {
+          "nickname": "진빼이꼬",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 24,
           "realm": "라인소프 02"
         },
         {
@@ -21181,6 +21181,13 @@
           "realm": "나세르 01"
         },
         {
+          "nickname": "솜검",
+          "job": "환영검사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "나세르 01"
+        },
+        {
           "nickname": "자려고누웠는데왜불러",
           "job": "향사수",
           "level": 92,
@@ -21190,13 +21197,6 @@
         {
           "nickname": "자려고누웠는데화장실",
           "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "나세르 01"
-        },
-        {
-          "nickname": "솜검",
-          "job": "환영검사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "나세르 01"
@@ -21815,7 +21815,7 @@
     "르센느|나세르": {
       "guildName": "르센느",
       "world": "나세르",
-      "memberCount": 28,
+      "memberCount": 29,
       "members": [
         {
           "nickname": "심판야호",
@@ -21874,15 +21874,15 @@
           "realm": "나세르 02"
         },
         {
-          "nickname": "우주야호",
-          "job": "주문각인사",
+          "nickname": "얌야호",
+          "job": "태양감시자",
           "level": 91,
           "conquestGrade": 25,
           "realm": "나세르 02"
         },
         {
-          "nickname": "얌야호",
-          "job": "태양감시자",
+          "nickname": "우주야호",
+          "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "나세르 02"
@@ -21920,6 +21920,13 @@
           "job": "환영검사",
           "level": 91,
           "conquestGrade": 24,
+          "realm": "나세르 02"
+        },
+        {
+          "nickname": "씸판야호",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "나세르 02"
         },
         {
@@ -22018,7 +22025,7 @@
     "씸판|나세르": {
       "guildName": "씸판",
       "world": "나세르",
-      "memberCount": 33,
+      "memberCount": 32,
       "members": [
         {
           "nickname": "Devil",
@@ -22242,13 +22249,6 @@
           "job": "향사수",
           "level": 88,
           "conquestGrade": 24,
-          "realm": "나세르 02"
-        },
-        {
-          "nickname": "링쿠",
-          "job": "향사수",
-          "level": 88,
-          "conquestGrade": 21,
           "realm": "나세르 02"
         }
       ]
@@ -28304,7 +28304,7 @@
     "북두칠성|메르비스": {
       "guildName": "북두칠성",
       "world": "메르비스",
-      "memberCount": 29,
+      "memberCount": 28,
       "members": [
         {
           "nickname": "별님",
@@ -28318,13 +28318,6 @@
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
-          "realm": "메르비스 03"
-        },
-        {
-          "nickname": "뉴월",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 25,
           "realm": "메르비스 03"
         },
         {
@@ -28773,7 +28766,7 @@
     "수호|메르비스": {
       "guildName": "수호",
       "world": "메르비스",
-      "memberCount": 6,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "YYDS",
@@ -28813,6 +28806,13 @@
         {
           "nickname": "감초",
           "job": "심연추방자",
+          "level": 81,
+          "conquestGrade": 19,
+          "realm": "메르비스 03"
+        },
+        {
+          "nickname": "심청",
+          "job": "야만투사",
           "level": 81,
           "conquestGrade": 19,
           "realm": "메르비스 03"
@@ -30038,5 +30038,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-23T20:40:43.913Z"
+  "updatedAt": "2026-07-23T20:50:44.191Z"
 }
