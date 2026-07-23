@@ -8568,6 +8568,34 @@
         }
       ]
     },
+    "가즈앙|아민타": {
+      "guildName": "가즈앙",
+      "world": "아민타",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "소서리스",
+          "job": "집행관",
+          "level": 82,
+          "conquestGrade": 19,
+          "realm": "아민타 04"
+        },
+        {
+          "nickname": "일좀해",
+          "job": "주문각인사",
+          "level": 81,
+          "conquestGrade": 18,
+          "realm": "아민타 04"
+        },
+        {
+          "nickname": "일해라",
+          "job": "심연추방자",
+          "level": 79,
+          "conquestGrade": 16,
+          "realm": "아민타 04"
+        }
+      ]
+    },
     "스타|아민타": {
       "guildName": "스타",
       "world": "아민타",
@@ -15413,17 +15441,17 @@
           "realm": "사도바 05"
         },
         {
-          "nickname": "레모나",
-          "job": "향사수",
-          "level": 88,
-          "conquestGrade": 21,
-          "realm": "사도바 05"
-        },
-        {
           "nickname": "그라펜",
           "job": "집행관",
           "level": 88,
           "conquestGrade": 22,
+          "realm": "사도바 05"
+        },
+        {
+          "nickname": "레모나",
+          "job": "향사수",
+          "level": 88,
+          "conquestGrade": 21,
           "realm": "사도바 05"
         },
         {
@@ -19844,17 +19872,17 @@
           "realm": "아티산 02"
         },
         {
-          "nickname": "밤양갱",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "아티산 02"
-        },
-        {
           "nickname": "글게",
           "job": "향사수",
           "level": 91,
           "conquestGrade": 24,
+          "realm": "아티산 02"
+        },
+        {
+          "nickname": "밤양갱",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "아티산 02"
         },
         {
@@ -27261,7 +27289,7 @@
     "MILLI|타리아": {
       "guildName": "MILLI",
       "world": "타리아",
-      "memberCount": 7,
+      "memberCount": 6,
       "members": [
         {
           "nickname": "시절인연",
@@ -27289,13 +27317,6 @@
           "job": "집행관",
           "level": 86,
           "conquestGrade": 21,
-          "realm": "타리아 04"
-        },
-        {
-          "nickname": "죽염",
-          "job": "주문각인사",
-          "level": 85,
-          "conquestGrade": 18,
           "realm": "타리아 04"
         },
         {
@@ -28871,15 +28892,8 @@
     "월하|메르비스": {
       "guildName": "월하",
       "world": "메르비스",
-      "memberCount": 45,
+      "memberCount": 44,
       "members": [
-        {
-          "nickname": "변처럼",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "메르비스 02"
-        },
         {
           "nickname": "수수한",
           "job": "주문각인사",
@@ -31319,5 +31333,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-23T00:40:43.186Z"
+  "updatedAt": "2026-07-23T00:50:44.289Z"
 }
