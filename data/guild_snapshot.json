@@ -6124,6 +6124,13 @@
           "realm": "아민타 02"
         },
         {
+          "nickname": "수호킹",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "아민타 02"
+        },
+        {
           "nickname": "독불",
           "job": "주문각인사",
           "level": 90,
@@ -6142,13 +6149,6 @@
           "job": "향사수",
           "level": 90,
           "conquestGrade": 24,
-          "realm": "아민타 02"
-        },
-        {
-          "nickname": "수호킹",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 25,
           "realm": "아민타 02"
         },
         {
@@ -10044,15 +10044,15 @@
           "realm": "가리안 03"
         },
         {
-          "nickname": "사악",
-          "job": "주문각인사",
+          "nickname": "망고야호",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "가리안 03"
         },
         {
-          "nickname": "망고야호",
-          "job": "야만투사",
+          "nickname": "사악",
+          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "가리안 03"
@@ -21258,17 +21258,17 @@
           "realm": "나세르 01"
         },
         {
-          "nickname": "자려고누웠는데왼손이",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 26,
-          "realm": "나세르 01"
-        },
-        {
           "nickname": "자려고누웠는데냄새남",
           "job": "태양감시자",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "나세르 01"
+        },
+        {
+          "nickname": "자려고누웠는데왼손이",
+          "job": "향사수",
+          "level": 91,
+          "conquestGrade": 26,
           "realm": "나세르 01"
         },
         {
@@ -23974,13 +23974,6 @@
           "realm": "나세르 05"
         },
         {
-          "nickname": "토끼딘",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 25,
-          "realm": "나세르 05"
-        },
-        {
           "nickname": "이초토끼",
           "job": "집행관",
           "level": 89,
@@ -23992,6 +23985,13 @@
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 21,
+          "realm": "나세르 05"
+        },
+        {
+          "nickname": "토끼딘",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 25,
           "realm": "나세르 05"
         },
         {
@@ -24943,7 +24943,7 @@
           "nickname": "눈뽕",
           "job": "향사수",
           "level": 84,
-          "conquestGrade": 19,
+          "conquestGrade": 20,
           "realm": "타리아 01"
         },
         {
@@ -26594,7 +26594,7 @@
         {
           "nickname": "기프트",
           "job": "주문각인사",
-          "level": 86,
+          "level": 87,
           "conquestGrade": 21,
           "realm": "타리아 04"
         },
@@ -27495,6 +27495,13 @@
           "realm": "메르비스 01"
         },
         {
+          "nickname": "엑스뿌뿌",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "메르비스 01"
+        },
+        {
           "nickname": "포엑스뿌뿌",
           "job": "주문각인사",
           "level": 92,
@@ -27506,13 +27513,6 @@
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "엑스뿌뿌",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
           "realm": "메르비스 01"
         },
         {
@@ -28416,7 +28416,7 @@
     "화개장터|메르비스": {
       "guildName": "화개장터",
       "world": "메르비스",
-      "memberCount": 10,
+      "memberCount": 9,
       "members": [
         {
           "nickname": "보더콜리",
@@ -28479,13 +28479,6 @@
           "job": "주문각인사",
           "level": 84,
           "conquestGrade": 20,
-          "realm": "메르비스 02"
-        },
-        {
-          "nickname": "이렐",
-          "job": "심연추방자",
-          "level": 79,
-          "conquestGrade": 18,
           "realm": "메르비스 02"
         }
       ]
@@ -30304,5 +30297,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-24T20:20:43.799Z"
+  "updatedAt": "2026-07-24T20:30:43.038Z"
 }
