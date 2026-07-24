@@ -1443,7 +1443,7 @@
         {
           "nickname": "젖은향슈",
           "job": "향사수",
-          "level": 88,
+          "level": 89,
           "conquestGrade": 23,
           "realm": "론도 03"
         },
@@ -10765,6 +10765,13 @@
           "realm": "가리안 04"
         },
         {
+          "nickname": "잠뱅이",
+          "job": "환영검사",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "가리안 04"
+        },
+        {
           "nickname": "쿠키",
           "job": "환영검사",
           "level": 86,
@@ -10776,13 +10783,6 @@
           "job": "주문각인사",
           "level": 86,
           "conquestGrade": 22,
-          "realm": "가리안 04"
-        },
-        {
-          "nickname": "잠뱅이",
-          "job": "환영검사",
-          "level": 86,
-          "conquestGrade": 21,
           "realm": "가리안 04"
         },
         {
@@ -15546,13 +15546,6 @@
           "realm": "제롬 02"
         },
         {
-          "nickname": "츄리닝",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "제롬 02"
-        },
-        {
           "nickname": "히츄",
           "job": "주문각인사",
           "level": 91,
@@ -15562,6 +15555,13 @@
         {
           "nickname": "살생",
           "job": "향사수",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "제롬 02"
+        },
+        {
+          "nickname": "츄리닝",
+          "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "제롬 02"
@@ -16332,7 +16332,7 @@
         {
           "nickname": "에피소드",
           "job": "집행관",
-          "level": 87,
+          "level": 88,
           "conquestGrade": 23,
           "realm": "제롬 03"
         },
@@ -17429,15 +17429,15 @@
           "realm": "제롬 05"
         },
         {
-          "nickname": "몽쉘",
-          "job": "주문각인사",
+          "nickname": "초코하임",
+          "job": "환영검사",
           "level": 90,
           "conquestGrade": 24,
           "realm": "제롬 05"
         },
         {
-          "nickname": "초코하임",
-          "job": "환영검사",
+          "nickname": "몽쉘",
+          "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
           "realm": "제롬 05"
@@ -21293,17 +21293,17 @@
           "realm": "나세르 01"
         },
         {
-          "nickname": "자려고누웠는데왼손이",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 26,
-          "realm": "나세르 01"
-        },
-        {
           "nickname": "자려고누웠는데요지경",
           "job": "환영검사",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "나세르 01"
+        },
+        {
+          "nickname": "자려고누웠는데왼손이",
+          "job": "향사수",
+          "level": 91,
+          "conquestGrade": 26,
           "realm": "나세르 01"
         },
         {
@@ -28640,20 +28640,13 @@
     "로즈|메르비스": {
       "guildName": "로즈",
       "world": "메르비스",
-      "memberCount": 6,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "메잘",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
-          "realm": "메르비스 03"
-        },
-        {
-          "nickname": "해성",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 20,
           "realm": "메르비스 03"
         },
         {
@@ -30311,5 +30304,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-24T21:00:43.785Z"
+  "updatedAt": "2026-07-24T21:10:44.625Z"
 }
