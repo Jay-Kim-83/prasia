@@ -4383,7 +4383,7 @@
         {
           "nickname": "스코티쉬폴드",
           "job": "심연추방자",
-          "level": 79,
+          "level": 80,
           "conquestGrade": 15,
           "realm": "라인소프 03"
         },
@@ -17741,7 +17741,7 @@
     "솔라스톤|제롬": {
       "guildName": "솔라스톤",
       "world": "제롬",
-      "memberCount": 9,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "삼삼",
@@ -17772,38 +17772,10 @@
           "realm": "제롬 05"
         },
         {
-          "nickname": "일호",
-          "job": "집행관",
-          "level": 85,
-          "conquestGrade": 21,
-          "realm": "제롬 05"
-        },
-        {
           "nickname": "이호",
           "job": "집행관",
           "level": 85,
           "conquestGrade": 21,
-          "realm": "제롬 05"
-        },
-        {
-          "nickname": "꺼르띠에",
-          "job": "주문각인사",
-          "level": 85,
-          "conquestGrade": 17,
-          "realm": "제롬 05"
-        },
-        {
-          "nickname": "삼호",
-          "job": "집행관",
-          "level": 84,
-          "conquestGrade": 21,
-          "realm": "제롬 05"
-        },
-        {
-          "nickname": "넷째",
-          "job": "집행관",
-          "level": 84,
-          "conquestGrade": 20,
           "realm": "제롬 05"
         }
       ]
@@ -27086,7 +27058,7 @@
     "명품결사|타리아": {
       "guildName": "명품결사",
       "world": "타리아",
-      "memberCount": 35,
+      "memberCount": 33,
       "members": [
         {
           "nickname": "명품맥스",
@@ -27215,13 +27187,6 @@
           "realm": "타리아 05"
         },
         {
-          "nickname": "명품황싹싹",
-          "job": "환영검사",
-          "level": 90,
-          "conquestGrade": 23,
-          "realm": "타리아 05"
-        },
-        {
           "nickname": "명품스승",
           "job": "향사수",
           "level": 90,
@@ -27233,13 +27198,6 @@
           "job": "태양감시자",
           "level": 90,
           "conquestGrade": 24,
-          "realm": "타리아 05"
-        },
-        {
-          "nickname": "명품여사",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 25,
           "realm": "타리아 05"
         },
         {
@@ -27338,7 +27296,7 @@
     "마왕군|타리아": {
       "guildName": "마왕군",
       "world": "타리아",
-      "memberCount": 14,
+      "memberCount": 15,
       "members": [
         {
           "nickname": "FAKER",
@@ -27436,6 +27394,13 @@
           "job": "집행관",
           "level": 85,
           "conquestGrade": 21,
+          "realm": "타리아 05"
+        },
+        {
+          "nickname": "청토끼",
+          "job": "향사수",
+          "level": 85,
+          "conquestGrade": 20,
           "realm": "타리아 05"
         }
       ]
@@ -27993,6 +27958,48 @@
         }
       ]
     },
+    "바다|메르비스": {
+      "guildName": "바다",
+      "world": "메르비스",
+      "memberCount": 5,
+      "members": [
+        {
+          "nickname": "스쿠나",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "유미의세포들",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "알리타",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "배달",
+          "job": "태양감시자",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "단검이잉",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "메르비스 01"
+        }
+      ]
+    },
     "북깡미|메르비스": {
       "guildName": "북깡미",
       "world": "메르비스",
@@ -28106,41 +28113,6 @@
         {
           "nickname": "포미",
           "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "메르비스 01"
-        }
-      ]
-    },
-    "바다|메르비스": {
-      "guildName": "바다",
-      "world": "메르비스",
-      "memberCount": 4,
-      "members": [
-        {
-          "nickname": "유미의세포들",
-          "job": "향사수",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "알리타",
-          "job": "향사수",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "배달",
-          "job": "태양감시자",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "단검이잉",
-          "job": "향사수",
           "level": 90,
           "conquestGrade": 24,
           "realm": "메르비스 01"
@@ -30311,5 +30283,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-24T18:40:42.962Z"
+  "updatedAt": "2026-07-24T18:50:44.572Z"
 }
