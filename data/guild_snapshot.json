@@ -9967,13 +9967,6 @@
           "realm": "가리안 03"
         },
         {
-          "nickname": "무야호",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "가리안 03"
-        },
-        {
           "nickname": "Joatttt",
           "job": "주문각인사",
           "level": 92,
@@ -9981,14 +9974,21 @@
           "realm": "가리안 03"
         },
         {
-          "nickname": "앙링야호",
-          "job": "주문각인사",
+          "nickname": "무야호",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "가리안 03"
         },
         {
           "nickname": "석금야호",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "앙링야호",
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
@@ -10303,14 +10303,14 @@
           "realm": "가리안 03"
         },
         {
-          "nickname": "어둠노을",
+          "nickname": "Rex",
           "job": "향사수",
           "level": 92,
           "conquestGrade": 25,
           "realm": "가리안 03"
         },
         {
-          "nickname": "Rex",
+          "nickname": "어둠노을",
           "job": "향사수",
           "level": 92,
           "conquestGrade": 25,
@@ -10436,17 +10436,17 @@
           "realm": "가리안 03"
         },
         {
-          "nickname": "홀리쉣",
-          "job": "집행관",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "가리안 03"
-        },
-        {
           "nickname": "눈별",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 24,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "홀리쉣",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "가리안 03"
         }
       ]
@@ -15483,14 +15483,14 @@
           "realm": "제롬 02"
         },
         {
-          "nickname": "까츄",
+          "nickname": "푸우",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "제롬 02"
         },
         {
-          "nickname": "푸우",
+          "nickname": "까츄",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
@@ -17216,7 +17216,7 @@
     "제과점|제롬": {
       "guildName": "제과점",
       "world": "제롬",
-      "memberCount": 45,
+      "memberCount": 46,
       "members": [
         {
           "nickname": "대머리모꼬꼬",
@@ -17234,6 +17234,13 @@
         },
         {
           "nickname": "엘리스",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "제롬 05"
+        },
+        {
+          "nickname": "쿠크다스",
           "job": "집행관",
           "level": 92,
           "conquestGrade": 26,
@@ -25616,7 +25623,7 @@
     "시정잡배|타리아": {
       "guildName": "시정잡배",
       "world": "타리아",
-      "memberCount": 9,
+      "memberCount": 8,
       "members": [
         {
           "nickname": "샤이탄",
@@ -25665,13 +25672,6 @@
           "job": "야만투사",
           "level": 89,
           "conquestGrade": 23,
-          "realm": "타리아 03"
-        },
-        {
-          "nickname": "Re",
-          "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 24,
           "realm": "타리아 03"
         },
         {
@@ -27058,7 +27058,7 @@
     "명품결사|타리아": {
       "guildName": "명품결사",
       "world": "타리아",
-      "memberCount": 33,
+      "memberCount": 32,
       "members": [
         {
           "nickname": "명품맥스",
@@ -27209,13 +27209,6 @@
         },
         {
           "nickname": "명품쁘락치커사장",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "타리아 05"
-        },
-        {
-          "nickname": "명품깨동",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
@@ -30283,5 +30276,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-24T19:00:43.724Z"
+  "updatedAt": "2026-07-24T19:10:44.846Z"
 }
