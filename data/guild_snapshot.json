@@ -7528,7 +7528,7 @@
     "X|아민타": {
       "guildName": "X",
       "world": "아민타",
-      "memberCount": 12,
+      "memberCount": 13,
       "members": [
         {
           "nickname": "엑스",
@@ -7555,6 +7555,13 @@
           "nickname": "꺼먹살이",
           "job": "심연추방자",
           "level": 86,
+          "conquestGrade": 21,
+          "realm": "아민타 04"
+        },
+        {
+          "nickname": "구월생",
+          "job": "야만투사",
+          "level": 85,
           "conquestGrade": 21,
           "realm": "아민타 04"
         },
@@ -7709,7 +7716,7 @@
           "nickname": "금강역사",
           "job": "주문각인사",
           "level": 86,
-          "conquestGrade": 20,
+          "conquestGrade": 21,
           "realm": "아민타 04"
         },
         {
@@ -12365,7 +12372,7 @@
     "유니크|사도바": {
       "guildName": "유니크",
       "world": "사도바",
-      "memberCount": 46,
+      "memberCount": 45,
       "members": [
         {
           "nickname": "건달이얌",
@@ -12540,13 +12547,6 @@
           "job": "야만투사",
           "level": 91,
           "conquestGrade": 26,
-          "realm": "사도바 02"
-        },
-        {
-          "nickname": "깜장콩",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 24,
           "realm": "사도바 02"
         },
         {
@@ -22371,6 +22371,13 @@
           "realm": "나세르 02"
         },
         {
+          "nickname": "파스",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 24,
+          "realm": "나세르 02"
+        },
+        {
           "nickname": "링쿠",
           "job": "향사수",
           "level": 88,
@@ -22389,13 +22396,6 @@
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 22,
-          "realm": "나세르 02"
-        },
-        {
-          "nickname": "파스",
-          "job": "주문각인사",
-          "level": 87,
-          "conquestGrade": 24,
           "realm": "나세르 02"
         }
       ]
@@ -23302,16 +23302,16 @@
           "realm": "나세르 04"
         },
         {
-          "nickname": "베스키",
-          "job": "향사수",
+          "nickname": "문냥",
+          "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
           "realm": "나세르 04"
         },
         {
-          "nickname": "문냥",
-          "job": "주문각인사",
-          "level": 88,
+          "nickname": "베스키",
+          "job": "향사수",
+          "level": 89,
           "conquestGrade": 24,
           "realm": "나세르 04"
         },
@@ -27579,17 +27579,17 @@
           "realm": "메르비스 01"
         },
         {
-          "nickname": "가다마니",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "메르비스 01"
-        },
-        {
           "nickname": "포엑스뿌뿌",
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "가다마니",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 25,
           "realm": "메르비스 01"
         },
         {
@@ -30381,5 +30381,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-24T23:00:43.342Z"
+  "updatedAt": "2026-07-24T23:10:44.584Z"
 }
