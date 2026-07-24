@@ -21846,15 +21846,15 @@
           "realm": "나세르 02"
         },
         {
-          "nickname": "이모요기참이슬요야호",
-          "job": "야만투사",
+          "nickname": "르센느야호",
+          "job": "집행관",
           "level": 92,
           "conquestGrade": 25,
           "realm": "나세르 02"
         },
         {
-          "nickname": "르센느야호",
-          "job": "집행관",
+          "nickname": "이모요기참이슬요야호",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "나세르 02"
@@ -22000,13 +22000,6 @@
           "realm": "나세르 02"
         },
         {
-          "nickname": "방패야호",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "나세르 02"
-        },
-        {
           "nickname": "칸야호",
           "job": "향사수",
           "level": 90,
@@ -22018,6 +22011,13 @@
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 23,
+          "realm": "나세르 02"
+        },
+        {
+          "nickname": "방패야호",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "나세르 02"
         },
         {
@@ -25049,8 +25049,15 @@
     "꾸러기수비대|타리아": {
       "guildName": "꾸러기수비대",
       "world": "타리아",
-      "memberCount": 4,
+      "memberCount": 5,
       "members": [
+        {
+          "nickname": "농민",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 20,
+          "realm": "타리아 01"
+        },
         {
           "nickname": "예토",
           "job": "태양감시자",
@@ -27915,17 +27922,17 @@
           "realm": "메르비스 01"
         },
         {
-          "nickname": "사장아",
-          "job": "집행관",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "메르비스 01"
-        },
-        {
           "nickname": "카즈아",
           "job": "집행관",
           "level": 91,
           "conquestGrade": 26,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "사장아",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "메르비스 01"
         },
         {
@@ -30311,5 +30318,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-24T21:30:44.754Z"
+  "updatedAt": "2026-07-24T21:40:43.008Z"
 }
