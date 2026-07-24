@@ -3,7 +3,7 @@
     "미르|론도": {
       "guildName": "미르",
       "world": "론도",
-      "memberCount": 45,
+      "memberCount": 46,
       "members": [
         {
           "nickname": "이준구",
@@ -213,6 +213,13 @@
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 22,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "래드",
+          "job": "야만투사",
+          "level": 88,
+          "conquestGrade": 23,
           "realm": "론도 01"
         },
         {
@@ -6898,7 +6905,7 @@
     "중립|아민타": {
       "guildName": "중립",
       "world": "아민타",
-      "memberCount": 8,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "황금제국",
@@ -6947,13 +6954,6 @@
           "job": "향사수",
           "level": 79,
           "conquestGrade": 13,
-          "realm": "아민타 03"
-        },
-        {
-          "nickname": "가루다",
-          "job": "주문각인사",
-          "level": 79,
-          "conquestGrade": 16,
           "realm": "아민타 03"
         }
       ]
@@ -14682,7 +14682,7 @@
     "악시|제롬": {
       "guildName": "악시",
       "world": "제롬",
-      "memberCount": 46,
+      "memberCount": 47,
       "members": [
         {
           "nickname": "괴물쥐",
@@ -14763,6 +14763,13 @@
         },
         {
           "nickname": "거악",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 24,
+          "realm": "제롬 01"
+        },
+        {
+          "nickname": "당연하쥐",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 24,
@@ -17559,7 +17566,7 @@
     "츄르원정대|제롬": {
       "guildName": "츄르원정대",
       "world": "제롬",
-      "memberCount": 11,
+      "memberCount": 12,
       "members": [
         {
           "nickname": "구냥",
@@ -17580,6 +17587,13 @@
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 23,
+          "realm": "제롬 05"
+        },
+        {
+          "nickname": "초코콘",
+          "job": "향사수",
+          "level": 87,
+          "conquestGrade": 21,
           "realm": "제롬 05"
         },
         {
@@ -18243,7 +18257,7 @@
         {
           "nickname": "무치야호",
           "job": "집행관",
-          "level": 92,
+          "level": 91,
           "conquestGrade": 26,
           "realm": "아티산 01"
         },
@@ -25256,6 +25270,34 @@
         }
       ]
     },
+    "조용한패밀리|타리아": {
+      "guildName": "조용한패밀리",
+      "world": "타리아",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "실비",
+          "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 23,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "힘멜",
+          "job": "집행관",
+          "level": 86,
+          "conquestGrade": 23,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "슈타르크",
+          "job": "야만투사",
+          "level": 84,
+          "conquestGrade": 21,
+          "realm": "타리아 02"
+        }
+      ]
+    },
     "LEMONADE|타리아": {
       "guildName": "LEMONADE",
       "world": "타리아",
@@ -29711,7 +29753,7 @@
     "시나브로|메르비스": {
       "guildName": "시나브로",
       "world": "메르비스",
-      "memberCount": 14,
+      "memberCount": 13,
       "members": [
         {
           "nickname": "미나미",
@@ -29781,13 +29823,6 @@
           "job": "집행관",
           "level": 81,
           "conquestGrade": 18,
-          "realm": "메르비스 05"
-        },
-        {
-          "nickname": "도람프",
-          "job": "집행관",
-          "level": 81,
-          "conquestGrade": 19,
           "realm": "메르비스 05"
         },
         {
@@ -30038,5 +30073,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-24T05:40:43.177Z"
+  "updatedAt": "2026-07-24T05:50:44.819Z"
 }
