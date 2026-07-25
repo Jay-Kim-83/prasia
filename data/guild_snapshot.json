@@ -2264,7 +2264,7 @@
     "악인|론도": {
       "guildName": "악인",
       "world": "론도",
-      "memberCount": 18,
+      "memberCount": 19,
       "members": [
         {
           "nickname": "나야쿠영",
@@ -2375,6 +2375,13 @@
           "nickname": "샤미",
           "job": "야만투사",
           "level": 85,
+          "conquestGrade": 21,
+          "realm": "론도 05"
+        },
+        {
+          "nickname": "홍의",
+          "job": "야만투사",
+          "level": 84,
           "conquestGrade": 21,
           "realm": "론도 05"
         },
@@ -3569,13 +3576,6 @@
           "realm": "라인소프 02"
         },
         {
-          "nickname": "미치광",
-          "job": "야만투사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "라인소프 02"
-        },
-        {
           "nickname": "로저",
           "job": "집행관",
           "level": 91,
@@ -3803,6 +3803,13 @@
           "nickname": "유원지",
           "job": "주문각인사",
           "level": 86,
+          "conquestGrade": 21,
+          "realm": "라인소프 02"
+        },
+        {
+          "nickname": "냥꼬",
+          "job": "주문각인사",
+          "level": 85,
           "conquestGrade": 21,
           "realm": "라인소프 02"
         }
@@ -9295,17 +9302,17 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "World",
-          "job": "집행관",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "가리안 02"
-        },
-        {
           "nickname": "이카",
           "job": "집행관",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "World",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 26,
           "realm": "가리안 02"
         },
         {
@@ -9859,7 +9866,7 @@
     "GOAT|가리안": {
       "guildName": "GOAT",
       "world": "가리안",
-      "memberCount": 18,
+      "memberCount": 19,
       "members": [
         {
           "nickname": "우렉마지노",
@@ -9986,13 +9993,20 @@
           "level": 91,
           "conquestGrade": 26,
           "realm": "가리안 03"
+        },
+        {
+          "nickname": "뮤즈카르텔제맘아시죠",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "가리안 03"
         }
       ]
     },
     "신백야|가리안": {
       "guildName": "신백야",
       "world": "가리안",
-      "memberCount": 34,
+      "memberCount": 33,
       "members": [
         {
           "nickname": "블랙팬서",
@@ -10025,13 +10039,6 @@
         {
           "nickname": "무야호",
           "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "가리안 03"
-        },
-        {
-          "nickname": "Joatttt",
-          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "가리안 03"
@@ -10951,34 +10958,6 @@
           "job": "집행관",
           "level": 82,
           "conquestGrade": 15,
-          "realm": "가리안 04"
-        }
-      ]
-    },
-    "사랑|가리안": {
-      "guildName": "사랑",
-      "world": "가리안",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "xhdqkf",
-          "job": "집행관",
-          "level": 82,
-          "conquestGrade": 20,
-          "realm": "가리안 04"
-        },
-        {
-          "nickname": "무너일",
-          "job": "태양감시자",
-          "level": 81,
-          "conquestGrade": 20,
-          "realm": "가리안 04"
-        },
-        {
-          "nickname": "메리미",
-          "job": "주문각인사",
-          "level": 81,
-          "conquestGrade": 19,
           "realm": "가리안 04"
         }
       ]
@@ -21650,17 +21629,17 @@
           "realm": "나세르 01"
         },
         {
-          "nickname": "지로",
-          "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 23,
-          "realm": "나세르 01"
-        },
-        {
           "nickname": "제드",
           "job": "환영검사",
           "level": 88,
           "conquestGrade": 24,
+          "realm": "나세르 01"
+        },
+        {
+          "nickname": "지로",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 23,
           "realm": "나세르 01"
         },
         {
@@ -22028,15 +22007,15 @@
           "realm": "나세르 02"
         },
         {
-          "nickname": "방패야호",
-          "job": "집행관",
+          "nickname": "스칼라야호",
+          "job": "향사수",
           "level": 90,
           "conquestGrade": 25,
           "realm": "나세르 02"
         },
         {
-          "nickname": "스칼라야호",
-          "job": "향사수",
+          "nickname": "방패야호",
+          "job": "집행관",
           "level": 90,
           "conquestGrade": 25,
           "realm": "나세르 02"
@@ -22123,7 +22102,7 @@
     "씸판|나세르": {
       "guildName": "씸판",
       "world": "나세르",
-      "memberCount": 39,
+      "memberCount": 38,
       "members": [
         {
           "nickname": "Devil",
@@ -22155,13 +22134,6 @@
         },
         {
           "nickname": "악동이",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "나세르 02"
-        },
-        {
-          "nickname": "관짝이의광휘",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
@@ -22403,7 +22375,7 @@
     "드라마|나세르": {
       "guildName": "드라마",
       "world": "나세르",
-      "memberCount": 12,
+      "memberCount": 13,
       "members": [
         {
           "nickname": "쏘주",
@@ -22487,6 +22459,13 @@
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 23,
+          "realm": "나세르 02"
+        },
+        {
+          "nickname": "군검사",
+          "job": "향사수",
+          "level": 87,
+          "conquestGrade": 22,
           "realm": "나세르 02"
         }
       ]
@@ -23556,7 +23535,7 @@
         {
           "nickname": "알새우칩",
           "job": "집행관",
-          "level": 88,
+          "level": 89,
           "conquestGrade": 24,
           "realm": "나세르 04"
         },
@@ -24142,13 +24121,6 @@
           "realm": "나세르 05"
         },
         {
-          "nickname": "명보",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 23,
-          "realm": "나세르 05"
-        },
-        {
           "nickname": "토끼선인",
           "job": "향사수",
           "level": 86,
@@ -24209,6 +24181,13 @@
           "job": "주문각인사",
           "level": 84,
           "conquestGrade": 20,
+          "realm": "나세르 05"
+        },
+        {
+          "nickname": "단토끼",
+          "job": "향사수",
+          "level": 83,
+          "conquestGrade": 19,
           "realm": "나세르 05"
         }
       ]
@@ -24356,7 +24335,7 @@
     "귀뚤단|나세르": {
       "guildName": "귀뚤단",
       "world": "나세르",
-      "memberCount": 8,
+      "memberCount": 9,
       "members": [
         {
           "nickname": "채린",
@@ -24412,6 +24391,13 @@
           "job": "향사수",
           "level": 83,
           "conquestGrade": 20,
+          "realm": "나세르 05"
+        },
+        {
+          "nickname": "퐁두",
+          "job": "주문각인사",
+          "level": 83,
+          "conquestGrade": 17,
           "realm": "나세르 05"
         }
       ]
@@ -27789,17 +27775,17 @@
           "realm": "메르비스 01"
         },
         {
-          "nickname": "명품천개",
-          "job": "집행관",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "메르비스 01"
-        },
-        {
           "nickname": "고노미",
           "job": "집행관",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "명품천개",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 26,
           "realm": "메르비스 01"
         },
         {
@@ -28050,7 +28036,7 @@
         {
           "nickname": "꽃사슴",
           "job": "주문각인사",
-          "level": 90,
+          "level": 91,
           "conquestGrade": 25,
           "realm": "메르비스 01"
         },
@@ -28281,7 +28267,7 @@
         {
           "nickname": "삼팔",
           "job": "주문각인사",
-          "level": 90,
+          "level": 89,
           "conquestGrade": 24,
           "realm": "메르비스 02"
         },
@@ -30276,5 +30262,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-25T07:50:45.113Z"
+  "updatedAt": "2026-07-25T08:00:44.111Z"
 }
