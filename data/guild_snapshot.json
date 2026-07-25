@@ -3041,7 +3041,7 @@
     "일톤트럭|라인소프": {
       "guildName": "일톤트럭",
       "world": "라인소프",
-      "memberCount": 13,
+      "memberCount": 14,
       "members": [
         {
           "nickname": "축복온달",
@@ -3107,6 +3107,13 @@
           "realm": "라인소프 01"
         },
         {
+          "nickname": "축복미도",
+          "job": "향사수",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "라인소프 01"
+        },
+        {
           "nickname": "글게요",
           "job": "향사수",
           "level": 91,
@@ -3139,7 +3146,7 @@
     "신백야|라인소프": {
       "guildName": "신백야",
       "world": "라인소프",
-      "memberCount": 29,
+      "memberCount": 28,
       "members": [
         {
           "nickname": "팬서",
@@ -3335,13 +3342,6 @@
           "job": "향사수",
           "level": 90,
           "conquestGrade": 24,
-          "realm": "라인소프 01"
-        },
-        {
-          "nickname": "빵지",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 23,
           "realm": "라인소프 01"
         }
       ]
@@ -5886,15 +5886,15 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "망망몬",
-          "job": "향사수",
+          "nickname": "무쇠몬",
+          "job": "집행관",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아민타 01"
         },
         {
-          "nickname": "무쇠몬",
-          "job": "집행관",
+          "nickname": "망망몬",
+          "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아민타 01"
@@ -5977,13 +5977,6 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "강커리",
-          "job": "향사수",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "아민타 01"
-        },
-        {
           "nickname": "강별",
           "job": "태양감시자",
           "level": 92,
@@ -5993,6 +5986,13 @@
         {
           "nickname": "강꿀꿀",
           "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "강커리",
+          "job": "향사수",
           "level": 92,
           "conquestGrade": 26,
           "realm": "아민타 01"
@@ -22044,7 +22044,7 @@
         {
           "nickname": "그레이색이야",
           "job": "향사수",
-          "level": 87,
+          "level": 86,
           "conquestGrade": 21,
           "realm": "나세르 02"
         },
@@ -23323,17 +23323,17 @@
           "realm": "나세르 04"
         },
         {
-          "nickname": "백점",
-          "job": "야만투사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "나세르 04"
-        },
-        {
           "nickname": "뿌뿌뿌뿌뿌뿌뿌뿌뿌",
           "job": "환영검사",
           "level": 91,
           "conquestGrade": 24,
+          "realm": "나세르 04"
+        },
+        {
+          "nickname": "백점",
+          "job": "야만투사",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "나세르 04"
         },
         {
@@ -29114,5 +29114,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-25T19:20:44.446Z"
+  "updatedAt": "2026-07-25T19:30:44.516Z"
 }
