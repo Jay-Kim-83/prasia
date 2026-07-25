@@ -8445,7 +8445,7 @@
     "진격의디지몬|가리안": {
       "guildName": "진격의디지몬",
       "world": "가리안",
-      "memberCount": 46,
+      "memberCount": 47,
       "members": [
         {
           "nickname": "현이몬",
@@ -8505,6 +8505,13 @@
         },
         {
           "nickname": "마크몬",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "가리안 01"
+        },
+        {
+          "nickname": "바벨몬",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
@@ -8854,15 +8861,15 @@
           "realm": "가리안 01"
         },
         {
-          "nickname": "에휴",
-          "job": "집행관",
+          "nickname": "내가왕이다",
+          "job": "향사수",
           "level": 89,
           "conquestGrade": 23,
           "realm": "가리안 01"
         },
         {
-          "nickname": "내가왕이다",
-          "job": "향사수",
+          "nickname": "에휴",
+          "job": "집행관",
           "level": 89,
           "conquestGrade": 23,
           "realm": "가리안 01"
@@ -9701,15 +9708,15 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "속쓰리면트리겔정",
-          "job": "주문각인사",
+          "nickname": "고래상어",
+          "job": "향사수",
           "level": 90,
           "conquestGrade": 24,
           "realm": "가리안 02"
         },
         {
-          "nickname": "고래상어",
-          "job": "향사수",
+          "nickname": "속쓰리면트리겔정",
+          "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
           "realm": "가리안 02"
@@ -20702,7 +20709,7 @@
     "직장인|아티산": {
       "guildName": "직장인",
       "world": "아티산",
-      "memberCount": 6,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "아시",
@@ -20744,6 +20751,13 @@
           "job": "태양감시자",
           "level": 79,
           "conquestGrade": 1,
+          "realm": "아티산 05"
+        },
+        {
+          "nickname": "레이에",
+          "job": "환영검사",
+          "level": 77,
+          "conquestGrade": 7,
           "realm": "아티산 05"
         }
       ]
@@ -22644,6 +22658,13 @@
           "realm": "나세르 03"
         },
         {
+          "nickname": "후추를후추추",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 23,
+          "realm": "나세르 03"
+        },
+        {
           "nickname": "부탄가스",
           "job": "집행관",
           "level": 88,
@@ -22653,13 +22674,6 @@
         {
           "nickname": "슈란",
           "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 23,
-          "realm": "나세르 03"
-        },
-        {
-          "nickname": "후추를후추추",
-          "job": "집행관",
           "level": 88,
           "conquestGrade": 23,
           "realm": "나세르 03"
@@ -27156,7 +27170,7 @@
     "명품결사|타리아": {
       "guildName": "명품결사",
       "world": "타리아",
-      "memberCount": 24,
+      "memberCount": 23,
       "members": [
         {
           "nickname": "명품맥스",
@@ -27268,13 +27282,6 @@
           "job": "집행관",
           "level": 89,
           "conquestGrade": 23,
-          "realm": "타리아 05"
-        },
-        {
-          "nickname": "명품쁘락치커사장",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 24,
           "realm": "타리아 05"
         },
         {
@@ -30353,5 +30360,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-25T00:20:44.105Z"
+  "updatedAt": "2026-07-25T00:30:44.202Z"
 }
