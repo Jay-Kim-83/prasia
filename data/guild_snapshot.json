@@ -3,7 +3,7 @@
     "CAT|론도": {
       "guildName": "CAT",
       "world": "론도",
-      "memberCount": 32,
+      "memberCount": 33,
       "members": [
         {
           "nickname": "새싹",
@@ -30,6 +30,13 @@
           "nickname": "얌얌얌",
           "job": "야만투사",
           "level": 92,
+          "conquestGrade": 25,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "치악산",
+          "job": "향사수",
+          "level": 91,
           "conquestGrade": 25,
           "realm": "론도 01"
         },
@@ -3597,6 +3604,13 @@
           "realm": "라인소프 01"
         },
         {
+          "nickname": "JackPot",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "라인소프 01"
+        },
+        {
           "nickname": "권뚜뚜",
           "job": "야만투사",
           "level": 92,
@@ -3650,13 +3664,6 @@
           "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
-          "realm": "라인소프 01"
-        },
-        {
-          "nickname": "핵터",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 24,
           "realm": "라인소프 01"
         }
       ]
@@ -6649,15 +6656,15 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "꾸댕",
-          "job": "향사수",
+          "nickname": "아이스쿠림",
+          "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아민타 02"
         },
         {
-          "nickname": "아이스쿠림",
-          "job": "집행관",
+          "nickname": "꾸댕",
+          "job": "향사수",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아민타 02"
@@ -21692,16 +21699,16 @@
           "realm": "나세르 01"
         },
         {
-          "nickname": "촉법소년",
-          "job": "환영검사",
+          "nickname": "촉법소녀",
+          "job": "주문각인사",
           "level": 89,
           "conquestGrade": 23,
           "realm": "나세르 01"
         },
         {
-          "nickname": "촉법소녀",
-          "job": "주문각인사",
-          "level": 88,
+          "nickname": "촉법소년",
+          "job": "환영검사",
+          "level": 89,
           "conquestGrade": 23,
           "realm": "나세르 01"
         },
@@ -29443,5 +29450,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-26T04:50:44.450Z"
+  "updatedAt": "2026-07-26T05:00:44.951Z"
 }
