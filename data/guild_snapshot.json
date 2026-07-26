@@ -3310,6 +3310,13 @@
           "realm": "라인소프 01"
         },
         {
+          "nickname": "Ganzi",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "라인소프 01"
+        },
+        {
           "nickname": "백야암흑",
           "job": "주문각인사",
           "level": 92,
@@ -3367,13 +3374,6 @@
         },
         {
           "nickname": "양아치끝판대장",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "라인소프 01"
-        },
-        {
-          "nickname": "시작이",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
@@ -4013,7 +4013,7 @@
           "nickname": "덤프",
           "job": "주문각인사",
           "level": 86,
-          "conquestGrade": 21,
+          "conquestGrade": 22,
           "realm": "라인소프 02"
         },
         {
@@ -5893,14 +5893,14 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "마크몬",
+          "nickname": "바벨몬",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "아민타 01"
         },
         {
-          "nickname": "바벨몬",
+          "nickname": "마크몬",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
@@ -10891,14 +10891,14 @@
           "realm": "가리안 04"
         },
         {
-          "nickname": "천둥이",
+          "nickname": "레드",
           "job": "집행관",
           "level": 91,
           "conquestGrade": 24,
           "realm": "가리안 04"
         },
         {
-          "nickname": "레드",
+          "nickname": "천둥이",
           "job": "집행관",
           "level": 91,
           "conquestGrade": 24,
@@ -11959,7 +11959,7 @@
     "금쪽이|사도바": {
       "guildName": "금쪽이",
       "world": "사도바",
-      "memberCount": 44,
+      "memberCount": 46,
       "members": [
         {
           "nickname": "핵존쎄",
@@ -12172,6 +12172,13 @@
           "realm": "사도바 01"
         },
         {
+          "nickname": "에드",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 23,
+          "realm": "사도바 01"
+        },
+        {
           "nickname": "와떠퍽",
           "job": "집행관",
           "level": 91,
@@ -12260,6 +12267,13 @@
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 23,
+          "realm": "사도바 01"
+        },
+        {
+          "nickname": "도펠뱅어",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 24,
           "realm": "사도바 01"
         },
         {
@@ -12603,34 +12617,6 @@
           "job": "향사수",
           "level": 88,
           "conquestGrade": 22,
-          "realm": "사도바 01"
-        }
-      ]
-    },
-    "영웅|사도바": {
-      "guildName": "영웅",
-      "world": "사도바",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "초로이",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 22,
-          "realm": "사도바 01"
-        },
-        {
-          "nickname": "현대",
-          "job": "집행관",
-          "level": 88,
-          "conquestGrade": 22,
-          "realm": "사도바 01"
-        },
-        {
-          "nickname": "머슴아",
-          "job": "향사수",
-          "level": 87,
-          "conquestGrade": 21,
           "realm": "사도바 01"
         }
       ]
@@ -21003,7 +20989,7 @@
     "DOG|나세르": {
       "guildName": "DOG",
       "world": "나세르",
-      "memberCount": 40,
+      "memberCount": 41,
       "members": [
         {
           "nickname": "아톰",
@@ -21280,6 +21266,13 @@
         },
         {
           "nickname": "로카",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "나세르 01"
+        },
+        {
+          "nickname": "와치",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
@@ -27041,6 +27034,41 @@
         }
       ]
     },
+    "금융치료|메르비스": {
+      "guildName": "금융치료",
+      "world": "메르비스",
+      "memberCount": 4,
+      "members": [
+        {
+          "nickname": "명품천개",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "명품황종",
+          "job": "향사수",
+          "level": 89,
+          "conquestGrade": 22,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "굿보이",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 22,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "힐러",
+          "job": "주문각인사",
+          "level": 84,
+          "conquestGrade": 21,
+          "realm": "메르비스 01"
+        }
+      ]
+    },
     "똑똑|메르비스": {
       "guildName": "똑똑",
       "world": "메르비스",
@@ -29317,5 +29345,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-26T00:10:44.185Z"
+  "updatedAt": "2026-07-26T00:20:46.004Z"
 }
