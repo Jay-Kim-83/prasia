@@ -3,7 +3,7 @@
     "CAT|론도": {
       "guildName": "CAT",
       "world": "론도",
-      "memberCount": 37,
+      "memberCount": 38,
       "members": [
         {
           "nickname": "새싹",
@@ -15,6 +15,13 @@
         {
           "nickname": "프로도",
           "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "영약이",
+          "job": "향사수",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 01"
@@ -1795,41 +1802,6 @@
           "job": "주문각인사",
           "level": 84,
           "conquestGrade": 19,
-          "realm": "론도 03"
-        }
-      ]
-    },
-    "건드라라|론도": {
-      "guildName": "건드라라",
-      "world": "론도",
-      "memberCount": 4,
-      "members": [
-        {
-          "nickname": "스배라마",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "론도 03"
-        },
-        {
-          "nickname": "네송희이",
-          "job": "집행관",
-          "level": 84,
-          "conquestGrade": 20,
-          "realm": "론도 03"
-        },
-        {
-          "nickname": "삼팔삼사",
-          "job": "집행관",
-          "level": 83,
-          "conquestGrade": 17,
-          "realm": "론도 03"
-        },
-        {
-          "nickname": "우랄랄리",
-          "job": "집행관",
-          "level": 83,
-          "conquestGrade": 18,
           "realm": "론도 03"
         }
       ]
@@ -11871,13 +11843,6 @@
           "realm": "가리안 05"
         },
         {
-          "nickname": "왓섭",
-          "job": "향사수",
-          "level": 88,
-          "conquestGrade": 23,
-          "realm": "가리안 05"
-        },
-        {
           "nickname": "어린신부",
           "job": "집행관",
           "level": 88,
@@ -11889,6 +11854,13 @@
           "job": "태양감시자",
           "level": 88,
           "conquestGrade": 21,
+          "realm": "가리안 05"
+        },
+        {
+          "nickname": "왓섭",
+          "job": "향사수",
+          "level": 88,
+          "conquestGrade": 23,
           "realm": "가리안 05"
         },
         {
@@ -22539,17 +22511,17 @@
           "realm": "나세르 03"
         },
         {
-          "nickname": "슬로스",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "나세르 03"
-        },
-        {
           "nickname": "이매",
           "job": "향사수",
           "level": 90,
           "conquestGrade": 23,
+          "realm": "나세르 03"
+        },
+        {
+          "nickname": "슬로스",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 24,
           "realm": "나세르 03"
         },
         {
@@ -23094,7 +23066,7 @@
         {
           "nickname": "라미란",
           "job": "집행관",
-          "level": 86,
+          "level": 87,
           "conquestGrade": 20,
           "realm": "나세르 03"
         },
@@ -29632,5 +29604,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-26T13:10:44.479Z"
+  "updatedAt": "2026-07-26T13:20:45.670Z"
 }
