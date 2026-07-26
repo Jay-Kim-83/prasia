@@ -5876,7 +5876,7 @@
     "진격의디지몬|아민타": {
       "guildName": "진격의디지몬",
       "world": "아민타",
-      "memberCount": 16,
+      "memberCount": 15,
       "members": [
         {
           "nickname": "현이몬",
@@ -5979,13 +5979,6 @@
         {
           "nickname": "서리몬",
           "job": "향사수",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "아민타 01"
-        },
-        {
-          "nickname": "눈웃음",
-          "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아민타 01"
@@ -6345,7 +6338,7 @@
     "심판|아민타": {
       "guildName": "심판",
       "world": "아민타",
-      "memberCount": 10,
+      "memberCount": 11,
       "members": [
         {
           "nickname": "김부장",
@@ -6415,6 +6408,13 @@
           "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "개돌",
+          "job": "심연추방자",
+          "level": 91,
+          "conquestGrade": 24,
           "realm": "아민타 01"
         }
       ]
@@ -11859,7 +11859,7 @@
         {
           "nickname": "왓섭",
           "job": "향사수",
-          "level": 88,
+          "level": 87,
           "conquestGrade": 23,
           "realm": "가리안 05"
         },
@@ -12921,15 +12921,15 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "이르",
-          "job": "향사수",
+          "nickname": "밀크쵸코",
+          "job": "심연추방자",
           "level": 87,
           "conquestGrade": 21,
           "realm": "사도바 02"
         },
         {
-          "nickname": "밀크쵸코",
-          "job": "심연추방자",
+          "nickname": "이르",
+          "job": "향사수",
           "level": 87,
           "conquestGrade": 21,
           "realm": "사도바 02"
@@ -16040,13 +16040,20 @@
     "LOTTE|제롬": {
       "guildName": "LOTTE",
       "world": "제롬",
-      "memberCount": 8,
+      "memberCount": 9,
       "members": [
         {
           "nickname": "타락토끼",
           "job": "야만투사",
           "level": 88,
           "conquestGrade": 23,
+          "realm": "제롬 02"
+        },
+        {
+          "nickname": "머슬맨",
+          "job": "집행관",
+          "level": 86,
+          "conquestGrade": 21,
           "realm": "제롬 02"
         },
         {
@@ -27250,15 +27257,15 @@
           "realm": "메르비스 01"
         },
         {
-          "nickname": "노비",
-          "job": "주문각인사",
+          "nickname": "거몽",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "메르비스 01"
         },
         {
-          "nickname": "거몽",
-          "job": "야만투사",
+          "nickname": "노비",
+          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "메르비스 01"
@@ -29604,5 +29611,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-26T13:20:45.670Z"
+  "updatedAt": "2026-07-26T13:30:44.103Z"
 }
