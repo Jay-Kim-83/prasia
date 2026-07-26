@@ -3181,7 +3181,7 @@
     "신백야|라인소프": {
       "guildName": "신백야",
       "world": "라인소프",
-      "memberCount": 24,
+      "memberCount": 23,
       "members": [
         {
           "nickname": "팬서",
@@ -3317,6 +3317,13 @@
           "realm": "라인소프 01"
         },
         {
+          "nickname": "백망키",
+          "job": "향사수",
+          "level": 91,
+          "conquestGrade": 26,
+          "realm": "라인소프 01"
+        },
+        {
           "nickname": "이슬야호",
           "job": "향사수",
           "level": 91,
@@ -3333,20 +3340,6 @@
         {
           "nickname": "쥐방울",
           "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 26,
-          "realm": "라인소프 01"
-        },
-        {
-          "nickname": "악덕업주",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 26,
-          "realm": "라인소프 01"
-        },
-        {
-          "nickname": "백망키",
-          "job": "향사수",
           "level": 91,
           "conquestGrade": 26,
           "realm": "라인소프 01"
@@ -3517,7 +3510,7 @@
     "영혼|라인소프": {
       "guildName": "영혼",
       "world": "라인소프",
-      "memberCount": 4,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "곰표",
@@ -3545,6 +3538,13 @@
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "라인소프 01"
+        },
+        {
+          "nickname": "단단",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 26,
           "realm": "라인소프 01"
         }
       ]
@@ -7511,6 +7511,34 @@
         }
       ]
     },
+    "YY|아민타": {
+      "guildName": "YY",
+      "world": "아민타",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "SWQ",
+          "job": "환영검사",
+          "level": 84,
+          "conquestGrade": 20,
+          "realm": "아민타 03"
+        },
+        {
+          "nickname": "희자",
+          "job": "집행관",
+          "level": 83,
+          "conquestGrade": 14,
+          "realm": "아민타 03"
+        },
+        {
+          "nickname": "해골",
+          "job": "집행관",
+          "level": 82,
+          "conquestGrade": 19,
+          "realm": "아민타 03"
+        }
+      ]
+    },
     "백|아민타": {
       "guildName": "백",
       "world": "아민타",
@@ -8921,7 +8949,7 @@
     "북미깡|가리안": {
       "guildName": "북미깡",
       "world": "가리안",
-      "memberCount": 29,
+      "memberCount": 28,
       "members": [
         {
           "nickname": "깡생마",
@@ -8968,13 +8996,6 @@
         {
           "nickname": "엑스뿌뿌",
           "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "가리안 01"
-        },
-        {
-          "nickname": "포엑스",
-          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "가리안 01"
@@ -9134,14 +9155,14 @@
       "memberCount": 10,
       "members": [
         {
-          "nickname": "명품순대국밥",
+          "nickname": "명품박하사탕",
           "job": "야만투사",
           "level": 93,
           "conquestGrade": 26,
           "realm": "가리안 01"
         },
         {
-          "nickname": "명품박하사탕",
+          "nickname": "명품순대국밥",
           "job": "야만투사",
           "level": 93,
           "conquestGrade": 26,
@@ -17986,8 +18007,15 @@
     "유랑|아티산": {
       "guildName": "유랑",
       "world": "아티산",
-      "memberCount": 36,
+      "memberCount": 37,
       "members": [
+        {
+          "nickname": "DlOR",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "아티산 01"
+        },
         {
           "nickname": "하랑이",
           "job": "주문각인사",
@@ -18427,7 +18455,7 @@
     "골드중독|아티산": {
       "guildName": "골드중독",
       "world": "아티산",
-      "memberCount": 29,
+      "memberCount": 28,
       "members": [
         {
           "nickname": "귀염뽕짝산적뿌뿌",
@@ -18623,13 +18651,6 @@
           "job": "향사수",
           "level": 88,
           "conquestGrade": 23,
-          "realm": "아티산 01"
-        },
-        {
-          "nickname": "반지형",
-          "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 24,
           "realm": "아티산 01"
         }
       ]
@@ -29492,5 +29513,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-26T08:10:45.200Z"
+  "updatedAt": "2026-07-26T08:20:44.226Z"
 }
