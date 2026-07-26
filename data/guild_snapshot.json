@@ -3678,7 +3678,7 @@
     "멍냥|라인소프": {
       "guildName": "멍냥",
       "world": "라인소프",
-      "memberCount": 3,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "까루",
@@ -3692,6 +3692,13 @@
           "job": "집행관",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "라인소프 02"
+        },
+        {
+          "nickname": "대석궁",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 24,
           "realm": "라인소프 02"
         },
         {
@@ -18290,6 +18297,13 @@
           "realm": "아티산 01"
         },
         {
+          "nickname": "렉돌",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "아티산 01"
+        },
+        {
           "nickname": "얌생형",
           "job": "주문각인사",
           "level": 91,
@@ -18399,13 +18413,6 @@
           "job": "향사수",
           "level": 88,
           "conquestGrade": 24,
-          "realm": "아티산 01"
-        },
-        {
-          "nickname": "야근지옥",
-          "job": "향사수",
-          "level": 88,
-          "conquestGrade": 22,
           "realm": "아티산 01"
         }
       ]
@@ -23085,15 +23092,15 @@
           "realm": "나세르 04"
         },
         {
-          "nickname": "웃바",
-          "job": "집행관",
+          "nickname": "면역",
+          "job": "향사수",
           "level": 89,
           "conquestGrade": 24,
           "realm": "나세르 04"
         },
         {
-          "nickname": "면역",
-          "job": "향사수",
+          "nickname": "웃바",
+          "job": "집행관",
           "level": 89,
           "conquestGrade": 24,
           "realm": "나세르 04"
@@ -28220,7 +28227,7 @@
     "미르|메르비스": {
       "guildName": "미르",
       "world": "메르비스",
-      "memberCount": 9,
+      "memberCount": 10,
       "members": [
         {
           "nickname": "볼빵빵다람쥐",
@@ -28273,6 +28280,13 @@
         },
         {
           "nickname": "백만볼트조카츄",
+          "job": "집행관",
+          "level": 82,
+          "conquestGrade": 19,
+          "realm": "메르비스 03"
+        },
+        {
+          "nickname": "TKE",
           "job": "집행관",
           "level": 82,
           "conquestGrade": 19,
@@ -29471,5 +29485,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-26T06:40:43.141Z"
+  "updatedAt": "2026-07-26T06:50:45.174Z"
 }
