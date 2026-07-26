@@ -244,17 +244,17 @@
           "realm": "론도 01"
         },
         {
-          "nickname": "윙티",
-          "job": "태양감시자",
-          "level": 88,
-          "conquestGrade": 23,
-          "realm": "론도 01"
-        },
-        {
           "nickname": "모모쨩",
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 22,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "윙티",
+          "job": "태양감시자",
+          "level": 88,
+          "conquestGrade": 23,
           "realm": "론도 01"
         },
         {
@@ -22351,34 +22351,6 @@
         }
       ]
     },
-    "전통|나세르": {
-      "guildName": "전통",
-      "world": "나세르",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "고집",
-          "job": "주문각인사",
-          "level": 83,
-          "conquestGrade": 19,
-          "realm": "나세르 02"
-        },
-        {
-          "nickname": "전우치",
-          "job": "집행관",
-          "level": 83,
-          "conquestGrade": 14,
-          "realm": "나세르 02"
-        },
-        {
-          "nickname": "싱글",
-          "job": "향사수",
-          "level": 82,
-          "conquestGrade": 15,
-          "realm": "나세르 02"
-        }
-      ]
-    },
     "신분증|나세르": {
       "guildName": "신분증",
       "world": "나세르",
@@ -24195,6 +24167,34 @@
           "job": "주문각인사",
           "level": 80,
           "conquestGrade": 17,
+          "realm": "나세르 05"
+        }
+      ]
+    },
+    "NG|나세르": {
+      "guildName": "NG",
+      "world": "나세르",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "테나",
+          "job": "집행관",
+          "level": 82,
+          "conquestGrade": 14,
+          "realm": "나세르 05"
+        },
+        {
+          "nickname": "길가메시",
+          "job": "집행관",
+          "level": 80,
+          "conquestGrade": 11,
+          "realm": "나세르 05"
+        },
+        {
+          "nickname": "치유사나기",
+          "job": "주문각인사",
+          "level": 79,
+          "conquestGrade": 10,
           "realm": "나세르 05"
         }
       ]
@@ -27063,7 +27063,7 @@
         {
           "nickname": "니스",
           "job": "향사수",
-          "level": 83,
+          "level": 84,
           "conquestGrade": 20,
           "realm": "타리아 05"
         }
@@ -29464,5 +29464,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-26T17:10:43.744Z"
+  "updatedAt": "2026-07-26T17:20:43.442Z"
 }
