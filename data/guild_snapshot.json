@@ -3,7 +3,7 @@
     "CAT|론도": {
       "guildName": "CAT",
       "world": "론도",
-      "memberCount": 35,
+      "memberCount": 36,
       "members": [
         {
           "nickname": "새싹",
@@ -28,6 +28,13 @@
         },
         {
           "nickname": "얌얌얌",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "캣해일",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
@@ -204,7 +211,7 @@
         {
           "nickname": "윙티",
           "job": "태양감시자",
-          "level": 89,
+          "level": 88,
           "conquestGrade": 23,
           "realm": "론도 01"
         },
@@ -1882,17 +1889,17 @@
           "realm": "론도 04"
         },
         {
-          "nickname": "가신",
-          "job": "집행관",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "론도 04"
-        },
-        {
           "nickname": "파신",
           "job": "집행관",
           "level": 92,
           "conquestGrade": 26,
+          "realm": "론도 04"
+        },
+        {
+          "nickname": "가신",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 25,
           "realm": "론도 04"
         },
         {
@@ -2362,7 +2369,7 @@
     "악인|론도": {
       "guildName": "악인",
       "world": "론도",
-      "memberCount": 18,
+      "memberCount": 19,
       "members": [
         {
           "nickname": "나야쿠영",
@@ -2488,6 +2495,13 @@
           "job": "주문각인사",
           "level": 84,
           "conquestGrade": 19,
+          "realm": "론도 05"
+        },
+        {
+          "nickname": "우어",
+          "job": "환영검사",
+          "level": 83,
+          "conquestGrade": 21,
           "realm": "론도 05"
         }
       ]
@@ -3188,7 +3202,7 @@
     "신백야|라인소프": {
       "guildName": "신백야",
       "world": "라인소프",
-      "memberCount": 23,
+      "memberCount": 24,
       "members": [
         {
           "nickname": "팬서",
@@ -3346,6 +3360,13 @@
         },
         {
           "nickname": "쥐방울",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 26,
+          "realm": "라인소프 01"
+        },
+        {
+          "nickname": "악덕업주",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 26,
@@ -3517,7 +3538,7 @@
     "영혼|라인소프": {
       "guildName": "영혼",
       "world": "라인소프",
-      "memberCount": 5,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "곰표",
@@ -3545,13 +3566,6 @@
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
-          "realm": "라인소프 01"
-        },
-        {
-          "nickname": "단단",
-          "job": "집행관",
-          "level": 91,
-          "conquestGrade": 26,
           "realm": "라인소프 01"
         }
       ]
@@ -8367,7 +8381,7 @@
           "nickname": "에프킬러",
           "job": "주문각인사",
           "level": 86,
-          "conquestGrade": 20,
+          "conquestGrade": 21,
           "realm": "아민타 05"
         },
         {
@@ -10384,6 +10398,34 @@
           "job": "주문각인사",
           "level": 86,
           "conquestGrade": 21,
+          "realm": "가리안 03"
+        }
+      ]
+    },
+    "강원특별자치도|가리안": {
+      "guildName": "강원특별자치도",
+      "world": "가리안",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "밤바",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "감귤이아빠",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "쭈각",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 23,
           "realm": "가리안 03"
         }
       ]
@@ -26816,15 +26858,15 @@
           "realm": "타리아 05"
         },
         {
-          "nickname": "공개연애설",
-          "job": "주문각인사",
+          "nickname": "남궁민",
+          "job": "야만투사",
           "level": 84,
           "conquestGrade": 19,
           "realm": "타리아 05"
         },
         {
-          "nickname": "남궁민",
-          "job": "야만투사",
+          "nickname": "공개연애설",
+          "job": "주문각인사",
           "level": 84,
           "conquestGrade": 19,
           "realm": "타리아 05"
@@ -29527,5 +29569,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-26T08:50:45.734Z"
+  "updatedAt": "2026-07-26T09:00:43.338Z"
 }
