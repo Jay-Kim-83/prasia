@@ -3,7 +3,7 @@
     "CAT|론도": {
       "guildName": "CAT",
       "world": "론도",
-      "memberCount": 36,
+      "memberCount": 37,
       "members": [
         {
           "nickname": "새싹",
@@ -129,6 +129,13 @@
           "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "귀비",
+          "job": "환영검사",
+          "level": 90,
+          "conquestGrade": 23,
           "realm": "론도 01"
         },
         {
@@ -262,7 +269,7 @@
     "금쪽이|론도": {
       "guildName": "금쪽이",
       "world": "론도",
-      "memberCount": 29,
+      "memberCount": 28,
       "members": [
         {
           "nickname": "영약이",
@@ -458,13 +465,6 @@
           "job": "집행관",
           "level": 88,
           "conquestGrade": 21,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "블러",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 24,
           "realm": "론도 01"
         }
       ]
@@ -9614,8 +9614,15 @@
     "북깡미|가리안": {
       "guildName": "북깡미",
       "world": "가리안",
-      "memberCount": 7,
+      "memberCount": 8,
       "members": [
+        {
+          "nickname": "포엑스",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "가리안 01"
+        },
         {
           "nickname": "환원갈끄니까",
           "job": "주문각인사",
@@ -14951,15 +14958,15 @@
           "realm": "제롬 01"
         },
         {
-          "nickname": "곰띠",
-          "job": "주문각인사",
+          "nickname": "못된고양이",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "제롬 01"
         },
         {
-          "nickname": "못된고양이",
-          "job": "야만투사",
+          "nickname": "곰띠",
+          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "제롬 01"
@@ -16141,17 +16148,17 @@
           "realm": "제롬 02"
         },
         {
-          "nickname": "포도네방울",
-          "job": "주문각인사",
-          "level": 82,
-          "conquestGrade": 13,
-          "realm": "제롬 02"
-        },
-        {
           "nickname": "배신자여탕",
           "job": "집행관",
           "level": 82,
           "conquestGrade": 18,
+          "realm": "제롬 02"
+        },
+        {
+          "nickname": "포도네방울",
+          "job": "주문각인사",
+          "level": 82,
+          "conquestGrade": 13,
           "realm": "제롬 02"
         },
         {
@@ -29562,5 +29569,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-26T09:20:44.485Z"
+  "updatedAt": "2026-07-26T09:30:44.379Z"
 }
