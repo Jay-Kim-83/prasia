@@ -4592,41 +4592,6 @@
         }
       ]
     },
-    "마법학교|라인소프": {
-      "guildName": "마법학교",
-      "world": "라인소프",
-      "memberCount": 4,
-      "members": [
-        {
-          "nickname": "무식한싸움꾼",
-          "job": "주문각인사",
-          "level": 85,
-          "conquestGrade": 20,
-          "realm": "라인소프 03"
-        },
-        {
-          "nickname": "카야",
-          "job": "환영검사",
-          "level": 83,
-          "conquestGrade": 20,
-          "realm": "라인소프 03"
-        },
-        {
-          "nickname": "선물",
-          "job": "주문각인사",
-          "level": 82,
-          "conquestGrade": 19,
-          "realm": "라인소프 03"
-        },
-        {
-          "nickname": "언냐",
-          "job": "향사수",
-          "level": 81,
-          "conquestGrade": 19,
-          "realm": "라인소프 03"
-        }
-      ]
-    },
     "주막|라인소프": {
       "guildName": "주막",
       "world": "라인소프",
@@ -9050,17 +9015,17 @@
           "realm": "가리안 01"
         },
         {
-          "nickname": "인기쟁이땡칠이",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "가리안 01"
-        },
-        {
           "nickname": "엑스뿌뿌",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
+          "realm": "가리안 01"
+        },
+        {
+          "nickname": "인기쟁이땡칠이",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 25,
           "realm": "가리안 01"
         },
         {
@@ -9106,6 +9071,13 @@
           "realm": "가리안 01"
         },
         {
+          "nickname": "미니마니모",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "가리안 01"
+        },
+        {
           "nickname": "패드리퍼너덜너덜결사",
           "job": "주문각인사",
           "level": 92,
@@ -9115,13 +9087,6 @@
         {
           "nickname": "수색조장",
           "job": "집행관",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "가리안 01"
-        },
-        {
-          "nickname": "미니마니모",
-          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "가리안 01"
@@ -9680,6 +9645,13 @@
           "realm": "가리안 01"
         },
         {
+          "nickname": "카페인",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 24,
+          "realm": "가리안 01"
+        },
+        {
           "nickname": "쭈기",
           "job": "향사수",
           "level": 92,
@@ -9690,13 +9662,6 @@
           "nickname": "이방지",
           "job": "향사수",
           "level": 92,
-          "conquestGrade": 24,
-          "realm": "가리안 01"
-        },
-        {
-          "nickname": "카페인",
-          "job": "집행관",
-          "level": 91,
           "conquestGrade": 24,
           "realm": "가리안 01"
         },
@@ -10706,7 +10671,7 @@
     "시아|가리안": {
       "guildName": "시아",
       "world": "가리안",
-      "memberCount": 16,
+      "memberCount": 15,
       "members": [
         {
           "nickname": "비너스",
@@ -10748,13 +10713,6 @@
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 19,
-          "realm": "가리안 03"
-        },
-        {
-          "nickname": "떼끼",
-          "job": "태양감시자",
-          "level": 86,
-          "conquestGrade": 23,
           "realm": "가리안 03"
         },
         {
@@ -23936,7 +23894,7 @@
     "셔요|나세르": {
       "guildName": "셔요",
       "world": "나세르",
-      "memberCount": 4,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "천둥의신토르끼",
@@ -23964,6 +23922,13 @@
           "job": "집행관",
           "level": 85,
           "conquestGrade": 19,
+          "realm": "나세르 05"
+        },
+        {
+          "nickname": "AZ",
+          "job": "주문각인사",
+          "level": 83,
+          "conquestGrade": 18,
           "realm": "나세르 05"
         }
       ]
@@ -29688,5 +29653,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-26T12:40:43.268Z"
+  "updatedAt": "2026-07-26T12:50:45.239Z"
 }
