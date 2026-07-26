@@ -7981,7 +7981,7 @@
         {
           "nickname": "로또당첨",
           "job": "향사수",
-          "level": 85,
+          "level": 86,
           "conquestGrade": 21,
           "realm": "아민타 04"
         },
@@ -8413,17 +8413,17 @@
           "realm": "아민타 05"
         },
         {
-          "nickname": "대추랑",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "아민타 05"
-        },
-        {
           "nickname": "AB",
           "job": "향사수",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "아민타 05"
+        },
+        {
+          "nickname": "대추랑",
+          "job": "향사수",
+          "level": 89,
+          "conquestGrade": 23,
           "realm": "아민타 05"
         },
         {
@@ -8900,7 +8900,7 @@
     "북미깡|가리안": {
       "guildName": "북미깡",
       "world": "가리안",
-      "memberCount": 28,
+      "memberCount": 29,
       "members": [
         {
           "nickname": "깡생마",
@@ -9097,6 +9097,13 @@
           "level": 91,
           "conquestGrade": 24,
           "realm": "가리안 01"
+        },
+        {
+          "nickname": "이망고",
+          "job": "야만투사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "가리안 01"
         }
       ]
     },
@@ -9197,14 +9204,14 @@
           "realm": "가리안 01"
         },
         {
-          "nickname": "다이스",
+          "nickname": "더월식",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "가리안 01"
         },
         {
-          "nickname": "더월식",
+          "nickname": "다이스",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
@@ -9285,7 +9292,7 @@
     "MAD|가리안": {
       "guildName": "MAD",
       "world": "가리안",
-      "memberCount": 12,
+      "memberCount": 11,
       "members": [
         {
           "nickname": "특대방어",
@@ -9360,13 +9367,6 @@
         {
           "nickname": "불량장궁",
           "job": "향사수",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "가리안 01"
-        },
-        {
-          "nickname": "뉴발",
-          "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "가리안 01"
@@ -14258,15 +14258,15 @@
           "realm": "사도바 04"
         },
         {
-          "nickname": "투기",
-          "job": "야만투사",
+          "nickname": "페르시아",
+          "job": "집행관",
           "level": 81,
           "conquestGrade": 15,
           "realm": "사도바 04"
         },
         {
-          "nickname": "페르시아",
-          "job": "집행관",
+          "nickname": "투기",
+          "job": "야만투사",
           "level": 81,
           "conquestGrade": 15,
           "realm": "사도바 04"
@@ -17744,6 +17744,13 @@
           "realm": "제롬 05"
         },
         {
+          "nickname": "치즈냥",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "제롬 05"
+        },
+        {
           "nickname": "꼽냥",
           "job": "심연추방자",
           "level": 88,
@@ -17825,13 +17832,6 @@
           "job": "집행관",
           "level": 84,
           "conquestGrade": 20,
-          "realm": "제롬 05"
-        },
-        {
-          "nickname": "비오냥",
-          "job": "야만투사",
-          "level": 84,
-          "conquestGrade": 19,
           "realm": "제롬 05"
         }
       ]
@@ -26179,14 +26179,14 @@
           "realm": "타리아 04"
         },
         {
-          "nickname": "리센느",
+          "nickname": "늦음",
           "job": "집행관",
           "level": 88,
           "conquestGrade": 23,
           "realm": "타리아 04"
         },
         {
-          "nickname": "늦음",
+          "nickname": "리센느",
           "job": "집행관",
           "level": 88,
           "conquestGrade": 23,
@@ -29270,13 +29270,20 @@
     "아퀴|메르비스": {
       "guildName": "아퀴",
       "world": "메르비스",
-      "memberCount": 6,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "대전",
           "job": "태양감시자",
           "level": 87,
           "conquestGrade": 21,
+          "realm": "메르비스 05"
+        },
+        {
+          "nickname": "대구",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 20,
           "realm": "메르비스 05"
         },
         {
@@ -29478,5 +29485,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-26T19:30:44.460Z"
+  "updatedAt": "2026-07-26T19:40:44.960Z"
 }
