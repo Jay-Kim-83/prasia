@@ -10310,17 +10310,17 @@
           "realm": "가리안 03"
         },
         {
-          "nickname": "파고",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "가리안 03"
-        },
-        {
           "nickname": "혼자",
           "job": "집행관",
           "level": 86,
           "conquestGrade": 22,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "파고",
+          "job": "집행관",
+          "level": 86,
+          "conquestGrade": 21,
           "realm": "가리안 03"
         },
         {
@@ -12270,17 +12270,17 @@
           "realm": "사도바 01"
         },
         {
-          "nickname": "잔기도사",
-          "job": "환영검사",
-          "level": 90,
-          "conquestGrade": 23,
-          "realm": "사도바 01"
-        },
-        {
           "nickname": "왕고래밥",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "사도바 01"
+        },
+        {
+          "nickname": "잔기도사",
+          "job": "환영검사",
+          "level": 90,
+          "conquestGrade": 23,
           "realm": "사도바 01"
         },
         {
@@ -19599,17 +19599,17 @@
           "realm": "아티산 03"
         },
         {
-          "nickname": "쌍도",
-          "job": "환영검사",
-          "level": 87,
-          "conquestGrade": 22,
-          "realm": "아티산 03"
-        },
-        {
           "nickname": "티나양",
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 23,
+          "realm": "아티산 03"
+        },
+        {
+          "nickname": "쌍도",
+          "job": "환영검사",
+          "level": 87,
+          "conquestGrade": 22,
           "realm": "아티산 03"
         },
         {
@@ -23803,8 +23803,15 @@
     "로얄|나세르": {
       "guildName": "로얄",
       "world": "나세르",
-      "memberCount": 5,
+      "memberCount": 6,
       "members": [
+        {
+          "nickname": "천둥의신토르끼",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "나세르 05"
+        },
         {
           "nickname": "중구가토끼드나",
           "job": "집행관",
@@ -24319,7 +24326,7 @@
         {
           "nickname": "마녀코코",
           "job": "주문각인사",
-          "level": 87,
+          "level": 88,
           "conquestGrade": 22,
           "realm": "타리아 01"
         },
@@ -28617,7 +28624,7 @@
         {
           "nickname": "마자용",
           "job": "집행관",
-          "level": 87,
+          "level": 88,
           "conquestGrade": 22,
           "realm": "메르비스 04"
         },
@@ -29464,5 +29471,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-26T20:20:43.266Z"
+  "updatedAt": "2026-07-26T20:30:44.176Z"
 }
