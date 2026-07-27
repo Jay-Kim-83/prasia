@@ -1371,15 +1371,15 @@
           "realm": "론도 03"
         },
         {
-          "nickname": "해마",
-          "job": "태양감시자",
+          "nickname": "별구피",
+          "job": "주문각인사",
           "level": 86,
           "conquestGrade": 21,
           "realm": "론도 03"
         },
         {
-          "nickname": "별구피",
-          "job": "주문각인사",
+          "nickname": "해마",
+          "job": "태양감시자",
           "level": 86,
           "conquestGrade": 21,
           "realm": "론도 03"
@@ -2390,19 +2390,12 @@
     "악인|론도": {
       "guildName": "악인",
       "world": "론도",
-      "memberCount": 20,
+      "memberCount": 19,
       "members": [
         {
           "nickname": "나야쿠영",
           "job": "심연추방자",
           "level": 92,
-          "conquestGrade": 24,
-          "realm": "론도 05"
-        },
-        {
-          "nickname": "해삐",
-          "job": "주문각인사",
-          "level": 91,
           "conquestGrade": 24,
           "realm": "론도 05"
         },
@@ -2635,7 +2628,7 @@
     "헐리우드|론도": {
       "guildName": "헐리우드",
       "world": "론도",
-      "memberCount": 14,
+      "memberCount": 15,
       "members": [
         {
           "nickname": "뿌리",
@@ -2733,6 +2726,13 @@
           "job": "주문각인사",
           "level": 82,
           "conquestGrade": 19,
+          "realm": "론도 05"
+        },
+        {
+          "nickname": "장나라",
+          "job": "주문각인사",
+          "level": 82,
+          "conquestGrade": 17,
           "realm": "론도 05"
         }
       ]
@@ -9967,17 +9967,17 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "선구안",
-          "job": "환영검사",
-          "level": 88,
-          "conquestGrade": 20,
-          "realm": "가리안 02"
-        },
-        {
           "nickname": "김민경사랑단",
           "job": "집행관",
           "level": 88,
           "conquestGrade": 23,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "선구안",
+          "job": "환영검사",
+          "level": 88,
+          "conquestGrade": 20,
           "realm": "가리안 02"
         },
         {
@@ -15935,7 +15935,7 @@
     "LOTTE|제롬": {
       "guildName": "LOTTE",
       "world": "제롬",
-      "memberCount": 8,
+      "memberCount": 9,
       "members": [
         {
           "nickname": "타락토끼",
@@ -15983,6 +15983,13 @@
           "nickname": "세타",
           "job": "환영검사",
           "level": 82,
+          "conquestGrade": 19,
+          "realm": "제롬 02"
+        },
+        {
+          "nickname": "백설기",
+          "job": "주문각인사",
+          "level": 81,
           "conquestGrade": 19,
           "realm": "제롬 02"
         },
@@ -27408,7 +27415,7 @@
     "정신건강의학과|메르비스": {
       "guildName": "정신건강의학과",
       "world": "메르비스",
-      "memberCount": 20,
+      "memberCount": 19,
       "members": [
         {
           "nickname": "네이쓰",
@@ -27541,13 +27548,6 @@
           "job": "향사수",
           "level": 78,
           "conquestGrade": 17,
-          "realm": "메르비스 02"
-        },
-        {
-          "nickname": "달별",
-          "job": "주문각인사",
-          "level": 76,
-          "conquestGrade": 1,
           "realm": "메르비스 02"
         }
       ]
@@ -27807,7 +27807,7 @@
     "고블린노조|메르비스": {
       "guildName": "고블린노조",
       "world": "메르비스",
-      "memberCount": 8,
+      "memberCount": 9,
       "members": [
         {
           "nickname": "고회장",
@@ -27842,6 +27842,13 @@
           "job": "집행관",
           "level": 83,
           "conquestGrade": 19,
+          "realm": "메르비스 03"
+        },
+        {
+          "nickname": "고클린",
+          "job": "향사수",
+          "level": 83,
+          "conquestGrade": 17,
           "realm": "메르비스 03"
         },
         {
@@ -29303,5 +29310,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-27T02:40:43.465Z"
+  "updatedAt": "2026-07-27T02:50:44.807Z"
 }
