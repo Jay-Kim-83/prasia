@@ -1655,15 +1655,8 @@
     "흠뻑쇼|론도": {
       "guildName": "흠뻑쇼",
       "world": "론도",
-      "memberCount": 12,
+      "memberCount": 11,
       "members": [
-        {
-          "nickname": "젖은향슈",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "론도 03"
-        },
         {
           "nickname": "무형방패",
           "job": "주문각인사",
@@ -1746,7 +1739,7 @@
     "해결사|론도": {
       "guildName": "해결사",
       "world": "론도",
-      "memberCount": 3,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "철벽",
@@ -1767,6 +1760,13 @@
           "job": "심연추방자",
           "level": 82,
           "conquestGrade": 14,
+          "realm": "론도 03"
+        },
+        {
+          "nickname": "더블린",
+          "job": "태양감시자",
+          "level": 82,
+          "conquestGrade": 17,
           "realm": "론도 03"
         }
       ]
@@ -3149,15 +3149,15 @@
           "realm": "라인소프 01"
         },
         {
-          "nickname": "sunholic",
-          "job": "집행관",
+          "nickname": "티르",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "라인소프 01"
         },
         {
-          "nickname": "티르",
-          "job": "야만투사",
+          "nickname": "sunholic",
+          "job": "집행관",
           "level": 92,
           "conquestGrade": 26,
           "realm": "라인소프 01"
@@ -3520,17 +3520,17 @@
           "realm": "라인소프 01"
         },
         {
-          "nickname": "포동",
-          "job": "환영검사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "라인소프 01"
-        },
-        {
           "nickname": "상해성",
           "job": "환영검사",
           "level": 91,
           "conquestGrade": 26,
+          "realm": "라인소프 01"
+        },
+        {
+          "nickname": "포동",
+          "job": "환영검사",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "라인소프 01"
         },
         {
@@ -6390,15 +6390,15 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "김삿갓",
-          "job": "향사수",
+          "nickname": "퓨망",
+          "job": "집행관",
           "level": 92,
           "conquestGrade": 26,
           "realm": "아민타 01"
         },
         {
-          "nickname": "퓨망",
-          "job": "집행관",
+          "nickname": "김삿갓",
+          "job": "향사수",
           "level": 92,
           "conquestGrade": 26,
           "realm": "아민타 01"
@@ -7577,8 +7577,15 @@
     "대기업|아민타": {
       "guildName": "대기업",
       "world": "아민타",
-      "memberCount": 44,
+      "memberCount": 45,
       "members": [
+        {
+          "nickname": "박차장",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "아민타 04"
+        },
         {
           "nickname": "퇴사자",
           "job": "야만투사",
@@ -13512,7 +13519,7 @@
           "nickname": "무서운로로맘",
           "job": "집행관",
           "level": 90,
-          "conquestGrade": 24,
+          "conquestGrade": 25,
           "realm": "사도바 03"
         },
         {
@@ -29394,5 +29401,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-27T00:20:43.480Z"
+  "updatedAt": "2026-07-27T00:30:45.264Z"
 }
