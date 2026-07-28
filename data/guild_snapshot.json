@@ -328,10 +328,10 @@
           "realm": "론도 01"
         },
         {
-          "nickname": "쏘피",
-          "job": "주문각인사",
+          "nickname": "대근",
+          "job": "환영검사",
           "level": 81,
-          "conquestGrade": 19,
+          "conquestGrade": 21,
           "realm": "론도 01"
         }
       ]
@@ -584,11 +584,18 @@
     "블랙중독|론도": {
       "guildName": "블랙중독",
       "world": "론도",
-      "memberCount": 40,
+      "memberCount": 41,
       "members": [
         {
           "nickname": "쌍팔형",
           "job": "야만투사",
+          "level": 93,
+          "conquestGrade": 26,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "품성형",
+          "job": "주문각인사",
           "level": 93,
           "conquestGrade": 26,
           "realm": "론도 02"
@@ -2635,7 +2642,7 @@
     "ROKA|론도": {
       "guildName": "ROKA",
       "world": "론도",
-      "memberCount": 49,
+      "memberCount": 48,
       "members": [
         {
           "nickname": "관심사병",
@@ -2831,13 +2838,6 @@
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 24,
-          "realm": "론도 05"
-        },
-        {
-          "nickname": "vkki",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 25,
           "realm": "론도 05"
         },
         {
@@ -21062,13 +21062,6 @@
           "realm": "아티산 05"
         },
         {
-          "nickname": "너도나도",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "아티산 05"
-        },
-        {
           "nickname": "밤송이",
           "job": "집행관",
           "level": 91,
@@ -21076,8 +21069,8 @@
           "realm": "아티산 05"
         },
         {
-          "nickname": "파치파치",
-          "job": "주문각인사",
+          "nickname": "너도나도",
+          "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아티산 05"
@@ -21085,6 +21078,13 @@
         {
           "nickname": "초코우유",
           "job": "야만투사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "아티산 05"
+        },
+        {
+          "nickname": "파치파치",
+          "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아티산 05"
@@ -30129,5 +30129,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-28T16:50:43.597Z"
+  "updatedAt": "2026-07-28T17:00:45.979Z"
 }
