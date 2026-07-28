@@ -720,17 +720,17 @@
           "realm": "론도 02"
         },
         {
-          "nickname": "레전드아픈화살꿍뿌뿌",
-          "job": "향사수",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "론도 02"
-        },
-        {
           "nickname": "iPhone",
           "job": "향사수",
           "level": 92,
           "conquestGrade": 26,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "레전드아픈화살꿍뿌뿌",
+          "job": "향사수",
+          "level": 92,
+          "conquestGrade": 25,
           "realm": "론도 02"
         },
         {
@@ -871,7 +871,7 @@
     "감자빙수|론도": {
       "guildName": "감자빙수",
       "world": "론도",
-      "memberCount": 22,
+      "memberCount": 23,
       "members": [
         {
           "nickname": "온달",
@@ -1026,13 +1026,20 @@
           "level": 91,
           "conquestGrade": 25,
           "realm": "론도 02"
+        },
+        {
+          "nickname": "접기",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "론도 02"
         }
       ]
     },
     "뉴매드|론도": {
       "guildName": "뉴매드",
       "world": "론도",
-      "memberCount": 18,
+      "memberCount": 17,
       "members": [
         {
           "nickname": "대방어",
@@ -1151,13 +1158,6 @@
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 26,
-          "realm": "론도 02"
-        },
-        {
-          "nickname": "내가지나간자리엔시체",
-          "job": "향사수",
-          "level": 90,
-          "conquestGrade": 25,
           "realm": "론도 02"
         }
       ]
@@ -8569,7 +8569,7 @@
         {
           "nickname": "천군",
           "job": "주문각인사",
-          "level": 88,
+          "level": 87,
           "conquestGrade": 23,
           "realm": "아민타 04"
         },
@@ -8613,7 +8613,7 @@
     "DOG|아민타": {
       "guildName": "DOG",
       "world": "아민타",
-      "memberCount": 42,
+      "memberCount": 43,
       "members": [
         {
           "nickname": "아톰",
@@ -8688,6 +8688,13 @@
         {
           "nickname": "오월의우니",
           "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "아민타 05"
+        },
+        {
+          "nickname": "영약이",
+          "job": "향사수",
           "level": 92,
           "conquestGrade": 26,
           "realm": "아민타 05"
@@ -15063,15 +15070,15 @@
           "realm": "사도바 05"
         },
         {
-          "nickname": "햄스터",
-          "job": "태양감시자",
+          "nickname": "하급",
+          "job": "주문각인사",
           "level": 84,
           "conquestGrade": 20,
           "realm": "사도바 05"
         },
         {
-          "nickname": "하급",
-          "job": "주문각인사",
+          "nickname": "햄스터",
+          "job": "태양감시자",
           "level": 84,
           "conquestGrade": 20,
           "realm": "사도바 05"
@@ -16358,15 +16365,15 @@
           "realm": "제롬 02"
         },
         {
-          "nickname": "김독자",
-          "job": "주문각인사",
+          "nickname": "알렉산더",
+          "job": "향사수",
           "level": 87,
           "conquestGrade": 22,
           "realm": "제롬 02"
         },
         {
-          "nickname": "알렉산더",
-          "job": "향사수",
+          "nickname": "김독자",
+          "job": "주문각인사",
           "level": 87,
           "conquestGrade": 22,
           "realm": "제롬 02"
@@ -20838,15 +20845,15 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "프로토콜",
-          "job": "집행관",
+          "nickname": "전여친",
+          "job": "주문각인사",
           "level": 89,
           "conquestGrade": 23,
           "realm": "아티산 04"
         },
         {
-          "nickname": "전여친",
-          "job": "주문각인사",
+          "nickname": "프로토콜",
+          "job": "집행관",
           "level": 89,
           "conquestGrade": 23,
           "realm": "아티산 04"
@@ -24163,17 +24170,17 @@
           "realm": "나세르 05"
         },
         {
-          "nickname": "핑큿",
-          "job": "집행관",
-          "level": 88,
-          "conquestGrade": 22,
-          "realm": "나세르 05"
-        },
-        {
           "nickname": "샤오",
           "job": "집행관",
           "level": 88,
           "conquestGrade": 23,
+          "realm": "나세르 05"
+        },
+        {
+          "nickname": "핑큿",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 22,
           "realm": "나세르 05"
         },
         {
@@ -30122,5 +30129,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-28T15:30:43.545Z"
+  "updatedAt": "2026-07-28T15:40:44.387Z"
 }
