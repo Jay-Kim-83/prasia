@@ -2663,7 +2663,7 @@
     "ROKA|론도": {
       "guildName": "ROKA",
       "world": "론도",
-      "memberCount": 48,
+      "memberCount": 49,
       "members": [
         {
           "nickname": "관심사병",
@@ -2676,6 +2676,13 @@
           "nickname": "로카",
           "job": "야만투사",
           "level": 93,
+          "conquestGrade": 26,
+          "realm": "론도 05"
+        },
+        {
+          "nickname": "피돌이",
+          "job": "주문각인사",
+          "level": 92,
           "conquestGrade": 26,
           "realm": "론도 05"
         },
@@ -3069,7 +3076,7 @@
     "미루|론도": {
       "guildName": "미루",
       "world": "론도",
-      "memberCount": 8,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "띠모",
@@ -3118,13 +3125,6 @@
           "job": "환영검사",
           "level": 84,
           "conquestGrade": 19,
-          "realm": "론도 05"
-        },
-        {
-          "nickname": "문드",
-          "job": "향사수",
-          "level": 84,
-          "conquestGrade": 17,
           "realm": "론도 05"
         }
       ]
@@ -4803,7 +4803,7 @@
         {
           "nickname": "버둥",
           "job": "향사수",
-          "level": 83,
+          "level": 84,
           "conquestGrade": 21,
           "realm": "라인소프 03"
         },
@@ -5302,7 +5302,7 @@
     "알파|라인소프": {
       "guildName": "알파",
       "world": "라인소프",
-      "memberCount": 29,
+      "memberCount": 31,
       "members": [
         {
           "nickname": "신짱이",
@@ -5396,6 +5396,13 @@
           "realm": "라인소프 05"
         },
         {
+          "nickname": "금동",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "라인소프 05"
+        },
+        {
           "nickname": "다슬",
           "job": "태양감시자",
           "level": 92,
@@ -5421,6 +5428,13 @@
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "라인소프 05"
+        },
+        {
+          "nickname": "그램",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 26,
           "realm": "라인소프 05"
         },
         {
@@ -5512,7 +5526,7 @@
     "베타|라인소프": {
       "guildName": "베타",
       "world": "라인소프",
-      "memberCount": 21,
+      "memberCount": 24,
       "members": [
         {
           "nickname": "춘이형",
@@ -5545,6 +5559,13 @@
         {
           "nickname": "몽형",
           "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "라인소프 05"
+        },
+        {
+          "nickname": "힐냥이",
+          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "라인소프 05"
@@ -5624,6 +5645,20 @@
           "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "라인소프 05"
+        },
+        {
+          "nickname": "디어",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 23,
+          "realm": "라인소프 05"
+        },
+        {
+          "nickname": "커비형",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "라인소프 05"
         },
         {
@@ -10744,17 +10779,17 @@
           "realm": "가리안 03"
         },
         {
-          "nickname": "순백이",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 22,
-          "realm": "가리안 03"
-        },
-        {
           "nickname": "뱜가이",
           "job": "환영검사",
           "level": 89,
           "conquestGrade": 23,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "순백이",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 22,
           "realm": "가리안 03"
         },
         {
@@ -25322,7 +25357,7 @@
     "니들이버기단을알어|타리아": {
       "guildName": "니들이버기단을알어",
       "world": "타리아",
-      "memberCount": 20,
+      "memberCount": 21,
       "members": [
         {
           "nickname": "버기",
@@ -25411,6 +25446,13 @@
         {
           "nickname": "유가을",
           "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 20,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "더강하게넣어줘요딜",
+          "job": "야만투사",
           "level": 87,
           "conquestGrade": 20,
           "realm": "타리아 02"
@@ -29814,5 +29856,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-28T07:50:44.330Z"
+  "updatedAt": "2026-07-28T08:00:46.012Z"
 }
