@@ -1928,7 +1928,7 @@
     "컵빙수|론도": {
       "guildName": "컵빙수",
       "world": "론도",
-      "memberCount": 6,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "강오라",
@@ -1949,6 +1949,13 @@
           "job": "집행관",
           "level": 89,
           "conquestGrade": 25,
+          "realm": "론도 03"
+        },
+        {
+          "nickname": "강나미",
+          "job": "환영검사",
+          "level": 89,
+          "conquestGrade": 22,
           "realm": "론도 03"
         },
         {
@@ -5382,13 +5389,6 @@
           "realm": "라인소프 05"
         },
         {
-          "nickname": "롤하다이전못할뻔한잭",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "라인소프 05"
-        },
-        {
           "nickname": "유리형",
           "job": "야만투사",
           "level": 92,
@@ -5494,6 +5494,13 @@
           "realm": "라인소프 05"
         },
         {
+          "nickname": "마유언니",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "라인소프 05"
+        },
+        {
           "nickname": "족발",
           "job": "주문각인사",
           "level": 91,
@@ -5557,6 +5564,13 @@
           "realm": "라인소프 05"
         },
         {
+          "nickname": "에코형",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 23,
+          "realm": "라인소프 05"
+        },
+        {
           "nickname": "뚀웅양",
           "job": "주문각인사",
           "level": 90,
@@ -5590,20 +5604,13 @@
           "level": 90,
           "conquestGrade": 22,
           "realm": "라인소프 05"
-        },
-        {
-          "nickname": "멸절",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "라인소프 05"
         }
       ]
     },
     "베타|라인소프": {
       "guildName": "베타",
       "world": "라인소프",
-      "memberCount": 37,
+      "memberCount": 38,
       "members": [
         {
           "nickname": "이강인",
@@ -5736,6 +5743,13 @@
           "job": "집행관",
           "level": 91,
           "conquestGrade": 24,
+          "realm": "라인소프 05"
+        },
+        {
+          "nickname": "지뿌",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "라인소프 05"
         },
         {
@@ -18761,7 +18775,7 @@
         {
           "nickname": "칠흑의바람",
           "job": "환영검사",
-          "level": 85,
+          "level": 84,
           "conquestGrade": 20,
           "realm": "아티산 01"
         }
@@ -28254,7 +28268,7 @@
           "nickname": "나무",
           "job": "향사수",
           "level": 83,
-          "conquestGrade": 19,
+          "conquestGrade": 20,
           "realm": "메르비스 03"
         },
         {
@@ -28623,41 +28637,6 @@
         }
       ]
     },
-    "수호|메르비스": {
-      "guildName": "수호",
-      "world": "메르비스",
-      "memberCount": 4,
-      "members": [
-        {
-          "nickname": "YYDS",
-          "job": "환영검사",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "메르비스 03"
-        },
-        {
-          "nickname": "기억니은디귿리을미음",
-          "job": "야만투사",
-          "level": 84,
-          "conquestGrade": 21,
-          "realm": "메르비스 03"
-        },
-        {
-          "nickname": "유라",
-          "job": "태양감시자",
-          "level": 82,
-          "conquestGrade": 18,
-          "realm": "메르비스 03"
-        },
-        {
-          "nickname": "감초",
-          "job": "심연추방자",
-          "level": 81,
-          "conquestGrade": 19,
-          "realm": "메르비스 03"
-        }
-      ]
-    },
     "FIFA|메르비스": {
       "guildName": "FIFA",
       "world": "메르비스",
@@ -28745,6 +28724,34 @@
           "job": "심연추방자",
           "level": 81,
           "conquestGrade": 18,
+          "realm": "메르비스 03"
+        }
+      ]
+    },
+    "수호|메르비스": {
+      "guildName": "수호",
+      "world": "메르비스",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "기억니은디귿리을미음",
+          "job": "야만투사",
+          "level": 84,
+          "conquestGrade": 21,
+          "realm": "메르비스 03"
+        },
+        {
+          "nickname": "유라",
+          "job": "태양감시자",
+          "level": 82,
+          "conquestGrade": 18,
+          "realm": "메르비스 03"
+        },
+        {
+          "nickname": "감초",
+          "job": "심연추방자",
+          "level": 81,
+          "conquestGrade": 19,
           "realm": "메르비스 03"
         }
       ]
@@ -29821,5 +29828,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-28T10:50:43.855Z"
+  "updatedAt": "2026-07-28T11:00:45.313Z"
 }
