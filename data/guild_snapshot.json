@@ -1742,17 +1742,17 @@
           "realm": "론도 03"
         },
         {
-          "nickname": "강펀치",
-          "job": "야만투사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "론도 03"
-        },
-        {
           "nickname": "강태풍",
           "job": "야만투사",
           "level": 91,
           "conquestGrade": 24,
+          "realm": "론도 03"
+        },
+        {
+          "nickname": "강펀치",
+          "job": "야만투사",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "론도 03"
         },
         {
@@ -5697,14 +5697,14 @@
           "realm": "라인소프 05"
         },
         {
-          "nickname": "타잔",
+          "nickname": "난쏘요",
           "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "라인소프 05"
         },
         {
-          "nickname": "난쏘요",
+          "nickname": "타잔",
           "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
@@ -8329,17 +8329,17 @@
           "realm": "아민타 04"
         },
         {
-          "nickname": "공유",
-          "job": "주문각인사",
-          "level": 86,
-          "conquestGrade": 20,
-          "realm": "아민타 04"
-        },
-        {
           "nickname": "곰방와",
           "job": "주문각인사",
           "level": 86,
           "conquestGrade": 21,
+          "realm": "아민타 04"
+        },
+        {
+          "nickname": "공유",
+          "job": "주문각인사",
+          "level": 86,
+          "conquestGrade": 20,
           "realm": "아민타 04"
         },
         {
@@ -8921,11 +8921,18 @@
     "심판|아민타": {
       "guildName": "심판",
       "world": "아민타",
-      "memberCount": 19,
+      "memberCount": 20,
       "members": [
         {
           "nickname": "Baal",
           "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "아민타 05"
+        },
+        {
+          "nickname": "선각자의광휘",
+          "job": "심연추방자",
           "level": 92,
           "conquestGrade": 26,
           "realm": "아민타 05"
@@ -8966,15 +8973,15 @@
           "realm": "아민타 05"
         },
         {
-          "nickname": "퓨마",
-          "job": "집행관",
+          "nickname": "김삿갓",
+          "job": "향사수",
           "level": 92,
           "conquestGrade": 26,
           "realm": "아민타 05"
         },
         {
-          "nickname": "김삿갓",
-          "job": "향사수",
+          "nickname": "퓨마",
+          "job": "집행관",
           "level": 92,
           "conquestGrade": 26,
           "realm": "아민타 05"
@@ -9453,7 +9460,7 @@
     "코카콜라|가리안": {
       "guildName": "코카콜라",
       "world": "가리안",
-      "memberCount": 3,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "한지평",
@@ -9465,6 +9472,13 @@
         {
           "nickname": "zoro",
           "job": "태양감시자",
+          "level": 82,
+          "conquestGrade": 19,
+          "realm": "가리안 01"
+        },
+        {
+          "nickname": "우루",
+          "job": "야만투사",
           "level": 82,
           "conquestGrade": 19,
           "realm": "가리안 01"
@@ -18798,41 +18812,6 @@
           "job": "환영검사",
           "level": 85,
           "conquestGrade": 20,
-          "realm": "아티산 01"
-        }
-      ]
-    },
-    "리렌느|아티산": {
-      "guildName": "리렌느",
-      "world": "아티산",
-      "memberCount": 4,
-      "members": [
-        {
-          "nickname": "깨부",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 20,
-          "realm": "아티산 01"
-        },
-        {
-          "nickname": "해피타임",
-          "job": "주문각인사",
-          "level": 86,
-          "conquestGrade": 20,
-          "realm": "아티산 01"
-        },
-        {
-          "nickname": "강철유신",
-          "job": "집행관",
-          "level": 83,
-          "conquestGrade": 17,
-          "realm": "아티산 01"
-        },
-        {
-          "nickname": "제로투",
-          "job": "향사수",
-          "level": 83,
-          "conquestGrade": 19,
           "realm": "아티산 01"
         }
       ]
@@ -29856,5 +29835,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-28T09:20:44.070Z"
+  "updatedAt": "2026-07-28T09:30:45.438Z"
 }
