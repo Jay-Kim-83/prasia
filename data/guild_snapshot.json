@@ -944,6 +944,13 @@
           "realm": "론도 02"
         },
         {
+          "nickname": "미스터",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 02"
+        },
+        {
           "nickname": "포수",
           "job": "야만투사",
           "level": 92,
@@ -952,13 +959,6 @@
         },
         {
           "nickname": "고구마술",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 02"
-        },
-        {
-          "nickname": "미스터",
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
@@ -1336,13 +1336,6 @@
           "realm": "론도 03"
         },
         {
-          "nickname": "강별",
-          "job": "태양감시자",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "론도 03"
-        },
-        {
           "nickname": "강커리",
           "job": "향사수",
           "level": 92,
@@ -1361,6 +1354,13 @@
           "job": "집행관",
           "level": 92,
           "conquestGrade": 26,
+          "realm": "론도 03"
+        },
+        {
+          "nickname": "강별",
+          "job": "태양감시자",
+          "level": 92,
+          "conquestGrade": 25,
           "realm": "론도 03"
         },
         {
@@ -1928,8 +1928,15 @@
     "컵빙수|론도": {
       "guildName": "컵빙수",
       "world": "론도",
-      "memberCount": 5,
+      "memberCount": 6,
       "members": [
+        {
+          "nickname": "강오라",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 23,
+          "realm": "론도 03"
+        },
         {
           "nickname": "강패개미",
           "job": "집행관",
@@ -5281,7 +5288,7 @@
     "알파|라인소프": {
       "guildName": "알파",
       "world": "라인소프",
-      "memberCount": 44,
+      "memberCount": 45,
       "members": [
         {
           "nickname": "굴맛사탕",
@@ -5327,6 +5334,13 @@
         },
         {
           "nickname": "새로형",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "라인소프 05"
+        },
+        {
+          "nickname": "춘이형",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
@@ -13705,14 +13719,14 @@
           "realm": "사도바 03"
         },
         {
-          "nickname": "무서운로로맘",
+          "nickname": "무서운지렁이",
           "job": "집행관",
           "level": 90,
           "conquestGrade": 25,
           "realm": "사도바 03"
         },
         {
-          "nickname": "무서운지렁이",
+          "nickname": "무서운로로맘",
           "job": "집행관",
           "level": 90,
           "conquestGrade": 25,
@@ -24468,7 +24482,7 @@
     "유랑|타리아": {
       "guildName": "유랑",
       "world": "타리아",
-      "memberCount": 50,
+      "memberCount": 49,
       "members": [
         {
           "nickname": "유랑덴버",
@@ -24690,13 +24704,6 @@
         {
           "nickname": "유랑무룡",
           "job": "집행관",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "타리아 01"
-        },
-        {
-          "nickname": "살생",
-          "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
           "realm": "타리아 01"
@@ -25343,7 +25350,7 @@
     "니들이버기단을알어|타리아": {
       "guildName": "니들이버기단을알어",
       "world": "타리아",
-      "memberCount": 23,
+      "memberCount": 24,
       "members": [
         {
           "nickname": "버기",
@@ -25399,6 +25406,13 @@
           "job": "야만투사",
           "level": 88,
           "conquestGrade": 22,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "은은한꽃향",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 24,
           "realm": "타리아 02"
         },
         {
@@ -29807,5 +29821,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-28T10:10:44.553Z"
+  "updatedAt": "2026-07-28T10:20:44.868Z"
 }
