@@ -612,7 +612,7 @@
     "블랙중독|론도": {
       "guildName": "블랙중독",
       "world": "론도",
-      "memberCount": 42,
+      "memberCount": 43,
       "members": [
         {
           "nickname": "쌍팔형",
@@ -853,6 +853,13 @@
           "realm": "론도 02"
         },
         {
+          "nickname": "포비든형",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 26,
+          "realm": "론도 02"
+        },
+        {
           "nickname": "피로",
           "job": "주문각인사",
           "level": 91,
@@ -913,7 +920,7 @@
     "감자빙수|론도": {
       "guildName": "감자빙수",
       "world": "론도",
-      "memberCount": 24,
+      "memberCount": 23,
       "members": [
         {
           "nickname": "온달",
@@ -1075,13 +1082,6 @@
           "level": 90,
           "conquestGrade": 25,
           "realm": "론도 02"
-        },
-        {
-          "nickname": "산산",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 23,
-          "realm": "론도 02"
         }
       ]
     },
@@ -1105,15 +1105,15 @@
           "realm": "론도 02"
         },
         {
-          "nickname": "별하",
-          "job": "야만투사",
+          "nickname": "파천왕",
+          "job": "집행관",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 02"
         },
         {
-          "nickname": "파천왕",
-          "job": "집행관",
+          "nickname": "별하",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 02"
@@ -5211,7 +5211,7 @@
     "베타|라인소프": {
       "guildName": "베타",
       "world": "라인소프",
-      "memberCount": 35,
+      "memberCount": 36,
       "members": [
         {
           "nickname": "굴맛사탕",
@@ -5258,6 +5258,13 @@
         {
           "nickname": "캡틴징기형",
           "job": "향사수",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "라인소프 05"
+        },
+        {
+          "nickname": "단초",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "라인소프 05"
@@ -5750,7 +5757,7 @@
     "델타|라인소프": {
       "guildName": "델타",
       "world": "라인소프",
-      "memberCount": 19,
+      "memberCount": 18,
       "members": [
         {
           "nickname": "랜서",
@@ -5876,13 +5883,6 @@
           "job": "집행관",
           "level": 89,
           "conquestGrade": 24,
-          "realm": "라인소프 05"
-        },
-        {
-          "nickname": "계장",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 23,
           "realm": "라인소프 05"
         }
       ]
@@ -6026,6 +6026,13 @@
           "realm": "아민타 01"
         },
         {
+          "nickname": "아만공",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 24,
+          "realm": "아민타 01"
+        },
+        {
           "nickname": "카페",
           "job": "심연추방자",
           "level": 91,
@@ -6163,13 +6170,6 @@
           "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
-          "realm": "아민타 01"
-        },
-        {
-          "nickname": "처룬",
-          "job": "향사수",
-          "level": 90,
-          "conquestGrade": 23,
           "realm": "아민타 01"
         }
       ]
@@ -10962,34 +10962,6 @@
         }
       ]
     },
-    "베라|가리안": {
-      "guildName": "베라",
-      "world": "가리안",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "용기",
-          "job": "야만투사",
-          "level": 90,
-          "conquestGrade": 23,
-          "realm": "가리안 03"
-        },
-        {
-          "nickname": "바베바",
-          "job": "향사수",
-          "level": 88,
-          "conquestGrade": 23,
-          "realm": "가리안 03"
-        },
-        {
-          "nickname": "민트초코봉봉",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 22,
-          "realm": "가리안 03"
-        }
-      ]
-    },
     "동쪼기|가리안": {
       "guildName": "동쪼기",
       "world": "가리안",
@@ -11035,7 +11007,7 @@
     "시아|가리안": {
       "guildName": "시아",
       "world": "가리안",
-      "memberCount": 3,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "비너스",
@@ -11056,6 +11028,13 @@
           "job": "향사수",
           "level": 87,
           "conquestGrade": 21,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "공구",
+          "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 22,
           "realm": "가리안 03"
         }
       ]
@@ -11542,17 +11521,17 @@
           "realm": "가리안 04"
         },
         {
-          "nickname": "포스",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "가리안 04"
-        },
-        {
           "nickname": "웅뚜라미",
           "job": "향사수",
           "level": 89,
           "conquestGrade": 23,
+          "realm": "가리안 04"
+        },
+        {
+          "nickname": "포스",
+          "job": "향사수",
+          "level": 89,
+          "conquestGrade": 24,
           "realm": "가리안 04"
         }
       ]
@@ -16327,7 +16306,7 @@
     "어시모드|제롬": {
       "guildName": "어시모드",
       "world": "제롬",
-      "memberCount": 11,
+      "memberCount": 12,
       "members": [
         {
           "nickname": "잇츠미",
@@ -16401,6 +16380,13 @@
         },
         {
           "nickname": "보랑",
+          "job": "향사수",
+          "level": 86,
+          "conquestGrade": 20,
+          "realm": "제롬 02"
+        },
+        {
+          "nickname": "무스타파",
           "job": "향사수",
           "level": 86,
           "conquestGrade": 20,
@@ -26998,15 +26984,15 @@
           "realm": "타리아 05"
         },
         {
-          "nickname": "라비타",
-          "job": "향사수",
+          "nickname": "영탁",
+          "job": "집행관",
           "level": 89,
           "conquestGrade": 23,
           "realm": "타리아 05"
         },
         {
-          "nickname": "영탁",
-          "job": "집행관",
+          "nickname": "라비타",
+          "job": "향사수",
           "level": 89,
           "conquestGrade": 23,
           "realm": "타리아 05"
@@ -29884,5 +29870,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-28T01:40:44.843Z"
+  "updatedAt": "2026-07-28T01:50:44.306Z"
 }
