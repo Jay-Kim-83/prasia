@@ -8812,17 +8812,17 @@
           "realm": "아민타 05"
         },
         {
-          "nickname": "학연",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "아민타 05"
-        },
-        {
           "nickname": "소닉",
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
+          "realm": "아민타 05"
+        },
+        {
+          "nickname": "학연",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 25,
           "realm": "아민타 05"
         },
         {
@@ -11735,7 +11735,7 @@
     "살|가리안": {
       "guildName": "살",
       "world": "가리안",
-      "memberCount": 24,
+      "memberCount": 25,
       "members": [
         {
           "nickname": "Red",
@@ -11880,6 +11880,13 @@
         {
           "nickname": "카르닉스",
           "job": "집행관",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "가리안 04"
+        },
+        {
+          "nickname": "리더",
+          "job": "야만투사",
           "level": 89,
           "conquestGrade": 24,
           "realm": "가리안 04"
@@ -20966,7 +20973,7 @@
         {
           "nickname": "우사기",
           "job": "주문각인사",
-          "level": 91,
+          "level": 92,
           "conquestGrade": 25,
           "realm": "아티산 04"
         },
@@ -27653,8 +27660,15 @@
     "배우1|타리아": {
       "guildName": "배우1",
       "world": "타리아",
-      "memberCount": 3,
+      "memberCount": 4,
       "members": [
+        {
+          "nickname": "명품황소곱창",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "타리아 05"
+        },
         {
           "nickname": "오해원",
           "job": "집행관",
@@ -30192,5 +30206,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-29T02:10:44.394Z"
+  "updatedAt": "2026-07-29T02:20:44.412Z"
 }
