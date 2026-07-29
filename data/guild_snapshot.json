@@ -2148,17 +2148,17 @@
           "realm": "론도 04"
         },
         {
+          "nickname": "만월이",
+          "job": "향사수",
+          "level": 91,
+          "conquestGrade": 24,
+          "realm": "론도 04"
+        },
+        {
           "nickname": "monk",
           "job": "향사수",
           "level": 90,
           "conquestGrade": 25,
-          "realm": "론도 04"
-        },
-        {
-          "nickname": "만월이",
-          "job": "향사수",
-          "level": 90,
-          "conquestGrade": 24,
           "realm": "론도 04"
         },
         {
@@ -9316,17 +9316,17 @@
           "realm": "아민타 05"
         },
         {
-          "nickname": "도끼로이마까",
-          "job": "야만투사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "아민타 05"
-        },
-        {
           "nickname": "도끼단",
           "job": "집행관",
           "level": 91,
           "conquestGrade": 26,
+          "realm": "아민타 05"
+        },
+        {
+          "nickname": "도끼로이마까",
+          "job": "야만투사",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "아민타 05"
         },
         {
@@ -15058,7 +15058,7 @@
         {
           "nickname": "그라펜",
           "job": "집행관",
-          "level": 88,
+          "level": 87,
           "conquestGrade": 22,
           "realm": "사도바 05"
         },
@@ -18854,7 +18854,7 @@
     "해병대|아티산": {
       "guildName": "해병대",
       "world": "아티산",
-      "memberCount": 3,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "트럼프",
@@ -18874,6 +18874,13 @@
           "nickname": "지령",
           "job": "집행관",
           "level": 86,
+          "conquestGrade": 21,
+          "realm": "아티산 01"
+        },
+        {
+          "nickname": "모히토",
+          "job": "집행관",
+          "level": 85,
           "conquestGrade": 21,
           "realm": "아티산 01"
         }
@@ -25395,15 +25402,15 @@
           "realm": "타리아 02"
         },
         {
-          "nickname": "야나두",
-          "job": "집행관",
+          "nickname": "가나",
+          "job": "향사수",
           "level": 92,
           "conquestGrade": 25,
           "realm": "타리아 02"
         },
         {
-          "nickname": "가나",
-          "job": "향사수",
+          "nickname": "야나두",
+          "job": "집행관",
           "level": 92,
           "conquestGrade": 25,
           "realm": "타리아 02"
@@ -30220,5 +30227,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-29T07:30:45.854Z"
+  "updatedAt": "2026-07-29T07:40:44.467Z"
 }
