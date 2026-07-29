@@ -6439,13 +6439,6 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "수호킹",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "아민타 01"
-        },
-        {
           "nickname": "독불",
           "job": "주문각인사",
           "level": 90,
@@ -6453,15 +6446,22 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "아이스쿠림",
+          "nickname": "수호킹",
           "job": "집행관",
           "level": 90,
-          "conquestGrade": 24,
+          "conquestGrade": 25,
           "realm": "아민타 01"
         },
         {
           "nickname": "꾸댕",
           "job": "향사수",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "아이스쿠림",
+          "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아민타 01"
@@ -21132,15 +21132,15 @@
           "realm": "아티산 05"
         },
         {
-          "nickname": "밤송이",
-          "job": "집행관",
+          "nickname": "너도나도",
+          "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아티산 05"
         },
         {
-          "nickname": "너도나도",
-          "job": "향사수",
+          "nickname": "밤송이",
+          "job": "집행관",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아티산 05"
@@ -22879,7 +22879,7 @@
     "신분증|나세르": {
       "guildName": "신분증",
       "world": "나세르",
-      "memberCount": 36,
+      "memberCount": 37,
       "members": [
         {
           "nickname": "쑥쑥",
@@ -22991,6 +22991,13 @@
           "job": "집행관",
           "level": 89,
           "conquestGrade": 23,
+          "realm": "나세르 03"
+        },
+        {
+          "nickname": "구름보리",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 22,
           "realm": "나세르 03"
         },
         {
@@ -30206,5 +30213,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-29T02:20:44.412Z"
+  "updatedAt": "2026-07-29T02:30:45.103Z"
 }
