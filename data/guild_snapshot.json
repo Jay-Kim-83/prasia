@@ -1805,17 +1805,17 @@
           "realm": "론도 03"
         },
         {
-          "nickname": "강시아",
-          "job": "태양감시자",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "론도 03"
-        },
-        {
           "nickname": "강냉이",
           "job": "향사수",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "론도 03"
+        },
+        {
+          "nickname": "강시아",
+          "job": "태양감시자",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "론도 03"
         },
         {
@@ -8903,15 +8903,15 @@
           "realm": "아민타 05"
         },
         {
-          "nickname": "랄랄",
-          "job": "주문각인사",
+          "nickname": "이라온",
+          "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아민타 05"
         },
         {
-          "nickname": "이라온",
-          "job": "야만투사",
+          "nickname": "랄랄",
+          "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아민타 05"
@@ -19652,7 +19652,7 @@
     "킹덤|아티산": {
       "guildName": "킹덤",
       "world": "아티산",
-      "memberCount": 16,
+      "memberCount": 15,
       "members": [
         {
           "nickname": "또르르",
@@ -19758,20 +19758,13 @@
           "level": 87,
           "conquestGrade": 22,
           "realm": "아티산 02"
-        },
-        {
-          "nickname": "길냥패스",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "아티산 02"
         }
       ]
     },
     "쇼핑몰|아티산": {
       "guildName": "쇼핑몰",
       "world": "아티산",
-      "memberCount": 8,
+      "memberCount": 9,
       "members": [
         {
           "nickname": "CouPang",
@@ -19824,6 +19817,13 @@
         },
         {
           "nickname": "잠백이",
+          "job": "집행관",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "아티산 02"
+        },
+        {
+          "nickname": "공쥬",
           "job": "집행관",
           "level": 86,
           "conquestGrade": 21,
@@ -25269,17 +25269,17 @@
           "realm": "타리아 01"
         },
         {
-          "nickname": "삐뽀삐뽀",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "타리아 01"
-        },
-        {
           "nickname": "얗신",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 23,
+          "realm": "타리아 01"
+        },
+        {
+          "nickname": "삐뽀삐뽀",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 24,
           "realm": "타리아 01"
         },
         {
@@ -30353,5 +30353,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-31T11:40:46.668Z"
+  "updatedAt": "2026-07-31T11:50:45.506Z"
 }
