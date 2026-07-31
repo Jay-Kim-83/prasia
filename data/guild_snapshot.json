@@ -76,17 +76,17 @@
           "realm": "론도 01"
         },
         {
-          "nickname": "사하구",
-          "job": "환영검사",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "론도 01"
-        },
-        {
           "nickname": "짐승실장",
           "job": "집행관",
           "level": 90,
           "conquestGrade": 23,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "사하구",
+          "job": "환영검사",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "론도 01"
         },
         {
@@ -6551,17 +6551,17 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "막토",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "아민타 01"
-        },
-        {
           "nickname": "젬민이이호",
           "job": "향사수",
           "level": 91,
           "conquestGrade": 26,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "막토",
+          "job": "향사수",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "아민타 01"
         },
         {
@@ -7370,17 +7370,17 @@
           "realm": "아민타 03"
         },
         {
-          "nickname": "노하트",
-          "job": "야만투사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "아민타 03"
-        },
-        {
           "nickname": "타요",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 26,
+          "realm": "아민타 03"
+        },
+        {
+          "nickname": "노하트",
+          "job": "야만투사",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "아민타 03"
         },
         {
@@ -9932,15 +9932,15 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "설탕이",
-          "job": "집행관",
+          "nickname": "아까맨치로",
+          "job": "환영검사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "가리안 02"
         },
         {
-          "nickname": "아까맨치로",
-          "job": "환영검사",
+          "nickname": "설탕이",
+          "job": "집행관",
           "level": 91,
           "conquestGrade": 25,
           "realm": "가리안 02"
@@ -10660,6 +10660,13 @@
           "realm": "가리안 03"
         },
         {
+          "nickname": "어둠라미",
+          "job": "향사수",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "가리안 03"
+        },
+        {
           "nickname": "오공이",
           "job": "향사수",
           "level": 92,
@@ -10720,13 +10727,6 @@
           "job": "향사수",
           "level": 92,
           "conquestGrade": 26,
-          "realm": "가리안 03"
-        },
-        {
-          "nickname": "어둠라미",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 25,
           "realm": "가리안 03"
         },
         {
@@ -16642,8 +16642,15 @@
     "참교육|제롬": {
       "guildName": "참교육",
       "world": "제롬",
-      "memberCount": 44,
+      "memberCount": 45,
       "members": [
+        {
+          "nickname": "XM",
+          "job": "주문각인사",
+          "level": 93,
+          "conquestGrade": 26,
+          "realm": "제롬 03"
+        },
         {
           "nickname": "상어",
           "job": "주문각인사",
@@ -16827,17 +16834,17 @@
           "realm": "제롬 03"
         },
         {
-          "nickname": "르센느아니고리센느",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 22,
-          "realm": "제롬 03"
-        },
-        {
           "nickname": "농심신난년",
           "job": "집행관",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "제롬 03"
+        },
+        {
+          "nickname": "르센느아니고리센느",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 22,
           "realm": "제롬 03"
         },
         {
@@ -18199,17 +18206,17 @@
           "realm": "제롬 05"
         },
         {
-          "nickname": "꺄울몬",
-          "job": "향사수",
-          "level": 88,
-          "conquestGrade": 24,
-          "realm": "제롬 05"
-        },
-        {
           "nickname": "타로밀크티몬",
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 22,
+          "realm": "제롬 05"
+        },
+        {
+          "nickname": "꺄울몬",
+          "job": "향사수",
+          "level": 88,
+          "conquestGrade": 24,
           "realm": "제롬 05"
         },
         {
@@ -30318,5 +30325,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-31T06:40:44.815Z"
+  "updatedAt": "2026-07-31T06:50:45.112Z"
 }
