@@ -5907,6 +5907,13 @@
           "realm": "라인소프 05"
         },
         {
+          "nickname": "진로빠는중",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 23,
+          "realm": "라인소프 05"
+        },
+        {
           "nickname": "멸절",
           "job": "집행관",
           "level": 89,
@@ -5921,13 +5928,6 @@
           "realm": "라인소프 05"
         },
         {
-          "nickname": "진로빠는중",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "라인소프 05"
-        },
-        {
           "nickname": "거산짱",
           "job": "주문각인사",
           "level": 89,
@@ -5935,14 +5935,14 @@
           "realm": "라인소프 05"
         },
         {
-          "nickname": "꾀도리",
+          "nickname": "아빠상어",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
           "realm": "라인소프 05"
         },
         {
-          "nickname": "아빠상어",
+          "nickname": "꾀도리",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
@@ -6194,13 +6194,6 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "중복",
-          "job": "향사수",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "아민타 01"
-        },
-        {
           "nickname": "러블",
           "job": "주문각인사",
           "level": 90,
@@ -6212,6 +6205,13 @@
           "job": "환영검사",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "중복",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "아민타 01"
         },
         {
@@ -6838,15 +6838,15 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "강화",
-          "job": "집행관",
+          "nickname": "더하고싶어",
+          "job": "야만투사",
           "level": 88,
           "conquestGrade": 22,
           "realm": "아민타 02"
         },
         {
-          "nickname": "더하고싶어",
-          "job": "야만투사",
+          "nickname": "강화",
+          "job": "집행관",
           "level": 88,
           "conquestGrade": 22,
           "realm": "아민타 02"
@@ -11311,17 +11311,17 @@
           "realm": "가리안 04"
         },
         {
-          "nickname": "땡칠",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "가리안 04"
-        },
-        {
           "nickname": "죤슨",
           "job": "환영검사",
           "level": 92,
           "conquestGrade": 26,
+          "realm": "가리안 04"
+        },
+        {
+          "nickname": "땡칠",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 25,
           "realm": "가리안 04"
         },
         {
@@ -25483,7 +25483,7 @@
     "악시|타리아": {
       "guildName": "악시",
       "world": "타리아",
-      "memberCount": 47,
+      "memberCount": 48,
       "members": [
         {
           "nickname": "연히",
@@ -25690,6 +25690,13 @@
         },
         {
           "nickname": "도하아빠",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 23,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "탐탐",
           "job": "집행관",
           "level": 89,
           "conquestGrade": 23,
@@ -26113,7 +26120,7 @@
     "평화롭게|타리아": {
       "guildName": "평화롭게",
       "world": "타리아",
-      "memberCount": 4,
+      "memberCount": 3,
       "members": [
         {
           "nickname": "휜라",
@@ -26134,13 +26141,6 @@
           "job": "집행관",
           "level": 86,
           "conquestGrade": 20,
-          "realm": "타리아 02"
-        },
-        {
-          "nickname": "다솜",
-          "job": "집행관",
-          "level": 84,
-          "conquestGrade": 18,
           "realm": "타리아 02"
         }
       ]
@@ -26959,7 +26959,7 @@
           "nickname": "그놈",
           "job": "집행관",
           "level": 88,
-          "conquestGrade": 23,
+          "conquestGrade": 24,
           "realm": "타리아 04"
         },
         {
@@ -30360,5 +30360,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-31T14:20:46.262Z"
+  "updatedAt": "2026-07-31T14:30:46.857Z"
 }
