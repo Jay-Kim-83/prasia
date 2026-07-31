@@ -923,13 +923,6 @@
           "realm": "론도 02"
         },
         {
-          "nickname": "미스터",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 02"
-        },
-        {
           "nickname": "고구마술",
           "job": "주문각인사",
           "level": 92,
@@ -941,6 +934,13 @@
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "미스터",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 26,
           "realm": "론도 02"
         },
         {
@@ -1885,7 +1885,7 @@
           "nickname": "강홍차",
           "job": "주문각인사",
           "level": 89,
-          "conquestGrade": 24,
+          "conquestGrade": 25,
           "realm": "론도 03"
         },
         {
@@ -23005,7 +23005,7 @@
     "신분증|나세르": {
       "guildName": "신분증",
       "world": "나세르",
-      "memberCount": 35,
+      "memberCount": 37,
       "members": [
         {
           "nickname": "쑥쑥",
@@ -23016,6 +23016,13 @@
         },
         {
           "nickname": "힐링여행",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "나세르 03"
+        },
+        {
+          "nickname": "두팔",
           "job": "집행관",
           "level": 92,
           "conquestGrade": 26,
@@ -23129,6 +23136,13 @@
         {
           "nickname": "부탄가스",
           "job": "집행관",
+          "level": 88,
+          "conquestGrade": 23,
+          "realm": "나세르 03"
+        },
+        {
+          "nickname": "슈란",
+          "job": "주문각인사",
           "level": 88,
           "conquestGrade": 23,
           "realm": "나세르 03"
@@ -25087,17 +25101,17 @@
           "realm": "타리아 01"
         },
         {
-          "nickname": "유라이",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "타리아 01"
-        },
-        {
           "nickname": "유야야야야",
           "job": "야만투사",
           "level": 91,
           "conquestGrade": 26,
+          "realm": "타리아 01"
+        },
+        {
+          "nickname": "유라이",
+          "job": "향사수",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "타리아 01"
         },
         {
@@ -30297,5 +30311,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-31T05:00:46.716Z"
+  "updatedAt": "2026-07-31T05:10:48.044Z"
 }
