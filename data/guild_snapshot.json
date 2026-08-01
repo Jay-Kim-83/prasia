@@ -471,7 +471,7 @@
           "nickname": "해월",
           "job": "태양감시자",
           "level": 85,
-          "conquestGrade": 20,
+          "conquestGrade": 21,
           "realm": "론도 01"
         },
         {
@@ -577,7 +577,7 @@
     "블랙중독|론도": {
       "guildName": "블랙중독",
       "world": "론도",
-      "memberCount": 41,
+      "memberCount": 42,
       "members": [
         {
           "nickname": "쌍팔형",
@@ -664,6 +664,13 @@
           "realm": "론도 02"
         },
         {
+          "nickname": "개냥이형",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 02"
+        },
+        {
           "nickname": "펩시형",
           "job": "집행관",
           "level": 92,
@@ -673,13 +680,6 @@
         {
           "nickname": "파레리그",
           "job": "환영검사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 02"
-        },
-        {
-          "nickname": "개냥이형",
-          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 02"
@@ -865,13 +865,20 @@
           "level": 91,
           "conquestGrade": 24,
           "realm": "론도 02"
+        },
+        {
+          "nickname": "짱아형",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "론도 02"
         }
       ]
     },
     "감자빙수|론도": {
       "guildName": "감자빙수",
       "world": "론도",
-      "memberCount": 22,
+      "memberCount": 21,
       "members": [
         {
           "nickname": "온달",
@@ -1018,13 +1025,6 @@
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
-          "realm": "론도 02"
-        },
-        {
-          "nickname": "아버",
-          "job": "환영검사",
-          "level": 91,
-          "conquestGrade": 24,
           "realm": "론도 02"
         }
       ]
@@ -7591,7 +7591,7 @@
     "컨트롤|아민타": {
       "guildName": "컨트롤",
       "world": "아민타",
-      "memberCount": 8,
+      "memberCount": 9,
       "members": [
         {
           "nickname": "뿅뿅이",
@@ -7647,6 +7647,13 @@
           "job": "주문각인사",
           "level": 82,
           "conquestGrade": 17,
+          "realm": "아민타 03"
+        },
+        {
+          "nickname": "보잉",
+          "job": "집행관",
+          "level": 82,
+          "conquestGrade": 19,
           "realm": "아민타 03"
         }
       ]
@@ -20019,17 +20026,17 @@
           "realm": "아티산 03"
         },
         {
+          "nickname": "블랙팬서",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 24,
+          "realm": "아티산 03"
+        },
+        {
           "nickname": "쵸파츕스",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 23,
-          "realm": "아티산 03"
-        },
-        {
-          "nickname": "블랙팬서",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 24,
           "realm": "아티산 03"
         },
         {
@@ -20796,15 +20803,15 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "붕붕",
-          "job": "주문각인사",
+          "nickname": "종이이보이이",
+          "job": "태양감시자",
           "level": 92,
           "conquestGrade": 26,
           "realm": "아티산 04"
         },
         {
-          "nickname": "종이이보이이",
-          "job": "태양감시자",
+          "nickname": "붕붕",
+          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "아티산 04"
@@ -27530,15 +27537,15 @@
           "realm": "타리아 05"
         },
         {
-          "nickname": "고은",
-          "job": "주문각인사",
+          "nickname": "정소민",
+          "job": "태양감시자",
           "level": 88,
           "conquestGrade": 22,
           "realm": "타리아 05"
         },
         {
-          "nickname": "정소민",
-          "job": "태양감시자",
+          "nickname": "고은",
+          "job": "주문각인사",
           "level": 88,
           "conquestGrade": 22,
           "realm": "타리아 05"
@@ -30423,5 +30430,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-01T02:50:45.010Z"
+  "updatedAt": "2026-08-01T03:00:45.179Z"
 }
