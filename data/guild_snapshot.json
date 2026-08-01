@@ -5103,6 +5103,48 @@
         }
       ]
     },
+    "일리아나|라인소프": {
+      "guildName": "일리아나",
+      "world": "라인소프",
+      "memberCount": 5,
+      "members": [
+        {
+          "nickname": "캐차피",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 23,
+          "realm": "라인소프 04"
+        },
+        {
+          "nickname": "닥터페퍼",
+          "job": "심연추방자",
+          "level": 85,
+          "conquestGrade": 20,
+          "realm": "라인소프 04"
+        },
+        {
+          "nickname": "쥬논",
+          "job": "태양감시자",
+          "level": 83,
+          "conquestGrade": 19,
+          "realm": "라인소프 04"
+        },
+        {
+          "nickname": "뱀피",
+          "job": "집행관",
+          "level": 82,
+          "conquestGrade": 18,
+          "realm": "라인소프 04"
+        },
+        {
+          "nickname": "사과",
+          "job": "집행관",
+          "level": 82,
+          "conquestGrade": 19,
+          "realm": "라인소프 04"
+        }
+      ]
+    },
     "예술|라인소프": {
       "guildName": "예술",
       "world": "라인소프",
@@ -5197,41 +5239,6 @@
           "job": "집행관",
           "level": 76,
           "conquestGrade": 4,
-          "realm": "라인소프 04"
-        }
-      ]
-    },
-    "일리아나|라인소프": {
-      "guildName": "일리아나",
-      "world": "라인소프",
-      "memberCount": 4,
-      "members": [
-        {
-          "nickname": "닥터페퍼",
-          "job": "심연추방자",
-          "level": 85,
-          "conquestGrade": 20,
-          "realm": "라인소프 04"
-        },
-        {
-          "nickname": "쥬논",
-          "job": "태양감시자",
-          "level": 83,
-          "conquestGrade": 19,
-          "realm": "라인소프 04"
-        },
-        {
-          "nickname": "뱀피",
-          "job": "집행관",
-          "level": 82,
-          "conquestGrade": 18,
-          "realm": "라인소프 04"
-        },
-        {
-          "nickname": "사과",
-          "job": "집행관",
-          "level": 82,
-          "conquestGrade": 19,
           "realm": "라인소프 04"
         }
       ]
@@ -5942,14 +5949,14 @@
           "realm": "라인소프 05"
         },
         {
-          "nickname": "꾀도리",
+          "nickname": "아빠상어",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
           "realm": "라인소프 05"
         },
         {
-          "nickname": "아빠상어",
+          "nickname": "꾀도리",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
@@ -9148,17 +9155,17 @@
           "realm": "아민타 05"
         },
         {
-          "nickname": "하냥",
-          "job": "환영검사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "아민타 05"
-        },
-        {
           "nickname": "코르티스",
           "job": "집행관",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "아민타 05"
+        },
+        {
+          "nickname": "하냥",
+          "job": "환영검사",
+          "level": 92,
+          "conquestGrade": 26,
           "realm": "아민타 05"
         },
         {
@@ -21475,17 +21482,17 @@
           "realm": "아티산 05"
         },
         {
-          "nickname": "씨월드",
-          "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 22,
-          "realm": "아티산 05"
-        },
-        {
           "nickname": "얼탱",
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 23,
+          "realm": "아티산 05"
+        },
+        {
+          "nickname": "씨월드",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 22,
           "realm": "아티산 05"
         },
         {
@@ -24993,7 +25000,7 @@
     "유랑|타리아": {
       "guildName": "유랑",
       "world": "타리아",
-      "memberCount": 49,
+      "memberCount": 50,
       "members": [
         {
           "nickname": "유랑덴버",
@@ -25005,6 +25012,13 @@
         {
           "nickname": "DIOR",
           "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "타리아 01"
+        },
+        {
+          "nickname": "유랑하랑이",
+          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "타리아 01"
@@ -30409,5 +30423,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-01T01:50:44.539Z"
+  "updatedAt": "2026-08-01T02:00:45.961Z"
 }
