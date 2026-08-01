@@ -69,17 +69,17 @@
           "realm": "론도 01"
         },
         {
-          "nickname": "사하구",
-          "job": "환영검사",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "론도 01"
-        },
-        {
           "nickname": "아현",
           "job": "태양감시자",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "사하구",
+          "job": "환영검사",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "론도 01"
         },
         {
@@ -9176,15 +9176,15 @@
           "realm": "아민타 05"
         },
         {
-          "nickname": "하냥",
-          "job": "환영검사",
+          "nickname": "퓨마",
+          "job": "집행관",
           "level": 92,
           "conquestGrade": 26,
           "realm": "아민타 05"
         },
         {
-          "nickname": "퓨마",
-          "job": "집행관",
+          "nickname": "하냥",
+          "job": "환영검사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "아민타 05"
@@ -18472,17 +18472,17 @@
           "realm": "제롬 05"
         },
         {
-          "nickname": "아니카",
-          "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 22,
-          "realm": "제롬 05"
-        },
-        {
           "nickname": "술빵",
           "job": "향사수",
           "level": 88,
           "conquestGrade": 23,
+          "realm": "제롬 05"
+        },
+        {
+          "nickname": "아니카",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 22,
           "realm": "제롬 05"
         },
         {
@@ -19368,17 +19368,17 @@
           "realm": "아티산 02"
         },
         {
-          "nickname": "보름달",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 22,
-          "realm": "아티산 02"
-        },
-        {
           "nickname": "삼팔",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "아티산 02"
+        },
+        {
+          "nickname": "보름달",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 22,
           "realm": "아티산 02"
         },
         {
@@ -21426,13 +21426,6 @@
           "realm": "아티산 05"
         },
         {
-          "nickname": "산림",
-          "job": "야만투사",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "아티산 05"
-        },
-        {
           "nickname": "임상임상",
           "job": "향사수",
           "level": 89,
@@ -21442,6 +21435,13 @@
         {
           "nickname": "김책임",
           "job": "집행관",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "아티산 05"
+        },
+        {
+          "nickname": "산림",
+          "job": "야만투사",
           "level": 89,
           "conquestGrade": 24,
           "realm": "아티산 05"
@@ -27537,6 +27537,13 @@
           "realm": "타리아 05"
         },
         {
+          "nickname": "고은",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 22,
+          "realm": "타리아 05"
+        },
+        {
           "nickname": "설윤",
           "job": "집행관",
           "level": 88,
@@ -27546,13 +27553,6 @@
         {
           "nickname": "정소민",
           "job": "태양감시자",
-          "level": 88,
-          "conquestGrade": 22,
-          "realm": "타리아 05"
-        },
-        {
-          "nickname": "고은",
-          "job": "주문각인사",
           "level": 88,
           "conquestGrade": 22,
           "realm": "타리아 05"
@@ -28007,18 +28007,53 @@
         }
       ]
     },
-    "로맨틱|메르비스": {
-      "guildName": "로맨틱",
+    "열무|메르비스": {
+      "guildName": "열무",
       "world": "메르비스",
-      "memberCount": 28,
+      "memberCount": 5,
       "members": [
         {
-          "nickname": "신념",
+          "nickname": "사냥중",
           "job": "집행관",
-          "level": 88,
+          "level": 87,
           "conquestGrade": 22,
           "realm": "메르비스 01"
         },
+        {
+          "nickname": "빛황",
+          "job": "야만투사",
+          "level": 85,
+          "conquestGrade": 21,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "돈키호테",
+          "job": "야만투사",
+          "level": 82,
+          "conquestGrade": 15,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "열무",
+          "job": "심연추방자",
+          "level": 80,
+          "conquestGrade": 15,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "윤정아윤정아",
+          "job": "주문각인사",
+          "level": 79,
+          "conquestGrade": 17,
+          "realm": "메르비스 01"
+        }
+      ]
+    },
+    "로맨틱|메르비스": {
+      "guildName": "로맨틱",
+      "world": "메르비스",
+      "memberCount": 27,
+      "members": [
         {
           "nickname": "질서유지",
           "job": "향사수",
@@ -28203,48 +28238,6 @@
         },
         {
           "nickname": "몰라",
-          "job": "주문각인사",
-          "level": 79,
-          "conquestGrade": 17,
-          "realm": "메르비스 01"
-        }
-      ]
-    },
-    "열무|메르비스": {
-      "guildName": "열무",
-      "world": "메르비스",
-      "memberCount": 5,
-      "members": [
-        {
-          "nickname": "사냥중",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 22,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "빛황",
-          "job": "야만투사",
-          "level": 85,
-          "conquestGrade": 21,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "돈키호테",
-          "job": "야만투사",
-          "level": 82,
-          "conquestGrade": 15,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "열무",
-          "job": "심연추방자",
-          "level": 80,
-          "conquestGrade": 15,
-          "realm": "메르비스 01"
-        },
-        {
-          "nickname": "윤정아윤정아",
           "job": "주문각인사",
           "level": 79,
           "conquestGrade": 17,
@@ -30172,7 +30165,7 @@
           "nickname": "지원",
           "job": "집행관",
           "level": 86,
-          "conquestGrade": 22,
+          "conquestGrade": 23,
           "realm": "메르비스 05"
         },
         {
@@ -30437,5 +30430,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-01T03:30:43.971Z"
+  "updatedAt": "2026-08-01T03:40:44.686Z"
 }
