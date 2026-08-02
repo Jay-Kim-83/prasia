@@ -4294,10 +4294,17 @@
     "코드네임|라인소프": {
       "guildName": "코드네임",
       "world": "라인소프",
-      "memberCount": 47,
+      "memberCount": 48,
       "members": [
         {
           "nickname": "뚜껑",
+          "job": "야만투사",
+          "level": 93,
+          "conquestGrade": 26,
+          "realm": "라인소프 03"
+        },
+        {
+          "nickname": "문왕기",
           "job": "야만투사",
           "level": 93,
           "conquestGrade": 26,
@@ -4360,6 +4367,13 @@
           "realm": "라인소프 03"
         },
         {
+          "nickname": "거니",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "라인소프 03"
+        },
+        {
           "nickname": "그림",
           "job": "주문각인사",
           "level": 92,
@@ -4385,13 +4399,6 @@
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
-          "realm": "라인소프 03"
-        },
-        {
-          "nickname": "거니",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 25,
           "realm": "라인소프 03"
         },
         {
@@ -8035,6 +8042,13 @@
           "realm": "아민타 04"
         },
         {
+          "nickname": "김대표",
+          "job": "향사수",
+          "level": 91,
+          "conquestGrade": 23,
+          "realm": "아민타 04"
+        },
+        {
           "nickname": "회장카이우스",
           "job": "주문각인사",
           "level": 91,
@@ -8095,13 +8109,6 @@
           "job": "향사수",
           "level": 91,
           "conquestGrade": 24,
-          "realm": "아민타 04"
-        },
-        {
-          "nickname": "김대표",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 23,
           "realm": "아민타 04"
         },
         {
@@ -8415,7 +8422,7 @@
         {
           "nickname": "힐싸개",
           "job": "주문각인사",
-          "level": 88,
+          "level": 89,
           "conquestGrade": 23,
           "realm": "아민타 04"
         }
@@ -25339,17 +25346,17 @@
           "realm": "타리아 01"
         },
         {
-          "nickname": "얗신",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 23,
-          "realm": "타리아 01"
-        },
-        {
           "nickname": "유랑내일",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "타리아 01"
+        },
+        {
+          "nickname": "얗신",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 23,
           "realm": "타리아 01"
         },
         {
@@ -30486,5 +30493,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-02T04:00:43.535Z"
+  "updatedAt": "2026-08-02T04:10:44.168Z"
 }
