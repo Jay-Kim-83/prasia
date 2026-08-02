@@ -10447,7 +10447,7 @@
     "동물의숲|가리안": {
       "guildName": "동물의숲",
       "world": "가리안",
-      "memberCount": 5,
+      "memberCount": 6,
       "members": [
         {
           "nickname": "타이거",
@@ -10478,6 +10478,13 @@
           "realm": "가리안 02"
         },
         {
+          "nickname": "킹승호",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 21,
+          "realm": "가리안 02"
+        },
+        {
           "nickname": "늑대랑",
           "job": "환영검사",
           "level": 85,
@@ -10489,7 +10496,7 @@
     "휴일|가리안": {
       "guildName": "휴일",
       "world": "가리안",
-      "memberCount": 14,
+      "memberCount": 13,
       "members": [
         {
           "nickname": "MIIX",
@@ -10580,13 +10587,6 @@
           "job": "향사수",
           "level": 85,
           "conquestGrade": 20,
-          "realm": "가리안 02"
-        },
-        {
-          "nickname": "쌉가능",
-          "job": "주문각인사",
-          "level": 84,
-          "conquestGrade": 18,
           "realm": "가리안 02"
         }
       ]
@@ -16554,15 +16554,15 @@
           "realm": "제롬 02"
         },
         {
-          "nickname": "포춘쿠키",
-          "job": "환영검사",
+          "nickname": "횡성한우",
+          "job": "집행관",
           "level": 87,
           "conquestGrade": 21,
           "realm": "제롬 02"
         },
         {
-          "nickname": "횡성한우",
-          "job": "집행관",
+          "nickname": "포춘쿠키",
+          "job": "환영검사",
           "level": 87,
           "conquestGrade": 21,
           "realm": "제롬 02"
@@ -17408,17 +17408,17 @@
           "realm": "제롬 04"
         },
         {
-          "nickname": "근성",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "제롬 04"
-        },
-        {
           "nickname": "우드득",
           "job": "태양감시자",
           "level": 92,
           "conquestGrade": 26,
+          "realm": "제롬 04"
+        },
+        {
+          "nickname": "근성",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 25,
           "realm": "제롬 04"
         },
         {
@@ -18929,7 +18929,7 @@
         {
           "nickname": "자원창고",
           "job": "주문각인사",
-          "level": 84,
+          "level": 85,
           "conquestGrade": 20,
           "realm": "아티산 01"
         }
@@ -21680,7 +21680,7 @@
         {
           "nickname": "잭더리퍼",
           "job": "주문각인사",
-          "level": 83,
+          "level": 84,
           "conquestGrade": 20,
           "realm": "아티산 05"
         },
@@ -30493,5 +30493,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-02T04:20:44.994Z"
+  "updatedAt": "2026-08-02T04:30:44.246Z"
 }
