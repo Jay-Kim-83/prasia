@@ -6614,17 +6614,17 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "리제",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 24,
-          "realm": "아민타 01"
-        },
-        {
           "nickname": "마벨",
           "job": "집행관",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "리제",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 24,
           "realm": "아민타 01"
         },
         {
@@ -9397,7 +9397,7 @@
     "고스톱|가리안": {
       "guildName": "고스톱",
       "world": "가리안",
-      "memberCount": 30,
+      "memberCount": 31,
       "members": [
         {
           "nickname": "액티언",
@@ -9558,6 +9558,13 @@
           "job": "향사수",
           "level": 82,
           "conquestGrade": 18,
+          "realm": "가리안 01"
+        },
+        {
+          "nickname": "우루",
+          "job": "야만투사",
+          "level": 82,
+          "conquestGrade": 19,
           "realm": "가리안 01"
         },
         {
@@ -11766,13 +11773,6 @@
           "realm": "가리안 04"
         },
         {
-          "nickname": "포스",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "가리안 04"
-        },
-        {
           "nickname": "악어",
           "job": "주문각인사",
           "level": 89,
@@ -11782,6 +11782,13 @@
         {
           "nickname": "태미",
           "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "가리안 04"
+        },
+        {
+          "nickname": "포스",
+          "job": "향사수",
           "level": 89,
           "conquestGrade": 24,
           "realm": "가리안 04"
@@ -13243,15 +13250,15 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "명필",
-          "job": "집행관",
+          "nickname": "이르르",
+          "job": "향사수",
           "level": 90,
           "conquestGrade": 24,
           "realm": "사도바 02"
         },
         {
-          "nickname": "이르르",
-          "job": "향사수",
+          "nickname": "명필",
+          "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
           "realm": "사도바 02"
@@ -30479,5 +30486,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-02T03:40:43.851Z"
+  "updatedAt": "2026-08-02T03:50:44.261Z"
 }
