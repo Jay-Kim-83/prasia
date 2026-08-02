@@ -584,7 +584,7 @@
     "블랙중독|론도": {
       "guildName": "블랙중독",
       "world": "론도",
-      "memberCount": 41,
+      "memberCount": 42,
       "members": [
         {
           "nickname": "쌍팔형",
@@ -872,13 +872,20 @@
           "level": 91,
           "conquestGrade": 24,
           "realm": "론도 02"
+        },
+        {
+          "nickname": "짱아형",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "론도 02"
         }
       ]
     },
     "감자빙수|론도": {
       "guildName": "감자빙수",
       "world": "론도",
-      "memberCount": 23,
+      "memberCount": 22,
       "members": [
         {
           "nickname": "온달",
@@ -1032,13 +1039,6 @@
           "job": "환영검사",
           "level": 91,
           "conquestGrade": 24,
-          "realm": "론도 02"
-        },
-        {
-          "nickname": "접기",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 25,
           "realm": "론도 02"
         }
       ]
@@ -8898,7 +8898,7 @@
         {
           "nickname": "쫄깃",
           "job": "주문각인사",
-          "level": 91,
+          "level": 92,
           "conquestGrade": 26,
           "realm": "아민타 05"
         },
@@ -18444,17 +18444,17 @@
           "realm": "제롬 05"
         },
         {
-          "nickname": "속공",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 22,
-          "realm": "제롬 05"
-        },
-        {
           "nickname": "꾀돌이",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 23,
+          "realm": "제롬 05"
+        },
+        {
+          "nickname": "속공",
+          "job": "향사수",
+          "level": 89,
+          "conquestGrade": 22,
           "realm": "제롬 05"
         },
         {
@@ -20852,14 +20852,14 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "천사창동이",
+          "nickname": "마데렐라",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "아티산 04"
         },
         {
-          "nickname": "마데렐라",
+          "nickname": "천사창동이",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
@@ -30493,5 +30493,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-02T23:00:45.022Z"
+  "updatedAt": "2026-08-02T23:10:44.544Z"
 }
