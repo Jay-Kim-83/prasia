@@ -1861,17 +1861,17 @@
           "realm": "론도 03"
         },
         {
-          "nickname": "강모리",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 25,
-          "realm": "론도 03"
-        },
-        {
           "nickname": "강아재",
           "job": "집행관",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "론도 03"
+        },
+        {
+          "nickname": "강모리",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 25,
           "realm": "론도 03"
         },
         {
@@ -9779,41 +9779,6 @@
         }
       ]
     },
-    "개구쟁이스머프|가리안": {
-      "guildName": "개구쟁이스머프",
-      "world": "가리안",
-      "memberCount": 4,
-      "members": [
-        {
-          "nickname": "라피네",
-          "job": "집행관",
-          "level": 85,
-          "conquestGrade": 20,
-          "realm": "가리안 01"
-        },
-        {
-          "nickname": "개구쟁이스머프",
-          "job": "주문각인사",
-          "level": 83,
-          "conquestGrade": 20,
-          "realm": "가리안 01"
-        },
-        {
-          "nickname": "익살이스머프",
-          "job": "주문각인사",
-          "level": 81,
-          "conquestGrade": 19,
-          "realm": "가리안 01"
-        },
-        {
-          "nickname": "투덜이스머프",
-          "job": "주문각인사",
-          "level": 81,
-          "conquestGrade": 19,
-          "realm": "가리안 01"
-        }
-      ]
-    },
     "해피프라|가리안": {
       "guildName": "해피프라",
       "world": "가리안",
@@ -9845,6 +9810,41 @@
           "job": "태양감시자",
           "level": 80,
           "conquestGrade": 18,
+          "realm": "가리안 01"
+        }
+      ]
+    },
+    "개구쟁이스머프|가리안": {
+      "guildName": "개구쟁이스머프",
+      "world": "가리안",
+      "memberCount": 4,
+      "members": [
+        {
+          "nickname": "라피네",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 20,
+          "realm": "가리안 01"
+        },
+        {
+          "nickname": "개구쟁이스머프",
+          "job": "주문각인사",
+          "level": 83,
+          "conquestGrade": 20,
+          "realm": "가리안 01"
+        },
+        {
+          "nickname": "익살이스머프",
+          "job": "주문각인사",
+          "level": 81,
+          "conquestGrade": 19,
+          "realm": "가리안 01"
+        },
+        {
+          "nickname": "투덜이스머프",
+          "job": "주문각인사",
+          "level": 81,
+          "conquestGrade": 19,
           "realm": "가리안 01"
         }
       ]
@@ -10440,7 +10440,7 @@
     "동물의숲|가리안": {
       "guildName": "동물의숲",
       "world": "가리안",
-      "memberCount": 5,
+      "memberCount": 6,
       "members": [
         {
           "nickname": "타이거",
@@ -10471,6 +10471,13 @@
           "realm": "가리안 02"
         },
         {
+          "nickname": "킹승호",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 21,
+          "realm": "가리안 02"
+        },
+        {
           "nickname": "늑대랑",
           "job": "환영검사",
           "level": 85,
@@ -10482,7 +10489,7 @@
     "휴일|가리안": {
       "guildName": "휴일",
       "world": "가리안",
-      "memberCount": 14,
+      "memberCount": 13,
       "members": [
         {
           "nickname": "MIIX",
@@ -10573,13 +10580,6 @@
           "job": "향사수",
           "level": 85,
           "conquestGrade": 20,
-          "realm": "가리안 02"
-        },
-        {
-          "nickname": "쌉가능",
-          "job": "주문각인사",
-          "level": 84,
-          "conquestGrade": 18,
           "realm": "가리안 02"
         }
       ]
@@ -21141,7 +21141,7 @@
         {
           "nickname": "우사기",
           "job": "주문각인사",
-          "level": 91,
+          "level": 92,
           "conquestGrade": 25,
           "realm": "아티산 04"
         },
@@ -30493,5 +30493,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-02T20:50:45.089Z"
+  "updatedAt": "2026-08-02T21:00:44.413Z"
 }
