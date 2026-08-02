@@ -2050,15 +2050,15 @@
           "realm": "론도 04"
         },
         {
-          "nickname": "진빼이",
-          "job": "향사수",
+          "nickname": "비룡",
+          "job": "집행관",
           "level": 92,
           "conquestGrade": 25,
           "realm": "론도 04"
         },
         {
-          "nickname": "비룡",
-          "job": "집행관",
+          "nickname": "진빼이",
+          "job": "향사수",
           "level": 92,
           "conquestGrade": 25,
           "realm": "론도 04"
@@ -9176,13 +9176,6 @@
           "realm": "아민타 05"
         },
         {
-          "nickname": "김삿갓",
-          "job": "향사수",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "아민타 05"
-        },
-        {
           "nickname": "퓨마",
           "job": "집행관",
           "level": 92,
@@ -9201,6 +9194,13 @@
           "job": "집행관",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "아민타 05"
+        },
+        {
+          "nickname": "김삿갓",
+          "job": "향사수",
+          "level": 92,
+          "conquestGrade": 26,
           "realm": "아민타 05"
         },
         {
@@ -11612,15 +11612,15 @@
           "realm": "가리안 04"
         },
         {
-          "nickname": "넌강해져따돌격해",
-          "job": "집행관",
+          "nickname": "소리",
+          "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
           "realm": "가리안 04"
         },
         {
-          "nickname": "소리",
-          "job": "주문각인사",
+          "nickname": "넌강해져따돌격해",
+          "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
           "realm": "가리안 04"
@@ -20705,14 +20705,14 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "귀하",
+          "nickname": "모해",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
           "realm": "아티산 04"
         },
         {
-          "nickname": "모해",
+          "nickname": "귀하",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
@@ -26208,6 +26208,34 @@
         }
       ]
     },
+    "시악|타리아": {
+      "guildName": "시악",
+      "world": "타리아",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "그로밋",
+          "job": "향사수",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "오로라핑",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 20,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "제피아",
+          "job": "심연추방자",
+          "level": 85,
+          "conquestGrade": 22,
+          "realm": "타리아 02"
+        }
+      ]
+    },
     "쎈|타리아": {
       "guildName": "쎈",
       "world": "타리아",
@@ -30451,5 +30479,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-02T07:40:44.794Z"
+  "updatedAt": "2026-08-02T07:50:44.356Z"
 }
