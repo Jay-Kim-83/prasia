@@ -584,7 +584,7 @@
     "블랙중독|론도": {
       "guildName": "블랙중독",
       "world": "론도",
-      "memberCount": 41,
+      "memberCount": 42,
       "members": [
         {
           "nickname": "쌍팔형",
@@ -872,13 +872,20 @@
           "level": 91,
           "conquestGrade": 24,
           "realm": "론도 02"
+        },
+        {
+          "nickname": "짱아형",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "론도 02"
         }
       ]
     },
     "감자빙수|론도": {
       "guildName": "감자빙수",
       "world": "론도",
-      "memberCount": 23,
+      "memberCount": 22,
       "members": [
         {
           "nickname": "온달",
@@ -1029,13 +1036,6 @@
         },
         {
           "nickname": "쌩얼",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "론도 02"
-        },
-        {
-          "nickname": "접기",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
@@ -18738,17 +18738,17 @@
           "realm": "아티산 01"
         },
         {
-          "nickname": "명품광기",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 26,
-          "realm": "아티산 01"
-        },
-        {
           "nickname": "명품데이",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "아티산 01"
+        },
+        {
+          "nickname": "명품광기",
+          "job": "향사수",
+          "level": 91,
+          "conquestGrade": 26,
           "realm": "아티산 01"
         },
         {
@@ -18857,17 +18857,17 @@
           "realm": "아티산 01"
         },
         {
-          "nickname": "명품차차",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "아티산 01"
-        },
-        {
           "nickname": "명품별난",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 23,
+          "realm": "아티산 01"
+        },
+        {
+          "nickname": "명품차차",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 24,
           "realm": "아티산 01"
         },
         {
@@ -25990,15 +25990,15 @@
           "realm": "타리아 02"
         },
         {
-          "nickname": "돌돔",
-          "job": "향사수",
+          "nickname": "은은한꽃향",
+          "job": "집행관",
           "level": 88,
           "conquestGrade": 24,
           "realm": "타리아 02"
         },
         {
-          "nickname": "은은한꽃향",
-          "job": "집행관",
+          "nickname": "돌돔",
+          "job": "향사수",
           "level": 88,
           "conquestGrade": 24,
           "realm": "타리아 02"
@@ -30458,5 +30458,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-03T05:50:44.011Z"
+  "updatedAt": "2026-08-03T06:00:45.016Z"
 }
