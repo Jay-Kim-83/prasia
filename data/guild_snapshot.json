@@ -13362,14 +13362,14 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "연우지우은우",
+          "nickname": "요거건들지마쭈",
           "job": "집행관",
           "level": 87,
           "conquestGrade": 22,
           "realm": "사도바 02"
         },
         {
-          "nickname": "요거건들지마쭈",
+          "nickname": "연우지우은우",
           "job": "집행관",
           "level": 87,
           "conquestGrade": 22,
@@ -13434,7 +13434,7 @@
         {
           "nickname": "가왕",
           "job": "야만투사",
-          "level": 85,
+          "level": 86,
           "conquestGrade": 21,
           "realm": "사도바 02"
         },
@@ -15126,14 +15126,14 @@
           "realm": "사도바 05"
         },
         {
-          "nickname": "팔레트",
+          "nickname": "얼음창",
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 22,
           "realm": "사도바 05"
         },
         {
-          "nickname": "얼음창",
+          "nickname": "팔레트",
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 22,
@@ -20579,15 +20579,15 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "흑염룡",
-          "job": "집행관",
+          "nickname": "Zeus",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "아티산 04"
         },
         {
-          "nickname": "Zeus",
-          "job": "야만투사",
+          "nickname": "흑염룡",
+          "job": "집행관",
           "level": 92,
           "conquestGrade": 25,
           "realm": "아티산 04"
@@ -20873,13 +20873,6 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "무탈",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "아티산 04"
-        },
-        {
           "nickname": "알레프",
           "job": "주문각인사",
           "level": 92,
@@ -20888,6 +20881,13 @@
         },
         {
           "nickname": "네마음을훔치러온보이",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "아티산 04"
+        },
+        {
+          "nickname": "무탈",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
@@ -30289,55 +30289,6 @@
         }
       ]
     },
-    "노즈라이딩|메르비스": {
-      "guildName": "노즈라이딩",
-      "world": "메르비스",
-      "memberCount": 6,
-      "members": [
-        {
-          "nickname": "미나미",
-          "job": "심연추방자",
-          "level": 90,
-          "conquestGrade": 22,
-          "realm": "메르비스 05"
-        },
-        {
-          "nickname": "laybee",
-          "job": "주문각인사",
-          "level": 85,
-          "conquestGrade": 21,
-          "realm": "메르비스 05"
-        },
-        {
-          "nickname": "도암",
-          "job": "집행관",
-          "level": 84,
-          "conquestGrade": 21,
-          "realm": "메르비스 05"
-        },
-        {
-          "nickname": "행텐",
-          "job": "집행관",
-          "level": 84,
-          "conquestGrade": 19,
-          "realm": "메르비스 05"
-        },
-        {
-          "nickname": "미로",
-          "job": "야만투사",
-          "level": 84,
-          "conquestGrade": 19,
-          "realm": "메르비스 05"
-        },
-        {
-          "nickname": "행파",
-          "job": "집행관",
-          "level": 83,
-          "conquestGrade": 18,
-          "realm": "메르비스 05"
-        }
-      ]
-    },
     "쌀먹단|메르비스": {
       "guildName": "쌀먹단",
       "world": "메르비스",
@@ -30429,6 +30380,48 @@
         }
       ]
     },
+    "노즈라이딩|메르비스": {
+      "guildName": "노즈라이딩",
+      "world": "메르비스",
+      "memberCount": 5,
+      "members": [
+        {
+          "nickname": "laybee",
+          "job": "주문각인사",
+          "level": 85,
+          "conquestGrade": 21,
+          "realm": "메르비스 05"
+        },
+        {
+          "nickname": "도암",
+          "job": "집행관",
+          "level": 84,
+          "conquestGrade": 21,
+          "realm": "메르비스 05"
+        },
+        {
+          "nickname": "행텐",
+          "job": "집행관",
+          "level": 84,
+          "conquestGrade": 19,
+          "realm": "메르비스 05"
+        },
+        {
+          "nickname": "미로",
+          "job": "야만투사",
+          "level": 84,
+          "conquestGrade": 19,
+          "realm": "메르비스 05"
+        },
+        {
+          "nickname": "행파",
+          "job": "집행관",
+          "level": 83,
+          "conquestGrade": 18,
+          "realm": "메르비스 05"
+        }
+      ]
+    },
     "좋은친구들|메르비스": {
       "guildName": "좋은친구들",
       "world": "메르비스",
@@ -30472,5 +30465,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-03T08:30:44.850Z"
+  "updatedAt": "2026-08-03T08:40:44.698Z"
 }
