@@ -584,7 +584,7 @@
     "블랙중독|론도": {
       "guildName": "블랙중독",
       "world": "론도",
-      "memberCount": 42,
+      "memberCount": 41,
       "members": [
         {
           "nickname": "쌍팔형",
@@ -872,20 +872,13 @@
           "level": 91,
           "conquestGrade": 24,
           "realm": "론도 02"
-        },
-        {
-          "nickname": "짱아형",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "론도 02"
         }
       ]
     },
     "감자빙수|론도": {
       "guildName": "감자빙수",
       "world": "론도",
-      "memberCount": 22,
+      "memberCount": 23,
       "members": [
         {
           "nickname": "온달",
@@ -1039,6 +1032,13 @@
           "job": "환영검사",
           "level": 91,
           "conquestGrade": 24,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "접기",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "론도 02"
         }
       ]
@@ -6096,14 +6096,14 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "데빌구",
+          "nickname": "자라나라모발공주",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 26,
           "realm": "아민타 01"
         },
         {
-          "nickname": "자라나라모발공주",
+          "nickname": "데빌구",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 26,
@@ -7644,41 +7644,6 @@
         }
       ]
     },
-    "ON|아민타": {
-      "guildName": "ON",
-      "world": "아민타",
-      "memberCount": 4,
-      "members": [
-        {
-          "nickname": "더덕",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "아민타 03"
-        },
-        {
-          "nickname": "예스",
-          "job": "향사수",
-          "level": 87,
-          "conquestGrade": 21,
-          "realm": "아민타 03"
-        },
-        {
-          "nickname": "물들임",
-          "job": "주문각인사",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "아민타 03"
-        },
-        {
-          "nickname": "시시오마코토",
-          "job": "주문각인사",
-          "level": 82,
-          "conquestGrade": 19,
-          "realm": "아민타 03"
-        }
-      ]
-    },
     "빌런|아민타": {
       "guildName": "빌런",
       "world": "아민타",
@@ -7833,6 +7798,34 @@
         },
         {
           "nickname": "하루잉",
+          "job": "주문각인사",
+          "level": 82,
+          "conquestGrade": 19,
+          "realm": "아민타 03"
+        }
+      ]
+    },
+    "ON|아민타": {
+      "guildName": "ON",
+      "world": "아민타",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "예스",
+          "job": "향사수",
+          "level": 87,
+          "conquestGrade": 21,
+          "realm": "아민타 03"
+        },
+        {
+          "nickname": "물들임",
+          "job": "주문각인사",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "아민타 03"
+        },
+        {
+          "nickname": "시시오마코토",
           "job": "주문각인사",
           "level": 82,
           "conquestGrade": 19,
@@ -17823,7 +17816,7 @@
         {
           "nickname": "물어잇",
           "job": "주문각인사",
-          "level": 87,
+          "level": 88,
           "conquestGrade": 23,
           "realm": "제롬 04"
         },
@@ -20971,14 +20964,14 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "젤리잉",
+          "nickname": "석도야언제와",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아티산 04"
         },
         {
-          "nickname": "석도야언제와",
+          "nickname": "젤리잉",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
@@ -30486,5 +30479,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-03T01:40:44.322Z"
+  "updatedAt": "2026-08-03T01:50:45.266Z"
 }
