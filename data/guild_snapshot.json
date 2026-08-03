@@ -6268,7 +6268,7 @@
     "루드|아민타": {
       "guildName": "루드",
       "world": "아민타",
-      "memberCount": 28,
+      "memberCount": 29,
       "members": [
         {
           "nickname": "종합병원",
@@ -6462,6 +6462,13 @@
         {
           "nickname": "쓰파런키",
           "job": "야만투사",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "아이스쿠림",
+          "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아민타 01"
@@ -6688,7 +6695,7 @@
     "고트|아민타": {
       "guildName": "고트",
       "world": "아민타",
-      "memberCount": 4,
+      "memberCount": 3,
       "members": [
         {
           "nickname": "영원형",
@@ -6709,13 +6716,6 @@
           "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
-          "realm": "아민타 01"
-        },
-        {
-          "nickname": "블랙보리",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 23,
           "realm": "아민타 01"
         }
       ]
@@ -11507,15 +11507,15 @@
           "realm": "가리안 04"
         },
         {
-          "nickname": "깡그리",
-          "job": "향사수",
+          "nickname": "시스",
+          "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "가리안 04"
         },
         {
-          "nickname": "시스",
-          "job": "주문각인사",
+          "nickname": "깡그리",
+          "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
           "realm": "가리안 04"
@@ -20215,17 +20215,17 @@
           "realm": "아티산 03"
         },
         {
-          "nickname": "동서양",
-          "job": "집행관",
-          "level": 85,
-          "conquestGrade": 20,
-          "realm": "아티산 03"
-        },
-        {
           "nickname": "집뿡이",
           "job": "집행관",
           "level": 85,
           "conquestGrade": 21,
+          "realm": "아티산 03"
+        },
+        {
+          "nickname": "동서양",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 20,
           "realm": "아티산 03"
         },
         {
@@ -30465,5 +30465,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-03T09:40:45.034Z"
+  "updatedAt": "2026-08-03T09:50:43.804Z"
 }
