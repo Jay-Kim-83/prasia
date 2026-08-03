@@ -1336,13 +1336,6 @@
           "realm": "론도 03"
         },
         {
-          "nickname": "강별",
-          "job": "태양감시자",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "론도 03"
-        },
-        {
           "nickname": "강꿀꿀",
           "job": "야만투사",
           "level": 92,
@@ -1361,6 +1354,13 @@
           "job": "집행관",
           "level": 92,
           "conquestGrade": 26,
+          "realm": "론도 03"
+        },
+        {
+          "nickname": "강별",
+          "job": "태양감시자",
+          "level": 92,
+          "conquestGrade": 25,
           "realm": "론도 03"
         },
         {
@@ -3188,7 +3188,7 @@
     "헐리우드|론도": {
       "guildName": "헐리우드",
       "world": "론도",
-      "memberCount": 6,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "빈디젤",
@@ -3228,6 +3228,13 @@
         {
           "nickname": "로다주",
           "job": "주문각인사",
+          "level": 84,
+          "conquestGrade": 21,
+          "realm": "론도 05"
+        },
+        {
+          "nickname": "유승준",
+          "job": "집행관",
           "level": 84,
           "conquestGrade": 21,
           "realm": "론도 05"
@@ -3314,7 +3321,7 @@
     "레전드|론도": {
       "guildName": "레전드",
       "world": "론도",
-      "memberCount": 4,
+      "memberCount": 3,
       "members": [
         {
           "nickname": "iz",
@@ -3334,13 +3341,6 @@
           "nickname": "카페모카",
           "job": "주문각인사",
           "level": 85,
-          "conquestGrade": 20,
-          "realm": "론도 05"
-        },
-        {
-          "nickname": "멍멍이",
-          "job": "주문각인사",
-          "level": 84,
           "conquestGrade": 20,
           "realm": "론도 05"
         }
@@ -18857,17 +18857,17 @@
           "realm": "아티산 01"
         },
         {
-          "nickname": "명품차차",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "아티산 01"
-        },
-        {
           "nickname": "명품별난",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 23,
+          "realm": "아티산 01"
+        },
+        {
+          "nickname": "명품차차",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 24,
           "realm": "아티산 01"
         },
         {
@@ -22252,17 +22252,17 @@
           "realm": "나세르 01"
         },
         {
-          "nickname": "케빈",
-          "job": "주문각인사",
-          "level": 83,
-          "conquestGrade": 18,
-          "realm": "나세르 01"
-        },
-        {
           "nickname": "쓱싹",
           "job": "환영검사",
           "level": 83,
           "conquestGrade": 20,
+          "realm": "나세르 01"
+        },
+        {
+          "nickname": "케빈",
+          "job": "주문각인사",
+          "level": 83,
+          "conquestGrade": 18,
           "realm": "나세르 01"
         },
         {
@@ -22618,7 +22618,7 @@
         {
           "nickname": "윈디",
           "job": "집행관",
-          "level": 88,
+          "level": 87,
           "conquestGrade": 22,
           "realm": "나세르 02"
         },
@@ -30458,5 +30458,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-03T07:20:44.064Z"
+  "updatedAt": "2026-08-03T07:30:43.698Z"
 }
