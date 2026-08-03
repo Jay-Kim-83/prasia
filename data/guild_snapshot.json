@@ -1336,6 +1336,13 @@
           "realm": "론도 03"
         },
         {
+          "nickname": "강별",
+          "job": "태양감시자",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "론도 03"
+        },
+        {
           "nickname": "강꿀꿀",
           "job": "야만투사",
           "level": 92,
@@ -1354,13 +1361,6 @@
           "job": "집행관",
           "level": 92,
           "conquestGrade": 26,
-          "realm": "론도 03"
-        },
-        {
-          "nickname": "강별",
-          "job": "태양감시자",
-          "level": 92,
-          "conquestGrade": 25,
           "realm": "론도 03"
         },
         {
@@ -6635,14 +6635,14 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "목회장",
+          "nickname": "돌아온사호",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
           "realm": "아민타 01"
         },
         {
-          "nickname": "돌아온사호",
+          "nickname": "목회장",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
@@ -9599,7 +9599,7 @@
           "nickname": "지니지니",
           "job": "태양감시자",
           "level": 81,
-          "conquestGrade": 18,
+          "conquestGrade": 19,
           "realm": "가리안 01"
         },
         {
@@ -12637,7 +12637,7 @@
           "nickname": "오데마피게",
           "job": "집행관",
           "level": 84,
-          "conquestGrade": 18,
+          "conquestGrade": 19,
           "realm": "사도바 01"
         },
         {
@@ -30289,6 +30289,55 @@
         }
       ]
     },
+    "노즈라이딩|메르비스": {
+      "guildName": "노즈라이딩",
+      "world": "메르비스",
+      "memberCount": 6,
+      "members": [
+        {
+          "nickname": "미나미",
+          "job": "심연추방자",
+          "level": 90,
+          "conquestGrade": 22,
+          "realm": "메르비스 05"
+        },
+        {
+          "nickname": "laybee",
+          "job": "주문각인사",
+          "level": 85,
+          "conquestGrade": 21,
+          "realm": "메르비스 05"
+        },
+        {
+          "nickname": "도암",
+          "job": "집행관",
+          "level": 84,
+          "conquestGrade": 21,
+          "realm": "메르비스 05"
+        },
+        {
+          "nickname": "행텐",
+          "job": "집행관",
+          "level": 84,
+          "conquestGrade": 19,
+          "realm": "메르비스 05"
+        },
+        {
+          "nickname": "미로",
+          "job": "야만투사",
+          "level": 84,
+          "conquestGrade": 19,
+          "realm": "메르비스 05"
+        },
+        {
+          "nickname": "행파",
+          "job": "집행관",
+          "level": 83,
+          "conquestGrade": 18,
+          "realm": "메르비스 05"
+        }
+      ]
+    },
     "쌀먹단|메르비스": {
       "guildName": "쌀먹단",
       "world": "메르비스",
@@ -30380,48 +30429,6 @@
         }
       ]
     },
-    "노즈라이딩|메르비스": {
-      "guildName": "노즈라이딩",
-      "world": "메르비스",
-      "memberCount": 5,
-      "members": [
-        {
-          "nickname": "laybee",
-          "job": "주문각인사",
-          "level": 85,
-          "conquestGrade": 21,
-          "realm": "메르비스 05"
-        },
-        {
-          "nickname": "도암",
-          "job": "집행관",
-          "level": 84,
-          "conquestGrade": 21,
-          "realm": "메르비스 05"
-        },
-        {
-          "nickname": "행텐",
-          "job": "집행관",
-          "level": 84,
-          "conquestGrade": 19,
-          "realm": "메르비스 05"
-        },
-        {
-          "nickname": "미로",
-          "job": "야만투사",
-          "level": 84,
-          "conquestGrade": 19,
-          "realm": "메르비스 05"
-        },
-        {
-          "nickname": "행파",
-          "job": "집행관",
-          "level": 83,
-          "conquestGrade": 18,
-          "realm": "메르비스 05"
-        }
-      ]
-    },
     "좋은친구들|메르비스": {
       "guildName": "좋은친구들",
       "world": "메르비스",
@@ -30465,5 +30472,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-03T08:20:44.802Z"
+  "updatedAt": "2026-08-03T08:30:44.850Z"
 }
