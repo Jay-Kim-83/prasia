@@ -9772,6 +9772,41 @@
         }
       ]
     },
+    "개구쟁이스머프|가리안": {
+      "guildName": "개구쟁이스머프",
+      "world": "가리안",
+      "memberCount": 4,
+      "members": [
+        {
+          "nickname": "라피네",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 20,
+          "realm": "가리안 01"
+        },
+        {
+          "nickname": "개구쟁이스머프",
+          "job": "주문각인사",
+          "level": 83,
+          "conquestGrade": 20,
+          "realm": "가리안 01"
+        },
+        {
+          "nickname": "익살이스머프",
+          "job": "주문각인사",
+          "level": 81,
+          "conquestGrade": 19,
+          "realm": "가리안 01"
+        },
+        {
+          "nickname": "투덜이스머프",
+          "job": "주문각인사",
+          "level": 81,
+          "conquestGrade": 19,
+          "realm": "가리안 01"
+        }
+      ]
+    },
     "해피프라|가리안": {
       "guildName": "해피프라",
       "world": "가리안",
@@ -9803,41 +9838,6 @@
           "job": "태양감시자",
           "level": 80,
           "conquestGrade": 18,
-          "realm": "가리안 01"
-        }
-      ]
-    },
-    "개구쟁이스머프|가리안": {
-      "guildName": "개구쟁이스머프",
-      "world": "가리안",
-      "memberCount": 4,
-      "members": [
-        {
-          "nickname": "라피네",
-          "job": "집행관",
-          "level": 84,
-          "conquestGrade": 20,
-          "realm": "가리안 01"
-        },
-        {
-          "nickname": "개구쟁이스머프",
-          "job": "주문각인사",
-          "level": 83,
-          "conquestGrade": 20,
-          "realm": "가리안 01"
-        },
-        {
-          "nickname": "익살이스머프",
-          "job": "주문각인사",
-          "level": 81,
-          "conquestGrade": 19,
-          "realm": "가리안 01"
-        },
-        {
-          "nickname": "투덜이스머프",
-          "job": "주문각인사",
-          "level": 81,
-          "conquestGrade": 19,
           "realm": "가리안 01"
         }
       ]
@@ -19319,13 +19319,6 @@
           "realm": "아티산 02"
         },
         {
-          "nickname": "놈팽",
-          "job": "태양감시자",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "아티산 02"
-        },
-        {
           "nickname": "삐약",
           "job": "향사수",
           "level": 90,
@@ -19337,6 +19330,13 @@
           "job": "향사수",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "아티산 02"
+        },
+        {
+          "nickname": "놈팽",
+          "job": "태양감시자",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "아티산 02"
         },
         {
@@ -19503,7 +19503,7 @@
         {
           "nickname": "상태빡큐",
           "job": "집행관",
-          "level": 89,
+          "level": 90,
           "conquestGrade": 24,
           "realm": "아티산 02"
         },
@@ -25752,17 +25752,17 @@
           "realm": "타리아 02"
         },
         {
-          "nickname": "악쀼",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "타리아 02"
-        },
-        {
           "nickname": "도하아빠",
           "job": "집행관",
           "level": 89,
           "conquestGrade": 23,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "악쀼",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 24,
           "realm": "타리아 02"
         },
         {
@@ -26454,7 +26454,7 @@
         {
           "nickname": "이성계",
           "job": "집행관",
-          "level": 84,
+          "level": 85,
           "conquestGrade": 19,
           "realm": "타리아 03"
         },
@@ -30458,5 +30458,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-03T06:20:45.202Z"
+  "updatedAt": "2026-08-03T06:30:44.424Z"
 }
