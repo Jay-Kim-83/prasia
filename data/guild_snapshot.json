@@ -3026,7 +3026,7 @@
           "nickname": "ROKAF",
           "job": "주문각인사",
           "level": 86,
-          "conquestGrade": 21,
+          "conquestGrade": 22,
           "realm": "론도 05"
         }
       ]
@@ -3675,41 +3675,6 @@
         }
       ]
     },
-    "신|라인소프": {
-      "guildName": "신",
-      "world": "라인소프",
-      "memberCount": 4,
-      "members": [
-        {
-          "nickname": "나라싱하",
-          "job": "환영검사",
-          "level": 82,
-          "conquestGrade": 20,
-          "realm": "라인소프 01"
-        },
-        {
-          "nickname": "각돌",
-          "job": "주문각인사",
-          "level": 82,
-          "conquestGrade": 15,
-          "realm": "라인소프 01"
-        },
-        {
-          "nickname": "르네즈미",
-          "job": "집행관",
-          "level": 81,
-          "conquestGrade": 12,
-          "realm": "라인소프 01"
-        },
-        {
-          "nickname": "군악",
-          "job": "향사수",
-          "level": 78,
-          "conquestGrade": 15,
-          "realm": "라인소프 01"
-        }
-      ]
-    },
     "요기어때|라인소프": {
       "guildName": "요기어때",
       "world": "라인소프",
@@ -3755,6 +3720,34 @@
           "job": "야만투사",
           "level": 78,
           "conquestGrade": 11,
+          "realm": "라인소프 01"
+        }
+      ]
+    },
+    "신|라인소프": {
+      "guildName": "신",
+      "world": "라인소프",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "각돌",
+          "job": "주문각인사",
+          "level": 82,
+          "conquestGrade": 15,
+          "realm": "라인소프 01"
+        },
+        {
+          "nickname": "르네즈미",
+          "job": "집행관",
+          "level": 81,
+          "conquestGrade": 12,
+          "realm": "라인소프 01"
+        },
+        {
+          "nickname": "군악",
+          "job": "향사수",
+          "level": 78,
+          "conquestGrade": 15,
           "realm": "라인소프 01"
         }
       ]
@@ -7440,15 +7433,15 @@
           "realm": "아민타 03"
         },
         {
-          "nickname": "드림캐처",
-          "job": "집행관",
+          "nickname": "더덕",
+          "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아민타 03"
         },
         {
-          "nickname": "더덕",
-          "job": "주문각인사",
+          "nickname": "드림캐처",
+          "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아민타 03"
@@ -9295,17 +9288,17 @@
       "memberCount": 10,
       "members": [
         {
-          "nickname": "도끼반반",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "아민타 05"
-        },
-        {
           "nickname": "왕도끼",
           "job": "심연추방자",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "아민타 05"
+        },
+        {
+          "nickname": "도끼반반",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
           "realm": "아민타 05"
         },
         {
@@ -30514,5 +30507,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-03T14:40:45.128Z"
+  "updatedAt": "2026-08-03T14:50:45.002Z"
 }
