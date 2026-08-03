@@ -6268,7 +6268,7 @@
     "루드|아민타": {
       "guildName": "루드",
       "world": "아민타",
-      "memberCount": 29,
+      "memberCount": 28,
       "members": [
         {
           "nickname": "종합병원",
@@ -6455,13 +6455,6 @@
         {
           "nickname": "꾸댕",
           "job": "향사수",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "아민타 01"
-        },
-        {
-          "nickname": "아이스쿠림",
-          "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아민타 01"
@@ -6695,7 +6688,7 @@
     "고트|아민타": {
       "guildName": "고트",
       "world": "아민타",
-      "memberCount": 3,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "영원형",
@@ -6716,6 +6709,13 @@
           "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "블랙보리",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 23,
           "realm": "아민타 01"
         }
       ]
@@ -8210,13 +8210,6 @@
           "realm": "아민타 04"
         },
         {
-          "nickname": "검마",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 22,
-          "realm": "아민타 04"
-        },
-        {
           "nickname": "경비원",
           "job": "환영검사",
           "level": 87,
@@ -8228,6 +8221,13 @@
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 20,
+          "realm": "아민타 04"
+        },
+        {
+          "nickname": "검마",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 22,
           "realm": "아민타 04"
         },
         {
@@ -15105,17 +15105,17 @@
           "realm": "사도바 05"
         },
         {
-          "nickname": "AI",
-          "job": "집행관",
-          "level": 88,
-          "conquestGrade": 22,
-          "realm": "사도바 05"
-        },
-        {
           "nickname": "은가비",
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 23,
+          "realm": "사도바 05"
+        },
+        {
+          "nickname": "AI",
+          "job": "집행관",
+          "level": 88,
+          "conquestGrade": 22,
           "realm": "사도바 05"
         },
         {
@@ -24912,15 +24912,15 @@
           "realm": "타리아 01"
         },
         {
-          "nickname": "사리곰탕",
-          "job": "집행관",
+          "nickname": "그라제",
+          "job": "주문각인사",
           "level": 91,
           "conquestGrade": 26,
           "realm": "타리아 01"
         },
         {
-          "nickname": "그라제",
-          "job": "주문각인사",
+          "nickname": "사리곰탕",
+          "job": "집행관",
           "level": 91,
           "conquestGrade": 26,
           "realm": "타리아 01"
@@ -30465,5 +30465,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-03T09:10:43.188Z"
+  "updatedAt": "2026-08-03T09:20:44.684Z"
 }
