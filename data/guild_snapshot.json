@@ -2036,13 +2036,6 @@
           "realm": "론도 04"
         },
         {
-          "nickname": "마태복음",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "론도 04"
-        },
-        {
           "nickname": "진빼이",
           "job": "향사수",
           "level": 92,
@@ -2052,6 +2045,13 @@
         {
           "nickname": "비룡",
           "job": "집행관",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "론도 04"
+        },
+        {
+          "nickname": "마태복음",
+          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "론도 04"
@@ -19244,7 +19244,7 @@
         {
           "nickname": "하양돼지당",
           "job": "집행관",
-          "level": 87,
+          "level": 88,
           "conquestGrade": 21,
           "realm": "아티산 01"
         },
@@ -19641,17 +19641,17 @@
           "realm": "아티산 02"
         },
         {
-          "nickname": "금마",
-          "job": "태양감시자",
-          "level": 87,
-          "conquestGrade": 21,
-          "realm": "아티산 02"
-        },
-        {
           "nickname": "캐니언",
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 22,
+          "realm": "아티산 02"
+        },
+        {
+          "nickname": "금마",
+          "job": "태양감시자",
+          "level": 87,
+          "conquestGrade": 21,
           "realm": "아티산 02"
         },
         {
@@ -30530,7 +30530,7 @@
     "좋은친구들|메르비스": {
       "guildName": "좋은친구들",
       "world": "메르비스",
-      "memberCount": 4,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "하늘",
@@ -30559,9 +30559,16 @@
           "level": 84,
           "conquestGrade": 19,
           "realm": "메르비스 05"
+        },
+        {
+          "nickname": "눈물",
+          "job": "심연추방자",
+          "level": 83,
+          "conquestGrade": 19,
+          "realm": "메르비스 05"
         }
       ]
     }
   },
-  "updatedAt": "2026-08-05T23:30:44.504Z"
+  "updatedAt": "2026-08-05T23:40:44.696Z"
 }
