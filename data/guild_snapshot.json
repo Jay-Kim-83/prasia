@@ -2911,17 +2911,17 @@
           "realm": "론도 05"
         },
         {
-          "nickname": "칠공칠",
-          "job": "심연추방자",
-          "level": 90,
-          "conquestGrade": 26,
-          "realm": "론도 05"
-        },
-        {
           "nickname": "빠따병",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "론도 05"
+        },
+        {
+          "nickname": "칠공칠",
+          "job": "심연추방자",
+          "level": 90,
+          "conquestGrade": 26,
           "realm": "론도 05"
         },
         {
@@ -2955,7 +2955,7 @@
         {
           "nickname": "포병",
           "job": "야만투사",
-          "level": 90,
+          "level": 89,
           "conquestGrade": 24,
           "realm": "론도 05"
         },
@@ -8742,20 +8742,6 @@
           "realm": "아민타 05"
         },
         {
-          "nickname": "천둥",
-          "job": "야만투사",
-          "level": 93,
-          "conquestGrade": 26,
-          "realm": "아민타 05"
-        },
-        {
-          "nickname": "해피티",
-          "job": "주문각인사",
-          "level": 93,
-          "conquestGrade": 26,
-          "realm": "아민타 05"
-        },
-        {
           "nickname": "바비",
           "job": "야만투사",
           "level": 93,
@@ -8772,6 +8758,20 @@
         {
           "nickname": "시로",
           "job": "야만투사",
+          "level": 93,
+          "conquestGrade": 26,
+          "realm": "아민타 05"
+        },
+        {
+          "nickname": "천둥",
+          "job": "야만투사",
+          "level": 93,
+          "conquestGrade": 26,
+          "realm": "아민타 05"
+        },
+        {
+          "nickname": "해피티",
+          "job": "주문각인사",
           "level": 93,
           "conquestGrade": 26,
           "realm": "아민타 05"
@@ -17342,7 +17342,7 @@
     "상남자|제롬": {
       "guildName": "상남자",
       "world": "제롬",
-      "memberCount": 47,
+      "memberCount": 48,
       "members": [
         {
           "nickname": "상건달",
@@ -17672,13 +17672,20 @@
           "level": 86,
           "conquestGrade": 20,
           "realm": "제롬 04"
+        },
+        {
+          "nickname": "현대",
+          "job": "주문각인사",
+          "level": 85,
+          "conquestGrade": 21,
+          "realm": "제롬 04"
         }
       ]
     },
     "당근마트|제롬": {
       "guildName": "당근마트",
       "world": "제롬",
-      "memberCount": 16,
+      "memberCount": 15,
       "members": [
         {
           "nickname": "번쩍",
@@ -17781,13 +17788,6 @@
         {
           "nickname": "아메리카노고자이마스",
           "job": "집행관",
-          "level": 85,
-          "conquestGrade": 20,
-          "realm": "제롬 04"
-        },
-        {
-          "nickname": "혼짱",
-          "job": "야만투사",
           "level": 85,
           "conquestGrade": 20,
           "realm": "제롬 04"
@@ -20670,15 +20670,15 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "펄스",
-          "job": "주문각인사",
+          "nickname": "곽두팔",
+          "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아티산 04"
         },
         {
-          "nickname": "곽두팔",
-          "job": "야만투사",
+          "nickname": "펄스",
+          "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아티산 04"
@@ -21653,7 +21653,7 @@
           "nickname": "참깨보리",
           "job": "집행관",
           "level": 85,
-          "conquestGrade": 20,
+          "conquestGrade": 21,
           "realm": "아티산 05"
         }
       ]
@@ -30591,5 +30591,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-05T04:20:43.688Z"
+  "updatedAt": "2026-08-05T04:30:44.736Z"
 }
