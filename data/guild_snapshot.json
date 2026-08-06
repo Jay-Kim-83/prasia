@@ -1165,11 +1165,18 @@
     "헌터|론도": {
       "guildName": "헌터",
       "world": "론도",
-      "memberCount": 8,
+      "memberCount": 9,
       "members": [
         {
           "nickname": "불닭",
           "job": "집행관",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "밤안개",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 02"
@@ -4528,17 +4535,17 @@
           "realm": "라인소프 03"
         },
         {
-          "nickname": "호미들고농사하는물씨",
-          "job": "향사수",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "라인소프 03"
-        },
-        {
           "nickname": "비에이",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "라인소프 03"
+        },
+        {
+          "nickname": "호미들고농사하는물씨",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "라인소프 03"
         },
         {
@@ -6138,6 +6145,13 @@
           "realm": "아민타 01"
         },
         {
+          "nickname": "뽀글뽀글",
+          "job": "향사수",
+          "level": 91,
+          "conquestGrade": 24,
+          "realm": "아민타 01"
+        },
+        {
           "nickname": "카페",
           "job": "심연추방자",
           "level": 91,
@@ -6147,13 +6161,6 @@
         {
           "nickname": "아만공",
           "job": "집행관",
-          "level": 91,
-          "conquestGrade": 24,
-          "realm": "아민타 01"
-        },
-        {
-          "nickname": "뽀글뽀글",
-          "job": "향사수",
           "level": 91,
           "conquestGrade": 24,
           "realm": "아민타 01"
@@ -6194,17 +6201,17 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "앰릿",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 24,
-          "realm": "아민타 01"
-        },
-        {
           "nickname": "여름밤",
           "job": "집행관",
           "level": 91,
           "conquestGrade": 23,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "앰릿",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 24,
           "realm": "아민타 01"
         },
         {
@@ -6586,17 +6593,17 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "막토",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "아민타 01"
-        },
-        {
           "nickname": "젬민이이호",
           "job": "향사수",
           "level": 91,
           "conquestGrade": 26,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "막토",
+          "job": "향사수",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "아민타 01"
         },
         {
@@ -12798,7 +12805,7 @@
           "nickname": "추이",
           "job": "집행관",
           "level": 85,
-          "conquestGrade": 20,
+          "conquestGrade": 21,
           "realm": "사도바 01"
         },
         {
@@ -21118,14 +21125,14 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "맛도둑",
+          "nickname": "전여친",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 23,
           "realm": "아티산 04"
         },
         {
-          "nickname": "전여친",
+          "nickname": "맛도둑",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 23,
@@ -27805,7 +27812,7 @@
         {
           "nickname": "햄스터",
           "job": "야만투사",
-          "level": 88,
+          "level": 89,
           "conquestGrade": 22,
           "realm": "타리아 05"
         },
@@ -30542,5 +30549,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-06T06:40:45.459Z"
+  "updatedAt": "2026-08-06T06:50:44.396Z"
 }
