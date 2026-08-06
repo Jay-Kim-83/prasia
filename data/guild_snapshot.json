@@ -2890,13 +2890,6 @@
           "realm": "론도 05"
         },
         {
-          "nickname": "방패병",
-          "job": "집행관",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "론도 05"
-        },
-        {
           "nickname": "SPECTER",
           "job": "향사수",
           "level": 91,
@@ -2929,6 +2922,13 @@
           "job": "심연추방자",
           "level": 90,
           "conquestGrade": 26,
+          "realm": "론도 05"
+        },
+        {
+          "nickname": "방패병",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "론도 05"
         },
         {
@@ -22763,17 +22763,17 @@
           "realm": "나세르 02"
         },
         {
-          "nickname": "대장금",
-          "job": "심연추방자",
-          "level": 85,
-          "conquestGrade": 21,
-          "realm": "나세르 02"
-        },
-        {
           "nickname": "킬러들의쇼핑몰",
           "job": "심연추방자",
           "level": 85,
           "conquestGrade": 20,
+          "realm": "나세르 02"
+        },
+        {
+          "nickname": "대장금",
+          "job": "심연추방자",
+          "level": 85,
+          "conquestGrade": 21,
           "realm": "나세르 02"
         },
         {
@@ -27005,14 +27005,14 @@
           "realm": "타리아 04"
         },
         {
-          "nickname": "구달",
+          "nickname": "피카츄",
           "job": "향사수",
           "level": 90,
           "conquestGrade": 24,
           "realm": "타리아 04"
         },
         {
-          "nickname": "피카츄",
+          "nickname": "구달",
           "job": "향사수",
           "level": 90,
           "conquestGrade": 24,
@@ -29767,8 +29767,22 @@
     "신세계|메르비스": {
       "guildName": "신세계",
       "world": "메르비스",
-      "memberCount": 7,
+      "memberCount": 9,
       "members": [
+        {
+          "nickname": "지회장",
+          "job": "주문각인사",
+          "level": 83,
+          "conquestGrade": 19,
+          "realm": "메르비스 04"
+        },
+        {
+          "nickname": "수석부지회장",
+          "job": "주문각인사",
+          "level": 83,
+          "conquestGrade": 19,
+          "realm": "메르비스 04"
+        },
         {
           "nickname": "황근출",
           "job": "심연추방자",
@@ -30542,5 +30556,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-06T14:40:48.060Z"
+  "updatedAt": "2026-08-06T14:50:45.046Z"
 }
