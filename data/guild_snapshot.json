@@ -76,17 +76,17 @@
           "realm": "론도 01"
         },
         {
-          "nickname": "짐승실장",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 23,
-          "realm": "론도 01"
-        },
-        {
           "nickname": "사하구",
           "job": "환영검사",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "짐승실장",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 23,
           "realm": "론도 01"
         },
         {
@@ -5687,7 +5687,7 @@
     "베타|라인소프": {
       "guildName": "베타",
       "world": "라인소프",
-      "memberCount": 43,
+      "memberCount": 44,
       "members": [
         {
           "nickname": "이강인",
@@ -5989,13 +5989,20 @@
           "level": 89,
           "conquestGrade": 24,
           "realm": "라인소프 05"
+        },
+        {
+          "nickname": "계장",
+          "job": "향사수",
+          "level": 89,
+          "conquestGrade": 23,
+          "realm": "라인소프 05"
         }
       ]
     },
     "감마|라인소프": {
       "guildName": "감마",
       "world": "라인소프",
-      "memberCount": 7,
+      "memberCount": 6,
       "members": [
         {
           "nickname": "제이디",
@@ -6027,13 +6034,6 @@
         },
         {
           "nickname": "왕무너",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "라인소프 05"
-        },
-        {
-          "nickname": "김러브",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 23,
@@ -30570,5 +30570,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-06T13:00:43.591Z"
+  "updatedAt": "2026-08-06T13:10:44.029Z"
 }
