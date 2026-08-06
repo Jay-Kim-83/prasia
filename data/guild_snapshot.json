@@ -69,6 +69,13 @@
           "realm": "론도 01"
         },
         {
+          "nickname": "아현",
+          "job": "태양감시자",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "론도 01"
+        },
+        {
           "nickname": "짐승실장",
           "job": "집행관",
           "level": 90,
@@ -80,13 +87,6 @@
           "job": "환영검사",
           "level": 90,
           "conquestGrade": 25,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "아현",
-          "job": "태양감시자",
-          "level": 90,
-          "conquestGrade": 24,
           "realm": "론도 01"
         },
         {
@@ -174,13 +174,6 @@
           "realm": "론도 01"
         },
         {
-          "nickname": "차무희",
-          "job": "야만투사",
-          "level": 88,
-          "conquestGrade": 22,
-          "realm": "론도 01"
-        },
-        {
           "nickname": "래드",
           "job": "야만투사",
           "level": 88,
@@ -192,6 +185,13 @@
           "job": "집행관",
           "level": 88,
           "conquestGrade": 21,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "차무희",
+          "job": "야만투사",
+          "level": 88,
+          "conquestGrade": 22,
           "realm": "론도 01"
         },
         {
@@ -2323,17 +2323,17 @@
           "realm": "론도 04"
         },
         {
-          "nickname": "오즈",
-          "job": "심연추방자",
-          "level": 87,
-          "conquestGrade": 22,
-          "realm": "론도 04"
-        },
-        {
           "nickname": "요지",
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 21,
+          "realm": "론도 04"
+        },
+        {
+          "nickname": "오즈",
+          "job": "심연추방자",
+          "level": 87,
+          "conquestGrade": 22,
           "realm": "론도 04"
         }
       ]
@@ -12347,17 +12347,17 @@
           "realm": "가리안 05"
         },
         {
-          "nickname": "슈퍼닥터케이",
-          "job": "야만투사",
-          "level": 85,
-          "conquestGrade": 20,
-          "realm": "가리안 05"
-        },
-        {
           "nickname": "택이네새우맛집",
           "job": "태양감시자",
           "level": 85,
           "conquestGrade": 21,
+          "realm": "가리안 05"
+        },
+        {
+          "nickname": "슈퍼닥터케이",
+          "job": "야만투사",
+          "level": 85,
+          "conquestGrade": 20,
           "realm": "가리안 05"
         },
         {
@@ -13730,7 +13730,7 @@
     "크로이츠|사도바": {
       "guildName": "크로이츠",
       "world": "사도바",
-      "memberCount": 5,
+      "memberCount": 6,
       "members": [
         {
           "nickname": "사천왕",
@@ -13766,13 +13766,20 @@
           "level": 83,
           "conquestGrade": 19,
           "realm": "사도바 02"
+        },
+        {
+          "nickname": "크로이츠",
+          "job": "집행관",
+          "level": 83,
+          "conquestGrade": 19,
+          "realm": "사도바 02"
         }
       ]
     },
     "폭풍두둥|사도바": {
       "guildName": "폭풍두둥",
       "world": "사도바",
-      "memberCount": 4,
+      "memberCount": 3,
       "members": [
         {
           "nickname": "킴버",
@@ -13793,13 +13800,6 @@
           "job": "주문각인사",
           "level": 85,
           "conquestGrade": 21,
-          "realm": "사도바 02"
-        },
-        {
-          "nickname": "초보우",
-          "job": "향사수",
-          "level": 83,
-          "conquestGrade": 18,
           "realm": "사도바 02"
         }
       ]
@@ -21363,15 +21363,15 @@
           "realm": "아티산 05"
         },
         {
-          "nickname": "초코우유",
-          "job": "야만투사",
+          "nickname": "파치파치",
+          "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아티산 05"
         },
         {
-          "nickname": "파치파치",
-          "job": "주문각인사",
+          "nickname": "초코우유",
+          "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아티산 05"
@@ -24489,7 +24489,7 @@
     "핑크좀비|나세르": {
       "guildName": "핑크좀비",
       "world": "나세르",
-      "memberCount": 11,
+      "memberCount": 10,
       "members": [
         {
           "nickname": "비비비빅",
@@ -24551,13 +24551,6 @@
           "nickname": "중금",
           "job": "향사수",
           "level": 87,
-          "conquestGrade": 21,
-          "realm": "나세르 05"
-        },
-        {
-          "nickname": "천신님",
-          "job": "태양감시자",
-          "level": 86,
           "conquestGrade": 21,
           "realm": "나세르 05"
         },
@@ -29666,41 +29659,6 @@
         }
       ]
     },
-    "카오리|메르비스": {
-      "guildName": "카오리",
-      "world": "메르비스",
-      "memberCount": 4,
-      "members": [
-        {
-          "nickname": "도적",
-          "job": "향사수",
-          "level": 87,
-          "conquestGrade": 21,
-          "realm": "메르비스 04"
-        },
-        {
-          "nickname": "빙하",
-          "job": "집행관",
-          "level": 81,
-          "conquestGrade": 17,
-          "realm": "메르비스 04"
-        },
-        {
-          "nickname": "해븐",
-          "job": "심연추방자",
-          "level": 80,
-          "conquestGrade": 16,
-          "realm": "메르비스 04"
-        },
-        {
-          "nickname": "소리아",
-          "job": "심연추방자",
-          "level": 80,
-          "conquestGrade": 17,
-          "realm": "메르비스 04"
-        }
-      ]
-    },
     "즐겜|메르비스": {
       "guildName": "즐겜",
       "world": "메르비스",
@@ -29830,6 +29788,34 @@
           "job": "향사수",
           "level": 79,
           "conquestGrade": 1,
+          "realm": "메르비스 04"
+        }
+      ]
+    },
+    "카오리|메르비스": {
+      "guildName": "카오리",
+      "world": "메르비스",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "빙하",
+          "job": "집행관",
+          "level": 81,
+          "conquestGrade": 17,
+          "realm": "메르비스 04"
+        },
+        {
+          "nickname": "해븐",
+          "job": "심연추방자",
+          "level": 80,
+          "conquestGrade": 16,
+          "realm": "메르비스 04"
+        },
+        {
+          "nickname": "소리아",
+          "job": "심연추방자",
+          "level": 80,
+          "conquestGrade": 17,
           "realm": "메르비스 04"
         }
       ]
@@ -30556,5 +30542,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-06T15:30:47.990Z"
+  "updatedAt": "2026-08-06T15:40:44.854Z"
 }
