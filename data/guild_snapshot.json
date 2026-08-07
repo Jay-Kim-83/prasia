@@ -584,7 +584,7 @@
     "블랙중독|론도": {
       "guildName": "블랙중독",
       "world": "론도",
-      "memberCount": 42,
+      "memberCount": 43,
       "members": [
         {
           "nickname": "쌍팔형",
@@ -879,6 +879,13 @@
           "level": 91,
           "conquestGrade": 24,
           "realm": "론도 02"
+        },
+        {
+          "nickname": "짱아형",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "론도 02"
         }
       ]
     },
@@ -1039,7 +1046,7 @@
     "뉴매드|론도": {
       "guildName": "뉴매드",
       "world": "론도",
-      "memberCount": 17,
+      "memberCount": 16,
       "members": [
         {
           "nickname": "대방어",
@@ -1151,13 +1158,6 @@
           "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
-          "realm": "론도 02"
-        },
-        {
-          "nickname": "히포",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 24,
           "realm": "론도 02"
         }
       ]
@@ -16848,17 +16848,17 @@
           "realm": "제롬 03"
         },
         {
-          "nickname": "김사또",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 23,
-          "realm": "제롬 03"
-        },
-        {
           "nickname": "미친개",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 24,
+          "realm": "제롬 03"
+        },
+        {
+          "nickname": "김사또",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 23,
           "realm": "제롬 03"
         },
         {
@@ -17492,17 +17492,17 @@
           "realm": "제롬 04"
         },
         {
-          "nickname": "쀼동",
-          "job": "환영검사",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "제롬 04"
-        },
-        {
           "nickname": "심해성",
           "job": "환영검사",
           "level": 92,
           "conquestGrade": 26,
+          "realm": "제롬 04"
+        },
+        {
+          "nickname": "쀼동",
+          "job": "환영검사",
+          "level": 92,
+          "conquestGrade": 25,
           "realm": "제롬 04"
         },
         {
@@ -20112,7 +20112,7 @@
         {
           "nickname": "소삐",
           "job": "야만투사",
-          "level": 91,
+          "level": 92,
           "conquestGrade": 24,
           "realm": "아티산 03"
         },
@@ -23502,7 +23502,7 @@
     "오브|나세르": {
       "guildName": "오브",
       "world": "나세르",
-      "memberCount": 36,
+      "memberCount": 37,
       "members": [
         {
           "nickname": "말본",
@@ -23755,6 +23755,13 @@
           "level": 84,
           "conquestGrade": 20,
           "realm": "나세르 03"
+        },
+        {
+          "nickname": "휴모",
+          "job": "향사수",
+          "level": 84,
+          "conquestGrade": 19,
+          "realm": "나세르 03"
         }
       ]
     },
@@ -23845,7 +23852,7 @@
     "하루카|나세르": {
       "guildName": "하루카",
       "world": "나세르",
-      "memberCount": 4,
+      "memberCount": 3,
       "members": [
         {
           "nickname": "하루나카",
@@ -23864,13 +23871,6 @@
         {
           "nickname": "지순",
           "job": "태양감시자",
-          "level": 84,
-          "conquestGrade": 19,
-          "realm": "나세르 03"
-        },
-        {
-          "nickname": "공수부대",
-          "job": "집행관",
           "level": 84,
           "conquestGrade": 19,
           "realm": "나세르 03"
@@ -25808,17 +25808,17 @@
           "realm": "타리아 02"
         },
         {
-          "nickname": "꼰대가르송",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "타리아 02"
-        },
-        {
           "nickname": "뚜따",
           "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "꼰대가르송",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "타리아 02"
         },
         {
@@ -30626,5 +30626,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-07T21:10:45.544Z"
+  "updatedAt": "2026-08-07T21:20:46.923Z"
 }
