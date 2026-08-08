@@ -2883,17 +2883,17 @@
           "realm": "론도 05"
         },
         {
-          "nickname": "방패병",
-          "job": "집행관",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "론도 05"
-        },
-        {
           "nickname": "훈련병",
           "job": "향사수",
           "level": 91,
           "conquestGrade": 24,
+          "realm": "론도 05"
+        },
+        {
+          "nickname": "방패병",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "론도 05"
         },
         {
@@ -8975,7 +8975,7 @@
         {
           "nickname": "강선장",
           "job": "야만투사",
-          "level": 92,
+          "level": 91,
           "conquestGrade": 26,
           "realm": "아민타 05"
         },
@@ -14584,7 +14584,7 @@
     "행복|사도바": {
       "guildName": "행복",
       "world": "사도바",
-      "memberCount": 5,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "고래밥",
@@ -14612,13 +14612,6 @@
           "job": "주문각인사",
           "level": 81,
           "conquestGrade": 18,
-          "realm": "사도바 04"
-        },
-        {
-          "nickname": "추과장",
-          "job": "야만투사",
-          "level": 80,
-          "conquestGrade": 10,
           "realm": "사도바 04"
         }
       ]
@@ -24310,14 +24303,14 @@
           "realm": "나세르 04"
         },
         {
-          "nickname": "영원한친구",
+          "nickname": "지오시니",
           "job": "주문각인사",
           "level": 86,
           "conquestGrade": 21,
           "realm": "나세르 04"
         },
         {
-          "nickname": "지오시니",
+          "nickname": "영원한친구",
           "job": "주문각인사",
           "level": 86,
           "conquestGrade": 21,
@@ -25332,6 +25325,13 @@
           "realm": "타리아 01"
         },
         {
+          "nickname": "까츄",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "타리아 01"
+        },
+        {
           "nickname": "우유랑",
           "job": "주문각인사",
           "level": 91,
@@ -25343,13 +25343,6 @@
           "job": "향사수",
           "level": 91,
           "conquestGrade": 26,
-          "realm": "타리아 01"
-        },
-        {
-          "nickname": "까츄",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 25,
           "realm": "타리아 01"
         },
         {
@@ -30605,5 +30598,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-08T07:20:43.898Z"
+  "updatedAt": "2026-08-08T07:30:47.177Z"
 }
