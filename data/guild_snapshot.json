@@ -584,7 +584,7 @@
     "블랙중독|론도": {
       "guildName": "블랙중독",
       "world": "론도",
-      "memberCount": 43,
+      "memberCount": 42,
       "members": [
         {
           "nickname": "쌍팔형",
@@ -879,13 +879,6 @@
           "level": 91,
           "conquestGrade": 24,
           "realm": "론도 02"
-        },
-        {
-          "nickname": "짱아형",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "론도 02"
         }
       ]
     },
@@ -1046,7 +1039,7 @@
     "뉴매드|론도": {
       "guildName": "뉴매드",
       "world": "론도",
-      "memberCount": 16,
+      "memberCount": 17,
       "members": [
         {
           "nickname": "대방어",
@@ -1158,6 +1151,13 @@
           "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "히포",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 24,
           "realm": "론도 02"
         }
       ]
@@ -6222,17 +6222,17 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "한대콩",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 23,
-          "realm": "아민타 01"
-        },
-        {
           "nickname": "참깨",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 26,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "한대콩",
+          "job": "향사수",
+          "level": 91,
+          "conquestGrade": 23,
           "realm": "아민타 01"
         },
         {
@@ -7006,6 +7006,13 @@
           "realm": "아민타 02"
         },
         {
+          "nickname": "이모뉨",
+          "job": "집행관",
+          "level": 86,
+          "conquestGrade": 22,
+          "realm": "아민타 02"
+        },
+        {
           "nickname": "민이님",
           "job": "집행관",
           "level": 86,
@@ -7017,13 +7024,6 @@
           "job": "주문각인사",
           "level": 86,
           "conquestGrade": 21,
-          "realm": "아민타 02"
-        },
-        {
-          "nickname": "이모뉨",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 22,
           "realm": "아민타 02"
         },
         {
@@ -25822,13 +25822,6 @@
           "realm": "타리아 02"
         },
         {
-          "nickname": "꼰대가르송",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 25,
-          "realm": "타리아 02"
-        },
-        {
           "nickname": "다산",
           "job": "환영검사",
           "level": 89,
@@ -25840,6 +25833,13 @@
           "job": "향사수",
           "level": 89,
           "conquestGrade": 23,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "꼰대가르송",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 25,
           "realm": "타리아 02"
         },
         {
@@ -30619,5 +30619,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-08T03:40:45.982Z"
+  "updatedAt": "2026-08-08T03:50:46.505Z"
 }
