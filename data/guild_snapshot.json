@@ -584,7 +584,7 @@
     "블랙중독|론도": {
       "guildName": "블랙중독",
       "world": "론도",
-      "memberCount": 42,
+      "memberCount": 43,
       "members": [
         {
           "nickname": "쌍팔형",
@@ -879,6 +879,13 @@
           "level": 91,
           "conquestGrade": 24,
           "realm": "론도 02"
+        },
+        {
+          "nickname": "짱아형",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "론도 02"
         }
       ]
     },
@@ -1039,7 +1046,7 @@
     "뉴매드|론도": {
       "guildName": "뉴매드",
       "world": "론도",
-      "memberCount": 17,
+      "memberCount": 16,
       "members": [
         {
           "nickname": "대방어",
@@ -1151,13 +1158,6 @@
           "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
-          "realm": "론도 02"
-        },
-        {
-          "nickname": "히포",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 24,
           "realm": "론도 02"
         }
       ]
@@ -5991,13 +5991,6 @@
           "realm": "라인소프 05"
         },
         {
-          "nickname": "잭팟",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 23,
-          "realm": "라인소프 05"
-        },
-        {
           "nickname": "거산짱",
           "job": "주문각인사",
           "level": 90,
@@ -6009,6 +6002,13 @@
           "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "라인소프 05"
+        },
+        {
+          "nickname": "잭팟",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 23,
           "realm": "라인소프 05"
         },
         {
@@ -6642,17 +6642,17 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "젬민이오호",
-          "job": "집행관",
-          "level": 91,
-          "conquestGrade": 26,
-          "realm": "아민타 01"
-        },
-        {
           "nickname": "막토",
           "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "젬민이오호",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 26,
           "realm": "아민타 01"
         },
         {
@@ -9626,7 +9626,7 @@
         {
           "nickname": "헨젤과그럼안돼",
           "job": "향사수",
-          "level": 82,
+          "level": 83,
           "conquestGrade": 18,
           "realm": "가리안 01"
         },
@@ -10163,13 +10163,6 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "수준유지",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 22,
-          "realm": "가리안 02"
-        },
-        {
           "nickname": "창세기",
           "job": "집행관",
           "level": 89,
@@ -10181,6 +10174,13 @@
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 23,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "수준유지",
+          "job": "향사수",
+          "level": 88,
+          "conquestGrade": 22,
           "realm": "가리안 02"
         },
         {
@@ -23967,14 +23967,14 @@
           "realm": "나세르 04"
         },
         {
-          "nickname": "깨비",
+          "nickname": "일하기싫다",
           "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
           "realm": "나세르 04"
         },
         {
-          "nickname": "일하기싫다",
+          "nickname": "깨비",
           "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
@@ -30619,5 +30619,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-08T05:50:47.015Z"
+  "updatedAt": "2026-08-08T06:00:45.980Z"
 }
