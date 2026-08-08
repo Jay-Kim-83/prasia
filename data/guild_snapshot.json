@@ -584,7 +584,7 @@
     "블랙중독|론도": {
       "guildName": "블랙중독",
       "world": "론도",
-      "memberCount": 43,
+      "memberCount": 42,
       "members": [
         {
           "nickname": "쌍팔형",
@@ -879,20 +879,13 @@
           "level": 91,
           "conquestGrade": 24,
           "realm": "론도 02"
-        },
-        {
-          "nickname": "짱아형",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "론도 02"
         }
       ]
     },
     "감자빙수|론도": {
       "guildName": "감자빙수",
       "world": "론도",
-      "memberCount": 21,
+      "memberCount": 22,
       "members": [
         {
           "nickname": "온달",
@@ -1036,6 +1029,13 @@
         },
         {
           "nickname": "쌩얼",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "구이",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
@@ -2827,15 +2827,15 @@
           "realm": "론도 05"
         },
         {
-          "nickname": "딸깍병",
-          "job": "주문각인사",
+          "nickname": "해병",
+          "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
           "realm": "론도 05"
         },
         {
-          "nickname": "해병",
-          "job": "향사수",
+          "nickname": "딸깍병",
+          "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "론도 05"
@@ -6338,7 +6338,7 @@
     "루드|아민타": {
       "guildName": "루드",
       "world": "아민타",
-      "memberCount": 29,
+      "memberCount": 28,
       "members": [
         {
           "nickname": "종합병원",
@@ -6532,13 +6532,6 @@
         {
           "nickname": "쓰파런키",
           "job": "야만투사",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "아민타 01"
-        },
-        {
-          "nickname": "땃쥐가화나면돈땃쥐",
-          "job": "향사수",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아민타 01"
@@ -6765,7 +6758,7 @@
     "고트|아민타": {
       "guildName": "고트",
       "world": "아민타",
-      "memberCount": 3,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "영원형",
@@ -6786,6 +6779,13 @@
           "job": "야만투사",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "블랙보리",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 23,
           "realm": "아민타 01"
         }
       ]
@@ -19431,17 +19431,17 @@
           "realm": "아티산 02"
         },
         {
-          "nickname": "실프",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 23,
-          "realm": "아티산 02"
-        },
-        {
           "nickname": "삼팔",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "아티산 02"
+        },
+        {
+          "nickname": "실프",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 23,
           "realm": "아티산 02"
         },
         {
@@ -20138,15 +20138,15 @@
           "realm": "아티산 03"
         },
         {
-          "nickname": "마요양",
-          "job": "야만투사",
+          "nickname": "소소리",
+          "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아티산 03"
         },
         {
-          "nickname": "소소리",
-          "job": "주문각인사",
+          "nickname": "마요양",
+          "job": "야만투사",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아티산 03"
@@ -30598,5 +30598,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-08T07:50:45.232Z"
+  "updatedAt": "2026-08-08T08:00:46.168Z"
 }
