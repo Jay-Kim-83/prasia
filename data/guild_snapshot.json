@@ -1046,7 +1046,7 @@
     "뉴매드|론도": {
       "guildName": "뉴매드",
       "world": "론도",
-      "memberCount": 16,
+      "memberCount": 17,
       "members": [
         {
           "nickname": "대방어",
@@ -1102,6 +1102,13 @@
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "찐카츄",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
           "realm": "론도 02"
         },
         {
@@ -8722,34 +8729,6 @@
         }
       ]
     },
-    "대기업1차벤더|아민타": {
-      "guildName": "대기업1차벤더",
-      "world": "아민타",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "금강불괴",
-          "job": "야만투사",
-          "level": 87,
-          "conquestGrade": 21,
-          "realm": "아민타 04"
-        },
-        {
-          "nickname": "금강역사",
-          "job": "주문각인사",
-          "level": 87,
-          "conquestGrade": 21,
-          "realm": "아민타 04"
-        },
-        {
-          "nickname": "잔나비",
-          "job": "환영검사",
-          "level": 86,
-          "conquestGrade": 20,
-          "realm": "아민타 04"
-        }
-      ]
-    },
     "DOG|아민타": {
       "guildName": "DOG",
       "world": "아민타",
@@ -16106,14 +16085,14 @@
           "realm": "제롬 02"
         },
         {
-          "nickname": "만두귀지",
+          "nickname": "앙링",
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "제롬 02"
         },
         {
-          "nickname": "앙링",
+          "nickname": "만두귀지",
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
@@ -18500,17 +18479,17 @@
           "realm": "제롬 05"
         },
         {
-          "nickname": "초코하임",
-          "job": "환영검사",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "제롬 05"
-        },
-        {
           "nickname": "차카니",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "제롬 05"
+        },
+        {
+          "nickname": "초코하임",
+          "job": "환영검사",
+          "level": 90,
+          "conquestGrade": 24,
           "realm": "제롬 05"
         },
         {
@@ -30598,5 +30577,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-08T11:30:45.591Z"
+  "updatedAt": "2026-08-08T11:40:45.106Z"
 }
