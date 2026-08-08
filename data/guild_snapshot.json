@@ -6093,7 +6093,7 @@
     "GOAT|아민타": {
       "guildName": "GOAT",
       "world": "아민타",
-      "memberCount": 35,
+      "memberCount": 34,
       "members": [
         {
           "nickname": "우렉마지노",
@@ -6332,20 +6332,13 @@
           "level": 90,
           "conquestGrade": 24,
           "realm": "아민타 01"
-        },
-        {
-          "nickname": "쿤아게로",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 23,
-          "realm": "아민타 01"
         }
       ]
     },
     "루드|아민타": {
       "guildName": "루드",
       "world": "아민타",
-      "memberCount": 29,
+      "memberCount": 30,
       "members": [
         {
           "nickname": "종합병원",
@@ -6539,6 +6532,13 @@
         {
           "nickname": "땃쥐가화나면돈땃쥐",
           "job": "향사수",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "쓰바런키",
+          "job": "야만투사",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아민타 01"
@@ -9225,15 +9225,15 @@
           "realm": "아민타 05"
         },
         {
-          "nickname": "아사냥시켜달라고오오",
-          "job": "야만투사",
+          "nickname": "김삿갓",
+          "job": "향사수",
           "level": 92,
           "conquestGrade": 26,
           "realm": "아민타 05"
         },
         {
-          "nickname": "김삿갓",
-          "job": "향사수",
+          "nickname": "아사냥시켜달라고오오",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "아민타 05"
@@ -11234,15 +11234,15 @@
           "realm": "가리안 03"
         },
         {
-          "nickname": "응크야호",
-          "job": "집행관",
+          "nickname": "크레이버",
+          "job": "향사수",
           "level": 88,
           "conquestGrade": 23,
           "realm": "가리안 03"
         },
         {
-          "nickname": "크레이버",
-          "job": "향사수",
+          "nickname": "응크야호",
+          "job": "집행관",
           "level": 88,
           "conquestGrade": 23,
           "realm": "가리안 03"
@@ -16099,17 +16099,17 @@
           "realm": "제롬 02"
         },
         {
-          "nickname": "석금",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "제롬 02"
-        },
-        {
           "nickname": "죠스바",
           "job": "향사수",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "제롬 02"
+        },
+        {
+          "nickname": "석금",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 26,
           "realm": "제롬 02"
         },
         {
@@ -20595,7 +20595,7 @@
         {
           "nickname": "덤프",
           "job": "야만투사",
-          "level": 84,
+          "level": 85,
           "conquestGrade": 20,
           "realm": "아티산 03"
         },
@@ -20782,14 +20782,14 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "모해",
+          "nickname": "귀하",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
           "realm": "아티산 04"
         },
         {
-          "nickname": "귀하",
+          "nickname": "모해",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
@@ -22700,15 +22700,15 @@
           "realm": "나세르 02"
         },
         {
-          "nickname": "윈디",
-          "job": "집행관",
+          "nickname": "스타별",
+          "job": "환영검사",
           "level": 88,
           "conquestGrade": 22,
           "realm": "나세르 02"
         },
         {
-          "nickname": "스타별",
-          "job": "환영검사",
+          "nickname": "윈디",
+          "job": "집행관",
           "level": 88,
           "conquestGrade": 22,
           "realm": "나세르 02"
@@ -24991,7 +24991,7 @@
         {
           "nickname": "그라제",
           "job": "주문각인사",
-          "level": 91,
+          "level": 92,
           "conquestGrade": 26,
           "realm": "타리아 01"
         },
@@ -25801,6 +25801,13 @@
           "realm": "타리아 02"
         },
         {
+          "nickname": "다산",
+          "job": "환영검사",
+          "level": 89,
+          "conquestGrade": 22,
+          "realm": "타리아 02"
+        },
+        {
           "nickname": "초코핑",
           "job": "향사수",
           "level": 89,
@@ -25812,13 +25819,6 @@
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
-          "realm": "타리아 02"
-        },
-        {
-          "nickname": "다산",
-          "job": "환영검사",
-          "level": 89,
-          "conquestGrade": 22,
           "realm": "타리아 02"
         },
         {
@@ -30591,5 +30591,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-08T17:30:44.164Z"
+  "updatedAt": "2026-08-08T17:40:45.233Z"
 }
