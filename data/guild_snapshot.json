@@ -4238,7 +4238,7 @@
     "동화나라|라인소프": {
       "guildName": "동화나라",
       "world": "라인소프",
-      "memberCount": 10,
+      "memberCount": 11,
       "members": [
         {
           "nickname": "흐린날은추워",
@@ -4308,6 +4308,13 @@
           "job": "주문각인사",
           "level": 81,
           "conquestGrade": 15,
+          "realm": "라인소프 02"
+        },
+        {
+          "nickname": "익스프레스",
+          "job": "집행관",
+          "level": 81,
+          "conquestGrade": 17,
           "realm": "라인소프 02"
         }
       ]
@@ -6621,15 +6628,15 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "젬민이오호",
-          "job": "집행관",
+          "nickname": "날개",
+          "job": "향사수",
           "level": 92,
           "conquestGrade": 26,
           "realm": "아민타 01"
         },
         {
-          "nickname": "날개",
-          "job": "향사수",
+          "nickname": "젬민이오호",
+          "job": "집행관",
           "level": 92,
           "conquestGrade": 26,
           "realm": "아민타 01"
@@ -14794,7 +14801,7 @@
     "Galaxy|사도바": {
       "guildName": "Galaxy",
       "world": "사도바",
-      "memberCount": 42,
+      "memberCount": 43,
       "members": [
         {
           "nickname": "김베르",
@@ -15089,13 +15096,20 @@
           "level": 83,
           "conquestGrade": 18,
           "realm": "사도바 05"
+        },
+        {
+          "nickname": "스타링크",
+          "job": "집행관",
+          "level": 83,
+          "conquestGrade": 18,
+          "realm": "사도바 05"
         }
       ]
     },
     "IYOU|사도바": {
       "guildName": "IYOU",
       "world": "사도바",
-      "memberCount": 39,
+      "memberCount": 38,
       "members": [
         {
           "nickname": "갓수니",
@@ -15361,13 +15375,6 @@
           "job": "환영검사",
           "level": 83,
           "conquestGrade": 19,
-          "realm": "사도바 05"
-        },
-        {
-          "nickname": "카스",
-          "job": "주문각인사",
-          "level": 83,
-          "conquestGrade": 17,
           "realm": "사도바 05"
         }
       ]
@@ -17492,17 +17499,17 @@
           "realm": "제롬 04"
         },
         {
-          "nickname": "심해성",
-          "job": "환영검사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "제롬 04"
-        },
-        {
           "nickname": "쀼동",
           "job": "환영검사",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "제롬 04"
+        },
+        {
+          "nickname": "심해성",
+          "job": "환영검사",
+          "level": 92,
+          "conquestGrade": 26,
           "realm": "제롬 04"
         },
         {
@@ -27938,7 +27945,7 @@
         {
           "nickname": "러블리츄",
           "job": "주문각인사",
-          "level": 85,
+          "level": 86,
           "conquestGrade": 21,
           "realm": "타리아 05"
         },
@@ -30619,5 +30626,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-08T04:10:45.843Z"
+  "updatedAt": "2026-08-08T04:20:44.948Z"
 }
