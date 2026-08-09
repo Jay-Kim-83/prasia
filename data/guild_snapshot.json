@@ -4521,17 +4521,17 @@
           "realm": "라인소프 03"
         },
         {
-          "nickname": "레지던트이블",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "라인소프 03"
-        },
-        {
           "nickname": "빵댕이",
           "job": "향사수",
           "level": 91,
           "conquestGrade": 26,
+          "realm": "라인소프 03"
+        },
+        {
+          "nickname": "레지던트이블",
+          "job": "향사수",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "라인소프 03"
         },
         {
@@ -6086,7 +6086,7 @@
     "GOAT|아민타": {
       "guildName": "GOAT",
       "world": "아민타",
-      "memberCount": 35,
+      "memberCount": 34,
       "members": [
         {
           "nickname": "우렉마지노",
@@ -6325,20 +6325,13 @@
           "level": 90,
           "conquestGrade": 24,
           "realm": "아민타 01"
-        },
-        {
-          "nickname": "쿤아게로",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 23,
-          "realm": "아민타 01"
         }
       ]
     },
     "루드|아민타": {
       "guildName": "루드",
       "world": "아민타",
-      "memberCount": 29,
+      "memberCount": 30,
       "members": [
         {
           "nickname": "종합병원",
@@ -6532,6 +6525,13 @@
         {
           "nickname": "땃쥐가화나면돈땃쥐",
           "job": "향사수",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "쓰바런키",
+          "job": "야만투사",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아민타 01"
@@ -20943,13 +20943,6 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "니가좋아",
-          "job": "태양감시자",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "아티산 04"
-        },
-        {
           "nickname": "무탈",
           "job": "야만투사",
           "level": 92,
@@ -20968,6 +20961,13 @@
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "아티산 04"
+        },
+        {
+          "nickname": "니가좋아",
+          "job": "태양감시자",
+          "level": 92,
+          "conquestGrade": 26,
           "realm": "아티산 04"
         },
         {
@@ -25602,7 +25602,7 @@
     "악시|타리아": {
       "guildName": "악시",
       "world": "타리아",
-      "memberCount": 48,
+      "memberCount": 49,
       "members": [
         {
           "nickname": "연히",
@@ -25929,6 +25929,13 @@
         {
           "nickname": "멍이",
           "job": "집행관",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "그로밋",
+          "job": "향사수",
           "level": 86,
           "conquestGrade": 21,
           "realm": "타리아 02"
@@ -30535,5 +30542,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-09T05:10:44.541Z"
+  "updatedAt": "2026-08-09T05:20:44.328Z"
 }
