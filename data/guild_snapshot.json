@@ -69,17 +69,17 @@
           "realm": "론도 01"
         },
         {
-          "nickname": "아현",
-          "job": "태양감시자",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "론도 01"
-        },
-        {
           "nickname": "짐승실장",
           "job": "집행관",
           "level": 90,
           "conquestGrade": 23,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "아현",
+          "job": "태양감시자",
+          "level": 90,
+          "conquestGrade": 24,
           "realm": "론도 01"
         },
         {
@@ -5736,7 +5736,7 @@
     "베타|라인소프": {
       "guildName": "베타",
       "world": "라인소프",
-      "memberCount": 44,
+      "memberCount": 43,
       "members": [
         {
           "nickname": "이강인",
@@ -6038,20 +6038,13 @@
           "level": 89,
           "conquestGrade": 24,
           "realm": "라인소프 05"
-        },
-        {
-          "nickname": "계장",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "라인소프 05"
         }
       ]
     },
     "감마|라인소프": {
       "guildName": "감마",
       "world": "라인소프",
-      "memberCount": 6,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "제이디",
@@ -6091,6 +6084,13 @@
         {
           "nickname": "축구",
           "job": "향사수",
+          "level": 89,
+          "conquestGrade": 23,
+          "realm": "라인소프 05"
+        },
+        {
+          "nickname": "김러브",
+          "job": "주문각인사",
           "level": 89,
           "conquestGrade": 23,
           "realm": "라인소프 05"
@@ -13376,17 +13376,17 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "딜러",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 21,
-          "realm": "사도바 02"
-        },
-        {
           "nickname": "한치",
           "job": "심연추방자",
           "level": 89,
           "conquestGrade": 23,
+          "realm": "사도바 02"
+        },
+        {
+          "nickname": "딜러",
+          "job": "향사수",
+          "level": 89,
+          "conquestGrade": 21,
           "realm": "사도바 02"
         },
         {
@@ -19841,7 +19841,7 @@
     "쇼핑몰|아티산": {
       "guildName": "쇼핑몰",
       "world": "아티산",
-      "memberCount": 9,
+      "memberCount": 8,
       "members": [
         {
           "nickname": "CouPang",
@@ -19898,20 +19898,13 @@
           "level": 86,
           "conquestGrade": 21,
           "realm": "아티산 02"
-        },
-        {
-          "nickname": "공쥬",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "아티산 02"
         }
       ]
     },
     "지능|아티산": {
       "guildName": "지능",
       "world": "아티산",
-      "memberCount": 17,
+      "memberCount": 18,
       "members": [
         {
           "nickname": "카에데카렌",
@@ -20028,6 +20021,13 @@
         {
           "nickname": "키안",
           "job": "태양감시자",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "아티산 02"
+        },
+        {
+          "nickname": "귀장",
+          "job": "주문각인사",
           "level": 86,
           "conquestGrade": 21,
           "realm": "아티산 02"
@@ -30577,5 +30577,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-09T17:40:44.741Z"
+  "updatedAt": "2026-08-09T17:50:44.776Z"
 }
