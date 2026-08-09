@@ -6278,13 +6278,6 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "독도",
-          "job": "환영검사",
-          "level": 91,
-          "conquestGrade": 24,
-          "realm": "아민타 01"
-        },
-        {
           "nickname": "타운",
           "job": "향사수",
           "level": 91,
@@ -6296,6 +6289,13 @@
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 26,
+          "realm": "아민타 01"
+        },
+        {
+          "nickname": "독도",
+          "job": "환영검사",
+          "level": 91,
+          "conquestGrade": 24,
           "realm": "아민타 01"
         },
         {
@@ -20646,7 +20646,7 @@
     "봄봄|아티산": {
       "guildName": "봄봄",
       "world": "아티산",
-      "memberCount": 33,
+      "memberCount": 34,
       "members": [
         {
           "nickname": "디케",
@@ -20874,6 +20874,13 @@
         },
         {
           "nickname": "봄솔이",
+          "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 23,
+          "realm": "아티산 04"
+        },
+        {
+          "nickname": "신세경",
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 23,
@@ -29261,7 +29268,7 @@
         {
           "nickname": "크르릉",
           "job": "심연추방자",
-          "level": 81,
+          "level": 82,
           "conquestGrade": 16,
           "realm": "메르비스 03"
         },
@@ -30570,5 +30577,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-09T15:10:45.262Z"
+  "updatedAt": "2026-08-09T15:20:45.301Z"
 }
