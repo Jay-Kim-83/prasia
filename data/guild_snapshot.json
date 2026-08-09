@@ -699,13 +699,6 @@
           "realm": "론도 02"
         },
         {
-          "nickname": "네티",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "론도 02"
-        },
-        {
           "nickname": "iPhone",
           "job": "향사수",
           "level": 92,
@@ -728,6 +721,13 @@
         },
         {
           "nickname": "연두",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "네티",
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 25,
@@ -19935,17 +19935,17 @@
           "realm": "아티산 02"
         },
         {
-          "nickname": "석월",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "아티산 02"
-        },
-        {
           "nickname": "앙마",
           "job": "환영검사",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "아티산 02"
+        },
+        {
+          "nickname": "석월",
+          "job": "향사수",
+          "level": 89,
+          "conquestGrade": 23,
           "realm": "아티산 02"
         },
         {
@@ -25964,7 +25964,7 @@
         {
           "nickname": "야코",
           "job": "향사수",
-          "level": 86,
+          "level": 87,
           "conquestGrade": 21,
           "realm": "타리아 02"
         },
@@ -27264,17 +27264,17 @@
           "realm": "타리아 04"
         },
         {
-          "nickname": "한국요리",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 23,
-          "realm": "타리아 04"
-        },
-        {
           "nickname": "기프트",
           "job": "주문각인사",
           "level": 87,
           "conquestGrade": 21,
+          "realm": "타리아 04"
+        },
+        {
+          "nickname": "한국요리",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 23,
           "realm": "타리아 04"
         },
         {
@@ -28102,6 +28102,34 @@
           "level": 84,
           "conquestGrade": 18,
           "realm": "타리아 05"
+        }
+      ]
+    },
+    "야화|메르비스": {
+      "guildName": "야화",
+      "world": "메르비스",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "미나수",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 20,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "아생연후살타",
+          "job": "심연추방자",
+          "level": 80,
+          "conquestGrade": 17,
+          "realm": "메르비스 01"
+        },
+        {
+          "nickname": "익명의캐릭터",
+          "job": "집행관",
+          "level": 79,
+          "conquestGrade": 18,
+          "realm": "메르비스 01"
         }
       ]
     },
@@ -30577,5 +30605,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-09T20:00:45.968Z"
+  "updatedAt": "2026-08-09T20:10:47.725Z"
 }
