@@ -6516,6 +6516,13 @@
           "realm": "아민타 01"
         },
         {
+          "nickname": "수호킹",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 25,
+          "realm": "아민타 01"
+        },
+        {
           "nickname": "독불",
           "job": "주문각인사",
           "level": 90,
@@ -6527,13 +6534,6 @@
           "job": "향사수",
           "level": 90,
           "conquestGrade": 24,
-          "realm": "아민타 01"
-        },
-        {
-          "nickname": "수호킹",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 25,
           "realm": "아민타 01"
         },
         {
@@ -11388,14 +11388,14 @@
           "realm": "가리안 04"
         },
         {
-          "nickname": "빅찬스",
+          "nickname": "추격자",
           "job": "야만투사",
           "level": 93,
           "conquestGrade": 26,
           "realm": "가리안 04"
         },
         {
-          "nickname": "추격자",
+          "nickname": "빅찬스",
           "job": "야만투사",
           "level": 93,
           "conquestGrade": 26,
@@ -14545,17 +14545,17 @@
           "realm": "사도바 04"
         },
         {
-          "nickname": "뉴질",
-          "job": "주문각인사",
-          "level": 83,
-          "conquestGrade": 19,
-          "realm": "사도바 04"
-        },
-        {
           "nickname": "성잘",
           "job": "주문각인사",
           "level": 83,
           "conquestGrade": 20,
+          "realm": "사도바 04"
+        },
+        {
+          "nickname": "뉴질",
+          "job": "주문각인사",
+          "level": 83,
+          "conquestGrade": 19,
           "realm": "사도바 04"
         },
         {
@@ -14993,15 +14993,15 @@
           "realm": "사도바 05"
         },
         {
-          "nickname": "푸름푸름",
-          "job": "태양감시자",
+          "nickname": "천사",
+          "job": "집행관",
           "level": 86,
           "conquestGrade": 21,
           "realm": "사도바 05"
         },
         {
-          "nickname": "천사",
-          "job": "집행관",
+          "nickname": "푸름푸름",
+          "job": "태양감시자",
           "level": 86,
           "conquestGrade": 21,
           "realm": "사도바 05"
@@ -20327,15 +20327,15 @@
           "realm": "아티산 03"
         },
         {
-          "nickname": "사조성",
-          "job": "향사수",
+          "nickname": "셀리온",
+          "job": "주문각인사",
           "level": 85,
           "conquestGrade": 21,
           "realm": "아티산 03"
         },
         {
-          "nickname": "셀리온",
-          "job": "주문각인사",
+          "nickname": "사조성",
+          "job": "향사수",
           "level": 85,
           "conquestGrade": 21,
           "realm": "아티산 03"
@@ -23435,14 +23435,14 @@
           "realm": "나세르 03"
         },
         {
-          "nickname": "별규",
+          "nickname": "모나코의밤하늘",
           "job": "향사수",
           "level": 85,
           "conquestGrade": 20,
           "realm": "나세르 03"
         },
         {
-          "nickname": "모나코의밤하늘",
+          "nickname": "별규",
           "job": "향사수",
           "level": 85,
           "conquestGrade": 20,
@@ -24947,15 +24947,15 @@
           "realm": "타리아 01"
         },
         {
-          "nickname": "견습생",
-          "job": "집행관",
+          "nickname": "그나박",
+          "job": "태양감시자",
           "level": 92,
           "conquestGrade": 26,
           "realm": "타리아 01"
         },
         {
-          "nickname": "그나박",
-          "job": "태양감시자",
+          "nickname": "견습생",
+          "job": "집행관",
           "level": 92,
           "conquestGrade": 26,
           "realm": "타리아 01"
@@ -29690,7 +29690,7 @@
     "즐겜|메르비스": {
       "guildName": "즐겜",
       "world": "메르비스",
-      "memberCount": 7,
+      "memberCount": 8,
       "members": [
         {
           "nickname": "슬리",
@@ -29739,6 +29739,13 @@
           "job": "심연추방자",
           "level": 79,
           "conquestGrade": 15,
+          "realm": "메르비스 04"
+        },
+        {
+          "nickname": "비바람눈꽃",
+          "job": "태양감시자",
+          "level": 79,
+          "conquestGrade": 18,
           "realm": "메르비스 04"
         }
       ]
@@ -30577,5 +30584,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-09T16:50:43.149Z"
+  "updatedAt": "2026-08-09T17:00:44.567Z"
 }
