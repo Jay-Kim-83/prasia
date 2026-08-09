@@ -885,7 +885,7 @@
     "감자빙수|론도": {
       "guildName": "감자빙수",
       "world": "론도",
-      "memberCount": 21,
+      "memberCount": 22,
       "members": [
         {
           "nickname": "온달",
@@ -911,6 +911,13 @@
         {
           "nickname": "sunholic",
           "job": "집행관",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "축복티르",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 02"
@@ -1546,13 +1553,6 @@
           "realm": "론도 03"
         },
         {
-          "nickname": "강심기돌검뽑",
-          "job": "태양감시자",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "론도 03"
-        },
-        {
           "nickname": "강말숙",
           "job": "주문각인사",
           "level": 90,
@@ -1564,6 +1564,13 @@
           "job": "야만투사",
           "level": 90,
           "conquestGrade": 23,
+          "realm": "론도 03"
+        },
+        {
+          "nickname": "강심기돌검뽑",
+          "job": "태양감시자",
+          "level": 89,
+          "conquestGrade": 24,
           "realm": "론도 03"
         },
         {
@@ -2820,14 +2827,14 @@
           "realm": "론도 05"
         },
         {
-          "nickname": "도솔산낙지볶음밥",
+          "nickname": "해병",
           "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
           "realm": "론도 05"
         },
         {
-          "nickname": "해병",
+          "nickname": "도솔산낙지볶음밥",
           "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
@@ -14853,17 +14860,17 @@
           "realm": "사도바 05"
         },
         {
-          "nickname": "무쏘",
-          "job": "태양감시자",
-          "level": 91,
-          "conquestGrade": 23,
-          "realm": "사도바 05"
-        },
-        {
           "nickname": "수호",
           "job": "집행관",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "사도바 05"
+        },
+        {
+          "nickname": "무쏘",
+          "job": "태양감시자",
+          "level": 91,
+          "conquestGrade": 23,
           "realm": "사도바 05"
         },
         {
@@ -16375,7 +16382,7 @@
           "nickname": "누이",
           "job": "주문각인사",
           "level": 88,
-          "conquestGrade": 22,
+          "conquestGrade": 23,
           "realm": "제롬 02"
         },
         {
@@ -21863,7 +21870,7 @@
           "nickname": "임바오",
           "job": "주문각인사",
           "level": 86,
-          "conquestGrade": 22,
+          "conquestGrade": 23,
           "realm": "아티산 05"
         },
         {
@@ -23995,15 +24002,15 @@
           "realm": "나세르 04"
         },
         {
-          "nickname": "어쩌다그만",
-          "job": "야만투사",
+          "nickname": "여명천사",
+          "job": "집행관",
           "level": 87,
           "conquestGrade": 24,
           "realm": "나세르 04"
         },
         {
-          "nickname": "여명천사",
-          "job": "집행관",
+          "nickname": "어쩌다그만",
+          "job": "야만투사",
           "level": 87,
           "conquestGrade": 24,
           "realm": "나세르 04"
@@ -30050,17 +30057,17 @@
           "realm": "메르비스 05"
         },
         {
-          "nickname": "금쪽",
-          "job": "환영검사",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "메르비스 05"
-        },
-        {
           "nickname": "익준이",
           "job": "야만투사",
           "level": 89,
           "conquestGrade": 22,
+          "realm": "메르비스 05"
+        },
+        {
+          "nickname": "금쪽",
+          "job": "환영검사",
+          "level": 89,
+          "conquestGrade": 24,
           "realm": "메르비스 05"
         },
         {
@@ -30556,5 +30563,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-09T06:40:44.786Z"
+  "updatedAt": "2026-08-09T06:50:46.173Z"
 }
