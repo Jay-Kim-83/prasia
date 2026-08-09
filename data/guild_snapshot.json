@@ -4381,13 +4381,6 @@
           "realm": "라인소프 03"
         },
         {
-          "nickname": "덩기덕쿵짝",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "라인소프 03"
-        },
-        {
           "nickname": "꿀몽",
           "job": "향사수",
           "level": 92,
@@ -4395,7 +4388,7 @@
           "realm": "라인소프 03"
         },
         {
-          "nickname": "흑곰",
+          "nickname": "덩기덕쿵짝",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
@@ -4404,6 +4397,13 @@
         {
           "nickname": "그의큐브는맛있어",
           "job": "향사수",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "라인소프 03"
+        },
+        {
+          "nickname": "흑곰",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "라인소프 03"
@@ -6086,7 +6086,7 @@
     "GOAT|아민타": {
       "guildName": "GOAT",
       "world": "아민타",
-      "memberCount": 34,
+      "memberCount": 35,
       "members": [
         {
           "nickname": "우렉마지노",
@@ -6325,13 +6325,20 @@
           "level": 90,
           "conquestGrade": 24,
           "realm": "아민타 01"
+        },
+        {
+          "nickname": "쿤아게로",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 23,
+          "realm": "아민타 01"
         }
       ]
     },
     "루드|아민타": {
       "guildName": "루드",
       "world": "아민타",
-      "memberCount": 30,
+      "memberCount": 29,
       "members": [
         {
           "nickname": "종합병원",
@@ -6525,13 +6532,6 @@
         {
           "nickname": "땃쥐가화나면돈땃쥐",
           "job": "향사수",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "아민타 01"
-        },
-        {
-          "nickname": "쓰바런키",
-          "job": "야만투사",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아민타 01"
@@ -10779,15 +10779,15 @@
           "realm": "가리안 03"
         },
         {
-          "nickname": "허쉬",
-          "job": "주문각인사",
+          "nickname": "승식",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "가리안 03"
         },
         {
-          "nickname": "승식",
-          "job": "야만투사",
+          "nickname": "허쉬",
+          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "가리안 03"
@@ -30570,5 +30570,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-09T04:40:44.720Z"
+  "updatedAt": "2026-08-09T04:50:45.622Z"
 }
