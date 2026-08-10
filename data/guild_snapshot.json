@@ -2584,7 +2584,7 @@
         {
           "nickname": "설빛",
           "job": "주문각인사",
-          "level": 88,
+          "level": 89,
           "conquestGrade": 23,
           "realm": "론도 04"
         },
@@ -4857,15 +4857,15 @@
           "realm": "라인소프 03"
         },
         {
-          "nickname": "밍끄",
-          "job": "심연추방자",
+          "nickname": "분자",
+          "job": "환영검사",
           "level": 84,
           "conquestGrade": 21,
           "realm": "라인소프 03"
         },
         {
-          "nickname": "분자",
-          "job": "환영검사",
+          "nickname": "밍끄",
+          "job": "심연추방자",
           "level": 84,
           "conquestGrade": 21,
           "realm": "라인소프 03"
@@ -5550,15 +5550,15 @@
           "realm": "라인소프 05"
         },
         {
-          "nickname": "열매",
-          "job": "향사수",
+          "nickname": "다슬",
+          "job": "태양감시자",
           "level": 92,
           "conquestGrade": 26,
           "realm": "라인소프 05"
         },
         {
-          "nickname": "다슬",
-          "job": "태양감시자",
+          "nickname": "열매",
+          "job": "향사수",
           "level": 92,
           "conquestGrade": 26,
           "realm": "라인소프 05"
@@ -6187,14 +6187,14 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "자라나라모발공주",
+          "nickname": "데빌구",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 26,
           "realm": "아민타 01"
         },
         {
-          "nickname": "데빌구",
+          "nickname": "자라나라모발공주",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 26,
@@ -9550,7 +9550,7 @@
           "nickname": "시도",
           "job": "향사수",
           "level": 85,
-          "conquestGrade": 20,
+          "conquestGrade": 21,
           "realm": "가리안 01"
         },
         {
@@ -18306,7 +18306,7 @@
         {
           "nickname": "지원몬",
           "job": "향사수",
-          "level": 90,
+          "level": 89,
           "conquestGrade": 24,
           "realm": "제롬 05"
         },
@@ -20089,13 +20089,6 @@
           "realm": "아티산 03"
         },
         {
-          "nickname": "소삐",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 24,
-          "realm": "아티산 03"
-        },
-        {
           "nickname": "준삐양",
           "job": "주문각인사",
           "level": 92,
@@ -20107,6 +20100,13 @@
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "아티산 03"
+        },
+        {
+          "nickname": "소삐",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 24,
           "realm": "아티산 03"
         },
         {
@@ -21770,41 +21770,6 @@
         }
       ]
     },
-    "지박령|아티산": {
-      "guildName": "지박령",
-      "world": "아티산",
-      "memberCount": 4,
-      "members": [
-        {
-          "nickname": "팬텀",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "아티산 05"
-        },
-        {
-          "nickname": "파이리",
-          "job": "집행관",
-          "level": 87,
-          "conquestGrade": 21,
-          "realm": "아티산 05"
-        },
-        {
-          "nickname": "미뇽",
-          "job": "야만투사",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "아티산 05"
-        },
-        {
-          "nickname": "강설영",
-          "job": "향사수",
-          "level": 85,
-          "conquestGrade": 20,
-          "realm": "아티산 05"
-        }
-      ]
-    },
     "검혼|아티산": {
       "guildName": "검혼",
       "world": "아티산",
@@ -21912,6 +21877,41 @@
           "nickname": "아기맹수",
           "job": "주문각인사",
           "level": 84,
+          "conquestGrade": 20,
+          "realm": "아티산 05"
+        }
+      ]
+    },
+    "지박령|아티산": {
+      "guildName": "지박령",
+      "world": "아티산",
+      "memberCount": 4,
+      "members": [
+        {
+          "nickname": "팬텀",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "아티산 05"
+        },
+        {
+          "nickname": "파이리",
+          "job": "집행관",
+          "level": 87,
+          "conquestGrade": 21,
+          "realm": "아티산 05"
+        },
+        {
+          "nickname": "미뇽",
+          "job": "야만투사",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "아티산 05"
+        },
+        {
+          "nickname": "강설영",
+          "job": "향사수",
+          "level": 85,
           "conquestGrade": 20,
           "realm": "아티산 05"
         }
@@ -27112,7 +27112,7 @@
         {
           "nickname": "준겜",
           "job": "향사수",
-          "level": 88,
+          "level": 89,
           "conquestGrade": 22,
           "realm": "타리아 04"
         },
@@ -30619,5 +30619,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-10T21:10:43.895Z"
+  "updatedAt": "2026-08-10T21:20:45.379Z"
 }
