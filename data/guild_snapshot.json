@@ -6292,15 +6292,15 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "독도",
-          "job": "환영검사",
+          "nickname": "중복",
+          "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아민타 01"
         },
         {
-          "nickname": "중복",
-          "job": "향사수",
+          "nickname": "독도",
+          "job": "환영검사",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아민타 01"
@@ -7989,7 +7989,7 @@
           "nickname": "쇼티",
           "job": "향사수",
           "level": 84,
-          "conquestGrade": 18,
+          "conquestGrade": 19,
           "realm": "아민타 03"
         },
         {
@@ -18357,7 +18357,7 @@
     "제과점|제롬": {
       "guildName": "제과점",
       "world": "제롬",
-      "memberCount": 35,
+      "memberCount": 36,
       "members": [
         {
           "nickname": "뿌셔뿌셔",
@@ -18603,13 +18603,20 @@
           "level": 88,
           "conquestGrade": 22,
           "realm": "제롬 05"
+        },
+        {
+          "nickname": "궁디빵",
+          "job": "환영검사",
+          "level": 87,
+          "conquestGrade": 24,
+          "realm": "제롬 05"
         }
       ]
     },
     "츄르원정대|제롬": {
       "guildName": "츄르원정대",
       "world": "제롬",
-      "memberCount": 7,
+      "memberCount": 6,
       "members": [
         {
           "nickname": "구냥",
@@ -18651,13 +18658,6 @@
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 23,
-          "realm": "제롬 05"
-        },
-        {
-          "nickname": "혼자왔냥",
-          "job": "주문각인사",
-          "level": 87,
-          "conquestGrade": 21,
           "realm": "제롬 05"
         }
       ]
@@ -30570,5 +30570,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-10T06:30:44.590Z"
+  "updatedAt": "2026-08-10T06:40:43.633Z"
 }
