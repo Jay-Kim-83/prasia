@@ -4707,7 +4707,7 @@
     "달빛아래술한잔|라인소프": {
       "guildName": "달빛아래술한잔",
       "world": "라인소프",
-      "memberCount": 13,
+      "memberCount": 12,
       "members": [
         {
           "nickname": "향별달토끼",
@@ -4792,13 +4792,6 @@
           "level": 83,
           "conquestGrade": 20,
           "realm": "라인소프 03"
-        },
-        {
-          "nickname": "너의별",
-          "job": "향사수",
-          "level": 83,
-          "conquestGrade": 19,
-          "realm": "라인소프 03"
         }
       ]
     },
@@ -4840,7 +4833,7 @@
     "금은방|라인소프": {
       "guildName": "금은방",
       "world": "라인소프",
-      "memberCount": 9,
+      "memberCount": 10,
       "members": [
         {
           "nickname": "칠갑",
@@ -4902,6 +4895,13 @@
           "nickname": "천승",
           "job": "향사수",
           "level": 84,
+          "conquestGrade": 20,
+          "realm": "라인소프 03"
+        },
+        {
+          "nickname": "큐비",
+          "job": "향사수",
+          "level": 83,
           "conquestGrade": 20,
           "realm": "라인소프 03"
         }
@@ -5743,7 +5743,7 @@
     "베타|라인소프": {
       "guildName": "베타",
       "world": "라인소프",
-      "memberCount": 43,
+      "memberCount": 44,
       "members": [
         {
           "nickname": "이강인",
@@ -6045,13 +6045,20 @@
           "level": 89,
           "conquestGrade": 24,
           "realm": "라인소프 05"
+        },
+        {
+          "nickname": "계장",
+          "job": "향사수",
+          "level": 89,
+          "conquestGrade": 23,
+          "realm": "라인소프 05"
         }
       ]
     },
     "감마|라인소프": {
       "guildName": "감마",
       "world": "라인소프",
-      "memberCount": 7,
+      "memberCount": 6,
       "members": [
         {
           "nickname": "제이디",
@@ -6091,13 +6098,6 @@
         {
           "nickname": "축구",
           "job": "향사수",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "라인소프 05"
-        },
-        {
-          "nickname": "김러브",
-          "job": "주문각인사",
           "level": 89,
           "conquestGrade": 23,
           "realm": "라인소프 05"
@@ -8091,15 +8091,15 @@
           "realm": "아민타 04"
         },
         {
-          "nickname": "마인턴",
-          "job": "집행관",
+          "nickname": "토르",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
           "realm": "아민타 04"
         },
         {
-          "nickname": "토르",
-          "job": "야만투사",
+          "nickname": "마인턴",
+          "job": "집행관",
           "level": 92,
           "conquestGrade": 25,
           "realm": "아민타 04"
@@ -18962,17 +18962,17 @@
           "realm": "아티산 01"
         },
         {
-          "nickname": "명품별난",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "아티산 01"
-        },
-        {
           "nickname": "명품차차",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "아티산 01"
+        },
+        {
+          "nickname": "명품별난",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 23,
           "realm": "아티산 01"
         },
         {
@@ -20810,14 +20810,14 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "귀하",
+          "nickname": "모해",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
           "realm": "아티산 04"
         },
         {
-          "nickname": "모해",
+          "nickname": "귀하",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
@@ -25808,17 +25808,17 @@
           "realm": "타리아 02"
         },
         {
-          "nickname": "꼰대가르송",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "타리아 02"
-        },
-        {
           "nickname": "태존",
           "job": "야만투사",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "꼰대가르송",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "타리아 02"
         },
         {
@@ -30619,5 +30619,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-10T20:50:44.560Z"
+  "updatedAt": "2026-08-10T21:00:45.556Z"
 }
