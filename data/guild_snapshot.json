@@ -584,7 +584,7 @@
     "블랙중독|론도": {
       "guildName": "블랙중독",
       "world": "론도",
-      "memberCount": 43,
+      "memberCount": 42,
       "members": [
         {
           "nickname": "쌍팔형",
@@ -879,20 +879,13 @@
           "level": 91,
           "conquestGrade": 24,
           "realm": "론도 02"
-        },
-        {
-          "nickname": "짱아형",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "론도 02"
         }
       ]
     },
     "감자빙수|론도": {
       "guildName": "감자빙수",
       "world": "론도",
-      "memberCount": 22,
+      "memberCount": 23,
       "members": [
         {
           "nickname": "온달",
@@ -1036,6 +1029,13 @@
         },
         {
           "nickname": "쌩얼",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "구이",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
@@ -2820,17 +2820,17 @@
           "realm": "론도 05"
         },
         {
-          "nickname": "도솔산낙지볶음밥",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "론도 05"
-        },
-        {
           "nickname": "특기병",
           "job": "환영검사",
           "level": 91,
           "conquestGrade": 24,
+          "realm": "론도 05"
+        },
+        {
+          "nickname": "도솔산낙지볶음밥",
+          "job": "향사수",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "론도 05"
         },
         {
@@ -5729,7 +5729,7 @@
     "베타|라인소프": {
       "guildName": "베타",
       "world": "라인소프",
-      "memberCount": 44,
+      "memberCount": 43,
       "members": [
         {
           "nickname": "이강인",
@@ -6026,13 +6026,6 @@
           "realm": "라인소프 05"
         },
         {
-          "nickname": "아빠상어",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "라인소프 05"
-        },
-        {
           "nickname": "계장",
           "job": "향사수",
           "level": 89,
@@ -6044,7 +6037,7 @@
     "감마|라인소프": {
       "guildName": "감마",
       "world": "라인소프",
-      "memberCount": 6,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "제이디",
@@ -6084,6 +6077,13 @@
         {
           "nickname": "축구",
           "job": "향사수",
+          "level": 89,
+          "conquestGrade": 23,
+          "realm": "라인소프 05"
+        },
+        {
+          "nickname": "김러브",
+          "job": "주문각인사",
           "level": 89,
           "conquestGrade": 23,
           "realm": "라인소프 05"
@@ -18780,15 +18780,15 @@
           "realm": "아티산 01"
         },
         {
-          "nickname": "명품맥스",
-          "job": "야만투사",
+          "nickname": "명품무릎",
+          "job": "향사수",
           "level": 93,
           "conquestGrade": 26,
           "realm": "아티산 01"
         },
         {
-          "nickname": "명품무릎",
-          "job": "향사수",
+          "nickname": "명품맥스",
+          "job": "야만투사",
           "level": 93,
           "conquestGrade": 26,
           "realm": "아티산 01"
@@ -19697,15 +19697,15 @@
           "realm": "아티산 02"
         },
         {
-          "nickname": "샤샤냥",
-          "job": "향사수",
+          "nickname": "월영랑",
+          "job": "태양감시자",
           "level": 88,
           "conquestGrade": 22,
           "realm": "아티산 02"
         },
         {
-          "nickname": "월영랑",
-          "job": "태양감시자",
+          "nickname": "샤샤냥",
+          "job": "향사수",
           "level": 88,
           "conquestGrade": 22,
           "realm": "아티산 02"
@@ -21813,7 +21813,7 @@
         {
           "nickname": "꺄우",
           "job": "야만투사",
-          "level": 89,
+          "level": 90,
           "conquestGrade": 24,
           "realm": "아티산 05"
         },
@@ -22793,7 +22793,7 @@
         {
           "nickname": "꿀킹",
           "job": "집행관",
-          "level": 86,
+          "level": 87,
           "conquestGrade": 21,
           "realm": "나세르 02"
         },
@@ -24067,7 +24067,7 @@
         {
           "nickname": "블라",
           "job": "집행관",
-          "level": 88,
+          "level": 87,
           "conquestGrade": 24,
           "realm": "나세르 04"
         },
@@ -30675,5 +30675,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-11T13:50:45.142Z"
+  "updatedAt": "2026-08-11T14:00:46.776Z"
 }
