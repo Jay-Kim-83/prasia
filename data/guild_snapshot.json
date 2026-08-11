@@ -9225,6 +9225,13 @@
           "realm": "아민타 05"
         },
         {
+          "nickname": "김삿갓",
+          "job": "향사수",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "아민타 05"
+        },
+        {
           "nickname": "하냥",
           "job": "환영검사",
           "level": 92,
@@ -9241,13 +9248,6 @@
         {
           "nickname": "악동이",
           "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "아민타 05"
-        },
-        {
-          "nickname": "김삿갓",
-          "job": "향사수",
           "level": 92,
           "conquestGrade": 26,
           "realm": "아민타 05"
@@ -13432,15 +13432,15 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "크림왕",
-          "job": "향사수",
+          "nickname": "밀크쵸코",
+          "job": "심연추방자",
           "level": 88,
           "conquestGrade": 21,
           "realm": "사도바 02"
         },
         {
-          "nickname": "밀크쵸코",
-          "job": "심연추방자",
+          "nickname": "크림왕",
+          "job": "향사수",
           "level": 88,
           "conquestGrade": 21,
           "realm": "사도바 02"
@@ -16379,17 +16379,17 @@
           "realm": "제롬 02"
         },
         {
-          "nickname": "HEAL",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 26,
-          "realm": "제롬 02"
-        },
-        {
           "nickname": "은슬야호",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 24,
+          "realm": "제롬 02"
+        },
+        {
+          "nickname": "HEAL",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 26,
           "realm": "제롬 02"
         },
         {
@@ -26778,19 +26778,12 @@
     "본드|타리아": {
       "guildName": "본드",
       "world": "타리아",
-      "memberCount": 5,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "본드",
           "job": "야만투사",
           "level": 86,
-          "conquestGrade": 20,
-          "realm": "타리아 03"
-        },
-        {
-          "nickname": "행복달",
-          "job": "집행관",
-          "level": 85,
           "conquestGrade": 20,
           "realm": "타리아 03"
         },
@@ -29774,7 +29767,7 @@
     "즐겜|메르비스": {
       "guildName": "즐겜",
       "world": "메르비스",
-      "memberCount": 8,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "슬리",
@@ -29823,13 +29816,6 @@
           "job": "태양감시자",
           "level": 79,
           "conquestGrade": 18,
-          "realm": "메르비스 04"
-        },
-        {
-          "nickname": "토론토",
-          "job": "심연추방자",
-          "level": 79,
-          "conquestGrade": 15,
           "realm": "메르비스 04"
         }
       ]
@@ -30640,5 +30626,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-11T05:40:45.396Z"
+  "updatedAt": "2026-08-11T05:50:43.906Z"
 }
