@@ -584,7 +584,7 @@
     "블랙중독|론도": {
       "guildName": "블랙중독",
       "world": "론도",
-      "memberCount": 42,
+      "memberCount": 43,
       "members": [
         {
           "nickname": "쌍팔형",
@@ -879,13 +879,20 @@
           "level": 91,
           "conquestGrade": 24,
           "realm": "론도 02"
+        },
+        {
+          "nickname": "짱아형",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "론도 02"
         }
       ]
     },
     "감자빙수|론도": {
       "guildName": "감자빙수",
       "world": "론도",
-      "memberCount": 23,
+      "memberCount": 22,
       "members": [
         {
           "nickname": "온달",
@@ -1029,13 +1036,6 @@
         },
         {
           "nickname": "쌩얼",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "론도 02"
-        },
-        {
-          "nickname": "구이",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
@@ -1679,17 +1679,17 @@
           "realm": "론도 03"
         },
         {
-          "nickname": "강북일식",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "론도 03"
-        },
-        {
           "nickname": "강뻔짜",
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
+          "realm": "론도 03"
+        },
+        {
+          "nickname": "강북일식",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 25,
           "realm": "론도 03"
         },
         {
@@ -2820,17 +2820,17 @@
           "realm": "론도 05"
         },
         {
-          "nickname": "특기병",
-          "job": "환영검사",
-          "level": 91,
-          "conquestGrade": 24,
-          "realm": "론도 05"
-        },
-        {
           "nickname": "도솔산낙지볶음밥",
           "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "론도 05"
+        },
+        {
+          "nickname": "특기병",
+          "job": "환영검사",
+          "level": 91,
+          "conquestGrade": 24,
           "realm": "론도 05"
         },
         {
@@ -15478,7 +15478,7 @@
         {
           "nickname": "둘셋",
           "job": "집행관",
-          "level": 92,
+          "level": 91,
           "conquestGrade": 24,
           "realm": "제롬 01"
         },
@@ -23456,14 +23456,14 @@
           "realm": "나세르 03"
         },
         {
-          "nickname": "팬더",
+          "nickname": "멜빵",
           "job": "집행관",
           "level": 87,
           "conquestGrade": 21,
           "realm": "나세르 03"
         },
         {
-          "nickname": "멜빵",
+          "nickname": "팬더",
           "job": "집행관",
           "level": 87,
           "conquestGrade": 21,
@@ -30675,5 +30675,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-11T13:40:45.760Z"
+  "updatedAt": "2026-08-11T13:50:45.142Z"
 }
