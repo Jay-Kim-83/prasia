@@ -6352,7 +6352,7 @@
     "루드|아민타": {
       "guildName": "루드",
       "world": "아민타",
-      "memberCount": 29,
+      "memberCount": 30,
       "members": [
         {
           "nickname": "종합병원",
@@ -6551,6 +6551,13 @@
           "realm": "아민타 01"
         },
         {
+          "nickname": "쓰바런키",
+          "job": "야만투사",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "아민타 01"
+        },
+        {
           "nickname": "쓰파런키",
           "job": "야만투사",
           "level": 90,
@@ -6562,7 +6569,7 @@
     "더킹|아민타": {
       "guildName": "더킹",
       "world": "아민타",
-      "memberCount": 30,
+      "memberCount": 29,
       "members": [
         {
           "nickname": "홍횽",
@@ -6763,13 +6770,6 @@
         {
           "nickname": "영호야호",
           "job": "향사수",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "아민타 01"
-        },
-        {
-          "nickname": "도게자",
-          "job": "환영검사",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아민타 01"
@@ -8875,13 +8875,6 @@
           "realm": "아민타 05"
         },
         {
-          "nickname": "쉼텨",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "아민타 05"
-        },
-        {
           "nickname": "베찌",
           "job": "향사수",
           "level": 92,
@@ -8891,6 +8884,13 @@
         {
           "nickname": "까루",
           "job": "집행관",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "아민타 05"
+        },
+        {
+          "nickname": "쉼텨",
+          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "아민타 05"
@@ -27215,17 +27215,17 @@
           "realm": "타리아 04"
         },
         {
-          "nickname": "코뿔소",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 23,
-          "realm": "타리아 04"
-        },
-        {
           "nickname": "킴군",
           "job": "주문각인사",
           "level": 86,
           "conquestGrade": 21,
+          "realm": "타리아 04"
+        },
+        {
+          "nickname": "코뿔소",
+          "job": "집행관",
+          "level": 86,
+          "conquestGrade": 23,
           "realm": "타리아 04"
         },
         {
@@ -30633,5 +30633,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-12T21:40:46.375Z"
+  "updatedAt": "2026-08-12T21:50:44.211Z"
 }
