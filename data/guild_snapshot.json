@@ -909,15 +909,15 @@
           "realm": "론도 02"
         },
         {
-          "nickname": "파천왕",
-          "job": "집행관",
+          "nickname": "별하",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 02"
         },
         {
-          "nickname": "별하",
-          "job": "야만투사",
+          "nickname": "파천왕",
+          "job": "집행관",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 02"
@@ -1126,6 +1126,13 @@
           "realm": "론도 02"
         },
         {
+          "nickname": "고구마술",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 02"
+        },
+        {
           "nickname": "포수",
           "job": "야만투사",
           "level": 92,
@@ -1134,13 +1141,6 @@
         },
         {
           "nickname": "미스터",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "론도 02"
-        },
-        {
-          "nickname": "고구마술",
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
@@ -9127,15 +9127,15 @@
           "realm": "아민타 05"
         },
         {
-          "nickname": "진빼이꼬",
-          "job": "집행관",
+          "nickname": "뚜두두두두두죽어랏",
+          "job": "환영검사",
           "level": 91,
           "conquestGrade": 24,
           "realm": "아민타 05"
         },
         {
-          "nickname": "뚜두두두두두죽어랏",
-          "job": "환영검사",
+          "nickname": "진빼이꼬",
+          "job": "집행관",
           "level": 91,
           "conquestGrade": 24,
           "realm": "아민타 05"
@@ -10079,17 +10079,17 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "구경만",
-          "job": "태양감시자",
-          "level": 90,
-          "conquestGrade": 22,
-          "realm": "가리안 02"
-        },
-        {
           "nickname": "고래상어",
           "job": "향사수",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "구경만",
+          "job": "태양감시자",
+          "level": 90,
+          "conquestGrade": 22,
           "realm": "가리안 02"
         },
         {
@@ -18850,17 +18850,17 @@
           "realm": "아티산 01"
         },
         {
-          "nickname": "명품광기",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 26,
-          "realm": "아티산 01"
-        },
-        {
           "nickname": "명품데이",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "아티산 01"
+        },
+        {
+          "nickname": "명품광기",
+          "job": "향사수",
+          "level": 91,
+          "conquestGrade": 26,
           "realm": "아티산 01"
         },
         {
@@ -19445,15 +19445,15 @@
           "realm": "아티산 02"
         },
         {
-          "nickname": "삐약",
-          "job": "향사수",
+          "nickname": "차르봄바",
+          "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아티산 02"
         },
         {
-          "nickname": "차르봄바",
-          "job": "집행관",
+          "nickname": "삐약",
+          "job": "향사수",
           "level": 90,
           "conquestGrade": 24,
           "realm": "아티산 02"
@@ -25683,60 +25683,18 @@
         }
       ]
     },
-    "고양이들|타리아": {
-      "guildName": "고양이들",
-      "world": "타리아",
-      "memberCount": 6,
-      "members": [
-        {
-          "nickname": "브숏",
-          "job": "야만투사",
-          "level": 93,
-          "conquestGrade": 25,
-          "realm": "타리아 02"
-        },
-        {
-          "nickname": "시베리안",
-          "job": "향사수",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "타리아 02"
-        },
-        {
-          "nickname": "놀숲",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 24,
-          "realm": "타리아 02"
-        },
-        {
-          "nickname": "메인쿤",
-          "job": "집행관",
-          "level": 91,
-          "conquestGrade": 24,
-          "realm": "타리아 02"
-        },
-        {
-          "nickname": "스핑크스",
-          "job": "집행관",
-          "level": 91,
-          "conquestGrade": 24,
-          "realm": "타리아 02"
-        },
-        {
-          "nickname": "벵갈",
-          "job": "집행관",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "타리아 02"
-        }
-      ]
-    },
     "악시|타리아": {
       "guildName": "악시",
       "world": "타리아",
-      "memberCount": 49,
+      "memberCount": 50,
       "members": [
+        {
+          "nickname": "연히",
+          "job": "야만투사",
+          "level": 93,
+          "conquestGrade": 26,
+          "realm": "타리아 02"
+        },
         {
           "nickname": "들레",
           "job": "야만투사",
@@ -26077,6 +26035,55 @@
           "nickname": "약꼴",
           "job": "심연추방자",
           "level": 85,
+          "conquestGrade": 21,
+          "realm": "타리아 02"
+        }
+      ]
+    },
+    "고양이들|타리아": {
+      "guildName": "고양이들",
+      "world": "타리아",
+      "memberCount": 6,
+      "members": [
+        {
+          "nickname": "브숏",
+          "job": "야만투사",
+          "level": 93,
+          "conquestGrade": 25,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "시베리안",
+          "job": "향사수",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "놀숲",
+          "job": "향사수",
+          "level": 91,
+          "conquestGrade": 24,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "메인쿤",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 24,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "스핑크스",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 24,
+          "realm": "타리아 02"
+        },
+        {
+          "nickname": "벵갈",
+          "job": "집행관",
+          "level": 86,
           "conquestGrade": 21,
           "realm": "타리아 02"
         }
@@ -30654,5 +30661,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-12T01:51:02.395Z"
+  "updatedAt": "2026-08-12T02:00:43.715Z"
 }
