@@ -769,17 +769,17 @@
           "realm": "론도 02"
         },
         {
-          "nickname": "뉴에라",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 24,
-          "realm": "론도 02"
-        },
-        {
           "nickname": "삼다수",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 26,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "뉴에라",
+          "job": "향사수",
+          "level": 91,
+          "conquestGrade": 24,
           "realm": "론도 02"
         },
         {
@@ -1063,15 +1063,15 @@
           "realm": "론도 02"
         },
         {
-          "nickname": "별하",
-          "job": "야만투사",
+          "nickname": "파천왕",
+          "job": "집행관",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 02"
         },
         {
-          "nickname": "파천왕",
-          "job": "집행관",
+          "nickname": "별하",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 02"
@@ -2925,17 +2925,17 @@
           "realm": "론도 05"
         },
         {
-          "nickname": "빠따병",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 24,
-          "realm": "론도 05"
-        },
-        {
           "nickname": "장궁포대병",
           "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "론도 05"
+        },
+        {
+          "nickname": "빠따병",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 24,
           "realm": "론도 05"
         },
         {
@@ -6173,14 +6173,14 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "데빌구",
+          "nickname": "자라나라모발공주",
           "job": "주문각인사",
-          "level": 91,
+          "level": 92,
           "conquestGrade": 26,
           "realm": "아민타 01"
         },
         {
-          "nickname": "자라나라모발공주",
+          "nickname": "데빌구",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 26,
@@ -11157,6 +11157,13 @@
           "realm": "가리안 03"
         },
         {
+          "nickname": "야만스님",
+          "job": "야만투사",
+          "level": 90,
+          "conquestGrade": 24,
+          "realm": "가리안 03"
+        },
+        {
           "nickname": "조풍석개패는쌍패",
           "job": "집행관",
           "level": 90,
@@ -11166,13 +11173,6 @@
         {
           "nickname": "다르다",
           "job": "집행관",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "가리안 03"
-        },
-        {
-          "nickname": "야만스님",
-          "job": "야만투사",
           "level": 90,
           "conquestGrade": 24,
           "realm": "가리안 03"
@@ -11248,17 +11248,17 @@
           "realm": "가리안 03"
         },
         {
-          "nickname": "응크야호",
-          "job": "집행관",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "가리안 03"
-        },
-        {
           "nickname": "씬짜오",
           "job": "향사수",
           "level": 89,
           "conquestGrade": 21,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "응크야호",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 23,
           "realm": "가리안 03"
         },
         {
@@ -21255,12 +21255,19 @@
     "세포들|아티산": {
       "guildName": "세포들",
       "world": "아티산",
-      "memberCount": 7,
+      "memberCount": 8,
       "members": [
         {
           "nickname": "우사기",
           "job": "주문각인사",
           "level": 92,
+          "conquestGrade": 25,
+          "realm": "아티산 04"
+        },
+        {
+          "nickname": "김유미",
+          "job": "향사수",
+          "level": 90,
           "conquestGrade": 25,
           "realm": "아티산 04"
         },
@@ -30654,5 +30661,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-12T06:40:45.091Z"
+  "updatedAt": "2026-08-12T06:50:43.836Z"
 }
