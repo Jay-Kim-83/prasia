@@ -790,17 +790,17 @@
           "realm": "론도 02"
         },
         {
-          "nickname": "쇠주형",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 26,
-          "realm": "론도 02"
-        },
-        {
           "nickname": "블랑형",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 25,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "쇠주형",
+          "job": "향사수",
+          "level": 91,
+          "conquestGrade": 26,
           "realm": "론도 02"
         },
         {
@@ -4528,15 +4528,15 @@
           "realm": "라인소프 03"
         },
         {
-          "nickname": "흑설",
-          "job": "야만투사",
+          "nickname": "빵댕이",
+          "job": "향사수",
           "level": 91,
           "conquestGrade": 26,
           "realm": "라인소프 03"
         },
         {
-          "nickname": "빵댕이",
-          "job": "향사수",
+          "nickname": "흑설",
+          "job": "야만투사",
           "level": 91,
           "conquestGrade": 26,
           "realm": "라인소프 03"
@@ -5039,15 +5039,15 @@
           "realm": "라인소프 04"
         },
         {
-          "nickname": "은빛사수",
-          "job": "향사수",
+          "nickname": "은빛용",
+          "job": "집행관",
           "level": 87,
           "conquestGrade": 21,
           "realm": "라인소프 04"
         },
         {
-          "nickname": "은빛용",
-          "job": "집행관",
+          "nickname": "은빛사수",
+          "job": "향사수",
           "level": 87,
           "conquestGrade": 21,
           "realm": "라인소프 04"
@@ -6012,13 +6012,6 @@
           "realm": "라인소프 05"
         },
         {
-          "nickname": "잭팟",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 23,
-          "realm": "라인소프 05"
-        },
-        {
           "nickname": "거산짱",
           "job": "주문각인사",
           "level": 90,
@@ -6030,6 +6023,13 @@
           "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "라인소프 05"
+        },
+        {
+          "nickname": "잭팟",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 23,
           "realm": "라인소프 05"
         },
         {
@@ -6180,16 +6180,16 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "자라나라모발공주",
+          "nickname": "데빌구",
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "아민타 01"
         },
         {
-          "nickname": "데빌구",
+          "nickname": "자라나라모발공주",
           "job": "주문각인사",
-          "level": 92,
+          "level": 91,
           "conquestGrade": 26,
           "realm": "아민타 01"
         },
@@ -8753,7 +8753,7 @@
     "DOG|아민타": {
       "guildName": "DOG",
       "world": "아민타",
-      "memberCount": 42,
+      "memberCount": 43,
       "members": [
         {
           "nickname": "아톰",
@@ -8903,17 +8903,17 @@
           "realm": "아민타 05"
         },
         {
-          "nickname": "카린",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 24,
-          "realm": "아민타 05"
-        },
-        {
           "nickname": "청기사",
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
+          "realm": "아민타 05"
+        },
+        {
+          "nickname": "카린",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 24,
           "realm": "아민타 05"
         },
         {
@@ -9008,6 +9008,13 @@
           "realm": "아민타 05"
         },
         {
+          "nickname": "케티",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "아민타 05"
+        },
+        {
           "nickname": "이라온",
           "job": "야만투사",
           "level": 91,
@@ -9017,13 +9024,6 @@
         {
           "nickname": "가오",
           "job": "야만투사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "아민타 05"
-        },
-        {
-          "nickname": "케티",
-          "job": "집행관",
           "level": 91,
           "conquestGrade": 25,
           "realm": "아민타 05"
@@ -9046,6 +9046,13 @@
           "nickname": "사탄의한",
           "job": "주문각인사",
           "level": 91,
+          "conquestGrade": 25,
+          "realm": "아민타 05"
+        },
+        {
+          "nickname": "일보",
+          "job": "주문각인사",
+          "level": 90,
           "conquestGrade": 25,
           "realm": "아민타 05"
         }
@@ -9194,7 +9201,7 @@
     "심판|아민타": {
       "guildName": "심판",
       "world": "아민타",
-      "memberCount": 22,
+      "memberCount": 21,
       "members": [
         {
           "nickname": "Baal",
@@ -9342,13 +9349,6 @@
           "level": 90,
           "conquestGrade": 24,
           "realm": "아민타 05"
-        },
-        {
-          "nickname": "오또",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "아민타 05"
         }
       ]
     },
@@ -9451,7 +9451,7 @@
         {
           "nickname": "도끼든늑구",
           "job": "태양감시자",
-          "level": 90,
+          "level": 91,
           "conquestGrade": 25,
           "realm": "아민타 05"
         }
@@ -10982,17 +10982,17 @@
           "realm": "가리안 03"
         },
         {
-          "nickname": "Fluu",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "가리안 03"
-        },
-        {
           "nickname": "휘뚜룹",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "Fluu",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "가리안 03"
         },
         {
@@ -11220,17 +11220,17 @@
           "realm": "가리안 03"
         },
         {
-          "nickname": "럭키",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 22,
-          "realm": "가리안 03"
-        },
-        {
           "nickname": "잘빠누",
           "job": "집행관",
           "level": 89,
           "conquestGrade": 23,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "럭키",
+          "job": "향사수",
+          "level": 89,
+          "conquestGrade": 22,
           "realm": "가리안 03"
         },
         {
@@ -11248,17 +11248,17 @@
           "realm": "가리안 03"
         },
         {
-          "nickname": "씬짜오",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 21,
-          "realm": "가리안 03"
-        },
-        {
           "nickname": "크레이버",
           "job": "향사수",
           "level": 89,
           "conquestGrade": 23,
+          "realm": "가리안 03"
+        },
+        {
+          "nickname": "씬짜오",
+          "job": "향사수",
+          "level": 89,
+          "conquestGrade": 21,
           "realm": "가리안 03"
         },
         {
@@ -11990,15 +11990,15 @@
           "realm": "가리안 04"
         },
         {
-          "nickname": "장택진",
-          "job": "야만투사",
+          "nickname": "지소",
+          "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
           "realm": "가리안 04"
         },
         {
-          "nickname": "지소",
-          "job": "집행관",
+          "nickname": "장택진",
+          "job": "야만투사",
           "level": 90,
           "conquestGrade": 24,
           "realm": "가리안 04"
@@ -12119,7 +12119,7 @@
           "nickname": "어린신부",
           "job": "집행관",
           "level": 88,
-          "conquestGrade": 22,
+          "conquestGrade": 23,
           "realm": "가리안 05"
         },
         {
@@ -13404,15 +13404,15 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "크림왕",
-          "job": "향사수",
+          "nickname": "밀크쵸코",
+          "job": "심연추방자",
           "level": 88,
           "conquestGrade": 21,
           "realm": "사도바 02"
         },
         {
-          "nickname": "밀크쵸코",
-          "job": "심연추방자",
+          "nickname": "크림왕",
+          "job": "향사수",
           "level": 88,
           "conquestGrade": 21,
           "realm": "사도바 02"
@@ -17527,17 +17527,17 @@
           "realm": "제롬 04"
         },
         {
-          "nickname": "텔미트",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 24,
-          "realm": "제롬 04"
-        },
-        {
           "nickname": "수댕",
           "job": "환영검사",
           "level": 91,
           "conquestGrade": 26,
+          "realm": "제롬 04"
+        },
+        {
+          "nickname": "텔미트",
+          "job": "향사수",
+          "level": 91,
+          "conquestGrade": 24,
           "realm": "제롬 04"
         },
         {
@@ -18332,17 +18332,17 @@
           "realm": "제롬 05"
         },
         {
-          "nickname": "옵티몬",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "제롬 05"
-        },
-        {
           "nickname": "꺄울몬",
           "job": "향사수",
           "level": 89,
           "conquestGrade": 24,
+          "realm": "제롬 05"
+        },
+        {
+          "nickname": "옵티몬",
+          "job": "향사수",
+          "level": 88,
+          "conquestGrade": 23,
           "realm": "제롬 05"
         },
         {
@@ -21097,17 +21097,17 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "곡괭이",
-          "job": "야만투사",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "아티산 04"
-        },
-        {
           "nickname": "빵군",
           "job": "향사수",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "아티산 04"
+        },
+        {
+          "nickname": "곡괭이",
+          "job": "야만투사",
+          "level": 90,
+          "conquestGrade": 24,
           "realm": "아티산 04"
         },
         {
@@ -25416,6 +25416,13 @@
           "realm": "타리아 01"
         },
         {
+          "nickname": "얗신",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 24,
+          "realm": "타리아 01"
+        },
+        {
           "nickname": "유랑해",
           "job": "향사수",
           "level": 91,
@@ -25427,13 +25434,6 @@
           "job": "야만투사",
           "level": 91,
           "conquestGrade": 26,
-          "realm": "타리아 01"
-        },
-        {
-          "nickname": "얗신",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 24,
           "realm": "타리아 01"
         },
         {
@@ -27056,7 +27056,7 @@
         {
           "nickname": "여포",
           "job": "집행관",
-          "level": 90,
+          "level": 89,
           "conquestGrade": 23,
           "realm": "타리아 04"
         },
@@ -27635,17 +27635,17 @@
           "realm": "타리아 05"
         },
         {
-          "nickname": "Keria",
-          "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 23,
-          "realm": "타리아 05"
-        },
-        {
           "nickname": "정소민",
           "job": "태양감시자",
           "level": 88,
           "conquestGrade": 22,
+          "realm": "타리아 05"
+        },
+        {
+          "nickname": "Keria",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 23,
           "realm": "타리아 05"
         },
         {
@@ -30550,7 +30550,7 @@
           "nickname": "악녀",
           "job": "심연추방자",
           "level": 84,
-          "conquestGrade": 19,
+          "conquestGrade": 20,
           "realm": "메르비스 05"
         }
       ]
@@ -30640,5 +30640,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-15T02:41:21.169Z"
+  "updatedAt": "2026-08-15T03:11:21.512Z"
 }
