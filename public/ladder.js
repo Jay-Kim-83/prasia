@@ -5,7 +5,7 @@
     var COLORS = ['#6366f1', '#ef4444', '#10b981', '#f59e0b', '#3b82f6', '#ec4899', '#14b8a6', '#8b5cf6', '#f97316', '#06b6d4', '#84cc16', '#a855f7'];
 
     var CSS = ''
-        + '.ldg{box-sizing:border-box;max-width:820px;margin:0 auto;font-family:Pretendard,"Malgun Gothic","맑은 고딕",sans-serif;color:#1e293b}'
+        + '.ldg{box-sizing:border-box;max-width:820px;margin:0 auto;font-family:Pretendard,"Malgun Gothic","맑은 고딕",sans-serif;color:#1e293b;color-scheme:light}'
         + '.ldg *{box-sizing:border-box}'
         + '.ldg-card{background:#fff;border:1px solid #e2e8f0;border-radius:20px;box-shadow:0 24px 60px -24px rgba(79,70,229,.3);overflow:hidden}'
         + '.ldg-head{padding:20px 24px;background:linear-gradient(135deg,#6366f1,#8b5cf6 55%,#a855f7);color:#fff}'
@@ -16,8 +16,9 @@
         + '.ldg-label{display:flex;align-items:center;justify-content:space-between;font-size:13px;font-weight:700;color:#475569;margin-bottom:8px}'
         + '.ldg-count{font-size:12px;font-weight:700;color:#7c3aed;background:#f5f3ff;padding:2px 10px;border-radius:999px}'
         + '.ldg-inputrow{display:flex;gap:8px}'
-        + '.ldg-input{flex:1;min-width:0;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:12px;font-size:14px;outline:none;background:#f8fafc;transition:border-color .15s,box-shadow .15s,background .15s}'
+        + '.ldg-input{flex:1;min-width:0;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:12px;font-size:14px;outline:none;background:#f8fafc;color:#1e293b;caret-color:#6366f1;transition:border-color .15s,box-shadow .15s,background .15s}'
         + '.ldg-input:focus{border-color:#8b5cf6;background:#fff;box-shadow:0 0 0 4px rgba(139,92,246,.12)}'
+        + '.ldg-input::placeholder{color:#94a3b8;opacity:1}'
         + '.ldg-add{padding:0 18px;border:none;border-radius:12px;background:#eef2ff;color:#4f46e5;font-size:14px;font-weight:700;cursor:pointer;transition:background .15s}'
         + '.ldg-add:hover{background:#e0e7ff}'
         + '.ldg-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;min-height:36px}'
