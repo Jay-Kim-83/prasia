@@ -114,6 +114,7 @@ async function initAdmin() {
     document.querySelectorAll('.master-only').forEach(el => el.classList.add('disabled'));
   }
   await loadStatus();
+  loadLadderCode();
   connectLogStream();
   loadScheduleUI();
   loadCmd();
@@ -164,6 +165,22 @@ function initSidebar() {
   window.addEventListener('scroll', updateActive, { passive: true });
   window.addEventListener('resize', updateActive);
   updateActive();
+}
+
+async function loadLadderCode() {
+  try {
+    const res = await adminFetch('/api/ladder/code');
+    const d = await res.json();
+    document.getElementById('statLadderCode').textContent = d.success ? d.code : '권한 없음';
+  } catch {
+    document.getElementById('statLadderCode').textContent = '오류';
+  }
+}
+
+function copyLadderCode() {
+  const code = document.getElementById('statLadderCode').textContent;
+  if (!/^\d{6}$/.test(code)) return;
+  navigator.clipboard.writeText(code).then(() => showToast('입장 코드가 복사되었습니다.'));
 }
 
 async function loadStatus() {

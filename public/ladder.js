@@ -188,7 +188,7 @@
             }
 
             function add(raw) {
-                raw.split(',').map(function (s) { return s.trim(); }).filter(Boolean).forEach(function (name) {
+                raw.split(/[,\r\n]+/).map(function (s) { return s.trim(); }).filter(Boolean).forEach(function (name) {
                     if (list.length >= 12) {
                         err.textContent = '최대 12개까지 넣을 수 있어요.';
                         return;
@@ -214,6 +214,14 @@
                     var parts = input.value.split(',');
                     input.value = parts.pop();
                     add(parts.join(','));
+                }
+            });
+            input.addEventListener('paste', function (e) {
+                var text = (e.clipboardData || window.clipboardData).getData('text');
+                if (text && /[,\r\n]/.test(text)) {
+                    e.preventDefault();
+                    add(text);
+                    input.value = '';
                 }
             });
 

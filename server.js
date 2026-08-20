@@ -2,6 +2,7 @@ const express = require('express');
 const cron    = require('node-cron');
 const path    = require('path');
 const fs      = require('fs');
+const crypto  = require('crypto');
 const { spawn } = require('child_process');
 const { scrapeRankings, loadData, loadMeta } = require('./scraper');
 const github = require('./github-sync');
@@ -234,6 +235,38 @@ function requireUser(req, res, next) {
   if (verifyUserToken(token)) return next();
   return res.status(401).json({ success: false, message: '로그인이 필요합니다.' });
 }
+
+// ── 사다리타기 일일 입장 코드 ────────────────────────────────
+function kstDay() {
+  return new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10);
+}
+function ladderDailyCode() {
+  const config = loadConfig();
+  const seed = `${kstDay()}:${config.adminPassword || 'prasia'}:ladder`;
+  const hash = crypto.createHash('sha256').update(seed).digest();
+  return String(hash.readUInt32BE(0) % 1000000).padStart(6, '0');
+}
+
+const ladderFails = new Map();
+app.post('/api/ladder/verify', (req, res) => {
+  const day = kstDay();
+  for (const k of ladderFails.keys()) if (!k.endsWith(day)) ladderFails.delete(k);
+  const key = `${req.ip}:${day}`;
+  const fails = ladderFails.get(key) || 0;
+  if (fails >= 30) return res.status(429).json({ success: false, message: '시도 횟수를 초과했습니다. 내일 다시 시도해 주세요.' });
+  if (String((req.body || {}).code || '').trim() === ladderDailyCode()) {
+    ladderFails.delete(key);
+    return res.json({ success: true });
+  }
+  ladderFails.set(key, fails + 1);
+  res.json({ success: false, message: '코드가 올바르지 않습니다.' });
+});
+
+app.get('/api/ladder/code', (req, res) => {
+  const token = req.headers['x-user-token'] || req.query.token;
+  if (!verifyAdminToken(token)) return res.status(401).json({ success: false, message: '권한이 없습니다.' });
+  res.json({ success: true, code: ladderDailyCode(), day: kstDay() });
+});
 
 // 사용자 로그인
 app.post('/api/user/login', (req, res) => {

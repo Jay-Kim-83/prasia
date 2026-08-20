@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>프라시아 전기 — 사다리타기</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080c14;--bg2:#0d1525;--bg3:#111e35;--border:#1e3358;--border-glow:#2a4f8a;--gold:#c9a227;--gold-light:#f0cc6a;--gold-dim:#7a601a;--text:#d4e3ff;--text-dim:#7a95bf;color-scheme:dark}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Noto Sans KR',sans-serif;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(42,79,138,.15) 0%,transparent 70%);pointer-events:none}
+.wrap{position:relative;max-width:860px;margin:0 auto;padding:28px 16px 80px}
+.top{display:flex;align-items:center;gap:12px;margin-bottom:28px}
+.top .icon{width:40px;height:40px;background:linear-gradient(135deg,var(--gold-dim),var(--gold));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 0 20px rgba(201,162,39,.3)}
+.top h1{font-family:'Cinzel',serif;font-size:18px;color:var(--gold-light);letter-spacing:.05em}
+.top span{display:block;font-size:11px;color:var(--text-dim);letter-spacing:.1em}
+.gate{max-width:400px;margin:8vh auto 0;background:var(--bg2);border:1px solid var(--border-glow);border-radius:16px;padding:36px 30px;text-align:center;box-shadow:0 16px 64px rgba(0,0,0,.5)}
+.gate .big{font-size:40px;margin-bottom:10px}
+.gate h2{font-size:18px;color:var(--gold-light);margin-bottom:6px}
+.gate p{font-size:13px;color:var(--text-dim);margin-bottom:22px;line-height:1.6}
+.gate input{width:100%;background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:12px;border-radius:8px;font-size:22px;text-align:center;letter-spacing:.35em;outline:none;font-family:inherit}
+.gate input:focus{border-color:var(--gold-dim)}
+.gate .err{min-height:1.4em;font-size:13px;color:#ef9a9a;margin:10px 0 4px}
+.gate button{width:100%;margin-top:6px;background:linear-gradient(135deg,var(--gold-dim),var(--gold));border:none;color:#0d1525;font-weight:700;font-size:15px;padding:13px;border-radius:8px;cursor:pointer;font-family:inherit;transition:filter .2s}
+.gate button:hover{filter:brightness(1.15)}
+#game{display:none;margin-top:8px}
+.hidden{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="icon">⚔</div>
+    <div><h1>Prasia Records</h1><span>사다리타기</span></div>
+  </div>
+
+  <div class="gate" id="gate">
+    <div class="big">🪜</div>
+    <h2>입장 코드를 입력하세요</h2>
+    <p>코드는 매일 바뀌며 결사 관리자에게 받을 수 있습니다.</p>
+    <input id="codeInput" inputmode="numeric" maxlength="6" placeholder="______" onkeydown="if(event.key==='Enter')enter()">
+    <div class="err" id="gateErr"></div>
+    <button onclick="enter()">입장</button>
+  </div>
+
+  <div id="game"><div id="ladderGame"></div></div>
+</div>
+
+<script>
+const PASS_KEY = 'prasia_ladder_pass';
+async function verify(code) {
+    const res = await fetch('/api/ladder/verify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code })
+    });
+    return res.json();
+}
+async function enter() {
+    const code = document.getElementById('codeInput').value.trim();
+    const err = document.getElementById('gateErr');
+    if (!code) { err.textContent = '코드를 입력해 주세요.'; return; }
+    try {
+        const d = await verify(code);
+        if (d.success) { sessionStorage.setItem(PASS_KEY, code); openGame(); }
+        else err.textContent = d.message || '코드가 올바르지 않습니다.';
+    } catch { err.textContent = '서버에 연결할 수 없습니다.'; }
+}
+function openGame() {
+    document.getElementById('gate').classList.add('hidden');
+    document.getElementById('game').style.display = 'block';
+    const s = document.createElement('script');
+    s.src = '/ladder.js';
+    s.onload = () => LadderGame.mount('#ladderGame', { title: '프라시아 사다리 타기' });
+    document.head.appendChild(s);
+}
+(async () => {
+    const saved = sessionStorage.getItem(PASS_KEY);
+    if (!saved) return;
+    try {
+        const d = await verify(saved);
+        if (d.success) openGame();
+        else sessionStorage.removeItem(PASS_KEY);
+    } catch {}
+})();
+</script>
+</body>
+</html>
