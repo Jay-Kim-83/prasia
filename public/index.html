@@ -56,6 +56,11 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 .btn-admin{background:transparent;border:1px solid var(--border-glow);color:var(--cyan);padding:7px 14px;border-radius:6px;font-size:12px;cursor:pointer;font-family:inherit;transition:all .2s;text-decoration:none}
 .btn-admin:hover{background:var(--cyan-dim);border-color:var(--cyan)}
+.btn-ladder{background:transparent;border:1px solid var(--gold-dim);color:var(--gold-light);padding:7px 14px;border-radius:6px;font-size:12px;cursor:pointer;font-family:inherit;transition:all .2s}
+.btn-ladder:hover{background:rgba(201,162,39,.12);border-color:var(--gold);box-shadow:0 0 12px rgba(201,162,39,.25)}
+.ladder-wrap{position:relative;width:95%;max-width:640px;max-height:90vh;max-height:90dvh;overflow-y:auto;border-radius:20px}
+.ladder-close{position:absolute;top:14px;right:14px;z-index:5;width:30px;height:30px;border:none;border-radius:50%;background:rgba(255,255,255,.18);color:#fff;font-size:15px;cursor:pointer;transition:background .2s}
+.ladder-close:hover{background:rgba(255,255,255,.32)}
 
 .filters-section{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:16px}
 .filters-row{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end}
@@ -1019,6 +1024,7 @@ async function bossResetAll() {
       <span class="status-dot offline" id="statusDot"></span>
       <span id="statusText">불러오는 중...</span>
     </div>
+    <button class="btn-ladder" onclick="openLadder()">🪜 사다리타기</button>
     <button class="btn-admin" id="bossBtn" onclick="toggleBossPanel()" style="display:none">🐉 보스젠</button>
     <a href="/admin.html" class="btn-admin" id="adminLink" style="display:none">⚙ 관리</a>
     <button onclick="doLogout()" class="btn-admin" style="border-color:rgba(239,83,80,.4);color:#ef9a9a">로그아웃</button>
@@ -1200,6 +1206,31 @@ async function bossResetAll() {
 
 <!-- 캐릭터 결사 이동 이력 모달 -->
 <div class="guild-modal-overlay" id="charHistoryModal" onclick="if(event.target===this)closeCharHistory()"></div>
+
+<!-- 사다리타기 모달 -->
+<div class="guild-modal-overlay" id="ladderModal" onclick="if(event.target===this)closeLadder()">
+  <div class="ladder-wrap">
+    <button class="ladder-close" onclick="closeLadder()">✕</button>
+    <div id="ladderGame"></div>
+  </div>
+</div>
+
+<script>
+let ladderInstance = null;
+function openLadder() {
+    document.getElementById('ladderModal').classList.add('active');
+    if (ladderInstance) return;
+    const boot = () => { ladderInstance = LadderGame.mount('#ladderGame', { title: '프라시아 사다리 타기' }); };
+    if (window.LadderGame) { boot(); return; }
+    const s = document.createElement('script');
+    s.src = '/ladder.js';
+    s.onload = boot;
+    document.head.appendChild(s);
+}
+function closeLadder() {
+    document.getElementById('ladderModal').classList.remove('active');
+}
+</script>
 
 <script>
 const USER_TOKEN_KEY = 'prasia_user_token';
