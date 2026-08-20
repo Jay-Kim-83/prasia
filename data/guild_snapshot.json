@@ -664,13 +664,6 @@
           "realm": "론도 02"
         },
         {
-          "nickname": "유비크스",
-          "job": "야만투사",
-          "level": 93,
-          "conquestGrade": 25,
-          "realm": "론도 02"
-        },
-        {
           "nickname": "똥침",
           "job": "환영검사",
           "level": 93,
@@ -680,6 +673,13 @@
         {
           "nickname": "이빵형",
           "job": "향사수",
+          "level": 93,
+          "conquestGrade": 25,
+          "realm": "론도 02"
+        },
+        {
+          "nickname": "유비크스",
+          "job": "야만투사",
           "level": 93,
           "conquestGrade": 25,
           "realm": "론도 02"
@@ -5851,15 +5851,15 @@
           "realm": "아민타 01"
         },
         {
-          "nickname": "젬민이오호",
-          "job": "집행관",
+          "nickname": "날개",
+          "job": "향사수",
           "level": 92,
           "conquestGrade": 26,
           "realm": "아민타 01"
         },
         {
-          "nickname": "날개",
-          "job": "향사수",
+          "nickname": "젬민이오호",
+          "job": "집행관",
           "level": 92,
           "conquestGrade": 26,
           "realm": "아민타 01"
@@ -14976,7 +14976,7 @@
     "DOG|제롬": {
       "guildName": "DOG",
       "world": "제롬",
-      "memberCount": 38,
+      "memberCount": 39,
       "members": [
         {
           "nickname": "늙크크아톰",
@@ -15102,6 +15102,13 @@
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "제롬 02"
+        },
+        {
+          "nickname": "늙크크까루",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 26,
           "realm": "제롬 02"
         },
         {
@@ -15550,7 +15557,7 @@
     "CAT|제롬": {
       "guildName": "CAT",
       "world": "제롬",
-      "memberCount": 8,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "새싹",
@@ -15599,13 +15606,6 @@
           "job": "향사수",
           "level": 91,
           "conquestGrade": 25,
-          "realm": "제롬 02"
-        },
-        {
-          "nickname": "까엉이",
-          "job": "환영검사",
-          "level": 91,
-          "conquestGrade": 24,
           "realm": "제롬 02"
         }
       ]
@@ -29492,5 +29492,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-20T18:21:20.518Z"
+  "updatedAt": "2026-08-20T18:31:20.320Z"
 }
