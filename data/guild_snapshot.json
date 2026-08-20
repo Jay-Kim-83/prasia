@@ -769,15 +769,15 @@
           "realm": "론도 02"
         },
         {
-          "nickname": "이수형",
-          "job": "주문각인사",
+          "nickname": "샌드봇",
+          "job": "태양감시자",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 02"
         },
         {
-          "nickname": "샌드봇",
-          "job": "태양감시자",
+          "nickname": "이수형",
+          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "론도 02"
@@ -7794,7 +7794,7 @@
     "오늘도존버함|아민타": {
       "guildName": "오늘도존버함",
       "world": "아민타",
-      "memberCount": 5,
+      "memberCount": 6,
       "members": [
         {
           "nickname": "바른말고운말",
@@ -7829,6 +7829,13 @@
           "job": "향사수",
           "level": 86,
           "conquestGrade": 21,
+          "realm": "아민타 04"
+        },
+        {
+          "nickname": "스턴",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 20,
           "realm": "아민타 04"
         }
       ]
@@ -8336,17 +8343,17 @@
           "realm": "아민타 05"
         },
         {
-          "nickname": "AB",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "아민타 05"
-        },
-        {
           "nickname": "투썸",
           "job": "집행관",
           "level": 89,
           "conquestGrade": 23,
+          "realm": "아민타 05"
+        },
+        {
+          "nickname": "AB",
+          "job": "향사수",
+          "level": 89,
+          "conquestGrade": 24,
           "realm": "아민타 05"
         },
         {
@@ -20131,17 +20138,17 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "막장가자모닝",
-          "job": "향사수",
-          "level": 91,
-          "conquestGrade": 23,
-          "realm": "아티산 04"
-        },
-        {
           "nickname": "코피",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 24,
+          "realm": "아티산 04"
+        },
+        {
+          "nickname": "막장가자모닝",
+          "job": "향사수",
+          "level": 91,
+          "conquestGrade": 23,
           "realm": "아티산 04"
         }
       ]
@@ -20919,10 +20926,17 @@
     "시간의힘|나세르": {
       "guildName": "시간의힘",
       "world": "나세르",
-      "memberCount": 18,
+      "memberCount": 19,
       "members": [
         {
           "nickname": "총장",
+          "job": "집행관",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "나세르 01"
+        },
+        {
+          "nickname": "쌀먹전문가",
           "job": "집행관",
           "level": 89,
           "conquestGrade": 24,
@@ -29506,5 +29520,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-20T18:01:23.005Z"
+  "updatedAt": "2026-08-20T18:11:27.309Z"
 }
