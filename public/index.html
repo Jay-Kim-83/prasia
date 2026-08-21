@@ -58,6 +58,11 @@ header{padding:32px 0 24px;border-bottom:1px solid var(--border);margin-bottom:2
 .btn-admin:hover{background:var(--cyan-dim);border-color:var(--cyan)}
 .btn-ladder{background:transparent;border:1px solid var(--gold-dim);color:var(--gold-light);padding:7px 14px;border-radius:6px;font-size:12px;cursor:pointer;font-family:inherit;transition:all .2s}
 .btn-ladder:hover{background:rgba(201,162,39,.12);border-color:var(--gold);box-shadow:0 0 12px rgba(201,162,39,.25)}
+.game-menu-wrap{position:relative}
+.game-menu{position:absolute;top:calc(100% + 6px);left:0;min-width:160px;background:var(--bg2);border:1px solid var(--border-glow);border-radius:10px;padding:6px;display:none;z-index:150;box-shadow:0 8px 30px var(--shadow)}
+.game-menu.open{display:block}
+.game-menu button{display:flex;width:100%;gap:8px;align-items:center;background:transparent;border:none;color:var(--text);padding:9px 12px;border-radius:7px;font-size:13px;cursor:pointer;font-family:inherit;text-align:left}
+.game-menu button:hover{background:var(--hover-bg);color:var(--gold-light)}
 .ladder-wrap{position:relative;width:95%;max-width:640px;max-height:90vh;max-height:90dvh;overflow-y:auto;border-radius:20px}
 .ladder-close{position:absolute;top:14px;right:14px;z-index:5;width:30px;height:30px;border:none;border-radius:50%;background:rgba(255,255,255,.18);color:#fff;font-size:15px;cursor:pointer;transition:background .2s}
 .ladder-close:hover{background:rgba(255,255,255,.32)}
@@ -1024,7 +1029,10 @@ async function bossResetAll() {
       <span class="status-dot offline" id="statusDot"></span>
       <span id="statusText">불러오는 중...</span>
     </div>
-    <button class="btn-ladder" onclick="openLadder()">🪜 사다리타기</button>
+    <div class="game-menu-wrap">
+      <button class="btn-ladder" onclick="toggleGameMenu(event)">🎮 간단한게임 ▾</button>
+      <div class="game-menu" id="gameMenu"></div>
+    </div>
     <button class="btn-admin" id="bossBtn" onclick="toggleBossPanel()" style="display:none">🐉 보스젠</button>
     <a href="/admin.html" class="btn-admin" id="adminLink" style="display:none">⚙ 관리</a>
     <button onclick="doLogout()" class="btn-admin" style="border-color:rgba(239,83,80,.4);color:#ef9a9a">로그아웃</button>
@@ -1207,28 +1215,56 @@ async function bossResetAll() {
 <!-- 캐릭터 결사 이동 이력 모달 -->
 <div class="guild-modal-overlay" id="charHistoryModal" onclick="if(event.target===this)closeCharHistory()"></div>
 
-<!-- 사다리타기 모달 -->
-<div class="guild-modal-overlay" id="ladderModal" onclick="if(event.target===this)closeLadder()">
+<!-- 간단한게임 모달 -->
+<div class="guild-modal-overlay" id="gameModal" onclick="if(event.target===this)closeGame()">
   <div class="ladder-wrap">
-    <button class="ladder-close" onclick="closeLadder()">✕</button>
-    <div id="ladderGame"></div>
+    <button class="ladder-close" onclick="closeGame()">✕</button>
+    <div id="gameSlots"></div>
   </div>
 </div>
 
 <script>
-let ladderInstance = null;
-function openLadder() {
-    document.getElementById('ladderModal').classList.add('active');
-    if (ladderInstance) return;
-    const boot = () => { ladderInstance = LadderGame.mount('#ladderGame', { title: '프라시아 사다리 타기' }); };
-    if (window.LadderGame) { boot(); return; }
+const MINI_GAMES = [
+    { icon: '🪜', name: '사다리타기', src: '/ladder.js', ready: () => window.LadderGame, mount: el => LadderGame.mount(el, { title: '프라시아 사다리 타기' }) },
+    { icon: '🎡', name: '룰렛', src: '/roulette.js', ready: () => window.RouletteGame, mount: el => RouletteGame.mount(el, { title: '프라시아 룰렛' }) }
+];
+const gameInstances = {};
+const gameSlotEls = [];
+(function initGameMenu() {
+    const menu = document.getElementById('gameMenu');
+    const slots = document.getElementById('gameSlots');
+    MINI_GAMES.forEach((g, i) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.textContent = g.icon + ' ' + g.name;
+        btn.onclick = () => openGame(i);
+        menu.appendChild(btn);
+        const slot = document.createElement('div');
+        slot.style.display = 'none';
+        slots.appendChild(slot);
+        gameSlotEls.push(slot);
+    });
+})();
+function toggleGameMenu(e) {
+    e.stopPropagation();
+    document.getElementById('gameMenu').classList.toggle('open');
+}
+document.addEventListener('click', () => document.getElementById('gameMenu').classList.remove('open'));
+function openGame(i) {
+    document.getElementById('gameMenu').classList.remove('open');
+    document.getElementById('gameModal').classList.add('active');
+    gameSlotEls.forEach((d, j) => d.style.display = j === i ? 'block' : 'none');
+    if (gameInstances[i]) return;
+    const g = MINI_GAMES[i];
+    const boot = () => { gameInstances[i] = g.mount(gameSlotEls[i]); };
+    if (g.ready()) { boot(); return; }
     const s = document.createElement('script');
-    s.src = '/ladder.js';
+    s.src = g.src;
     s.onload = boot;
     document.head.appendChild(s);
 }
-function closeLadder() {
-    document.getElementById('ladderModal').classList.remove('active');
+function closeGame() {
+    document.getElementById('gameModal').classList.remove('active');
 }
 </script>
 
