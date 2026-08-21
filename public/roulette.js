@@ -27,7 +27,9 @@
         + '.rlt-chip button{display:flex;align-items:center;justify-content:center;width:18px;height:18px;border:none;border-radius:50%;background:rgba(100,116,139,.15);color:#64748b;font-size:12px;line-height:1;cursor:pointer;padding:0}'
         + '.rlt-chip button:hover{background:#fecaca;color:#dc2626}'
         + '.rlt-chip--empty{color:#94a3b8;background:transparent;border:1.5px dashed #e2e8f0;font-weight:500}'
-        + '.rlt-hint{font-size:12px;color:#94a3b8;margin:2px 0 16px}'
+        + '.rlt-hint{font-size:12px;color:#94a3b8;margin:2px 0 14px}'
+        + '.rlt-opt{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#475569;margin:0 0 16px;cursor:pointer;user-select:none}'
+        + '.rlt-opt input{width:16px;height:16px;accent-color:#8b5cf6;cursor:pointer;margin:0}'
         + '.rlt-err{font-size:13px;font-weight:600;color:#ef4444;min-height:1.2em;margin-bottom:8px}'
         + '.rlt-btn{padding:12px 20px;border:none;border-radius:12px;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;font-size:15px;font-weight:700;cursor:pointer;box-shadow:0 10px 24px -10px rgba(99,102,241,.7);transition:transform .15s,box-shadow .15s,opacity .15s}'
         + '.rlt-btn:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 14px 28px -10px rgba(99,102,241,.8)}'
@@ -83,6 +85,7 @@
         this.opts = {
             items: opts.items || null,
             duration: opts.duration || 4200,
+            sizeRandom: !!opts.sizeRandom,
             title: opts.title || '룰렛 돌림판',
             onResult: opts.onResult || null
         };
@@ -155,10 +158,15 @@
         }
 
         function add(raw) {
-            raw.split(/[,\r\n]+/).map(function (s) { return s.trim(); }).filter(Boolean).forEach(function (name) {
-                if (list.length >= 16) { err.textContent = '최대 16개까지 넣을 수 있어요.'; return; }
-                err.textContent = '';
-                list.push(name);
+            raw.split(/[,\r\n]+/).map(function (s) { return s.trim(); }).filter(Boolean).forEach(function (entry) {
+                var m = entry.match(/^(.+?)\s*[*xX×]\s*(\d{1,2})$/);
+                var name = m ? m[1].trim() : entry;
+                var cnt = m ? Math.max(1, Math.min(16, parseInt(m[2], 10))) : 1;
+                for (var k = 0; k < cnt; k++) {
+                    if (list.length >= 16) { err.textContent = '최대 16개까지 넣을 수 있어요.'; return; }
+                    err.textContent = '';
+                    list.push(name);
+                }
             });
             render();
         }
@@ -193,7 +201,14 @@
         sec.appendChild(row);
         sec.appendChild(chips);
         body.appendChild(sec);
-        body.appendChild(el('p', 'rlt-hint', '쉼표·줄바꿈으로 여러 개를 한 번에 붙여넣을 수 있어요.'));
+        body.appendChild(el('p', 'rlt-hint', '쉼표·줄바꿈으로 한 번에 붙여넣을 수 있고, "치킨*3"처럼 쓰면 같은 항목이 3칸 들어가요.'));
+        var opt = el('label', 'rlt-opt');
+        var sizeChk = el('input');
+        sizeChk.type = 'checkbox';
+        sizeChk.checked = !!this.opts.sizeRandom;
+        opt.appendChild(sizeChk);
+        opt.appendChild(el('span', null, '🎲 칸 크기 랜덤 (큰 칸일수록 잘 걸려요)'));
+        body.appendChild(opt);
         body.appendChild(err);
 
         var createBtn = el('button', 'rlt-btn rlt-btn--full', '돌림판 만들기 🎡');
@@ -201,6 +216,7 @@
         createBtn.addEventListener('click', function () {
             if (list.length < 2) return;
             self.fromSetup = true;
+            self.opts.sizeRandom = sizeChk.checked;
             self.start(list.slice());
         });
         body.appendChild(createBtn);
@@ -208,8 +224,39 @@
         render();
     };
 
+    Game.prototype.expand = function (items) {
+        var out = [];
+        items.forEach(function (entry) {
+            var m = String(entry).match(/^(.+?)\s*[*xX×]\s*(\d{1,2})$/);
+            var name = m ? m[1].trim() : String(entry);
+            var cnt = m ? Math.max(1, Math.min(16, parseInt(m[2], 10))) : 1;
+            for (var k = 0; k < cnt && out.length < 16; k++) out.push(name);
+        });
+        return out;
+    };
+
+    Game.prototype.genWeights = function () {
+        var self = this;
+        this.weights = this.items.map(function () {
+            return self.opts.sizeRandom ? 0.55 + Math.random() * 1.45 : 1;
+        });
+        this.computeAngles();
+    };
+
+    Game.prototype.computeAngles = function () {
+        var total = 0;
+        for (var i = 0; i < this.weights.length; i++) total += this.weights[i];
+        var acc = 0;
+        this.segs = this.weights.map(function (w) {
+            var s = { start: acc / total * Math.PI * 2, size: w / total * Math.PI * 2 };
+            acc += w;
+            return s;
+        });
+    };
+
     Game.prototype.start = function (items) {
-        this.items = items;
+        this.items = this.expand(items);
+        this.genWeights();
         this.rot = -Math.PI / 2;
         this.spinning = false;
         this.lastWin = null;
@@ -247,6 +294,16 @@
         recBtn.addEventListener('click', function () { self.toggleRecord(); });
         this.recBtn = recBtn;
         actions.appendChild(removeBtn);
+        if (this.opts.sizeRandom) {
+            var sizeBtn = el('button', 'rlt-btn rlt-btn--ghost', '🎲 크기 섞기');
+            sizeBtn.type = 'button';
+            sizeBtn.addEventListener('click', function () {
+                if (self.spinning) return;
+                self.genWeights();
+                self.draw();
+            });
+            actions.appendChild(sizeBtn);
+        }
         actions.appendChild(recBtn);
         if (this.fromSetup) {
             var backBtn = el('button', 'rlt-btn rlt-btn--ghost', '새로 설정');
@@ -287,7 +344,6 @@
         var ctx = this.ctx;
         var g = this.geom;
         var n = this.items.length;
-        var seg = Math.PI * 2 / n;
         ctx.clearRect(0, 0, g.side, g.side);
 
         ctx.beginPath();
@@ -296,10 +352,10 @@
         ctx.fill();
 
         for (var i = 0; i < n; i++) {
-            var a0 = this.rot + i * seg;
+            var a0 = this.rot + this.segs[i].start;
             ctx.beginPath();
             ctx.moveTo(g.cx, g.cy);
-            ctx.arc(g.cx, g.cy, g.r, a0, a0 + seg);
+            ctx.arc(g.cx, g.cy, g.r, a0, a0 + this.segs[i].size);
             ctx.closePath();
             ctx.fillStyle = COLORS[i % COLORS.length];
             ctx.fill();
@@ -311,10 +367,12 @@
         ctx.textAlign = 'right';
         ctx.textBaseline = 'middle';
         ctx.fillStyle = '#fff';
-        ctx.font = '700 ' + Math.max(11, Math.round(g.side / 34)) + 'px Pretendard,"Malgun Gothic",sans-serif';
+        var basePx = Math.max(11, Math.round(g.side / 34));
         var maxW = g.r - 64;
         for (var j = 0; j < n; j++) {
-            var mid = this.rot + j * seg + seg / 2;
+            var mid = this.rot + this.segs[j].start + this.segs[j].size / 2;
+            var px = Math.max(9, Math.min(basePx, Math.round(this.segs[j].size / 0.36 * basePx)));
+            ctx.font = '700 ' + px + 'px Pretendard,"Malgun Gothic",sans-serif';
             ctx.save();
             ctx.translate(g.cx, g.cy);
             ctx.rotate(mid);
@@ -346,10 +404,16 @@
 
     Game.prototype.spin = function () {
         if (this.spinning || this.items.length < 2) return;
-        var n = this.items.length;
-        var seg = Math.PI * 2 / n;
-        var idx = Math.floor(Math.random() * n);
-        var target = -Math.PI / 2 - (idx * seg + seg / 2);
+        var totalW = 0;
+        for (var i = 0; i < this.weights.length; i++) totalW += this.weights[i];
+        var pick = Math.random() * totalW;
+        var idx = this.weights.length - 1;
+        for (var j = 0; j < this.weights.length; j++) {
+            pick -= this.weights[j];
+            if (pick <= 0) { idx = j; break; }
+        }
+        var land = this.segs[idx].start + this.segs[idx].size * (0.5 + (Math.random() - 0.5) * 0.6);
+        var target = -Math.PI / 2 - land;
         var delta = ((target - this.rot) % (Math.PI * 2) + Math.PI * 2) % (Math.PI * 2);
         var turns = 5 + Math.floor(Math.random() * 3);
         this.spinIdx = idx;
@@ -408,6 +472,8 @@
     Game.prototype.removeWinner = function () {
         if (this.lastWin == null || this.spinning) return;
         this.items.splice(this.lastWin, 1);
+        this.weights.splice(this.lastWin, 1);
+        if (this.weights.length) this.computeAngles();
         this.lastWin = null;
         this.result.classList.remove('show');
         this.removeBtn.disabled = true;
