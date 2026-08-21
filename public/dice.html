@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<title>프라시아 전기 — 사다리타기</title>
+<title>프라시아 전기 — 주사위</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -18,6 +18,7 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 .top h1{font-family:'Cinzel',serif;font-size:18px;color:var(--gold-light);letter-spacing:.05em}
 .top span{display:block;font-size:11px;color:var(--text-dim);letter-spacing:.1em}
 .top .other{margin-left:auto;font-size:12px;color:var(--text-dim);text-decoration:none;border:1px solid var(--border);padding:7px 12px;border-radius:6px;transition:all .2s;white-space:nowrap}
+.top .other + .other{margin-left:8px}
 .top .other:hover{color:var(--gold-light);border-color:var(--gold-dim)}
 .gate{max-width:400px;margin:8vh auto 0;background:var(--bg2);border:1px solid var(--border-glow);border-radius:16px;padding:36px 30px;text-align:center;box-shadow:0 16px 64px rgba(0,0,0,.5)}
 .gate .big{font-size:40px;margin-bottom:10px}
@@ -36,21 +37,21 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 <div class="wrap">
   <div class="top">
     <div class="icon">⚔</div>
-    <div><h1>Prasia Records</h1><span>사다리타기</span></div>
+    <div><h1>Prasia Records</h1><span>주사위 던지기</span></div>
+    <a class="other" href="/ladder.html">🪜 사다리</a>
     <a class="other" href="/roulette.html">🎡 룰렛</a>
-    <a class="other" href="/dice.html" style="margin-left:8px">🎲 주사위</a>
   </div>
 
   <div class="gate" id="gate">
-    <div class="big">🪜</div>
+    <div class="big">🎲</div>
     <h2>입장 코드를 입력하세요</h2>
-    <p>코드는 매일 바뀌며 결사 관리자에게 받을 수 있습니다.</p>
+    <p>코드는 매일 바뀌며 결사 관리자에게 받을 수 있습니다.<br>사다리·룰렛과 같은 코드를 사용합니다.</p>
     <input id="codeInput" inputmode="numeric" maxlength="6" placeholder="______" onkeydown="if(event.key==='Enter')enter()">
     <div class="err" id="gateErr"></div>
     <button onclick="enter()">입장</button>
   </div>
 
-  <div id="game"><div id="ladderGame"></div></div>
+  <div id="game"><div id="diceGame"></div></div>
 </div>
 
 <script>
@@ -77,8 +78,8 @@ function openGame() {
     document.getElementById('gate').classList.add('hidden');
     document.getElementById('game').style.display = 'block';
     const s = document.createElement('script');
-    s.src = '/ladder.js';
-    s.onload = () => LadderGame.mount('#ladderGame', { title: '프라시아 사다리 타기' });
+    s.src = '/dice.js';
+    s.onload = () => DiceGame.mount('#diceGame', { title: '프라시아 주사위' });
     document.head.appendChild(s);
 }
 (async () => {

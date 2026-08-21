@@ -1226,7 +1226,8 @@ async function bossResetAll() {
 <script>
 const MINI_GAMES = [
     { icon: '🪜', name: '사다리타기', src: '/ladder.js', ready: () => window.LadderGame, mount: el => LadderGame.mount(el, { title: '프라시아 사다리 타기' }) },
-    { icon: '🎡', name: '룰렛', src: '/roulette.js', ready: () => window.RouletteGame, mount: el => RouletteGame.mount(el, { title: '프라시아 룰렛' }) }
+    { icon: '🎡', name: '룰렛', src: '/roulette.js', ready: () => window.RouletteGame, mount: el => RouletteGame.mount(el, { title: '프라시아 룰렛' }) },
+    { icon: '🎲', name: '주사위', src: '/dice.js', ready: () => window.DiceGame, mount: el => DiceGame.mount(el, { title: '프라시아 주사위' }) }
 ];
 const gameInstances = {};
 const gameSlotEls = [];
