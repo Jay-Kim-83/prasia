@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<title>프라시아 전기 — 사다리타기</title>
+<title>프라시아 전기 — 룰렛</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -36,20 +36,20 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 <div class="wrap">
   <div class="top">
     <div class="icon">⚔</div>
-    <div><h1>Prasia Records</h1><span>사다리타기</span></div>
-    <a class="other" href="/roulette.html">🎡 룰렛 →</a>
+    <div><h1>Prasia Records</h1><span>룰렛 돌림판</span></div>
+    <a class="other" href="/ladder.html">🪜 사다리타기 →</a>
   </div>
 
   <div class="gate" id="gate">
-    <div class="big">🪜</div>
+    <div class="big">🎡</div>
     <h2>입장 코드를 입력하세요</h2>
-    <p>코드는 매일 바뀌며 결사 관리자에게 받을 수 있습니다.</p>
+    <p>코드는 매일 바뀌며 결사 관리자에게 받을 수 있습니다.<br>사다리타기와 같은 코드를 사용합니다.</p>
     <input id="codeInput" inputmode="numeric" maxlength="6" placeholder="______" onkeydown="if(event.key==='Enter')enter()">
     <div class="err" id="gateErr"></div>
     <button onclick="enter()">입장</button>
   </div>
 
-  <div id="game"><div id="ladderGame"></div></div>
+  <div id="game"><div id="rouletteGame"></div></div>
 </div>
 
 <script>
@@ -76,8 +76,8 @@ function openGame() {
     document.getElementById('gate').classList.add('hidden');
     document.getElementById('game').style.display = 'block';
     const s = document.createElement('script');
-    s.src = '/ladder.js';
-    s.onload = () => LadderGame.mount('#ladderGame', { title: '프라시아 사다리 타기' });
+    s.src = '/roulette.js';
+    s.onload = () => RouletteGame.mount('#rouletteGame', { title: '프라시아 룰렛' });
     document.head.appendChild(s);
 }
 (async () => {
