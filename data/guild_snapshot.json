@@ -11836,17 +11836,17 @@
           "realm": "사도바 01"
         },
         {
-          "nickname": "쭈바",
-          "job": "환영검사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "사도바 01"
-        },
-        {
           "nickname": "농사꾼기무씨",
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 26,
+          "realm": "사도바 01"
+        },
+        {
+          "nickname": "쭈바",
+          "job": "환영검사",
+          "level": 91,
+          "conquestGrade": 25,
           "realm": "사도바 01"
         },
         {
@@ -11969,6 +11969,13 @@
           "realm": "사도바 01"
         },
         {
+          "nickname": "아프냐나도아프다",
+          "job": "향사수",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "사도바 01"
+        },
+        {
           "nickname": "요양중",
           "job": "환영검사",
           "level": 92,
@@ -11980,13 +11987,6 @@
           "job": "집행관",
           "level": 92,
           "conquestGrade": 25,
-          "realm": "사도바 01"
-        },
-        {
-          "nickname": "아프냐나도아프다",
-          "job": "향사수",
-          "level": 92,
-          "conquestGrade": 26,
           "realm": "사도바 01"
         },
         {
@@ -12729,7 +12729,7 @@
     "중립야호|사도바": {
       "guildName": "중립야호",
       "world": "사도바",
-      "memberCount": 5,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "킹순신",
@@ -12764,6 +12764,20 @@
           "job": "주문각인사",
           "level": 85,
           "conquestGrade": 17,
+          "realm": "사도바 02"
+        },
+        {
+          "nickname": "집행조아요",
+          "job": "집행관",
+          "level": 84,
+          "conquestGrade": 15,
+          "realm": "사도바 02"
+        },
+        {
+          "nickname": "노는게조아요",
+          "job": "집행관",
+          "level": 84,
+          "conquestGrade": 12,
           "realm": "사도바 02"
         }
       ]
@@ -13391,25 +13405,123 @@
         }
       ]
     },
-    "초보운전|사도바": {
-      "guildName": "초보운전",
+    "쎈|사도바": {
+      "guildName": "쎈",
       "world": "사도바",
-      "memberCount": 30,
+      "memberCount": 15,
       "members": [
         {
-          "nickname": "귤귤",
+          "nickname": "마나",
+          "job": "집행관",
+          "level": 93,
+          "conquestGrade": 25,
+          "realm": "사도바 04"
+        },
+        {
+          "nickname": "전의",
+          "job": "집행관",
+          "level": 93,
+          "conquestGrade": 26,
+          "realm": "사도바 04"
+        },
+        {
+          "nickname": "어비",
           "job": "주문각인사",
           "level": 93,
           "conquestGrade": 26,
           "realm": "사도바 04"
         },
         {
-          "nickname": "그나박",
-          "job": "태양감시자",
+          "nickname": "아기",
+          "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
           "realm": "사도바 04"
         },
+        {
+          "nickname": "뱜새",
+          "job": "야만투사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "사도바 04"
+        },
+        {
+          "nickname": "귀귀",
+          "job": "집행관",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "사도바 04"
+        },
+        {
+          "nickname": "꿀탱이",
+          "job": "환영검사",
+          "level": 91,
+          "conquestGrade": 25,
+          "realm": "사도바 04"
+        },
+        {
+          "nickname": "무형",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 23,
+          "realm": "사도바 04"
+        },
+        {
+          "nickname": "마법사",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 23,
+          "realm": "사도바 04"
+        },
+        {
+          "nickname": "쎈해바라기짝꿍",
+          "job": "환영검사",
+          "level": 90,
+          "conquestGrade": 23,
+          "realm": "사도바 04"
+        },
+        {
+          "nickname": "악마",
+          "job": "주문각인사",
+          "level": 89,
+          "conquestGrade": 24,
+          "realm": "사도바 04"
+        },
+        {
+          "nickname": "쎈진니",
+          "job": "환영검사",
+          "level": 88,
+          "conquestGrade": 21,
+          "realm": "사도바 04"
+        },
+        {
+          "nickname": "유리",
+          "job": "주문각인사",
+          "level": 88,
+          "conquestGrade": 22,
+          "realm": "사도바 04"
+        },
+        {
+          "nickname": "목로",
+          "job": "향사수",
+          "level": 86,
+          "conquestGrade": 21,
+          "realm": "사도바 04"
+        },
+        {
+          "nickname": "수혜탱",
+          "job": "주문각인사",
+          "level": 84,
+          "conquestGrade": 20,
+          "realm": "사도바 04"
+        }
+      ]
+    },
+    "초보운전|사도바": {
+      "guildName": "초보운전",
+      "world": "사도바",
+      "memberCount": 24,
+      "members": [
         {
           "nickname": "견습생",
           "job": "집행관",
@@ -13418,35 +13530,7 @@
           "realm": "사도바 04"
         },
         {
-          "nickname": "칩스",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "사도바 04"
-        },
-        {
           "nickname": "상상",
-          "job": "집행관",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "사도바 04"
-        },
-        {
-          "nickname": "하이볼",
-          "job": "집행관",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "사도바 04"
-        },
-        {
-          "nickname": "프로틴",
-          "job": "집행관",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "사도바 04"
-        },
-        {
-          "nickname": "사월",
           "job": "집행관",
           "level": 92,
           "conquestGrade": 26,
@@ -13604,118 +13688,6 @@
           "job": "주문각인사",
           "level": 85,
           "conquestGrade": 21,
-          "realm": "사도바 04"
-        }
-      ]
-    },
-    "쎈|사도바": {
-      "guildName": "쎈",
-      "world": "사도바",
-      "memberCount": 15,
-      "members": [
-        {
-          "nickname": "마나",
-          "job": "집행관",
-          "level": 93,
-          "conquestGrade": 25,
-          "realm": "사도바 04"
-        },
-        {
-          "nickname": "전의",
-          "job": "집행관",
-          "level": 93,
-          "conquestGrade": 26,
-          "realm": "사도바 04"
-        },
-        {
-          "nickname": "어비",
-          "job": "주문각인사",
-          "level": 93,
-          "conquestGrade": 26,
-          "realm": "사도바 04"
-        },
-        {
-          "nickname": "아기",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "사도바 04"
-        },
-        {
-          "nickname": "뱜새",
-          "job": "야만투사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "사도바 04"
-        },
-        {
-          "nickname": "귀귀",
-          "job": "집행관",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "사도바 04"
-        },
-        {
-          "nickname": "꿀탱이",
-          "job": "환영검사",
-          "level": 91,
-          "conquestGrade": 25,
-          "realm": "사도바 04"
-        },
-        {
-          "nickname": "무형",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 23,
-          "realm": "사도바 04"
-        },
-        {
-          "nickname": "마법사",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 23,
-          "realm": "사도바 04"
-        },
-        {
-          "nickname": "쎈해바라기짝꿍",
-          "job": "환영검사",
-          "level": 90,
-          "conquestGrade": 23,
-          "realm": "사도바 04"
-        },
-        {
-          "nickname": "악마",
-          "job": "주문각인사",
-          "level": 89,
-          "conquestGrade": 24,
-          "realm": "사도바 04"
-        },
-        {
-          "nickname": "쎈진니",
-          "job": "환영검사",
-          "level": 88,
-          "conquestGrade": 21,
-          "realm": "사도바 04"
-        },
-        {
-          "nickname": "유리",
-          "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 22,
-          "realm": "사도바 04"
-        },
-        {
-          "nickname": "목로",
-          "job": "향사수",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "사도바 04"
-        },
-        {
-          "nickname": "수혜탱",
-          "job": "주문각인사",
-          "level": 84,
-          "conquestGrade": 20,
           "realm": "사도바 04"
         }
       ]
@@ -16505,17 +16477,17 @@
           "realm": "제롬 04"
         },
         {
-          "nickname": "쌍밤미니",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "제롬 04"
-        },
-        {
           "nickname": "최상수경",
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
+          "realm": "제롬 04"
+        },
+        {
+          "nickname": "쌍밤미니",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 25,
           "realm": "제롬 04"
         },
         {
@@ -20355,15 +20327,15 @@
           "realm": "아티산 04"
         },
         {
-          "nickname": "돼지나라초커공주",
-          "job": "야만투사",
+          "nickname": "내꿈은깃발왕",
+          "job": "향사수",
           "level": 92,
           "conquestGrade": 24,
           "realm": "아티산 04"
         },
         {
-          "nickname": "내꿈은깃발왕",
-          "job": "향사수",
+          "nickname": "돼지나라초커공주",
+          "job": "야만투사",
           "level": 92,
           "conquestGrade": 24,
           "realm": "아티산 04"
@@ -25364,20 +25336,13 @@
     "디아블로|타리아": {
       "guildName": "디아블로",
       "world": "타리아",
-      "memberCount": 17,
+      "memberCount": 16,
       "members": [
         {
           "nickname": "뚱땅뚱땅",
           "job": "환영검사",
           "level": 92,
           "conquestGrade": 25,
-          "realm": "타리아 03"
-        },
-        {
-          "nickname": "쎈치한태령",
-          "job": "태양감시자",
-          "level": 91,
-          "conquestGrade": 24,
           "realm": "타리아 03"
         },
         {
@@ -25777,7 +25742,7 @@
     "본드|타리아": {
       "guildName": "본드",
       "world": "타리아",
-      "memberCount": 4,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "본드",
@@ -25805,6 +25770,13 @@
           "job": "향사수",
           "level": 80,
           "conquestGrade": 13,
+          "realm": "타리아 03"
+        },
+        {
+          "nickname": "피땀눈물",
+          "job": "태양감시자",
+          "level": 78,
+          "conquestGrade": 16,
           "realm": "타리아 03"
         }
       ]
@@ -30059,5 +30031,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-21T08:01:32.881Z"
+  "updatedAt": "2026-08-21T08:11:27.875Z"
 }
