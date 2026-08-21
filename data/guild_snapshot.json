@@ -1210,6 +1210,13 @@
           "realm": "론도 02"
         },
         {
+          "nickname": "솔라시도로",
+          "job": "주문각인사",
+          "level": 91,
+          "conquestGrade": 24,
+          "realm": "론도 02"
+        },
+        {
           "nickname": "샤넬스트로우",
           "job": "주문각인사",
           "level": 91,
@@ -1228,13 +1235,6 @@
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 26,
-          "realm": "론도 02"
-        },
-        {
-          "nickname": "히포",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 24,
           "realm": "론도 02"
         }
       ]
@@ -5741,7 +5741,7 @@
         {
           "nickname": "시오니",
           "job": "향사수",
-          "level": 86,
+          "level": 87,
           "conquestGrade": 21,
           "realm": "라인소프 05"
         },
@@ -9442,17 +9442,17 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "베르세르크",
-          "job": "향사수",
-          "level": 90,
-          "conquestGrade": 23,
-          "realm": "가리안 02"
-        },
-        {
           "nickname": "다이아",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "베르세르크",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 23,
           "realm": "가리안 02"
         },
         {
@@ -16810,7 +16810,7 @@
     "당근당근마트|제롬": {
       "guildName": "당근당근마트",
       "world": "제롬",
-      "memberCount": 8,
+      "memberCount": 9,
       "members": [
         {
           "nickname": "번쩍",
@@ -16842,6 +16842,13 @@
         },
         {
           "nickname": "코알라",
+          "job": "야만투사",
+          "level": 88,
+          "conquestGrade": 22,
+          "realm": "제롬 04"
+        },
+        {
+          "nickname": "해치",
           "job": "야만투사",
           "level": 88,
           "conquestGrade": 22,
@@ -28433,15 +28440,15 @@
           "realm": "메르비스 03"
         },
         {
-          "nickname": "수호킹",
-          "job": "집행관",
+          "nickname": "독불",
+          "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
           "realm": "메르비스 03"
         },
         {
-          "nickname": "독불",
-          "job": "주문각인사",
+          "nickname": "수호킹",
+          "job": "집행관",
           "level": 90,
           "conquestGrade": 25,
           "realm": "메르비스 03"
@@ -30073,5 +30080,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-21T03:41:25.189Z"
+  "updatedAt": "2026-08-21T03:51:21.169Z"
 }
