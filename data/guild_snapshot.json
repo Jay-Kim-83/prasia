@@ -426,14 +426,14 @@
           "realm": "론도 01"
         },
         {
-          "nickname": "카스형",
+          "nickname": "오구",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
           "realm": "론도 01"
         },
         {
-          "nickname": "오구",
+          "nickname": "카스형",
           "job": "주문각인사",
           "level": 89,
           "conquestGrade": 24,
@@ -475,17 +475,17 @@
           "realm": "론도 01"
         },
         {
+          "nickname": "조단",
+          "job": "향사수",
+          "level": 89,
+          "conquestGrade": 21,
+          "realm": "론도 01"
+        },
+        {
           "nickname": "푸우형",
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 22,
-          "realm": "론도 01"
-        },
-        {
-          "nickname": "조단",
-          "job": "향사수",
-          "level": 88,
-          "conquestGrade": 21,
           "realm": "론도 01"
         },
         {
@@ -6854,7 +6854,7 @@
         {
           "nickname": "희재",
           "job": "집행관",
-          "level": 86,
+          "level": 87,
           "conquestGrade": 21,
           "realm": "아민타 02"
         },
@@ -13016,7 +13016,7 @@
     "중립야호|사도바": {
       "guildName": "중립야호",
       "world": "사도바",
-      "memberCount": 23,
+      "memberCount": 24,
       "members": [
         {
           "nickname": "명필",
@@ -13177,6 +13177,13 @@
           "job": "주문각인사",
           "level": 83,
           "conquestGrade": 18,
+          "realm": "사도바 02"
+        },
+        {
+          "nickname": "흑돈고",
+          "job": "환영검사",
+          "level": 82,
+          "conquestGrade": 19,
           "realm": "사도바 02"
         }
       ]
@@ -17562,17 +17569,17 @@
           "realm": "제롬 05"
         },
         {
-          "nickname": "암사동모녀살인사건",
-          "job": "집행관",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "제롬 05"
-        },
-        {
           "nickname": "포켓몬빵",
           "job": "집행관",
           "level": 90,
           "conquestGrade": 22,
+          "realm": "제롬 05"
+        },
+        {
+          "nickname": "암사동모녀살인사건",
+          "job": "집행관",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "제롬 05"
         },
         {
@@ -17713,55 +17720,6 @@
           "job": "집행관",
           "level": 85,
           "conquestGrade": 21,
-          "realm": "제롬 05"
-        }
-      ]
-    },
-    "센스|제롬": {
-      "guildName": "센스",
-      "world": "제롬",
-      "memberCount": 6,
-      "members": [
-        {
-          "nickname": "탱탱몬",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 25,
-          "realm": "제롬 05"
-        },
-        {
-          "nickname": "싸이코",
-          "job": "태양감시자",
-          "level": 89,
-          "conquestGrade": 23,
-          "realm": "제롬 05"
-        },
-        {
-          "nickname": "화가난김과장",
-          "job": "향사수",
-          "level": 89,
-          "conquestGrade": 22,
-          "realm": "제롬 05"
-        },
-        {
-          "nickname": "KWAK",
-          "job": "태양감시자",
-          "level": 87,
-          "conquestGrade": 21,
-          "realm": "제롬 05"
-        },
-        {
-          "nickname": "쿄주로",
-          "job": "태양감시자",
-          "level": 87,
-          "conquestGrade": 20,
-          "realm": "제롬 05"
-        },
-        {
-          "nickname": "원희",
-          "job": "주문각인사",
-          "level": 86,
-          "conquestGrade": 20,
           "realm": "제롬 05"
         }
       ]
@@ -18011,6 +17969,48 @@
         }
       ]
     },
+    "센스|제롬": {
+      "guildName": "센스",
+      "world": "제롬",
+      "memberCount": 5,
+      "members": [
+        {
+          "nickname": "싸이코",
+          "job": "태양감시자",
+          "level": 89,
+          "conquestGrade": 23,
+          "realm": "제롬 05"
+        },
+        {
+          "nickname": "화가난김과장",
+          "job": "향사수",
+          "level": 89,
+          "conquestGrade": 22,
+          "realm": "제롬 05"
+        },
+        {
+          "nickname": "KWAK",
+          "job": "태양감시자",
+          "level": 87,
+          "conquestGrade": 21,
+          "realm": "제롬 05"
+        },
+        {
+          "nickname": "쿄주로",
+          "job": "태양감시자",
+          "level": 87,
+          "conquestGrade": 20,
+          "realm": "제롬 05"
+        },
+        {
+          "nickname": "원희",
+          "job": "주문각인사",
+          "level": 86,
+          "conquestGrade": 20,
+          "realm": "제롬 05"
+        }
+      ]
+    },
     "감정|제롬": {
       "guildName": "감정",
       "world": "제롬",
@@ -18077,6 +18077,34 @@
           "job": "환영검사",
           "level": 86,
           "conquestGrade": 21,
+          "realm": "제롬 05"
+        }
+      ]
+    },
+    "밤|제롬": {
+      "guildName": "밤",
+      "world": "제롬",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "밤하늘",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 20,
+          "realm": "제롬 05"
+        },
+        {
+          "nickname": "밤바다",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 20,
+          "realm": "제롬 05"
+        },
+        {
+          "nickname": "밤바람",
+          "job": "집행관",
+          "level": 85,
+          "conquestGrade": 20,
           "realm": "제롬 05"
         }
       ]
@@ -23439,20 +23467,13 @@
     "로얄|나세르": {
       "guildName": "로얄",
       "world": "나세르",
-      "memberCount": 8,
+      "memberCount": 7,
       "members": [
         {
           "nickname": "명품브이",
           "job": "집행관",
           "level": 87,
           "conquestGrade": 22,
-          "realm": "나세르 05"
-        },
-        {
-          "nickname": "명품말숙",
-          "job": "향사수",
-          "level": 87,
-          "conquestGrade": 21,
           "realm": "나세르 05"
         },
         {
@@ -25784,7 +25805,7 @@
     "브로커|타리아": {
       "guildName": "브로커",
       "world": "타리아",
-      "memberCount": 17,
+      "memberCount": 16,
       "members": [
         {
           "nickname": "하닉물림",
@@ -25803,13 +25824,6 @@
         {
           "nickname": "타리아야호",
           "job": "주문각인사",
-          "level": 88,
-          "conquestGrade": 22,
-          "realm": "타리아 04"
-        },
-        {
-          "nickname": "스타별",
-          "job": "환영검사",
           "level": 88,
           "conquestGrade": 22,
           "realm": "타리아 04"
@@ -29177,5 +29191,5 @@
       ]
     }
   },
-  "updatedAt": "2026-08-23T20:51:25.349Z"
+  "updatedAt": "2026-08-23T21:11:23.305Z"
 }
