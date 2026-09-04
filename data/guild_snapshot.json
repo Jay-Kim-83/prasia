@@ -8592,7 +8592,7 @@
     "쌀먹단|아민타": {
       "guildName": "쌀먹단",
       "world": "아민타",
-      "memberCount": 7,
+      "memberCount": 8,
       "members": [
         {
           "nickname": "민운",
@@ -8642,13 +8642,20 @@
           "level": 86,
           "conquestGrade": 21,
           "realm": "아민타 04"
+        },
+        {
+          "nickname": "민증",
+          "job": "주문각인사",
+          "level": 86,
+          "conquestGrade": 4,
+          "realm": "아민타 04"
         }
       ]
     },
     "곰|아민타": {
       "guildName": "곰",
       "world": "아민타",
-      "memberCount": 19,
+      "memberCount": 18,
       "members": [
         {
           "nickname": "곰출몰지역",
@@ -8774,13 +8781,6 @@
           "job": "주문각인사",
           "level": 86,
           "conquestGrade": 21,
-          "realm": "아민타 04"
-        },
-        {
-          "nickname": "카냐아",
-          "job": "주문각인사",
-          "level": 86,
-          "conquestGrade": 19,
           "realm": "아민타 04"
         }
       ]
@@ -10212,17 +10212,17 @@
           "realm": "가리안 02"
         },
         {
-          "nickname": "오늘도수고하셨습니다",
-          "job": "집행관",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "가리안 02"
-        },
-        {
           "nickname": "고등어케밥",
           "job": "야만투사",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "가리안 02"
+        },
+        {
+          "nickname": "오늘도수고하셨습니다",
+          "job": "집행관",
+          "level": 92,
+          "conquestGrade": 26,
           "realm": "가리안 02"
         },
         {
@@ -13740,17 +13740,17 @@
           "realm": "사도바 02"
         },
         {
+          "nickname": "노풍석",
+          "job": "심연추방자",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "사도바 02"
+        },
+        {
           "nickname": "뼈맞은장보고",
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 24,
-          "realm": "사도바 02"
-        },
-        {
-          "nickname": "노풍석",
-          "job": "심연추방자",
-          "level": 91,
-          "conquestGrade": 25,
           "realm": "사도바 02"
         },
         {
@@ -22556,7 +22556,7 @@
           "nickname": "당근몬",
           "job": "주문각인사",
           "level": 90,
-          "conquestGrade": 24,
+          "conquestGrade": 25,
           "realm": "아티산 05"
         },
         {
@@ -29975,5 +29975,5 @@
       ]
     }
   },
-  "updatedAt": "2026-09-04T11:41:21.623Z"
+  "updatedAt": "2026-09-04T11:51:22.018Z"
 }
