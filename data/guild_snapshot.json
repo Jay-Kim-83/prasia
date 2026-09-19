@@ -1413,17 +1413,17 @@
           "realm": "론도 03"
         },
         {
-          "nickname": "짤랑",
-          "job": "주문각인사",
-          "level": 90,
-          "conquestGrade": 24,
-          "realm": "론도 03"
-        },
-        {
           "nickname": "오구",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 25,
+          "realm": "론도 03"
+        },
+        {
+          "nickname": "짤랑",
+          "job": "주문각인사",
+          "level": 90,
+          "conquestGrade": 24,
           "realm": "론도 03"
         },
         {
@@ -2085,17 +2085,17 @@
           "realm": "론도 04"
         },
         {
-          "nickname": "말년휴가병",
-          "job": "향사수",
-          "level": 90,
-          "conquestGrade": 25,
-          "realm": "론도 04"
-        },
-        {
           "nickname": "도토리묵",
           "job": "집행관",
           "level": 90,
           "conquestGrade": 24,
+          "realm": "론도 04"
+        },
+        {
+          "nickname": "말년휴가병",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 25,
           "realm": "론도 04"
         },
         {
@@ -8532,15 +8532,15 @@
           "realm": "아민타 05"
         },
         {
-          "nickname": "티미",
-          "job": "주문각인사",
+          "nickname": "폴로랄프로렌",
+          "job": "향사수",
           "level": 88,
           "conquestGrade": 22,
           "realm": "아민타 05"
         },
         {
-          "nickname": "폴로랄프로렌",
-          "job": "향사수",
+          "nickname": "티미",
+          "job": "주문각인사",
           "level": 88,
           "conquestGrade": 22,
           "realm": "아민타 05"
@@ -12561,25 +12561,11 @@
     "NB|사도바": {
       "guildName": "NB",
       "world": "사도바",
-      "memberCount": 7,
+      "memberCount": 4,
       "members": [
-        {
-          "nickname": "nana",
-          "job": "심연추방자",
-          "level": 93,
-          "conquestGrade": 26,
-          "realm": "사도바 01"
-        },
         {
           "nickname": "티르",
           "job": "환영검사",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "사도바 01"
-        },
-        {
-          "nickname": "사케",
-          "job": "심연추방자",
           "level": 92,
           "conquestGrade": 26,
           "realm": "사도바 01"
@@ -12599,13 +12585,6 @@
           "realm": "사도바 01"
         },
         {
-          "nickname": "스으추장",
-          "job": "주문각인사",
-          "level": 91,
-          "conquestGrade": 22,
-          "realm": "사도바 01"
-        },
-        {
           "nickname": "빠삭",
           "job": "집행관",
           "level": 91,
@@ -12617,7 +12596,7 @@
     "레모나|사도바": {
       "guildName": "레모나",
       "world": "사도바",
-      "memberCount": 3,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "용잡이",
@@ -12638,6 +12617,13 @@
           "job": "집행관",
           "level": 87,
           "conquestGrade": 22,
+          "realm": "사도바 01"
+        },
+        {
+          "nickname": "물들임",
+          "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 21,
           "realm": "사도바 01"
         }
       ]
@@ -12701,7 +12687,7 @@
     "YB|사도바": {
       "guildName": "YB",
       "world": "사도바",
-      "memberCount": 3,
+      "memberCount": 4,
       "members": [
         {
           "nickname": "타치",
@@ -12722,6 +12708,13 @@
           "job": "주문각인사",
           "level": 91,
           "conquestGrade": 24,
+          "realm": "사도바 01"
+        },
+        {
+          "nickname": "로그온",
+          "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 22,
           "realm": "사도바 01"
         }
       ]
@@ -12778,7 +12771,7 @@
     "추론|사도바": {
       "guildName": "추론",
       "world": "사도바",
-      "memberCount": 4,
+      "memberCount": 5,
       "members": [
         {
           "nickname": "추신",
@@ -12806,6 +12799,13 @@
           "job": "주문각인사",
           "level": 88,
           "conquestGrade": 21,
+          "realm": "사도바 01"
+        },
+        {
+          "nickname": "추리",
+          "job": "태양감시자",
+          "level": 87,
+          "conquestGrade": 22,
           "realm": "사도바 01"
         }
       ]
@@ -12984,17 +12984,17 @@
           "realm": "사도바 02"
         },
         {
-          "nickname": "레터",
-          "job": "주문각인사",
-          "level": 92,
-          "conquestGrade": 24,
-          "realm": "사도바 02"
-        },
-        {
           "nickname": "노풍석",
           "job": "환영검사",
           "level": 92,
           "conquestGrade": 26,
+          "realm": "사도바 02"
+        },
+        {
+          "nickname": "레터",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 24,
           "realm": "사도바 02"
         },
         {
@@ -20800,7 +20800,7 @@
     "북미깡|아티산": {
       "guildName": "북미깡",
       "world": "아티산",
-      "memberCount": 46,
+      "memberCount": 47,
       "members": [
         {
           "nickname": "야생마",
@@ -20812,6 +20812,13 @@
         {
           "nickname": "별처럼",
           "job": "태양감시자",
+          "level": 93,
+          "conquestGrade": 26,
+          "realm": "아티산 04"
+        },
+        {
+          "nickname": "빅찬스",
+          "job": "심연추방자",
           "level": 93,
           "conquestGrade": 26,
           "realm": "아티산 04"
@@ -21129,7 +21136,7 @@
     "북깡미|아티산": {
       "guildName": "북깡미",
       "world": "아티산",
-      "memberCount": 14,
+      "memberCount": 15,
       "members": [
         {
           "nickname": "두호초이",
@@ -21185,6 +21192,13 @@
           "job": "향사수",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "아티산 04"
+        },
+        {
+          "nickname": "죽은자의소생",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 24,
           "realm": "아티산 04"
         },
         {
@@ -29016,5 +29030,5 @@
       ]
     }
   },
-  "updatedAt": "2026-09-19T08:11:23.218Z"
+  "updatedAt": "2026-09-19T08:21:23.714Z"
 }
