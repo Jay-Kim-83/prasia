@@ -1,0 +1,72 @@
+{
+  "bosses": [
+    {
+      "id": "98dd8f9a-79fd-4a95-a150-97d51c2f9f33",
+      "name": "속박된 파나스",
+      "type": "cycle",
+      "enabled": true,
+      "cycleHours": 48,
+      "resetTime": "22:00"
+    },
+    {
+      "id": "1050e198-f394-4845-a4a9-d04cfa4e5617",
+      "name": "창백한 파나스",
+      "type": "trigger",
+      "enabled": true,
+      "triggerBoss": "파나스",
+      "requiredKills": 4,
+      "delayMinutes": 5
+    },
+    {
+      "id": "a4a108bc-8571-4969-88b7-9e4be788efe0",
+      "name": "타오르는 눈의 절멸자",
+      "type": "cycle",
+      "enabled": true,
+      "cycleHours": 96,
+      "resetTime": "22:00"
+    },
+    {
+      "id": "e2a8bf03-0237-4f7e-a938-1f356ef2b993",
+      "name": "고래사자",
+      "type": "cycle",
+      "enabled": true,
+      "cycleHours": 48,
+      "resetTime": "22:00"
+    },
+    {
+      "id": "e3550aec-8582-42c4-be32-674e5344e334",
+      "name": "파괴자 고래사자",
+      "type": "trigger",
+      "enabled": true,
+      "triggerBoss": "고래사자",
+      "requiredKills": 4,
+      "delayMinutes": 5
+    },
+    {
+      "id": "1ac7a73b-2b5e-4969-bae0-4853eccdd576",
+      "name": "푸른 화염의 나뭇돌골렘",
+      "type": "cycle",
+      "enabled": true,
+      "cycleHours": 168,
+      "resetTime": "22:00"
+    },
+    {
+      "id": "240148d9-6e63-44da-aa25-4e8eb9114de9",
+      "name": "백야의 왕",
+      "type": "cycle",
+      "enabled": true,
+      "cycleHours": 120,
+      "resetTime": "22:00"
+    },
+    {
+      "id": "c74b6488-27c2-4857-af11-063c5223f829",
+      "name": "군단장 케리움",
+      "type": "cycle",
+      "enabled": true,
+      "cycleHours": 96,
+      "resetTime": "22:00"
+    }
+  ],
+  "maintenanceDate": "",
+  "maintenanceTime": "05:00"
+}
