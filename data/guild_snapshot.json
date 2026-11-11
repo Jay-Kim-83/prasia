@@ -11122,17 +11122,17 @@
           "realm": "가리안 05"
         },
         {
-          "nickname": "도게자",
-          "job": "환영검사",
-          "level": 92,
-          "conquestGrade": 24,
-          "realm": "가리안 05"
-        },
-        {
           "nickname": "채금",
           "job": "향사수",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "가리안 05"
+        },
+        {
+          "nickname": "도게자",
+          "job": "환영검사",
+          "level": 92,
+          "conquestGrade": 24,
           "realm": "가리안 05"
         },
         {
@@ -11903,7 +11903,7 @@
     "낭|사도바": {
       "guildName": "낭",
       "world": "사도바",
-      "memberCount": 20,
+      "memberCount": 19,
       "members": [
         {
           "nickname": "두피는가렵고털은없고",
@@ -12037,20 +12037,13 @@
           "level": 93,
           "conquestGrade": 25,
           "realm": "사도바 01"
-        },
-        {
-          "nickname": "조풍석",
-          "job": "향사수",
-          "level": 92,
-          "conquestGrade": 26,
-          "realm": "사도바 01"
         }
       ]
     },
     "철수|사도바": {
       "guildName": "철수",
       "world": "사도바",
-      "memberCount": 17,
+      "memberCount": 18,
       "members": [
         {
           "nickname": "강배인",
@@ -12167,6 +12160,13 @@
         {
           "nickname": "강덜덜",
           "job": "향사수",
+          "level": 92,
+          "conquestGrade": 25,
+          "realm": "사도바 01"
+        },
+        {
+          "nickname": "강군고구마",
+          "job": "심연추방자",
           "level": 92,
           "conquestGrade": 25,
           "realm": "사도바 01"
@@ -13789,13 +13789,6 @@
           "realm": "사도바 04"
         },
         {
-          "nickname": "누학씨",
-          "job": "향사수",
-          "level": 93,
-          "conquestGrade": 26,
-          "realm": "사도바 04"
-        },
-        {
           "nickname": "뿌힝",
           "job": "환영검사",
           "level": 93,
@@ -13826,6 +13819,13 @@
         {
           "nickname": "시속",
           "job": "주문각인사",
+          "level": 93,
+          "conquestGrade": 26,
+          "realm": "사도바 04"
+        },
+        {
+          "nickname": "누학씨",
+          "job": "향사수",
           "level": 93,
           "conquestGrade": 26,
           "realm": "사도바 04"
@@ -14876,5 +14876,5 @@
       ]
     }
   },
-  "updatedAt": "2026-11-11T20:31:14.702Z"
+  "updatedAt": "2026-11-11T20:41:21.969Z"
 }
