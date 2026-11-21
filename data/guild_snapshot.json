@@ -391,13 +391,6 @@
           "realm": "론도 01"
         },
         {
-          "nickname": "청운",
-          "job": "심연추방자",
-          "level": 92,
-          "conquestGrade": 24,
-          "realm": "론도 01"
-        },
-        {
           "nickname": "산적딸래미",
           "job": "향사수",
           "level": 92,
@@ -409,6 +402,13 @@
           "job": "집행관",
           "level": 92,
           "conquestGrade": 25,
+          "realm": "론도 01"
+        },
+        {
+          "nickname": "청운",
+          "job": "심연추방자",
+          "level": 92,
+          "conquestGrade": 24,
           "realm": "론도 01"
         },
         {
@@ -1372,34 +1372,6 @@
         }
       ]
     },
-    "태양|론도": {
-      "guildName": "태양",
-      "world": "론도",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "강윤몽",
-          "job": "심연추방자",
-          "level": 88,
-          "conquestGrade": 21,
-          "realm": "론도 03"
-        },
-        {
-          "nickname": "통닭",
-          "job": "향사수",
-          "level": 87,
-          "conquestGrade": 21,
-          "realm": "론도 03"
-        },
-        {
-          "nickname": "훼손",
-          "job": "환영검사",
-          "level": 85,
-          "conquestGrade": 20,
-          "realm": "론도 03"
-        }
-      ]
-    },
     "파이팅|론도": {
       "guildName": "파이팅",
       "world": "론도",
@@ -1480,6 +1452,34 @@
           "job": "집행관",
           "level": 82,
           "conquestGrade": 12,
+          "realm": "론도 03"
+        }
+      ]
+    },
+    "태양|론도": {
+      "guildName": "태양",
+      "world": "론도",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "강윤몽",
+          "job": "심연추방자",
+          "level": 88,
+          "conquestGrade": 21,
+          "realm": "론도 03"
+        },
+        {
+          "nickname": "통닭",
+          "job": "향사수",
+          "level": 87,
+          "conquestGrade": 21,
+          "realm": "론도 03"
+        },
+        {
+          "nickname": "훼손",
+          "job": "환영검사",
+          "level": 85,
+          "conquestGrade": 20,
           "realm": "론도 03"
         }
       ]
@@ -2355,7 +2355,7 @@
     "TheBlack|론도": {
       "guildName": "TheBlack",
       "world": "론도",
-      "memberCount": 43,
+      "memberCount": 44,
       "members": [
         {
           "nickname": "품성",
@@ -2646,6 +2646,13 @@
         },
         {
           "nickname": "정앨리",
+          "job": "주문각인사",
+          "level": 92,
+          "conquestGrade": 26,
+          "realm": "론도 05"
+        },
+        {
+          "nickname": "가지우나나",
           "job": "주문각인사",
           "level": 92,
           "conquestGrade": 26,
@@ -5012,7 +5019,7 @@
         },
         {
           "nickname": "러너너너너너너너너너",
-          "job": "향사수",
+          "job": "야만투사",
           "level": 94,
           "conquestGrade": 26,
           "realm": "라인소프 04"
@@ -5067,15 +5074,15 @@
           "realm": "라인소프 04"
         },
         {
-          "nickname": "두통엔펜잘큐브",
-          "job": "향사수",
+          "nickname": "눈뜨니열두시",
+          "job": "야만투사",
           "level": 93,
           "conquestGrade": 26,
           "realm": "라인소프 04"
         },
         {
-          "nickname": "눈뜨니열두시",
-          "job": "야만투사",
+          "nickname": "두통엔펜잘큐브",
+          "job": "향사수",
           "level": 93,
           "conquestGrade": 26,
           "realm": "라인소프 04"
@@ -8343,15 +8350,15 @@
           "realm": "아민타 04"
         },
         {
-          "nickname": "키자루",
-          "job": "집행관",
+          "nickname": "두과자잇",
+          "job": "태양감시자",
           "level": 93,
           "conquestGrade": 26,
           "realm": "아민타 04"
         },
         {
-          "nickname": "두과자잇",
-          "job": "태양감시자",
+          "nickname": "키자루",
+          "job": "집행관",
           "level": 93,
           "conquestGrade": 26,
           "realm": "아민타 04"
@@ -9351,17 +9358,17 @@
           "realm": "아민타 05"
         },
         {
+          "nickname": "암사자남편",
+          "job": "야만투사",
+          "level": 91,
+          "conquestGrade": 22,
+          "realm": "아민타 05"
+        },
+        {
           "nickname": "린트",
           "job": "주문각인사",
           "level": 90,
           "conquestGrade": 23,
-          "realm": "아민타 05"
-        },
-        {
-          "nickname": "암사자남편",
-          "job": "야만투사",
-          "level": 90,
-          "conquestGrade": 22,
           "realm": "아민타 05"
         },
         {
@@ -9927,7 +9934,7 @@
         {
           "nickname": "각돌",
           "job": "주문각인사",
-          "level": 88,
+          "level": 89,
           "conquestGrade": 22,
           "realm": "가리안 01"
         },
@@ -15485,5 +15492,5 @@
       ]
     }
   },
-  "updatedAt": "2026-11-21T06:21:14.448Z"
+  "updatedAt": "2026-11-21T06:51:21.815Z"
 }
