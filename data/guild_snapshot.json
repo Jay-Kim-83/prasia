@@ -7433,15 +7433,15 @@
           "realm": "아민타 02"
         },
         {
-          "nickname": "야시비",
-          "job": "주문각인사",
+          "nickname": "토아",
+          "job": "향사수",
           "level": 88,
           "conquestGrade": 22,
           "realm": "아민타 02"
         },
         {
-          "nickname": "토아",
-          "job": "향사수",
+          "nickname": "야시비",
+          "job": "주문각인사",
           "level": 88,
           "conquestGrade": 22,
           "realm": "아민타 02"
@@ -9421,13 +9421,6 @@
           "realm": "아민타 05"
         },
         {
-          "nickname": "밀크쵸코",
-          "job": "향사수",
-          "level": 90,
-          "conquestGrade": 22,
-          "realm": "아민타 05"
-        },
-        {
           "nickname": "부두아",
           "job": "태양감시자",
           "level": 90,
@@ -9439,6 +9432,13 @@
           "job": "심연추방자",
           "level": 90,
           "conquestGrade": 21,
+          "realm": "아민타 05"
+        },
+        {
+          "nickname": "밀크쵸코",
+          "job": "향사수",
+          "level": 90,
+          "conquestGrade": 22,
           "realm": "아민타 05"
         },
         {
@@ -13510,34 +13510,6 @@
         }
       ]
     },
-    "커피|사도바": {
-      "guildName": "커피",
-      "world": "사도바",
-      "memberCount": 3,
-      "members": [
-        {
-          "nickname": "네이쓰",
-          "job": "향사수",
-          "level": 88,
-          "conquestGrade": 22,
-          "realm": "사도바 02"
-        },
-        {
-          "nickname": "에스프레소",
-          "job": "주문각인사",
-          "level": 87,
-          "conquestGrade": 19,
-          "realm": "사도바 02"
-        },
-        {
-          "nickname": "요플레",
-          "job": "주문각인사",
-          "level": 86,
-          "conquestGrade": 21,
-          "realm": "사도바 02"
-        }
-      ]
-    },
     "자유가입|사도바": {
       "guildName": "자유가입",
       "world": "사도바",
@@ -13596,6 +13568,34 @@
           "nickname": "반짝이는별",
           "job": "집행관",
           "level": 85,
+          "conquestGrade": 21,
+          "realm": "사도바 02"
+        }
+      ]
+    },
+    "커피|사도바": {
+      "guildName": "커피",
+      "world": "사도바",
+      "memberCount": 3,
+      "members": [
+        {
+          "nickname": "네이쓰",
+          "job": "향사수",
+          "level": 88,
+          "conquestGrade": 22,
+          "realm": "사도바 02"
+        },
+        {
+          "nickname": "에스프레소",
+          "job": "주문각인사",
+          "level": 87,
+          "conquestGrade": 19,
+          "realm": "사도바 02"
+        },
+        {
+          "nickname": "요플레",
+          "job": "주문각인사",
+          "level": 86,
           "conquestGrade": 21,
           "realm": "사도바 02"
         }
@@ -14491,7 +14491,7 @@
         {
           "nickname": "유비서",
           "job": "주문각인사",
-          "level": 92,
+          "level": 93,
           "conquestGrade": 24,
           "realm": "사도바 04"
         },
@@ -14734,17 +14734,17 @@
           "realm": "사도바 04"
         },
         {
-          "nickname": "순자",
-          "job": "집행관",
-          "level": 93,
-          "conquestGrade": 25,
-          "realm": "사도바 04"
-        },
-        {
           "nickname": "썬미",
           "job": "야만투사",
           "level": 93,
           "conquestGrade": 24,
+          "realm": "사도바 04"
+        },
+        {
+          "nickname": "순자",
+          "job": "집행관",
+          "level": 93,
+          "conquestGrade": 25,
           "realm": "사도바 04"
         },
         {
@@ -15590,5 +15590,5 @@
       ]
     }
   },
-  "updatedAt": "2026-11-24T07:01:13.071Z"
+  "updatedAt": "2026-11-24T07:11:11.161Z"
 }
